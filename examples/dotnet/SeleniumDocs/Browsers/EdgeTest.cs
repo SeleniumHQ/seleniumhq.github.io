@@ -164,6 +164,11 @@ namespace SeleniumDocs.Browsers
             Assert.IsNotNull(lines.FirstOrDefault(line => line.Contains(expected)));
         }
 
+        // HRESULTs for the Win32 sharing/lock violations raised when a file is still open
+        // in another process; see https://learn.microsoft.com/windows/win32/debug/system-error-codes--0-499-
+        private const int ErrorSharingViolation = unchecked((int)0x80070020);
+        private const int ErrorLockViolation = unchecked((int)0x80070021);
+
         private static string[] ReadLogLines(string path)
         {
             const int maxAttempts = 20;
@@ -173,10 +178,13 @@ namespace SeleniumDocs.Browsers
                 {
                     return File.ReadAllLines(path);
                 }
-                catch (IOException) when (attempt < maxAttempts)
+                catch (IOException ex) when (attempt < maxAttempts &&
+                    (ex.HResult == ErrorSharingViolation || ex.HResult == ErrorLockViolation))
                 {
                     // On Windows, the driver service can still hold the log file open for
                     // several seconds after driver.Quit(), so retry until the handle is released.
+                    // Any other IOException (missing file, permissions, etc.) is a real failure
+                    // and should surface immediately instead of being retried.
                     Thread.Sleep(500);
                 }
             }
