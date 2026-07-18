@@ -166,7 +166,7 @@ namespace SeleniumDocs.Browsers
 
         private static string[] ReadLogLines(string path)
         {
-            const int maxAttempts = 10;
+            const int maxAttempts = 20;
             for (var attempt = 1; attempt <= maxAttempts; attempt++)
             {
                 try
@@ -175,9 +175,9 @@ namespace SeleniumDocs.Browsers
                 }
                 catch (IOException) when (attempt < maxAttempts)
                 {
-                    // On Windows, the driver service can still hold the log file open for a
-                    // moment after driver.Quit(), so retry until the handle is released.
-                    Thread.Sleep(200);
+                    // On Windows, the driver service can still hold the log file open for
+                    // several seconds after driver.Quit(), so retry until the handle is released.
+                    Thread.Sleep(500);
                 }
             }
 
