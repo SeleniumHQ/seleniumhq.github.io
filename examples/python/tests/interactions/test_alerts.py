@@ -18,7 +18,7 @@ def test_alert_popup():
     text = alert.text
     alert.accept()
     assert text == "Sample alert"
-    
+
     driver.quit()
 
 def test_confirm_popup():
