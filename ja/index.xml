@@ -6390,6 +6390,19 @@ Selenium サーバのスパンのほとんどは、2 つのイベントから構
 &lt;div class="ghContributors">
  &lt;div style="padding: 10px;">
  &lt;img
+ src="https://avatars.githubusercontent.com/u/5992658?v=4"
+ class="inline"
+ width="100"
+ height="100"
+ style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
+ />
+ &lt;label
+ >&lt;a href="https://github.com/diemol">@diemol&lt;/a>&lt;/label
+ >
+ &lt;span class="contributions">870 commits&lt;/span>
+ &lt;/div>
+ &lt;div style="padding: 10px;">
+ &lt;img
  src="https://avatars.githubusercontent.com/u/12621691?v=4"
  class="inline"
  width="100"
@@ -6403,19 +6416,6 @@ Selenium サーバのスパンのほとんどは、2 つのイベントから構
  &lt;/div>
  &lt;div style="padding: 10px;">
  &lt;img
- src="https://avatars.githubusercontent.com/u/5992658?v=4"
- class="inline"
- width="100"
- height="100"
- style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
- />
- &lt;label
- >&lt;a href="https://github.com/diemol">@diemol&lt;/a>&lt;/label
- >
- &lt;span class="contributions">868 commits&lt;/span>
- &lt;/div>
- &lt;div style="padding: 10px;">
- &lt;img
  src="https://avatars.githubusercontent.com/in/2740?v=4"
  class="inline"
  width="100"
@@ -6425,7 +6425,7 @@ Selenium サーバのスパンのほとんどは、2 つのイベントから構
  &lt;label
  >&lt;a href="https://github.com/apps/renovate">@renovate[bot]&lt;/a>&lt;/label
  >
- &lt;span class="contributions">339 commits&lt;/span>
+ &lt;span class="contributions">340 commits&lt;/span>
  &lt;/div>
  &lt;div style="padding: 10px;">
  &lt;img
@@ -6464,7 +6464,7 @@ Selenium サーバのスパンのほとんどは、2 つのイベントから構
  &lt;label
  >&lt;a href="https://github.com/alaahong">@alaahong&lt;/a>&lt;/label
  >
- &lt;span class="contributions">129 commits&lt;/span>
+ &lt;span class="contributions">131 commits&lt;/span>
  &lt;/div>
  &lt;div style="padding: 10px;">
  &lt;img
@@ -6871,6 +6871,19 @@ Selenium サーバのスパンのほとんどは、2 つのイベントから構
  &lt;/div>
  &lt;div style="padding: 10px;">
  &lt;img
+ src="https://avatars.githubusercontent.com/u/155032219?v=4"
+ class="inline"
+ width="100"
+ height="100"
+ style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
+ />
+ &lt;label
+ >&lt;a href="https://github.com/beinghumantester">@beinghumantester&lt;/a>&lt;/label
+ >
+ &lt;span class="contributions">6 commits&lt;/span>
+ &lt;/div>
+ &lt;div style="padding: 10px;">
+ &lt;img
  src="https://avatars.githubusercontent.com/u/88994346?v=4"
  class="inline"
  width="100"
@@ -6983,19 +6996,6 @@ Selenium サーバのスパンのほとんどは、2 つのイベントから構
  />
  &lt;label
  >&lt;a href="https://github.com/hyanx">@hyanx&lt;/a>&lt;/label
- >
- &lt;span class="contributions">5 commits&lt;/span>
- &lt;/div>
- &lt;div style="padding: 10px;">
- &lt;img
- src="https://avatars.githubusercontent.com/u/155032219?v=4"
- class="inline"
- width="100"
- height="100"
- style="height: 100px;height: 100px;margin-bottom:.25em; vertical-align:middle; "
- />
- &lt;label
- >&lt;a href="https://github.com/beinghumantester">@beinghumantester&lt;/a>&lt;/label
  >
  &lt;span class="contributions">5 commits&lt;/span>
  &lt;/div>
@@ -11282,7 +11282,7 @@ document.addEventListener('keydown', function(e) {
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000">element&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">click&lt;/span>&lt;span style="color:#000;font-weight:bold">()&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000">wait&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#000">WebDriverWait&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#000">driver&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span> &lt;span style="color:#000">timeout&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>&lt;span style="color:#0000cf;font-weight:bold">2&lt;/span>&lt;span style="color:#000;font-weight:bold">)&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000">alert&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#000">wait&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">until&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#204a87;font-weight:bold">lambda&lt;/span> &lt;span style="color:#000">d&lt;/span> &lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#000">d&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">switch_to&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">alert&lt;/span>&lt;span style="color:#000;font-weight:bold">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000">alert&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#000">wait&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">until&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#000">EC&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">alert_is_present&lt;/span>&lt;span style="color:#000;font-weight:bold">())&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000">text&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#000">alert&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">text&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000">alert&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">accept&lt;/span>&lt;span style="color:#000;font-weight:bold">()&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
 
@@ -11296,33 +11296,34 @@ div.code-toolbar > .toolbar {
 
 &lt;div class="mt-4 pb-2">
  &lt;div style="border: 1px solid #dee2e6; border-radius: 6px; overflow: hidden; display: flex;">
- &lt;a onclick="showCodeModal('e56d37a3bd2ed45229b35df01eacf087')" style="flex: 1; display: flex; align-items: center; justify-content: center; padding: 8px 12px; text-decoration: none; color: #007bff; background: #f8f9fa; font-weight: 500; transition: background-color 0.2s; cursor: pointer; border-right: 1px solid #dee2e6;" onmouseover="this.style.backgroundColor='#e9ecef'" onmouseout="this.style.backgroundColor='#f8f9fa'">
+ &lt;a onclick="showCodeModal('1d815ca800b437559b5010b4d99db2e0')" style="flex: 1; display: flex; align-items: center; justify-content: center; padding: 8px 12px; text-decoration: none; color: #007bff; background: #f8f9fa; font-weight: 500; transition: background-color 0.2s; cursor: pointer; border-right: 1px solid #dee2e6;" onmouseover="this.style.backgroundColor='#e9ecef'" onmouseout="this.style.backgroundColor='#f8f9fa'">
  View Complete Code
  &lt;/a>
- &lt;a href="https://github.com/SeleniumHQ/seleniumhq.github.io/blob/trunk//examples/python/tests/interactions/test_alerts.py#L12-L18" target="_blank" style="flex: 1; display: flex; align-items: center; justify-content: center; padding: 8px 12px; text-decoration: none; color: #007bff; background: #f8f9fa; font-weight: 500; transition: background-color 0.2s;" onmouseover="this.style.backgroundColor='#e9ecef'" onmouseout="this.style.backgroundColor='#f8f9fa'">
+ &lt;a href="https://github.com/SeleniumHQ/seleniumhq.github.io/blob/trunk//examples/python/tests/interactions/test_alerts.py#L13-L19" target="_blank" style="flex: 1; display: flex; align-items: center; justify-content: center; padding: 8px 12px; text-decoration: none; color: #007bff; background: #f8f9fa; font-weight: 500; transition: background-color 0.2s;" onmouseover="this.style.backgroundColor='#e9ecef'" onmouseout="this.style.backgroundColor='#f8f9fa'">
  &lt;i class="fas fa-external-link-alt" style="margin-right: 8px;">&lt;/i>
  View on GitHub
  &lt;/a>
  &lt;/div>
 &lt;/div>
 
-&lt;div id="codeModal_e56d37a3bd2ed45229b35df01eacf087" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 1050;">
+&lt;div id="codeModal_1d815ca800b437559b5010b4d99db2e0" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 1050;">
  &lt;div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: white; border-radius: 8px; max-width: 90%; max-height: 90%; overflow: auto; box-shadow: 0 4px 20px rgba(0,0,0,0.3);">
  &lt;div style="position: sticky; top: 0; z-index: 10; background: white; box-shadow: 0 2px 2px rgba(0,0,0,0.1); padding: 10px 15px; border-bottom: 1px solid #dee2e6; display: flex; justify-content: space-between; align-items: center; height: 50px;">
  &lt;h5 style="margin: 0;">/examples/python/tests/interactions/test_alerts.py&lt;/h5>
  &lt;div>
- &lt;button onclick="copyCode('e56d37a3bd2ed45229b35df01eacf087', event)" style="margin-right: 10px; padding: 5px 10px; border: 1px solid #007bff; background: #007bff; color: white; border-radius: 4px; cursor: pointer; user-select: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none;">
+ &lt;button onclick="copyCode('1d815ca800b437559b5010b4d99db2e0', event)" style="margin-right: 10px; padding: 5px 10px; border: 1px solid #007bff; background: #007bff; color: white; border-radius: 4px; cursor: pointer; user-select: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none;">
  Copy
  &lt;/button>
- &lt;button onclick="closeCodeModal('e56d37a3bd2ed45229b35df01eacf087')" style="padding: 5px 10px; border: 1px solid #6c757d; background: #6c757d; color: white; border-radius: 4px; cursor: pointer; user-select: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none;">
+ &lt;button onclick="closeCodeModal('1d815ca800b437559b5010b4d99db2e0')" style="padding: 5px 10px; border: 1px solid #6c757d; background: #6c757d; color: white; border-radius: 4px; cursor: pointer; user-select: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none;">
  Close
  &lt;/button>
  &lt;/div>
  &lt;/div>
  &lt;div style="padding: 20px;">
- &lt;div id="codeContent_e56d37a3bd2ed45229b35df01eacf087">&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-py" data-lang="py">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#204a87;font-weight:bold">from&lt;/span> &lt;span style="color:#000">selenium&lt;/span> &lt;span style="color:#204a87;font-weight:bold">import&lt;/span> &lt;span style="color:#000">webdriver&lt;/span>
+ &lt;div id="codeContent_1d815ca800b437559b5010b4d99db2e0">&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-py" data-lang="py">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#204a87;font-weight:bold">from&lt;/span> &lt;span style="color:#000">selenium&lt;/span> &lt;span style="color:#204a87;font-weight:bold">import&lt;/span> &lt;span style="color:#000">webdriver&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#204a87;font-weight:bold">from&lt;/span> &lt;span style="color:#000">selenium.webdriver.common.by&lt;/span> &lt;span style="color:#204a87;font-weight:bold">import&lt;/span> &lt;span style="color:#000">By&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#204a87;font-weight:bold">from&lt;/span> &lt;span style="color:#000">selenium.webdriver.support.ui&lt;/span> &lt;span style="color:#204a87;font-weight:bold">import&lt;/span> &lt;span style="color:#000">WebDriverWait&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#204a87;font-weight:bold">from&lt;/span> &lt;span style="color:#000">selenium.webdriver.support&lt;/span> &lt;span style="color:#204a87;font-weight:bold">import&lt;/span> &lt;span style="color:#000">expected_conditions&lt;/span> &lt;span style="color:#204a87;font-weight:bold">as&lt;/span> &lt;span style="color:#000">EC&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#204a87;font-weight:bold">global&lt;/span> &lt;span style="color:#000">url&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000">url&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;https://www.selenium.dev/documentation/webdriver/interactions/alerts/&amp;#34;&lt;/span>
@@ -11335,7 +11336,7 @@ div.code-toolbar > .toolbar {
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000">element&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">click&lt;/span>&lt;span style="color:#000;font-weight:bold">()&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000">wait&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#000">WebDriverWait&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#000">driver&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span> &lt;span style="color:#000">timeout&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>&lt;span style="color:#0000cf;font-weight:bold">2&lt;/span>&lt;span style="color:#000;font-weight:bold">)&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000">alert&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#000">wait&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">until&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#204a87;font-weight:bold">lambda&lt;/span> &lt;span style="color:#000">d&lt;/span> &lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#000">d&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">switch_to&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">alert&lt;/span>&lt;span style="color:#000;font-weight:bold">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000">alert&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#000">wait&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">until&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#000">EC&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">alert_is_present&lt;/span>&lt;span style="color:#000;font-weight:bold">())&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000">text&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#000">alert&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">text&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000">alert&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">accept&lt;/span>&lt;span style="color:#000;font-weight:bold">()&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">assert&lt;/span> &lt;span style="color:#000">text&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">==&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;Sample alert&amp;#34;&lt;/span>
@@ -11349,7 +11350,7 @@ div.code-toolbar > .toolbar {
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000">driver&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">execute_script&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;arguments[0].click();&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span> &lt;span style="color:#000">element&lt;/span>&lt;span style="color:#000;font-weight:bold">)&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000">wait&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#000">WebDriverWait&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#000">driver&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span> &lt;span style="color:#000">timeout&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>&lt;span style="color:#0000cf;font-weight:bold">2&lt;/span>&lt;span style="color:#000;font-weight:bold">)&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000">alert&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#000">wait&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">until&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#204a87;font-weight:bold">lambda&lt;/span> &lt;span style="color:#000">d&lt;/span> &lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#000">d&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">switch_to&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">alert&lt;/span>&lt;span style="color:#000;font-weight:bold">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000">alert&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#000">wait&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">until&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#000">EC&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">alert_is_present&lt;/span>&lt;span style="color:#000;font-weight:bold">())&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000">text&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#000">alert&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">text&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000">alert&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">dismiss&lt;/span>&lt;span style="color:#000;font-weight:bold">()&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">assert&lt;/span> &lt;span style="color:#000">text&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">==&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;Are you sure?&amp;#34;&lt;/span>
@@ -11363,7 +11364,7 @@ div.code-toolbar > .toolbar {
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000">driver&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">execute_script&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;arguments[0].click();&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span> &lt;span style="color:#000">element&lt;/span>&lt;span style="color:#000;font-weight:bold">)&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000">wait&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#000">WebDriverWait&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#000">driver&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span> &lt;span style="color:#000">timeout&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>&lt;span style="color:#0000cf;font-weight:bold">2&lt;/span>&lt;span style="color:#000;font-weight:bold">)&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000">alert&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#000">wait&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">until&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#204a87;font-weight:bold">lambda&lt;/span> &lt;span style="color:#000">d&lt;/span> &lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#000">d&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">switch_to&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">alert&lt;/span>&lt;span style="color:#000;font-weight:bold">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000">alert&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#000">wait&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">until&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#000">EC&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">alert_is_present&lt;/span>&lt;span style="color:#000;font-weight:bold">())&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000">alert&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">send_keys&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;Selenium&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">)&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000">text&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#000">alert&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">text&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000">alert&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">accept&lt;/span>&lt;span style="color:#000;font-weight:bold">()&lt;/span>
@@ -25677,6 +25678,7 @@ WebDriverの起動には時間が必要であり、テストの記述方法に�
 xUnitレポートは、Jenkins、Travis、Bambooなどの継続的インテグレーション（CI）サーバーに結果をインポートするのに人気があります。
 いくつかの言語のレポート出力に関する詳細情報へのリンクがあります。&lt;/p>
 &lt;!-- TODO: Add links.-->
+&lt;p>&lt;a href="https://allurereport.org/">Allure Report: fancy reports (language and framework agnostic)&lt;/a>&lt;/p>
 &lt;p>&lt;a href="//github.com/nunit/docs/wiki/Console-Runner">NUnit 3 Console Runner&lt;/a>&lt;/p>
 &lt;p>&lt;a href="//github.com/nunit/docs/wiki/Console-Command-Line">NUnit 3 Console Command Line&lt;/a>&lt;/p>
 &lt;p>&lt;a href="//xunit.net/docs/getting-test-results-in-teamcity">xUnit getting test results in TeamCity&lt;/a>&lt;/p>
