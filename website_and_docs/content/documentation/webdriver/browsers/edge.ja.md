@@ -24,13 +24,13 @@ Chromiumに特有の機能は、Googleの[Capabilities & ChromeOptions](https://
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/EdgeTest.java#L38-L38" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< gh-codeblock path="/examples/python/tests/browsers/test_edge.py#L9-L10" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_edge.py#L9-L11" >}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/EdgeTest.cs#L30-L31" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="/examples/ruby/spec/browsers/edge_spec.rb#L10-L11" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/edge_spec.rb#L10-L12" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< gh-codeblock path="/examples/javascript/test/getting_started/openEdgeTest.spec.js#L11-L15">}}
@@ -58,13 +58,13 @@ Chromiumに特有の機能は、Googleの[Capabilities & ChromeOptions](https://
 {{< gh-codeblock path="/examples/python/tests/browsers/test_edge.py#L18" >}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/EdgeTest.cs#L39" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/EdgeTest.cs#L41" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="/examples/ruby/spec/browsers/edge_spec.rb#L17" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/edge_spec.rb#L19" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="/examples/javascript/test/browser/edgeSpecificCaps.spec.js#L12">}}
+{{< gh-codeblock path="/examples/javascript/test/browser/edgeSpecificCaps.spec.js#L14">}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -85,10 +85,10 @@ Chromiumに特有の機能は、Googleの[Capabilities & ChromeOptions](https://
 {{< gh-codeblock path="/examples/python/tests/browsers/test_edge.py#L29">}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/EdgeTest.cs#L49" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/EdgeTest.cs#L52" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="/examples/ruby/spec/browsers/edge_spec.rb#L25" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/edge_spec.rb#L28" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -112,13 +112,13 @@ Chromiumに特有の機能は、Googleの[Capabilities & ChromeOptions](https://
 {{< gh-codeblock path="/examples/python/tests/browsers/test_edge.py#L40" >}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/EdgeTest.cs#L61" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/EdgeTest.cs#L65" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="/examples/ruby/spec/browsers/edge_spec.rb#L34" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/edge_spec.rb#L38" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="/examples/javascript/test/browser/edgeSpecificCaps.spec.js#L55">}}
+{{< gh-codeblock path="/examples/javascript/test/browser/edgeSpecificCaps.spec.js#L56">}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -140,10 +140,10 @@ Chromiumに特有の機能は、Googleの[Capabilities & ChromeOptions](https://
 **注意**: これはすでに.NETのデフォルトの動作です。
 {{% /tab %}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="/examples/ruby/spec/browsers/edge_spec.rb#L45" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/edge_spec.rb#L50" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="/examples/javascript/test/browser/edgeSpecificCaps.spec.js#L32">}}
+{{< gh-codeblock path="/examples/javascript/test/browser/edgeSpecificCaps.spec.js#L34">}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -164,13 +164,13 @@ MSEdgedriverには、ブラウザを起動するために使用されるいく�
 {{< gh-codeblock path="/examples/python/tests/browsers/test_edge.py#L62" >}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/EdgeTest.cs#L76" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/EdgeTest.cs#L81" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="/examples/ruby/spec/browsers/edge_spec.rb#L53" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/edge_spec.rb#L59" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< gh-codeblock path="/examples/javascript/test/browser/edgeSpecificCaps.spec.js#L22">}}
+{{< gh-codeblock path="/examples/javascript/test/browser/edgeSpecificCaps.spec.js#L24">}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -193,20 +193,20 @@ MSEdgedriverには、ブラウザを起動するために使用されるいく�
 {{< tabpane text=true >}}
 {{% tab header="Java" %}}
 {{< badge-version version="4.10" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/EdgeTest.java#L101" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/EdgeTest.java#L101" >}}
 **注意**: Javaでもシステムプロパティを使用してファイル出力を設定できます:\
 プロパティキー: `EdgeDriverService.EDGE_DRIVER_LOG_PROPERTY`\
 プロパティ値: ログファイルのパスを表す文字列
 {{% /tab %}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/browsers/test_edge.py#L71" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_edge.py#L71" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Browsers/EdgeTest.cs#L86" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/EdgeTest.cs#L93" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-version version="4.10" >}}
-{{< gh-codeblock path="examples/ruby/spec/browsers/edge_spec.rb#L67" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/edge_spec.rb#L75" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -223,14 +223,14 @@ MSEdgedriverには、ブラウザを起動するために使用されるいく�
 {{< tabpane text=true >}}
 {{% tab header="Java" %}}
 {{< badge-version version="4.10" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/EdgeTest.java#L114" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/EdgeTest.java#L114" >}}
 **注**: Javaでは、システムプロパティを使用してコンソール出力を設定することもできます。\
 プロパティキー: `EdgeDriverService.EDGE_DRIVER_LOG_PROPERTY`\
 プロパティ値:`DriverService.LOG_STDOUT` または  `DriverService.LOG_STDERR`
 {{% /tab %}}
 {{< tab header="Python" >}}
 {{< badge-version version="4.11" >}}
-{{< gh-codeblock path="examples/python/tests/browsers/test_edge.py#L82" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_edge.py#L82" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-implementation >}}
@@ -238,7 +238,7 @@ MSEdgedriverには、ブラウザを起動するために使用されるいく�
 {{% tab header="Ruby" %}}
 `$stdout` と `$stderr`はどちらも有効な値です。
 {{< badge-version version="4.10" >}}
-{{< gh-codeblock path="examples/ruby/spec/browsers/edge_spec.rb#L76" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/edge_spec.rb#L86" >}}
 {{% /tab %}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -254,20 +254,20 @@ MSEdgedriverには、ブラウザを起動するために使用されるいく�
 {{< tabpane text=true >}}
 {{% tab header="Java" %}}
 {{< badge-version version="4.8" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/EdgeTest.java#L127-L128" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/EdgeTest.java#L127-L128" >}}
 **注意**: Javaでは、システムプロパティを使用してログレベルを設定することもできます：\
 プロパティキー: `EdgeDriverService.EDGE_DRIVER_LOG_LEVEL_PROPERTY`\
 プロパティ値:`ChromiumDriverLogLevel` 列挙型の文字列表現
 {{% /tab %}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/browsers/test_edge.py#L93" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_edge.py#L93" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-implementation >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-version version="4.10" >}}
-{{< gh-codeblock path="examples/ruby/spec/browsers/edge_spec.rb#L87" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/edge_spec.rb#L99" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -287,20 +287,20 @@ MSEdgedriverには、ブラウザを起動するために使用されるいく�
 {{< tabpane text=true >}}
 {{% tab header="Java" %}}
 {{< badge-version version="4.8" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/EdgeTest.java#L143-L144" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/EdgeTest.java#L143-L144" >}}
 **注意**: Javaでは、これらの機能をSystem Propertyによって切り替えることもできます：\
 プロパティキー:`EdgeDriverService.EDGE_DRIVER_APPEND_LOG_PROPERTY` および `EdgeDriverService.EDGE_DRIVER_READABLE_TIMESTAMP`\
 プロパティ値: `"true"` または  `"false"`
 {{% /tab %}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/browsers/test_edge.py#L104" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_edge.py#L104" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-implementation >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-version version="4.8" >}}
-{{< gh-codeblock path="examples/ruby/spec/browsers/edge_spec.rb#L97-L98" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/edge_spec.rb#L111-L112" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -318,20 +318,20 @@ Edge ブラウザとmsedgedriverのバージョンは一致する必要があり
 {{< tabpane text=true >}}
 {{% tab header="Java" %}}
 {{< badge-version version="4.8" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/EdgeTest.java#L161-L162" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/EdgeTest.java#L161-L162" >}}
 **注**: Javaでは、システムプロパティを使用してビルドチェックを無効にすることもできます：\
 プロパティキー:`EdgeDriverService.EDGE_DRIVER_DISABLE_BUILD_CHECK`\
 プロパティ値: `"true"` または  `"false"`
 {{% /tab %}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/browsers/test_edge.py#L115" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_edge.py#L115" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Browsers/EdgeTest.cs#L155" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/EdgeTest.cs#L168" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-version version="4.8" >}}
-{{< gh-codeblock path="examples/ruby/spec/browsers/edge_spec.rb#L108" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/edge_spec.rb#L124" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -358,7 +358,7 @@ Edge を使用して Chrome Cast デバイスを操作し、タブを共有す�
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/EdgeTest.java#L225-L230" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/EdgeTest.java#L225-L230" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
 {{< gh-codeblock path="/examples/python/tests/browsers/test_edge.py#L170-L174" >}}
@@ -367,7 +367,7 @@ Edge を使用して Chrome Cast デバイスを操作し、タブを共有す�
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="/examples/ruby/spec/browsers/edge_spec.rb#L119-L123" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/edge_spec.rb#L137-L141" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -383,7 +383,7 @@ Edge を使用して Chrome Cast デバイスを操作し、タブを共有す�
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/EdgeTest.java#L198-L204" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/EdgeTest.java#L198-L204" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
 {{< gh-codeblock path="/examples/python/tests/browsers/test_edge.py#L129-L135" >}}
@@ -392,7 +392,7 @@ Edge を使用して Chrome Cast デバイスを操作し、タブを共有す�
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="/examples/ruby/spec/browsers/edge_spec.rb#L129" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/edge_spec.rb#L149" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -406,7 +406,7 @@ Edge を使用して Chrome Cast デバイスを操作し、タブを共有す�
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/EdgeTest.java#L242" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/EdgeTest.java#L242" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
 {{< gh-codeblock path="/examples/python/tests/browsers/test_edge.py#L186" >}}
@@ -415,7 +415,7 @@ Edge を使用して Chrome Cast デバイスを操作し、タブを共有す�
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="/examples/ruby/spec/browsers/edge_spec.rb#L141" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/edge_spec.rb#L163" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -429,7 +429,7 @@ Edge を使用して Chrome Cast デバイスを操作し、タブを共有す�
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/EdgeTest.java#L184" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/EdgeTest.java#L184" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
 {{< gh-codeblock path="/examples/python/tests/browsers/test_edge.py#L149" >}}
@@ -438,7 +438,7 @@ Edge を使用して Chrome Cast デバイスを操作し、タブを共有す�
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="/examples/ruby/spec/browsers/edge_spec.rb#L149-L150" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/edge_spec.rb#L173-L174" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}

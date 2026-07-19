@@ -25,7 +25,7 @@ These methods can include conditions such as:
 {{< badge-code >}}
 {{% /tab %}}
 {{% tab header="Python" %}}
-{{< gh-codeblock path="examples/python/tests/support/test_expected_conditions.py#L14-L15" >}}
+{{< gh-codeblock path="/examples/python/tests/support/test_expected_conditions.py#L14-L15" >}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
 .NET stopped supporting Expected Conditions in Selenium 4 to minimize maintenance hassle and redundancy.

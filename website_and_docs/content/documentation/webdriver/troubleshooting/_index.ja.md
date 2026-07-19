@@ -1,27 +1,26 @@
 ---
-title: "トラブルシューティングの支援"
-linkTitle: "Troubleshooting"
+title: "トラブルシューティング"
+linkTitle: "トラブルシューティング"
 weight: 20
 description: >
-  WebDriverの問題を管理する方法。
+  WebDriver の問題を解決する方法。
 ---
 
-It is not always obvious the root cause of errors in Selenium.
+Selenium のエラーの根本原因が、常に明らかであるとは限りません。
 
-1. The most common Selenium-related error is a result of poor synchronization. 
-Read about [Waiting Strategies]({{< ref "../waits" >}}). If you aren't sure if it
-is a synchronization strategy you can try *temporarily* hard coding a large sleep
-where you see the issue, and you'll know if adding an explicit wait can help.
+1. Selenium 関連で最もよくあるエラーは、不十分な同期が原因です。
+[待機戦略]({{< ref "../waits" >}})を参照してください。同期が原因かどうか確信が持てない場合は、
+問題が発生している箇所に *一時的に* 長い待機時間をハードコードしてみてください。
+明示的な待機を追加することで解決できるかどうかを判断できます。
 
-2. Note that many errors that get reported to the project are actually caused by
-issues in the underlying drivers that Selenium sends the commands to. You can rule
-out a driver problem by executing the command in multiple [browsers]({{< ref "../browsers/" >}}).
+2. プロジェクトに報告されるエラーの多くは、実際には Selenium がコマンドを送信する基盤となる
+ドライバーの問題によるものです。同じコマンドを複数の[ブラウザ]({{< ref "../browsers/" >}})で
+実行することで、ドライバーに問題があるかどうかを切り分けられます。
 
-3. If you have questions about how to do things, check out the [Support options](/support/)
-for ways get assistance.
+3. 操作方法について質問がある場合は、支援を受ける方法として[サポートオプション](/support/)を
+確認してください。
 
-4. If you think you've found a problem with Selenium code, go ahead and file a 
-[Bug Report](https://github.com/SeleniumHQ/selenium/issues/new?assignees=&labels=I-defect%2Cneeds-triaging&template=bug-report.yml&title=%5B%F0%9F%90%9B+Bug%5D%3A+)
-on GitHub.
-
+4. Selenium のコードに問題を見つけたと思う場合は、GitHub で
+[バグ報告](https://github.com/SeleniumHQ/selenium/issues/new?assignees=&labels=I-defect%2Cneeds-triaging&template=bug-report.yml&title=%5B%F0%9F%90%9B+Bug%5D%3A+)
+を作成してください。
 

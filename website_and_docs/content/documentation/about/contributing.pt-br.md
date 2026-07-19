@@ -50,7 +50,7 @@ https://selenium.dev/support.
 
 ### Creating Examples
 
-Examples that need to be moved are marked with: {{% badge-code %}}
+Examples that need to be added are marked with: {{% badge-code %}}
 
 We want to be able to run all of our code examples in the CI to ensure that people can copy and paste and
 execute everything on the site. So we put the code where it belongs in the
@@ -79,6 +79,9 @@ If a user wants more context, they can click the link to the GitHub page that wi
 Make sure that if you add a test to the page that all the other line numbers in the markdown file are still
 correct. Adding a test at the top of a page means updating every single reference in the documentation that has a line
 number for that file.
+
+Code examples may need a relevant website or web page to demonstrate the scenario. To ensure examples consistently work,
+it is recommended to use the test web pages available at https://www.selenium.dev/selenium/web/.
 
 Finally, make sure that the tests pass in the CI.
 
@@ -117,7 +120,7 @@ e faça checkout na sua cópia localmente.
 
 Usamos [Hugo](https://gohugo.io/) e [Docsy theme](https://www.docsy.dev/)
 para criar e gerar o website. Você vai necessitar de usar a versão "extended"
-Sass/SCSS do binário Hugo. Recomendamos a versão 0.125.4 .
+Sass/SCSS do binário Hugo. Recomendamos a versão 0.148.2 .
 
 Por favor siga as instruções do Docsy [Install Hugo](https://www.docsy.dev/docs/getting-started/#install-hugo) 
 

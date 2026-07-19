@@ -18,7 +18,9 @@ CSS and XPath Selectors are sometimes difficult to get correct.
 
 ### Likely Cause
 
-The CSS or XPath selector you are trying to use has invalid characters or an invalid query.
+* The CSS or XPath selector you are trying to use has invalid characters or an invalid query.
+* You may have placed an XPATH value as a parameter to a CSS selector, or vice versa.
+* You may have used a CSS or XPATH selector as a parameter to an ID selector.
 
 ### Possible Solutions
 
@@ -43,6 +45,7 @@ The element can not be found at the exact moment you attempted to locate it.
 
 * Make sure you are on the page you expect to be on, and that previous actions in your code completed correctly
 * Make sure you are using a proper [Waiting Strategy]({{< ref "/documentation/webdriver/waits" >}})
+* Use an interactive [Selenium Wait Code Generator](https://99tools.net/selenium-wait-code-generator/) to create accurate explicit wait snippets for multiple supported languages including Java, Python, C#, JavaScript, and Ruby.
 * Update the locator with the browser's devtools console or use a browser extension like:
   * [SelectorsHub](https://selectorshub.com/selectorshub/)
 

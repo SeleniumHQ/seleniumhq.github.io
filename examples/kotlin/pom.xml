@@ -9,17 +9,17 @@
     <version>1.0.0</version>
 
     <properties>
-        <kotlin.version>2.2.0</kotlin.version>
+        <kotlin.version>2.4.10</kotlin.version>
 
-        <slf4j.version>2.0.17</slf4j.version>
-        <logback.version>1.5.18</logback.version>
+        <slf4j.version>2.0.18</slf4j.version>
+        <logback.version>1.5.38</logback.version>
 
-        <junit5.version>5.13.2</junit5.version>
+        <junit5.version>6.1.2</junit5.version>
 
-        <maven-surefire-plugin.version>3.5.3</maven-surefire-plugin.version>
+        <maven-surefire-plugin.version>3.5.6</maven-surefire-plugin.version>
 
-        <java.version>11</java.version>
-        <selenium.version>4.33.0</selenium.version>
+        <java.version>17</java.version>
+        <selenium.version>4.46.0</selenium.version>
 
         <maven.compiler.target>${java.version}</maven.compiler.target>
         <maven.compiler.source>${java.version}</maven.compiler.source>

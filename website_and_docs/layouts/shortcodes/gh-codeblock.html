@@ -35,7 +35,9 @@
 {{ $tokenInUrl := cond (eq $githubToken "") "://" $toReplace }}
 {{ $apiUrlWithToken := replace $apiUrl "://" $tokenInUrl }}
 
-{{ $apiResults := getJSON $apiUrlWithToken  }}
+{{ $apiResultsJson := resources.GetRemote $apiUrlWithToken }}
+{{ $apiResults := $apiResultsJson | transform.Unmarshal }}
+
 {{ $content := base64Decode $apiResults.content }}
 {{ $codeSnippet := $content }}
 
@@ -51,8 +53,14 @@
 
 {{ highlight $codeSnippet $language }}
 
+<style>
+div.code-toolbar > .toolbar {
+    display: none !important;
+}
+</style>
+
 {{ if $hasFragment }}
-{{ $uniqueId := md5 $path }}
+{{ $uniqueId := md5 $fullPath }}
 <div class="mt-4 pb-2">
     <div style="border: 1px solid #dee2e6; border-radius: 6px; overflow: hidden; display: flex;">
         <a onclick="showCodeModal('{{ $uniqueId }}')" style="flex: 1; display: flex; align-items: center; justify-content: center; padding: 8px 12px; text-decoration: none; color: #007bff; background: #f8f9fa; font-weight: 500; transition: background-color 0.2s; cursor: pointer; border-right: 1px solid #dee2e6;" onmouseover="this.style.backgroundColor='#e9ecef'" onmouseout="this.style.backgroundColor='#f8f9fa'">
@@ -67,13 +75,13 @@
 
 <div id="codeModal_{{ $uniqueId }}" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 1050;">
     <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: white; border-radius: 8px; max-width: 90%; max-height: 90%; overflow: auto; box-shadow: 0 4px 20px rgba(0,0,0,0.3);">
-        <div style="padding: 20px; border-bottom: 1px solid #dee2e6; display: flex; justify-content: space-between; align-items: center;">
+        <div style="position: sticky; top: 0; z-index: 10; background: white; box-shadow: 0 2px 2px rgba(0,0,0,0.1); padding: 10px 15px; border-bottom: 1px solid #dee2e6; display: flex; justify-content: space-between; align-items: center; height: 50px;">
             <h5 style="margin: 0;">{{ $path }}</h5>
             <div>
-                <button onclick="copyCode('{{ $uniqueId }}', event)" style="margin-right: 10px; padding: 5px 10px; border: 1px solid #007bff; background: #007bff; color: white; border-radius: 4px; cursor: pointer;">
+                <button onclick="copyCode('{{ $uniqueId }}', event)" style="margin-right: 10px; padding: 5px 10px; border: 1px solid #007bff; background: #007bff; color: white; border-radius: 4px; cursor: pointer; user-select: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none;">
                     Copy
                 </button>
-                <button onclick="closeCodeModal('{{ $uniqueId }}')" style="padding: 5px 10px; border: 1px solid #6c757d; background: #6c757d; color: white; border-radius: 4px; cursor: pointer;">
+                <button onclick="closeCodeModal('{{ $uniqueId }}')" style="padding: 5px 10px; border: 1px solid #6c757d; background: #6c757d; color: white; border-radius: 4px; cursor: pointer; user-select: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none;">
                     Close
                 </button>
             </div>
@@ -85,6 +93,11 @@
 </div>
 
 <script>
+document.addEventListener('DOMContentLoaded', function() {
+    const toolbars = document.querySelectorAll('div.code-toolbar > .toolbar');
+    toolbars.forEach(toolbar => toolbar.remove());
+});
+
 window.showCodeModal = window.showCodeModal || function(id) {
     document.getElementById('codeModal_' + id).style.display = 'block';
     document.body.style.overflow = 'hidden';
@@ -97,8 +110,9 @@ window.closeCodeModal = window.closeCodeModal || function(id) {
 
 window.copyCode = window.copyCode || function(id, event) {
     const codeElement = document.getElementById('codeContent_' + id);
-    const code = codeElement.textContent;
-    
+    const preElement = codeElement.querySelector('pre');
+    const code = preElement ? preElement.textContent : codeElement.textContent;
+
     if (navigator.clipboard) {
         navigator.clipboard.writeText(code).then(() => {
             const btn = event.target;
@@ -119,7 +133,7 @@ window.copyCode = window.copyCode || function(id, event) {
         textArea.select();
         document.execCommand('copy');
         document.body.removeChild(textArea);
-        
+
         const btn = event.target;
         const originalText = btn.textContent;
         btn.textContent = 'Copied!';

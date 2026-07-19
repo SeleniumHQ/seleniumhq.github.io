@@ -15,19 +15,19 @@ abrir o seu site. Isso pode ser feito em uma única linha, utilize o seguinte co
 
 {{< tabpane langEqualsHeader=true >}}
 {{< tab header="Java" text=true >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/NavigationTest.java#L14-L18" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/NavigationTest.java#L14-L18" >}}
 {{< /tab >}}
 {{< tab header="Python" text=true >}}
-{{< gh-codeblock path="examples/python/tests/interactions/test_navigation.py#L6" >}}
+{{< gh-codeblock path="/examples/python/tests/interactions/test_navigation.py#L6" >}}
 {{< /tab >}}
   {{< tab header="CSharp" text=true  >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/NavigationTest.cs#L17-L20" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Interactions/NavigationTest.cs#L17-L20" >}}
   {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
-{{< gh-codeblock path="examples/ruby/spec/interactions/navigation_spec.rb#L7-L9" >}}
+{{< gh-codeblock path="/examples/ruby/spec/interactions/navigation_spec.rb#L7-L9" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" text=true >}}
-{{< gh-codeblock path="examples/javascript/test/interactions/navigation.spec.js#L16-L20" >}}
+{{< gh-codeblock path="/examples/javascript/test/interactions/navigation.spec.js#L16-L20" >}}
 {{< /tab >}}
   {{< tab header="Kotlin" >}}
 //Convenient
@@ -43,19 +43,19 @@ driver.navigate().to("https://selenium.dev")
 Pressionando o botão Voltar do navegador:
 {{< tabpane langEqualsHeader=true >}}
 {{< tab header="Java" text=true >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/NavigationTest.java#L22-L23" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/NavigationTest.java#L22-L23" >}}
 {{< /tab >}}
 {{< tab header="Python" text=true >}}
-{{< gh-codeblock path="examples/python/tests/interactions/test_navigation.py#L11" >}}
+{{< gh-codeblock path="/examples/python/tests/interactions/test_navigation.py#L11" >}}
 {{< /tab >}}
   {{< tab header="CSharp" text=true >}}
- {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/NavigationTest.cs#L24-L25" >}}
+ {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Interactions/NavigationTest.cs#L24-L25" >}}
   {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
-{{< gh-codeblock path="examples/ruby/spec/interactions/navigation_spec.rb#L15" >}}
+{{< gh-codeblock path="/examples/ruby/spec/interactions/navigation_spec.rb#L15" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" text=true >}}
-{{< gh-codeblock path="examples/javascript/test/interactions/navigation.spec.js#L24-L25" >}}
+{{< gh-codeblock path="/examples/javascript/test/interactions/navigation.spec.js#L24-L25" >}}
 {{< /tab >}}
   {{< tab header="Kotlin" >}}driver.navigate().back() {{< /tab >}}
 {{< /tabpane >}}
@@ -65,19 +65,19 @@ Pressionando o botão Avançar do navegador:
 
 {{< tabpane langEqualsHeader=true >}}
 {{< tab header="Java" text=true >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/NavigationTest.java#L27-L28" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/NavigationTest.java#L27-L28" >}}
 {{< /tab >}}
 {{< tab header="Python" text=true >}}
-{{< gh-codeblock path="examples/python/tests/interactions/test_navigation.py#L15" >}}
+{{< gh-codeblock path="/examples/python/tests/interactions/test_navigation.py#L15" >}}
 {{< /tab >}}
   {{< tab header="CSharp" text=true >}}
- {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/NavigationTest.cs#L29-L30" >}}
+ {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Interactions/NavigationTest.cs#L29-L30" >}}
   {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
-{{< gh-codeblock path="examples/ruby/spec/interactions/navigation_spec.rb#L23" >}}
+{{< gh-codeblock path="/examples/ruby/spec/interactions/navigation_spec.rb#L23" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" text=true >}}
-{{< gh-codeblock path="examples/javascript/test/interactions/navigation.spec.js#L29-L30" >}}
+{{< gh-codeblock path="/examples/javascript/test/interactions/navigation.spec.js#L29-L30" >}}
 {{< /tab >}}
   {{< tab header="Kotlin" >}}driver.navigate().forward(){{< /tab >}}
 {{< /tabpane >}}
@@ -88,19 +88,19 @@ Atualizando a página atual:
 
 {{< tabpane langEqualsHeader=true >}}
 {{< tab header="Java" text=true >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/NavigationTest.java#L32-L33" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/NavigationTest.java#L32-L33" >}}
 {{< /tab >}}
 {{< tab header="Python" text=true >}}
-{{< gh-codeblock path="examples/python/tests/interactions/test_navigation.py#L19" >}}
+{{< gh-codeblock path="/examples/python/tests/interactions/test_navigation.py#L19" >}}
 {{< /tab >}}
   {{< tab header="CSharp" text=true >}}
- {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/NavigationTest.cs#L34-L35" >}}
+ {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Interactions/NavigationTest.cs#L34-L35" >}}
   {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
-{{< gh-codeblock path="examples/ruby/spec/interactions/navigation_spec.rb#L29" >}}
+{{< gh-codeblock path="/examples/ruby/spec/interactions/navigation_spec.rb#L29" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" text=true >}}
-{{< gh-codeblock path="examples/javascript/test/interactions/navigation.spec.js#L34-L35" >}}
+{{< gh-codeblock path="/examples/javascript/test/interactions/navigation.spec.js#L34-L35" >}}
 {{< /tab >}}
   {{< tab header="Kotlin" >}}driver.navigate().refresh(){{< /tab >}}
 {{< /tabpane >}}

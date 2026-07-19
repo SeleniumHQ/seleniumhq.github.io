@@ -21,7 +21,10 @@ import org.openqa.selenium.chromium.ChromiumNetworkConditions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeDriverService;
 import org.openqa.selenium.edge.EdgeOptions;
-import org.openqa.selenium.logging.*;
+import org.openqa.selenium.logging.LogEntries;
+import org.openqa.selenium.logging.LogEntry;
+import org.openqa.selenium.logging.LogType;
+import org.openqa.selenium.logging.LoggingPreferences;
 import org.openqa.selenium.remote.service.DriverFinder;
 
 
@@ -100,7 +103,7 @@ public class EdgeTest extends BaseTest {
     File logLocation = getTempFile("logsToFile", ".log");
     EdgeDriverService service = new EdgeDriverService.Builder().withLogFile(logLocation).build();
 
-    driver = new EdgeDriver(service);
+    driver = new EdgeDriver(service, getDefaultEdgeOptions());
 
     String fileContent = new String(Files.readAllBytes(logLocation.toPath()));
     Assertions.assertTrue(fileContent.contains("Starting Microsoft Edge WebDriver"));
@@ -113,10 +116,10 @@ public class EdgeTest extends BaseTest {
 
     EdgeDriverService service = new EdgeDriverService.Builder().withLogOutput(System.out).build();
 
-    driver = new EdgeDriver(service);
+    driver = new EdgeDriver(service, getDefaultEdgeOptions());
 
     String fileContent = new String(Files.readAllBytes(logLocation.toPath()));
-    Assertions.assertTrue(fileContent.contains("Starting Microsoft Edge WebDriver"));
+    Assertions.assertTrue(fileContent.contains("Starting msedgedriver"));
   }
 
   @Test
@@ -127,7 +130,7 @@ public class EdgeTest extends BaseTest {
     EdgeDriverService service =
         new EdgeDriverService.Builder().withLoglevel(ChromiumDriverLogLevel.DEBUG).build();
 
-    driver = new EdgeDriver(service);
+    driver = new EdgeDriver(service, getDefaultEdgeOptions());
 
     String fileContent = new String(Files.readAllBytes(logLocation.toPath()));
     Assertions.assertTrue(fileContent.contains("[DEBUG]:"));
@@ -143,7 +146,7 @@ public class EdgeTest extends BaseTest {
     EdgeDriverService service =
         new EdgeDriverService.Builder().withAppendLog(true).withReadableTimestamp(true).build();
 
-    driver = new EdgeDriver(service);
+    driver = new EdgeDriver(service, getDefaultEdgeOptions());
 
     String fileContent = new String(Files.readAllBytes(logLocation.toPath()));
     Pattern pattern = Pattern.compile("\\[\\d\\d-\\d\\d-\\d\\d\\d\\d", Pattern.CASE_INSENSITIVE);
@@ -161,7 +164,7 @@ public class EdgeTest extends BaseTest {
     EdgeDriverService service =
         new EdgeDriverService.Builder().withBuildCheckDisabled(true).build();
 
-    driver = new EdgeDriver(service);
+    driver = new EdgeDriver(service, getDefaultEdgeOptions());
 
     String fileContent = new String(Files.readAllBytes(logLocation.toPath()));
     String expected =
@@ -178,7 +181,7 @@ public class EdgeTest extends BaseTest {
 
   @Test
   public void setPermissions() {
-    EdgeDriver driver = new EdgeDriver();
+    EdgeDriver driver = new EdgeDriver(getDefaultEdgeOptions());
     driver.get("https://www.selenium.dev");
 
     driver.setPermission("camera", "denied");
@@ -194,7 +197,7 @@ public class EdgeTest extends BaseTest {
 
   @Test
   public void setNetworkConditions() {
-    driver = new EdgeDriver();
+    driver = new EdgeDriver(getDefaultEdgeOptions());
 
     ChromiumNetworkConditions networkConditions = new ChromiumNetworkConditions();
     networkConditions.setOffline(false);
@@ -215,12 +218,11 @@ public class EdgeTest extends BaseTest {
             () -> Assertions.assertEquals(networkConditions.getUploadThroughput(), actualConditions.getUploadThroughput())
     );
     ((EdgeDriver) driver).deleteNetworkConditions();
-    driver.quit();
   }
 
   @Test
   public void castFeatures() {
-    EdgeDriver driver = new EdgeDriver();
+    EdgeDriver driver = new EdgeDriver(getDefaultEdgeOptions());
 
     List<Map<String, String>> sinks = driver.getCastSinks();
     if (!sinks.isEmpty()) {
@@ -234,7 +236,7 @@ public class EdgeTest extends BaseTest {
 
   @Test
   public void getBrowserLogs() {
-    EdgeDriver driver = new EdgeDriver();
+    EdgeDriver driver = new EdgeDriver(getDefaultEdgeOptions());
     driver.get("https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html");
     WebElement consoleLogButton = driver.findElement(By.id("consoleError"));
     consoleLogButton.click();

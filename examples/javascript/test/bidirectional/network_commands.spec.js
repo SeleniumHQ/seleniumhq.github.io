@@ -1,10 +1,9 @@
 const assert = require("assert")
 const firefox = require('selenium-webdriver/firefox')
-const Network = require('selenium-webdriver/bidi/network')
+const { Network } = require('selenium-webdriver/bidi/network')
 const {until, By, Builder} = require('selenium-webdriver')
 const {AddInterceptParameters} = require("selenium-webdriver/bidi/addInterceptParameters");
 const {InterceptPhase} = require("selenium-webdriver/bidi/interceptPhase");
-
 
 describe('Network commands', function () {
   let driver
@@ -25,12 +24,12 @@ describe('Network commands', function () {
     await driver.quit()
   })
 
-  xit('can add intercept', async function () {
+  it('can add intercept', async function () {
     const intercept = await network.addIntercept(new AddInterceptParameters(InterceptPhase.BEFORE_REQUEST_SENT))
     assert.notEqual(intercept, null)
   })
 
-  xit('can remove intercept', async function () {
+  it('can remove intercept', async function () {
     const network = await Network(driver)
     const intercept = await network.addIntercept(new AddInterceptParameters(InterceptPhase.BEFORE_REQUEST_SENT))
     assert.notEqual(intercept, null)
@@ -38,7 +37,7 @@ describe('Network commands', function () {
     await network.removeIntercept(intercept)
   })
 
-  xit('can continue with auth credentials ', async function () {
+  it('can continue with auth credentials ', async function () {
     await network.addIntercept(new AddInterceptParameters(InterceptPhase.AUTH_REQUIRED))
 
     await network.authRequired(async (event) => {
@@ -52,7 +51,7 @@ describe('Network commands', function () {
     assert.equal(elementMessage, successMessage)
   })
 
-  xit('can continue without auth credentials ', async function () {
+  it('can continue without auth credentials ', async function () {
     await network.addIntercept(new AddInterceptParameters(InterceptPhase.AUTH_REQUIRED))
 
     await network.authRequired(async (event) => {
@@ -67,7 +66,7 @@ describe('Network commands', function () {
     assert.equal(source.includes('Not authorized'), true)
   })
 
-  xit('can cancel auth ', async function () {
+  it('can cancel auth ', async function () {
     await network.addIntercept(new AddInterceptParameters(InterceptPhase.AUTH_REQUIRED))
 
     await network.authRequired(async (event) => {

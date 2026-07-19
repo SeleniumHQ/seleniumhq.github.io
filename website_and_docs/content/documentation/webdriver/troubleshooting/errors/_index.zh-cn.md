@@ -12,7 +12,9 @@ description: >
 
 ### 潜在原因
 
-您尝试使用的CSS或XPath选择器包含无效字符或无效查询。
+* The CSS or XPath selector you are trying to use has invalid characters or an invalid query.
+* You may have placed an XPATH value as a parameter to a CSS selector, or vice versa.
+* You may have used a CSS or XPATH selector as a parameter to an ID selector.
 
 ### 可行方案
 
@@ -37,6 +39,7 @@ description: >
 
 * 确保您位于期望的页面上，并且代码中的前置操作已正确完成
 * 确保您使用的是正确的 [等待策略]({{< ref "/documentation/webdriver/waits" >}})
+* Use an interactive [Selenium Wait Code Generator](https://99tools.net/selenium-wait-code-generator/) to create accurate explicit wait snippets for multiple supported languages including Java, Python, C#, JavaScript, and Ruby.
 * 使用浏览器的devtools控制台更新定位器或使用浏览器扩展程序，例如:
   * [SelectorsHub](https://selectorshub.com/selectorshub/)
 

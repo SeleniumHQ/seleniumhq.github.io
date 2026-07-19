@@ -18,17 +18,17 @@ weight: 3
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/drivers/ServiceTest.java#L15-L16" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/ServiceTest.java#L15-L16" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
 {{< badge-version version="4.11" >}}
-{{< gh-codeblock path="examples/python/tests/drivers/test_service.py#L5-L6" >}}
+{{< gh-codeblock path="/examples/python/tests/drivers/test_service.py#L5-L6" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Drivers/ServiceTest.cs#L14-L15" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Drivers/ServiceTest.cs#L14-L15" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/drivers/service_spec.rb#L14-L15" >}}
+{{< gh-codeblock path="/examples/ruby/spec/drivers/service_spec.rb#L14-L15" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -47,19 +47,19 @@ weight: 3
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/drivers/ServiceTest.java#L25-L26" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/ServiceTest.java#L25-L26" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
 {{< badge-version version="4.11" >}}
-{{< gh-codeblock path="examples/python/tests/drivers/test_service.py#L15" >}}
+{{< gh-codeblock path="/examples/python/tests/drivers/test_service.py#L15" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-version version="4.9" >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Drivers/ServiceTest.cs#L23" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Drivers/ServiceTest.cs#L23" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-version version="4.8" >}}
-{{< gh-codeblock path="examples/ruby/spec/drivers/service_spec.rb#L26" >}}
+{{< gh-codeblock path="/examples/ruby/spec/drivers/service_spec.rb#L26" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -76,18 +76,18 @@ weight: 3
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/drivers/ServiceTest.java#L33" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/ServiceTest.java#L33" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
 {{< badge-version version="4.11" >}}
-{{< gh-codeblock path="examples/python/tests/drivers/test_service.py#L23" >}}
+{{< gh-codeblock path="/examples/python/tests/drivers/test_service.py#L23" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Drivers/ServiceTest.cs#L32" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Drivers/ServiceTest.cs#L32" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-version version="4.8" >}}
-{{< gh-codeblock path="examples/ruby/spec/drivers/service_spec.rb#L33" >}}
+{{< gh-codeblock path="/examples/ruby/spec/drivers/service_spec.rb#L33" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}

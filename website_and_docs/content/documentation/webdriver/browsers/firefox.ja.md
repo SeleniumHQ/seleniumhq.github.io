@@ -166,7 +166,7 @@ for instructions on how to find the directory of your profile.
 
 {{< tabpane text=true >}}
 {{% tab header="Java" %}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L62-L63" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L62-L63" >}}
 **注**: Java では、システムプロパティによってファイル出力を設定することもできます。\
 プロパティキー:`GeckoDriverService.GECKO_DRIVER_LOG_PROPERTY`\
 プロパティ値: ログファイルへのパスを表す文字列
@@ -180,7 +180,7 @@ for instructions on how to find the directory of your profile.
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-version version="4.10" >}}
-{{< gh-codeblock path="examples/ruby/spec/browsers/firefox_spec.rb#L43" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/firefox_spec.rb#L43" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -197,7 +197,7 @@ for instructions on how to find the directory of your profile.
 {{< tabpane text=true >}}
 {{% tab header="Java" %}}
 {{< badge-version version="4.10" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L76-L77" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L76-L77" >}}
 **注意**: Javaは、システムプロパティを使用してコンソール出力を設定することもできます;\
 プロパティキー: `GeckoDriverService.GECKO_DRIVER_LOG_PROPERTY`\
 プロパティ値: `DriverService.LOG_STDOUT` または `DriverService.LOG_STDERR`
@@ -211,7 +211,7 @@ for instructions on how to find the directory of your profile.
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-version version="4.10" >}}
-{{< gh-codeblock path="examples/ruby/spec/browsers/firefox_spec.rb#L52" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/firefox_spec.rb#L52" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -231,7 +231,7 @@ for instructions on how to find the directory of your profile.
 {{< tabpane text=true >}}
 {{% tab header="Java" %}}
 {{< badge-version version="4.10" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L90-L91" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L90-L91" >}}
 **注意**: Javaは、システムプロパティによってログレベルの設定も可能です:\
 プロパティキー: `GeckoDriverService.GECKO_DRIVER_LOG_LEVEL_PROPERTY`\
 プロパティ値:`FirefoxDriverLogLevel`列挙型の文字列表現
@@ -245,7 +245,7 @@ for instructions on how to find the directory of your profile.
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-version version="4.10" >}}
-{{< gh-codeblock path="examples/ruby/spec/browsers/firefox_spec.rb#L63" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/firefox_spec.rb#L63" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -262,7 +262,7 @@ for instructions on how to find the directory of your profile.
 {{< tabpane text=true >}}
 {{% tab header="Java" %}}
 {{< badge-version version="4.10" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L106-L107" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L106-L107" >}}
 **注意**: Javaでは、システムプロパティによってログレベルを設定することもできます。\
 プロパティキー: `GeckoDriverService.GECKO_DRIVER_LOG_NO_TRUNCATE`\
 プロパティ値: `"true"` または `"false"`
@@ -276,7 +276,7 @@ for instructions on how to find the directory of your profile.
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-version version="4.10" >}}
-{{< gh-codeblock path="examples/ruby/spec/browsers/firefox_spec.rb#L72" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/firefox_spec.rb#L72" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -293,20 +293,20 @@ for instructions on how to find the directory of your profile.
 {{< tabpane text=true >}}
 {{% tab header="Java" %}}
 {{< badge-version version="4.10" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L118-L119" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/FirefoxTest.java#L118-L119" >}}
 **注意**: Javaでは、システムプロパティを使用してログレベルを設定することもできます：  \
 プロパティキー: `GeckoDriverService.GECKO_DRIVER_PROFILE_ROOT`\
 プロパティ値: プロファイルルートディレクトリへのパスを表す文字列
 {{% /tab %}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/browsers/test_firefox.py#L81" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_firefox.py#L81" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-implementation >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-version version="4.8" >}}
-{{< gh-codeblock path="examples/ruby/spec/browsers/firefox_spec.rb#L81" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/firefox_spec.rb#L81" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}

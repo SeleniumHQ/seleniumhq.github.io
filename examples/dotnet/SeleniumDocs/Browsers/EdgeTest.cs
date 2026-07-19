@@ -2,8 +2,10 @@ using System;
 using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
+using System.Threading;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Chromium;
 using OpenQA.Selenium.Edge;
 
 namespace SeleniumDocs.Browsers
@@ -17,17 +19,25 @@ namespace SeleniumDocs.Browsers
         [TestCleanup]
         public void Cleanup()
         {
+            driver?.Quit();
+
             if (_logLocation != null && File.Exists(_logLocation))
             {
-                File.Delete(_logLocation);
+                try
+                {
+                    File.Delete(_logLocation);
+                }
+                catch (IOException)
+                {
+                }
             }
-            driver.Quit();
         }
 
         [TestMethod]
         public void BasicOptions()
         {
             var options = new EdgeOptions();
+            options.AddArgument("--no-sandbox");
             driver = new EdgeDriver(options);
         }
 
@@ -35,9 +45,10 @@ namespace SeleniumDocs.Browsers
         public void Arguments()
         {
             var options = new EdgeOptions();
+            options.AddArgument("--no-sandbox");
 
             options.AddArgument("--start-maximized");
-    
+
             driver = new EdgeDriver(options);
         }
 
@@ -45,9 +56,10 @@ namespace SeleniumDocs.Browsers
         public void SetBrowserLocation()
         {
             var options = new EdgeOptions();
+            options.AddArgument("--no-sandbox");
 
             options.BinaryLocation = GetEdgeLocation();
-    
+
             driver = new EdgeDriver(options);
         }
 
@@ -55,6 +67,7 @@ namespace SeleniumDocs.Browsers
         public void InstallExtension()
         {
             var options = new EdgeOptions();
+            options.AddArgument("--no-sandbox");
             var baseDir = AppDomain.CurrentDomain.BaseDirectory;
             var extensionFilePath = Path.Combine(baseDir, "../../../Extensions/webextensions-selenium-example.crx");
 
@@ -72,6 +85,7 @@ namespace SeleniumDocs.Browsers
         public void ExcludeSwitch()
         {
             var options = new EdgeOptions();
+            options.AddArgument("--no-sandbox");
 
             options.AddExcludedArgument("disable-popup-blocking");
 
@@ -82,88 +96,97 @@ namespace SeleniumDocs.Browsers
         public void LogsToFile()
         {
             var service = EdgeDriverService.CreateDefaultService();
+            var options = new EdgeOptions();
+            options.AddArgument("--no-sandbox");
 
             service.LogPath = GetLogLocation();
 
-            driver = new EdgeDriver(service);
-            driver.Quit(); // Close the Service log file before reading
-            var lines = File.ReadLines(GetLogLocation());
+            driver = new EdgeDriver(service, options);
+            driver.Quit();
+            service.Dispose();
+            var lines = ReadLogLines(GetLogLocation());
             Assert.IsNotNull(lines.FirstOrDefault(line => line.Contains("Starting Microsoft Edge WebDriver")));
         }
 
         [TestMethod]
-        [Ignore("Not implemented")]
-        public void LogsToConsole()
-        {
-            var stringWriter = new StringWriter();
-            var originalOutput = Console.Out;
-            Console.SetOut(stringWriter);
-
-            var service = EdgeDriverService.CreateDefaultService();
-
-            //service.LogToConsole = true;
-
-            driver = new EdgeDriver(service);
-
-            Assert.IsTrue(stringWriter.ToString().Contains("Starting Microsoft Edge WebDriver"));
-            Console.SetOut(originalOutput);
-            stringWriter.Dispose();
-        }
-
-        [TestMethod]
-        [Ignore("Not implemented")]
         public void LogsLevel()
         {
             var service = EdgeDriverService.CreateDefaultService();
+            var options = new EdgeOptions();
+            options.AddArgument("--no-sandbox");
             service.LogPath = GetLogLocation();
 
-            // service.LogLevel = ChromiumDriverLogLevel.Debug 
+            service.LogLevel = ChromiumDriverLogLevel.Debug;
 
-            driver = new EdgeDriver(service);
+            driver = new EdgeDriver(service, options);
 
-            driver.Quit(); // Close the Service log file before reading
-            var lines = File.ReadLines(GetLogLocation());
+            driver.Quit();
+            service.Dispose();
+            var lines = ReadLogLines(GetLogLocation());
             Assert.IsNotNull(lines.FirstOrDefault(line => line.Contains("[DEBUG]:")));
         }
 
         [TestMethod]
-        [Ignore("Not implemented")]
         public void ConfigureDriverLogs()
         {
             var service = EdgeDriverService.CreateDefaultService();
+            var options = new EdgeOptions();
+            options.AddArgument("--no-sandbox");
             service.LogPath = GetLogLocation();
             service.EnableVerboseLogging = true;
 
             service.EnableAppendLog = true;
-            // service.readableTimeStamp = true;
+            service.ReadableTimestamp = true;
 
-            driver = new EdgeDriver(service);
+            driver = new EdgeDriver(service, options);
 
-            driver.Quit(); // Close the Service log file before reading
-            var lines = File.ReadLines(GetLogLocation());
-            var regex = new Regex(@"\[\d\d-\d\d-\d\d\d\d");
-            Assert.IsNotNull(lines.FirstOrDefault(line => regex.Matches("").Count > 0));
+            driver.Quit();
+            service.Dispose();
+            var lines = ReadLogLines(GetLogLocation());
+            var regex = new Regex(@"\[\d\d-\d\d-\d\d\d\d \d\d:\d\d:\d\d\.\d+\]");
+            Assert.IsNotNull(lines.FirstOrDefault(line => regex.Matches(line).Count > 0));
         }
 
         [TestMethod]
         public void DisableBuildCheck()
         {
             var service = EdgeDriverService.CreateDefaultService();
+            var options = new EdgeOptions();
+            options.AddArgument("--no-sandbox");
             service.LogPath = GetLogLocation();
             service.EnableVerboseLogging = true;
 
             service.DisableBuildCheck = true;
 
-            driver = new EdgeDriver(service);
-            driver.Quit(); // Close the Service log file before reading
+            driver = new EdgeDriver(service, options);
+            driver.Quit();
+            service.Dispose();
             var expected = "[WARNING]: You are using an unsupported command-line switch: --disable-build-check";
-            var lines = File.ReadLines(GetLogLocation());
+            var lines = ReadLogLines(GetLogLocation());
             Assert.IsNotNull(lines.FirstOrDefault(line => line.Contains(expected)));
         }
-        
+
+        private static string[] ReadLogLines(string path)
+        {
+            const int maxAttempts = 20;
+            for (var attempt = 1; attempt <= maxAttempts; attempt++)
+            {
+                try
+                {
+                    return File.ReadAllLines(path);
+                }
+                catch (IOException) when (attempt < maxAttempts)
+                {
+                    Thread.Sleep(500);
+                }
+            }
+
+            return File.ReadAllLines(path);
+        }
+
         private string GetLogLocation()
         {
-            if (_logLocation == null || !File.Exists(_logLocation))
+            if (string.IsNullOrEmpty(_logLocation) && !File.Exists(_logLocation))
             {
                 _logLocation = Path.GetTempFileName();
             }
@@ -177,7 +200,7 @@ namespace SeleniumDocs.Browsers
             {
                 BrowserVersion = "stable"
             };
-            return new DriverFinder(options).GetBrowserPath();
+            return new DriverFinder(options).GetBrowserPathAsync().AsTask().GetAwaiter().GetResult();
         }
     }
 }

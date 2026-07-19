@@ -87,7 +87,7 @@ Links to everything can be found on our [downloads page][downloads].
 
 We thank all our contributors for their incredible efforts in making Selenium better with every release. ❤️
 
-For a detailed look at all changes, check out the [release notes](https://github.com/SeleniumHQ/selenium/releases/tag/4.28).
+For a detailed look at all changes, check out the [release notes](https://github.com/SeleniumHQ/selenium/releases/tag/selenium-4.28.0).
 
 <br>
 
