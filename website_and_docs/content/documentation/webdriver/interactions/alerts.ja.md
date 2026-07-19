@@ -26,7 +26,7 @@ WebDriverはポップアップからテキストを取得し、これらのア�
 {{< /tab >}}
 
 {{< tab header="Python" text=true >}}
-{{< gh-codeblock path="/examples/python/tests/interactions/test_alerts.py#L12-L18" >}}
+{{< gh-codeblock path="/examples/python/tests/interactions/test_alerts.py#L13-L19" >}}
 {{< /tab >}}
 
   {{< tab header="CSharp" >}}
@@ -76,7 +76,7 @@ alert.accept()
 {{< /tab >}}
 
 {{< tab header="Python" text=true >}}
-{{< gh-codeblock path="/examples/python/tests/interactions/test_alerts.py#L26-L32" >}}
+{{< gh-codeblock path="/examples/python/tests/interactions/test_alerts.py#L27-L33" >}}
 {{< /tab >}}
 
   {{< tab header="CSharp" >}}
@@ -133,7 +133,7 @@ alert.dismiss()
 {{< /tab >}}
 
 {{< tab header="Python" text=true >}}
-{{< gh-codeblock path="/examples/python/tests/interactions/test_alerts.py#L40-L47" >}}
+{{< gh-codeblock path="/examples/python/tests/interactions/test_alerts.py#L41-L48" >}}
 {{< /tab >}}
 
   {{< tab header="CSharp" >}}

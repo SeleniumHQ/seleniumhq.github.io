@@ -414,7 +414,7 @@ WebDriver创建新会话时,
 {{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L51-53">}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Drivers/OptionsTest.cs#L59-L60">}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< gh-codeblock path="/examples/ruby/spec/drivers/options_spec.rb#L60-L61" >}}

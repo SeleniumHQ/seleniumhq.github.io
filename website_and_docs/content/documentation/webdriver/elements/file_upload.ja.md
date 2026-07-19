@@ -1,16 +1,16 @@
 ---
-title: "File Upload"
-linkTitle: "File Upload"
-weight: 1
+title: "ファイルのアップロード"
+linkTitle: "ファイルのアップロード"
+weight: 5
 aliases: [
 "/ja/documentation/webdriver/additional_features/fileupload/"
 ]
 ---
 
 
-Because Selenium cannot interact with the file upload dialog, it provides a way
-to upload files without opening the dialog. If the element is an `input` element with type `file`, 
-you can use the send keys method to send the full path to the file that will be uploaded.
+Selenium はファイル選択ダイアログを操作できないため、ダイアログを開かずにファイルを
+アップロードする方法を提供しています。要素が `type` 属性に `file` を指定した `input` 要素であれば、
+`sendKeys` メソッドを使用して、アップロードするファイルの完全なパスを送信できます。
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}

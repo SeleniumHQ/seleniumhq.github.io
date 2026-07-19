@@ -44,11 +44,6 @@ public class AlertsTest extends BaseTest {
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
 
-    @AfterEach
-    public void endSession() {
-        driver.quit();
-    }
-
     @Test
     public void alertInformationTest() {
         driver.get("https://www.selenium.dev/selenium/web/alerts.html#");
