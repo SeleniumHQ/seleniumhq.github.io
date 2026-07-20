@@ -25,6 +25,9 @@ Creates a new browsing context in a new window.
 {{< badge-version version="4.8" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/BrowsingContextTest.java#L51" >}}
 {{< /tab >}}
+{{< tab header="CSharp" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/BiDi/BrowsingContext/BrowsingContextTest.Create.cs#L23-L27" >}}
+{{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -46,6 +49,9 @@ Creates a new browsing context in a new tab.
 {{< badge-version version="4.8" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/BrowsingContextTest.java#L60-L63" >}}
 {{< /tab >}}
+{{< tab header="CSharp" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/BiDi/BrowsingContext/BrowsingContextTest.Create.cs#L13-L17" >}}
+{{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -66,6 +72,9 @@ Creates a browsing context for the existing tab/window to run commands.
 {{< tab header="Java" >}}
 {{< badge-version version="4.8" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/BrowsingContextTest.java#L39-L43" >}}
+{{< /tab >}}
+{{< tab header="CSharp" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/BiDi/BrowsingContext/BrowsingContextTest.Create.cs#L53-L55" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-code >}}
@@ -89,6 +98,9 @@ The API allows to pass the reference browsing context, which is used to create a
 {{< badge-version version="4.8" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/BrowsingContextTest.java#L52-L57" >}}
 {{< /tab >}}
+{{< tab header="CSharp" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/BiDi/BrowsingContext/BrowsingContextTest.Create.cs#L43-L47" >}}
+{{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -110,6 +122,9 @@ The API allows to pass the reference browsing context, which is used to create a
 {{< badge-version version="4.8" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/BrowsingContextTest.java#L66-L71" >}}
 {{< /tab >}}
+{{< tab header="CSharp" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/BiDi/BrowsingContext/BrowsingContextTest.Create.cs#L33-L37" >}}
+{{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -129,6 +144,9 @@ The API allows to pass the reference browsing context, which is used to create a
 {{< badge-version version="4.8" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/BrowsingContextTest.java#L74-L82" >}}
 {{< /tab >}}
+{{< tab header="CSharp" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/BiDi/BrowsingContext/BrowsingContextTest.Navigate.cs#L13-L17" >}}
+{{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -147,6 +165,9 @@ The API allows to pass the reference browsing context, which is used to create a
 {{< tab header="Java" >}}
 {{< badge-version version="4.8" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/BrowsingContextTest.java#L85-L94" >}}
+{{< /tab >}}
+{{< tab header="CSharp" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/BiDi/BrowsingContext/BrowsingContextTest.Navigate.cs#L23-L27" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-code >}}
@@ -169,6 +190,9 @@ Provides a tree of all browsing contexts descending from the parent browsing con
 {{< badge-version version="4.8" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/BrowsingContextTest.java#L97-L110" >}}
 {{< /tab >}}
+{{< tab header="CSharp" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/BiDi/BrowsingContext/BrowsingContextTest.GetTree.cs#L13-L19" >}}
+{{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -190,6 +214,9 @@ Provides a tree of all browsing contexts descending from the parent browsing con
 {{< badge-version version="4.8" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/BrowsingContextTest.java#L113-L125" >}}
 {{< /tab >}}
+{{< tab header="CSharp" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/BiDi/BrowsingContext/BrowsingContextTest.GetTree.cs#L25-L30" >}}
+{{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -208,6 +235,9 @@ Provides a tree of all browsing contexts descending from the parent browsing con
 {{< tab header="Java" >}}
 {{< badge-version version="4.8" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/BrowsingContextTest.java#L128-L135" >}}
+{{< /tab >}}
+{{< tab header="CSharp" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/BiDi/BrowsingContext/BrowsingContextTest.GetTree.cs#L36-L41" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-code >}}
@@ -228,6 +258,9 @@ Provides a tree of all browsing contexts descending from the parent browsing con
 {{< badge-version version="4.8" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/BrowsingContextTest.java#L138-L155" >}}
 {{< /tab >}}
+{{< tab header="CSharp" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/BiDi/BrowsingContext/BrowsingContextTest.Close.cs#L9-L22" >}}
+{{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -246,6 +279,9 @@ Provides a tree of all browsing contexts descending from the parent browsing con
 {{< tab header="Java" >}}
 {{< badge-version version="4.14.1" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/BrowsingContextTest.java#L159-L163" >}}
+{{< /tab >}}
+{{< tab header="CSharp" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/BiDi/BrowsingContext/BrowsingContextTest.Activate.cs#L11" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-code >}}
@@ -268,6 +304,9 @@ Provides a tree of all browsing contexts descending from the parent browsing con
 {{< badge-version version="4.13.0" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/BrowsingContextTest.java#L171-L175" >}}
 {{< /tab >}}
+{{< tab header="CSharp" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/BiDi/BrowsingContext/BrowsingContextTest.Reload.cs#L12-L18" >}}
+{{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -286,6 +325,9 @@ Provides a tree of all browsing contexts descending from the parent browsing con
 {{< tab header="Java" >}}
 {{< badge-version version="4.13.0" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/BrowsingContextTest.java#L222-L230" >}}
+{{< /tab >}}
+{{< tab header="CSharp" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/BiDi/BrowsingContext/BrowsingContextTest.HandleUserPrompt.cs#L16-L33" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-code >}}
@@ -306,6 +348,9 @@ Provides a tree of all browsing contexts descending from the parent browsing con
 {{< badge-version version="4.13.0" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/BrowsingContextTest.java#L250-L254" >}}
 {{< /tab >}}
+{{< tab header="CSharp" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/BiDi/BrowsingContext/BrowsingContextTest.CaptureScreenshot.cs#L12-L16" >}}
+{{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -324,6 +369,9 @@ Provides a tree of all browsing contexts descending from the parent browsing con
 {{< tab header="Java" >}}
 {{< badge-version version="4.14.0" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/BrowsingContextTest.java#L261-L270" >}}
+{{< /tab >}}
+{{< tab header="CSharp" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/BiDi/BrowsingContext/BrowsingContextTest.CaptureScreenshot.cs#L22-L25" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-code >}}
@@ -344,6 +392,9 @@ Provides a tree of all browsing contexts descending from the parent browsing con
 {{< badge-version version="4.14.0" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/BrowsingContextTest.java#L277-L282" >}}
 {{< /tab >}}
+{{< tab header="CSharp" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/BiDi/BrowsingContext/BrowsingContextTest.CaptureScreenshot.cs#L31-L38" >}}
+{{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -362,6 +413,9 @@ Provides a tree of all browsing contexts descending from the parent browsing con
 {{< tab header="Java" >}}
 {{< badge-version version="4.14.1" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/BrowsingContextTest.java#L306-L309" >}}
+{{< /tab >}}
+{{< tab header="CSharp" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/BiDi/BrowsingContext/BrowsingContextTest.SetViewport.cs#L12" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-code >}}
@@ -383,6 +437,9 @@ Provides a tree of all browsing contexts descending from the parent browsing con
 {{< badge-version version="4.14.1" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/BrowsingContextTest.java#L319-L324" >}}
 {{< /tab >}}
+{{< tab header="CSharp" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/BiDi/BrowsingContext/BrowsingContextTest.Print.cs#L11-L15" >}}
+{{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -401,6 +458,9 @@ Provides a tree of all browsing contexts descending from the parent browsing con
 {{< tab header="Java" >}}
 {{< badge-version version="4.16.0" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/BrowsingContextTest.java#L332-L338" >}}
+{{< /tab >}}
+{{< tab header="CSharp" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/BiDi/BrowsingContext/BrowsingContextTest.Navigate.cs#L33-L39" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-code >}}
@@ -421,6 +481,9 @@ Provides a tree of all browsing contexts descending from the parent browsing con
 {{< badge-version version="4.16.0" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/BrowsingContextTest.java#L344-L354" >}}
 {{< /tab >}}
+{{< tab header="CSharp" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/BiDi/BrowsingContext/BrowsingContextTest.Navigate.cs#L45-L53" >}}
+{{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -439,6 +502,9 @@ Provides a tree of all browsing contexts descending from the parent browsing con
 {{< tab header="Java" >}}
 {{< badge-version version="4.16.0" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/BrowsingContextTest.java#L361-L367" >}}
+{{< /tab >}}
+{{< tab header="CSharp" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/BiDi/BrowsingContext/BrowsingContextTest.Navigate.cs#L73-L79" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-code >}}
@@ -462,6 +528,9 @@ This section contains the APIs related to browsing context events.
 {{< badge-version version="4.10" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/BrowsingContextInspectorTest.java#L36-L43" >}}
 {{< /tab >}}
+{{< tab header="CSharp" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/BiDi/BrowsingContext/BrowsingContextTest.Event.BrowsingContextCreated.cs#L13-L22" >}}
+{{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -480,6 +549,9 @@ This section contains the APIs related to browsing context events.
 {{< tab header="Java" >}}
 {{< badge-version version="4.10" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/BrowsingContextInspectorTest.java#L56-L65" >}}
+{{< /tab >}}
+{{< tab header="CSharp" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/BiDi/BrowsingContext/BrowsingContextTest.Event.DomContentLoaded.cs#L13-L22" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-code >}}
@@ -500,6 +572,9 @@ This section contains the APIs related to browsing context events.
 {{< badge-version version="4.10" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/BrowsingContextInspectorTest.java#L83-90" >}}
 {{< /tab >}}
+{{< tab header="CSharp" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/BiDi/BrowsingContext/BrowsingContextTest.Event.BrowsingContextLoaded.cs#L13-L22" >}}
+{{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -519,6 +594,9 @@ This section contains the APIs related to browsing context events.
 {{< badge-version version="4.15" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/BrowsingContextInspectorTest.java#L99-106" >}}
 {{< /tab >}}
+{{< tab header="CSharp" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/BiDi/BrowsingContext/BrowsingContextTest.Event.NavigationStarted.cs#L13-L21" >}}
+{{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -536,6 +614,9 @@ This section contains the APIs related to browsing context events.
 {{< tab header="Java" >}}
 {{< badge-version version="4.15" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/BrowsingContextInspectorTest.java#L115-125" >}}
+{{< /tab >}}
+{{< tab header="CSharp" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/BiDi/BrowsingContext/BrowsingContextTest.Event.FragmentNavigated.cs#L13-L24" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-code >}}
@@ -556,6 +637,9 @@ This section contains the APIs related to browsing context events.
 {{< badge-version version="4.15" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/BrowsingContextInspectorTest.java#L115-125" >}}
 {{< /tab >}}
+{{< tab header="CSharp" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/BiDi/BrowsingContext/BrowsingContextTest.Event.UserPrompt.cs#L14-L26" >}}
+{{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -574,6 +658,9 @@ This section contains the APIs related to browsing context events.
 {{< badge-version version="4.15" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/BrowsingContextInspectorTest.java#L152-165" >}}
 {{< /tab >}}
+{{< tab header="CSharp" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/BiDi/BrowsingContext/BrowsingContextTest.Event.UserPrompt.cs#L32-L44" >}}
+{{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-code >}}
 {{< /tab >}}
@@ -591,6 +678,9 @@ This section contains the APIs related to browsing context events.
 {{< tab header="Java" >}}
 {{< badge-version version="4.18" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/BrowsingContextInspectorTest.java#L172-L183" >}}
+{{< /tab >}}
+{{< tab header="CSharp" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/BiDi/BrowsingContext/BrowsingContextTest.Event.BrowsingContextDestroyed.cs#L13-L23" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-code >}}
