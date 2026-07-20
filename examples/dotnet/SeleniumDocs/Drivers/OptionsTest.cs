@@ -53,5 +53,20 @@ namespace SeleniumDocs.Drivers
                 driver.Quit();
             }
         }
+        [TestMethod]
+        public void SetUnhandledPromptBehavior()
+        {
+            var chromeOptions = new ChromeOptions();
+            chromeOptions.UnhandledPromptBehavior = UnhandledPromptBehavior.DismissAndNotify;
+            IWebDriver driver = new ChromeDriver(chromeOptions);
+            try
+            {
+                driver.Navigate().GoToUrl("https://selenium.dev");
+            }
+            finally
+            {
+                driver.Quit();
+            }
+        }
     }
 }

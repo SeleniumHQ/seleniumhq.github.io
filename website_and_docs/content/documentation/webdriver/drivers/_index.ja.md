@@ -32,7 +32,7 @@ weight: 3
 {{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L9" >}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/BaseTest.cs#L42" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/BaseTest.cs#L48" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< gh-codeblock path="/examples/ruby/spec/drivers/options_spec.rb#L14" >}}

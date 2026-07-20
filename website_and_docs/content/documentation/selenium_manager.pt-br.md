@@ -1,9 +1,9 @@
 ---
-title: "Selenium Manager (Beta)"
-linkTitle: "Selenium Manager"
+title: "Gerenciador do Selenium (Beta)"
+linkTitle: "Gerenciador do Selenium"
 weight: 3
 description: >
-    Selenium Manager is a command-line tool implemented in Rust that provides automated driver and browser management for Selenium. Selenium bindings use this tool by default, so you do not need to download it or add anything to your code or do anything else to use it.
+    O Selenium Manager é uma ferramenta de linha de comando implementada em Rust que fornece gerenciamento automatizado de drivers e navegadores para o Selenium. As bibliotecas do Selenium usam essa ferramenta por padrão, portanto, você não precisa baixá-la, adicionar nada ao seu código ou realizar qualquer outra ação para utilizá-la.
 ---
 
 ## Motivation
@@ -158,13 +158,15 @@ The cache in Selenium Manager is a local folder (`~/.cache/selenium` by default)
 In addition to the downloaded drivers and browsers, two additional files live in the cache's root:
 
 - Configuration file (`se-config.toml`). This file is optional and, as explained in the previous section, allows to store custom configuration values for Selenium Manager. This file is maintained by the end-user and read by Selenium Manager.
-- Metadata file (`se-metadata.json`). This file contains versions discovered by Selenium Manger making network requests (e.g., using the [CfT JSON endpoints](https://github.com/GoogleChromeLabs/chrome-for-testing#json-api-endpoints)) and the time-to-live (TTL) in which they are valid. Selenium Manager automatically maintains this file.
+- Metadata file (`se-metadata.json`). This file contains versions discovered by Selenium Manager making network requests (e.g., using the [CfT JSON endpoints](https://github.com/GoogleChromeLabs/chrome-for-testing#json-api-endpoints)) and the time-to-live (TTL) in which they are valid. Selenium Manager automatically maintains this file.
 
 The TTL in Selenium Manager is inspired by the TTL for DNS, a well-known mechanism that refers to how long some values are cached before they are automatically refreshed. In the case of Selenium Manager, these values are the versions found by making network requests for driver and browser version discovery. By default, the TTL is `3600` seconds (i.e., 1 hour) and can be tuned using configuration values or disabled by setting this configuration value to `0`.
 
 The TTL mechanism is a way to improve the overall performance of Selenium. It is based on the fact that the discovered driver and browser versions (e.g., the proper chromedriver version for Chrome 115 is 115.0.5790.170) will likely remain the same in the short term. Therefore, the discovered versions are written in the metadata file and read from there instead of making the same consecutive network request. This way, during the driver version discovery (step 2 of the automated driver management process previously introduced), Selenium Manager first reads the file metadata. When a *fresh* resolution (i.e., a driver/browser version valid during a TTL) is found, that version is used (saving some time in making a new network request). If not found or the TTL has expired, a network request is made, and the result is stored in the metadata file.
 
 Let's consider an example. A Selenium binding asks Selenium Manager to resolve chromedriver. Selenium Manager detects that Chrome 115 is installed, so it makes a network request to the CfT endpoints to discover the proper chromedriver version (115.0.5790.170, at that moment). This version is stored in the metadata file and considered valid during the next hour (TTL). If Selenium Manager is asked to resolve chromedriver during that time (which is likely to happen in the execution of a test suite), the chromedriver version is discovered by reading the metadata file instead of making a new request to the CfT endpoints. After one hour, the chromedriver version stored in the cache will be considered as *stale*, and Selenium Manager will refresh it by making a new network request to the corresponding endpoint.
+
+To bound the cache size without requiring manual intervention, Selenium Manager automatically prunes old cache entries. Every time a driver or browser is resolved from the cache, a `last_used` Unix timestamp is updated in a dedicated `cached_assets` section within the metadata file (`se-metadata.json`). On each execution, Selenium Manager automatically removes driver or browser version directories from the cache that have not been used in over 30 days.
 
 Selenium Manager includes two additional arguments two handle the cache, namely:
 

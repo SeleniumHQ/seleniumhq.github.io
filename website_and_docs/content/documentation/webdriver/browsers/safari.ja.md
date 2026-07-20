@@ -3,26 +3,29 @@ title: "Safari特有の機能"
 linkTitle: "Safari"
 weight: 10
 description: >-
-    これらは、Apple Safariブラウザに特有の機能と機能です。
+    これらは、Apple Safariブラウザ固有の機能です。
 aliases: [
 "/ja/documentation/capabilities/safari"
 ]
 ---
 
-Unlike Chromium and Firefox drivers, the safaridriver is installed with the Operating System.
-To enable automation on Safari, run the following command from the terminal:
+Chromium および Firefox のドライバーとは異なり、safaridriver はオペレーティングシステムとともに
+インストールされています。
+Safari で自動化を有効にするには、ターミナルで次のコマンドを実行します。
 
 ```shell
 safaridriver --enable
 ```
 
-## Options
+## オプション
 
-Capabilities common to all browsers are described on the [Options page]({{< ref "../drivers/options.md" >}}).
+すべてのブラウザに共通する機能は、[オプションページ]({{< ref "../drivers/options.md" >}})で説明しています。
 
-Capabilities unique to Safari can be found at Apple's page [About WebDriver for Safari](https://developer.apple.com/documentation/webkit/about_webdriver_for_safari#2957227)
+Safari 固有の機能については、Apple の
+[About WebDriver for Safari](https://developer.apple.com/documentation/webkit/about_webdriver_for_safari#2957227)
+のページを参照してください。
 
-Starting a Safari session with basic defined options looks like this:
+基本的な定義済みオプションで Safari セッションを開始する場合は、次のようになります。
 
 {{< tabpane langEqualsHeader=true >}}
 {{< tab header="Java" text=true >}}
@@ -46,26 +49,30 @@ val driver = SafariDriver(options)
 {{< /tab >}}
 {{< /tabpane >}}
 
-### Mobile
-Those looking to automate Safari on iOS should look to the [Appium project](//appium.io/).
+### モバイル
+
+iOS 上の Safari を自動化する場合は、[Appium プロジェクト](//appium.io/)を参照してください。
 
 
-## Service
+<span id="service"></span>
+## サービス
 
-Service settings common to all browsers are described on the [Service page]({{< ref "../drivers/service.md" >}}).
+すべてのブラウザに共通するサービス設定は、[サービスページ]({{< ref "../drivers/service.md" >}})で
+説明しています。
 
-### Logging
+### ログ出力
 
-Unlike other browsers, Safari doesn't let you choose where logs are output, or change levels. The one option
-available is to turn logs off or on. If logs are toggled on, they can be found at:`~/Library/Logs/com.apple.WebDriver/`.
+Safari では、他のブラウザとは異なり、ログの出力先やログレベルを選択できません。利用できるのは、
+ログを有効または無効にする設定だけです。ログを有効にした場合は、
+`~/Library/Logs/com.apple.WebDriver/` に保存されます。
 
 {{< tabpane text=true >}}
 {{% tab header="Java" %}}
 {{< badge-version version="4.10" >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/SafariTest.java#L31" >}}
-**Note**: Java also allows setting console output by System Property;\
-Property key: `SafariDriverService.SAFARI_DRIVER_LOGGING`\
-Property value: `"true"` or `"false"`
+**注**: Java では、システムプロパティでコンソール出力も設定できます。\
+プロパティキー: `SafariDriverService.SAFARI_DRIVER_LOGGING`\
+プロパティ値: `"true"` または `"false"`
 {{% /tab %}}
 {{< tab header="Python" >}}
 {{< badge-version version="4.26" >}}
@@ -89,8 +96,9 @@ Property value: `"true"` or `"false"`
 
 ## Safari Technology Preview
 
-Apple provides a development version of their browser — [Safari Technology Preview](https://developer.apple.com/safari/technology-preview/)
-To use this version in your code:
+Apple は、ブラウザの開発版である [Safari Technology Preview](https://developer.apple.com/safari/technology-preview/) を
+提供しています。
+コードでこのバージョンを使用するには：
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}

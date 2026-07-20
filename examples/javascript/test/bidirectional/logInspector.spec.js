@@ -33,7 +33,7 @@ describe('Log Inspector', function () {
     assert.equal(logEntry.type, 'console')
     assert.equal(logEntry.level, 'info')
     assert.equal(logEntry.method, 'log')
-    assert.equal(logEntry.stackTrace, null)
+    assert.equal(logEntry.stackTrace.callFrames[0].functionName, 'helloWorld')
     assert.equal(logEntry.args.length, 1)
 
     await inspector.close()

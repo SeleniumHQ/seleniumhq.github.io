@@ -27,7 +27,7 @@ pygmentsStyle = "tango"
 
 # Configure how URLs look like per section.
 [permalinks]
-blog = "/:section/:year/:filename/"
+blog = "/:section/:year/:contentbasename/"
 # blog = "/:section/:year/:month/:day/:slug/"
 
 ## Configuration for BlackFriday markdown parser: https://github.com/russross/blackfriday
@@ -209,7 +209,7 @@ enable = false
 [[params.links.user]]
 	name ="Selenium X"
 	url = "https://x.com/SeleniumHQ"
-	icon = "fab fa-twitter"
+	icon = "fab fa-x-twitter"
         desc = "Follow us on X to get the latest news!"
 [[params.links.user]]
 	name = "Selenium Community YouTube Channel"
@@ -257,7 +257,7 @@ enable = false
         desc = "Chat with other project developers and users in Slack"
 [[params.links.developer]]
 	name = "IRC"
-	url = "https://kiwiirc.com/nextclient/irc.libera.chat/#selenium"
+	url = "https://web.libera.chat/#selenium"
 	icon = "fas fa-comments"
         desc = "Chat with other project developers and users in IRC"
 [[params.links.developer]]

@@ -1,9 +1,9 @@
 ---
-title: "Style guide for Selenium documentation"
-linkTitle: "Style"
+title: "Guia de estilo para a documentação do Selenium"
+linkTitle: "Estilo"
 weight: 6
 description: >-
-  Conventions for contributions to the Selenium documentation and code examples
+  Convenções para contribuições à documentação do Selenium e exemplos de código.
 ---
 
 Read our [contributing documentation]({{< ref contributing.md >}}) for complete instructions on

@@ -27,7 +27,7 @@ Installation of Selenium libraries for Java is accomplished using a build tool.
 ### Maven
 Specify the dependencies in the project's `pom.xml` file:
 
-{{< gh-codeblock path="/examples/java/pom.xml#L30-L34" >}}
+{{< gh-codeblock path="/examples/java/pom.xml#L35-L38" >}}
 
 ### Gradle
 Specify the dependency in the project `build.gradle` file as `testImplementation`:

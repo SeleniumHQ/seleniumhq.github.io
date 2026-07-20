@@ -92,7 +92,7 @@ Selenium 内置了一种自动等待元素出现的方式, 称为 _隐式等待_
 {{< gh-codeblock path="/examples/javascript/test/waits/waits.spec.js#L39" >}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/waits/WaitsTest.kt#L19" >}}
   {{< /tab >}}
 {{< /tabpane >}}
 
@@ -133,7 +133,7 @@ JavaScript also supports [Expected Conditions]({{< ref "support_features/expecte
 {{< gh-codeblock path="/examples/javascript/test/waits/waits.spec.js#L52" >}}
   {{% /tab %}}
   {{< tab header="Kotlin" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/waits/WaitsTest.kt#L36-L37" >}}
   {{< /tab >}}
 {{< /tabpane >}}
 
@@ -174,7 +174,7 @@ The easiest way to customize Waits in Java is to use the `FluentWait` class:
 {{< badge-code >}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/waits/WaitsTest.kt#L51-L60" >}}
   {{< /tab >}}
 {{< /tabpane >}}
 
