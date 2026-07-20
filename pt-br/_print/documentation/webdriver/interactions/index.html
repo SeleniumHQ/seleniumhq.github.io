@@ -2579,7 +2579,9 @@ Close</button></div></div><div style=padding:20px><div id=codeContent_97953c2b0b
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span><span style=color:#8f5902;font-style:italic>//Press the OK button
 </span></span></span><span style=display:flex><span><span style=color:#8f5902;font-style:italic></span><span style=color:#000>alert</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>accept</span><span style=color:#000;font-weight:700>()</span>
-</span></span><span style=display:flex><span>  </span></span></code></pre></div></div></div></div><div class=td-content style=page-break-before:always><h1 id=pg-9b1bc8ac72585b018264a480c830e716>3 - Trabalhando com cookies</h1><p>Um cookie é um pequeno pedaço de dado enviado de um site e armazenado no seu computador.
+</span></span><span style=display:flex><span>  </span></span></code></pre></div></div></div><h2 id=beforeunload>beforeunload</h2><p>Drivers recentes descartam automaticamente os prompts de <code>beforeunload</code> por padrão.
+Para manter o comportamento antigo,
+veja <a href=https://www.selenium.dev/pt-br/documentation/webdriver/drivers/options/#unhandledpromptbehavior>unhandledPromptBehavior</a>.</p></div><div class=td-content style=page-break-before:always><h1 id=pg-9b1bc8ac72585b018264a480c830e716>3 - Trabalhando com cookies</h1><p>Um cookie é um pequeno pedaço de dado enviado de um site e armazenado no seu computador.
 Os cookies são usados principalmente para reconhecer o usuário e carregar as informações armazenadas.</p><p>A API WebDriver fornece uma maneira de interagir com cookies com métodos integrados:</p><h2 id=add-cookie>Add Cookie</h2><p>É usado para adicionar um cookie ao contexto de navegação atual.
 Add Cookie aceita apenas um conjunto de objetos JSON serializáveis definidos. <a href=https://www.w3.org/TR/webdriver1/#cookies>Aqui </a>é o link para a lista de valores-chave JSON aceitos.</p><p>Em primeiro lugar, você precisa estar no domínio para qual o cookie será
 valido. Se você está tentando predefinir cookies antes

@@ -2585,7 +2585,9 @@ Close</button></div></div><div style=padding:20px><div id=codeContent_97953c2b0b
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span><span style=color:#8f5902;font-style:italic>//Press the OK button
 </span></span></span><span style=display:flex><span><span style=color:#8f5902;font-style:italic></span><span style=color:#000>alert</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>accept</span><span style=color:#000;font-weight:700>()</span>
-</span></span><span style=display:flex><span>  </span></span></code></pre></div></div></div></div><div class=td-content style=page-break-before:always><h1 id=pg-9152f4ea0db01a07203308fd83d4231a>3 - クッキーの使用</h1><p>Cookieは、Webサイトから送信され、コンピューターに保存される小さなデータです。
+</span></span><span style=display:flex><span>  </span></span></code></pre></div></div></div><h2 id=beforeunload>beforeunload</h2><p>最近のドライバーでは、デフォルトで <code>beforeunload</code> プロンプトを自動的に閉じます。
+以前の動作を維持するには、
+<a href=https://www.selenium.dev/ja/documentation/webdriver/drivers/options/#unhandledpromptbehavior>unhandledPromptBehavior</a> を参照してください。</p></div><div class=td-content style=page-break-before:always><h1 id=pg-9152f4ea0db01a07203308fd83d4231a>3 - クッキーの使用</h1><p>Cookieは、Webサイトから送信され、コンピューターに保存される小さなデータです。
 Cookieは、主にユーザーを認識し、保存されている情報を読み込むために使用されます。</p><p>WebDriver APIは、組み込みメソッドでCookieと対話するメソッドを提供します。</p><h2 id=クッキーの追加>クッキーの追加</h2><p>現在のブラウジングコンテキストにCookieを追加するために使用されます。
 Cookieの追加では、一連の定義済みのシリアル化可能なJSONオブジェクトのみを受け入れます。
 受け入れられたJSONキー値のリストへのリンクは<a href=https://www.w3.org/TR/webdriver1/#cookies>こちら</a>にあります。</p><p>まず、Cookieが有効になるドメインにいる必要があります。
