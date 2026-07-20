@@ -24,7 +24,7 @@ partial class BrowsingContextTest
 
         TaskCompletionSource<UserPromptOpenedEventArgs> promptOpened = new();
 
-        await bidi.BrowsingContext.UserPromptOpened.SubscribeAsync(promptOpened.SetResult);
+        await bidi.BrowsingContext.UserPromptOpened.SubscribeAsync(args => promptOpened.TrySetResult(args));
 
         driver.FindElement(By.Id("prompt-with-default")).Click();
 

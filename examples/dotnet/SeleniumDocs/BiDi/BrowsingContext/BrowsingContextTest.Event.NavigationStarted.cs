@@ -12,7 +12,7 @@ partial class BrowsingContextTest
     {
         TaskCompletionSource<NavigationStartedEventArgs> tcs = new();
 
-        await context.NavigationStarted.SubscribeAsync(tcs.SetResult);
+        await context.NavigationStarted.SubscribeAsync(args => tcs.TrySetResult(args));
 
         await context.NavigateAsync("https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html", new() { Wait = ReadinessState.Complete });
 

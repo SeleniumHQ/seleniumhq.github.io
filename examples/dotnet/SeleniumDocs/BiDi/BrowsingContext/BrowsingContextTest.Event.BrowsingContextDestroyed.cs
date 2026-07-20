@@ -12,7 +12,7 @@ partial class BrowsingContextTest
     {
         TaskCompletionSource<ContextDestroyedEventArgs> tcs = new();
 
-        await bidi.BrowsingContext.ContextDestroyed.SubscribeAsync(tcs.SetResult);
+        await bidi.BrowsingContext.ContextDestroyed.SubscribeAsync(args => tcs.TrySetResult(args));
 
         await context.CloseAsync();
 

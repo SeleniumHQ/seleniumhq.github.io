@@ -14,7 +14,7 @@ partial class BrowsingContextTest
 
         TaskCompletionSource<FragmentNavigatedEventArgs> tcs = new();
 
-        await context.FragmentNavigated.SubscribeAsync(tcs.SetResult);
+        await context.FragmentNavigated.SubscribeAsync(args => tcs.TrySetResult(args));
 
         await context.NavigateAsync("https://www.selenium.dev/selenium/web/linked_image.html#linkToAnchorOnThisPage", new() { Wait = ReadinessState.Complete });
 

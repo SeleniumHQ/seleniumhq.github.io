@@ -191,7 +191,7 @@ Provides a tree of all browsing contexts descending from the parent browsing con
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/BrowsingContextTest.java#L97-L110" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/BiDi/BrowsingContext/BrowsingContextTest.GetTree.cs#L13-L19" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/BiDi/BrowsingContext/BrowsingContextTest.GetTree.cs#L14-L20" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-code >}}
@@ -215,7 +215,7 @@ Provides a tree of all browsing contexts descending from the parent browsing con
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/BrowsingContextTest.java#L113-L125" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/BiDi/BrowsingContext/BrowsingContextTest.GetTree.cs#L25-L30" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/BiDi/BrowsingContext/BrowsingContextTest.GetTree.cs#L26-L31" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-code >}}
@@ -237,7 +237,7 @@ Provides a tree of all browsing contexts descending from the parent browsing con
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/BrowsingContextTest.java#L128-L135" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/BiDi/BrowsingContext/BrowsingContextTest.GetTree.cs#L36-L41" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/BiDi/BrowsingContext/BrowsingContextTest.GetTree.cs#L37-L42" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-code >}}
@@ -393,7 +393,7 @@ Provides a tree of all browsing contexts descending from the parent browsing con
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/BrowsingContextTest.java#L277-L282" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/BiDi/BrowsingContext/BrowsingContextTest.CaptureScreenshot.cs#L31-L38" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/BiDi/BrowsingContext/BrowsingContextTest.CaptureScreenshot.cs#L31-L40" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-code >}}

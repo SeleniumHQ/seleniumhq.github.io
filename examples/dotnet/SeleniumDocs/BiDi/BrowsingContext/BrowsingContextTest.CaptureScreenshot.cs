@@ -30,9 +30,11 @@ partial class BrowsingContextTest
     {
         driver.Url = "https://www.selenium.dev/selenium/web/formPage.html";
 
-        var element = (await context.LocateNodesAsync(new CssLocator("#checky"))).Nodes[0];
+        var nodes = (await context.LocateNodesAsync(new CssLocator("#checky"))).Nodes;
 
-        var screenshot = await context.CaptureScreenshotAsync(new() { Clip = new ElementClipRectangle(element) });
+        Assert.IsTrue(nodes.Length > 0, "Expected to locate #checky");
+
+        var screenshot = await context.CaptureScreenshotAsync(new() { Clip = new ElementClipRectangle(nodes[0]) });
 
         Assert.IsNotNull(screenshot);
         Assert.IsNotNull(screenshot.Data);
