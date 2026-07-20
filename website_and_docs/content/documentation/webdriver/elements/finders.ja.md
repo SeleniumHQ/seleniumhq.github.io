@@ -43,8 +43,8 @@ Seleniumは、要素を一意に識別するための多数の組み込み[ロ�
   {{< tab header="Java" >}}
 WebElement vegetable = driver.findElement(By.className("tomatoes"));
   {{< /tab >}}
-  {{< tab header="Python" >}}
-vegetable = driver.find_element(By.CLASS_NAME, "tomatoes")
+  {{< tab header="Python" text=true >}}
+  {{< gh-codeblock path="/examples/python/tests/elements/test_finders.py#L23">}}
   {{< /tab >}}
   {{< tab header="CSharp" >}}
 var vegetable = driver.FindElement(By.ClassName("tomatoes"));
@@ -73,9 +73,8 @@ DOM全体で一意のロケーターを見つけるのではなく、検索を�
 WebElement fruits = driver.findElement(By.id("fruits"));
 WebElement fruit = fruits.findElement(By.className("tomatoes"));
   {{< /tab >}}
-  {{< tab header="Python" >}}
-fruits = driver.find_element(By.ID, "fruits")
-fruit = fruits.find_element(By.CLASS_NAME,"tomatoes")
+  {{< tab header="Python" text=true >}}
+  {{< gh-codeblock path="/examples/python/tests/elements/test_finders.py#L28-L29">}}
   {{< /tab >}}
   {{< tab header="CSharp" >}}
 IWebElement fruits = driver.FindElement(By.Id("fruits"));
@@ -114,10 +113,8 @@ WebElement shadowHost = driver.findElement(By.cssSelector("#shadow_host"));
 SearchContext shadowRoot = shadowHost.getShadowRoot();
 WebElement shadowContent = shadowRoot.findElement(By.cssSelector("#shadow_content"));
 {{< /tab >}}
-{{< tab header="Python" >}}
-shadow_host = driver.find_element(By.CSS_SELECTOR, '#shadow_host')
-shadow_root = shadow_host.shadow_root
-shadow_content = shadow_root.find_element(By.CSS_SELECTOR, '#shadow_content')
+{{< tab header="Python" text=true >}}
+{{< gh-codeblock path="/examples/python/tests/elements/test_finders.py#L47-L50">}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 var shadowHost = _driver.FindElement(By.CssSelector("#shadow_host"));
@@ -150,8 +147,8 @@ shadow_content = shadow_root.find_element(css: '#shadow_content')
   {{< tab header="Java" >}}
 WebElement fruit = driver.findElement(By.cssSelector("#fruits .tomatoes"));
   {{< /tab >}}
-  {{< tab header="Python" >}}
-fruit = driver.find_element(By.CSS_SELECTOR,"#fruits .tomatoes")
+  {{< tab header="Python" text=true >}}
+  {{< gh-codeblock path="/examples/python/tests/elements/test_finders.py#L34" >}}
   {{< /tab >}}
   {{< tab header="CSharp" >}}
 var fruit = driver.FindElement(By.CssSelector("#fruits .tomatoes"));
@@ -179,8 +176,8 @@ val fruit = driver.findElement(By.cssSelector("#fruits .tomatoes"))
   {{< tab header="Java" >}}
 List<WebElement> plants = driver.findElements(By.tagName("li"));
   {{< /tab >}}
-  {{< tab header="Python" >}}
-plants = driver.find_elements(By.TAG_NAME, "li")
+  {{< tab header="Python" text=true >}}
+  {{< gh-codeblock path="/examples/python/tests/elements/test_finders.py#L39" >}}
   {{< /tab >}}
   {{< tab header="CSharp" >}}
 IReadOnlyList<IWebElement> plants = driver.FindElements(By.TagName("li"));
@@ -208,20 +205,8 @@ for (WebElement element : elements) {
     System.out.println("Paragraph text:" + element.getText());
 }
   {{< /tab >}}
-  {{< tab header="Python" >}}
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-
-driver = webdriver.Firefox()
-
-    # Navigate to Url
-driver.get("https://www.example.com")
-
-    # Get all the elements available with tag name 'p'
-elements = driver.find_elements(By.TAG_NAME, 'p')
-
-for e in elements:
-    print(e.text)
+  {{< tab header="Python" text=true >}}
+  {{< gh-codeblock path="/examples/python/tests/elements/test_finders.py#L62-L64" >}}
   {{< /tab >}}
   {{< tab header="CSharp" >}}
 using OpenQA.Selenium;
@@ -324,32 +309,8 @@ fun main() {
       }
   }
   {{< /tab >}}
-  {{< tab header="Python" >}}
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-
-driver = webdriver.Chrome()
-driver.get("https://www.example.com")
-##get elements from parent element using TAG_NAME
-
-    # Get element with tag name 'div'
-element = driver.find_element(By.TAG_NAME, 'div')
-
-    # Get all the elements available with tag name 'p'
-elements = element.find_elements(By.TAG_NAME, 'p')
-for e in elements:
-    print(e.text)
-
-##get elements from parent element using XPATH
-##NOTE: in order to utilize XPATH from current element, you must add "." to beginning of path
-
-    # Get first element of tag 'ul'
-element = driver.find_element(By.XPATH, '//ul')
-
-    # get children of tag 'ul' with tag 'li'
-elements  = element.find_elements(By.XPATH, './/li')
-for e in elements:
-    print(e.text)
+  {{< tab header="Python" text=true >}}
+  {{< gh-codeblock path="/examples/python/tests/elements/test_finders.py#L75-L78" >}}
   {{< /tab >}}
   {{< tab header="CSharp" >}}
 using OpenQA.Selenium;
@@ -450,17 +411,8 @@ namespace FindElementsFromElement {
     }
   }
   {{< /tab >}}
-  {{< tab header="Python" >}}
-  from selenium import webdriver
-  from selenium.webdriver.common.by import By
-
-  driver = webdriver.Chrome()
-  driver.get("https://www.google.com")
-  driver.find_element(By.CSS_SELECTOR, '[name="q"]').send_keys("webElement")
-
-    # Get attribute of current active element
-  attr = driver.switch_to.active_element.get_attribute("title")
-  print(attr)
+  {{< tab header="Python" text=true >}}
+  {{< gh-codeblock path="/examples/python/tests/elements/test_finders.py#L89-L90" >}}
   {{< /tab >}}
   {{< tab header="CSharp" >}}
     using OpenQA.Selenium;
