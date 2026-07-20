@@ -193,7 +193,7 @@ Grid の設定には、さまざまなセクションが用意されています
 | `--http-logs`            | boolean | `false`                                                                                                                                                                   | http ログを有効にします。http ログを記録するには、トレースを有効にする必要があります。                                                             |
 | `--log-encoding`         | string  | `UTF-8`                                                                                                                                                                   | ログのエンコーディング。                                                                                                                           |
 | `--log`                  | string  | Windows パスの例: <br>`'\path\to\file\gridlog.log'` <br> or <br> `'C:\path\path\to\file\gridlog.log'`<br><br>Linux/Unix/MacOS パスの例:<br> `'/path/to/file/gridlog.log'` | ログを出力するファイル。OS のファイルパスと互換性があることを確認してください。                                                                    |
-| `--log-level`            | string  | `“INFO”`                                                                                                                                                                  | ログレベル。デフォルトは INFO です。 ログレベルはこちらを参照してください。 https://docs.oracle.com/javase/7/docs/api/java/util/logging/Level.html |
+| `--log-level`            | string  | `“INFO”`                                                                                                                                                                  | ログレベル。デフォルトは INFO です。 ログレベルはこちらを参照してください。 https://docs.oracle.com/en/java/javase/11/docs/api/java.logging/java/util/logging/Level.html |
 | `--plain-logs`           | boolean | `true`                                                                                                                                                                    | プレーンなログを使用します。                                                                                                                       |
 | `--structured-logs`      | boolean | `false`                                                                                                                                                                   | 構造化ログを使用します。                                                                                                                           |
 | `--tracing`              | boolean | `true`                                                                                                                                                                    | トレースを有効にします。                                                                                                                           |
@@ -416,7 +416,7 @@ options.setCapability("se:downloadsEnabled", true);
 In the response the list of file names appear under the key `names`.
 
 
-##### Dowloading a file:
+##### Downloading a file:
 
 * The endpoint to `POST` from is `/session/<sessionId>/se/files` with a payload of the form `{"name": "fileNameGoesHere}`
 * The session needs to be active in order for the command to work.

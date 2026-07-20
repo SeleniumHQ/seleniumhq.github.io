@@ -18,23 +18,24 @@ aliases: [
 
 {{< tabpane text=true >}}
   {{% tab header="Java" %}}
-サポートされている最小のJavaバージョンを表示する [ここ](https://github.com/SeleniumHQ/selenium/blob/trunk/.bazelrc#L13).
+サポートされている最小のJavaバージョンを表示する [ここ](https://github.com/SeleniumHQ/selenium/blob/trunk/.bazelrc#L32).
 
 Java用のSeleniumライブラリのインストールは、ビルドツールを使用して行います。
 
 ### Maven
 プロジェクトの 'pom.xml' ファイルで依存関係を指定します:
 
-{{< gh-codeblock path="examples/java/pom.xml#L30-L34" >}}
+{{< gh-codeblock path="/examples/java/pom.xml#L35-L38" >}}
 
 ### Gradle
 プロジェクトの 'build.gradle' ファイル内の依存関係を 'testImplementation' として指定します:
 
-{{< gh-codeblock path="examples/java/build.gradle#L13-L14" >}}
+{{< gh-codeblock path="/examples/java/build.gradle#L13-L14" >}}
 
   {{% /tab %}}
   {{% tab header="Python" %}}
-各 Selenium バージョンでサポートされている最小 Python バージョンについては、次の場所にあります `サポートされている Python バージョン` オン [PyPi](https://pypi.org/project/selenium/)。
+各 Selenium バージョンでサポートされている最小の Python バージョンは、
+[PyPI](https://pypi.org/project/selenium/) の「Supported Python Versions」で確認できます。
 
 Seleniumをインストールするには、いくつかの方法があります。
 
@@ -58,7 +59,7 @@ pip install selenium-x.x.x.-py3-none-any.whl
 ### プロジェクトで必要
 
 プロジェクトで使用するには、requirements.txt ファイルに追加します:
-{{< gh-codeblock path="examples/python/requirements.txt#L1" >}}
+{{< gh-codeblock path="/examples/python/requirements.txt#L1" >}}
 
   {{% /tab %}}
   {{% tab header="CSharp" %}}
@@ -85,7 +86,7 @@ dotnet add package Selenium.WebDriver
 
 プロジェクトの `csproj`ファイルで、`ItemGroup` の `PackageReference`として依存関係を指定します。:
 
-{{< gh-codeblock language="xml" path="examples/dotnet/SeleniumDocs/SeleniumDocs.csproj#L14" >}}
+{{< gh-codeblock language="xml" path="/examples/dotnet/SeleniumDocs/SeleniumDocs.csproj#L14" >}}
 
 ### その他の考慮事項
 
@@ -115,8 +116,8 @@ Enter キーを押して、バージョンを選択します。
 
   {{% /tab %}}
   {{% tab header="Ruby" %}}
-特定の Selenium バージョンに対して最低限必要な Ruby のバージョンを確認できます
-オン [rubygems.org](https://rubygems.org/gems/selenium-webdriver/)
+特定の Selenium バージョンに必要な最小 Ruby バージョンは、
+[rubygems.org](https://rubygems.org/gems/selenium-webdriver/) で確認できます。
 
 Seleniumは2つの異なる方法でインストールできます。
 
@@ -129,11 +130,12 @@ gem install selenium-webdriver
 
 ### プロジェクトの gemfile に追加
 
-{{< gh-codeblock language="ruby" path="examples/ruby/Gemfile#L10" >}}
+{{< gh-codeblock language="ruby" path="/examples/ruby/Gemfile#L10" >}}
 
   {{% /tab %}}
   {{% tab header="JavaScript" %}}
-Seleniumの特定のバージョンに最低限必要なNodeのバージョンは、`Node Support Policy` 節 オン [npmjs](https://www.npmjs.com/package/selenium-webdriver)
+Selenium の特定のバージョンに必要な最小 Node.js バージョンは、
+[npmjs](https://www.npmjs.com/package/selenium-webdriver) の「Node Support Policy」で確認できます。
 
 Seleniumは通常、npmを使用してインストールされます。
 
@@ -148,7 +150,7 @@ npm install selenium-webdriver
 
 プロジェクトの `package.json`で、要件を `dependencies`:
 
-{{< gh-codeblock path="examples/javascript/package.json#L14" >}}
+{{< gh-codeblock path="/examples/javascript/package.json#L14" >}}
 
   {{% /tab %}}
   {{< tab header="Kotlin" >}}

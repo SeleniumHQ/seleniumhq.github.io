@@ -107,7 +107,7 @@ logging.basicConfig(level=logging.WARN)
 ```
   {{% /tab %}}
   {{% tab header="CSharp" %}}
-.NET has 6 logger levels: `Error`, `Warn`, `Info`, `Debug`, `Trace` and `None`. The default level is `Info`.
+.NET has 6 logger levels: `Error`, `Warn`, `Info`, `Debug`, `Trace` and `None`. The default level is `Warn`.
 
 To change the level of the logger:
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Troubleshooting/LoggingTest.cs#L18" >}}
