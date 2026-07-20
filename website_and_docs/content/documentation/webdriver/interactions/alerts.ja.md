@@ -169,3 +169,7 @@ alert.sendKeys("Selenium")
 alert.accept()
   {{< /tab >}}
 {{< /tabpane >}}
+
+## beforeunload
+
+最近のドライバーでは、デフォルトで `beforeunload` プロンプトを自動的に閉じます。以前の動作を維持するには、[unhandledPromptBehavior]({{< ref "../drivers/options#unhandledpromptbehavior" >}}) を参照してください。

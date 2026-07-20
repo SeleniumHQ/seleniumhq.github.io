@@ -437,6 +437,7 @@ user prompt encounters at the remote-end. This is defined by
 {{< /tab >}}
 {{< /tabpane >}}
 
+Nota: Para prompts de `beforeunload` especificamente, o ChromeDriver precisa que `ignore` seja definido além de ter o [BiDi]({{< ref "../bidi/" >}}) habilitado para manter o prompt aberto.
 
 ## setWindowRect
 
