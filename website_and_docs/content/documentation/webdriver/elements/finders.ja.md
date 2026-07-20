@@ -114,7 +114,7 @@ SearchContext shadowRoot = shadowHost.getShadowRoot();
 WebElement shadowContent = shadowRoot.findElement(By.cssSelector("#shadow_content"));
 {{< /tab >}}
 {{< tab header="Python" text=true >}}
-{{< gh-codeblock path="/examples/python/tests/elements/test_finders.py#L47-L49">}}
+{{< gh-codeblock path="/examples/python/tests/elements/test_finders.py#L47-L50">}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 var shadowHost = _driver.FindElement(By.CssSelector("#shadow_host"));

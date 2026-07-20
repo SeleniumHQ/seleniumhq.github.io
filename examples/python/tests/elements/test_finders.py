@@ -19,23 +19,23 @@ from selenium.webdriver.common.by import By
 
 
 @pytest.mark.skip(reason="illustrative example, not an executable test")
-def test_basic_finders():
+def test_basic_finders(driver):
     vegetable = driver.find_element(By.CLASS_NAME, 'tomatoes')
 
 
 @pytest.mark.skip(reason="illustrative example, not an executable test")
-def test_subset_of_dom():
+def test_subset_of_dom(driver):
     fruits = driver.find_element(By.ID, 'fruits')
     fruit = fruits.find_element(By.CLASS_NAME, 'tomatoes')
 
 
 @pytest.mark.skip(reason="illustrative example, not an executable test")
-def test_optimized_locator():
+def test_optimized_locator(driver):
     fruit = driver.find_element(By.CSS_SELECTOR, '#fruits .tomatoes')
 
 
 @pytest.mark.skip(reason="illustrative example, not an executable test")
-def test_all_matching_elements():
+def test_all_matching_elements(driver):
     plants = driver.find_elements(By.TAG_NAME, 'li')
 
 
@@ -46,10 +46,10 @@ def test_evaluating_shadow_dom():
 
     shadow_host = driver.find_element(By.TAG_NAME, 'custom-checkbox-element')
     shadow_root = shadow_host.shadow_root
+    assert shadow_root
     shadow_content = shadow_root.find_element(By.CSS_SELECTOR, 'input[type=checkbox]')
 
     assert shadow_host.is_displayed()
-    assert shadow_root
     assert shadow_content.is_displayed()
 
     driver.quit()
