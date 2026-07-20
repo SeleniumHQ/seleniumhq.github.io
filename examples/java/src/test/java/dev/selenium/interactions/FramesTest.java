@@ -48,9 +48,9 @@ public class FramesTest{
        
          
          //switch To IFrame using name or id
-         driver.findElement(By.name("iframe1-name"));
+         WebElement iframe1=driver.findElement(By.name("iframe1-name"));
          //Switch to the frame
-         driver.switchTo().frame(iframe);
+         driver.switchTo().frame(iframe1);
          assertEquals(true, driver.getPageSource().contains("We Leave From Here"));
          WebElement email = driver.findElement(By.id("email"));
          //Now we can type text into email field

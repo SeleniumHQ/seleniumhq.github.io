@@ -2,7 +2,6 @@ import base64
 
 import pytest
 from selenium.webdriver.common.by import By
-from selenium.webdriver.common.devtools.v131.network import Headers
 
 
 @pytest.mark.trio
@@ -12,7 +11,8 @@ async def test_basic_auth(driver):
 
         credentials = base64.b64encode("admin:admin".encode()).decode()
         auth = {'authorization': 'Basic ' + credentials}
-        await connection.session.execute(connection.devtools.network.set_extra_http_headers(Headers(auth)))
+        headers = connection.devtools.network.Headers(auth)
+        await connection.session.execute(connection.devtools.network.set_extra_http_headers(headers))
 
         driver.get('https://the-internet.herokuapp.com/basic_auth')
 

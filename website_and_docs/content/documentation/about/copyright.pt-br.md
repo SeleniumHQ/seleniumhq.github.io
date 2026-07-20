@@ -3,8 +3,7 @@ title: "Direitos autorais e atribuições"
 linkTitle: "Direitos autorais e atribuições"
 weight: 1
 description: >
-  Copyright, contributions and all attributions for the different projects
-  under the Selenium umbrella.
+  Direitos autorais, contribuições e todas as atribuições para os diferentes projetos sob a iniciativa do Selenium.
 aliases: [
 "/documentation/pt-br/front_matter/copyright_and_attributions/",
 "/pt-br/documentation/about/copyright_and_attributions"

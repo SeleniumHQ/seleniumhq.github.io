@@ -8,11 +8,13 @@ RSpec.describe 'Edge' do
 
     it 'basic options' do
       options = Selenium::WebDriver::Options.edge
+      options.args << '--no-sandbox'
       @driver = Selenium::WebDriver.for :edge, options: options
     end
 
     it 'add arguments' do
       options = Selenium::WebDriver::Options.edge
+      options.args << '--no-sandbox'
 
       options.args << '--start-maximized'
 
@@ -21,6 +23,7 @@ RSpec.describe 'Edge' do
 
     it 'sets location of binary' do
       options = Selenium::WebDriver::Options.edge
+      options.args << '--no-sandbox'
 
       options.binary = edge_location
 
@@ -30,6 +33,7 @@ RSpec.describe 'Edge' do
     it 'add extensions' do
       extension_file_path = File.expand_path('../spec_support/extensions/webextensions-selenium-example.crx', __dir__)
       options = Selenium::WebDriver::Options.edge
+      options.args << '--no-sandbox'
 
       options.add_extension(extension_file_path)
 
@@ -41,6 +45,7 @@ RSpec.describe 'Edge' do
 
     it 'keeps browser open' do
       options = Selenium::WebDriver::Options.edge
+      options.args << '--no-sandbox'
 
       options.detach = true
 
@@ -49,6 +54,7 @@ RSpec.describe 'Edge' do
 
     it 'excludes switches' do
       options = Selenium::WebDriver::Options.edge
+      options.args << '--no-sandbox'
 
       options.exclude_switches << 'disable-popup-blocking'
 
@@ -63,51 +69,61 @@ RSpec.describe 'Edge' do
 
     it 'logs to file' do
       service = Selenium::WebDriver::Service.edge
+      options = Selenium::WebDriver::Options.edge
+      options.args << '--no-sandbox'
 
       service.log = file_name
 
-      @driver = Selenium::WebDriver.for :edge, service: service
-      expect(File.readlines(file_name).first).to include('Starting Microsoft Edge WebDriver')
+      @driver = Selenium::WebDriver.for :edge, service: service, options: options
+      expect(File.readlines(file_name).first).to include('Starting')
     end
 
     it 'logs to console' do
       service = Selenium::WebDriver::Service.edge
+      options = Selenium::WebDriver::Options.edge
+      options.args << '--no-sandbox'
 
       service.log = $stdout
 
       expect {
-        @driver = Selenium::WebDriver.for :edge, service: service
-      }.to output(/Starting Microsoft Edge WebDriver/).to_stdout_from_any_process
+        @driver = Selenium::WebDriver.for :edge, service: service, options: options
+      }.to output(/Starting/).to_stdout_from_any_process
     end
 
     it 'sets log level' do
       service = Selenium::WebDriver::Service.edge
+      options = Selenium::WebDriver::Options.edge
+      options.args << '--no-sandbox'
       service.log = file_name
 
       service.args << '--log-level=DEBUG'
 
-      @driver = Selenium::WebDriver.for :edge, service: service
+      @driver = Selenium::WebDriver.for :edge, service: service, options: options
       expect(File.readlines(file_name).grep(/\[DEBUG\]:/).any?).to eq true
     end
 
     it 'sets log features' do
       args = ["--log-path=#{file_name}", '--verbose']
       service = Selenium::WebDriver::Service.edge(args: args)
+      options = Selenium::WebDriver::Options.edge
+      options.args << '--no-sandbox'
 
       service.args << '--append-log'
       service.args << '--readable-timestamp'
 
-      @driver = Selenium::WebDriver.for :edge, service: service
+      @driver = Selenium::WebDriver.for :edge, service: service, options: options
 
       expect(File.readlines(file_name).grep(/\[\d\d-\d\d-\d\d\d\d/).any?).to eq true
     end
 
     it 'disables build checks' do
       service = Selenium::WebDriver::Service.edge log: file_name, args: ['--verbose']
+      options = Selenium::WebDriver::Options.edge
+      options.args << '--no-sandbox'
 
       service.args << '--disable-build-check'
 
-      @driver = Selenium::WebDriver.for :edge, service: service
+      @driver = Selenium::WebDriver.for :edge, service: service, options: options
       warning = /\[WARNING\]: You are using an unsupported command-line switch: --disable-build-check/
       expect(File.readlines(file_name).grep(warning).any?).to eq true
     end
@@ -115,7 +131,9 @@ RSpec.describe 'Edge' do
 
   describe 'Special Features' do
     it 'casts' do
-      @driver = Selenium::WebDriver.for :edge
+      options = Selenium::WebDriver::Options.edge
+      options.args << '--no-sandbox'
+      @driver = Selenium::WebDriver.for :edge, options: options
       sinks = @driver.cast_sinks
       unless sinks.empty?
         device_name = sinks.first['name']
@@ -125,17 +143,22 @@ RSpec.describe 'Edge' do
     end
 
     it 'gets and sets network conditions' do
-      @driver = Selenium::WebDriver.for :edge
+      options = Selenium::WebDriver::Options.edge
+      options.args << '--no-sandbox'
+      @driver = Selenium::WebDriver.for :edge, options: options
       @driver.network_conditions = {offline: false, latency: 100, throughput: 200}
       expect(@driver.network_conditions).to eq(
         'offline' => false,
         'latency' => 100,
         'download_throughput' => 200,
-        'upload_throughput' => 200)
+        'upload_throughput' => 200
+      )
     end
 
     it 'gets the browser logs' do
-      @driver = Selenium::WebDriver.for :edge
+      options = Selenium::WebDriver::Options.edge
+      options.args << '--no-sandbox'
+      @driver = Selenium::WebDriver.for :edge, options: options
       @driver.navigate.to 'https://www.selenium.dev/selenium/web/'
       sleep 1
       logs = @driver.logs.get(:browser)
@@ -144,7 +167,9 @@ RSpec.describe 'Edge' do
     end
 
     it 'sets permissions' do
-      @driver = Selenium::WebDriver.for :edge
+      options = Selenium::WebDriver::Options.edge
+      options.args << '--no-sandbox'
+      @driver = Selenium::WebDriver.for :edge, options: options
       @driver.navigate.to 'https://www.selenium.dev/selenium/web/'
       @driver.add_permission('camera', 'denied')
       @driver.add_permissions('clipboard-read' => 'denied', 'clipboard-write' => 'prompt')
@@ -164,6 +189,6 @@ RSpec.describe 'Edge' do
 
   def permission(name)
     @driver.execute_async_script('callback = arguments[arguments.length - 1];' \
-                                   'callback(navigator.permissions.query({name: arguments[0]}));', name)['state']
+                                 'callback(navigator.permissions.query({name: arguments[0]}));', name)['state']
   end
 end

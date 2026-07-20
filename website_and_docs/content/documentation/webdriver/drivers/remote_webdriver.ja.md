@@ -18,16 +18,16 @@ Seleniumは、リモートコンピュータ上でブラウザを自動化する
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/drivers/RemoteWebDriverTest.java#L38-L39" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/RemoteWebDriverTest.java#L38-L39" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< gh-codeblock path="examples/python/tests/drivers/test_remote_webdriver.py#L13-L14" >}}
+{{< gh-codeblock path="/examples/python/tests/drivers/test_remote_webdriver.py#L13-L14" >}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Drivers/RemoteWebDriverTest.cs#L28-L29" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Drivers/RemoteWebDriverTest.cs#L28-L29" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/drivers/remote_webdriver_spec.rb#L20-L21" >}} 
+{{< gh-codeblock path="/examples/ruby/spec/drivers/remote_webdriver_spec.rb#L20-L21" >}} 
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -45,19 +45,19 @@ Seleniumは、リモートコンピュータ上でブラウザを自動化する
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
 Javaにはデフォルトでローカルファイルディテクターが含まれていないため、アップロードを行う際には必ず追加する必要があります。
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/drivers/RemoteWebDriverTest.java#L49-L52" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/RemoteWebDriverTest.java#L49-L52" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
 Pythonでは、リモートWebDriverインスタンスにデフォルトでローカルファイルディテクターが追加されますが、独自のクラスを作成することも可能です。
-{{< gh-codeblock path="examples/python/tests/drivers/test_remote_webdriver.py#LL29-L32" >}}
+{{< gh-codeblock path="/examples/python/tests/drivers/test_remote_webdriver.py#LL29-L32" >}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
 .NETでは、リモートWebDriverインスタンスにデフォルトでローカルファイルディテクターが追加されますが、独自のクラスを作成することも可能です。
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Drivers/RemoteWebDriverTest.cs#L47-L50" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Drivers/RemoteWebDriverTest.cs#L47-L50" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 Rubyでは、リモートWebDriverインスタンスにデフォルトでローカルファイルディテクターが追加されますが、独自のラムダを作成することも可能です。
-{{< gh-codeblock path="examples/ruby/spec/drivers/remote_webdriver_spec.rb#L33-L36" >}}
+{{< gh-codeblock path="/examples/ruby/spec/drivers/remote_webdriver_spec.rb#L33-L36" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -85,16 +85,16 @@ Chrome、Edge、およびFirefoxでは、それぞれダウンロードディレ
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/drivers/RemoteWebDriverTest.java#L60-L62" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/RemoteWebDriverTest.java#L60-L62" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< gh-codeblock path="examples/python/tests/drivers/test_remote_webdriver.py#L42-L44" >}}
+{{< gh-codeblock path="/examples/python/tests/drivers/test_remote_webdriver.py#L42-L44" >}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Drivers/RemoteWebDriverTest.cs#L59-L64" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Drivers/RemoteWebDriverTest.cs#L59-L64" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/drivers/remote_webdriver_spec.rb#L43-L44" >}}
+{{< gh-codeblock path="/examples/ruby/spec/drivers/remote_webdriver_spec.rb#L43-L44" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -110,16 +110,16 @@ Seleniumはファイルのダウンロードが完了するのを待たないた
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/drivers/RemoteWebDriverTest.java#L73" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/RemoteWebDriverTest.java#L73" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< gh-codeblock path="examples/python/tests/drivers/test_remote_webdriver.py#L52" >}}
+{{< gh-codeblock path="/examples/python/tests/drivers/test_remote_webdriver.py#L52" >}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Drivers/RemoteWebDriverTest.cs#L72" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Drivers/RemoteWebDriverTest.cs#L72" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/drivers/remote_webdriver_spec.rb#L52" >}}
+{{< gh-codeblock path="/examples/ruby/spec/drivers/remote_webdriver_spec.rb#L52" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -135,16 +135,16 @@ Seleniumは、提供されたファイルの名前をリストの中で探し、
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/drivers/RemoteWebDriverTest.java#L83" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/RemoteWebDriverTest.java#L83" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< gh-codeblock path="examples/python/tests/drivers/test_remote_webdriver.py#L58" >}}
+{{< gh-codeblock path="/examples/python/tests/drivers/test_remote_webdriver.py#L58" >}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Drivers/RemoteWebDriverTest.cs#L79" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Drivers/RemoteWebDriverTest.cs#L79" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/drivers/remote_webdriver_spec.rb#L57" >}}
+{{< gh-codeblock path="/examples/ruby/spec/drivers/remote_webdriver_spec.rb#L57" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -160,16 +160,16 @@ Seleniumは、提供されたファイルの名前をリストの中で探し、
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/drivers/RemoteWebDriverTest.java#L88" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/RemoteWebDriverTest.java#L88" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< gh-codeblock path="examples/python/tests/drivers/test_remote_webdriver.py#L64" >}}
+{{< gh-codeblock path="/examples/python/tests/drivers/test_remote_webdriver.py#L64" >}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Drivers/RemoteWebDriverTest.cs#L84" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Drivers/RemoteWebDriverTest.cs#L84" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/drivers/remote_webdriver_spec.rb#L62" >}}
+{{< gh-codeblock path="/examples/ruby/spec/drivers/remote_webdriver_spec.rb#L62" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -187,11 +187,11 @@ Seleniumは、提供されたファイルの名前をリストの中で探し、
 {{< tabpane text=true >}}
 {{% tab header="Java" %}}
 Javaでは、Augmenterクラスを使用する必要があります。これにより、RemoteWebDriverで使用される機能に一致するすべてのインターフェースの実装を自動的に取り込むことができます。
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/drivers/RemoteWebDriverTest.java#L98" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/RemoteWebDriverTest.java#L98" >}}
 
 興味深いことに、RemoteWebDriverBuilderを使用すると、ドライバーが自動的に拡張されるため、デフォルトで全ての機能を取得するのに最適な方法です。
 
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/drivers/RemoteWebDriverTest.java#L106-L111" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/RemoteWebDriverTest.java#L106-L111" >}}
 {{% /tab %}}
 {{% tab header="Python" %}}
 {{< badge-implementation >}}
@@ -199,7 +199,7 @@ Javaでは、Augmenterクラスを使用する必要があります。これに�
 {{< tab header="CSharp" >}}
 
 .NETでは、リモートドライバーで指定されたブラウザに対して有効なコマンドを実行するために、カスタムコマンドエグゼキュータを使用します。
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Drivers/RemoteWebDriverTest.cs#L96-L100" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Drivers/RemoteWebDriverTest.cs#L96-L100" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 Rubyでは、ミキシンを使用してリモートWebDriverセッションに適用可能なブラウザ特有のメソッドを追加します。これらのメソッドは常にそのまま機能するはずです。
@@ -268,7 +268,7 @@ driver.quit();
 詳細については、下記URLを参照してください。
 
 * OpenTelemetry: https://opentelemetry.io
-* OpenTelemetryの構成::
+* OpenTelemetryの構成:
     https://github.com/open-telemetry/opentelemetry-java/tree/main/sdk-extensions/autoconfigure
 * Jaeger: https://www.jaegertracing.io
 * [Selenium Grid 可観測性]({{< ref "observability.md" >}}) 

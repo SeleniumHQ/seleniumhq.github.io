@@ -15,6 +15,10 @@ on:
     paths:
       - 'examples/ruby/**'
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 env:
   DISPLAY: :99
   GITHUB_TOKEN: ${{ secrets.SELENIUM_CI_TOKEN }}
@@ -25,12 +29,12 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ ubuntu, windows, macos ]
+        os: ${{ (github.event_name == 'schedule' || github.event_name == 'workflow_dispatch') && fromJSON('["ubuntu", "windows", "macos"]') || fromJSON('["ubuntu", "windows"]') }}
         release: [ stable, nightly ]
     runs-on: ${{ format('{0}-latest', matrix.os) }}
     steps:
       - name: Checkout GitHub repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
       - name: Remove driver directories Windows
         if: matrix.os == 'windows'
         run: |
@@ -41,13 +45,17 @@ jobs:
         if: matrix.os != 'windows'
         run: |
           sudo rm -rf $CHROMEWEBDRIVER $EDGEWEBDRIVER $GECKOWEBDRIVER
-      - name: Start Xvfb
+      - name: Setup Fluxbox and Xvfb
         if: matrix.os == 'ubuntu'
-        run: Xvfb :99 &
+        run: |
+          sudo apt-get -y install fluxbox libxss1 libappindicator3-1 libindicator7
+          Xvfb :99 &
+          fluxbox -display :99 &
+          echo "DISPLAY=:99" >> "$GITHUB_ENV"
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 3.0
+          ruby-version: 4.0.6
           bundler-cache: true
       - name: Install Gems Nightly non-Windows
         if: matrix.release == 'nightly' && matrix.os != 'windows'
@@ -79,15 +87,47 @@ jobs:
         working-directory: ./examples/ruby
         run: bundle install
       - name: Set up Java
-        uses: actions/setup-java@v4
+        uses: actions/setup-java@v5
         with:
           distribution: 'temurin'
           java-version: 11
-      - name: Run tests
-        uses: nick-invision/retry@v3.0.2
+      - name: Run tests on Windows
+        if: matrix.os == 'windows'
+        uses: nick-invision/retry@v4.0.0
         with:
-          timeout_minutes: 20
-          max_attempts: 3
+          timeout_minutes: 40
+          max_attempts: 2
           command: |
             cd examples/ruby
             bundle exec rspec
+          new_command_on_retry: |
+            cd examples/ruby; $env:DEBUG="true"; bundle exec rspec --only-failures --backtrace
+      - name: Run tests on ${{ matrix.os }}
+        if: matrix.os != 'windows'
+        uses: nick-invision/retry@v4.0.0
+        with:
+          timeout_minutes: 40
+          max_attempts: 2
+          command: |
+            cd examples/ruby
+            bundle exec rspec
+          new_command_on_retry: |
+            cd examples/ruby
+            DEBUG=true bundle exec rspec --only-failures --backtrace
+
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout GitHub repo
+        uses: actions/checkout@v7
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 4.0.6
+          bundler-cache: true
+      - name: Install dependencies
+        working-directory: ./examples/ruby
+        run: bundle install
+      - name: Run RuboCop
+        working-directory: ./examples/ruby
+        run: bundle exec rubocop

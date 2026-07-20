@@ -16,6 +16,8 @@ reports are popular for importing results to a Continuous Integration
 (CI) server like Jenkins, Travis, Bamboo, etc.  Here are some links
 for more information regarding report outputs for several languages.
 <!-- TODO: Add links.-->
+[Allure Report: fancy reports (language and framework agnostic)](https://allurereport.org/)
+
 [NUnit 3 Console Runner](//github.com/nunit/docs/wiki/Console-Runner)
 
 [NUnit 3 Console Command Line](//github.com/nunit/docs/wiki/Console-Command-Line)

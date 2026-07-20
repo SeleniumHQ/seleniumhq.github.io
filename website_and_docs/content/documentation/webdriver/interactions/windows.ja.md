@@ -18,11 +18,13 @@ WebDriverは、ウィンドウとタブを区別しません。
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" text=true >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/WindowsTest.java#L16-L20" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/WindowsTest.java#L16-L20" >}}
 {{< /tab >}}
-  {{< tab header="Python" >}}driver.current_window_handle{{< /tab >}}
+  {{< tab header="Python" text=true >}}
+{{< gh-codeblock path="/examples/python/tests/interactions/test_windows.py#L16-L18" >}}
+{{< /tab >}}
     {{< tab header="CSharp" text=true >}}
-  {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/WindowsTest.cs#L17-L21" >}}
+  {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Interactions/WindowsTest.cs#L17-L21" >}}
   {{< /tab >}}
   {{< tab header="Ruby" >}}driver.window_handle{{< /tab >}}
   {{< tab header="JavaScript" >}}await driver.getWindowHandle();{{< /tab >}}
@@ -39,45 +41,14 @@ WebDriverは、ウィンドウとタブを区別しません。
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" text=true >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/WindowsTest.java#L22-L29" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/WindowsTest.java#L22-L29" >}}
 {{< /tab >}}
-  {{< tab header="Python" >}}
-from selenium import webdriver
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-
-    # Start the driver
-with webdriver.Firefox() as driver:
-    # Open URL
-    driver.get("https://seleniumhq.github.io")
-
-    # Setup wait for later
-    wait = WebDriverWait(driver, 10)
-
-    # Store the ID of the original window
-    original_window = driver.current_window_handle
-
-    # Check we don't have other windows open already
-    assert len(driver.window_handles) == 1
-
-    # Click the link which opens in a new window
-    driver.find_element(By.LINK_TEXT, "new window").click()
-
-    # Wait for the new window or tab
-    wait.until(EC.number_of_windows_to_be(2))
-
-    # Loop through until we find a new window handle
-    for window_handle in driver.window_handles:
-        if window_handle != original_window:
-            driver.switch_to.window(window_handle)
-            break
-
-    # Wait for the new tab to finish loading content
-    wait.until(EC.title_is("SeleniumHQ Browser Automation"))
+  {{< tab header="Python" text=true >}}
+{{< gh-codeblock path="/examples/python/tests/interactions/test_windows.py#L22-L32" >}}
   {{< /tab >}}
   
     {{< tab header="CSharp" text=true >}}
-  {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/WindowsTest.cs#L23-L30" >}}
+  {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Interactions/WindowsTest.cs#L23-L30" >}}
   {{< /tab >}}
   
   
@@ -167,18 +138,14 @@ wait.until(titleIs("Selenium documentation"))
 
 {{< tabpane langEqualsHeader=true >}}
  {{< tab header="Java" text=true >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/WindowsTest.java#L31-L34" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/WindowsTest.java#L31-L34" >}}
 {{< /tab >}}
-  {{< tab header="Python" >}}
-    #Close the tab or window
-driver.close()
-
-    #Switch back to the old tab or window
-driver.switch_to.window(original_window)
+  {{< tab header="Python" text=true >}}
+{{< gh-codeblock path="/examples/python/tests/interactions/test_windows.py#L46-L46" >}}
   {{< /tab >}}
 
    {{< tab header="CSharp" text=true >}}
-  {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/WindowsTest.cs#L32-L35" >}}
+  {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Interactions/WindowsTest.cs#L32-L35" >}}
   {{< /tab >}}
   
 
@@ -218,18 +185,14 @@ __注意: この機能は、Selenium 4以降のバージョンで機能します
 
 {{< tabpane langEqualsHeader=true >}}
    {{< tab header="Java" text=true >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/WindowsTest.java#L36-L42" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/WindowsTest.java#L36-L42" >}}
 {{< /tab >}}
-  {{< tab header="Python" >}}
-    # Opens a new tab and switches to new tab
-driver.switch_to.new_window('tab')
-
-    # Opens a new window and switches to new window
-driver.switch_to.new_window('window')
+  {{< tab header="Python" text=true >}}
+{{< gh-codeblock path="/examples/python/tests/interactions/test_windows.py#L53-L58" >}}
   {{< /tab >}}
     
   {{< tab header="CSharp" text=true >}}
-  {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/WindowsTest.cs#L37-L43" >}}
+  {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Interactions/WindowsTest.cs#L37-L43" >}}
   {{< /tab >}}
   
   
@@ -243,10 +206,10 @@ Opens a new window and switches to new window
   
 {{< tab header="JavaScript" text=true >}}
 Opens a new tab and switches to new tab
-{{< gh-codeblock path="examples/javascript/test/interactions/windows.spec.js#L70" >}}
+{{< gh-codeblock path="/examples/javascript/test/interactions/windows.spec.js#L70" >}}
 
 Opens a new window and switches to new window:
-{{< gh-codeblock path="examples/javascript/test/interactions/windows.spec.js#L75" >}}
+{{< gh-codeblock path="/examples/javascript/test/interactions/windows.spec.js#L75" >}}
 {{< /tab >}}
 
   {{< tab header="Kotlin" >}}
@@ -266,11 +229,13 @@ driver.switchTo().newWindow(WindowType.WINDOW)
 
 {{< tabpane langEqualsHeader=true >}}
  {{< tab header="Java" text=true >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/WindowsTest.java#L44-L45" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/WindowsTest.java#L44-L45" >}}
 {{< /tab >}}
-  {{< tab header="Python" >}}driver.quit(){{< /tab >}}
+  {{< tab header="Python" text=true >}}
+{{< gh-codeblock path="/examples/python/tests/interactions/test_windows.py#L13-L13" >}}
+{{< /tab >}}
   {{< tab header="CSharp" text=true >}}
-  {{< gh-codeblock path="examples/dotnet/SeleniumDocs/Interactions/WindowsTest.cs#L45-L46" >}}
+  {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Interactions/WindowsTest.cs#L45-L46" >}}
   {{< /tab >}}
   {{< tab header="Ruby" >}}driver.quit{{< /tab >}}
   {{< tab header="JavaScript" >}}await driver.quit();{{< /tab >}}
@@ -451,10 +416,10 @@ height1 = size.height
   {{< /tab >}}
 {{< tab header="JavaScript" text=true >}}
 Access each dimension individually
-{{< gh-codeblock path="examples/javascript/test/interactions/windows.spec.js#L93" >}}
+{{< gh-codeblock path="/examples/javascript/test/interactions/windows.spec.js#L93" >}}
 
 (or) store the dimensions and query them later
-{{< gh-codeblock path="examples/javascript/test/interactions/windows.spec.js#L96-L98" >}}
+{{< gh-codeblock path="/examples/javascript/test/interactions/windows.spec.js#L96-L98" >}}
 {{< /tab >}}
   {{< tab header="Kotlin" >}}
 //Access each dimension individually
@@ -528,10 +493,10 @@ y1 = rect.y
   {{< /tab >}}
 {{< tab header="JavaScript" text=true >}}
 Access each dimension individually
-{{< gh-codeblock path="examples/javascript/test/interactions/windows.spec.js#L108" >}}
+{{< gh-codeblock path="/examples/javascript/test/interactions/windows.spec.js#L108" >}}
 
 (or) store the dimensions and query them later
-{{< gh-codeblock path="examples/javascript/test/interactions/windows.spec.js#L111-L113" >}}
+{{< gh-codeblock path="/examples/javascript/test/interactions/windows.spec.js#L111-L113" >}}
 {{< /tab >}}
   {{< tab header="Kotlin" >}}
 // Access each dimension individually
@@ -679,7 +644,7 @@ begin
 end
   {{< /tab >}}
 {{< tab header="JavaScript" text=true >}}
-{{< gh-codeblock path="examples/javascript/test/interactions/windows.spec.js#L56-L59" >}}
+{{< gh-codeblock path="/examples/javascript/test/interactions/windows.spec.js#L56-L59" >}}
 {{< /tab >}}
   {{< tab header="Kotlin" >}}
 import com.oracle.tools.packager.IOUtils.copyFile
@@ -768,7 +733,7 @@ begin
 end
   {{< /tab >}}
   {{< tab header="JavaScript" text=true >}}
-  {{< gh-codeblock path="examples/javascript/test/interactions/windows.spec.js#L44-L48" >}}
+  {{< gh-codeblock path="/examples/javascript/test/interactions/windows.spec.js#L44-L48" >}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
 import org.apache.commons.io.FileUtils
@@ -836,7 +801,7 @@ result = driver.execute_script("return arguments[0].innerText", header)
 driver.execute_script("alert('hello world')")
   {{< /tab >}}
 {{< tab header="JavaScript" text=true >}}
-{{< gh-codeblock path="examples/javascript/test/interactions/windows.spec.js#L33-L37" >}}
+{{< gh-codeblock path="/examples/javascript/test/interactions/windows.spec.js#L33-L37" >}}
 {{< /tab >}}
   {{< tab header="Kotlin" >}}
 // Stores the header element
@@ -889,7 +854,7 @@ _Note: Chromium ブラウザがヘッドレスモードである必要があり�
     base64encodedContent = driver.print_page(orientation: 'landscape')
   {{< /tab >}}
   {{< tab header="JavaScript" text=true >}}
-  {{< gh-codeblock path="examples/javascript/test/interactions/windows.spec.js#L22-L25" >}}
+  {{< gh-codeblock path="/examples/javascript/test/interactions/windows.spec.js#L22-L25" >}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
     driver.get("https://www.selenium.dev")
