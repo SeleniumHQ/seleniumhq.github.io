@@ -659,7 +659,7 @@ This section contains the APIs related to browsing context events.
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/BrowsingContextInspectorTest.java#L152-165" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/BiDi/BrowsingContext/BrowsingContextTest.Event.UserPrompt.cs#L32-L44" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/BiDi/BrowsingContext/BrowsingContextTest.Event.UserPrompt.cs#L32-L47" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-code >}}

@@ -34,6 +34,9 @@ partial class BrowsingContextTest
         await context.NavigateAsync("https://www.selenium.dev/selenium/web/alerts.html", new() { Wait = ReadinessState.Complete });
 
         // TODO: this event can be a part of context
+        // Chrome's default unhandled prompt behavior (dismiss and notify) closes the
+        // prompt automatically, which is what raises this event; see HandleUserPrompt.cs
+        // for an example that closes a prompt explicitly instead.
         await bidi.BrowsingContext.UserPromptClosed.SubscribeAsync(args => tcs.TrySetResult(args));
 
         driver.FindElement(By.Id("prompt")).Click();
