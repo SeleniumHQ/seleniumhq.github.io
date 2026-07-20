@@ -56,7 +56,7 @@ LoadableComponent 是一个基类, 目标是让编写页面对象更轻松.
 
 通过继承这个基类, 我们需要实现两个新方法:
 
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/design_strategies/BestPractices.java#L181-L190" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/design_strategies/BestPractices.java#L187-L200" >}}
 
 
 `load` 方法用于导航到页面, 
@@ -69,7 +69,7 @@ LoadableComponent 是一个基类, 目标是让编写页面对象更轻松.
 
 稍作改造后, 我们的页面对象如下：
 
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/design_strategies/BestPractices.java#L161-L236" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/design_strategies/BestPractices.java#L161-L246" >}}
 
 看起来似乎没带来太多好处, 对吧？
 不过它确实把如何导航到该页面的信息封装进了页面本身, 
@@ -110,21 +110,14 @@ ProjectPage.java:
 
 EditIssue 中的 `load` 方法现在如下：
 
-```java
-  @Override
-  protected void load() {
-    securedPage.get();
-
-    driver.get("https://github.com/SeleniumHQ/selenium/issues/new?assignees=&labels=I-defect%2Cneeds-triaging&projects=&template=bug-report.yml&title=%5B%F0%9F%90%9B+Bug%5D%3A+");
-  }
-```
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/design_strategies/BestPractices.java#L187-L194" >}}
 
 
 这表明这些组件都是相互 "嵌套" 的. 
 在 EditIssue 中调用 `get()` 会导致它的所有依赖组件也被加载. 
 示例用法：
 
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/design_strategies/BestPractices.java#L266-L289" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/design_strategies/BestPractices.java#L276-L298" >}}
 
 如果在测试中使用像 [Guiceberry](https://github.com/zorzella/guiceberry) 这样的库,
 设置页面对象的前置步骤可以省略, 从而使测试更简洁、可读.
@@ -144,7 +137,7 @@ EditIssue 中的 `load` 方法现在如下：
 “bot” 是对底层 Selenium API 的一种面向动作的抽象. 
 这意味着如果发现某些命令不适合你的应用, 可以轻松修改它们. 例如：
 
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/design_strategies/BestPractices.java#L238-L264" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/design_strategies/BestPractices.java#L248-L274" >}}
 
 
 一旦构建了这些抽象并找出测试中的重复, 

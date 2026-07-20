@@ -48,7 +48,7 @@ represents a LoadableComponent that loads the EditIssue page.
 
 By extending this base class, we need to implement two new methods:
 
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/design_strategies/BestPractices.java#L181-L190" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/design_strategies/BestPractices.java#L187-L200" >}}
 
 The `load` method is used to navigate to the page, whilst the `isLoaded` method is used to 
 determine whether we are on the right page. Although the method looks like it should return 
@@ -58,7 +58,7 @@ it's possible to give users of the class clear information that can be used to d
 
 With a little rework, our PageObject looks like:
 
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/design_strategies/BestPractices.java#L161-L236" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/design_strategies/BestPractices.java#L161-L246" >}}
 
 That doesn't seem to have bought us much, right? One thing it has done is encapsulate 
 the information about how to navigate to the page into the page itself, meaning that 
@@ -98,20 +98,13 @@ and SecuredPage.java:
 
 The "load" method in EditIssue now looks like:
 
-```java
-  @Override
-  protected void load() {
-    securedPage.get();
-
-    driver.get("https://github.com/SeleniumHQ/selenium/issues/new?assignees=&labels=I-defect%2Cneeds-triaging&projects=&template=bug-report.yml&title=%5B%F0%9F%90%9B+Bug%5D%3A+");
-  }
-```
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/design_strategies/BestPractices.java#L187-L194" >}}
 
 This shows that the components are all "nested" within each other. 
 A call to `get()` in EditIssue will cause all its dependencies to 
 load too. The example usage:
 
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/design_strategies/BestPractices.java#L266-L289" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/design_strategies/BestPractices.java#L276-L298" >}}
 
 If you're using a library such as [Guiceberry](https://github.com/zorzella/guiceberry) in your tests, 
 the preamble of setting up the PageObjects can be omitted leading to nice, clear, readable tests.
@@ -129,7 +122,7 @@ A "bot" is an action-oriented abstraction over the raw Selenium APIs.
 This means that if you find that commands aren't doing the Right Thing 
 for your app, it's easy to change them. As an example:
 
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/design_strategies/BestPractices.java#L238-L264" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/design_strategies/BestPractices.java#L248-L274" >}}
 
 Once these abstractions have been built and duplication in your tests identified, it's possible to layer PageObjects on top of bots.
 

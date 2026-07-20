@@ -44,7 +44,7 @@ LoadableComponentは、PageObjectsの作成の負担を軽減することを目�
 
 このベースクラスを拡張することにより、2つの新しいメソッドを実装する必要があります。
 
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/design_strategies/BestPractices.java#L181-L190" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/design_strategies/BestPractices.java#L187-L200" >}}
 
 `load` メソッドはページに移動するために使用され、　`isLoaded` メソッドは正しいページにいるかどうかを判断するために使用されます。 
 このメソッドはブール値を返す必要があるように見えますが、代わりにJUnitのAssertクラスを使用して一連のアサーションを実行します。 
@@ -53,7 +53,7 @@ LoadableComponentは、PageObjectsの作成の負担を軽減することを目�
 
 少し手直しすると、PageObjectは次のようになります。
 
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/design_strategies/BestPractices.java#L161-L236" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/design_strategies/BestPractices.java#L161-L246" >}}
 
 それは私たちをあまり信じられなかったようですよね？ 
 これまでに行ったことの1つは、ページに移動する方法に関する情報をページ自体にカプセル化することです。
@@ -94,20 +94,13 @@ and SecuredPage.java:
 
 EditIssueの "load" メソッドは次のようになります。
 
-```java
-  @Override
-  protected void load() {
-    securedPage.get();
-
-    driver.get("https://github.com/SeleniumHQ/selenium/issues/new?assignees=&labels=I-defect%2Cneeds-triaging&projects=&template=bug-report.yml&title=%5B%F0%9F%90%9B+Bug%5D%3A+");
-  }
-```
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/design_strategies/BestPractices.java#L187-L194" >}}
 
 これは、コンポーネントがすべて相互に "ネストされている" ことを示しています。 
 EditIssueで `get()` を呼び出すと、そのすべての依存関係も読み込まれます。 
 使用例：
 
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/design_strategies/BestPractices.java#L266-L289" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/design_strategies/BestPractices.java#L276-L298" >}}
 
 テストで [Guiceberry](https://github.com/zorzella/guiceberry) などのライブラリを使用している場合は、PageObjectsの設定の前文を省略して、わかりやすく読みやすいテストを作成できます。
 
@@ -122,7 +115,7 @@ PageObjectsは、テストでの重複を減らすための便利な方法です
 つまり、コマンドがアプリに対して正しいことをしていないことがわかった場合、コマンドを簡単に変更できます。 
 例として：
 
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/design_strategies/BestPractices.java#L238-L264" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/design_strategies/BestPractices.java#L248-L274" >}}
 
 これらの抽象化が構築され、テストでの重複が特定されると、ボットの上にPageObjectsを階層化することができます。
 

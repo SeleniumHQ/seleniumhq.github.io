@@ -161,6 +161,7 @@ class SecuredPage extends LoadableComponent<SecuredPage> {
 class EditIssue extends LoadableComponent<EditIssue> {
 
   private final WebDriver driver;
+  private final LoadableComponent<?> parent;
 
   // By default the PageFactory will locate elements with the same name or id
   // as the field. Since the issue_title element has an id attribute of "issue_title"
@@ -172,7 +173,12 @@ class EditIssue extends LoadableComponent<EditIssue> {
   @FindBy(id = "issue_body") private WebElement body;
 
   public EditIssue(WebDriver driver) {
+    this(driver, null);
+  }
+
+  public EditIssue(WebDriver driver, LoadableComponent<?> parent) {
     this.driver = driver;
+    this.parent = parent;
 
     // This call sets the WebElement fields.
     PageFactory.initElements(driver, this);
@@ -180,13 +186,17 @@ class EditIssue extends LoadableComponent<EditIssue> {
 
   @Override
   protected void load() {
+    if (parent != null) {
+      parent.get();
+    }
+
     driver.get("https://github.com/SeleniumHQ/selenium/issues/new?assignees=&labels=I-defect%2Cneeds-triaging&projects=&template=bug-report.yml&title=%5B%F0%9F%90%9B+Bug%5D%3A+");
   }
 
   @Override
   protected void isLoaded() throws Error {
     String url = driver.getCurrentUrl();
-    Assertions.assertTrue(url.endsWith("/new"), "Not on the issue entry page: " + url);
+    Assertions.assertTrue(url.contains("/issues/new"), "Not on the issue entry page: " + url);
   }
 
   public void setHowToReproduce(String howToReproduce) {
@@ -271,10 +281,9 @@ class NestedComponentsExample {
     WebDriver driver = new ChromeDriver();
     try {
       ProjectPage project = new ProjectPage(driver, "selenium");
-      SecuredPage securedPage = new SecuredPage(driver, project, "example", "top secret");
-      securedPage.get();
+      SecuredPage securedPage = new SecuredPage(driver, project, "example", "not-a-real-password");
 
-      EditIssue editIssue = new EditIssue(driver).get();
+      EditIssue editIssue = new EditIssue(driver, securedPage).get();
       editIssue.setHowToReproduce("How to Reproduce");
       editIssue.setLogOutput("Log Output");
       editIssue.setOperatingSystem("Operating System");
