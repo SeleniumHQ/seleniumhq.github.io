@@ -45,7 +45,7 @@ dois elementos que têm um nome de classe de "tomatoes" então este método reto
 WebElement vegetable = driver.findElement(By.className("tomatoes"));
   {{< /tab >}}
   {{< tab header="Python" text=true >}}
-  {{< gh-codeblock path="/examples/python/tests/elements/test_finders.py#L9">}}
+  {{< gh-codeblock path="/examples/python/tests/elements/test_finders.py#L23">}}
   {{< /tab >}}
   {{< tab header="CSharp" >}}
 var vegetable = driver.FindElement(By.ClassName("tomatoes"));
@@ -76,7 +76,7 @@ WebElement fruits = driver.findElement(By.id("fruits"));
 WebElement fruit = fruits.findElement(By.className("tomatoes"));
   {{< /tab >}}
   {{< tab header="Python" text=true >}}
-  {{< gh-codeblock path="/examples/python/tests/elements/test_finders.py#L9-L10">}}
+  {{< gh-codeblock path="/examples/python/tests/elements/test_finders.py#L28-L29">}}
   {{< /tab >}}
   {{< tab header="CSharp" >}}
 IWebElement fruits = driver.FindElement(By.Id("fruits"));
@@ -117,7 +117,7 @@ SearchContext shadowRoot = shadowHost.getShadowRoot();
 WebElement shadowContent = shadowRoot.findElement(By.cssSelector("#shadow_content"));
 {{< /tab >}}
 {{< tab header="Python" text=true >}}
-{{< gh-codeblock path="/examples/python/tests/elements/test_finders.py#L21-L22">}}
+{{< gh-codeblock path="/examples/python/tests/elements/test_finders.py#L47-L49">}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 var shadowHost = _driver.FindElement(By.CssSelector("#shadow_host"));
@@ -180,7 +180,7 @@ referências a todos os itens da lista de frutas e vegetais serão devolvidas em
 List<WebElement> plants = driver.findElements(By.tagName("li"));
   {{< /tab >}}
   {{< tab header="Python" text=true >}}
-  {{< gh-codeblock path="/examples/python/tests/elements/test_finders.py#L44" >}}
+  {{< gh-codeblock path="/examples/python/tests/elements/test_finders.py#L39" >}}
   {{< /tab >}}
   {{< tab header="CSharp" >}}
 IReadOnlyList<IWebElement> plants = driver.FindElements(By.TagName("li"));
@@ -210,7 +210,7 @@ for (WebElement element : elements) {
 }
   {{< /tab >}}
   {{< tab header="Python" text=true >}}
-  {{< gh-codeblock path="/examples/python/tests/elements/test_finders.py#L54-L61" >}}
+  {{< gh-codeblock path="/examples/python/tests/elements/test_finders.py#L62-L64" >}}
   {{< /tab >}}
   {{< tab header="CSharp" >}}
 using OpenQA.Selenium;
@@ -314,7 +314,7 @@ Para realizar isso, o WebElement pai é encadeado com o 'findElements' para aces
   }
   {{< /tab >}}
   {{< tab header="Python" text=true >}}
-  {{< gh-codeblock path="/examples/python/tests/elements/test_finders.py#L66-L74" >}}
+  {{< gh-codeblock path="/examples/python/tests/elements/test_finders.py#L75-L78" >}}
   {{< /tab >}}
   {{< tab header="CSharp" >}}
 using OpenQA.Selenium;
@@ -416,7 +416,7 @@ Ele é usado para rastrear (ou) encontrar um elemento DOM que tem o foco no cont
   }
   {{< /tab >}}
   {{< tab header="Python" text=true >}}
-  {{< gh-codeblock path="/examples/python/tests/elements/test_finders.py#L85-L88" >}}
+  {{< gh-codeblock path="/examples/python/tests/elements/test_finders.py#L89-L90" >}}
   {{< /tab >}}
   {{< tab header="CSharp" >}}
     using OpenQA.Selenium;
