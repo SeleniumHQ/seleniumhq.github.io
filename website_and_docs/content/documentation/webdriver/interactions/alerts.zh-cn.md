@@ -164,3 +164,9 @@ alert.sendKeys("Selenium")
 alert.accept()
   {{< /tab >}}
 {{< /tabpane >}}
+
+## beforeunload
+
+较新版本的驱动默认会自动关闭 `beforeunload` 提示框。
+如果需要恢复旧的行为，
+请参阅 [unhandledPromptBehavior]({{< ref "../drivers/options#unhandledpromptbehavior" >}})。

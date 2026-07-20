@@ -176,3 +176,8 @@ alert.sendKeys("Selenium")
 alert.accept()
   {{< /tab >}}
 {{< /tabpane >}}
+
+## beforeunload
+
+Recent drivers automatically dismiss `beforeunload` prompts by default. To keep the old behavior,
+see [unhandledPromptBehavior]({{< ref "../drivers/options#unhandledpromptbehavior" >}}).

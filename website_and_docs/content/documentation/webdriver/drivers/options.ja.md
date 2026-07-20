@@ -402,6 +402,10 @@ WebDriverの `セッション` には特定の `セッションタイムアウ�
 {{< /tab >}}
 {{< /tabpane >}}
 
+注：`beforeunload` プロンプトに関しては、
+プロンプトを開いたままにするために、[BiDi]({{< ref "../bidi/" >}}) を有効にすることに加えて、
+ChromeDriver で `ignore` を設定する必要があります。
+
 ## setWindowRect
 
 リモート エンドがすべての　[サイズ変更および再配置](https://w3c.github.io/webdriver/#resizing-and-positioning-windows)
