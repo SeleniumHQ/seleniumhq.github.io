@@ -3,22 +3,13 @@ title: "著作権と帰属"
 linkTitle: "著作権と帰属"
 weight: 1
 description: >
-  Copyright, contributions and all attributions for the different projects
-  under the Selenium umbrella.
+  Selenium に関連するさまざまなプロジェクトの著作権、貢献、
+  およびすべての帰属について。
 aliases: [
 "/documentation/ja/front_matter/copyright_and_attributions/",
 "/ja/documentation/about/copyright_and_attributions"
 ]
 ---
-
-{{% pageinfo color="warning" %}}
-<p class="lead">
-   <i class="fas fa-language d-4"></i> 
-   Page being translated from 
-   English to Japanese. Do you speak Japanese? Help us to translate
-   it by sending us pull requests!
-</p>
-{{% /pageinfo %}}
 
 ## **Seleniumのドキュメント**
 
@@ -26,14 +17,14 @@ aliases: [
 保証または適合性は暗示されていません。
 提供される情報は「現状のまま」です。
 著者および出版社は、本書に含まれる情報から生じる損失または損害に関して、
-いかなる個人または団体に対しても責任も責任も負わないものとします。
+いかなる個人または団体に対しても責任を負わないものとします。
 ここに含まれる情報の使用に関して、特許責任は一切負いません。
 
 ## 帰属
 
-### Thanks to:
+### 謝辞
 
-#### [Selenium メイン Repository](//github.com/SeleniumHQ/selenium/)
+#### [Selenium メインリポジトリ](//github.com/SeleniumHQ/selenium/)
 
 {{% gh-contributors "https://api.github.com/repos/seleniumhq/selenium/contributors?per_page=100" %}}
 
@@ -45,22 +36,22 @@ aliases: [
 
 {{% gh-contributors "https://api.github.com/repos/seleniumhq/docker-selenium/contributors?per_page=100" %}}
 
-#### [Selenium Website & Docs](//github.com/SeleniumHQ/seleniumhq.github.io/)
+#### [Selenium Web サイトとドキュメント](//github.com/SeleniumHQ/seleniumhq.github.io/)
 
 {{% gh-contributors "https://api.github.com/repos/seleniumhq/seleniumhq.github.io/contributors?per_page=100" %}}
 
-#### [Previous Selenium Website](//github.com/SeleniumHQ/www.seleniumhq.org/)
+#### [以前の Selenium Web サイト](//github.com/SeleniumHQ/www.seleniumhq.org/)
 
 {{% gh-contributors "https://api.github.com/repos/seleniumhq/www.seleniumhq.org/contributors?per_page=100" %}}
 
-#### [Previous Documentation Rewrite Project](//github.com/SeleniumHQ/docs/)
+#### [以前のドキュメント書き直しプロジェクト](//github.com/SeleniumHQ/docs/)
 
 {{% gh-contributors "https://api.github.com/repos/seleniumhq/docs/contributors?per_page=100" %}}
 
 
 ## Seleniumドキュメントプロジェクトで使用されるサードパーティソフトウェア
 
-| Software | Version | License |
+| ソフトウェア | バージョン | ライセンス |
 | -------- | ------- | ------- |
 | [Hugo](//gohugo.io/) | v0.110.0 | [Apache 2.0](//gohugo.io/about/license/) |
 | [Docsy](//github.com/google/docsy/) | --- | [Apache 2.0](//github.com/google/docsy/blob/master/LICENSE) |

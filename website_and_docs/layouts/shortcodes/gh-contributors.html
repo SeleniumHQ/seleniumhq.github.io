@@ -25,7 +25,10 @@
   {{ $tokenInUrl :=cond (eq $githubToken "") "://" $toReplace }}
   {{ $url := replace $url "://" $tokenInUrl }}
 
-  {{ range getJSON $url }}
+  {{ $contributorJson := resources.GetRemote $url }}
+  {{ $contributors := $contributorJson | transform.Unmarshal }}
+
+  {{ range $contributors }}
   <div style="padding: 10px;">
     <img
       src="{{.avatar_url}}"

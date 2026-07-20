@@ -17,7 +17,7 @@ of emulating user interaction with the web platform.
 Instead, find the link using Selenium
 (and any required cookies)
 and pass it to a HTTP request library like
-[libcurl](//curl.haxx.se/libcurl/).
+[curl](https:////curl.se/).
 
 The [HtmlUnit driver](https://github.com/SeleniumHQ/htmlunit-driver) can download attachments 
 by accessing them as input streams by implementing the 

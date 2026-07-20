@@ -1,10 +1,10 @@
 ---
 title: "Celebrating 20 Years of Selenium: A Journey of Innovation in Browser Automation"
 linkTitle: "Celebrating 20 Years of Selenium"
-date: 2024-10-18
+date: 2024-10-28
 tags: ["webinar", "meetup", "talks"]
 categories: ["webinar"]
-author: <a href="https://www.linkedin.com/in/pallavimuse/" target="_blank">Pallavi Sharma</a>
+author: <a href="https://www.linkedin.com/in/rpallavisharma/" target="_blank">Pallavi Sharma</a>
 images:
   - "/images/blog/2024/20-selenium"
 description: >
@@ -40,7 +40,7 @@ This webinar is more than just a celebration—it’s a chance to learn from the
 
 Join Us in Celebrating Selenium’s Incredible Journey!
 For 20 years, Selenium has helped shape how we test, automate, and innovate on the web. This is your opportunity to celebrate that legacy and learn what the future holds for browser automation. We can’t wait to see you there!
-Event Organizers - **<a href="https://www.linkedin.com/in/maaret/" target="_blank">Maaret</a>**, **<a href="https://www.linkedin.com/in/diemol/" target="_blank">Diego</a>**, and **<a href="https://www.linkedin.com/in/pallavimuse/" target="_blank">Pallavi</a>**. 
+Event Organizers - **<a href="https://www.linkedin.com/in/maaret/" target="_blank">Maaret</a>**, **<a href="https://www.linkedin.com/in/diemol/" target="_blank">Diego</a>**, and **<a href="https://www.linkedin.com/in/musepallavi/" target="_blank">Pallavi</a>**. 
 
 ## Watch the Recording of Our 20th Anniversary Event
 

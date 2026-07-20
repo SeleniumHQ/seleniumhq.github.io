@@ -31,6 +31,7 @@ public class BaseTest {
   protected String username = "admin";
   protected String password = "myStrongPassword";
   protected String trustStorePassword = "seleniumkeystore";
+  private final Path artifactsDir = Path.of("target", "surefire-reports");
 
   public WebElement getLocatedElement(WebDriver driver, By by) {
     WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
@@ -59,15 +60,16 @@ public class BaseTest {
   }
 
   protected static ChromeOptions getDefaultChromeOptions() {
-    ChromeOptions options = new ChromeOptions();
-    options.addArguments("--no-sandbox");
-    return options;
+      return new ChromeOptions().addArguments("--no-sandbox");
   }
 
   protected static EdgeOptions getDefaultEdgeOptions() {
-    EdgeOptions options = new EdgeOptions();
-    options.addArguments("--no-sandbox");
-    return options;
+      return new EdgeOptions().addArguments("--no-sandbox");
+  }
+
+  protected Path artifactsDir() throws IOException {
+    Files.createDirectories(artifactsDir);
+    return artifactsDir;
   }
 
   protected File getTempDirectory(String prefix) {
@@ -156,7 +158,7 @@ public class BaseTest {
   }
 
   @AfterEach
-  public void quit() {
+  public final void closeBrowser() {
     if (driver != null) {
       driver.quit();
     }

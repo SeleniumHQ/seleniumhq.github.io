@@ -5,7 +5,6 @@ import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
 import org.openqa.selenium.By
 import org.openqa.selenium.Keys
-import org.openqa.selenium.WebElement
 import org.openqa.selenium.interactions.Actions
 import org.openqa.selenium.remote.RemoteWebDriver
 
@@ -47,7 +46,7 @@ class ActionsTest : BaseTest() {
         (driver as RemoteWebDriver).resetInputState()
 
         actions.sendKeys("a").perform()
-        Assertions.assertEquals("A", clickable.getAttribute("value").get(0).toString())
-        Assertions.assertEquals("a", clickable.getAttribute("value").get(1).toString())
+        Assertions.assertEquals("A", clickable.getAttribute("value")!!.get(0).toString())
+        Assertions.assertEquals("a", clickable.getAttribute("value")!!.get(1).toString())
     }
 }
