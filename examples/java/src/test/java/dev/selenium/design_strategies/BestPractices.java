@@ -273,7 +273,7 @@ class ActionBot {
   }
 }
 
-class NestedComponentsExample {
+class NestedComponentsExampleTest {
 
   @Test
   @Disabled("Illustrative only: exercises live GitHub sign-in and issue-creation pages")
