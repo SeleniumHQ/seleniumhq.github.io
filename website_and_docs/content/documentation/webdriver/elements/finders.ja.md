@@ -309,32 +309,8 @@ fun main() {
       }
   }
   {{< /tab >}}
-  {{< tab header="Python" >}}
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-
-driver = webdriver.Chrome()
-driver.get("https://www.example.com")
-##get elements from parent element using TAG_NAME
-
-    # Get element with tag name 'div'
-element = driver.find_element(By.TAG_NAME, 'div')
-
-    # Get all the elements available with tag name 'p'
-elements = element.find_elements(By.TAG_NAME, 'p')
-for e in elements:
-    print(e.text)
-
-##get elements from parent element using XPATH
-##NOTE: in order to utilize XPATH from current element, you must add "." to beginning of path
-
-    # Get first element of tag 'ul'
-element = driver.find_element(By.XPATH, '//ul')
-
-    # get children of tag 'ul' with tag 'li'
-elements  = element.find_elements(By.XPATH, './/li')
-for e in elements:
-    print(e.text)
+  {{< tab header="Python" text=true >}}
+  {{< gh-codeblock path="/examples/python/tests/elements/test_finders.py#L66-L74" >}}
   {{< /tab >}}
   {{< tab header="CSharp" >}}
 using OpenQA.Selenium;
