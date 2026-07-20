@@ -31,16 +31,16 @@ Selenium 4 以降、ブラウザ オプション クラスを使用する必要�
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L73-74" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L73-74" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< gh-codeblock path="examples/python/tests/drivers/test_options.py#L79-80" >}}
+{{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L79-80" >}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L11" >}}
+{{< gh-codeblock path="/examples/ruby/spec/drivers/options_spec.rb#L11" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -57,16 +57,16 @@ Selenium 4 以降、ブラウザ オプション クラスを使用する必要�
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L80-82" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L80-82" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< gh-codeblock path="examples/python/tests/drivers/test_options.py#L86-88" >}}
+{{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L86-88" >}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L40" >}}
+{{< gh-codeblock path="/examples/ruby/spec/drivers/options_spec.rb#L40" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -115,24 +115,8 @@ WebDriver は [load](https://developer.mozilla.org/ja/docs/Web/API/Window/load_e
 {{< tab header="Python" text=true >}}
 {{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L7-9">}}
 {{< /tab >}}
-{{< tab header="CSharp" >}}
-using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
-
-namespace pageLoadStrategy {
-  class pageLoadStrategy {
-    public static void Main(string[] args) {
-      var chromeOptions = new ChromeOptions();
-      chromeOptions.PageLoadStrategy = PageLoadStrategy.Normal;
-      IWebDriver driver = new ChromeDriver(chromeOptions);
-      try {
-        driver.Navigate().GoToUrl("https://example.com");
-      } finally {
-        driver.Quit();
-      }
-    }
-  }
-}
+{{< tab header="CSharp" text=true >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Drivers/OptionsTest.cs#L13-14" >}}
 {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
 {{< gh-codeblock path="/examples/ruby/spec/drivers/options_spec.rb#L11-L12">}}
@@ -171,24 +155,8 @@ WebDriver は、[DOMContentLoaded](https://developer.mozilla.org/ja/docs/Web/API
 {{< tab header="Python" text=true >}}
 {{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L15-L17">}}
 {{< /tab >}}
-{{< tab header="CSharp" >}}
-using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
-
-namespace pageLoadStrategy {
-  class pageLoadStrategy {
-    public static void Main(string[] args) {
-      var chromeOptions = new ChromeOptions();
-      chromeOptions.PageLoadStrategy = PageLoadStrategy.Eager;
-      IWebDriver driver = new ChromeDriver(chromeOptions);
-      try {
-        driver.Navigate().GoToUrl("https://example.com");
-      } finally {
-        driver.Quit();
-      }
-    }
-  }
-}
+{{< tab header="CSharp" text=true >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Drivers/OptionsTest.cs#L29-30" >}}
 {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
 {{< gh-codeblock path="/examples/ruby/spec/drivers/options_spec.rb#L20-L21">}}
@@ -226,24 +194,8 @@ WebDriver は、最初のページがダウンロードされるまで待機し�
 {{< tab header="Python" text=true >}}
 {{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L23-L25">}}
 {{< /tab >}}
-{{< tab header="CSharp" >}}
-using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
-
-namespace pageLoadStrategy {
-  class pageLoadStrategy {
-    public static void Main(string[] args) {
-      var chromeOptions = new ChromeOptions();
-      chromeOptions.PageLoadStrategy = PageLoadStrategy.None;
-      IWebDriver driver = new ChromeDriver(chromeOptions);
-      try {
-        driver.Navigate().GoToUrl("https://example.com");
-      } finally {
-        driver.Quit();
-      }
-    }
-  }
-}
+{{< tab header="CSharp" text=true >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Drivers/OptionsTest.cs#L41-42" >}}
 {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
 {{< gh-codeblock path="/examples/ruby/spec/drivers/options_spec.rb#L29-L30">}}
@@ -288,7 +240,7 @@ fun main() {
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L38-L39" >}}
+{{< gh-codeblock path="/examples/ruby/spec/drivers/options_spec.rb#L38-L39" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -320,7 +272,7 @@ fun main() {
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L51-L52" >}}
+{{< gh-codeblock path="/examples/ruby/spec/drivers/options_spec.rb#L51-L52" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" text=true >}}
 {{< gh-codeblock path="/examples/javascript/test/capabilities/pageLoading.spec.js#L38-L41">}}
@@ -352,7 +304,7 @@ WebDriverの `セッション` には特定の `セッションタイムアウ�
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L114-L115" >}}
+{{< gh-codeblock path="/examples/ruby/spec/drivers/options_spec.rb#L114-L115" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -378,7 +330,7 @@ WebDriverの `セッション` には特定の `セッションタイムアウ�
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L105-L106" >}}
+{{< gh-codeblock path="/examples/ruby/spec/drivers/options_spec.rb#L105-L106" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -403,7 +355,7 @@ WebDriverの `セッション` には特定の `セッションタイムアウ�
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L96-L97" >}}
+{{< gh-codeblock path="/examples/ruby/spec/drivers/options_spec.rb#L96-L97" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -437,10 +389,10 @@ WebDriverの `セッション` には特定の `セッションタイムアウ�
 {{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L51-53">}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Drivers/OptionsTest.cs#L59-L60">}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L60-L61" >}}
+{{< gh-codeblock path="/examples/ruby/spec/drivers/options_spec.rb#L60-L61" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -449,6 +401,10 @@ WebDriverの `セッション` には特定の `セッションタイムアウ�
 {{< badge-code >}}
 {{< /tab >}}
 {{< /tabpane >}}
+
+注：`beforeunload` プロンプトに関しては、
+プロンプトを開いたままにするために、[BiDi]({{< ref "../bidi/" >}}) を有効にすることに加えて、
+ChromeDriver で `ignore` を設定する必要があります。
 
 ## setWindowRect
 
@@ -466,7 +422,7 @@ WebDriverの `セッション` には特定の `セッションタイムアウ�
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L69-L70" >}}
+{{< gh-codeblock path="/examples/ruby/spec/drivers/options_spec.rb#L69-L70" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -493,7 +449,7 @@ WebDriverの `セッション` には特定の `セッションタイムアウ�
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L78-L79" >}}
+{{< gh-codeblock path="/examples/ruby/spec/drivers/options_spec.rb#L78-L79" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -566,7 +522,7 @@ driver.Navigate().GoToUrl("https://www.selenium.dev/");
 ```
 {{% /tab %}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L87-L88" >}}
+{{< gh-codeblock path="/examples/ruby/spec/drivers/options_spec.rb#L87-L88" >}}
 {{< /tab >}}
 {{% tab header="JavaScript" %}}
 ```javascript

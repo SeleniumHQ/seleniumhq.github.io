@@ -33,7 +33,7 @@ driver.switch_to.default_content()
 
 # --- Switch to iframe using name or ID ---
 iframe1=driver.find_element(By.NAME, "iframe1-name")  # (This line doesn't switch, just locates)
-driver.switch_to.frame(iframe)
+driver.switch_to.frame(iframe1)
 assert "We Leave From Here" in driver.page_source
 
 email = driver.find_element(By.ID, "email")

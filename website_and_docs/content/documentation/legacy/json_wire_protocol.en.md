@@ -904,7 +904,7 @@ Arguments may be any JSON-primitive, array, or JSON object.  JSON objects that d
 <dt><b>Potential Errors:</b></dt>
 <dd><code>NoSuchWindow</code> - If the currently selected window has been closed.</dd>
 <dd><code>StaleElementReference</code> - If one of the script arguments is a WebElement that is not attached to the page's DOM.</dd>
-<dd><code>Timeout</code> - If the script callback is not invoked before the timout expires. Timeouts are controlled by the <code>/session/:sessionId/timeout/async_script</code> command.</dd>
+<dd><code>Timeout</code> - If the script callback is not invoked before the timeout expires. Timeouts are controlled by the <code>/session/:sessionId/timeout/async_script</code> command.</dd>
 <dd><code>JavaScriptError</code> - If the script throws an Error or if an <code>unload</code> event is fired while waiting for the script to finish.</dd>
 </dl>
 </dd>

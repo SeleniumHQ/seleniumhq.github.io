@@ -21,10 +21,15 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.devtools.DevTools;
 import org.openqa.selenium.devtools.HasDevTools;
 import org.openqa.selenium.devtools.NetworkInterceptor;
-import org.openqa.selenium.devtools.v134.browser.Browser;
-import org.openqa.selenium.devtools.v134.network.Network;
-import org.openqa.selenium.devtools.v134.performance.Performance;
-import org.openqa.selenium.devtools.v134.performance.model.Metric;
+import org.openqa.selenium.devtools.v150.browser.Browser;
+import org.openqa.selenium.devtools.v150.network.Network;
+import org.openqa.selenium.devtools.v150.network.model.CookiePartitionKey;
+import org.openqa.selenium.devtools.v150.network.model.CookiePriority;
+import org.openqa.selenium.devtools.v150.network.model.CookieSameSite;
+import org.openqa.selenium.devtools.v150.network.model.CookieSourceScheme;
+import org.openqa.selenium.devtools.v150.network.model.TimeSinceEpoch;
+import org.openqa.selenium.devtools.v150.performance.Performance;
+import org.openqa.selenium.devtools.v150.performance.model.Metric;
 import org.openqa.selenium.remote.http.*;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -143,18 +148,17 @@ public class NetworkTest extends BaseTest {
             Network.setCookie(
                     "cheese",
                     "gouda",
-                    Optional.empty(),
+                    Optional.<String>empty(),
                     Optional.of("www.selenium.dev"),
-                    Optional.empty(),
+                    Optional.<String>empty(),
                     Optional.of(true),
-                    Optional.empty(),
-                    Optional.empty(),
-                    Optional.empty(),
-                    Optional.empty(),
-                    Optional.empty(),
-                    Optional.empty(),
-                    Optional.empty(),
-                    Optional.empty()));
+                    Optional.<Boolean>empty(),
+                    Optional.<CookieSameSite>empty(),
+                    Optional.<TimeSinceEpoch>empty(),
+                    Optional.<CookiePriority>empty(),
+                    Optional.<CookieSourceScheme>empty(),
+                    Optional.<Integer>empty(),
+                    Optional.<CookiePartitionKey>empty()));
 
     driver.get("https://www.selenium.dev");
     Cookie cheese = driver.manage().getCookieNamed("cheese");

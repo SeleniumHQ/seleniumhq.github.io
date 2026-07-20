@@ -27,7 +27,7 @@ pygmentsStyle = "tango"
 
 # Configure how URLs look like per section.
 [permalinks]
-blog = "/:section/:year/:filename/"
+blog = "/:section/:year/:contentbasename/"
 # blog = "/:section/:year/:month/:day/:slug/"
 
 ## Configuration for BlackFriday markdown parser: https://github.com/russross/blackfriday
@@ -74,12 +74,6 @@ title = "Selenium"
 languageName = "日本語"
 weight = 4
 [languages.ja.params]
-description = "Selenium automates browsers. That's it!"
-[languages.other]
-title = "Selenium"
-languageName ="Other"
-weight = 5
-[languages.other.params]
 description = "Selenium automates browsers. That's it!"
 
 # Import docsy theme as module
@@ -215,11 +209,11 @@ enable = false
 [[params.links.user]]
 	name ="Selenium X"
 	url = "https://x.com/SeleniumHQ"
-	icon = "fab fa-twitter"
+	icon = "fab fa-x-twitter"
         desc = "Follow us on X to get the latest news!"
 [[params.links.user]]
 	name = "Selenium Community YouTube Channel"
-	url = "https://www.youtube.com/@SeleniumHQProject/streams"
+	url = "https://www.youtube.com/@SeleniumHQProject/"
 	icon = "fab fa-youtube"
         desc = "Check all the Community talks!"
 # Developer relevant links. These will show up on right side of footer and in the community page if you have one.
@@ -258,12 +252,12 @@ enable = false
         desc = "Development takes place here!"
 [[params.links.developer]]
 	name = "Slack"
-	url = "https://join.slack.com/t/seleniumhq/shared_invite/zt-32gueowdh-aShmy9tsU19wHXreKt~4~A"
+	url = "https://inviter.co/seleniumhq"
 	icon = "fab fa-slack"
         desc = "Chat with other project developers and users in Slack"
 [[params.links.developer]]
 	name = "IRC"
-	url = "https://kiwiirc.com/nextclient/irc.libera.chat/#selenium"
+	url = "https://web.libera.chat/#selenium"
 	icon = "fas fa-comments"
         desc = "Chat with other project developers and users in IRC"
 [[params.links.developer]]

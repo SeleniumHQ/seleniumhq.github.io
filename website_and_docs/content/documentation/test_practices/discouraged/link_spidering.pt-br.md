@@ -18,7 +18,7 @@ apenas para chegar à página e atravessar o DOM.
 
 Em vez de usar o WebDriver para isso,
 você poderia economizar muito tempo
-executando um comando [curl](//curl.haxx.se/),
+executando um comando [curl](https://curl.se/),
 ou usando uma biblioteca como BeautifulSoup
 uma vez que esses métodos não dependem
 em criar um navegador e navegar para uma página.

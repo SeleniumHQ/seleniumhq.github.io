@@ -254,7 +254,7 @@ namespace FindElementsExample {
 }
   {{< /tab >}}
    {{< tab header="Ruby" text=true >}}
-   {{< gh-codeblock path="/examples/ruby/spec/elements/finders_spec.rb#L27-L28" >}}
+   {{< gh-codeblock path="/examples/ruby/spec/elements/finders_spec.rb#L28-L29" >}}
    {{< /tab >}}
   {{< tab header="JavaScript" >}}
 const {Builder, By} = require('selenium-webdriver');
@@ -346,7 +346,7 @@ for e in elements:
 element = driver.find_element(By.XPATH, '//ul')
 
     # get children of tag 'ul' with tag 'li'
-elements  = driver.find_elements(By.XPATH, './/li')
+elements  = element.find_elements(By.XPATH, './/li')
 for e in elements:
     print(e.text)
   {{< /tab >}}
@@ -378,7 +378,7 @@ namespace FindElementsFromElement {
 }
   {{< /tab >}}
    {{< tab header="Ruby" text=true >}}
-   {{< gh-codeblock path="/examples/ruby/spec/elements/finders_spec.rb#L32-L34" >}}
+   {{< gh-codeblock path="/examples/ruby/spec/elements/finders_spec.rb#L33-L35" >}}
    {{< /tab >}}
   {{< tab header="JavaScript" >}}
   const {Builder, By} = require('selenium-webdriver');
@@ -485,7 +485,7 @@ Ele é usado para rastrear (ou) encontrar um elemento DOM que tem o foco no cont
     }
   {{< /tab >}}
   {{< tab header="Ruby" text=true >}}
-  {{< gh-codeblock path="/examples/ruby/spec/elements/finders_spec.rb#L38-L39" >}}
+  {{< gh-codeblock path="/examples/ruby/spec/elements/finders_spec.rb#L40-L41" >}}
   {{< /tab >}}
   {{< tab header="JavaScript" >}}
   const {Builder, By} = require('selenium-webdriver');

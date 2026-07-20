@@ -9,9 +9,10 @@ aliases: [
 ---
 
 ### Acceptance testing
+
 This type of testing is done to determine if a feature or system
-meets the customer expectations and requirements. 
-This type of testing generally involves the customer's 
+meets the customer expectations and requirements.
+This type of testing generally involves the customer's
 cooperation or feedback, being a validation activity that
 answers the question:
 >Are we building the **_right_** product?
@@ -22,24 +23,25 @@ This simulation could be done by record/playback or through the
 different supported languages as explained in this documentation.
 Note: Acceptance testing is a subtype of **_functional testing_**,
 which some people might also refer to.
-            
+
 ### Functional testing
+
 This type of testing is done to determine if a
 feature or system functions properly without issues. It checks
 the system at different levels to ensure that all scenarios
-are covered and that the system does _what_ it's 
+are covered and that the system does _what_ it's
 supposed to do. It's a verification activity that
 answers the question:
 >Are we building the product **_right?_**
-             
-This generally includes: the tests work without errors 
-(404, exceptions...), in a usable way (correct redirections),   
-in an accessible way and matching its specifications 
+
+This generally includes: the tests work without errors
+(404, exceptions...), in a usable way (correct redirections),
+in an accessible way and matching its specifications
 (see **_acceptance testing_** above).
 
 For web applications, the automation of this testing can be
-done directly with Selenium by simulating expected returns.     
-This simulation could be done by record/playback or through 
+done directly with Selenium by simulating expected returns.
+This simulation could be done by record/playback or through
 the different supported languages as explained in this documentation.
 
 ### Integration Tests
@@ -53,33 +55,36 @@ System Testing is a complete fully integrated product Testing. It is an end-to-e
 >For example,  **_Testing the end to end flow from login to placing an order and rechecking the order in My Orders page and logoff from an ecommerce website._**
 
 ### Performance testing
-As its name indicates, performance tests are done 
+
+As its name indicates, performance tests are done
 to measure how well an application is performing.
 
 There are two main sub-types for performance testing:
 
 #### Load testing
-Load testing is done to verify how well the 
-application works under different defined loads 
+
+Load testing is done to verify how well the
+application works under different defined loads
 (usually a particular number of users connected at once).
 
 >For example,  **_Testing that the site can handle numerous orders/users at once._**
 
 #### Stress testing
+
 Stress testing is done to verify how well the
 application works under stress (or above the maximum supported load).
 
 >For example,  **_Testing that your ecommerce site can handle Black Friday_**
 
-Generally, performance tests are done by executing some 
-Selenium written tests simulating different users 
-hitting a particular function on the web app and 
-retrieving some meaningful measurements. 
+Generally, performance tests are done by executing some
+Selenium written tests simulating different users
+hitting a particular function on the web app and
+retrieving some meaningful measurements.
 
 This is generally done by other tools that retrieve the metrics.
 One such tool is **_JMeter_**.
 
-For a web application, details to measure include 
+For a web application, details to measure include
 throughput, latency, data loss, individual component loading times, etc.
 
 Note 1: All browsers have a performance tab in their
@@ -87,59 +92,63 @@ developers' tools section (accessible by pressing F12)
 
 Note 2: is a subtype of **_non-functional testing_**
 as this is generally measured per system and not per function/feature.
-            
-### Regression testing
-This testing is generally done after a change, fix or feature addition. 
 
-To ensure that the change has not broken any of the existing 
-functionality, some already executed tests are executed again. 
+### Regression testing
+
+This testing is generally done after a change, fix or feature addition.
+
+To ensure that the change has not broken any of the existing
+functionality, some already executed tests are executed again.
 
 >For example,  **_Testing that your new search bar doesn't break the other buttons on the menu_**
-            
+
 The set of re-executed tests can be full or partial
 and can include several different types, depending
 on the application and development team.
-            
+
 ### Test driven development (TDD)
+
 Rather than a test type _per se_, TDD is an iterative
 development methodology in which tests drive the design of a feature.
 
 Each cycle starts by creating a set of unit tests that
 the feature should eventually pass (they should fail their first time executed).
 
-After this, development takes place to make the tests pass. 
-The tests are executed again, starting another cycle 
+After this, development takes place to make the tests pass.
+The tests are executed again, starting another cycle
 and this process continues until all tests are passing.
 
 This aims to speed up the development of an application
 based on the fact that defects are less costly the earlier they are found.
 
 ### Behavior-driven development (BDD)
-BDD is also an iterative development methodology
-based on the above TDD, in which the goal is to involve
-all the parties in the development of an application.
 
-Each cycle starts by creating some specifications 
-(which should fail). Then create the failing unit 
-tests (which should also fail) and then do the development. 
+Behavior-Driven Development (BDD) is an iterative methodology inspired by
+TDD that focuses on defining system behavior through shared examples.
+It emphasizes collaboration between business stakeholders, developers,
+and testers to ensure a common understanding of requirements.
 
-This cycle is repeated until all types of tests are passing.
+Development begins by defining specifications in a ubiquitous language,
+commonly expressed using **_Gherkin_**. These specifications describe
+expected behavior and serve as acceptance criteria.
+Scenarios may initially fail when automated, guiding development until
+the behavior is implemented.
 
-In order to do so, a specification language is 
-used. It should be understandable by all parties and 
-simple, standard and explicit. 
-Most tools use **_Gherkin_** as this language.
+BDD scenarios are supported by underlying code and tests, which may include:
+unit, integration, or UI-level automation.
+Tools such as Cucumber and SpecFlow enable mapping specifications
+to executable code, often integrating with automation tools like Selenium.
 
-The goal is to be able to detect even more errors
-than TDD, by targeting potential acceptance errors
-too and make communication between parties smoother.
+The primary goal of BDD is to prevent misunderstandings and acceptance-level
+defects by ensuring the right software is built from the start.
+In common practice, Selenium is integrated with BDD frameworks
+to automate browser-based behaviors described in BDD scenarios. In this setup:
 
-A set of tools are currently available 
-to write the specifications and match them with code functions,
-such as **_Cucumber_** or **_SpecFlow._**
+BDD frameworks such as: **_Cucumber, JBehave, Capybara and Robot Framework_**
+are responsible for parsing and managing specifications
+**_Step definitions_** act as the bridge between human-readable scenarios
+and executable code
 
-A set of tools are built on top of Selenium to make this process
-even faster by directly transforming the BDD specifications into 
-executable code.
-Some of these are **_JBehave, Capybara and Robot Framework_**.
-            
+Selenium as the automation engine to perform browser interactions
+can be used in combination with the frameworks mentioned above as
+an optional dependency that enables UI automation when browser-level validation is required.

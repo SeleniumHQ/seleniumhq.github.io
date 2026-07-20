@@ -84,7 +84,7 @@ var driver = new RemoteWebDriver(new Uri(CloudURL), caps);
 ```
 {{% /tab %}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L123-L130">}}
+{{< gh-codeblock path="/examples/ruby/spec/drivers/options_spec.rb#L123-L130">}}
 {{< /tab >}}
 {{% tab header="Python" %}}
 ```python
@@ -140,7 +140,7 @@ var driver = new RemoteWebDriver(new Uri(CloudURL), browserOptions);
 ```
 {{% /tab %}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/drivers/options_spec.rb#L38-L47">}}
+{{< gh-codeblock path="/examples/ruby/spec/drivers/options_spec.rb#L38-L47">}}
 {{< /tab >}}
 {{% tab header="Python" %}}
 ```python

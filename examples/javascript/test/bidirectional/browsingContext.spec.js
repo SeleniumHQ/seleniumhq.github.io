@@ -11,9 +11,11 @@ describe('Browsing Context', function () {
   let pngMagicNumber = 'iVBOR'
 
   beforeEach(async function () {
+    const options = new firefox.Options().enableBidi()
+    options.setAlertBehavior('ignore')
     driver = new Builder()
       .forBrowser('firefox')
-      .setFirefoxOptions(new firefox.Options().enableBidi())
+      .setFirefoxOptions(options)
       .build()
   })
 
@@ -422,7 +424,7 @@ describe('Browsing Context', function () {
     await driver.wait(until.titleIs('We Arrive Here'), 2500)
   });
 
-  it.skip('Get All Top level browsing contexts', async () => {
+  it('Get All Top level browsing contexts', async () => {
     const id = await driver.getWindowHandle()
     const window1 = await BrowsingContext(driver, {
       browsingContextId: id,
