@@ -90,7 +90,8 @@ class IssueList extends LoadableComponent<IssueList> {
 
   @Override
   protected void isLoaded() throws Error {
-    Assertions.assertTrue(driver.getCurrentUrl().contains("/issues"));
+    String url = driver.getCurrentUrl();
+    Assertions.assertTrue(url.contains("/issues") && !url.contains("/issues/"), "Not on the issues list page: " + url);
   }
 }
 

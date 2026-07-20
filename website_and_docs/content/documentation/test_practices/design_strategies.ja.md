@@ -32,7 +32,7 @@ LoadableComponentは、PageObjectsの作成の負担を軽減することを目�
 
 モデル化するUIの例として、[新しいissue](https://github.com/SeleniumHQ/selenium/issues/new?assignees=&labels=I-defect%2Cneeds-triaging&projects=&template=bug-report.yml&title=%5B%F0%9F%90%9B+Bug%5D%3A+)のページをご覧ください。 
 テスト作成者の観点から、これは新しい問題を提出できるサービスを提供します。 
-基本的なページオブジェクトは次のようになります。
+基本的なページオブジェクト(このシンプルな版を `EditIssueBasic` と呼び、後で `EditIssue` という LoadableComponent に発展させます)は次のようになります。
 
 {{< tabpane text=true >}}
 {{< tab header="Python" >}}
@@ -62,7 +62,7 @@ LoadableComponentは、PageObjectsの作成の負担を軽減することを目�
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/design_strategies/BestPractices.java#L161" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/design_strategies/BestPractices.java#L162" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
@@ -87,7 +87,7 @@ LoadableComponentは、PageObjectsの作成の負担を軽減することを目�
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/design_strategies/BestPractices.java#L187-L200" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/design_strategies/BestPractices.java#L188-L201" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
@@ -115,7 +115,7 @@ LoadableComponentは、PageObjectsの作成の負担を軽減することを目�
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/design_strategies/BestPractices.java#L161-L246" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/design_strategies/BestPractices.java#L162-L247" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
@@ -167,7 +167,7 @@ ProjectPage.java:
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/design_strategies/BestPractices.java#L97-L118" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/design_strategies/BestPractices.java#L98-L119" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
@@ -190,7 +190,7 @@ and SecuredPage.java:
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/design_strategies/BestPractices.java#L120-L159" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/design_strategies/BestPractices.java#L121-L160" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
@@ -213,7 +213,7 @@ EditIssueの "load" メソッドは次のようになります。
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/design_strategies/BestPractices.java#L187-L194" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/design_strategies/BestPractices.java#L188-L195" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
@@ -238,7 +238,7 @@ EditIssueで `get()` を呼び出すと、そのすべての依存関係も読�
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/design_strategies/BestPractices.java#L276-L298" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/design_strategies/BestPractices.java#L277-L299" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
@@ -272,7 +272,7 @@ PageObjectsは、テストでの重複を減らすための便利な方法です
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/design_strategies/BestPractices.java#L248-L274" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/design_strategies/BestPractices.java#L249-L275" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}

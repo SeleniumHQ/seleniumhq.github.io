@@ -40,7 +40,7 @@ LoadableComponent 是一个基类, 目标是让编写页面对象更轻松.
 
 举个我们想要建模的 UI 的例子, 看看 [new issue](https://github.com/SeleniumHQ/selenium/issues/new?assignees=&labels=I-defect%2Cneeds-triaging&projects=&template=bug-report.yml&title=%5B%F0%9F%90%9B+Bug%5D%3A+) 页面.
 对于测试作者而言, 该页面的作用是提供一个提交新 issue 的功能. 
-一个基本的页面对象看起来像:
+一个基本的页面对象(这个简化版本我们称为 `EditIssueBasic`, 之后会把它改造成 `EditIssue` 这个 LoadableComponent)看起来像:
 
 
 {{< tabpane text=true >}}
@@ -72,7 +72,7 @@ LoadableComponent 是一个基类, 目标是让编写页面对象更轻松.
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/design_strategies/BestPractices.java#L161" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/design_strategies/BestPractices.java#L162" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
@@ -99,7 +99,7 @@ LoadableComponent 是一个基类, 目标是让编写页面对象更轻松.
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/design_strategies/BestPractices.java#L187-L200" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/design_strategies/BestPractices.java#L188-L201" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
@@ -131,7 +131,7 @@ LoadableComponent 是一个基类, 目标是让编写页面对象更轻松.
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/design_strategies/BestPractices.java#L161-L246" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/design_strategies/BestPractices.java#L162-L247" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
@@ -183,7 +183,7 @@ ProjectPage.java:
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/design_strategies/BestPractices.java#L97-L118" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/design_strategies/BestPractices.java#L98-L119" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
@@ -206,7 +206,7 @@ ProjectPage.java:
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/design_strategies/BestPractices.java#L120-L159" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/design_strategies/BestPractices.java#L121-L160" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
@@ -229,7 +229,7 @@ EditIssue 中的 `load` 方法现在如下：
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/design_strategies/BestPractices.java#L187-L194" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/design_strategies/BestPractices.java#L188-L195" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
@@ -255,7 +255,7 @@ EditIssue 中的 `load` 方法现在如下：
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/design_strategies/BestPractices.java#L276-L298" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/design_strategies/BestPractices.java#L277-L299" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
@@ -294,7 +294,7 @@ EditIssue 中的 `load` 方法现在如下：
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/design_strategies/BestPractices.java#L248-L274" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/design_strategies/BestPractices.java#L249-L275" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}

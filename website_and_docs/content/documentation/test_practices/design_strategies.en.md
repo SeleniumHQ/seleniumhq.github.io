@@ -35,7 +35,8 @@ There is currently an implementation in Java that ships as part of Selenium 2, b
 
 As an example of a UI that we'd like to model, take a look at 
 the [new issue](https://github.com/SeleniumHQ/selenium/issues/new?assignees=&labels=I-defect%2Cneeds-triaging&projects=&template=bug-report.yml&title=%5B%F0%9F%90%9B+Bug%5D%3A+) page. From the point of view of a test author, 
-this offers the service of being able to file a new issue. A basic Page Object would look like:
+this offers the service of being able to file a new issue. A basic Page Object -- we'll call this
+simple version `EditIssueBasic`, before turning it into the `EditIssue` LoadableComponent below -- would look like:
 
 {{< tabpane text=true >}}
 {{< tab header="Python" >}}
@@ -65,7 +66,7 @@ In order to turn this into a LoadableComponent, all we need to do is to set that
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/design_strategies/BestPractices.java#L161" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/design_strategies/BestPractices.java#L162" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
@@ -91,7 +92,7 @@ By extending this base class, we need to implement two new methods:
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/design_strategies/BestPractices.java#L187-L200" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/design_strategies/BestPractices.java#L188-L201" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
@@ -120,7 +121,7 @@ With a little rework, our PageObject looks like:
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/design_strategies/BestPractices.java#L161-L246" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/design_strategies/BestPractices.java#L162-L247" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
@@ -171,7 +172,7 @@ ProjectPage.java:
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/design_strategies/BestPractices.java#L97-L118" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/design_strategies/BestPractices.java#L98-L119" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
@@ -194,7 +195,7 @@ and SecuredPage.java:
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/design_strategies/BestPractices.java#L120-L159" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/design_strategies/BestPractices.java#L121-L160" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
@@ -217,7 +218,7 @@ The "load" method in EditIssue now looks like:
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/design_strategies/BestPractices.java#L187-L194" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/design_strategies/BestPractices.java#L188-L195" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
@@ -242,7 +243,7 @@ load too. The example usage:
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/design_strategies/BestPractices.java#L276-L298" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/design_strategies/BestPractices.java#L277-L299" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
@@ -279,7 +280,7 @@ for your app, it's easy to change them. As an example:
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/design_strategies/BestPractices.java#L248-L274" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/design_strategies/BestPractices.java#L249-L275" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
