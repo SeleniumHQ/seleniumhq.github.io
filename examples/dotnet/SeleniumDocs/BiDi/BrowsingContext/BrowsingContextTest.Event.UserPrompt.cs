@@ -1,5 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
+using OpenQA.Selenium.BiDi;
 using OpenQA.Selenium.BiDi.BrowsingContext;
 using System;
 using System.Threading.Tasks;
@@ -29,19 +30,30 @@ partial class BrowsingContextTest
     [TestMethod]
     public async Task UserPromptClosedEvent()
     {
-        TaskCompletionSource<UserPromptClosedEventArgs> tcs = new();
+        TaskCompletionSource<UserPromptOpenedEventArgs> opened = new();
+        TaskCompletionSource<UserPromptClosedEventArgs> closed = new();
 
         await context.NavigateAsync("https://www.selenium.dev/selenium/web/alerts.html", new() { Wait = ReadinessState.Complete });
 
-        // TODO: this event can be a part of context
-        // Chrome's default unhandled prompt behavior (dismiss and notify) closes the
-        // prompt automatically, which is what raises this event; see HandleUserPrompt.cs
-        // for an example that closes a prompt explicitly instead.
-        await bidi.BrowsingContext.UserPromptClosed.SubscribeAsync(args => tcs.TrySetResult(args));
+        // TODO: these events can be a part of context
+        await bidi.BrowsingContext.UserPromptOpened.SubscribeAsync(args => opened.TrySetResult(args));
+        await bidi.BrowsingContext.UserPromptClosed.SubscribeAsync(args => closed.TrySetResult(args));
 
         driver.FindElement(By.Id("prompt")).Click();
 
-        var userPromptClosedEventArgs = await tcs.Task.WaitAsync(TimeSpan.FromSeconds(5));
+        await opened.Task.WaitAsync(TimeSpan.FromSeconds(5));
+
+        try
+        {
+            // Chrome's default unhandled prompt behavior may already have closed the
+            // prompt by this point; tolerate that instead of treating it as a failure.
+            await context.HandleUserPromptAsync(new() { Accept = true });
+        }
+        catch (BiDiException ex) when (ex.Message.Contains("no such alert"))
+        {
+        }
+
+        var userPromptClosedEventArgs = await closed.Task.WaitAsync(TimeSpan.FromSeconds(5));
 
         Assert.IsNotNull(userPromptClosedEventArgs);
         Console.WriteLine(userPromptClosedEventArgs);
