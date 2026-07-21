@@ -59,10 +59,8 @@ curl -L "https://docs.google.com/document/d/18InWY44S0C_ECkRkRo8GKictu8BEtsahRsF
    date: YYYY-MM-DD
    ---
 
-   Meetings are happening on the `#selenium-tlc` channel on [Selenium Slack](https://selenium.dev/support).
+   Meetings are happening weekly on Thursday at 0700 Pacific / 1000 Eastern / 1500 UK / 1930 India as a video call, and the invite is posted to the `#selenium-tlc` channel on [Selenium Slack](https://selenium.dev/support).
    To add items to the agenda for the next meeting, please see our public [Rolling Agenda](https://docs.google.com/document/d/18InWY44S0C_ECkRkRo8GKictu8BEtsahRsFh17tmUR0/edit?tab=t.0#heading=h.2kfu4ns4qzjl)
-
-   The next meeting will be Thursday, Month D at 0700 Pacific / 1000 Eastern / 1500 UK / 1930 India.
 
    ### Participation
 
@@ -134,8 +132,8 @@ Use reference definitions in this form:
 
 - Use Markdown front matter exactly as existing meeting pages do.
 - Use `Month D, YYYY` in titles and `YYYY-MM-DD` for the `date` value.
-- Calculate the next meeting date as the following Thursday unless the transcript or agenda states
-  a different date.
+- Keep the recurring day and times in the intro, but do not state the date of the next meeting. The
+  standing schedule stays accurate; a specific date written into a published page only goes stale.
 - Keep the page concise enough for public minutes, not a transcript rewrite.
 - Avoid duplication across sections:
   - `## Meeting Summary` gives a brief orientation in two to four sentences.
@@ -152,7 +150,7 @@ Use reference definitions in this form:
 
 Before finishing, check:
 
-- The page path, front matter date, title, and next-meeting date match the transcript date.
+- The page path, front matter date, and title match the transcript date.
 - Every participant listed is a mapped TLC member who spoke or clearly participated.
 - Every mapped TLC member mention uses a GitHub handle link instead of a full name.
 - Every decision and action item is supported by transcript evidence.
