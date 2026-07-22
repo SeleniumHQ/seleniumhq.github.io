@@ -1,34 +1,46 @@
-# Running all test from Selenium C# example
+# Running Selenium .NET (C#) Tests
 
-Prerequisite: Install .NET
-- This link covers all cross-platform installation steps
+The following steps will guide you on how to  
+run Selenium .NET (C#) tests using the examples  
+from the `SeleniumHQ/seleniumhq.github.io` repository.
 
-https://learn.microsoft.com/en-us/dotnet/core/install/ 
+## Initial Setup
 
-Follow these steps to run all test examples from selenium C#
+### Prerequisites
 
-1. Clone this repository
+Ensure you have the following installed:
 
-```
+- [.NET SDK (8.0 or later)](https://dotnet.microsoft.com/en-us/download)
+- An IDE like [Visual Studio](https://visualstudio.microsoft.com/) or [Visual Studio Code](https://code.visualstudio.com/)
+- [.NET CLI tools](https://learn.microsoft.com/en-us/dotnet/core/tools/)
+
+### Clone the repository
+
+Clone the Selenium documentation repository to your local machine:
+
+```bash
 git clone https://github.com/SeleniumHQ/seleniumhq.github.io.git
 ```
 
-2. Navigate to `dotnet` directory
+## Navigate to the .NET directory
+### Change into the .NET examples directory:
 
-```
-cd seleniumhq.github.io/examples/dotnet
+```bash
+cd seleniumhq.github.io/examples/dotnet/SeleniumDocs
 ```
 
-3. Install dependecies using dotnet
+## Running the Tests
+### Restore dependencies
+Install necessary dependencies using the .NET CLI:
 
-```
+```bash
 dotnet restore
 ```
 
-4. Run all tests
-> Open the terminal or command prompt and navigate to the directory where your test project's .csproj file is located and run the following command in the terminal
+### Run all tests
+To run all available tests:
 
-```
+```bash
 dotnet test
 ```
 
@@ -38,4 +50,20 @@ Use this command to run a C# script and follow the first script example
 
 ```
 dotnet run HelloSelenium.cs
+```
+
+### Run a Specific Test Method
+To run a specific test method using its fully qualified name:
+
+```bash
+dotnet test --filter "FullyQualifiedName=Namespace.ClassName.MethodName"
+```
+For example:
+```bash
+dotnet test --filter "FullyQualifiedName=SeleniumDocs.GettingStarted.UsingSeleniumTest.EightComponents"
+```
+
+You can also filter by test name only (if it's unique):
+```bash
+dotnet test --filter "Name=EightComponents"
 ```
