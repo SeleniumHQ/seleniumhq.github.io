@@ -123,10 +123,10 @@ namespace SeleniumDocs.Browsers
 
             driver = new FirefoxDriver(service);
 
-            string profile = (string)driver.Capabilities.GetCapability("moz:profile");
-            string[] directories = profile.Split("/");
-            var dirName = directories.Last();
-            Assert.AreEqual(GetTempDirectory() + dirName, profile);
+            string profile = ((string)driver.Capabilities.GetCapability("moz:profile")).Replace('\\', '/');
+            var dirName = profile.Split('/').Last();
+            var profileDirectories = Directory.GetDirectories(GetTempDirectory()).Select(Path.GetFileName);
+            Assert.IsTrue(profileDirectories.Contains(dirName));
         }
 
         [TestMethod]
@@ -185,7 +185,7 @@ namespace SeleniumDocs.Browsers
         {
             if (string.IsNullOrEmpty(_tempPath))
             {
-                _tempPath = Directory.CreateTempSubdirectory("profile-").FullName + Path.DirectorySeparatorChar;
+                _tempPath = Directory.CreateTempSubdirectory("profile-").FullName;
             }
 
             return _tempPath;
