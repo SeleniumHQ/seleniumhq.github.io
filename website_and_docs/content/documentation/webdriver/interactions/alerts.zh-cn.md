@@ -23,7 +23,7 @@ WebDriver可以从弹窗获取文本并接受或关闭这些警告.
 {{< /tab >}}
 
 {{< tab header="Python" text=true >}}
-{{< gh-codeblock path="/examples/python/tests/interactions/test_alerts.py#L12-L18" >}}
+{{< gh-codeblock path="/examples/python/tests/interactions/test_alerts.py#L13-L19" >}}
 {{< /tab >}}
 
   {{< tab header="CSharp" >}}
@@ -72,7 +72,7 @@ alert.accept()
 {{< /tab >}}
 
 {{< tab header="Python" text=true >}}
-{{< gh-codeblock path="/examples/python/tests/interactions/test_alerts.py#L26-L32" >}}
+{{< gh-codeblock path="/examples/python/tests/interactions/test_alerts.py#L27-L33" >}}
 {{< /tab >}}
 
   {{< tab header="CSharp" >}}
@@ -128,7 +128,7 @@ alert.dismiss()
 {{< /tab >}}
 
 {{< tab header="Python" text=true >}}
-{{< gh-codeblock path="/examples/python/tests/interactions/test_alerts.py#L40-L47" >}}
+{{< gh-codeblock path="/examples/python/tests/interactions/test_alerts.py#L41-L48" >}}
 {{< /tab >}}
 
   {{< tab header="CSharp" >}}
@@ -164,3 +164,9 @@ alert.sendKeys("Selenium")
 alert.accept()
   {{< /tab >}}
 {{< /tabpane >}}
+
+## beforeunload
+
+较新版本的驱动默认会自动关闭 `beforeunload` 提示框。
+如果需要恢复旧的行为，
+请参阅 [unhandledPromptBehavior]({{< ref "../drivers/options#unhandledpromptbehavior" >}})。

@@ -20,7 +20,7 @@ With this code you can insert the credentials into the header when necessary
 
 {{< tabpane text=true >}}
 {{% tab header="Java" %}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidi/cdp/NetworkTest.java#L41-L43" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidi/cdp/NetworkTest.java#L46-L48" >}}
 {{% /tab %}}
 {{% tab header="Python" %}}
 {{< gh-codeblock path="/examples/python/tests/bidi/cdp/test_network.py#L13-15" >}}
@@ -48,7 +48,7 @@ Both requests and responses can be recorded or transformed.
 
 {{< tabpane text=true >}}
 {{% tab header="Java" %}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidi/cdp/NetworkTest.java#L56-L65" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidi/cdp/NetworkTest.java#L61-L70" >}}
 {{% /tab %}}
 {{% tab header="Python" %}}
 {{< badge-implementation >}}
@@ -71,7 +71,7 @@ Both requests and responses can be recorded or transformed.
 
 {{< tabpane text=true >}}
 {{% tab header="Java" %}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidi/cdp/NetworkTest.java#L75-L85" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidi/cdp/NetworkTest.java#L80-L90" >}}
 {{% /tab %}}
 {{% tab header="Python" %}}
 {{< badge-implementation >}}
@@ -95,7 +95,7 @@ Both requests and responses can be recorded or transformed.
 
 {{< tabpane text=true >}}
 {{% tab header="Java" %}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidi/cdp/NetworkTest.java#L97-L110" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidi/cdp/NetworkTest.java#L102-L115" >}}
 {{% /tab %}}
 {{% tab header="Python" %}}
 {{< badge-implementation >}}
@@ -119,7 +119,7 @@ Both requests and responses can be recorded or transformed.
 
 {{< tabpane text=true >}}
 {{% tab header="Java" %}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidi/cdp/NetworkTest.java#L125-L126" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidi/cdp/NetworkTest.java#L130-L131" >}}
 {{% /tab %}}
 {{% tab header="Python" %}}
 {{< gh-codeblock path="/examples/python/tests/bidi/cdp/test_network.py#L26-L28" >}}
@@ -143,7 +143,7 @@ Both requests and responses can be recorded or transformed.
 
 {{< tabpane text=true >}}
 {{% tab header="Java" %}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidi/cdp/NetworkTest.java#L142-L157" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidi/cdp/NetworkTest.java#L147-L161" >}}
 {{% /tab %}}
 {{% tab header="Python" %}}
 {{< gh-codeblock path="/examples/python/tests/bidi/cdp/test_network.py#L37-L44" >}}
@@ -167,7 +167,7 @@ Both requests and responses can be recorded or transformed.
 
 {{< tabpane text=true >}}
 {{% tab header="Java" %}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidi/cdp/NetworkTest.java#L171-L176" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidi/cdp/NetworkTest.java#L175-L180" >}}
 {{% /tab %}}
 {{% tab header="Python" %}}
 {{< badge-implementation >}}

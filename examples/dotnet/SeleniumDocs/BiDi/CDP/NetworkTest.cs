@@ -7,10 +7,9 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.DevTools;
 using System.Linq;
 using System.Threading;
-using OpenQA.Selenium.DevTools.V137.Browser;
-using OpenQA.Selenium.DevTools.V137.Network;
-using OpenQA.Selenium.DevTools.V137.Performance;
-
+using OpenQA.Selenium.DevTools.V150.Browser;
+using OpenQA.Selenium.DevTools.V150.Network;
+using OpenQA.Selenium.DevTools.V150.Performance;
 
 
 namespace SeleniumDocs.BiDi.CDP
@@ -21,7 +20,7 @@ namespace SeleniumDocs.BiDi.CDP
         [TestInitialize]
         public void Startup()
         {
-            StartDriver("137");
+            StartDriver("150");
         }
 
         [TestMethod]
@@ -114,9 +113,9 @@ namespace SeleniumDocs.BiDi.CDP
             driver.Url = "https://www.selenium.dev/selenium/web/frameset.html";
 
             var session = ((IDevTools)driver).GetDevToolsSession();
-            var domains = session.GetVersionSpecificDomains<OpenQA.Selenium.DevTools.V137.DevToolsSessionDomains>();
+            var domains = session.GetVersionSpecificDomains<OpenQA.Selenium.DevTools.V150.DevToolsSessionDomains>();
 
-            await domains.Performance.Enable(new OpenQA.Selenium.DevTools.V137.Performance.EnableCommandSettings());
+            await domains.Performance.Enable(new OpenQA.Selenium.DevTools.V150.Performance.EnableCommandSettings());
             var metricsResponse =
                 await session.SendCommand<GetMetricsCommandSettings, GetMetricsCommandResponse>(
                     new GetMetricsCommandSettings()
@@ -135,8 +134,8 @@ namespace SeleniumDocs.BiDi.CDP
         public async Task SetCookie()
         {
             var session = ((IDevTools)driver).GetDevToolsSession();
-            var domains = session.GetVersionSpecificDomains<OpenQA.Selenium.DevTools.V137.DevToolsSessionDomains>();
-            await domains.Network.Enable(new OpenQA.Selenium.DevTools.V137.Network.EnableCommandSettings());
+            var domains = session.GetVersionSpecificDomains<OpenQA.Selenium.DevTools.V150.DevToolsSessionDomains>();
+            await domains.Network.Enable(new OpenQA.Selenium.DevTools.V150.Network.EnableCommandSettings());
 
             var cookieCommandSettings = new SetCookieCommandSettings
             {

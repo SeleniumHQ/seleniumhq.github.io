@@ -18,17 +18,16 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.*;
 import org.openqa.selenium.remote.service.DriverFinder;
 
-
-
-
-
 public class FirefoxTest extends BaseTest {
   private FirefoxDriver driver;
 
   @AfterEach
   public void clearProperties() {
     System.clearProperty(GeckoDriverService.GECKO_DRIVER_LOG_PROPERTY);
-    System.clearProperty(GeckoDriverService.GECKO_DRIVER_LOG_LEVEL_PROPERTY);driver.quit();
+    System.clearProperty(GeckoDriverService.GECKO_DRIVER_LOG_LEVEL_PROPERTY);
+    if (driver != null) {
+      driver.quit();
+    }
   }
 
   @Test
@@ -186,24 +185,20 @@ public class FirefoxTest extends BaseTest {
     // Verify the screenshot file exists
     Assertions.assertTrue(targetFile.exists(), "The full page screenshot file should exist");
     Files.deleteIfExists(targetFile.toPath());
-
-    driver.quit();
   }
 
   @Test
   public void setContext() {
     driver = startFirefoxDriver(new FirefoxOptions().addArguments("-remote-allow-system-access"));
 
-    ((HasContext) driver).setContext(FirefoxCommandContext.CHROME);
+    driver.setContext(FirefoxCommandContext.CHROME);
     driver.executeScript("console.log('Inside Chrome context');");
 
     // Verify the context is back to "content"
     Assertions.assertEquals(
-            FirefoxCommandContext.CHROME, ((HasContext) driver).getContext(),
+            FirefoxCommandContext.CHROME, driver.getContext(),
             "The context should be 'chrome'"
     );
-
-    driver.quit();
   }
 
   @Test
@@ -214,7 +209,5 @@ public class FirefoxTest extends BaseTest {
     options.setProfile(profile);
 
     driver = new FirefoxDriver(options);
-
-    driver.quit();
   }
 }
