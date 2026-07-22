@@ -27,9 +27,9 @@ mvn test
 ```
 > or to run all tests in a specific class you can run `mvn -Dtest=classname test`
 
-# Run a single Kotlin example
+## Run a single Kotlin example
 
-Use this command to run the test for a specific Kotlin example and follow the first script example
+Run only the first script example test:
 
 ```
 mvn -Dtest=dev.selenium.getting_started.FirstScriptTest test
