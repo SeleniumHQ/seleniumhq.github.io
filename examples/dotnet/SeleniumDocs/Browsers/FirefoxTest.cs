@@ -23,11 +23,11 @@ namespace SeleniumDocs.Browsers
             {
                 File.Delete(_logLocation);
             }
-            if (_tempPath != null && File.Exists(_tempPath))
-            {
-                File.Delete(_tempPath);
-            }
             driver.Quit();
+            if (_tempPath != null && Directory.Exists(_tempPath))
+            {
+                Directory.Delete(_tempPath, true);
+            }
         }
 
         [TestMethod]
@@ -123,10 +123,10 @@ namespace SeleniumDocs.Browsers
 
             driver = new FirefoxDriver(service);
 
-            string profile = (string)driver.Capabilities.GetCapability("moz:profile");
-            string[] directories = profile.Split("/");
-            var dirName = directories.Last();
-            Assert.AreEqual(GetTempDirectory() + dirName, profile);
+            string profile = ((string)driver.Capabilities.GetCapability("moz:profile")).Replace('\\', '/');
+            var dirName = profile.Split('/').Last();
+            var profileDirectories = Directory.GetDirectories(GetTempDirectory()).Select(Path.GetFileName);
+            Assert.IsTrue(profileDirectories.Contains(dirName));
         }
 
         [TestMethod]
@@ -183,9 +183,9 @@ namespace SeleniumDocs.Browsers
 
         private string GetTempDirectory()
         {
-            if (string.IsNullOrEmpty(_tempPath) && !File.Exists(_tempPath))
+            if (string.IsNullOrEmpty(_tempPath))
             {
-                _tempPath = Path.GetTempPath();
+                _tempPath = Directory.CreateTempSubdirectory("profile-").FullName;
             }
 
             return _tempPath;
