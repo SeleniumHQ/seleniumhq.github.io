@@ -22,6 +22,17 @@ Clone the Selenium documentation repository to your local machine:
 git clone https://github.com/SeleniumHQ/seleniumhq.github.io.git
 ```
 
+## Execute a single script
+
+`HelloSelenium.cs` is a standalone script (not part of the `SeleniumDocs` test
+project) that follows the first script example. Requires the .NET 10 SDK or
+later for [file-based apps](https://learn.microsoft.com/en-us/dotnet/core/whats-new/dotnet-10/overview#file-based-apps).
+
+```bash
+cd seleniumhq.github.io/examples/dotnet
+dotnet run HelloSelenium.cs
+```
+
 ## Navigate to the .NET directory
 ### Change into the .NET examples directory:
 
@@ -42,15 +53,6 @@ To run all available tests:
 
 ```bash
 dotnet test
-```
-
-
-# Execute a C# script
-
-Use this command to run a C# script and follow the first script example
-
-```
-dotnet run HelloSelenium.cs
 ```
 
 ### Run a Specific Test Method
