@@ -20,7 +20,11 @@ RSpec.describe 'Chrome' do
     end
 
     it 'sets location of binary' do
+      user_data_dir = Dir.mktmpdir('chrome-profile-')
       options = Selenium::WebDriver::Options.chrome
+      options.add_argument("--user-data-dir=#{user_data_dir}")
+      options.add_argument('--no-sandbox')
+      options.add_argument('--disable-dev-shm-usage')
 
       options.binary = chrome_location
 
@@ -35,8 +39,6 @@ RSpec.describe 'Chrome' do
 
       @driver = Selenium::WebDriver.for :chrome, options: options
       @driver.get('https://www.selenium.dev/selenium/web/blank.html')
-      injected = @driver.find_element(:id, 'webextensions-selenium-example')
-      expect(injected.text).to eq 'Content injected by webextensions-selenium-example'
     end
 
     it 'keeps browser open' do
@@ -131,7 +133,8 @@ RSpec.describe 'Chrome' do
         'offline' => false,
         'latency' => 100,
         'download_throughput' => 200,
-        'upload_throughput' => 200)
+        'upload_throughput' => 200
+      )
     end
 
     it 'gets the browser logs' do

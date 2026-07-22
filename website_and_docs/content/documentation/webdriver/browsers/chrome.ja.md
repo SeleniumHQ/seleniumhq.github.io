@@ -3,32 +3,32 @@ title: "Chrome固有の機能"
 linkTitle: "Chrome"
 weight: 4
 description: >-
-    これらは、Google Chrome ブラウザに固有のCapabilityです。
+    これらは、Google Chromeブラウザに特有の機能と機能です。
 aliases: [
 "/ja/documentation/capabilities/chromium"
 ]
 ---
 
-デフォルトでは、Selenium 4 は Chrome v75 以降と互換性があります。 
-Chromeブラウザのバージョンと chromedriverのバージョンは、メジャーバージョンと一致する必要があることに注意してください。
+これらは、Google Chromeブラウザに特有の機能と機能です。
+デフォルトでは、Selenium 4はChrome v75以上と互換性があります。Chromeブラウザのバージョンとchromedriverのバージョンは、メジャーバージョンが一致する必要があることに注意してください。
 
 ## Options
 
-全てのブラウザに共通のCapabilityについては、[オプション ページ]({{< ref "../drivers/options.md" >}})で説明しています。
+すべてのブラウザに共通する機能は [オプション ページ]({{< ref "../drivers/options.md" >}})に記載されています。
 
-Chrome に固有のCapabilityは、Google の[Capabilities & ChromeOptions](https://chromedriver.chromium.org/capabilities)ページにあります。
+ChromeおよびChromiumに特有の機能は、Googleの [Capabilities & ChromeOptions](https://chromedriver.chromium.org/capabilities)のページにドキュメントされています。
 
-基本的な定義済みオプションを使用してChromeセッションを開始すると、次のようになります。
+基本的に定義されたオプションでChromeセッションを開始する場合は、次のようになります：
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L37-L38" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L41-L42" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< gh-codeblock path="/examples/python/tests/browsers/test_chrome.py#L9-L10" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_chrome.py#L9-L11" >}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/ChromeTest.cs#L30-L31" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/ChromeTest.cs#L35-L36" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< gh-codeblock path="/examples/ruby/spec/browsers/chrome_spec.rb#L10-L11" >}}
@@ -41,28 +41,26 @@ Chrome に固有のCapabilityは、Google の[Capabilities & ChromeOptions](http
 {{< /tab >}}
 {{< /tabpane >}}
 
-さまざまなCapabilityを備えた一般的な使用例をいくつか示します。
 
 ### 引数
 
-The `args` parameter is for a list of command line switches to be used when starting the browser.
-There are two excellent resources for investigating these arguments:
-* [Chrome Flags for Tooling](https://github.com/GoogleChrome/chrome-launcher/blob/main/docs/chrome-flags-for-tools.md)
-* [List of Chromium Command Line Switches](https://peter.sh/experiments/chromium-command-line-switches/)
+`args` パラメータは、ブラウザを起動する際に使用するコマンドラインスイッチのリストです。これらの引数を調査するための優れたリソースが2つあります：
+* [Chromeツール用フラグ](https://github.com/GoogleChrome/chrome-launcher/blob/main/docs/chrome-flags-for-tools.md)
+* [Chromiumコマンドラインスイッチの一覧](https://peter.sh/experiments/chromium-command-line-switches/)
 
-Commonly used args include `--start-maximized`, `--headless=new` and `--user-data-dir=...`
+一般的に使用されるargsには以下が含まれます：`--start-maximized`, `--headless=new` and `--user-data-dir=...`
 
-Add an argument to options:
+オプションに引数を追加：
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L45" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L49" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< gh-codeblock path="/examples/python/tests/browsers/test_chrome.py#L18" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_chrome.py#L19" >}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/ChromeTest.cs#L39" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/ChromeTest.cs#L44" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< gh-codeblock path="/examples/ruby/spec/browsers/chrome_spec.rb#L17" >}}
@@ -84,16 +82,16 @@ Add an argument to options:
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L54" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L58" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< gh-codeblock path="/examples/python/tests/browsers/test_chrome.py#L29">}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_chrome.py#L30">}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/ChromeTest.cs#L49" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/ChromeTest.cs#L59" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="/examples/ruby/spec/browsers/chrome_spec.rb#L25" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/chrome_spec.rb#L29" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< gh-codeblock path="/examples/javascript/test/browser/chromeSpecificCaps.spec.js#L41-L44">}}
@@ -107,24 +105,22 @@ Add an argument to options:
 
 `extensions` パラメーターはcrxファイルを受け入れます
 
-The `extensions` parameter accepts crx files. As for unpacked directories,
-please use the `load-extension` argument instead, as mentioned in
-[this post](https://chromedriver.chromium.org/extensions).
+The `extensions` パラメータはcrxファイルを受け入れます。解凍されたディレクトリについては、代わりに `load-extension` 引数を使用してください。[この投稿](https://chromedriver.chromium.org/extensions)で述べたように。
 
 オプションに拡張機能を追加します。
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L65" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L66-L76" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< gh-codeblock path="/examples/python/tests/browsers/test_chrome.py#L40">}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_chrome.py#L41">}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/ChromeTest.cs#L61" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/ChromeTest.cs#L73-L84" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="/examples/ruby/spec/browsers/chrome_spec.rb#L34" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/chrome_spec.rb#L38" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< gh-codeblock path="/examples/javascript/test/browser/chromeSpecificCaps.spec.js#L62-L66">}}
@@ -140,16 +136,16 @@ please use the `load-extension` argument instead, as mentioned in
 
 {{< tabpane text=true >}}
 {{% tab header="Java" %}}
-**Note**: This is already the default behavior in Java.
+**注意**: これはすでにJavaのデフォルトの動作です。
 {{% /tab %}}
 {{% tab header="Python" %}}
-{{< gh-codeblock path="/examples/python/tests/browsers/test_chrome.py#L51" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_chrome.py#L52" >}}
 {{% /tab %}}
 {{% tab header="CSharp" %}}
-**Note**: This is already the default behavior in .NET.
+**注意**: これはすでに.NETのデフォルトの動作です。
 {{% /tab %}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="/examples/ruby/spec/browsers/chrome_spec.rb#L45" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/chrome_spec.rb#L47" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< gh-codeblock path="/examples/javascript/test/browser/chromeSpecificCaps.spec.js#L29-L32">}}
@@ -165,24 +161,23 @@ Chrome はさまざまな引数を追加します。
 これらの引数を追加したくない場合は、それらを `excludeSwitches` に渡します。 
 一般的な例は、ポップアップブロッカーをオンに設定することです。
 
-A full list of default arguments
-can be parsed from the
-[Chromium Source Code](https://source.chromium.org/chromium/chromium/src/+/main:chrome/test/chromedriver/chrome_launcher.cc)
+デフォルトの引数の完全なリストは、
+[Chromium Source Code](https://source.chromium.org/chromium/chromium/src/+/main:chrome/test/chromedriver/chrome_launcher.cc)から解析できます。
 
 オプションに除外された引数を設定します。
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L78" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L88" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< gh-codeblock path="/examples/python/tests/browsers/test_chrome.py#L62" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_chrome.py#L63" >}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Browsers/ChromeTest.cs#L76" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/ChromeTest.cs#L97" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="/examples/ruby/spec/browsers/chrome_spec.rb#L53" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/chrome_spec.rb#L55" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< gh-codeblock path="/examples/javascript/test/browser/chromeSpecificCaps.spec.js#L19-L22">}}
@@ -193,37 +188,35 @@ can be parsed from the
 {{< /tabpane >}}
 
 
-## Service
+## サービス
 
-Examples for creating a default Service object, and for setting driver location and port
-can be found on the [Driver Service]({{< ref "../drivers/service.md" >}}) page.
+デフォルトのServiceオブジェクトを作成するための例や、ドライバーの場所とポートを設定する方法は、[Driver Service]({{< ref "../drivers/service.md" >}})ページにあります。
 
-### Log output
+### ログ出力
 
-Getting driver logs can be helpful for debugging issues. The Service class lets you
-direct where the logs will go. Logging output is ignored unless the user directs it somewhere.
+ドライバーログを取得することは、問題のデバッグに役立ちます。Serviceクラスを使用すると、ログの出力先を指定できます。ユーザーがどこかにログを指示しない限り、ログ出力は無視されます。
 
-#### File output
+#### ファイル出力
 
-To change the logging output to save to a specific file:
+ログ出力を特定のファイルに保存するように変更するには：
 
 {{< tabpane text=true >}}
 {{% tab header="Java" %}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L100-L101" >}}
-**Note**: Java also allows setting file output by System Property:\
-Property key: `ChromeDriverService.CHROME_DRIVER_LOG_PROPERTY`\
-Property value: String representing path to log file
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L110-L111" >}}
+**注意**: Javaでは、システムプロパティによってファイル出力を設定することもできます：\
+プロパティキー: `ChromeDriverService.CHROME_DRIVER_LOG_PROPERTY`\
+プロパティ値: ログファイルへのパスを表す文字列
 {{% /tab %}}
 {{< tab header="Python" >}}
 {{< badge-version version="4.11" >}}
-{{< gh-codeblock path="examples/python/tests/browsers/test_chrome.py#L71" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_chrome.py#L72" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Browsers/ChromeTest.cs#L86" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/ChromeTest.cs#L107" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-version version="4.10" >}}
-{{< gh-codeblock path="examples/ruby/spec/browsers/chrome_spec.rb#L67" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/chrome_spec.rb#L69" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -233,29 +226,29 @@ Property value: String representing path to log file
 {{< /tab >}}
 {{< /tabpane >}}
 
-#### Console output
+#### コンソール出力
 
-To change the logging output to display in the console as STDOUT:
+ログ出力をコンソールにSTDOUTとして表示するように変更するには：
 
 {{< tabpane text=true >}}
 {{% tab header="Java" %}}
 {{< badge-version version="4.10" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L114-L115" >}}
-**Note**: Java also allows setting console output by System Property;\
-Property key: `ChromeDriverService.CHROME_DRIVER_LOG_PROPERTY`\
-Property value: `DriverService.LOG_STDOUT` or `DriverService.LOG_STDERR`
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L124-L125" >}}
+**注意**: Javaでは、システムプロパティによってコンソール出力を設定することもできます。\
+プロパティキー: `ChromeDriverService.CHROME_DRIVER_LOG_PROPERTY`\
+プロパティ値: `DriverService.LOG_STDOUT` または `DriverService.LOG_STDERR`
 {{% /tab %}}
 {{< tab header="Python" >}}
 {{< badge-version version="4.11" >}}
-{{< gh-codeblock path="examples/python/tests/browsers/test_chrome.py#L82" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_chrome.py#L83" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-implementation >}}
 {{< /tab >}}
 {{% tab header="Ruby" %}}
-`$stdout` and `$stderr` are both valid values
+`$stdout` と `$stderr` はどちらも有効な値です。
 {{< badge-version version="4.10" >}}
-{{< gh-codeblock path="examples/ruby/spec/browsers/chrome_spec.rb#L76" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/chrome_spec.rb#L78" >}}
 {{% /tab %}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -265,29 +258,27 @@ Property value: `DriverService.LOG_STDOUT` or `DriverService.LOG_STDERR`
 {{< /tab >}}
 {{< /tabpane >}}
 
-### Log level
-There are 6 available log levels: `ALL`, `DEBUG`, `INFO`, `WARNING`, `SEVERE`, and `OFF`.
-Note that `--verbose` is equivalent to `--log-level=ALL` and `--silent` is equivalent to `--log-level=OFF`,
-so this example is just setting the log level generically:
+### ログレベル
+利用可能なログレベルは6つあります：`ALL`, `DEBUG`, `INFO`, `WARNING`, `SEVERE`, そして `OFF`。`--verbose` は `--log-level=ALL` と同等であり、`--silent` は `--log-level=OFF`と同等であることに注意してください。このため、この例ではログレベルを一般的に設定しています：
 
 {{< tabpane text=true >}}
 {{% tab header="Java" %}}
 {{< badge-version version="4.8" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L129-L130" >}}
-**Note**: Java also allows setting log level by System Property:\
-Property key: `ChromeDriverService.CHROME_DRIVER_LOG_LEVEL_PROPERTY`\
-Property value: String representation of `ChromiumDriverLogLevel` enum
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L139-L140" >}}
+**注意**: Javaでは、システムプロパティによってログレベルを設定することもできます：\
+プロパティキー: `ChromeDriverService.CHROME_DRIVER_LOG_LEVEL_PROPERTY`\
+プロパティ値: `ChromiumDriverLogLevel` 列挙型の文字列表現
 {{% /tab %}}
 {{< tab header="Python" >}}
 {{< badge-version version="4.11" >}}
-{{< gh-codeblock path="examples/python/tests/browsers/test_chrome.py#L93" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_chrome.py#L94" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-implementation >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-version version="4.10" >}}
-{{< gh-codeblock path="examples/ruby/spec/browsers/chrome_spec.rb#L87" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/chrome_spec.rb#L89" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -297,31 +288,30 @@ Property value: String representation of `ChromiumDriverLogLevel` enum
 {{< /tab >}}
 {{< /tabpane >}}
 
-### Log file features
-There are 2 features that are only available when logging to a file:
-* append log
-* readable timestamps
+### ログファイル機能
+ファイルにログを記録する際にのみ利用できる2つの機能があります：
+* ログの追加
+* 読みやすいタイムスタンプ
 
-To use them, you need to also explicitly specify the log path and log level.
-The log output will be managed by the driver, not the process, so minor differences may be seen.
+これらを使用するには、ログパスとログレベルも明示的に指定する必要があります。ログ出力はプロセスではなくドライバーによって管理されるため、若干の違いが見られる場合があります。
 
 {{< tabpane text=true >}}
 {{% tab header="Java" %}}
 {{< badge-version version="4.8" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L147-L148" >}}
-**Note**: Java also allows toggling these features by System Property:\
-Property keys: `ChromeDriverService.CHROME_DRIVER_APPEND_LOG_PROPERTY` and `ChromeDriverService.CHROME_DRIVER_READABLE_TIMESTAMP`\
-Property value: `"true"` or `"false"`
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L157-L158" >}}
+**注意**: Javaでは、これらの機能をシステムプロパティによって切り替えることもできます：\
+プロパティキー: `ChromeDriverService.CHROME_DRIVER_APPEND_LOG_PROPERTY` および`ChromeDriverService.CHROME_DRIVER_READABLE_TIMESTAMP`\
+プロパティ値: `"true"` または `"false"`
 {{% /tab %}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/browsers/test_chrome.py#L104" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_chrome.py#L105" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-implementation >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-version version="4.8" >}}
-{{< gh-codeblock path="examples/ruby/spec/browsers/chrome_spec.rb#L97-L98" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/chrome_spec.rb#L99-L100" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -331,30 +321,28 @@ Property value: `"true"` or `"false"`
 {{< /tab >}}
 {{< /tabpane >}}
 
-### Disabling build check
+### ビルドチェックの無効化
 
-Chromedriver and Chrome browser versions should match, and if they don't the driver will error.
-If you disable the build check, you can force the driver to be used with any version of Chrome.
-Note that this is an unsupported feature, and bugs will not be investigated.
+ChromedriverとChromeブラウザのバージョンは一致する必要があり、一致しない場合、ドライバーはエラーを返します。ビルドチェックを無効にすると、任意のバージョンのChromeでドライバーを強制的に使用できます。ただし、これはサポートされていない機能であり、バグは調査されません。
 
 {{< tabpane text=true >}}
 {{% tab header="Java" %}}
 {{< badge-version version="4.8" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L166-L167" >}}
-**Note**: Java also allows disabling build checks by System Property:\
-Property key: `ChromeDriverService.CHROME_DRIVER_DISABLE_BUILD_CHECK`\
-Property value: `"true"` or `"false"`
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L176-L177" >}}
+**注意**: Javaでは、システムプロパティによってビルドチェックを無効にすることもできます：\
+プロパティキー: `ChromeDriverService.CHROME_DRIVER_DISABLE_BUILD_CHECK`\
+プロパティ値: `"true"` または `"false"`
 {{% /tab %}}
 {{< tab header="Python" >}}
 {{< badge-version version="4.11" >}}
-{{< gh-codeblock path="examples/python/tests/browsers/test_chrome.py#L115" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_chrome.py#L116" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Browsers/ChromeTest.cs#L155" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/ChromeTest.cs#L155" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-version version="4.8" >}}
-{{< gh-codeblock path="examples/ruby/spec/browsers/chrome_spec.rb#L108" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/chrome_spec.rb#L110" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -365,24 +353,26 @@ Property value: `"true"` or `"false"`
 {{< /tabpane >}}
 
 
-## Special Features
+## 特別な機能
+
+一部のブラウザは、それぞれに特有の追加機能を実装しています。
 
 ### キャスティング
 
-タブの共有など、Chrome Castデバイスを操作できます。
+Chrome Castデバイスを操作することができ、タブの共有も含まれます。
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L240-L245" >}}
 {{< /tab >}}
-{{% tab header="Python" %}}
-{{< badge-code >}}
-{{% /tab %}}
+{{< tab header="Python" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_chrome.py#L171-L175" >}}
+{{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="/examples/ruby/spec/browsers/chrome_spec.rb#L119-L124" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/chrome_spec.rb#L121-L125" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -396,22 +386,20 @@ Property value: `"true"` or `"false"`
 
 さまざまなネットワークの状態をシミュレートできます。
 
-The following examples are for local webdrivers. For remote webdrivers,
-please refer to the
-[Remote WebDriver]({{< ref "../drivers/remote_webdriver" >}}) page.
+以下の例はローカルWebDriver用です。リモートWebDriverについては、[リモートWebDriver]({{< ref "../drivers/remote_webdriver" >}})ページを参照してください。
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L214-L220" >}}
 {{< /tab >}}
-{{% tab header="Python" %}}
-{{< badge-code >}}
-{{% /tab %}}
+{{< tab header="Python" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_chrome.py#L130-L136" >}}
+{{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="/examples/ruby/spec/browsers/chrome_spec.rb#L129" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/chrome_spec.rb#L131" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -425,16 +413,16 @@ please refer to the
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L257" >}}
 {{< /tab >}}
-{{% tab header="Python" %}}
-{{< badge-code >}}
-{{% /tab %}}
+{{< tab header="Python" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_chrome.py#L187" >}}
+{{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="/examples/ruby/spec/browsers/chrome_spec.rb#L141" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/chrome_spec.rb#L144" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -448,16 +436,16 @@ please refer to the
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L199" >}}
 {{< /tab >}}
-{{% tab header="Python" %}}
-{{< badge-code >}}
-{{% /tab %}}
+{{< tab header="Python" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_chrome.py#L150" >}}
+{{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="/examples/ruby/spec/browsers/chrome_spec.rb#L149-L150" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/chrome_spec.rb#L152-L153" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -469,4 +457,4 @@ please refer to the
 
 ### デベロッパー ツール
 
-Chromeデベロッパーツールの使用に関する詳細については、[Chromeデベロッパー ツール]({{< ref "../bidirectional/chrome_devtools/cdp_api.md" >}})セクションを参照してください。
+Chromeデベロッパーツールの使用に関する詳細については、[Chromeデベロッパー ツール]({{< ref "../bidi/cdp/" >}}) セクションを参照してください。

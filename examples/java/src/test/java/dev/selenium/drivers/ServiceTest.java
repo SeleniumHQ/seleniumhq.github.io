@@ -9,6 +9,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.service.DriverFinder;
 
 public class ServiceTest extends BaseTest {
+  
   @Test
   public void defaultService() {
     ChromeDriverService service = new ChromeDriverService.Builder().build();
@@ -18,7 +19,7 @@ public class ServiceTest extends BaseTest {
   @Test
   public void setDriverLocation() {
     setBinaryPaths();
-    ChromeOptions options = new ChromeOptions();
+    ChromeOptions options = getDefaultChromeOptions();
     options.setBinary(browserPath);
 
     ChromeDriverService service =
@@ -35,7 +36,7 @@ public class ServiceTest extends BaseTest {
   }
 
   private void setBinaryPaths() {
-    ChromeOptions options = new ChromeOptions();
+    ChromeOptions options = getDefaultChromeOptions();
     options.setBrowserVersion("stable");
     DriverFinder finder = new DriverFinder(ChromeDriverService.createDefaultService(), options);
     driverPath = new File(finder.getDriverPath());

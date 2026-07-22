@@ -45,7 +45,7 @@ https://selenium.dev/support.
 
 ### Creating Examples
 
-Examples that need to be moved are marked with: {{% badge-code %}}
+Examples that need to be added are marked with: {{% badge-code %}}
 
 We want to be able to run all of our code examples in the CI to ensure that people can copy and paste and
 execute everything on the site. So we put the code where it belongs in the
@@ -74,6 +74,9 @@ If a user wants more context, they can click the link to the GitHub page that wi
 Make sure that if you add a test to the page that all the other line numbers in the markdown file are still
 correct. Adding a test at the top of a page means updating every single reference in the documentation that has a line
 number for that file.
+
+Code examples may need a relevant website or web page to demonstrate the scenario. To ensure examples consistently work,
+it is recommended to use the test web pages available at https://www.selenium.dev/selenium/web/.
 
 Finally, make sure that the tests pass in the CI.
 
@@ -113,7 +116,7 @@ Selenium项目欢迎新的贡献者.
 我们使用 [Hugo](https://gohugo.io/) 和 [Docsy theme](https://www.docsy.dev/)
 用于构建和渲染本网站. 
 你需要Hugo“extended”扩展的Sass/SCSS版本用于这个网站.
-我们推荐使用0.110.0或更高版本的Hugo.
+我们推荐使用Hugo 0.148.2 .
 
 请参考来自Docsy的说明
 [安装Hugo](https://www.docsy.dev/docs/getting-started/#install-hugo) .

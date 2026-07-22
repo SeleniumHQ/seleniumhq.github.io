@@ -1,9 +1,9 @@
 ---
-title: "Chrome specific functionality"
+title: "Chrome 特定功能"
 linkTitle: "Chrome"
 weight: 4
 description: >-
-    These are capabilities and features specific to Google Chrome browsers.
+    特定于 Google Chrome 浏览器的功能和特性.
 aliases: [
 "/zh-cn/documentation/capabilities/chromium"
 ]
@@ -21,13 +21,13 @@ Chrome浏览器的特有功能可以在谷歌的页面找到: [Capabilities & Ch
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L37-L38" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L41-L42" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< gh-codeblock path="/examples/python/tests/browsers/test_chrome.py#L9-L10" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_chrome.py#L9-L11" >}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/ChromeTest.cs#L30-L31" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/ChromeTest.cs#L35-L36" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< gh-codeblock path="/examples/ruby/spec/browsers/chrome_spec.rb#L10-L11" >}}
@@ -44,24 +44,24 @@ Chrome浏览器的特有功能可以在谷歌的页面找到: [Capabilities & Ch
 
 ### 参数
 
-The `args` parameter is for a list of command line switches to be used when starting the browser.
-There are two excellent resources for investigating these arguments:
+`args` 参数用于启动浏览器时要使用的命令行开关列表.
+有两个很好的资源可以用于研究这些参数:
 * [Chrome Flags for Tooling](https://github.com/GoogleChrome/chrome-launcher/blob/main/docs/chrome-flags-for-tools.md)
 * [List of Chromium Command Line Switches](https://peter.sh/experiments/chromium-command-line-switches/)
 
-Commonly used args include `--start-maximized`, `--headless=new` and `--user-data-dir=...`
+常用的参数包括 `--start-maximized`, `--headless=new` 以及 `--user-data-dir=...`
 
-Add an argument to options:
+向选项添加参数:
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L45" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L49" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< gh-codeblock path="/examples/python/tests/browsers/test_chrome.py#L18" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_chrome.py#L19" >}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/ChromeTest.cs#L39" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/ChromeTest.cs#L44" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< gh-codeblock path="/examples/ruby/spec/browsers/chrome_spec.rb#L17" >}}
@@ -82,16 +82,16 @@ Add an argument to options:
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L54" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L58" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< gh-codeblock path="/examples/python/tests/browsers/test_chrome.py#L29">}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_chrome.py#L30">}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/ChromeTest.cs#L49" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/ChromeTest.cs#L59" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="/examples/ruby/spec/browsers/chrome_spec.rb#L25" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/chrome_spec.rb#L29" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< gh-codeblock path="/examples/javascript/test/browser/chromeSpecificCaps.spec.js#L41-L44">}}
@@ -103,24 +103,24 @@ Add an argument to options:
 
 ### 添加扩展程序
 
-`extensions` 参数接受crx文件. As for unpacked directories,
-please use the `load-extension` argument instead, as mentioned in
-[this post](https://chromedriver.chromium.org/extensions).
+`extensions` 参数接受crx文件. 至于解压的目录,
+请使用 `load-extension` 参数代替,
+正如 [这篇文章](https://chromedriver.chromium.org/extensions) 所示.
 
 添加一个扩展程序到选项中:
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L65" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L66-L76" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< gh-codeblock path="/examples/python/tests/browsers/test_chrome.py#L40">}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_chrome.py#L41">}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/ChromeTest.cs#L61" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/ChromeTest.cs#L73-L84" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="/examples/ruby/spec/browsers/chrome_spec.rb#L34" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/chrome_spec.rb#L38" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< gh-codeblock path="/examples/javascript/test/browser/chromeSpecificCaps.spec.js#L62-L66">}}
@@ -141,13 +141,13 @@ please use the `load-extension` argument instead, as mentioned in
 **Note**: This is already the default behavior in Java.
 {{% /tab %}}
 {{% tab header="Python" %}}
-{{< gh-codeblock path="/examples/python/tests/browsers/test_chrome.py#L51" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_chrome.py#L52" >}}
 {{% /tab %}}
 {{% tab header="CSharp" %}}
 **Note**: This is already the default behavior in .NET.
 {{% /tab %}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="/examples/ruby/spec/browsers/chrome_spec.rb#L45" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/chrome_spec.rb#L47" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< gh-codeblock path="/examples/javascript/test/browser/chromeSpecificCaps.spec.js#L29-L32">}}
@@ -161,24 +161,23 @@ please use the `load-extension` argument instead, as mentioned in
 
 Chrome 添加了各种参数，如果你不希望添加某些参数，可以将其传入 `excludeSwitches`.
 一个常见的例子是重新打开弹出窗口阻止程序.
-A full list of default arguments
-can be parsed from the
-[Chromium Source Code](https://source.chromium.org/chromium/chromium/src/+/main:chrome/test/chromedriver/chrome_launcher.cc)
+默认参数的完整列表可以参考
+[Chromium 源码](https://source.chromium.org/chromium/chromium/src/+/main:chrome/test/chromedriver/chrome_launcher.cc)
 
 设置排除参数至选项中:
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L78" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L88" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< gh-codeblock path="/examples/python/tests/browsers/test_chrome.py#L62" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_chrome.py#L63" >}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Browsers/ChromeTest.cs#L76" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/ChromeTest.cs#L97" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="/examples/ruby/spec/browsers/chrome_spec.rb#L53" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/chrome_spec.rb#L55" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< gh-codeblock path="/examples/javascript/test/browser/chromeSpecificCaps.spec.js#L19-L22">}}
@@ -189,37 +188,39 @@ can be parsed from the
 {{< /tabpane >}}
 
 
-## Service
+## 服务
 
-Examples for creating a default Service object, and for setting driver location and port
-can be found on the [Driver Service]({{< ref "../drivers/service.md" >}}) page.
+创建默认 Service 对象的示例,
+以及用于设置驱动程序位置和端口
+可以参考 [驱动服务]({{< ref "../drivers/service.md" >}}) 页面.
 
-### Log output
+### 日志输出
 
-Getting driver logs can be helpful for debugging issues. The Service class lets you
-direct where the logs will go. Logging output is ignored unless the user directs it somewhere.
+获取驱动程序日志有助于调试问题.
+使用 Service 类, 可以指明日志的路径.
+除非用户将其定向到某个位置, 否则将忽略日志记录输出.
 
-#### File output
+#### 文件输出
 
-To change the logging output to save to a specific file:
+更改日志记录输出以保存到特定文件:
 
 {{< tabpane text=true >}}
 {{% tab header="Java" %}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L100-L101" >}}
-**Note**: Java also allows setting file output by System Property:\
-Property key: `ChromeDriverService.CHROME_DRIVER_LOG_PROPERTY`\
-Property value: String representing path to log file
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L110-L111" >}}
+**注意**: Java 还允许通过系统属性设置文件输出:\
+属性键: `ChromeDriverService.CHROME_DRIVER_LOG_PROPERTY`\
+属性值: 表示日志文件路径的字符串
 {{% /tab %}}
 {{< tab header="Python" >}}
 {{< badge-version version="4.11" >}}
-{{< gh-codeblock path="examples/python/tests/browsers/test_chrome.py#L71" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_chrome.py#L72" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Browsers/ChromeTest.cs#L86" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/ChromeTest.cs#L107" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-version version="4.10" >}}
-{{< gh-codeblock path="examples/ruby/spec/browsers/chrome_spec.rb#L67" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/chrome_spec.rb#L69" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -229,21 +230,21 @@ Property value: String representing path to log file
 {{< /tab >}}
 {{< /tabpane >}}
 
-#### Console output
+#### 命令行输出
 
-To change the logging output to display in the console as STDOUT:
+更改日志记录输出以在控制台中显示为标准输出:
 
 {{< tabpane text=true >}}
 {{% tab header="Java" %}}
 {{< badge-version version="4.10" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L114-L115" >}}
-**Note**: Java also allows setting console output by System Property;\
-Property key: `ChromeDriverService.CHROME_DRIVER_LOG_PROPERTY`\
-Property value: `DriverService.LOG_STDOUT` or `DriverService.LOG_STDERR`
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L124-L125" >}}
+**注意**: Java 还允许通过系统属性设置控制台输出;\
+属性键: `ChromeDriverService.CHROME_DRIVER_LOG_PROPERTY`\
+属性值: `DriverService.LOG_STDOUT` 或 `DriverService.LOG_STDERR`
 {{% /tab %}}
 {{< tab header="Python" >}}
 {{< badge-version version="4.11" >}}
-{{< gh-codeblock path="examples/python/tests/browsers/test_chrome.py#L82" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_chrome.py#L83" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-implementation >}}
@@ -251,7 +252,7 @@ Property value: `DriverService.LOG_STDOUT` or `DriverService.LOG_STDERR`
 {{% tab header="Ruby" %}}
 `$stdout` and `$stderr` are both valid values
 {{< badge-version version="4.10" >}}
-{{< gh-codeblock path="examples/ruby/spec/browsers/chrome_spec.rb#L76" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/chrome_spec.rb#L78" >}}
 {{% /tab %}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -261,29 +262,29 @@ Property value: `DriverService.LOG_STDOUT` or `DriverService.LOG_STDERR`
 {{< /tab >}}
 {{< /tabpane >}}
 
-### Log level
-There are 6 available log levels: `ALL`, `DEBUG`, `INFO`, `WARNING`, `SEVERE`, and `OFF`.
-Note that `--verbose` is equivalent to `--log-level=ALL` and `--silent` is equivalent to `--log-level=OFF`,
-so this example is just setting the log level generically:
+### 日志级别
+共有六种日志级别: `ALL`, `DEBUG`, `INFO`, `WARNING`, `SEVERE`, 以及 `OFF`.
+注意 `--verbose` 等效于 `--log-level=ALL` 以及 `--silent` 等效于 `--log-level=OFF`,
+因此, 此示例只是通用地设置日志级别:
 
 {{< tabpane text=true >}}
 {{% tab header="Java" %}}
 {{< badge-version version="4.8" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L129-L130" >}}
-**Note**: Java also allows setting log level by System Property:\
-Property key: `ChromeDriverService.CHROME_DRIVER_LOG_LEVEL_PROPERTY`\
-Property value: String representation of `ChromiumDriverLogLevel` enum
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L139-L140" >}}
+**注意**: Java 还允许通过系统属性设置日志级别:\
+属性键: `ChromeDriverService.CHROME_DRIVER_LOG_LEVEL_PROPERTY`\
+属性值: `ChromiumDriverLogLevel` 枚举的字面值
 {{% /tab %}}
 {{< tab header="Python" >}}
 {{< badge-version version="4.11" >}}
-{{< gh-codeblock path="examples/python/tests/browsers/test_chrome.py#L93" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_chrome.py#L94" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-implementation >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-version version="4.10" >}}
-{{< gh-codeblock path="examples/ruby/spec/browsers/chrome_spec.rb#L87" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/chrome_spec.rb#L89" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -293,31 +294,32 @@ Property value: String representation of `ChromiumDriverLogLevel` enum
 {{< /tab >}}
 {{< /tabpane >}}
 
-### Log file features
-There are 2 features that are only available when logging to a file:
-* append log
-* readable timestamps
+### 日志文件功能
+有 2 个功能仅在写入文件时可用:
+* 追加日志
+* 可读时间戳
 
-To use them, you need to also explicitly specify the log path and log level.
-The log output will be managed by the driver, not the process, so minor differences may be seen.
+要使用它们, 您还需要显式指定日志路径和日志级别.
+日志输出将由驱动程序管理,
+而不是由进程管理, 因此可能会看到细微的差异.
 
 {{< tabpane text=true >}}
 {{% tab header="Java" %}}
 {{< badge-version version="4.8" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L147-L148" >}}
-**Note**: Java also allows toggling these features by System Property:\
-Property keys: `ChromeDriverService.CHROME_DRIVER_APPEND_LOG_PROPERTY` and `ChromeDriverService.CHROME_DRIVER_READABLE_TIMESTAMP`\
-Property value: `"true"` or `"false"`
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L157-L158" >}}
+**注意**: Java 还允许通过系统属性切换这些功能:\
+属性键: `ChromeDriverService.CHROME_DRIVER_APPEND_LOG_PROPERTY` 以及 `ChromeDriverService.CHROME_DRIVER_READABLE_TIMESTAMP`\
+属性值: `"true"` 或 `"false"`
 {{% /tab %}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="examples/python/tests/browsers/test_chrome.py#L104" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_chrome.py#L105" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-implementation >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-version version="4.8" >}}
-{{< gh-codeblock path="examples/ruby/spec/browsers/chrome_spec.rb#L97-L98" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/chrome_spec.rb#L99-L100" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -327,30 +329,30 @@ Property value: `"true"` or `"false"`
 {{< /tab >}}
 {{< /tabpane >}}
 
-### Disabling build check
+### 禁用构建检查
 
-Chromedriver and Chrome browser versions should match, and if they don't the driver will error.
-If you disable the build check, you can force the driver to be used with any version of Chrome.
-Note that this is an unsupported feature, and bugs will not be investigated.
+Chromedriver 和 Chrome 浏览器版本应该匹配, 如果它们不匹配, 驱动程序将出错.
+如果您停用构建检查功能, 则可以强制将驱动程序与任何版本的 Chrome 一起使用.
+请注意, 这是一项不受支持的功能, 并且不会调查 bug.
 
 {{< tabpane text=true >}}
 {{% tab header="Java" %}}
 {{< badge-version version="4.8" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L166-L167" >}}
-**Note**: Java also allows disabling build checks by System Property:\
-Property key: `ChromeDriverService.CHROME_DRIVER_DISABLE_BUILD_CHECK`\
-Property value: `"true"` or `"false"`
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L176-L177" >}}
+**注意**: Java 还允许通过系统属性禁用构建检查:\
+属性键: `ChromeDriverService.CHROME_DRIVER_DISABLE_BUILD_CHECK`\
+属性值: `"true"` 或 `"false"`
 {{% /tab %}}
 {{< tab header="Python" >}}
 {{< badge-version version="4.11" >}}
-{{< gh-codeblock path="examples/python/tests/browsers/test_chrome.py#L115" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_chrome.py#L116" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Browsers/ChromeTest.cs#L155" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Browsers/ChromeTest.cs#L155" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< badge-version version="4.8" >}}
-{{< gh-codeblock path="examples/ruby/spec/browsers/chrome_spec.rb#L108" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/chrome_spec.rb#L110" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -361,7 +363,7 @@ Property value: `"true"` or `"false"`
 {{< /tabpane >}}
 
 
-## Special Features
+## 特殊功能
 
 ### Casting
 
@@ -369,16 +371,15 @@ Property value: `"true"` or `"false"`
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L240-L245" >}}
 {{< /tab >}}
-{{% tab header="Python" %}}
-{{< badge-code >}}
-{{% /tab %}}
-{{< tab header="CSharp" >}}
+{{< tab header="Python" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_chrome.py#L171-L175" >}}
+{{< /tab >}}{{< tab header="CSharp" >}}
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="/examples/ruby/spec/browsers/chrome_spec.rb#L119-L124" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/chrome_spec.rb#L121-L125" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -392,22 +393,22 @@ Property value: `"true"` or `"false"`
 
 您可以模拟各种网络条件.
 
-The following examples are for local webdrivers. For remote webdrivers,
-please refer to the
-[Remote WebDriver]({{< ref "../drivers/remote_webdriver" >}}) page.
+以下示例适用于本地 webdrivers. 针对远程 webdrivers,
+请参考
+[Remote WebDriver]({{< ref "../drivers/remote_webdriver" >}}) 页面.
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L214-L220" >}}
 {{< /tab >}}
-{{% tab header="Python" %}}
-{{< badge-code >}}
-{{% /tab %}}
+{{< tab header="Python" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_chrome.py#L130-L136" >}}
+{{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="/examples/ruby/spec/browsers/chrome_spec.rb#L129" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/chrome_spec.rb#L131" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -417,20 +418,20 @@ please refer to the
 {{< /tab >}}
 {{< /tabpane >}}
 
-### Logs
+### 日志
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L257" >}}
 {{< /tab >}}
-{{% tab header="Python" %}}
-{{< badge-code >}}
-{{% /tab %}}
+{{< tab header="Python" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_chrome.py#L187" >}}
+{{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="/examples/ruby/spec/browsers/chrome_spec.rb#L141" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/chrome_spec.rb#L144" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -440,20 +441,20 @@ please refer to the
 {{< /tab >}}
 {{< /tabpane >}}
 
-### Permissions
+### 权限
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java#L199" >}}
 {{< /tab >}}
-{{% tab header="Python" %}}
-{{< badge-code >}}
-{{% /tab %}}
+{{< tab header="Python" >}}
+{{< gh-codeblock path="/examples/python/tests/browsers/test_chrome.py#L150" >}}
+{{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="/examples/ruby/spec/browsers/chrome_spec.rb#L149-L150" >}}
+{{< gh-codeblock path="/examples/ruby/spec/browsers/chrome_spec.rb#L152-L153" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< badge-code >}}
@@ -465,4 +466,4 @@ please refer to the
 
 ### DevTools
 
-See the [Chrome DevTools]({{< ref "../bidirectional/chrome_devtools/cdp_api.md" >}}) section for more information about using Chrome DevTools
+详见 [Chrome DevTools]({{< ref "../bidi/cdp/" >}})  部分以获取有关使用Chrome DevTools的更多信息

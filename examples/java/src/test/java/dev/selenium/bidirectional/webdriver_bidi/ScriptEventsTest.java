@@ -30,7 +30,7 @@ class ScriptEventsTest extends BaseTest {
         options.setCapability("webSocketUrl", true);
         driver = new FirefoxDriver(options);
     }
-
+    
     @Test
     void canListenToChannelMessage()
             throws ExecutionException, InterruptedException, TimeoutException {

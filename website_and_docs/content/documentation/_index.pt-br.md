@@ -24,7 +24,7 @@ para promover uma discussão aberta sobre a automação da plataforma da web.
 O projeto organiza [uma conferência anual](//seleniumconf.com/)
 para ensinar e nutrir a comunidade.
 
-No núcleo do Selenium está [WebDriver]({{< ref "/webdriver.md" >}}),
+No núcleo do Selenium está [WebDriver]({{< ref "webdriver.md" >}}),
 uma interface para escrever conjuntos de instruções que podem ser executados alternadamente em muitos
 navegadores. Aqui está uma das instruções mais simples que você pode fazer:
 
@@ -40,7 +40,7 @@ navegadores. Aqui está uma das instruções mais simples que você pode fazer:
 {{< gh-codeblock path="/examples/dotnet/HelloSelenium.cs" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="/examples/ruby/spec/hello/hello_selenium_spec.rb" >}}
+{{< gh-codeblock path="/examples/ruby/spec/hello/hello_selenium.rb" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< gh-codeblock path="/examples/javascript/test/hello/helloSelenium.js" >}}

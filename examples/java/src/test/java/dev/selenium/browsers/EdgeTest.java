@@ -8,6 +8,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.List;
+import java.util.Map;
 import java.util.logging.Level;
 import java.util.regex.Pattern;
 import org.junit.jupiter.api.AfterEach;
@@ -16,13 +17,16 @@ import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chromium.ChromiumDriverLogLevel;
+import org.openqa.selenium.chromium.ChromiumNetworkConditions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeDriverService;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.logging.LogEntries;
+import org.openqa.selenium.logging.LogEntry;
 import org.openqa.selenium.logging.LogType;
 import org.openqa.selenium.logging.LoggingPreferences;
 import org.openqa.selenium.remote.service.DriverFinder;
+
 
 
 public class EdgeTest extends BaseTest {
@@ -34,13 +38,13 @@ public class EdgeTest extends BaseTest {
 
   @Test
   public void basicOptions() {
-    EdgeOptions options = new EdgeOptions();
+    EdgeOptions options = getDefaultEdgeOptions();
     driver = new EdgeDriver(options);
   }
 
   @Test
   public void arguments() {
-    EdgeOptions options = new EdgeOptions();
+    EdgeOptions options = getDefaultEdgeOptions();
 
     options.addArguments("--start-maximized");
 
@@ -49,7 +53,7 @@ public class EdgeTest extends BaseTest {
 
   @Test
   public void setBrowserLocation() {
-    EdgeOptions options = new EdgeOptions();
+    EdgeOptions options = getDefaultEdgeOptions();
 
     options.setBinary(getEdgeLocation());
 
@@ -58,7 +62,7 @@ public class EdgeTest extends BaseTest {
 
   @Test
   public void extensionOptions() {
-    EdgeOptions options = new EdgeOptions();
+    EdgeOptions options = getDefaultEdgeOptions();
     Path path = Paths.get("src/test/resources/extensions/webextensions-selenium-example.crx");
     File extensionFilePath = new File(path.toUri());
 
@@ -73,7 +77,7 @@ public class EdgeTest extends BaseTest {
 
   @Test
   public void excludeSwitches() {
-    EdgeOptions options = new EdgeOptions();
+    EdgeOptions options = getDefaultEdgeOptions();
 
     options.setExperimentalOption("excludeSwitches", List.of("disable-popup-blocking"));
 
@@ -82,7 +86,7 @@ public class EdgeTest extends BaseTest {
 
   @Test
   public void loggingPreferences() {
-    EdgeOptions options = new EdgeOptions();
+    EdgeOptions options = getDefaultEdgeOptions();
     LoggingPreferences logPrefs = new LoggingPreferences();
     logPrefs.enable(LogType.PERFORMANCE, Level.ALL);
     options.setCapability(EdgeOptions.LOGGING_PREFS, logPrefs);
@@ -99,7 +103,7 @@ public class EdgeTest extends BaseTest {
     File logLocation = getTempFile("logsToFile", ".log");
     EdgeDriverService service = new EdgeDriverService.Builder().withLogFile(logLocation).build();
 
-    driver = new EdgeDriver(service);
+    driver = new EdgeDriver(service, getDefaultEdgeOptions());
 
     String fileContent = new String(Files.readAllBytes(logLocation.toPath()));
     Assertions.assertTrue(fileContent.contains("Starting Microsoft Edge WebDriver"));
@@ -112,10 +116,10 @@ public class EdgeTest extends BaseTest {
 
     EdgeDriverService service = new EdgeDriverService.Builder().withLogOutput(System.out).build();
 
-    driver = new EdgeDriver(service);
+    driver = new EdgeDriver(service, getDefaultEdgeOptions());
 
     String fileContent = new String(Files.readAllBytes(logLocation.toPath()));
-    Assertions.assertTrue(fileContent.contains("Starting Microsoft Edge WebDriver"));
+    Assertions.assertTrue(fileContent.contains("Starting msedgedriver"));
   }
 
   @Test
@@ -126,7 +130,7 @@ public class EdgeTest extends BaseTest {
     EdgeDriverService service =
         new EdgeDriverService.Builder().withLoglevel(ChromiumDriverLogLevel.DEBUG).build();
 
-    driver = new EdgeDriver(service);
+    driver = new EdgeDriver(service, getDefaultEdgeOptions());
 
     String fileContent = new String(Files.readAllBytes(logLocation.toPath()));
     Assertions.assertTrue(fileContent.contains("[DEBUG]:"));
@@ -142,7 +146,7 @@ public class EdgeTest extends BaseTest {
     EdgeDriverService service =
         new EdgeDriverService.Builder().withAppendLog(true).withReadableTimestamp(true).build();
 
-    driver = new EdgeDriver(service);
+    driver = new EdgeDriver(service, getDefaultEdgeOptions());
 
     String fileContent = new String(Files.readAllBytes(logLocation.toPath()));
     Pattern pattern = Pattern.compile("\\[\\d\\d-\\d\\d-\\d\\d\\d\\d", Pattern.CASE_INSENSITIVE);
@@ -160,7 +164,7 @@ public class EdgeTest extends BaseTest {
     EdgeDriverService service =
         new EdgeDriverService.Builder().withBuildCheckDisabled(true).build();
 
-    driver = new EdgeDriver(service);
+    driver = new EdgeDriver(service, getDefaultEdgeOptions());
 
     String fileContent = new String(Files.readAllBytes(logLocation.toPath()));
     String expected =
@@ -169,9 +173,86 @@ public class EdgeTest extends BaseTest {
   }
 
   private File getEdgeLocation() {
-    EdgeOptions options = new EdgeOptions();
+    EdgeOptions options = getDefaultEdgeOptions();
     options.setBrowserVersion("stable");
     DriverFinder finder = new DriverFinder(EdgeDriverService.createDefaultService(), options);
     return new File(finder.getBrowserPath());
+  }
+
+  @Test
+  public void setPermissions() {
+    EdgeDriver driver = new EdgeDriver(getDefaultEdgeOptions());
+    driver.get("https://www.selenium.dev");
+
+    driver.setPermission("camera", "denied");
+
+    // Verify the permission state is 'denied'
+    String script = "return navigator.permissions.query({ name: 'camera' })" +
+            "    .then(permissionStatus => permissionStatus.state);";
+    String permissionState = (String) driver.executeScript(script);
+
+    Assertions.assertEquals("denied", permissionState);
+    driver.quit();
+  }
+
+  @Test
+  public void setNetworkConditions() {
+    driver = new EdgeDriver(getDefaultEdgeOptions());
+
+    ChromiumNetworkConditions networkConditions = new ChromiumNetworkConditions();
+    networkConditions.setOffline(false);
+    networkConditions.setLatency(java.time.Duration.ofMillis(20)); // 20 ms of latency
+    networkConditions.setDownloadThroughput(2000 * 1024 / 8); // 2000 kbps
+    networkConditions.setUploadThroughput(2000 * 1024 / 8);   // 2000 kbps
+
+    ((EdgeDriver) driver).setNetworkConditions(networkConditions);
+
+    driver.get("https://www.selenium.dev");
+
+    // Assert the network conditions are set as expected
+    ChromiumNetworkConditions actualConditions = ((EdgeDriver) driver).getNetworkConditions();
+    Assertions.assertAll(
+            () -> Assertions.assertEquals(networkConditions.getOffline(), actualConditions.getOffline()),
+            () -> Assertions.assertEquals(networkConditions.getLatency(), actualConditions.getLatency()),
+            () -> Assertions.assertEquals(networkConditions.getDownloadThroughput(), actualConditions.getDownloadThroughput()),
+            () -> Assertions.assertEquals(networkConditions.getUploadThroughput(), actualConditions.getUploadThroughput())
+    );
+    ((EdgeDriver) driver).deleteNetworkConditions();
+  }
+
+  @Test
+  public void castFeatures() {
+    EdgeDriver driver = new EdgeDriver(getDefaultEdgeOptions());
+
+    List<Map<String, String>> sinks = driver.getCastSinks();
+    if (!sinks.isEmpty()) {
+      String sinkName = sinks.get(0).get("name");
+      driver.startTabMirroring(sinkName);
+      driver.stopCasting(sinkName);
+    }
+
+    driver.quit();
+  }
+
+  @Test
+  public void getBrowserLogs() {
+    EdgeDriver driver = new EdgeDriver(getDefaultEdgeOptions());
+    driver.get("https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html");
+    WebElement consoleLogButton = driver.findElement(By.id("consoleError"));
+    consoleLogButton.click();
+
+    LogEntries logs = driver.manage().logs().get(LogType.BROWSER);
+
+    // Assert that at least one log contains the expected message
+    boolean logFound = false;
+    for (LogEntry log : logs) {
+      if (log.getMessage().contains("I am console error")) {
+        logFound = true;
+        break;
+      }
+    }
+
+    Assertions.assertTrue(logFound, "No matching log message found.");
+    driver.quit();
   }
 }

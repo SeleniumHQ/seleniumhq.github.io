@@ -15,6 +15,10 @@ on:
     paths:
       - 'examples/javascript/**'
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 env:
   DISPLAY: :99
   GITHUB_TOKEN: ${{ secrets.SELENIUM_CI_TOKEN }}
@@ -25,46 +29,12 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ ubuntu, windows, macos ]
+        os: ${{ (github.event_name == 'schedule' || github.event_name == 'workflow_dispatch') && fromJSON('["ubuntu", "windows", "macos"]') || fromJSON('["ubuntu", "windows"]') }}
         release: [ stable, nightly ]
     runs-on: ${{ format('{0}-latest', matrix.os) }}
     steps:
     - name: Checkout GitHub repo
-      uses: actions/checkout@v4
-    - name: Install Chrome for set binary test
-      uses: browser-actions/setup-chrome@v1
-      with:
-        chrome-version: stable
-      id: setup-chrome
-    - name: Install Edge for set binary test
-      uses: browser-actions/setup-edge@v1
-      with:
-        edge-version: stable
-      id: setup-edge
-    - name: Install Firefox for set binary test
-      if: matrix.os != 'windows'
-      uses: browser-actions/setup-firefox@v1
-      with:
-        firefox-version: latest
-      id: setup-firefox
-    - name: Set ENV Windows
-      if: matrix.os == 'windows'
-      run: |
-        echo "CHROME_BIN=${{ steps.setup-chrome.outputs.chrome-path }}" >> $env:GITHUB_ENV
-        echo "EDGE_BIN=C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe" >> $env:GITHUB_ENV
-        echo "FF_BIN=C:\Program Files (x86)\Mozilla Firefox\firefox-browser.exe" >> $env:GITHUB_ENV
-    - name: Set ENV Mac
-      if: matrix.os == 'macos'
-      run: |
-        echo "CHROME_BIN=${{ steps.setup-chrome.outputs.chrome-path }}" >> "$GITHUB_ENV"
-        echo "EDGE_BIN=/Users/runner/hostedtoolcache/msedge/stable/x64/Contents/MacOS/Microsoft Edge" >> "$GITHUB_ENV"
-        echo "FF_BIN=/Users/runner/hostedtoolcache/firefox/latest/x64/Contents/MacOS/firefox" >> "$GITHUB_ENV"
-    - name: Set ENV Linux
-      if: matrix.os == 'ubuntu'
-      run: |
-        echo "CHROME_BIN=${{ steps.setup-chrome.outputs.chrome-path }}" >> "$GITHUB_ENV"
-        echo "EDGE_BIN=/opt/hostedtoolcache/msedge/stable/x64/msedge" >> "$GITHUB_ENV"
-        echo "FF_BIN=/opt/hostedtoolcache/firefox/latest/x64/firefox" >> "$GITHUB_ENV"
+      uses: actions/checkout@v7
     - name: Remove driver directories Windows
       if: matrix.os == 'windows'
       run: |
@@ -80,20 +50,22 @@ jobs:
       run: Xvfb :99 &
     - name: Setup Node Stable
       if: matrix.release == 'stable'
-      uses: actions/setup-node@v4
+      uses: actions/setup-node@v7
       with:
-        node-version: '18.x'
+        node-version: '24.x'
     - name: Setup Node Nightly
       if: matrix.release == 'nightly'
-      uses: actions/setup-node@v4
+      uses: actions/setup-node@v7
       with:
-        node-version: '18.x'
+        node-version: '24.x'
         registry-url: 'https://npm.pkg.github.com'
     - name: Use Nightly package.json in Ubuntu/macOS
       if: matrix.release == 'nightly' && matrix.os != 'windows'
       run:
         |
-        latest_nightly=$(./scripts/latest-nightly-version.sh npm selenium-webdriver)
+        pip install -r ./scripts/requirements.txt
+        latest_nightly=$(python ./scripts/latest-nightly-version.py npm selenium-webdriver)
+        echo $latest_nightly
         npm install --prefix ./examples/javascript --save selenium-webdriver@npm:@seleniumhq/selenium-webdriver@$latest_nightly
       env:
         GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -102,7 +74,8 @@ jobs:
       if: matrix.release == 'nightly' && matrix.os == 'windows'
       run:
         |
-        $latest_nightly = ./scripts/latest-nightly-version.ps1 npm selenium-webdriver
+        pip install -r ./scripts/requirements.txt
+        $latest_nightly = python ./scripts/latest-nightly-version.py npm selenium-webdriver
         npm install --prefix ./examples/javascript --save selenium-webdriver@npm:@seleniumhq/selenium-webdriver@$latest_nightly
       env:
         GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -113,10 +86,10 @@ jobs:
       env:
         NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     - name: Run tests
-      uses: nick-invision/retry@v3.0.0
+      uses: nick-invision/retry@v4.0.0
       with:
-        timeout_minutes: 20
-        max_attempts: 3
+        timeout_minutes: 40
+        max_attempts: 2
         command: |
           cd examples/javascript
           npm test

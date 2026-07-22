@@ -21,22 +21,12 @@ WebDriverは、JavaScriptが提供する3種類のネイティブポップアッ
 WebDriverはポップアップからテキストを取得し、これらのアラートを受け入れるか、または閉じることができます。
 
 {{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" >}}
-//Click the link to activate the alert
-driver.findElement(By.linkText("See an example alert")).click();
-
-//Wait for the alert to be displayed and store it in a variable
-Alert alert = wait.until(ExpectedConditions.alertIsPresent());
-
-//Store the alert text in a variable
-String text = alert.getText();
-
-//Press the OK button
-alert.accept();
-  {{< /tab >}}
+{{< tab header="Java" text=true >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/AlertsTest.java#L36-L41" >}}
+{{< /tab >}}
 
 {{< tab header="Python" text=true >}}
-{{< gh-codeblock path="examples/python/tests/interactions/test_alerts.py#L12-L18" >}}
+{{< gh-codeblock path="/examples/python/tests/interactions/test_alerts.py#L13-L19" >}}
 {{< /tab >}}
 
   {{< tab header="CSharp" >}}
@@ -52,21 +42,11 @@ string text = alert.Text;
 //Press the OK button
 alert.Accept();
   {{< /tab >}}
-  {{< tab header="Ruby" >}}
-# Click the link to activate the alert
-driver.find_element(:link_text, 'See an example alert').click
-
-# Store the alert reference in a variable
-alert = driver.switch_to.alert
-
-# Store the alert text in a variable
-alert_text = alert.text
-
-# Press on OK button
-alert.accept
-  {{< /tab >}}
+{{< tab header="Ruby" text=true >}}
+{{< gh-codeblock path="/examples/ruby/spec/interactions/alerts_spec.rb#L15-L22" >}}
+{{< /tab >}}
 {{< tab header="JavaScript" text=true >}}
-{{< gh-codeblock path="examples/javascript/test/interactions/alert.spec.js#L19-L21" >}}
+{{< gh-codeblock path="/examples/javascript/test/interactions/alert.spec.js#L19-L21" >}}
 {{< /tab >}}
   {{< tab header="Kotlin" >}}
 //Click the link to activate the alert
@@ -91,25 +71,12 @@ alert.accept()
 この例は、アラートを保存する別の方法も示しています。
 
 {{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" >}}
-//Click the link to activate the alert
-driver.findElement(By.linkText("See a sample confirm")).click();
-
-//Wait for the alert to be displayed
-wait.until(ExpectedConditions.alertIsPresent());
-
-//Store the alert in a variable
-Alert alert = driver.switchTo().alert();
-
-//Store the alert in a variable for reuse
-String text = alert.getText();
-
-//Press the Cancel button
-alert.dismiss();
-  {{< /tab >}}
+{{< tab header="Java" text=true >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/AlertsTest.java#L131-L138" >}}
+{{< /tab >}}
 
 {{< tab header="Python" text=true >}}
-{{< gh-codeblock path="examples/python/tests/interactions/test_alerts.py#L26-L32" >}}
+{{< gh-codeblock path="/examples/python/tests/interactions/test_alerts.py#L27-L33" >}}
 {{< /tab >}}
 
   {{< tab header="CSharp" >}}
@@ -128,21 +95,11 @@ string text = alert.Text;
 //Press the Cancel button
 alert.Dismiss();
   {{< /tab >}}
-  {{< tab header="Ruby" >}}
-# Click the link to activate the alert
-driver.find_element(:link_text, 'See a sample confirm').click
-
-# Store the alert reference in a variable
-alert = driver.switch_to.alert
-
-# Store the alert text in a variable
-alert_text = alert.text
-
-# Press on Cancel button
-alert.dismiss
-  {{< /tab >}}
+{{< tab header="Ruby" text=true >}}
+{{< gh-codeblock path="/examples/ruby/spec/interactions/alerts_spec.rb#L28-L35" >}}
+{{< /tab >}}
 {{< tab header="JavaScript" text=true >}}
-{{< gh-codeblock path="examples/javascript/test/interactions/alert.spec.js#L30-L32" >}}
+{{< gh-codeblock path="/examples/javascript/test/interactions/alert.spec.js#L30-L32" >}}
 {{< /tab >}}
   {{< tab header="Kotlin" >}}
 //Click the link to activate the alert
@@ -171,22 +128,12 @@ alert.dismiss()
 <a onclick="window.prompt('What is your tool of choice?',navigator.appName)">サンプルプロンプトを参照してください</a>。
 
 {{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" >}}
-//Click the link to activate the alert
-driver.findElement(By.linkText("See a sample prompt")).click();
-
-//Wait for the alert to be displayed and store it in a variable
-Alert alert = wait.until(ExpectedConditions.alertIsPresent());
-
-//Type your message
-alert.sendKeys("Selenium");
-
-//Press the OK button
-alert.accept();
-  {{< /tab >}}
+{{< tab header="Java" text=true >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/AlertsTest.java#L79-L84" >}}
+{{< /tab >}}
 
 {{< tab header="Python" text=true >}}
-{{< gh-codeblock path="examples/python/tests/interactions/test_alerts.py#L40-L47" >}}
+{{< gh-codeblock path="/examples/python/tests/interactions/test_alerts.py#L41-L48" >}}
 {{< /tab >}}
 
   {{< tab header="CSharp" >}}
@@ -202,21 +149,11 @@ alert.SendKeys("Selenium");
 //Press the OK button
 alert.Accept();
   {{< /tab >}}
-  {{< tab header="Ruby" >}}
-# Click the link to activate the alert
-driver.find_element(:link_text, 'See a sample prompt').click
-
-# Store the alert reference in a variable
-alert = driver.switch_to.alert
-
-# Type a message
-alert.send_keys("selenium")
-
-# Press on Ok button
-alert.accept
-  {{< /tab >}}
+{{< tab header="Ruby" text=true >}}
+{{< gh-codeblock path="/examples/ruby/spec/interactions/alerts_spec.rb#L41-L48" >}}
+{{< /tab >}}
 {{< tab header="JavaScript" text=true >}}
-{{< gh-codeblock path="examples/javascript/test/interactions/alert.spec.js#L42-L45" >}}
+{{< gh-codeblock path="/examples/javascript/test/interactions/alert.spec.js#L42-L45" >}}
 {{< /tab >}}
   {{< tab header="Kotlin" >}}
 //Click the link to activate the alert
@@ -232,3 +169,9 @@ alert.sendKeys("Selenium")
 alert.accept()
   {{< /tab >}}
 {{< /tabpane >}}
+
+## beforeunload
+
+最近のドライバーでは、デフォルトで `beforeunload` プロンプトを自動的に閉じます。
+以前の動作を維持するには、
+[unhandledPromptBehavior]({{< ref "../drivers/options#unhandledpromptbehavior" >}}) を参照してください。

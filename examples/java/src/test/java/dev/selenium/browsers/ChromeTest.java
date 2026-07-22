@@ -8,22 +8,26 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.List;
+import java.util.Map;
 import java.util.logging.Level;
 import java.util.regex.Pattern;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.condition.DisabledOnOs;
+import org.junit.jupiter.api.condition.OS;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.bidi.webextension.ExtensionPath;
+import org.openqa.selenium.bidi.webextension.InstallExtensionParameters;
+import org.openqa.selenium.bidi.webextension.WebExtension;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.chromium.ChromiumDriverLogLevel;
-import org.openqa.selenium.logging.LogEntries;
-import org.openqa.selenium.logging.LogType;
-import org.openqa.selenium.logging.LoggingPreferences;
+import org.openqa.selenium.chromium.ChromiumNetworkConditions;
+import org.openqa.selenium.logging.*;
 import org.openqa.selenium.remote.service.DriverFinder;
-
 
 public class ChromeTest extends BaseTest {
   @AfterEach
@@ -34,13 +38,13 @@ public class ChromeTest extends BaseTest {
 
   @Test
   public void basicOptions() {
-    ChromeOptions options = new ChromeOptions();
+    ChromeOptions options = getDefaultChromeOptions();
     driver = new ChromeDriver(options);
   }
 
   @Test
   public void arguments() {
-    ChromeOptions options = new ChromeOptions();
+    ChromeOptions options = getDefaultChromeOptions();
 
     options.addArguments("--start-maximized");
 
@@ -49,7 +53,7 @@ public class ChromeTest extends BaseTest {
 
   @Test
   public void setBrowserLocation() {
-    ChromeOptions options = new ChromeOptions();
+    ChromeOptions options = getDefaultChromeOptions();
 
     options.setBinary(getChromeLocation());
 
@@ -57,14 +61,20 @@ public class ChromeTest extends BaseTest {
   }
 
   @Test
+  @DisabledOnOs(OS.WINDOWS)
   public void extensionOptions() {
-    ChromeOptions options = new ChromeOptions();
-    Path path = Paths.get("src/test/resources/extensions/webextensions-selenium-example.crx");
-    File extensionFilePath = new File(path.toUri());
-
-    options.addExtensions(extensionFilePath);
-
+    ChromeOptions options = getDefaultChromeOptions();
+    options.enableBiDi();
+    options.addArguments("--remote-debugging-pipe");
+    options.addArguments("--enable-unsafe-extension-debugging");
     driver = new ChromeDriver(options);
+
+    Path path = Paths.get("src/test/resources/extensions/selenium-example");
+    WebExtension extension = new WebExtension(driver);
+    ExtensionPath extensionPath = new ExtensionPath(path.toString());
+    InstallExtensionParameters parameters = new InstallExtensionParameters(extensionPath);
+    extension.install(parameters);
+
     driver.get("https://www.selenium.dev/selenium/web/blank.html");
     WebElement injected = driver.findElement(By.id("webextensions-selenium-example"));
     Assertions.assertEquals(
@@ -73,7 +83,7 @@ public class ChromeTest extends BaseTest {
 
   @Test
   public void excludeSwitches() {
-    ChromeOptions options = new ChromeOptions();
+    ChromeOptions options = getDefaultChromeOptions();
 
     options.setExperimentalOption("excludeSwitches", List.of("disable-popup-blocking"));
 
@@ -82,7 +92,7 @@ public class ChromeTest extends BaseTest {
 
   @Test
   public void loggingPreferences() {
-    ChromeOptions options = new ChromeOptions();
+    ChromeOptions options = getDefaultChromeOptions();
     LoggingPreferences logPrefs = new LoggingPreferences();
     logPrefs.enable(LogType.PERFORMANCE, Level.ALL);
     options.setCapability(ChromeOptions.LOGGING_PREFS, logPrefs);
@@ -175,9 +185,87 @@ public class ChromeTest extends BaseTest {
   }
 
   private File getChromeLocation() {
-    ChromeOptions options = new ChromeOptions();
+    ChromeOptions options = getDefaultChromeOptions();
     options.setBrowserVersion("stable");
     DriverFinder finder = new DriverFinder(ChromeDriverService.createDefaultService(), options);
     return new File(finder.getBrowserPath());
+  }
+
+  @Test
+  public void setPermission() {
+    ChromeDriver driver = new ChromeDriver();
+    driver.get("https://www.selenium.dev");
+
+    driver.setPermission("camera", "denied");
+
+    // Verify the permission state is 'denied'
+    String script = "return navigator.permissions.query({ name: 'camera' })" +
+            "    .then(permissionStatus => permissionStatus.state);";
+    String permissionState = (String) driver.executeScript(script);
+
+    Assertions.assertEquals("denied", permissionState);
+    driver.quit();
+  }
+
+  @Test
+  public void setNetworkConditions() {
+    driver = new ChromeDriver();
+
+    ChromiumNetworkConditions networkConditions = new ChromiumNetworkConditions();
+    networkConditions.setOffline(false);
+    networkConditions.setLatency(java.time.Duration.ofMillis(20)); // 20 ms of latency
+    networkConditions.setDownloadThroughput(2000 * 1024 / 8); // 2000 kbps
+    networkConditions.setUploadThroughput(2000 * 1024 / 8);   // 2000 kbps
+
+    ((ChromeDriver) driver).setNetworkConditions(networkConditions);
+
+    driver.get("https://www.selenium.dev");
+
+    // Assert the network conditions are set as expected
+    ChromiumNetworkConditions actualConditions = ((ChromeDriver) driver).getNetworkConditions();
+    Assertions.assertAll(
+        () -> Assertions.assertEquals(networkConditions.getOffline(), actualConditions.getOffline()),
+        () -> Assertions.assertEquals(networkConditions.getLatency(), actualConditions.getLatency()),
+        () -> Assertions.assertEquals(networkConditions.getDownloadThroughput(), actualConditions.getDownloadThroughput()),
+        () -> Assertions.assertEquals(networkConditions.getUploadThroughput(), actualConditions.getUploadThroughput())
+    );
+    ((ChromeDriver) driver).deleteNetworkConditions();
+    driver.quit();
+  }
+
+  @Test
+  public void castFeatures() {
+    ChromeDriver driver = new ChromeDriver();
+
+    List<Map<String, String>> sinks = driver.getCastSinks();
+    if (!sinks.isEmpty()) {
+      String sinkName = sinks.get(0).get("name");
+      driver.startTabMirroring(sinkName);
+      driver.stopCasting(sinkName);
+    }
+
+    driver.quit();
+  }
+
+  @Test
+  public void getBrowserLogs() {
+    ChromeDriver driver = new ChromeDriver();
+    driver.get("https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html");
+    WebElement consoleLogButton = driver.findElement(By.id("consoleError"));
+    consoleLogButton.click();
+
+    LogEntries logs = driver.manage().logs().get(LogType.BROWSER);
+
+    // Assert that at least one log contains the expected message
+    boolean logFound = false;
+    for (LogEntry log : logs) {
+      if (log.getMessage().contains("I am console error")) {
+        logFound = true;
+        break;
+      }
+    }
+
+    Assertions.assertTrue(logFound, "No matching log message found.");
+    driver.quit();
   }
 }

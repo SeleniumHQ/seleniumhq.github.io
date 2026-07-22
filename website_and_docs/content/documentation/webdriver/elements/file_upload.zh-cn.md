@@ -1,28 +1,28 @@
 ---
 title: "文件上传"
 linkTitle: "文件上传"
-weight: 1
+weight: 5
 aliases: [
 "/zh-cn/documentation/webdriver/additional_features/fileupload/"
 ]
 ---
 
-Because Selenium cannot interact with the file upload dialog, it provides a way
-to upload files without opening the dialog. If the element is an `input` element with type `file`, 
-you can use the send keys method to send the full path to the file that will be uploaded.
+由于 Selenium 不能与文件上传对话框交互，因此它提供了一种无需打开对话框即可上传文件的方法。
+如果该元素是一个类型为 `file` 的 `input` 元素，则可以使用
+send keys 方法发送将要上传文件的完整路径。
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/elements/FileUploadTest.java#L17-L19" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/FileUploadTest.java#L17-L19" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< gh-codeblock path="examples/python/tests/elements/test_file_upload.py#L12-L14" >}}
+{{< gh-codeblock path="/examples/python/tests/elements/test_file_upload.py#L12-L14" >}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="examples/dotnet/SeleniumDocs/Elements/FileUploadTest.cs#L21-L23" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Elements/FileUploadTest.cs#L21-L23" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="examples/ruby/spec/elements/file_upload_spec.rb#L12-L14" >}}
+{{< gh-codeblock path="/examples/ruby/spec/elements/file_upload_spec.rb#L12-L14" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< gh-codeblock path="/examples/javascript/test/elements/fileUpload.spec.js#L24-L25">}}

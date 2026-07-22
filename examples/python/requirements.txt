@@ -1,5 +1,9 @@
-selenium==4.22.0
-pytest
-trio
-pytest-trio
-flake8
+selenium==4.46.0
+pytest==9.1.1
+trio==0.33.0
+pytest-trio==0.8.0
+pytest-rerunfailures==16.4
+flake8==7.3.0
+requests==2.34.2
+tox==4.57.0
+pytest-xdist==3.8.0

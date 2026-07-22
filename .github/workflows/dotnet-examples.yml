@@ -15,6 +15,10 @@ on:
     paths:
       - 'examples/dotnet/**'
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 env:
   DISPLAY: :99
   GITHUB_TOKEN: ${{ secrets.SELENIUM_CI_TOKEN }}
@@ -25,12 +29,12 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ ubuntu, windows, macos ]
+        os: ${{ (github.event_name == 'schedule' || github.event_name == 'workflow_dispatch') && fromJSON('["ubuntu", "windows", "macos"]') || fromJSON('["ubuntu", "windows"]') }}
         release: [ stable, nightly ]
     runs-on: ${{ format('{0}-latest', matrix.os) }}
     steps:
     - name: Checkout GitHub repo
-      uses: actions/checkout@v4
+      uses: actions/checkout@v7
     - name: Remove driver directories Windows
       if: matrix.os == 'windows'
       run: |
@@ -46,14 +50,14 @@ jobs:
       run: Xvfb :99 &
     - name: Set up .Net Stable
       if: matrix.release == 'stable'
-      uses: actions/setup-dotnet@v4
+      uses: actions/setup-dotnet@v6
       with:
-        dotnet-version: 6.x
+        dotnet-version: 8.x
     - name: Set up .Net Nightly
       if: matrix.release == 'nightly'
-      uses: actions/setup-dotnet@v4
+      uses: actions/setup-dotnet@v6
       with:
-        dotnet-version: 6.x
+        dotnet-version: 8.x
         source-url: https://nuget.pkg.github.com/seleniumhq/index.json
       env:
         NUGET_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
@@ -61,7 +65,9 @@ jobs:
       if: matrix.release == 'nightly' && matrix.os != 'windows'
       run:
         |
-        latest_nightly=$(./scripts/latest-nightly-version.sh nuget Selenium.WebDriver)
+        pip install -r ./scripts/requirements.txt
+        latest_nightly=$(python ./scripts/latest-nightly-version.py nuget Selenium.WebDriver)
+        echo $latest_nightly
         dotnet add examples/dotnet/SeleniumDocs/SeleniumDocs.csproj package Selenium.WebDriver --version $latest_nightly
         dotnet add examples/dotnet/SeleniumDocs/SeleniumDocs.csproj package Selenium.Support --version $latest_nightly
       env:
@@ -71,21 +77,22 @@ jobs:
       shell: pwsh
       run:
         |
-        $latest_nightly = ./scripts/latest-nightly-version.ps1 nuget Selenium.WebDriver
+        pip install -r ./scripts/requirements.txt
+        $latest_nightly = python ./scripts/latest-nightly-version.py nuget Selenium.WebDriver
         dotnet add examples/dotnet/SeleniumDocs/SeleniumDocs.csproj package Selenium.WebDriver --version $latest_nightly
         dotnet add examples/dotnet/SeleniumDocs/SeleniumDocs.csproj package Selenium.Support --version $latest_nightly
       env:
         GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     - name: Set up Java
-      uses: actions/setup-java@v4
+      uses: actions/setup-java@v5
       with:
         distribution: 'temurin'
         java-version: 11
     - name: Run tests
-      uses: nick-fields/retry@v3.0.0
+      uses: nick-fields/retry@v4.0.0
       with:
-        timeout_minutes: 20
-        max_attempts: 3
+        timeout_minutes: 40
+        max_attempts: 2
         command: |
           cd examples/dotnet/SeleniumDocs
           dotnet test

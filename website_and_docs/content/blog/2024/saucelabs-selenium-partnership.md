@@ -6,7 +6,7 @@ tags: ["selenium"]
 categories: ["general"]
 author: David Burns [@automatedtester](https://www.linkedin.com/in/theautomatedtester/)
 images:
-  - "/images/blog/saucelabs-selenium-partnership.jpeg"
+  - "/images/blog/2024/saucelabs-selenium-partnership.jpeg"
 description: >
     Announcing a new Development partnership tier with Sauce Labs, celebrating our supporters!
 ---
@@ -46,9 +46,9 @@ employees, including Marcus Merrell, Diego Molina, and Titus Fortner, continue c
 to the Selenium project, driven by their passion. This passion is shared by Sauce Labs, 
 enabling these contributions to be part of their daily work.
 
-This unwavering support has nurtured a project governed openly, not by a single entity, but 
-by the community. This model has welcomed diverse contributors, including Google Chrome, 
-Microsoft, Apple, LambdaTest, Applitools, BrowserStack, and Mozilla Firefox teams. Together, they 
+This unwavering support has nurtured a project governed openly, not by a single entity, but
+by the community. This model has welcomed diverse contributors, including Google Chrome,
+Microsoft, Apple, TestMu AI (formerly LambdaTest), Applitools, BrowserStack, and Mozilla Firefox teams. Together, they
 have developed WebDriver BiDi, the next generation of WebDriver.
 
 The project's open governance and collaborative nature have allowed continuous work on client 

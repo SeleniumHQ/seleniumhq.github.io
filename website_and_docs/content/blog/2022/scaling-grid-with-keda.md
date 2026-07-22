@@ -49,6 +49,7 @@ triggers:
     metadata:
       url: 'http://selenium-grid-url-or-ip:4444/graphql'
       browserName: 'chrome'
+      platformName: 'Linux'
 ```
 
 All of this gets saved as a Scaled-Object like so:
@@ -69,8 +70,17 @@ spec:
   triggers:
     - type: selenium-grid
       metadata:
-        url: 'https://selenium-grid-url-or-ip:4444/graphql'
+        url: 'http://selenium-grid-url-or-ip:4444/graphql'
         browserName: 'chrome'
+        platformName: 'Linux'
+```
+
+Send the request to Grid, for example in Python client:
+
+```python
+options = ChromeOptions()
+options.set_capability('platformName', 'Linux')
+driver = webdriver.Remote(options=options, command_executor='http://selenium-grid-url-or-ip:4444/wd/hub')
 ```
 
 As an added bonus KEDA allows us to scale our deployments down to 
@@ -108,7 +118,7 @@ spec:
         lifecycle:
           preStop:
             exec:
-              command: ["/bin/sh", "-c", "curl --request POST 'localhost:5555/se/grid/node/drain' --header 'X-REGISTRATION-SECRET;'; tail --pid=$(pgrep -f '[n]ode --bind-host false --config /opt/selenium/config.toml') -f /dev/null; sleep 30s"]
+              command: ["/bin/sh", "-c", "curl --request POST 'localhost:5555/se/grid/node/drain' --header 'X-REGISTRATION-SECRET;'; while curl -fs localhost:5555/status >/dev/null; do sleep 1; done; sleep 10"]
 ```
 
 #### Breaking this down
@@ -122,8 +132,8 @@ grace period for your cluster nodes as well.
 - We curl the `localhost` of our pod to tell it to drain. The pod will no 
 longer accept new session requests and will finish its current test. More
  information on this [can be found in the Selenium Grid documentation](https://www.selenium.dev/documentation/grid/advanced_features/endpoints/#drain).
-- We then tail the internal node process that will continue to run until the node has been drained.
-- After this we give the pod 30 seconds to finish anything else before giving the full termination command.
+- Poll the Selenium node /status endpoint and wait until it becomes unavailable, indicating that the node has been fully drained and terminated.
+- After this we give the pod 10 seconds to finish anything else before giving the full termination command.
 
 And with that our application can now safely scale down our selenium browser deployments!
 
@@ -206,7 +216,7 @@ spec:
         lifecycle:
           preStop:
             exec:
-              command: ["/bin/sh", "-c", "curl --request POST 'localhost:5555/se/grid/node/drain' --header 'X-REGISTRATION-SECRET;'; tail --pid=$(pgrep -f '[n]ode --bind-host false --config /opt/selenium/config.toml') -f /dev/null; sleep 30s"]
+              command: ["/bin/sh", "-c", "curl --request POST 'localhost:5555/se/grid/node/drain' --header 'X-REGISTRATION-SECRET;'; while curl -fs localhost:5555/status >/dev/null; do sleep 1; done; sleep 10"]
 ```
 
 That is it, your Selenium Grid pods should now scale up and down properly without any lost sessions!

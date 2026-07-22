@@ -16,6 +16,8 @@ xUnit报表很受欢迎, 可以将其结果导入到持续集成（CI）服务�
 以下是一些链接, 可获取关于几种语言报表输出的更多信息.
 
 <!-- TODO: Add links.-->
+[Allure Report: fancy reports (language and framework agnostic)](https://allurereport.org/)
+
 [NUnit 3 Console Runner](//github.com/nunit/docs/wiki/Console-Runner)
 
 [NUnit 3 Console Command Line](//github.com/nunit/docs/wiki/Console-Command-Line)

@@ -1,22 +1,21 @@
-const {Browser} = require('selenium-webdriver');
-const {suite} = require('selenium-webdriver/testing');
+const {Browser, Builder} = require('selenium-webdriver');
 const firefox = require('selenium-webdriver/firefox');
 
-suite(function (env) {
-  describe('Open Firefox', function () {
-    let driver;
 
-    before(async function () {
-      let options = new firefox.Options();
-      driver = await env.builder()
-        .setFirefoxOptions(options)
-        .build();
-    });
+describe('Open Firefox', function () {
+  let driver;
 
-    after(async () => await driver.quit());
-
-    it('Basic Firefox test', async function () {
-      await driver.get('https://www.selenium.dev/selenium/web/blank.html');
-    });
+  before(async function () {
+    let options = new firefox.Options();
+    driver = new Builder()
+      .forBrowser(Browser.FIREFOX)
+      .setFirefoxOptions(options)
+      .build();
   });
-}, { browsers: [Browser.FIREFOX]});
+
+  after(async () => await driver.quit());
+
+  it('Basic Firefox test', async function () {
+    await driver.get('https://www.selenium.dev/selenium/web/blank.html');
+  });
+});

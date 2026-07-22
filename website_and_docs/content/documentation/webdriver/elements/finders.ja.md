@@ -43,8 +43,8 @@ Seleniumは、要素を一意に識別するための多数の組み込み[ロ�
   {{< tab header="Java" >}}
 WebElement vegetable = driver.findElement(By.className("tomatoes"));
   {{< /tab >}}
-  {{< tab header="Python" >}}
-vegetable = driver.find_element(By.CLASS_NAME, "tomatoes")
+  {{< tab header="Python" text=true >}}
+  {{< gh-codeblock path="/examples/python/tests/elements/test_finders.py#L23">}}
   {{< /tab >}}
   {{< tab header="CSharp" >}}
 var vegetable = driver.FindElement(By.ClassName("tomatoes"));
@@ -73,9 +73,8 @@ DOM全体で一意のロケーターを見つけるのではなく、検索を�
 WebElement fruits = driver.findElement(By.id("fruits"));
 WebElement fruit = fruits.findElement(By.className("tomatoes"));
   {{< /tab >}}
-  {{< tab header="Python" >}}
-fruits = driver.find_element(By.ID, "fruits")
-fruit = fruits.find_element(By.CLASS_NAME,"tomatoes")
+  {{< tab header="Python" text=true >}}
+  {{< gh-codeblock path="/examples/python/tests/elements/test_finders.py#L28-L29">}}
   {{< /tab >}}
   {{< tab header="CSharp" >}}
 IWebElement fruits = driver.FindElement(By.Id("fruits"));
@@ -101,6 +100,40 @@ val fruit = fruits.findElement(By.className("tomatoes"))
 これらのインターフェースは明確に定義されており、責任の役割を1つだけ持つように努めています。
 {{% /pageinfo %}}
 
+### Evaluating the Shadow DOM
+
+The Shadow DOM is an encapsulated DOM tree hidden inside an element. 
+With the release of v96 in Chromium Browsers, Selenium can now allow you to access this tree 
+with easy-to-use shadow root methods. NOTE: These methods require Selenium 4.0 or greater.
+
+{{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
+{{< tab header="Java" >}}
+WebElement shadowHost = driver.findElement(By.cssSelector("#shadow_host"));
+SearchContext shadowRoot = shadowHost.getShadowRoot();
+WebElement shadowContent = shadowRoot.findElement(By.cssSelector("#shadow_content"));
+{{< /tab >}}
+{{< tab header="Python" text=true >}}
+{{< gh-codeblock path="/examples/python/tests/elements/test_finders.py#L47-L50">}}
+{{< /tab >}}
+{{< tab header="CSharp" >}}
+var shadowHost = _driver.FindElement(By.CssSelector("#shadow_host"));
+var shadowRoot = shadowHost.GetShadowRoot();
+var shadowContent = shadowRoot.FindElement(By.CssSelector("#shadow_content"));
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+shadow_host = @driver.find_element(css: '#shadow_host')
+shadow_root = shadow_host.shadow_root
+shadow_content = shadow_root.find_element(css: '#shadow_content')
+{{< /tab >}}
+{{< tab header="JavaScript" text=true >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Kotlin" text=true >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< /tabpane >}}
+
 ### 最適化されたロケーター
 
 ネストされたルックアップは、ブラウザに2つの別々のコマンドを発行する必要があるため、最も効果的なロケーション戦略ではない可能性があります。
@@ -114,8 +147,8 @@ val fruit = fruits.findElement(By.className("tomatoes"))
   {{< tab header="Java" >}}
 WebElement fruit = driver.findElement(By.cssSelector("#fruits .tomatoes"));
   {{< /tab >}}
-  {{< tab header="Python" >}}
-fruit = driver.find_element(By.CSS_SELECTOR,"#fruits .tomatoes")
+  {{< tab header="Python" text=true >}}
+  {{< gh-codeblock path="/examples/python/tests/elements/test_finders.py#L34" >}}
   {{< /tab >}}
   {{< tab header="CSharp" >}}
 var fruit = driver.FindElement(By.CssSelector("#fruits .tomatoes"));
@@ -143,8 +176,8 @@ val fruit = driver.findElement(By.cssSelector("#fruits .tomatoes"))
   {{< tab header="Java" >}}
 List<WebElement> plants = driver.findElements(By.tagName("li"));
   {{< /tab >}}
-  {{< tab header="Python" >}}
-plants = driver.find_elements(By.TAG_NAME, "li")
+  {{< tab header="Python" text=true >}}
+  {{< gh-codeblock path="/examples/python/tests/elements/test_finders.py#L39" >}}
   {{< /tab >}}
   {{< tab header="CSharp" >}}
 IReadOnlyList<IWebElement> plants = driver.FindElements(By.TagName("li"));
@@ -172,20 +205,8 @@ for (WebElement element : elements) {
     System.out.println("Paragraph text:" + element.getText());
 }
   {{< /tab >}}
-  {{< tab header="Python" >}}
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-
-driver = webdriver.Firefox()
-
-    # Navigate to Url
-driver.get("https://www.example.com")
-
-    # Get all the elements available with tag name 'p'
-elements = driver.find_elements(By.TAG_NAME, 'p')
-
-for e in elements:
-    print(e.text)
+  {{< tab header="Python" text=true >}}
+  {{< gh-codeblock path="/examples/python/tests/elements/test_finders.py#L62-L64" >}}
   {{< /tab >}}
   {{< tab header="CSharp" >}}
 using OpenQA.Selenium;
@@ -214,7 +235,7 @@ namespace FindElementsExample {
 }
   {{< /tab >}}
    {{< tab header="Ruby" text=true >}}
-   {{< gh-codeblock path="/examples/ruby/spec/elements/finders_spec.rb#L27-L28" >}}
+   {{< gh-codeblock path="/examples/ruby/spec/elements/finders_spec.rb#L28-L29" >}}
    {{< /tab >}}
   {{< tab header="JavaScript" >}}
 const {Builder, By} = require('selenium-webdriver');
@@ -288,20 +309,8 @@ fun main() {
       }
   }
   {{< /tab >}}
-  {{< tab header="Python" >}}
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-
-driver = webdriver.Chrome()
-driver.get("https://www.example.com")
-
-    # Get element with tag name 'div'
-element = driver.find_element(By.TAG_NAME, 'div')
-
-    # Get all the elements available with tag name 'p'
-elements = element.find_elements(By.TAG_NAME, 'p')
-for e in elements:
-    print(e.text)
+  {{< tab header="Python" text=true >}}
+  {{< gh-codeblock path="/examples/python/tests/elements/test_finders.py#L75-L78" >}}
   {{< /tab >}}
   {{< tab header="CSharp" >}}
 using OpenQA.Selenium;
@@ -331,7 +340,7 @@ namespace FindElementsFromElement {
 }
   {{< /tab >}}
    {{< tab header="Ruby" text=true >}}
-   {{< gh-codeblock path="/examples/ruby/spec/elements/finders_spec.rb#L32-L34" >}}
+   {{< gh-codeblock path="/examples/ruby/spec/elements/finders_spec.rb#L33-L35" >}}
    {{< /tab >}}
   {{< tab header="JavaScript" >}}
   const {Builder, By} = require('selenium-webdriver');
@@ -402,17 +411,8 @@ namespace FindElementsFromElement {
     }
   }
   {{< /tab >}}
-  {{< tab header="Python" >}}
-  from selenium import webdriver
-  from selenium.webdriver.common.by import By
-
-  driver = webdriver.Chrome()
-  driver.get("https://www.google.com")
-  driver.find_element(By.CSS_SELECTOR, '[name="q"]').send_keys("webElement")
-
-    # Get attribute of current active element
-  attr = driver.switch_to.active_element.get_attribute("title")
-  print(attr)
+  {{< tab header="Python" text=true >}}
+  {{< gh-codeblock path="/examples/python/tests/elements/test_finders.py#L89-L90" >}}
   {{< /tab >}}
   {{< tab header="CSharp" >}}
     using OpenQA.Selenium;
@@ -438,7 +438,7 @@ namespace FindElementsFromElement {
     }
   {{< /tab >}}
   {{< tab header="Ruby" text=true >}}
-  {{< gh-codeblock path="/examples/ruby/spec/elements/finders_spec.rb#L38-L39" >}}
+  {{< gh-codeblock path="/examples/ruby/spec/elements/finders_spec.rb#L40-L41" >}}
   {{< /tab >}}
   {{< tab header="JavaScript" >}}
   const {Builder, By} = require('selenium-webdriver');
