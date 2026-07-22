@@ -236,7 +236,7 @@ See [Quitting Sessions]({{< ref "../drivers/#quitting-sessions" >}}).
 {{< gh-codeblock path="/examples/python/README.md#L58" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< gh-codeblock path="/examples/dotnet/README.md#L32-L33" >}}
+{{< gh-codeblock path="/examples/dotnet/README.md#L34-L35" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< gh-codeblock path="/examples/ruby/README.md#L36" >}}
