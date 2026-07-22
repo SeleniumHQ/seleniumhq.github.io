@@ -23,11 +23,11 @@ namespace SeleniumDocs.Browsers
             {
                 File.Delete(_logLocation);
             }
-            if (_tempPath != null && File.Exists(_tempPath))
-            {
-                File.Delete(_tempPath);
-            }
             driver.Quit();
+            if (_tempPath != null && Directory.Exists(_tempPath))
+            {
+                Directory.Delete(_tempPath, true);
+            }
         }
 
         [TestMethod]
@@ -183,9 +183,9 @@ namespace SeleniumDocs.Browsers
 
         private string GetTempDirectory()
         {
-            if (string.IsNullOrEmpty(_tempPath) && !File.Exists(_tempPath))
+            if (string.IsNullOrEmpty(_tempPath))
             {
-                _tempPath = Path.GetTempPath();
+                _tempPath = Directory.CreateTempSubdirectory("profile-").FullName + Path.DirectorySeparatorChar;
             }
 
             return _tempPath;
