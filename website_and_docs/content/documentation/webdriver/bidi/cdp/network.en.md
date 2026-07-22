@@ -26,7 +26,7 @@ With this code you can insert the credentials into the header when necessary
 {{< gh-codeblock path="/examples/python/tests/bidi/cdp/test_network.py#L13-15" >}}
 {{% /tab %}}
 {{% tab header="CSharp" %}}
-{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/BiDi/CDP/NetworkTest.cs#L29-L36" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/BiDi/CDP/NetworkTest.cs#L28-L35" >}}
 {{% /tab %}}
 {{% tab header="Ruby" %}}
 {{< gh-codeblock path="/examples/ruby/spec/bidi/cdp/network_spec.rb#L9-L11" >}}
@@ -54,7 +54,7 @@ Both requests and responses can be recorded or transformed.
 {{< badge-implementation >}}
 {{% /tab %}}
 {{% tab header="CSharp" %}}
-{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/BiDi/CDP/NetworkTest.cs#L50-L55" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/BiDi/CDP/NetworkTest.cs#L49-L54" >}}
 {{% /tab %}}
 {{% tab header="Ruby" %}}
 {{< gh-codeblock path="/examples/ruby/spec/bidi/cdp/network_spec.rb#L20-L24" >}}
@@ -77,7 +77,7 @@ Both requests and responses can be recorded or transformed.
 {{< badge-implementation >}}
 {{% /tab %}}
 {{% tab header="CSharp" %}}
-{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/BiDi/CDP/NetworkTest.cs#L66-L77" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/BiDi/CDP/NetworkTest.cs#L65-L76" >}}
 {{% /tab %}}
 {{% tab header="Ruby" %}}
 {{< gh-codeblock path="/examples/ruby/spec/bidi/cdp/network_spec.rb#L31-L35" >}}
@@ -101,7 +101,7 @@ Both requests and responses can be recorded or transformed.
 {{< badge-implementation >}}
 {{% /tab %}}
 {{% tab header="CSharp" %}}
-{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/BiDi/CDP/NetworkTest.cs#L89-L101" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/BiDi/CDP/NetworkTest.cs#L88-L100" >}}
 {{% /tab %}}
 {{% tab header="Ruby" %}}
 {{< gh-codeblock path="/examples/ruby/spec/bidi/cdp/network_spec.rb#L42-L46" >}}
@@ -125,7 +125,7 @@ Both requests and responses can be recorded or transformed.
 {{< gh-codeblock path="/examples/python/tests/bidi/cdp/test_network.py#L26-L28" >}}
 {{% /tab %}}
 {{% tab header="CSharp" %}}
-{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/BiDi/CDP/NetworkTest.cs#L118-L122" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/BiDi/CDP/NetworkTest.cs#L117-L121" >}}
 {{% /tab %}}
 {{% tab header="Ruby" %}}
 {{< gh-codeblock path="/examples/ruby/spec/bidi/cdp/network_spec.rb#L56-L57" >}}
@@ -149,7 +149,7 @@ Both requests and responses can be recorded or transformed.
 {{< gh-codeblock path="/examples/python/tests/bidi/cdp/test_network.py#L37-L44" >}}
 {{% /tab %}}
 {{% tab header="CSharp" %}}
-{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/BiDi/CDP/NetworkTest.cs#L140-L147" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/BiDi/CDP/NetworkTest.cs#L139-L146" >}}
 {{% /tab %}}
 {{% tab header="Ruby" %}}
 {{< gh-codeblock path="/examples/ruby/spec/bidi/cdp/network_spec.rb#L68-L71" >}}
@@ -173,7 +173,7 @@ Both requests and responses can be recorded or transformed.
 {{< badge-implementation >}}
 {{% /tab %}}
 {{% tab header="CSharp" %}}
-{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/BiDi/CDP/NetworkTest.cs#L162-L168" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/BiDi/CDP/NetworkTest.cs#L166-L171" >}}
 {{% /tab %}}
 {{% tab header="Ruby" %}}
 {{< gh-codeblock path="/examples/ruby/spec/bidi/cdp/network_spec.rb#L82-L88" >}}

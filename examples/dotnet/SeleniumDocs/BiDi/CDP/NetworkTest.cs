@@ -6,7 +6,6 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using OpenQA.Selenium.DevTools;
 using System.Linq;
-using System.Threading;
 using OpenQA.Selenium.DevTools.V150.Browser;
 using OpenQA.Selenium.DevTools.V150.Network;
 using OpenQA.Selenium.DevTools.V150.Performance;
@@ -159,34 +158,42 @@ namespace SeleniumDocs.BiDi.CDP
             var session = ((IDevTools)driver).GetDevToolsSession();
             var domains = session.GetVersionSpecificDomains<OpenQA.Selenium.DevTools.V150.DevToolsSessionDomains>();
 
-            var downloadPath = Path.GetTempPath();
-            await domains.Browser.SetDownloadBehavior(new SetDownloadBehaviorCommandSettings
-            {
-                Behavior = "allowAndName",
-                DownloadPath = downloadPath,
-                EventsEnabled = true
-            });
+            var downloadPath = Path.Combine(Path.GetTempPath(), Path.GetRandomFileName());
+            Directory.CreateDirectory(downloadPath);
 
-            var downloadCompleted = new ManualResetEvent(false);
-            string downloadId = null;
-            bool downloaded = false;
-            domains.Browser.DownloadProgress += (sender, args) =>
+            try
             {
-                if (args.State == "completed" || args.State == "canceled")
+                await domains.Browser.SetDownloadBehavior(new SetDownloadBehaviorCommandSettings
                 {
-                    downloadId = args.Guid;
-                    downloaded = args.State == "completed";
-                    downloadCompleted.Set();
-                }
-            };
+                    Behavior = "allowAndName",
+                    DownloadPath = downloadPath,
+                    EventsEnabled = true
+                });
 
-            driver.FindElement(By.Id("file-1")).Click();
+                var downloadCompleted = new TaskCompletionSource<bool>();
+                string downloadId = null;
+                domains.Browser.DownloadProgress += (sender, args) =>
+                {
+                    if (args.State == "completed" || args.State == "canceled")
+                    {
+                        downloadId = args.Guid;
+                        downloadCompleted.TrySetResult(args.State == "completed");
+                    }
+                };
 
-            Assert.IsTrue(downloadCompleted.WaitOne(TimeSpan.FromSeconds(10)));
-            Assert.IsTrue(downloaded);
-            var downloadedFilePath = Path.Combine(downloadPath, downloadId);
-            Assert.IsTrue(File.Exists(downloadedFilePath));
-            File.Delete(downloadedFilePath);
+                driver.FindElement(By.Id("file-1")).Click();
+
+                var completedTask = await Task.WhenAny(downloadCompleted.Task, Task.Delay(TimeSpan.FromSeconds(10)));
+                Assert.AreEqual(downloadCompleted.Task, completedTask, "Timed out waiting for download to complete.");
+                Assert.IsTrue(await downloadCompleted.Task);
+
+                var downloadedFilePath = Path.Combine(downloadPath, downloadId);
+                Assert.IsTrue(File.Exists(downloadedFilePath));
+            }
+            finally
+            {
+                Directory.Delete(downloadPath, true);
+            }
         }
     }
 }
