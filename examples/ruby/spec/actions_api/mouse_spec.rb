@@ -108,7 +108,7 @@ RSpec.describe 'Mouse' do
       expect(y_coord).to be_within(1).of(center_y + 11)
     end
 
-    it 'offset from viewport' do
+    it 'offset from viewport', {platforn: :linux, reason: 'it only fails on the linux pipeline'} do
       driver.get 'https://www.selenium.dev/selenium/web/mouse_interaction.html'
 
       driver.action

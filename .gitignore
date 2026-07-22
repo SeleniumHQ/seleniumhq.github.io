@@ -2,14 +2,49 @@
 public/
 node_modules
 .DS_Store
+
+/.local/*
+!/.local/README.md
+
+# Agent-specific local instruction overrides (keep private, never commit)
+AGENTS.local.md
+CLAUDE.local.md
+GEMINI.local.md
+
+# Security
+.env
+.env.local
+
+# AI agent local state (most common)
+/.claude
+/.cursor
+/.continue
+/.cline
+/.windsurf
+/.zencoder
+
+# Common per-tool config/rules files people accidentally add
+/.cursorignore
+/.cursorrules
+/.windsurfrules
+/.continuerc.json
+
+# Common generated transcripts
+*_cline_transcript.json
+.copilot-chat-history.json
+
 website_and_docs/.hugo_build.lock
 website_and_docs/resources
-
+*.png
+*.log
+*.py[cod]
+__pycache__/
+.tox/
+venv/
 **/target/*
 .classpath
 .project
 .settings
-.gitignore
 .pydevproject
 **/*.iml
 **/.gradle

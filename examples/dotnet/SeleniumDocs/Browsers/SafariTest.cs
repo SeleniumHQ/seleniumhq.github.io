@@ -22,16 +22,5 @@ namespace SeleniumDocs.Browsers
             var options = new SafariOptions();
             driver = new SafariDriver(options);
         }
-
-        [TestMethod]
-        [Ignore("Not implemented")]
-        public void EnableLogs()
-        {
-            var service = SafariDriverService.CreateDefaultService();
-
-            //service.EnableLogging = true;
-
-            driver = new SafariDriver(service);
-        }
     }
 }

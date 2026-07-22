@@ -1,0 +1,12 @@
+[pr_reviewer]
+extra_instructions = "Please look at the guidelines in .github/pr_review.md when evaluating this PR."
+
+[github_app]
+pr_commands = [
+    "/agentic_describe",
+    "/agentic_review",
+]
+handle_push_trigger = true
+push_commands = [
+    "/agentic_review",
+]

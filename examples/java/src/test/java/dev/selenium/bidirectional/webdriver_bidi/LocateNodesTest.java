@@ -34,7 +34,6 @@ class LocateNodesTest extends BaseTest {
     }
 
     @Test
-    @Disabled
     void testCreateABrowsingContextForGivenId() {
         String id = driver.getWindowHandle();
         BrowsingContext browsingContext = new BrowsingContext(driver, id);
@@ -42,7 +41,6 @@ class LocateNodesTest extends BaseTest {
     }
 
     @Test
-    @Disabled
     void canLocateNodes() {
         BrowsingContext browsingContext = new BrowsingContext(driver, driver.getWindowHandle());
         driver.get("https://www.selenium.dev/selenium/web/xhtmlTest.html");
@@ -54,7 +52,6 @@ class LocateNodesTest extends BaseTest {
     }
 
     @Test
-    @Disabled
     void canLocateNodesWithJustLocator() {
         BrowsingContext browsingContext = new BrowsingContext(driver, driver.getWindowHandle());
         driver.get("https://www.selenium.dev/selenium/web/xhtmlTest.html");
@@ -64,7 +61,6 @@ class LocateNodesTest extends BaseTest {
     }
 
     @Test
-    @Disabled
     void canLocateNode() {
         BrowsingContext browsingContext = new BrowsingContext(driver, driver.getWindowHandle());
         driver.get("https://www.selenium.dev/selenium/web/xhtmlTest.html");
@@ -74,7 +70,6 @@ class LocateNodesTest extends BaseTest {
     }
 
     @Test
-    @Disabled
     void canLocateNodesWithCSSLocator() {
         BrowsingContext browsingContext = new BrowsingContext(driver, driver.getWindowHandle());
 
@@ -93,7 +88,6 @@ class LocateNodesTest extends BaseTest {
     }
 
     @Test
-    @Disabled
     void canLocateNodesWithXPathLocator() {
         BrowsingContext browsingContext = new BrowsingContext(driver, driver.getWindowHandle());
 
@@ -127,7 +121,6 @@ class LocateNodesTest extends BaseTest {
     }
 
     @Test
-    @Disabled
     void canLocateNodesWithMaxNodeCount() {
         BrowsingContext browsingContext = new BrowsingContext(driver, driver.getWindowHandle());
 
@@ -141,7 +134,6 @@ class LocateNodesTest extends BaseTest {
     }
 
     @Test
-    @Disabled
     void canLocateNodesGivenStartNodes() {
         String handle = driver.getWindowHandle();
         BrowsingContext browsingContext = new BrowsingContext(driver, handle);
@@ -177,7 +169,6 @@ class LocateNodesTest extends BaseTest {
     }
 
     @Test
-    @Disabled
     void canLocateNodesInAGivenSandbox() {
         String sandbox = "sandbox";
         BrowsingContext browsingContext = new BrowsingContext(driver, driver.getWindowHandle());

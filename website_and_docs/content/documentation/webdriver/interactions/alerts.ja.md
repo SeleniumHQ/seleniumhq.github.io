@@ -21,12 +21,12 @@ WebDriverは、JavaScriptが提供する3種類のネイティブポップアッ
 WebDriverはポップアップからテキストを取得し、これらのアラートを受け入れるか、または閉じることができます。
 
 {{< tabpane langEqualsHeader=true >}}
- {{< tab header="Java" text=true >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/AlertsTest.java#L51-L57" >}}
+{{< tab header="Java" text=true >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/AlertsTest.java#L36-L41" >}}
 {{< /tab >}}
 
 {{< tab header="Python" text=true >}}
-{{< gh-codeblock path="examples/python/tests/interactions/test_alerts.py#L12-L18" >}}
+{{< gh-codeblock path="/examples/python/tests/interactions/test_alerts.py#L13-L19" >}}
 {{< /tab >}}
 
   {{< tab header="CSharp" >}}
@@ -43,10 +43,10 @@ string text = alert.Text;
 alert.Accept();
   {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
-{{< gh-codeblock path="examples/ruby/spec/interactions/alerts_spec.rb#L15-L22" >}}
+{{< gh-codeblock path="/examples/ruby/spec/interactions/alerts_spec.rb#L15-L22" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" text=true >}}
-{{< gh-codeblock path="examples/javascript/test/interactions/alert.spec.js#L19-L21" >}}
+{{< gh-codeblock path="/examples/javascript/test/interactions/alert.spec.js#L19-L21" >}}
 {{< /tab >}}
   {{< tab header="Kotlin" >}}
 //Click the link to activate the alert
@@ -71,12 +71,12 @@ alert.accept()
 この例は、アラートを保存する別の方法も示しています。
 
 {{< tabpane langEqualsHeader=true >}}
-   {{< tab header="Java" text=true >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/AlertsTest.java#L66-L72" >}}
+{{< tab header="Java" text=true >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/AlertsTest.java#L131-L138" >}}
 {{< /tab >}}
 
 {{< tab header="Python" text=true >}}
-{{< gh-codeblock path="examples/python/tests/interactions/test_alerts.py#L26-L32" >}}
+{{< gh-codeblock path="/examples/python/tests/interactions/test_alerts.py#L27-L33" >}}
 {{< /tab >}}
 
   {{< tab header="CSharp" >}}
@@ -96,10 +96,10 @@ string text = alert.Text;
 alert.Dismiss();
   {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
-{{< gh-codeblock path="examples/ruby/spec/interactions/alerts_spec.rb#L28-L35" >}}
+{{< gh-codeblock path="/examples/ruby/spec/interactions/alerts_spec.rb#L28-L35" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" text=true >}}
-{{< gh-codeblock path="examples/javascript/test/interactions/alert.spec.js#L30-L32" >}}
+{{< gh-codeblock path="/examples/javascript/test/interactions/alert.spec.js#L30-L32" >}}
 {{< /tab >}}
   {{< tab header="Kotlin" >}}
 //Click the link to activate the alert
@@ -128,12 +128,12 @@ alert.dismiss()
 <a onclick="window.prompt('What is your tool of choice?',navigator.appName)">サンプルプロンプトを参照してください</a>。
 
 {{< tabpane langEqualsHeader=true >}}
-      {{< tab header="Java" text=true >}}
-{{< gh-codeblock path="examples/java/src/test/java/dev/selenium/interactions/AlertsTest.java#L80-L88" >}}
+{{< tab header="Java" text=true >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/AlertsTest.java#L79-L84" >}}
 {{< /tab >}}
 
 {{< tab header="Python" text=true >}}
-{{< gh-codeblock path="examples/python/tests/interactions/test_alerts.py#L40-L47" >}}
+{{< gh-codeblock path="/examples/python/tests/interactions/test_alerts.py#L41-L48" >}}
 {{< /tab >}}
 
   {{< tab header="CSharp" >}}
@@ -150,10 +150,10 @@ alert.SendKeys("Selenium");
 alert.Accept();
   {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
-{{< gh-codeblock path="examples/ruby/spec/interactions/alerts_spec.rb#L41-L48" >}}
+{{< gh-codeblock path="/examples/ruby/spec/interactions/alerts_spec.rb#L41-L48" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" text=true >}}
-{{< gh-codeblock path="examples/javascript/test/interactions/alert.spec.js#L42-L45" >}}
+{{< gh-codeblock path="/examples/javascript/test/interactions/alert.spec.js#L42-L45" >}}
 {{< /tab >}}
   {{< tab header="Kotlin" >}}
 //Click the link to activate the alert
@@ -169,3 +169,9 @@ alert.sendKeys("Selenium")
 alert.accept()
   {{< /tab >}}
 {{< /tabpane >}}
+
+## beforeunload
+
+最近のドライバーでは、デフォルトで `beforeunload` プロンプトを自動的に閉じます。
+以前の動作を維持するには、
+[unhandledPromptBehavior]({{< ref "../drivers/options#unhandledpromptbehavior" >}}) を参照してください。

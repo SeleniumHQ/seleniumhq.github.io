@@ -10,14 +10,6 @@ aliases: [
 ]
 ---
 
-{{% pageinfo color="warning" %}}
-<p class="lead">
-   <i class="fas fa-language d-4"></i> 
-   Page being translated from 
-   English to Chinese. Do you speak Chinese? Help us to translate
-   it by sending us pull requests!
-</p>
-{{% /pageinfo %}}
 
 Selenium Grid 4 是对以前版本的彻底重写。除了对性能和标准合规性进行全面改进外，还分解了 `Grid` 的不同功能以反映更现代的计算和软件开发时代。 Selenium Grid 4 专为容器化和云分布式可扩展性而构建，是现代时代的全新解决方案。
 

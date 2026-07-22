@@ -18,7 +18,9 @@ CSS and XPath Selectors are sometimes difficult to get correct.
 
 ### Likely Cause
 
-The CSS or XPath selector you are trying to use has invalid characters or an invalid query.
+* The CSS or XPath selector you are trying to use has invalid characters or an invalid query.
+* You may have placed an XPATH value as a parameter to a CSS selector, or vice versa.
+* You may have used a CSS or XPATH selector as a parameter to an ID selector.
 
 ### Possible Solutions
 
@@ -43,6 +45,7 @@ The element can not be found at the exact moment you attempted to locate it.
 
 * Make sure you are on the page you expect to be on, and that previous actions in your code completed correctly
 * Make sure you are using a proper [Waiting Strategy]({{< ref "/documentation/webdriver/waits" >}})
+* Use an interactive [Selenium Wait Code Generator](https://99tools.net/selenium-wait-code-generator/) to create accurate explicit wait snippets for multiple supported languages including Java, Python, C#, JavaScript, and Ruby.
 * Update the locator with the browser's devtools console or use a browser extension like:
   * [SelectorsHub](https://selectorshub.com/selectorshub/)
 
@@ -179,3 +182,19 @@ This exception occurs when Selenium tries to interact with an element that is no
 2. Ensure locators uniquely identify the intended element to avoid incorrect matches.  
 3. Check if the element is visible on the page before interacting with it. Use scrolling to bring the element into view, if required.  
 4. Use explicit waits to ensure the element is interactable before performing actions.
+
+## ElementNotVisibleException
+
+This exception is thrown when the element you are trying to interact with _is_ present in the DOM, but is not visible. 
+
+### Likely Cause
+
+This can occur in several situations:
+* Another element is blocking your intended element
+* The element is disabled/invisible to the user
+
+### Possible Solutions
+
+This issue cannot always be resolved on the user's end, however when it can it is usually solved by the following: 
+using an explicit wait, or interacting with the page in such a way to make the element visible 
+(scrolling, clicking a button, etc.)

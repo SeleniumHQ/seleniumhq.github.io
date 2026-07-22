@@ -1,11 +1,14 @@
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Threading.Tasks;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using OpenQA.Selenium.DevTools;
 using System.Linq;
-using OpenQA.Selenium.DevTools.V132.Network;
-using OpenQA.Selenium.DevTools.V132.Performance;
+using OpenQA.Selenium.DevTools.V150.Browser;
+using OpenQA.Selenium.DevTools.V150.Network;
+using OpenQA.Selenium.DevTools.V150.Performance;
 
 
 namespace SeleniumDocs.BiDi.CDP
@@ -16,7 +19,7 @@ namespace SeleniumDocs.BiDi.CDP
         [TestInitialize]
         public void Startup()
         {
-            StartDriver("132");
+            StartDriver("150");
         }
 
         [TestMethod]
@@ -44,7 +47,7 @@ namespace SeleniumDocs.BiDi.CDP
             var contentType = new List<string>();
 
             INetwork networkInterceptor = driver.Manage().Network;
-            networkInterceptor.NetworkResponseReceived += (_, e)  =>
+            networkInterceptor.NetworkResponseReceived += (_, e) =>
             {
                 contentType.Add(e.ResponseHeaders["content-type"]);
             };
@@ -109,9 +112,9 @@ namespace SeleniumDocs.BiDi.CDP
             driver.Url = "https://www.selenium.dev/selenium/web/frameset.html";
 
             var session = ((IDevTools)driver).GetDevToolsSession();
-            var domains = session.GetVersionSpecificDomains<OpenQA.Selenium.DevTools.V132.DevToolsSessionDomains>();
+            var domains = session.GetVersionSpecificDomains<OpenQA.Selenium.DevTools.V150.DevToolsSessionDomains>();
 
-            await domains.Performance.Enable(new OpenQA.Selenium.DevTools.V132.Performance.EnableCommandSettings());
+            await domains.Performance.Enable(new OpenQA.Selenium.DevTools.V150.Performance.EnableCommandSettings());
             var metricsResponse =
                 await session.SendCommand<GetMetricsCommandSettings, GetMetricsCommandResponse>(
                     new GetMetricsCommandSettings()
@@ -130,8 +133,8 @@ namespace SeleniumDocs.BiDi.CDP
         public async Task SetCookie()
         {
             var session = ((IDevTools)driver).GetDevToolsSession();
-            var domains = session.GetVersionSpecificDomains<OpenQA.Selenium.DevTools.V132.DevToolsSessionDomains>();
-            await domains.Network.Enable(new OpenQA.Selenium.DevTools.V132.Network.EnableCommandSettings());
+            var domains = session.GetVersionSpecificDomains<OpenQA.Selenium.DevTools.V150.DevToolsSessionDomains>();
+            await domains.Network.Enable(new OpenQA.Selenium.DevTools.V150.Network.EnableCommandSettings());
 
             var cookieCommandSettings = new SetCookieCommandSettings
             {
@@ -147,5 +150,50 @@ namespace SeleniumDocs.BiDi.CDP
             Assert.AreEqual("gouda", cheese.Value);
         }
 
+        [TestMethod]
+        public async Task WaitForDownload()
+        {
+            driver.Url = "https://www.selenium.dev/selenium/web/downloads/download.html";
+
+            var session = ((IDevTools)driver).GetDevToolsSession();
+            var domains = session.GetVersionSpecificDomains<OpenQA.Selenium.DevTools.V150.DevToolsSessionDomains>();
+
+            var downloadPath = Path.Combine(Path.GetTempPath(), Path.GetRandomFileName());
+            Directory.CreateDirectory(downloadPath);
+
+            try
+            {
+                await domains.Browser.SetDownloadBehavior(new SetDownloadBehaviorCommandSettings
+                {
+                    Behavior = "allowAndName",
+                    DownloadPath = downloadPath,
+                    EventsEnabled = true
+                });
+
+                var downloadCompleted = new TaskCompletionSource<bool>();
+                string downloadId = null;
+                domains.Browser.DownloadProgress += (sender, args) =>
+                {
+                    if (args.State == "completed" || args.State == "canceled")
+                    {
+                        downloadId = args.Guid;
+                        downloadCompleted.TrySetResult(args.State == "completed");
+                    }
+                };
+
+                driver.FindElement(By.Id("file-1")).Click();
+
+                var completedTask = await Task.WhenAny(downloadCompleted.Task, Task.Delay(TimeSpan.FromSeconds(10)));
+                Assert.AreEqual(downloadCompleted.Task, completedTask, "Timed out waiting for download to complete.");
+                Assert.IsTrue(await downloadCompleted.Task);
+
+                var downloadedFilePath = Path.Combine(downloadPath, downloadId);
+                Assert.IsTrue(File.Exists(downloadedFilePath));
+            }
+            finally
+            {
+                Directory.Delete(downloadPath, true);
+            }
+        }
     }
 }
