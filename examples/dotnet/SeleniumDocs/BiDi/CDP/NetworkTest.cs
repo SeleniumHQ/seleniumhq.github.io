@@ -155,30 +155,27 @@ namespace SeleniumDocs.BiDi.CDP
         public async Task WaitForDownload()
         {
             driver.Url = "https://www.selenium.dev/selenium/web/downloads/download.html";
+
             var session = ((IDevTools)driver).GetDevToolsSession();
+            var domains = session.GetVersionSpecificDomains<OpenQA.Selenium.DevTools.V150.DevToolsSessionDomains>();
 
             var downloadPath = Path.GetTempPath();
-            var downloadBehaviorCommandSettings = new SetDownloadBehaviorCommandSettings
+            await domains.Browser.SetDownloadBehavior(new SetDownloadBehaviorCommandSettings
             {
                 Behavior = "allowAndName",
-                BrowserContextId = null,
                 DownloadPath = downloadPath,
                 EventsEnabled = true
-            };
-            await session.SendCommand(downloadBehaviorCommandSettings);
+            });
 
             var downloadCompleted = new ManualResetEvent(false);
-            string? downloadId = null;
+            string downloadId = null;
             bool downloaded = false;
-            session.DevToolsEventReceived += (sender, args) =>
+            domains.Browser.DownloadProgress += (sender, args) =>
             {
-                var downloadState = args.EventData["state"]?.ToString();
-                if (args.EventName == "downloadProgress" &&
-                    (string.Equals(downloadState, "completed") ||
-                     string.Equals(downloadState, "canceled")))
+                if (args.State == "completed" || args.State == "canceled")
                 {
-                    downloadId = args.EventData["guid"].ToString();
-                    downloaded = downloadState.Equals("completed");
+                    downloadId = args.Guid;
+                    downloaded = args.State == "completed";
                     downloadCompleted.Set();
                 }
             };
