@@ -1,6 +1,7 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
 global url
 url = "https://www.selenium.dev/documentation/webdriver/interactions/alerts/"
@@ -13,7 +14,7 @@ def test_alert_popup():
     element.click()
 
     wait = WebDriverWait(driver, timeout=2)
-    alert = wait.until(lambda d : d.switch_to.alert)
+    alert = wait.until(EC.alert_is_present())
     text = alert.text
     alert.accept()
     assert text == "Sample alert"
@@ -27,7 +28,7 @@ def test_confirm_popup():
     driver.execute_script("arguments[0].click();", element)
 
     wait = WebDriverWait(driver, timeout=2)
-    alert = wait.until(lambda d : d.switch_to.alert)
+    alert = wait.until(EC.alert_is_present())
     text = alert.text
     alert.dismiss()
     assert text == "Are you sure?"
@@ -41,7 +42,7 @@ def test_prompt_popup():
     driver.execute_script("arguments[0].click();", element)
 
     wait = WebDriverWait(driver, timeout=2)
-    alert = wait.until(lambda d : d.switch_to.alert)
+    alert = wait.until(EC.alert_is_present())
     alert.send_keys("Selenium")
     text = alert.text
     alert.accept()

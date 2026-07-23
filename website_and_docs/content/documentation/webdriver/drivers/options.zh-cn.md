@@ -414,7 +414,7 @@ WebDriver创建新会话时,
 {{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L51-53">}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Drivers/OptionsTest.cs#L59-L60">}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< gh-codeblock path="/examples/ruby/spec/drivers/options_spec.rb#L60-L61" >}}
@@ -427,6 +427,9 @@ WebDriver创建新会话时,
 {{< /tab >}}
 {{< /tabpane >}}
 
+注意：对于 `beforeunload` 提示框，
+除了启用 [BiDi]({{< ref "../bidi/" >}}) 外，
+ChromeDriver 还需要设置 `ignore` 才能保持提示框打开。
 
 ## setWindowRect
 

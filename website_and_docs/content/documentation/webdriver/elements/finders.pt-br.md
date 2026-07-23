@@ -44,8 +44,8 @@ dois elementos que têm um nome de classe de "tomatoes" então este método reto
   {{< tab header="Java" >}}
 WebElement vegetable = driver.findElement(By.className("tomatoes"));
   {{< /tab >}}
-  {{< tab header="Python" >}}
-vegetable = driver.find_element(By.CLASS_NAME, "tomatoes")
+  {{< tab header="Python" text=true >}}
+  {{< gh-codeblock path="/examples/python/tests/elements/test_finders.py#L23">}}
   {{< /tab >}}
   {{< tab header="CSharp" >}}
 var vegetable = driver.FindElement(By.ClassName("tomatoes"));
@@ -75,9 +75,8 @@ ancestral do elemento indesejado, então invoque o find element nesse objeto:
 WebElement fruits = driver.findElement(By.id("fruits"));
 WebElement fruit = fruits.findElement(By.className("tomatoes"));
   {{< /tab >}}
-  {{< tab header="Python" >}}
-fruits = driver.find_element(By.ID, "fruits")
-fruit = fruits.find_element(By.CLASS_NAME,"tomatoes")
+  {{< tab header="Python" text=true >}}
+  {{< gh-codeblock path="/examples/python/tests/elements/test_finders.py#L28-L29">}}
   {{< /tab >}}
   {{< tab header="CSharp" >}}
 IWebElement fruits = driver.FindElement(By.Id("fruits"));
@@ -117,10 +116,8 @@ WebElement shadowHost = driver.findElement(By.cssSelector("#shadow_host"));
 SearchContext shadowRoot = shadowHost.getShadowRoot();
 WebElement shadowContent = shadowRoot.findElement(By.cssSelector("#shadow_content"));
 {{< /tab >}}
-{{< tab header="Python" >}}
-shadow_host = driver.find_element(By.CSS_SELECTOR, '#shadow_host')
-shadow_root = shadow_host.shadow_root
-shadow_content = shadow_root.find_element(By.CSS_SELECTOR, '#shadow_content')
+{{< tab header="Python" text=true >}}
+{{< gh-codeblock path="/examples/python/tests/elements/test_finders.py#L47-L50">}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 var shadowHost = _driver.FindElement(By.CssSelector("#shadow_host"));
@@ -154,8 +151,8 @@ Para esse exemplo, utilizaremos o CSS Selector:
   {{< tab header="Java" >}}
 WebElement fruit = driver.findElement(By.cssSelector("#fruits .tomatoes"));
   {{< /tab >}}
-  {{< tab header="Python" >}}
-fruit = driver.find_element(By.CSS_SELECTOR,"#fruits .tomatoes")
+  {{< tab header="Python" text=true >}}
+  {{< gh-codeblock path="/examples/python/tests/elements/test_finders.py#L34" >}}
   {{< /tab >}}
   {{< tab header="CSharp" >}}
 var fruit = driver.FindElement(By.CssSelector("#fruits .tomatoes"));
@@ -182,8 +179,8 @@ referências a todos os itens da lista de frutas e vegetais serão devolvidas em
   {{< tab header="Java" >}}
 List<WebElement> plants = driver.findElements(By.tagName("li"));
   {{< /tab >}}
-  {{< tab header="Python" >}}
-plants = driver.find_elements(By.TAG_NAME, "li")
+  {{< tab header="Python" text=true >}}
+  {{< gh-codeblock path="/examples/python/tests/elements/test_finders.py#L39" >}}
   {{< /tab >}}
   {{< tab header="CSharp" >}}
 IReadOnlyList<IWebElement> plants = driver.FindElements(By.TagName("li"));
@@ -212,20 +209,8 @@ for (WebElement element : elements) {
     System.out.println("Paragraph text:" + element.getText());
 }
   {{< /tab >}}
-  {{< tab header="Python" >}}
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-
-driver = webdriver.Firefox()
-
-    # Navegar até a URL
-driver.get("https://www.example.com")
-
-    # Obtém todos os elementos disponiveis com o nome da tag 'p'
-elements = driver.find_elements(By.TAG_NAME, 'p')
-
-for e in elements:
-    print(e.text)
+  {{< tab header="Python" text=true >}}
+  {{< gh-codeblock path="/examples/python/tests/elements/test_finders.py#L62-L64" >}}
   {{< /tab >}}
   {{< tab header="CSharp" >}}
 using OpenQA.Selenium;
@@ -254,7 +239,7 @@ namespace FindElementsExample {
 }
   {{< /tab >}}
    {{< tab header="Ruby" text=true >}}
-   {{< gh-codeblock path="/examples/ruby/spec/elements/finders_spec.rb#L27-L28" >}}
+   {{< gh-codeblock path="/examples/ruby/spec/elements/finders_spec.rb#L28-L29" >}}
    {{< /tab >}}
   {{< tab header="JavaScript" >}}
 const {Builder, By} = require('selenium-webdriver');
@@ -328,27 +313,8 @@ Para realizar isso, o WebElement pai é encadeado com o 'findElements' para aces
       }
   }
   {{< /tab >}}
-  {{< tab header="Python" >}}
-##get elements from parent element using TAG_NAME
-
-    # Obtém o elemento com o nome da tag 'div'
-element = driver.find_element(By.TAG_NAME, 'div')
-
-    # Obtém todos os elementos disponíveis com o nome da tag 'p'
-elements = element.find_elements(By.TAG_NAME, 'p')
-for e in elements:
-    print(e.text)
-
-##get elements from parent element using XPATH
-##NOTE: in order to utilize XPATH from current element, you must add "." to beginning of path
-
-    # Get first element of tag 'ul'
-element = driver.find_element(By.XPATH, '//ul')
-
-    # get children of tag 'ul' with tag 'li'
-elements  = element.find_elements(By.XPATH, './/li')
-for e in elements:
-    print(e.text)
+  {{< tab header="Python" text=true >}}
+  {{< gh-codeblock path="/examples/python/tests/elements/test_finders.py#L75-L78" >}}
   {{< /tab >}}
   {{< tab header="CSharp" >}}
 using OpenQA.Selenium;
@@ -378,7 +344,7 @@ namespace FindElementsFromElement {
 }
   {{< /tab >}}
    {{< tab header="Ruby" text=true >}}
-   {{< gh-codeblock path="/examples/ruby/spec/elements/finders_spec.rb#L32-L34" >}}
+   {{< gh-codeblock path="/examples/ruby/spec/elements/finders_spec.rb#L33-L35" >}}
    {{< /tab >}}
   {{< tab header="JavaScript" >}}
   const {Builder, By} = require('selenium-webdriver');
@@ -449,17 +415,8 @@ Ele é usado para rastrear (ou) encontrar um elemento DOM que tem o foco no cont
     }
   }
   {{< /tab >}}
-  {{< tab header="Python" >}}
-  from selenium import webdriver
-  from selenium.webdriver.common.by import By
-
-  driver = webdriver.Chrome()
-  driver.get("https://www.google.com")
-  driver.find_element(By.CSS_SELECTOR, '[name="q"]').send_keys("webElement")
-
-    # Obter atributo do elemento atualmente ativo
-  attr = driver.switch_to.active_element.get_attribute("title")
-  print(attr)
+  {{< tab header="Python" text=true >}}
+  {{< gh-codeblock path="/examples/python/tests/elements/test_finders.py#L89-L90" >}}
   {{< /tab >}}
   {{< tab header="CSharp" >}}
     using OpenQA.Selenium;
@@ -485,7 +442,7 @@ Ele é usado para rastrear (ou) encontrar um elemento DOM que tem o foco no cont
     }
   {{< /tab >}}
   {{< tab header="Ruby" text=true >}}
-  {{< gh-codeblock path="/examples/ruby/spec/elements/finders_spec.rb#L38-L39" >}}
+  {{< gh-codeblock path="/examples/ruby/spec/elements/finders_spec.rb#L40-L41" >}}
   {{< /tab >}}
   {{< tab header="JavaScript" >}}
   const {Builder, By} = require('selenium-webdriver');

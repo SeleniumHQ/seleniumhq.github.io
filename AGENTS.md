@@ -18,12 +18,10 @@
   instruction overlay.
 - If `.local/agent/skills/` exists, inspect its `*/SKILL.md` files and treat them as
   additional user-defined skills.
-
-## Project-defined skills
-
-- `scripts/skills/` holds shared, repo-specific skills committed to the codebase (as opposed
-  to `.local/agent/skills/`, which is personal and untracked). Inspect its `*/SKILL.md` files
-  and treat them as additional skills available in this repo.
+- Shared project skills live in `.agents/skills/`, committed to the codebase (as opposed to
+  `.local/agent/skills/`, which is personal and untracked). Inspect its `*/SKILL.md` files and
+  treat them as additional skills available in this repo, and read the relevant one in full
+  before doing repeated or domain-specific workflows.
 
 ## Repository map
 
@@ -37,7 +35,8 @@
   static files, and structured data.
 - `examples/`: Runnable examples referenced from docs through `gh-codeblock`.
 - `scripts/`, `build-site.sh`, `netlify.toml`: Build, preview, release, and deploy support.
-  `scripts/skills/` holds committed, repo-specific Claude skills (see "Project-defined skills").
+- `.agents/skills/`: Committed, repo-specific agent skills (see "Local contributor
+  customization").
 - `website_and_docs/public/`, `website_and_docs/resources/`: Generated Hugo output/cache; avoid
   manual edits.
 

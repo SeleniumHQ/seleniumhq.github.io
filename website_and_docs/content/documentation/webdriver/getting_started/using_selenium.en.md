@@ -158,7 +158,7 @@ In your project's `package.json`, add requirement to `dependencies`:
 {{< gh-codeblock path="/examples/javascript/test/getting_started/runningTests.spec.js#L14-L15" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L20-21" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -234,7 +234,7 @@ gradle clean test
 
 {{% /tab %}}
 {{% tab header="Python" %}}
-{{< gh-codeblock path="/examples/python/README.md#L35" >}}
+{{< gh-codeblock path="/examples/python/README.md#L44" >}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
 {{< gh-codeblock path="/examples/dotnet/README.md#L44" >}}

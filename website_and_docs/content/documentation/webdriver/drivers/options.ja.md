@@ -389,7 +389,7 @@ WebDriverの `セッション` には特定の `セッションタイムアウ�
 {{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L51-53">}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Drivers/OptionsTest.cs#L59-L60">}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< gh-codeblock path="/examples/ruby/spec/drivers/options_spec.rb#L60-L61" >}}
@@ -401,6 +401,10 @@ WebDriverの `セッション` には特定の `セッションタイムアウ�
 {{< badge-code >}}
 {{< /tab >}}
 {{< /tabpane >}}
+
+注：`beforeunload` プロンプトに関しては、
+プロンプトを開いたままにするために、[BiDi]({{< ref "../bidi/" >}}) を有効にすることに加えて、
+ChromeDriver で `ignore` を設定する必要があります。
 
 ## setWindowRect
 

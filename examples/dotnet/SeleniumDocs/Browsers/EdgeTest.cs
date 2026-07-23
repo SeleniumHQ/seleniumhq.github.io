@@ -3,7 +3,6 @@ using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
 using System.Threading;
-using System.Threading.Tasks;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chromium;
@@ -26,10 +25,16 @@ namespace SeleniumDocs.Browsers
         [TestCleanup]
         public void Cleanup()
         {
-            driver.Quit();
+            driver?.Quit();
             if (_logLocation != null && File.Exists(_logLocation))
             {
-                File.Delete(_logLocation);
+                try
+                {
+                    File.Delete(_logLocation);
+                }
+                catch (IOException)
+                {
+                }
             }
         }
 
@@ -102,10 +107,9 @@ namespace SeleniumDocs.Browsers
             service.LogPath = _logLocation;
 
             driver = new EdgeDriver(service, options);
-            driver.Quit(); // Close the Service log file before reading
-            // Remove it
-            Thread.Sleep(10_000);
-            var lines = File.ReadLines(_logLocation);
+            driver.Quit();
+            service.Dispose();
+            var lines = ReadLogLines(GetLogLocation());
             Assert.IsNotNull(lines.FirstOrDefault(line => line.Contains("Starting Microsoft Edge WebDriver")));
         }
 
@@ -121,10 +125,9 @@ namespace SeleniumDocs.Browsers
 
             driver = new EdgeDriver(service, options);
 
-            driver.Quit(); // Close the Service log file before reading
-            // Remove it
-            Thread.Sleep(10_000);
-            var lines = File.ReadLines(_logLocation);
+            driver.Quit();
+            service.Dispose();
+            var lines = ReadLogLines(GetLogLocation());
             Assert.IsNotNull(lines.FirstOrDefault(line => line.Contains("[DEBUG]:")));
         }
 
@@ -142,10 +145,9 @@ namespace SeleniumDocs.Browsers
 
             driver = new EdgeDriver(service, options);
 
-            driver.Quit(); // Close the Service log file before reading
-            // Remove it
-            Thread.Sleep(10_000);
-            var lines = File.ReadLines(_logLocation);
+            driver.Quit();
+            service.Dispose();
+            var lines = ReadLogLines(GetLogLocation());
             var regex = new Regex(@"\[\d\d-\d\d-\d\d\d\d \d\d:\d\d:\d\d\.\d+\]");
             Assert.IsNotNull(lines.FirstOrDefault(line => regex.Matches(line).Count > 0));
         }
@@ -162,15 +164,42 @@ namespace SeleniumDocs.Browsers
             service.DisableBuildCheck = true;
 
             driver = new EdgeDriver(service, options);
-            driver.Quit(); // Close the Service log file before reading
-            // Remove it
-            Thread.Sleep(10_000);
+            driver.Quit();
+            service.Dispose();
             var expected = "[WARNING]: You are using an unsupported command-line switch: --disable-build-check";
-            var lines = File.ReadLines(_logLocation);
+            var lines = ReadLogLines(GetLogLocation());
             Assert.IsNotNull(lines.FirstOrDefault(line => line.Contains(expected)));
         }
 
-        private static async Task<string> GetEdgeLocationAsync()
+        private static string[] ReadLogLines(string path)
+        {
+            const int maxAttempts = 20;
+            for (var attempt = 1; attempt <= maxAttempts; attempt++)
+            {
+                try
+                {
+                    return File.ReadAllLines(path);
+                }
+                catch (IOException) when (attempt < maxAttempts)
+                {
+                    Thread.Sleep(500);
+                }
+            }
+
+            return File.ReadAllLines(path);
+        }
+
+        private string GetLogLocation()
+        {
+            if (string.IsNullOrEmpty(_logLocation) && !File.Exists(_logLocation))
+            {
+                _logLocation = Path.GetTempFileName();
+            }
+
+            return _logLocation;
+        }
+
+        private static string GetEdgeLocation()
         {
             var options = new EdgeOptions
             {
