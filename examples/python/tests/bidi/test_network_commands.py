@@ -77,12 +77,6 @@ def test_add_and_remove_request_handler(driver):
     assert not requests
 
 
-# The following auth-challenge tests use Firefox because Chrome does not
-# expose its native basic-auth dialog as a WebDriver Alert, so the fallback
-# and cancellation paths would hang waiting on a dialog Selenium can't see
-# or dismiss. This mirrors the Java and JavaScript BiDi examples.
-
-
 @pytest.mark.driver_type("firefox_bidi")
 def test_continue_with_auth_credentials(driver):
     callback_id = driver.network.add_auth_handler("admin", "admin")
