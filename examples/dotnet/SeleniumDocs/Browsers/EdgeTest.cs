@@ -53,12 +53,12 @@ namespace SeleniumDocs.Browsers
         }
 
         [TestMethod]
-        public void SetBrowserLocation()
+        public async System.Threading.Tasks.Task SetBrowserLocation()
         {
             var options = new EdgeOptions();
             options.AddArgument("--no-sandbox");
 
-            options.BinaryLocation = GetEdgeLocation();
+            options.BinaryLocation = await GetEdgeLocationAsync();
 
             driver = new EdgeDriver(options);
         }
@@ -194,13 +194,13 @@ namespace SeleniumDocs.Browsers
             return _logLocation;
         }
 
-        private static string GetEdgeLocation()
+        private static async System.Threading.Tasks.Task<string> GetEdgeLocationAsync()
         {
             var options = new EdgeOptions
             {
                 BrowserVersion = "stable"
             };
-            return new DriverFinder(options).GetBrowserPathAsync().AsTask().GetAwaiter().GetResult();
+            return await new DriverFinder(options).GetBrowserPathAsync();
         }
     }
 }

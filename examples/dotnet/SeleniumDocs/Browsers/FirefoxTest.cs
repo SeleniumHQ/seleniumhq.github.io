@@ -19,11 +19,11 @@ namespace SeleniumDocs.Browsers
         [TestCleanup]
         public void Cleanup()
         {
+            driver?.Quit();
             if (!String.IsNullOrEmpty(_logLocation) && File.Exists(_logLocation))
             {
                 File.Delete(_logLocation);
             }
-            driver.Quit();
             if (_tempPath != null && Directory.Exists(_tempPath))
             {
                 Directory.Delete(_tempPath, true);
@@ -48,11 +48,11 @@ namespace SeleniumDocs.Browsers
         }
 
         [TestMethod]
-        public void SetBinary()
+        public async System.Threading.Tasks.Task SetBinary()
         {
             var options = new FirefoxOptions();
 
-            options.BinaryLocation = GetFirefoxLocation();
+            options.BinaryLocation = await GetFirefoxLocationAsync();
 
             driver = new FirefoxDriver(options);
         }
@@ -170,7 +170,7 @@ namespace SeleniumDocs.Browsers
             IWebElement injected = driver.FindElement(By.Id("webextensions-selenium-example"));
             Assert.AreEqual("Content injected by webextensions-selenium-example", injected.Text);
         }
-        
+
         private string GetLogLocation()
         {
             if (string.IsNullOrEmpty(_logLocation) && !File.Exists(_logLocation))
@@ -197,13 +197,13 @@ namespace SeleniumDocs.Browsers
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(2);
         }
 
-        private static string GetFirefoxLocation()
+        private static async System.Threading.Tasks.Task<string> GetFirefoxLocationAsync()
         {
             var options = new FirefoxOptions()
             {
                 BrowserVersion = "stable"
             };
-            return new DriverFinder(options).GetBrowserPathAsync().AsTask().GetAwaiter().GetResult();
+            return await new DriverFinder(options).GetBrowserPathAsync();
         }
 
         private void ResetGlobalLog()

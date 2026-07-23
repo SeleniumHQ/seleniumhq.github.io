@@ -22,11 +22,11 @@ namespace SeleniumDocs.Browsers
         [TestCleanup]
         public void Cleanup()
         {
+            driver?.Quit();
             if (_logLocation != null && File.Exists(_logLocation))
             {
                 File.Delete(_logLocation);
             }
-            driver?.Quit();
         }
 
         [TestMethod]
@@ -47,7 +47,7 @@ namespace SeleniumDocs.Browsers
         }
 
         [TestMethod]
-        public void SetBrowserLocation()
+        public async Task SetBrowserLocation()
         {
             string userDataDir = Path.Combine(Path.GetTempPath(), Path.GetRandomFileName());
             Directory.CreateDirectory(userDataDir);
@@ -56,7 +56,7 @@ namespace SeleniumDocs.Browsers
             options.AddArgument("--no-sandbox");
             options.AddArgument("--disable-dev-shm-usage");
 
-            options.BinaryLocation = GetChromeLocation();
+            options.BinaryLocation = await GetChromeLocationAsync();
 
             driver = new ChromeDriver(options);
         }
@@ -171,13 +171,13 @@ namespace SeleniumDocs.Browsers
             return _logLocation;
         }
 
-        private static string GetChromeLocation()
+        private static async Task<string> GetChromeLocationAsync()
         {
             var options = new ChromeOptions
             {
                 BrowserVersion = "stable"
             };
-            return new DriverFinder(options).GetBrowserPathAsync().AsTask().GetAwaiter().GetResult();
+            return await new DriverFinder(options).GetBrowserPathAsync();
         }
     }
 }

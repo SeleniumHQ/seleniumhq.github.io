@@ -18,6 +18,7 @@ namespace SeleniumDocs.Browsers
         [TestCleanup]
         public void Cleanup()
         {
+            _driver?.Quit();
             if (_logLocation != null && File.Exists(_logLocation))
             {
                 File.Delete(_logLocation);
@@ -26,7 +27,6 @@ namespace SeleniumDocs.Browsers
             {
                 File.Delete(_tempPath);
             }
-            _driver.Quit();
         }
 
         [TestMethod]
