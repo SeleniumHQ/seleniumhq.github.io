@@ -17,6 +17,7 @@
 
 import pytest
 from selenium.common.exceptions import WebDriverException
+from selenium.webdriver.common.by import By
 
 
 @pytest.mark.driver_type("bidi")
@@ -74,3 +75,75 @@ def test_add_and_remove_request_handler(driver):
 
     driver.get("https://www.selenium.dev/selenium/web/blank.html")
     assert not requests
+
+
+# The following auth-challenge tests use Firefox because Chrome does not
+# expose its native basic-auth dialog as a WebDriver Alert, so the fallback
+# and cancellation paths would hang waiting on a dialog Selenium can't see
+# or dismiss. This mirrors the Java and JavaScript BiDi examples.
+
+
+@pytest.mark.driver_type("firefox_bidi")
+def test_continue_with_auth_credentials(driver):
+    callback_id = driver.network.add_auth_handler("admin", "admin")
+
+    try:
+        driver.get("https://the-internet.herokuapp.com/basic_auth")
+        success_message = "Congratulations! You must have the proper credentials."
+        assert driver.find_element(By.TAG_NAME, "p").text == success_message
+    finally:
+        driver.network.remove_auth_handler(callback_id)
+
+
+@pytest.mark.driver_type("firefox_bidi")
+def test_continue_without_auth_credentials(driver):
+    from selenium.webdriver.support import expected_conditions as EC
+    from selenium.webdriver.support.wait import WebDriverWait
+
+    def callback(request):
+        pass  # Neither provide_credentials() nor cancel(): falls back to the browser's default handling.
+
+    handler_id = driver.network.add_authentication_handler(callback)
+
+    try:
+        driver.get("https://the-internet.herokuapp.com/basic_auth")
+        alert = WebDriverWait(driver, 5).until(EC.alert_is_present())
+        alert.dismiss()
+        WebDriverWait(driver, 5).until(lambda d: "Not authorized" in d.page_source)
+    finally:
+        driver.network.remove_authentication_handler(handler_id)
+
+
+@pytest.mark.driver_type("firefox_bidi")
+def test_cancel_auth(driver):
+    def callback(request):
+        request.cancel()
+
+    handler_id = driver.network.add_authentication_handler(callback)
+
+    try:
+        driver.get("https://the-internet.herokuapp.com/basic_auth")
+        assert "Not authorized" in driver.page_source
+    finally:
+        driver.network.remove_authentication_handler(handler_id)
+
+
+@pytest.mark.driver_type("firefox_bidi")
+def test_auth_required_event(driver):
+    from selenium.webdriver.common.bidi.network import AuthenticationRequest
+
+    challenges = []
+
+    def callback(request: AuthenticationRequest):
+        challenges.append(request)
+        request.provide_credentials("admin", "admin")
+
+    handler_id = driver.network.add_authentication_handler(callback)
+
+    try:
+        driver.get("https://the-internet.herokuapp.com/basic_auth")
+        assert len(challenges) == 1
+        assert challenges[0].scheme == "Basic"
+        assert challenges[0].realm == "Restricted Area"
+    finally:
+        driver.network.remove_authentication_handler(handler_id)

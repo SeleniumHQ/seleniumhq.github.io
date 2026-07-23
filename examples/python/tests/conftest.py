@@ -34,6 +34,14 @@ def driver(request):
     elif driver_type == "firefox":
         os.environ["MOZ_ENABLE_WAYLAND"] = "0"
         driver = webdriver.Firefox()
+    elif driver_type == "firefox_bidi":
+        # Chrome does not expose its native basic-auth dialog as a WebDriver
+        # Alert, so auth-challenge tests that need to observe/dismiss it use
+        # Firefox instead, matching the Java and JavaScript BiDi examples.
+        os.environ["MOZ_ENABLE_WAYLAND"] = "0"
+        options = webdriver.FirefoxOptions()
+        options.enable_bidi = True
+        driver = webdriver.Firefox(options=options)
     else:
         driver = webdriver.Chrome()
 
