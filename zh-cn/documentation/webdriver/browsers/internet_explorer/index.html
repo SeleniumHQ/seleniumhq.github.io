@@ -329,6 +329,7 @@ Close</button></div></div><div style=padding:20px><div id=codeContent_c790e0b99a
 </span></span></span><span style=display:flex><span><span style=color:#c4a000>        [TestCleanup]</span>
 </span></span><span style=display:flex><span>        <span style=color:#204a87;font-weight:700>public</span> <span style=color:#204a87;font-weight:700>void</span> <span style=color:#000>Cleanup</span><span style=color:#000;font-weight:700>()</span>
 </span></span><span style=display:flex><span>        <span style=color:#000;font-weight:700>{</span>
+</span></span><span style=display:flex><span>            <span style=color:#000>_driver</span><span style=color:#000;font-weight:700>?.</span><span style=color:#000>Quit</span><span style=color:#000;font-weight:700>();</span>
 </span></span><span style=display:flex><span>            <span style=color:#204a87;font-weight:700>if</span> <span style=color:#000;font-weight:700>(</span><span style=color:#000>_logLocation</span> <span style=color:#000;font-weight:700>!=</span> <span style=color:#204a87;font-weight:700>null</span> <span style=color:#000;font-weight:700>&amp;&amp;</span> <span style=color:#000>File</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>Exists</span><span style=color:#000;font-weight:700>(</span><span style=color:#000>_logLocation</span><span style=color:#000;font-weight:700>))</span>
 </span></span><span style=display:flex><span>            <span style=color:#000;font-weight:700>{</span>
 </span></span><span style=display:flex><span>                <span style=color:#000>File</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>Delete</span><span style=color:#000;font-weight:700>(</span><span style=color:#000>_logLocation</span><span style=color:#000;font-weight:700>);</span>
@@ -337,7 +338,6 @@ Close</button></div></div><div style=padding:20px><div id=codeContent_c790e0b99a
 </span></span><span style=display:flex><span>            <span style=color:#000;font-weight:700>{</span>
 </span></span><span style=display:flex><span>                <span style=color:#000>File</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>Delete</span><span style=color:#000;font-weight:700>(</span><span style=color:#000>_tempPath</span><span style=color:#000;font-weight:700>);</span>
 </span></span><span style=display:flex><span>            <span style=color:#000;font-weight:700>}</span>
-</span></span><span style=display:flex><span>            <span style=color:#000>_driver</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>Quit</span><span style=color:#000;font-weight:700>();</span>
 </span></span><span style=display:flex><span>        <span style=color:#000;font-weight:700>}</span>
 </span></span><span style=display:flex><span><span style=color:#c4a000>
 </span></span></span><span style=display:flex><span><span style=color:#c4a000>        [TestMethod]</span>
@@ -838,6 +838,7 @@ Close</button></div></div><div style=padding:20px><div id=codeContent_1608d987aa
 </span></span></span><span style=display:flex><span><span style=color:#c4a000>        [TestCleanup]</span>
 </span></span><span style=display:flex><span>        <span style=color:#204a87;font-weight:700>public</span> <span style=color:#204a87;font-weight:700>void</span> <span style=color:#000>Cleanup</span><span style=color:#000;font-weight:700>()</span>
 </span></span><span style=display:flex><span>        <span style=color:#000;font-weight:700>{</span>
+</span></span><span style=display:flex><span>            <span style=color:#000>_driver</span><span style=color:#000;font-weight:700>?.</span><span style=color:#000>Quit</span><span style=color:#000;font-weight:700>();</span>
 </span></span><span style=display:flex><span>            <span style=color:#204a87;font-weight:700>if</span> <span style=color:#000;font-weight:700>(</span><span style=color:#000>_logLocation</span> <span style=color:#000;font-weight:700>!=</span> <span style=color:#204a87;font-weight:700>null</span> <span style=color:#000;font-weight:700>&amp;&amp;</span> <span style=color:#000>File</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>Exists</span><span style=color:#000;font-weight:700>(</span><span style=color:#000>_logLocation</span><span style=color:#000;font-weight:700>))</span>
 </span></span><span style=display:flex><span>            <span style=color:#000;font-weight:700>{</span>
 </span></span><span style=display:flex><span>                <span style=color:#000>File</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>Delete</span><span style=color:#000;font-weight:700>(</span><span style=color:#000>_logLocation</span><span style=color:#000;font-weight:700>);</span>
@@ -846,7 +847,6 @@ Close</button></div></div><div style=padding:20px><div id=codeContent_1608d987aa
 </span></span><span style=display:flex><span>            <span style=color:#000;font-weight:700>{</span>
 </span></span><span style=display:flex><span>                <span style=color:#000>File</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>Delete</span><span style=color:#000;font-weight:700>(</span><span style=color:#000>_tempPath</span><span style=color:#000;font-weight:700>);</span>
 </span></span><span style=display:flex><span>            <span style=color:#000;font-weight:700>}</span>
-</span></span><span style=display:flex><span>            <span style=color:#000>_driver</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>Quit</span><span style=color:#000;font-weight:700>();</span>
 </span></span><span style=display:flex><span>        <span style=color:#000;font-weight:700>}</span>
 </span></span><span style=display:flex><span><span style=color:#c4a000>
 </span></span></span><span style=display:flex><span><span style=color:#c4a000>        [TestMethod]</span>
@@ -4313,6 +4313,7 @@ Close</button></div></div><div style=padding:20px><div id=codeContent_ed17de527d
 </span></span></span><span style=display:flex><span><span style=color:#c4a000>        [TestCleanup]</span>
 </span></span><span style=display:flex><span>        <span style=color:#204a87;font-weight:700>public</span> <span style=color:#204a87;font-weight:700>void</span> <span style=color:#000>Cleanup</span><span style=color:#000;font-weight:700>()</span>
 </span></span><span style=display:flex><span>        <span style=color:#000;font-weight:700>{</span>
+</span></span><span style=display:flex><span>            <span style=color:#000>_driver</span><span style=color:#000;font-weight:700>?.</span><span style=color:#000>Quit</span><span style=color:#000;font-weight:700>();</span>
 </span></span><span style=display:flex><span>            <span style=color:#204a87;font-weight:700>if</span> <span style=color:#000;font-weight:700>(</span><span style=color:#000>_logLocation</span> <span style=color:#000;font-weight:700>!=</span> <span style=color:#204a87;font-weight:700>null</span> <span style=color:#000;font-weight:700>&amp;&amp;</span> <span style=color:#000>File</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>Exists</span><span style=color:#000;font-weight:700>(</span><span style=color:#000>_logLocation</span><span style=color:#000;font-weight:700>))</span>
 </span></span><span style=display:flex><span>            <span style=color:#000;font-weight:700>{</span>
 </span></span><span style=display:flex><span>                <span style=color:#000>File</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>Delete</span><span style=color:#000;font-weight:700>(</span><span style=color:#000>_logLocation</span><span style=color:#000;font-weight:700>);</span>
@@ -4321,7 +4322,6 @@ Close</button></div></div><div style=padding:20px><div id=codeContent_ed17de527d
 </span></span><span style=display:flex><span>            <span style=color:#000;font-weight:700>{</span>
 </span></span><span style=display:flex><span>                <span style=color:#000>File</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>Delete</span><span style=color:#000;font-weight:700>(</span><span style=color:#000>_tempPath</span><span style=color:#000;font-weight:700>);</span>
 </span></span><span style=display:flex><span>            <span style=color:#000;font-weight:700>}</span>
-</span></span><span style=display:flex><span>            <span style=color:#000>_driver</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>Quit</span><span style=color:#000;font-weight:700>();</span>
 </span></span><span style=display:flex><span>        <span style=color:#000;font-weight:700>}</span>
 </span></span><span style=display:flex><span><span style=color:#c4a000>
 </span></span></span><span style=display:flex><span><span style=color:#c4a000>        [TestMethod]</span>
@@ -4818,6 +4818,7 @@ Close</button></div></div><div style=padding:20px><div id=codeContent_d334657265
 </span></span></span><span style=display:flex><span><span style=color:#c4a000>        [TestCleanup]</span>
 </span></span><span style=display:flex><span>        <span style=color:#204a87;font-weight:700>public</span> <span style=color:#204a87;font-weight:700>void</span> <span style=color:#000>Cleanup</span><span style=color:#000;font-weight:700>()</span>
 </span></span><span style=display:flex><span>        <span style=color:#000;font-weight:700>{</span>
+</span></span><span style=display:flex><span>            <span style=color:#000>_driver</span><span style=color:#000;font-weight:700>?.</span><span style=color:#000>Quit</span><span style=color:#000;font-weight:700>();</span>
 </span></span><span style=display:flex><span>            <span style=color:#204a87;font-weight:700>if</span> <span style=color:#000;font-weight:700>(</span><span style=color:#000>_logLocation</span> <span style=color:#000;font-weight:700>!=</span> <span style=color:#204a87;font-weight:700>null</span> <span style=color:#000;font-weight:700>&amp;&amp;</span> <span style=color:#000>File</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>Exists</span><span style=color:#000;font-weight:700>(</span><span style=color:#000>_logLocation</span><span style=color:#000;font-weight:700>))</span>
 </span></span><span style=display:flex><span>            <span style=color:#000;font-weight:700>{</span>
 </span></span><span style=display:flex><span>                <span style=color:#000>File</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>Delete</span><span style=color:#000;font-weight:700>(</span><span style=color:#000>_logLocation</span><span style=color:#000;font-weight:700>);</span>
@@ -4826,7 +4827,6 @@ Close</button></div></div><div style=padding:20px><div id=codeContent_d334657265
 </span></span><span style=display:flex><span>            <span style=color:#000;font-weight:700>{</span>
 </span></span><span style=display:flex><span>                <span style=color:#000>File</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>Delete</span><span style=color:#000;font-weight:700>(</span><span style=color:#000>_tempPath</span><span style=color:#000;font-weight:700>);</span>
 </span></span><span style=display:flex><span>            <span style=color:#000;font-weight:700>}</span>
-</span></span><span style=display:flex><span>            <span style=color:#000>_driver</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>Quit</span><span style=color:#000;font-weight:700>();</span>
 </span></span><span style=display:flex><span>        <span style=color:#000;font-weight:700>}</span>
 </span></span><span style=display:flex><span><span style=color:#c4a000>
 </span></span></span><span style=display:flex><span><span style=color:#c4a000>        [TestMethod]</span>
