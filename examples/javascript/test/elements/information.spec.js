@@ -27,7 +27,7 @@ describe('Element Information Test', function () {
   });
   
   it('Check if checkbox is selected', async function () {
-    // Returns true if element ins checked else returns false
+    // Returns true if element is checked else returns false
     let isSelected = await driver.findElement(By.name("checkbox_input")).isSelected();
   
     assert.equal(isSelected, true);

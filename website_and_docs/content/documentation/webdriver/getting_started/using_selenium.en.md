@@ -158,7 +158,7 @@ In your project's `package.json`, add requirement to `dependencies`:
 {{< gh-codeblock path="/examples/javascript/test/getting_started/runningTests.spec.js#L14-L15" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/getting_started/FirstScriptTest.kt#L20-21" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
