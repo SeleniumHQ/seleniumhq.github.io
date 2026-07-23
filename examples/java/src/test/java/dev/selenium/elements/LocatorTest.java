@@ -99,7 +99,7 @@ public class LocatorTest {
     public void testByChained() {
         driver.get("https://www.selenium.dev/selenium/web/login.html");
 
-        By locator = new ByChained(By.id("login-form"), By.id("username-field"));
+        By locator = new ByChained(By.id("login-form"), By.tagName("input"));
         WebElement usernameInput = driver.findElement(locator);
 
         Assertions.assertEquals("Username", usernameInput.getAttribute("placeholder"));
