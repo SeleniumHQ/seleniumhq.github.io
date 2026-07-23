@@ -32,104 +32,76 @@ LoadableComponentは、PageObjectsの作成の負担を軽減することを目�
 
 モデル化するUIの例として、[新しいissue](https://github.com/SeleniumHQ/selenium/issues/new?assignees=&labels=I-defect%2Cneeds-triaging&projects=&template=bug-report.yml&title=%5B%F0%9F%90%9B+Bug%5D%3A+)のページをご覧ください。 
 テスト作成者の観点から、これは新しい問題を提出できるサービスを提供します。 
-基本的なページオブジェクトは次のようになります。
+基本的なページオブジェクト(このシンプルな版を `EditIssueBasic` と呼び、後で `EditIssue` という LoadableComponent に発展させます)は次のようになります。
 
-```java
-package com.example.webdriver;
-
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-
-public class EditIssue {
-
-  private final WebDriver driver;
-
-  public EditIssue(WebDriver driver) {
-    this.driver = driver;
-  }
-
-  public void setTitle(String title) {
-    WebElement field = driver.findElement(By.id("issue_title")));
-    clearAndType(field, title);
-  }
-
-  public void setBody(String body) {
-    WebElement field = driver.findElement(By.id("issue_body"));
-    clearAndType(field, body);
-  }
-
-  public void setHowToReproduce(String howToReproduce) {
-    WebElement field = driver.findElement(By.id("issue_form_repro-command"));
-    clearAndType(field, howToReproduce);
-  }
-
-  public void setLogOutput(String logOutput) {
-    WebElement field = driver.findElement(By.id("issue_form_logs"));
-    clearAndType(field, logOutput);
-  }
-
-  public void setOperatingSystem(String operatingSystem) {
-    WebElement field = driver.findElement(By.id("issue_form_operating-system"));
-    clearAndType(field, operatingSystem);
-  }
-
-  public void setSeleniumVersion(String seleniumVersion) {
-    WebElement field = driver.findElement(By.id("issue_form_selenium-version"));
-    clearAndType(field, logOutput);
-  }
-
-  public void setBrowserVersion(String browserVersion) {
-    WebElement field = driver.findElement(By.id("issue_form_browser-versions"));
-    clearAndType(field, browserVersion);
-  }
-
-  public void setDriverVersion(String driverVersion) {
-    WebElement field = driver.findElement(By.id("issue_form_browser-driver-versions"));
-    clearAndType(field, driverVersion);
-  }
-
-  public void setUsingGrid(String usingGrid) {
-    WebElement field = driver.findElement(By.id("issue_form_selenium-grid-version"));
-    clearAndType(field, usingGrid);
-  }
-
-  public IssueList submit() {
-    driver.findElement(By.cssSelector("button[type='submit']")).click();
-    return new IssueList(driver);
-  }
-
-  private void clearAndType(WebElement field, String text) {
-    field.clear();
-    field.sendKeys(text);
-  }
-}
-```
+{{< tabpane text=true >}}
+{{< tab header="Python" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Java" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/design_strategies/BestPractices.java#L14-L76" >}}
+{{< /tab >}}
+{{< tab header="CSharp" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< /tabpane >}}
 
 これをLoadableComponentに変換するには、これを基本型として設定するだけです。
 
-```java
-public class EditIssue extends LoadableComponent<EditIssue> {
-  // rest of class ignored for now
-}
-```
+{{< tabpane text=true >}}
+{{< tab header="Python" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Java" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/design_strategies/BestPractices.java#L162" >}}
+{{< /tab >}}
+{{< tab header="CSharp" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< /tabpane >}}
 
 この署名は少し変わっているように見えますが、それは、このクラスがEditIssueページをロードするLoadableComponentを表すことを意味します。
 
 このベースクラスを拡張することにより、2つの新しいメソッドを実装する必要があります。
 
-```java
-  @Override
-  protected void load() {
-    driver.get("https://github.com/SeleniumHQ/selenium/issues/new?assignees=&labels=I-defect%2Cneeds-triaging&projects=&template=bug-report.yml&title=%5B%F0%9F%90%9B+Bug%5D%3A+");
-  }
-
-  @Override
-  protected void isLoaded() throws Error {
-    String url = driver.getCurrentUrl();
-    assertTrue("Not on the issue entry page: " + url, url.endsWith("/new"));
-  }
-```
+{{< tabpane text=true >}}
+{{< tab header="Python" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Java" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/design_strategies/BestPractices.java#L188-L201" >}}
+{{< /tab >}}
+{{< tab header="CSharp" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< /tabpane >}}
 
 `load` メソッドはページに移動するために使用され、　`isLoaded` メソッドは正しいページにいるかどうかを判断するために使用されます。 
 このメソッドはブール値を返す必要があるように見えますが、代わりにJUnitのAssertクラスを使用して一連のアサーションを実行します。 
@@ -138,94 +110,26 @@ public class EditIssue extends LoadableComponent<EditIssue> {
 
 少し手直しすると、PageObjectは次のようになります。
 
-```java
-package com.example.webdriver;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
-
-import static junit.framework.Assert.assertTrue;
-
-public class EditIssue extends LoadableComponent<EditIssue> {
-
-  private final WebDriver driver;
-  
-  // By default the PageFactory will locate elements with the same name or id
-  // as the field. Since the issue_title element has an id attribute of "issue_title"
-  // we don't need any additional annotations.
-  private WebElement issue_title;
-  
-  // But we'd prefer a different name in our code than "issue_body", so we use the
-  // FindBy annotation to tell the PageFactory how to locate the element.
-  @FindBy(id = "issue_body") private WebElement body;
-  
-  public EditIssue(WebDriver driver) {
-    this.driver = driver;
-    
-    // This call sets the WebElement fields.
-    PageFactory.initElements(driver, this);
-  }
-
-  @Override
-  protected void load() {
-    driver.get("https://github.com/SeleniumHQ/selenium/issues/new?assignees=&labels=I-defect%2Cneeds-triaging&projects=&template=bug-report.yml&title=%5B%F0%9F%90%9B+Bug%5D%3A+");
-  }
-
-  @Override
-  protected void isLoaded() throws Error {
-    String url = driver.getCurrentUrl();
-    assertTrue("Not on the issue entry page: " + url, url.endsWith("/new"));
-  }
-
-  public void setHowToReproduce(String howToReproduce) {
-    WebElement field = driver.findElement(By.id("issue_form_repro-command"));
-    clearAndType(field, howToReproduce);
-  }
-
-  public void setLogOutput(String logOutput) {
-    WebElement field = driver.findElement(By.id("issue_form_logs"));
-    clearAndType(field, logOutput);
-  }
-
-  public void setOperatingSystem(String operatingSystem) {
-    WebElement field = driver.findElement(By.id("issue_form_operating-system"));
-    clearAndType(field, operatingSystem);
-  }
-
-  public void setSeleniumVersion(String seleniumVersion) {
-    WebElement field = driver.findElement(By.id("issue_form_selenium-version"));
-    clearAndType(field, logOutput);
-  }
-
-  public void setBrowserVersion(String browserVersion) {
-    WebElement field = driver.findElement(By.id("issue_form_browser-versions"));
-    clearAndType(field, browserVersion);
-  }
-
-  public void setDriverVersion(String driverVersion) {
-    WebElement field = driver.findElement(By.id("issue_form_browser-driver-versions"));
-    clearAndType(field, driverVersion);
-  }
-
-  public void setUsingGrid(String usingGrid) {
-    WebElement field = driver.findElement(By.id("issue_form_selenium-grid-version"));
-    clearAndType(field, usingGrid);
-  }
-
-  public IssueList submit() {
-    driver.findElement(By.cssSelector("button[type='submit']")).click();
-    return new IssueList(driver);
-  }
-
-  private void clearAndType(WebElement field, String text) {
-    field.clear();
-    field.sendKeys(text);
-  }
-}
-
-```
+{{< tabpane text=true >}}
+{{< tab header="Python" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Java" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/design_strategies/BestPractices.java#L162-L247" >}}
+{{< /tab >}}
+{{< tab header="CSharp" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< /tabpane >}}
 
 それは私たちをあまり信じられなかったようですよね？ 
 これまでに行ったことの1つは、ページに移動する方法に関する情報をページ自体にカプセル化することです。
@@ -258,138 +162,97 @@ LoadableComponentsは、他のLoadableComponentsと組み合わせて使用す�
 
 ProjectPage.java:
 
-```java
-package com.example.webdriver;
-
-import org.openqa.selenium.WebDriver;
-
-import static org.junit.Assert.assertTrue;
-
-public class ProjectPage extends LoadableComponent<ProjectPage> {
-
-  private final WebDriver driver;
-  private final String projectName;
-
-  public ProjectPage(WebDriver driver, String projectName) {
-    this.driver = driver;
-    this.projectName = projectName;
-  }
-
-  @Override
-  protected void load() {
-    driver.get("http://" + projectName + ".googlecode.com/");
-  }
-
-  @Override
-  protected void isLoaded() throws Error {
-    String url = driver.getCurrentUrl();
-
-    assertTrue(url.contains(projectName));
-  }
-}
-```
+{{< tabpane text=true >}}
+{{< tab header="Python" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Java" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/design_strategies/BestPractices.java#L98-L119" >}}
+{{< /tab >}}
+{{< tab header="CSharp" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< /tabpane >}}
 
 and SecuredPage.java:
 
-```java
-package com.example.webdriver;
-
-import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-
-import static org.junit.Assert.fail;
-
-public class SecuredPage extends LoadableComponent<SecuredPage> {
-
-  private final WebDriver driver;
-  private final LoadableComponent<?> parent;
-  private final String username;
-  private final String password;
-
-  public SecuredPage(WebDriver driver, LoadableComponent<?> parent, String username, String password) {
-    this.driver = driver;
-    this.parent = parent;
-    this.username = username;
-    this.password = password;
-  }
-
-  @Override
-  protected void load() {
-    parent.get();
-
-    String originalUrl = driver.getCurrentUrl();
-
-    // Sign in
-    driver.get("https://www.google.com/accounts/ServiceLogin?service=code");
-    driver.findElement(By.name("Email")).sendKeys(username);
-    WebElement passwordField = driver.findElement(By.name("Passwd"));
-    passwordField.sendKeys(password);
-    passwordField.submit();
-
-    // Now return to the original URL
-    driver.get(originalUrl);
-  }
-
-  @Override
-  protected void isLoaded() throws Error {
-    // If you're signed in, you have the option of picking a different login.
-    // Let's check for the presence of that.
-
-    try {
-      WebElement div = driver.findElement(By.id("multilogin-dropdown"));
-    } catch (NoSuchElementException e) {
-      fail("Cannot locate user name link");
-    }
-  }
-}
-```
+{{< tabpane text=true >}}
+{{< tab header="Python" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Java" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/design_strategies/BestPractices.java#L121-L160" >}}
+{{< /tab >}}
+{{< tab header="CSharp" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< /tabpane >}}
 
 EditIssueの "load" メソッドは次のようになります。
 
-```java
-  @Override
-  protected void load() {
-    securedPage.get();
-
-    driver.get("https://github.com/SeleniumHQ/selenium/issues/new?assignees=&labels=I-defect%2Cneeds-triaging&projects=&template=bug-report.yml&title=%5B%F0%9F%90%9B+Bug%5D%3A+");
-  }
-```
+{{< tabpane text=true >}}
+{{< tab header="Python" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Java" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/design_strategies/BestPractices.java#L188-L195" >}}
+{{< /tab >}}
+{{< tab header="CSharp" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< /tabpane >}}
 
 これは、コンポーネントがすべて相互に "ネストされている" ことを示しています。 
 EditIssueで `get()` を呼び出すと、そのすべての依存関係も読み込まれます。 
 使用例：
 
-```java
-public class FooTest {
-  private EditIssue editIssue;
-
-  @Before
-  public void prepareComponents() {
-    WebDriver driver = new FirefoxDriver();
-
-    ProjectPage project = new ProjectPage(driver, "selenium");
-    SecuredPage securedPage = new SecuredPage(driver, project, "example", "top secret");
-    editIssue = new EditIssue(driver, securedPage);
-  }
-
-  @Test
-  public void demonstrateNestedLoadableComponents() {
-    editIssue.get();
-
-    editIssue.title.sendKeys('Title');
-    editIssue.body.sendKeys('What Happened');
-    editIssue.setHowToReproduce('How to Reproduce');
-    editIssue.setLogOutput('Log Output');
-    editIssue.setOperatingSystem('Operating System');
-    editIssue.setSeleniumVersion('Selenium Version');
-    editIssue.setBrowserVersion('Browser Version');
-    editIssue.setDriverVersion('Driver Version');
-    editIssue.setUsingGrid('I Am Using Grid');
-  }
-}
-```
+{{< tabpane text=true >}}
+{{< tab header="Python" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Java" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/design_strategies/BestPractices.java#L277-L299" >}}
+{{< /tab >}}
+{{< tab header="CSharp" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< /tabpane >}}
 
 テストで [Guiceberry](https://github.com/zorzella/guiceberry) などのライブラリを使用している場合は、PageObjectsの設定の前文を省略して、わかりやすく読みやすいテストを作成できます。
 
@@ -404,34 +267,26 @@ PageObjectsは、テストでの重複を減らすための便利な方法です
 つまり、コマンドがアプリに対して正しいことをしていないことがわかった場合、コマンドを簡単に変更できます。 
 例として：
 
-```java
-public class ActionBot {
-  private final WebDriver driver;
-
-  public ActionBot(WebDriver driver) {
-    this.driver = driver;
-  }
-
-  public void click(By locator) {
-    driver.findElement(locator).click();
-  }
-
-  public void submit(By locator) {
-    driver.findElement(locator).submit();
-  }
-
-  /** 
-   * Type something into an input field. WebDriver doesn't normally clear these
-   * before typing, so this method does that first. It also sends a return key
-   * to move the focus out of the element.
-   */
-  public void type(By locator, String text) { 
-    WebElement element = driver.findElement(locator);
-    element.clear();
-    element.sendKeys(text + "\n");
-  }
-}
-```
+{{< tabpane text=true >}}
+{{< tab header="Python" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Java" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/design_strategies/BestPractices.java#L249-L275" >}}
+{{< /tab >}}
+{{< tab header="CSharp" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+{{< badge-code >}}
+{{< /tab >}}
+{{< /tabpane >}}
 
 これらの抽象化が構築され、テストでの重複が特定されると、ボットの上にPageObjectsを階層化することができます。
 

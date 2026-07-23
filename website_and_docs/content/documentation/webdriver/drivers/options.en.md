@@ -412,7 +412,7 @@ user prompt encounters at the remote-end. This is defined by
 {{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L51-53">}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Drivers/OptionsTest.cs#L59-L60">}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< gh-codeblock path="/examples/ruby/spec/drivers/options_spec.rb#L60-L61" >}}
@@ -424,6 +424,9 @@ user prompt encounters at the remote-end. This is defined by
 {{< badge-code >}}
 {{< /tab >}}
 {{< /tabpane >}}
+
+NOTE: For `beforeunload` prompts specifically, ChromeDriver needs `ignore` set in addition to
+[BiDi]({{< ref "../bidi/" >}}) enabled to keep the prompt open.
 
 ## setWindowRect
 

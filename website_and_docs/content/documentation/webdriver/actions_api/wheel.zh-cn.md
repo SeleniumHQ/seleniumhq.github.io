@@ -1,26 +1,28 @@
 ---
-title: "Scroll wheel actions"
-linkTitle: "Wheel"
+title: "滚轮操作"
+linkTitle: "滚轮"
 weight: 6
 description: >
-    A representation of a scroll wheel input device for interacting with a web page.
+  一种用于与网页交互的滚轮输入设备的示意.
 ---
 
 {{< badge-version version="4.2" >}}
 {{< badge-browser browser=Chromium wpt="perform_actions/wheel.py" >}}
 
-There are 5 scenarios for scrolling on a page.
+在页面上滚动有 5 种情况.
 
-## Scroll to element
+## 滚动到元素
 
-This is the most common scenario. Unlike traditional click and send keys methods,
-the actions class does not automatically scroll the target element into view,
-so this method will need to be used if elements are not already inside the viewport.
+这是最常见的场景. 
+与传统的点击和发送按键的方法不同, 
+动作类不会自动将目标元素滚动到视图中, 
+因此如果元素不在视口内, 
+就需要使用此方法.
 
-This method takes a web element as the sole argument.
+此方法仅将一个网页元素作为参数.
 
-Regardless of whether the element is above or below the current viewscreen,
-the viewport will be scrolled so the bottom of the element is at the bottom of the screen.
+无论该元素是在当前视图屏幕的上方还是下方, 
+视口都会滚动, 使该元素的底部位于屏幕底部.
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
@@ -43,10 +45,11 @@ the viewport will be scrolled so the bottom of the element is at the bottom of t
 {{< /tab >}}
 {{< /tabpane >}}
 
-## Scroll by given amount
+## 按给定的量进行滚动
 
-This is the second most common scenario for scrolling. Pass in an delta x and a delta y value for how much to scroll
-in the right and down directions. Negative values represent left and up, respectively.
+这是第二种最常见的滚动场景. 
+传入一个 x 方向的偏移量和一个 y 方向的偏移量, 
+表示向右和向下滚动的距离. 负值分别表示向左和向上滚动.
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
@@ -69,17 +72,17 @@ in the right and down directions. Negative values represent left and up, respect
 {{< /tab >}}
 {{< /tabpane >}}
 
-## Scroll from an element by a given amount
+## 将元素按照给定的量进行滚动
 
-This scenario is effectively a combination of the above two methods.
+这种情形实际上是上述两种方法的结合.
 
-To execute this use the "Scroll From" method, which takes 3 arguments.
-The first represents the origination point, which we designate as the element,
-and the second two are the delta x and delta y values.
+要执行此操作, 请使用“从...滚动”方法, 
+该方法需要 3 个参数.  
+第一个参数表示起始点, 我们将其指定为元素,  
+后两个参数分别是 x 偏移量和 y 偏移量的值.
 
-If the element is out of the viewport,
-it will be scrolled to the bottom of the screen, then the page will be scrolled by the provided
-delta x and delta y values.
+如果元素不在视口内, 它将滚动到屏幕底部, 
+然后页面将根据提供的 x 和 y 偏移量进行滚动.
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
@@ -102,23 +105,22 @@ delta x and delta y values.
 {{< /tab >}}
 {{< /tabpane >}}
 
-## Scroll from an element with an offset
+## 从具有偏移量的元素进行滚动
 
-This scenario is used when you need to scroll only a portion of the screen, and it is outside the viewport.
-Or is inside the viewport and the portion of the screen that must be scrolled
-is a known offset away from a specific element.
+当您需要滚动屏幕的某一部分, 而该部分位于视口之外, 
+或者位于视口之内但必须滚动的屏幕部分与特定元素之间存在已知偏移量时, 
+会使用此场景.
 
-This uses the "Scroll From" method again, and in addition to specifying the element,
-an offset is specified to indicate the origin point of the scroll. The offset is
-calculated from the center of the provided element.
+这再次使用了“从...滚动”的方法, 并且除了指定元素之外, 
+还指定了一个偏移量来表明滚动的起始点. 
+该偏移量是从所提供的元素的中心计算得出的.
 
-If the element is out of the viewport,
-it first will be scrolled to the bottom of the screen, then the origin of the scroll will be determined
-by adding the offset to the coordinates of the center of the element, and finally
-the page will be scrolled by the provided delta x and delta y values.
+如果元素不在视口内, 它首先会被滚动到屏幕底部, 
+然后滚动的原点将通过将偏移量添加到元素中心的坐标来确定, 
+最后页面将根据提供的 x 和 y 偏移量值进行滚动.
 
-Note that if the offset from the center of the element falls outside of the viewport,
-it will result in an exception.
+请注意, 如果元素中心的偏移量超出视口范围, 
+将会导致异常.
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
@@ -141,18 +143,17 @@ it will result in an exception.
 {{< /tab >}}
 {{< /tabpane >}}
 
-## Scroll from a offset of origin (element) by given amount
+## 从给定元素的原点偏移量处滚动指定的距离
 
-The final scenario is used when you need to scroll only a portion of the screen,
-and it is already inside the viewport.
+最后一种情况适用于您需要滚动屏幕的某一部分, 
+而该部分已处于视口内的情况.
 
-This uses the "Scroll From" method again, but the viewport is designated instead
-of an element. An offset is specified from the upper left corner of the
-current viewport. After the origin point is determined,
-the page will be scrolled by the provided delta x and delta y values.
+这再次使用了“从...滚动”的方法, 但这次指定的是视口而非某个元素. 
+从当前视口的左上角开始指定偏移量. 
+确定原点后, 页面将根据提供的 x 偏移量和 y 偏移量进行滚动.
 
-Note that if the offset from the upper left corner of the viewport falls outside of the screen,
-it will result in an exception.
+请注意, 如果从视口左上角算起的偏移量超出屏幕范围, 
+将会导致异常.
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
