@@ -17,10 +17,10 @@ namespace SeleniumDocs.Drivers
 
         [TestMethodCustom]
         [EnabledOnOs("OSX")]
-        public void DriverLocation()
+        public async System.Threading.Tasks.Task DriverLocation()
         {
             var options = GetLatestChromeOptions();
-            var service = ChromeDriverService.CreateDefaultService(GetDriverLocation(options));
+            var service = ChromeDriverService.CreateDefaultService(await GetDriverLocationAsync(options)); 
 
             driver = new ChromeDriver(service, options);
         }
@@ -34,9 +34,9 @@ namespace SeleniumDocs.Drivers
             driver = new ChromeDriver(service);
         }
         
-        private static string GetDriverLocation(ChromeOptions options)
+        private static async System.Threading.Tasks.Task<string> GetDriverLocationAsync(ChromeOptions options)
         {
-            return new DriverFinder(options).GetDriverPathAsync().AsTask().GetAwaiter().GetResult();
+            return await new DriverFinder(options).GetDriverPathAsync();
         }
 
         private static ChromeOptions GetLatestChromeOptions()
