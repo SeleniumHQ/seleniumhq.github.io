@@ -22,7 +22,8 @@ namespace SeleniumDocs.Elements
             fileInput.SendKeys(uploadFile);
             driver.FindElement(By.Id("file-submit")).Click();
 
-            IWebElement fileName = driver.FindElement(By.Id("uploaded-files"));
+            var fileName = new OpenQA.Selenium.Support.UI.WebDriverWait(driver, TimeSpan.FromSeconds(5)).Until(d => d.FindElement(By.Id("uploaded-files")));
+
             Assert.AreEqual("selenium-snapshot.png", fileName.Text);
         }
     }
