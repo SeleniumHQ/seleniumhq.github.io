@@ -127,7 +127,7 @@ Selenium 项目欢迎新的贡献者。
 % git checkout -b my-feature-branch
 ```
 
-我们实践基于 HEAD 的开发模式，这意味着所有更改都直接应用在 `dev` 之上。
+我们实践基于 HEAD 的开发模式，这意味着所有更改都直接应用在 `trunk` 之上。
 
 ### 步骤 3：做出改变
 
