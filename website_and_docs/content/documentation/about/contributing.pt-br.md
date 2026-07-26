@@ -231,4 +231,4 @@ histórico linear no `trunk`, nós normalmente iremos dar Squash & Rebase no his
 ## Comunicação
 
 Todos os detalhes sobre como se comunicar com os colaboradores do projeto
-e a comunidade em geral podem ser encontrados em https://selenium.dev/support
+e a comunidade em geral podem ser encontrados em [selenium.dev/support](https://selenium.dev/support)

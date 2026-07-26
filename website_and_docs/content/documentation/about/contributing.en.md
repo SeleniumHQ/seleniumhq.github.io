@@ -233,4 +233,4 @@ your branch history.
 ## Communication
 
 All details on how to communicate with the project contributors
-and the community overall can be found at https://selenium.dev/support
+and the community overall can be found at [selenium.dev/support](https://selenium.dev/support)
