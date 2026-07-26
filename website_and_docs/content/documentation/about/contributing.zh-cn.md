@@ -225,4 +225,4 @@ Pull Request 通常会在几天内进行审核。
 ## 沟通
 
 有关如何与项目贡献者和整个社区进行沟通的所有详细信息，
-请访问 [selenium.dev/support](https://selenium.dev/support)。
+可以在 https://selenium.dev/support 找到。
