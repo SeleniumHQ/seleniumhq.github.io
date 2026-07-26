@@ -215,8 +215,8 @@ with this you can be sure that your changes have not broken anything.
 Go to https://github.com/yourusername/seleniumhq.github.io.git and
 press the _Pull Request_ and fill out the form. **Please indicate
 that you've signed the CLA**. To sign the CLA, visit
-https://cla-assistant.io/SeleniumHQ/seleniumhq.github.io and click the
-"Sign in with GitHub to agree" button on the page.
+[cla-assistant.io/SeleniumHQ/seleniumhq.github.io](https://cla-assistant.io/SeleniumHQ/seleniumhq.github.io)
+and click the "Sign in with GitHub to agree" button on the page.
 
 Pull requests are usually reviewed within a few days. If there are
 comments to address, apply your changes in new commits (preferably
