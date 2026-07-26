@@ -1,52 +1,47 @@
 ---
-title: "PO设计模式"
-linkTitle: "PO设计模式"
+title: "页面对象模型"
+linkTitle: "页面对象模型"
 weight: 3
-needsTranslation: true
 aliases: [
 "/documentation/zh-cn/guidelines_and_recommendations/page_object_models/",
 "/zh-cn/documentation/guidelines/page_object_models/"
 ]
 ---
 
-Note: this page has merged contents from multiple sources, including
-the [Selenium wiki](https://github.com/SeleniumHQ/selenium/wiki/PageObjects) 
+注意：本页内容合并自多个来源，包括
+[Selenium wiki](https://github.com/SeleniumHQ/selenium/wiki/PageObjects)
 
-## Overview
+## 概述
 
-Within your web app's UI, there are areas where your tests interact with. 
-A Page Object only models these as objects within the test code. 
-This reduces the amount of duplicated code and means that if the UI changes, 
-the fix needs only to be applied in one place.
+在 Web 应用的 UI 中，总有一些区域是测试需要与之交互的。
+页面对象仅将这些区域建模为测试代码中的对象。
+这减少了重复代码的数量，意味着如果 UI 发生变化，
+只需在一处进行修复。
 
-Page Object Model is a Design Pattern that has become popular in test automation for
-enhancing test maintenance and reducing code duplication. A page object is an
-object-oriented class that serves as an interface to a page of your AUT. The
-tests then use the methods of this page object class whenever they need to
-interact with the UI of that page. The benefit is that if the UI changes for
-the page, the tests themselves don’t need to change, only the code within the
-page object needs to change. Subsequently, all changes to support that new UI
-are located in one place.
+页面对象模型是一种设计模式，它在测试自动化领域日益流行，
+旨在增强测试的可维护性并减少代码重复。页面对象是一个
+面向对象的类，它作为被测应用 (AUT) 某个页面的接口。
+测试在需要与该页面的 UI 交互时，会使用此页面对象类的
+方法。好处在于，如果该页面的 UI 发生变化，测试本身
+不需要更改，只需更改页面对象中的代码即可。随后，
+所有支持新 UI 的更改都集中在一个地方。
 
-### Advantages
+### 优势
 
-* There is a clean separation between the test code and page-specific code, such as
-  locators (or their use if you’re using a UI Map) and layout.
-* There is a single repository for the services or operations the page offers
-  rather than having these services scattered throughout the tests.
+* 测试代码与页面特定代码（如定位器，或使用 UI映射时的定位器使用方式）和布局之间有清晰的分离。
+* 页面所提供的服务或操作有单一的存储库，
+  而不是将这些服务分散在各处测试中。
 
-In both cases, this allows any modifications required due to UI changes to all
-be made in one place. Helpful information on this technique can be found on
-numerous blogs as this ‘test design pattern’ is becoming widely used. We
-encourage readers who wish to know more to search the internet for blogs
-on this subject. Many have written on this design pattern and can provide
-helpful tips beyond the scope of this user guide. To get you started,
-we’ll illustrate page objects with a simple example.
+在以上两种情况下，这使得因 UI 变更而需要进行的所有修改
+都可以在一处完成。关于此技术的有用信息可以在
+众多博客中找到，因为这种"测试设计模式"正被广泛使用。我们
+鼓励希望了解更多信息的读者在互联网上搜索关于此主题的博客。
+许多人已经就这一设计模式撰写了文章，并能提供超出本用户指南范围的
+有用提示。为了帮助您入门，我们将用一个简单的示例来说明页面对象。
 
-### Examples
+### 示例
 
-First, consider an example, typical of test automation, that does not use a
-page object:
+首先，考虑一个不使用页面对象的典型测试自动化示例：
 
 ```java
 /***
@@ -67,17 +62,16 @@ public class Login {
 }
 ```
 
-There are two problems with this approach.
+这种方式存在两个问题。
 
-* There is no separation between the test method and the AUT’s locators (IDs in 
-this example); both are intertwined in a single method. If the AUT’s UI changes 
-its identifiers, layout, or how a login is input and processed, the test itself 
-must change.
-* The ID-locators would be spread in multiple tests, in all tests that had to 
-use this login page.
+* 测试方法与 AUT 的定位器（在本例中为 ID）之间没有分离；两者
+  交织在同一个方法中。如果 AUT 的 UI 更改了其标识符、布局，
+  或登录的输入和处理方式，测试本身必须随之更改。
+* ID定位器会分散在多个测试中，散布在所有需要
+  使用此登录页面的测试里。
 
-Applying the page object model, this example could be rewritten like this
-in the following example of a page object for a Sign-in page.
+应用页面对象模型后，此示例可以重写为
+以下登录页面的页面对象示例。
 
 ```java
 import org.openqa.selenium.By;
@@ -120,7 +114,7 @@ public class SignInPage {
 }
 ```
 
-and page object for a Home page could look like this.
+而首页的页面对象可能如下所示。
 
 ```java
 import org.openqa.selenium.By;
@@ -162,7 +156,7 @@ public class HomePage {
 }
 ```
 
-So now, the login test would use these two page objects as follows.
+现在，登录测试将按如下方式使用这两个页面对象。
 
 ```java
 /***
@@ -180,37 +174,34 @@ public class TestLogin {
 }
 ```
 
-There is a lot of flexibility in how the page objects may be designed, but
-there are a few basic rules for getting the desired maintainability of your
-test code.
+页面对象的设计方式有很大的灵活性，但
+要获得所需的测试代码可维护性，有一些基本规则需要遵循。
 
-## Assertions in Page Objects
+## 页面对象中的断言
 
-Page objects themselves should never make verifications or assertions. This is
-part of your test and should always be within the test’s code, never in a page
-object. The page object will contain the representation of the page, and the
-services the page provides via methods but no code related to what is being
-tested should be within the page object.
+页面对象本身不应进行验证或断言。这是
+测试的一部分，应始终在测试代码中，而非页面对象中。
+页面对象将包含页面的表示，以及
+页面通过方法提供的服务，但不应包含与被测内容相关的代码。
 
-There is one, single, verification which can, and should, be within the page
-object and that is to verify that the page, and possibly critical elements on
-the page, were loaded correctly. This verification should be done while
-instantiating the page object. In the examples above, both the SignInPage and
-HomePage constructors check that the expected page is available and ready for
-requests from the test.
+有一个唯一的验证可以、也应当在页面对象中进行，
+那就是验证页面以及页面上的关键元素是否已正确加载。此验证应在
+实例化页面对象时完成。在上面的示例中，SignInPage 和
+HomePage 的构造函数都会检查预期页面是否可用并准备好
+接收测试的请求。
 
-## Page Component Objects
+## 页面组件对象
 
-A page object does not necessarily need to represent all the parts of a
-page itself. This was [noted by Martin Fowler](https://martinfowler.com/bliki/PageObject.html#footnote-panel-object) in the early days, while first coining the term "panel objects".
+页面对象不一定需要自身表示页面的所有部分。这在早期就已被
+[Martin Fowler](https://martinfowler.com/bliki/PageObject.html#footnote-panel-object) 指出，他当时首次提出了"面板对象"这一术语。
 
-The same principles used for page objects can be used to
-create "Page _Component_ Objects", as it was later called, that represent discrete chunks of the
-page and **can be included in page objects**. These component objects can
-provide references to the elements inside those discrete chunks, and
-methods to leverage the functionality or behavior provided by them.
+用于页面对象的相同原则可以用来
+创建"页面_组件_对象"（后来的称呼），它表示页面的离散区块，并
+**可以包含在页面对象中**。这些组件对象可以
+提供对这些离散区块内部元素的引用，以及
+利用它们所提供的功能或行为的方法。
 
-For example, a Products page has multiple products.
+例如，一个产品页面有多个产品。
 
 ```html
 <!-- Products Page -->
@@ -234,7 +225,7 @@ For example, a Products page has multiple products.
 </div>
 ```
 
-Each product is a component of the Products page.
+每个产品都是产品页面的一个组件。
 
 
 ```html
@@ -248,7 +239,7 @@ Each product is a component of the Products page.
 </div>
 ```
 
-The Products page HAS-A list of products. This object relationship is called Composition. In simpler terms, something is _composed of_ another thing.
+产品页面拥有（HAS-A）一个产品列表。这种对象关系称为组合。简单来说，某个事物_由_另一个事物_组成_。
 
 ```java
 public abstract class BasePage {
@@ -288,7 +279,7 @@ public class ProductsPage extends BasePage {
 }
 ```
 
-The Product component object is used inside the Products page object.
+Product 组件对象在产品页面对象内部使用。
 
 ```java
 public abstract class BaseComponent {
@@ -325,7 +316,7 @@ public class Product extends BaseComponent {
 }
 ```
 
-So now, the products test would use the page object and the page component object as follows.
+现在，产品测试将按如下方式使用页面对象和页面组件对象。
 
 ```java
 public class ProductsTest {
@@ -351,29 +342,29 @@ public class ProductsTest {
 }
 ```
 
-The page and component are represented by their own objects. Both objects only have methods for the **services** they offer, which matches the real-world application as is the core principle of object-oriented programming. When applications are built, they are not made of a massive page entity. They are built with components contained in a page. Page Component Objects implement the same approach.
+页面和组件由各自的对象表示。这两个对象只有提供其**服务**的方法，这与实际应用相匹配，也是面向对象编程的核心原则。当构建应用程序时，它们并不是由一个庞大的页面实体构成的。它们是由包含在页面中的组件构建的。页面组件对象实现了相同的方法。
 
-You can even
-nest component objects inside other component objects for more complex
-pages. If a page in the AUT has multiple components, or common
-components used throughout the site (e.g. a navigation bar), then it
-may improve maintainability and reduce code duplication.
+你甚至可以
+将组件对象嵌套在其他组件对象中，用于更复杂的
+页面。如果 AUT 中的某个页面有多个组件，或
+整个站点中使用的公共组件（例如导航栏），那么这
+可能会提高可维护性并减少代码重复。
 
-## Other Design Patterns Used in Testing
+## 测试中使用的其他设计模式
 
-There are other design patterns that also may be used in testing. Discussing all of these is
-beyond the scope of this user guide. Here, we merely want to introduce the
-concepts to make the reader aware of some of the things that can be done. As
-was mentioned earlier, many have blogged on this topic and we encourage the
-reader to search for blogs on these topics.
+还有其他一些设计模式也可用于测试。讨论所有这些模式
+超出了本用户指南的范围。在这里，我们只是想介绍
+这些概念，让读者了解可以做的一些事情。正如
+前面提到的，许多人已经在这一主题上撰写了博客，我们鼓励
+读者搜索关于这些主题的博客。
 
-## Implementation Notes
+## 实现说明
 
-Page Objects can be thought of as facing in two directions simultaneously. Facing toward the developer of a test, they represent the **services** offered by a particular page. Facing away from the developer, they should be the only thing that has a deep knowledge of the structure of the HTML of a page (or part of a page) It's simplest to think of the methods on a Page Object as offering the "services" that a page offers rather than exposing the details and mechanics of the page. As an example, think of the inbox of any web-based email system. Amongst the services it offers are the ability to compose a new email, choose to read a single email, and list the subject lines of the emails in the inbox. How these are implemented shouldn't matter to the test.
+页面对象可以被看作同时面向两个方向。面向测试开发者的一面，它们表示特定页面提供的**服务**。背对开发者的一面，它们应该是唯一对页面（或页面的一部分）的 HTML 结构有深入了解的东西。最简单的理解方式是将页面对象上的方法视为提供页面所提供的"服务"，而不是暴露页面的细节和机制。举例来说，想想任何基于 Web 的电子邮件系统的收件箱。它提供的服务包括撰写新邮件、选择阅读单封邮件，以及列出收件箱中邮件的主题行。这些功能如何实现对测试而言不应重要。
 
-Because we're encouraging the developer of a test to try and think about the services they're interacting with rather than the implementation, Page Objects should seldom expose the underlying WebDriver instance. To facilitate this, **methods on the Page Object may return another Page Object, another Page Component Object, or even itself (this)**. This means we can effectively model the user's journey through our application. It also means that should the way that pages relate to one another change (like when the login page asks the user to change their password the first time they log into a service when it previously didn't do that), simply changing the appropriate method's signature will cause the tests to fail to compile. Put another way; we can tell which tests would fail without needing to run them when we change the relationship between pages and reflect this in the Page Objects.
+因为我们鼓励测试开发者尝试思考他们正在交互的服务而非实现，所以页面对象应尽量少地暴露底层的 WebDriver 实例。为此，**页面对象上的方法可以返回另一个页面对象、另一个页面组件对象，甚至自身 (this)**。这意味着我们可以有效地对用户在应用程序中的旅程进行建模。这也意味着，如果页面之间的关联方式发生变化（例如，登录页面在用户首次登录某服务时要求其更改密码，而以前并不这样做），只需更改相应方法的签名就会导致测试无法编译。换言之，当我们更改页面之间的关系并在页面对象中反映这一变化时，无需运行测试就能知道哪些测试会失败。
 
-One consequence of this approach is that it may be necessary to model (for example) both a successful and unsuccessful login; or a click could have a different result depending on the app's state. When this happens, it is common to have multiple methods on the Page Object:
+这种方法的一个后果是，可能需要对（例如）成功和失败的登录分别建模；或者一次点击可能根据应用程序的状态产生不同的结果。当发生这种情况时，通常在页面对象上有多个方法：
 
 ```java
 public class LoginPage {
@@ -391,7 +382,7 @@ public class LoginPage {
 }
 ```
 
-The code presented above shows an important point: the tests, not the Page Objects, should be responsible for making assertions about the state of a page. For example:
+上面的代码展示了一个要点：测试而非页面对象应负责对页面状态进行断言。例如：
 
 ```java
 public void testMessagesAreReadOrUnread() {
@@ -401,7 +392,7 @@ public void testMessagesAreReadOrUnread() {
 }
 ```
 
-could be re-written as:
+可以重写为：
 
 ```java
 public void testMessagesAreReadOrUnread() {
@@ -411,20 +402,20 @@ public void testMessagesAreReadOrUnread() {
 }
 ```
 
-Of course, as with every guideline, there are exceptions, and one that is commonly seen with Page Objects is to check that the WebDriver is on the correct page when we instantiate the Page Object. This is done in the example below.
+当然，与每条指南一样，也有例外情况，页面对象中常见的一个例外是在实例化页面对象时检查 WebDriver 是否在正确的页面上。这在下面的示例中有所体现。
 
-Finally, a Page Object need not represent an entire page and can be composed of Page Object Components. These components may represent a section that appears frequently within a site or page, such as site navigation. The essential principle is that there is only one place in your test suite with knowledge of the structure of the HTML of a particular (part of a) page.
+最后，页面对象不必表示整个页面，可以由页面对象组件组成。这些组件可以表示在站点或页面中频繁出现的部分，例如站点导航。核心原则是，在你的测试套件中只有一个地方了解特定页面（或页面的一部分）的 HTML 结构。
 
-## Summary
+## 总结
 
-* The public methods represent the services that the page or component offers
-* Try not to expose the internals of the page or component
-* Generally don't make assertions
-* Methods return other Page Objects, Page Component Objects, or optionally themselves (for fluent syntax)
-* Need not represent an entire page all the time
-* Different results for the same action are modelled as different methods
+* 公共方法表示页面或组件提供的服务
+* 尽量不要暴露页面或组件的内部细节
+* 通常不要进行断言
+* 方法返回其他页面对象、页面组件对象，或可选地返回自身（用于流畅语法）
+* 不必始终表示整个页面
+* 同一操作的不同结果建模为不同的方法
 
-## Example
+## 示例
 
 ```java
 public class LoginPage {
