@@ -214,7 +214,9 @@ com isso, você pode ter certeza de que suas alterações não prejudicaram nada
 
 Acesse https://github.com/yourusername/seleniumhq.github.io.git e
 clique em _Pull Request_ e preencha o formulário. **Por favor indique
-que você assinou o CLA** (consulte a Etapa 7).
+que você assinou o CLA**. Para assinar o CLA, visite
+https://cla-assistant.io/SeleniumHQ/seleniumhq.github.io e clique no botão
+"Sign in with GitHub to agree" na página.
 
 Os Pull Requests geralmente são revisados em alguns dias. Se houver
 comentários a abordar, aplique suas alterações em novos commits (de preferência

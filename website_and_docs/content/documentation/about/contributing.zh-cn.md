@@ -208,7 +208,9 @@ Fixes #141
 
 访问 https://github.com/yourusername/seleniumhq.github.io.git
 并点击 _Pull Request_ 以及填写表格。
-**请明确您已经签署了 CLA**（详见步骤 8）。
+**请明确您已经签署了 CLA**。要签署 CLA，请访问
+https://cla-assistant.io/SeleniumHQ/seleniumhq.github.io 并点击页面上的
+"Sign in with GitHub to agree" 按钮。
 
 Pull Request 通常会在几天内进行审核。
 如果有评论要解决，请在新提交（最好是[修正](http://git-scm.com/docs/git-commit)）中应用您的更改，
