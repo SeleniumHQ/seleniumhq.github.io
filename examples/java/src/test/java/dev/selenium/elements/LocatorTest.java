@@ -1,3 +1,4 @@
+import java.util.List;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
@@ -6,6 +7,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.pagefactory.ByAll;
+import org.openqa.selenium.support.pagefactory.ByChained;
 
 public class LocatorTest {
 
@@ -80,5 +83,25 @@ public class LocatorTest {
         WebElement element = driver.findElement(By.xpath("//input[@value='f']"));
         Assertions.assertNotNull(element);
         Assertions.assertEquals("radio", element.getAttribute("type"));
+    }
+
+    @Test
+    public void testByAll() {
+        driver.get("https://www.selenium.dev/selenium/web/login.html");
+
+        By locator = new ByAll(By.id("password-field"), By.id("username-field"));
+        List<WebElement> loginInputs = driver.findElements(locator);
+
+        Assertions.assertEquals(2, loginInputs.size());
+    }
+
+    @Test
+    public void testByChained() {
+        driver.get("https://www.selenium.dev/selenium/web/login.html");
+
+        By locator = new ByChained(By.id("login-form"), By.tagName("input"));
+        WebElement usernameInput = driver.findElement(locator);
+
+        Assertions.assertEquals("Username", usernameInput.getAttribute("placeholder"));
     }
 }

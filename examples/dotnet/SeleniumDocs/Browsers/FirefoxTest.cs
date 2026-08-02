@@ -19,15 +19,15 @@ namespace SeleniumDocs.Browsers
         [TestCleanup]
         public void Cleanup()
         {
+            driver?.Quit();
             if (!String.IsNullOrEmpty(_logLocation) && File.Exists(_logLocation))
             {
                 File.Delete(_logLocation);
             }
-            if (_tempPath != null && File.Exists(_tempPath))
+            if (_tempPath != null && Directory.Exists(_tempPath))
             {
-                File.Delete(_tempPath);
+                Directory.Delete(_tempPath, true);
             }
-            driver.Quit();
         }
 
         [TestMethod]
@@ -48,11 +48,11 @@ namespace SeleniumDocs.Browsers
         }
 
         [TestMethod]
-        public void SetBinary()
+        public async System.Threading.Tasks.Task SetBinary()
         {
             var options = new FirefoxOptions();
 
-            options.BinaryLocation = GetFirefoxLocation();
+            options.BinaryLocation = await GetFirefoxLocationAsync();
 
             driver = new FirefoxDriver(options);
         }
@@ -123,10 +123,10 @@ namespace SeleniumDocs.Browsers
 
             driver = new FirefoxDriver(service);
 
-            string profile = (string)driver.Capabilities.GetCapability("moz:profile");
-            string[] directories = profile.Split("/");
-            var dirName = directories.Last();
-            Assert.AreEqual(GetTempDirectory() + dirName, profile);
+            string profile = ((string)driver.Capabilities.GetCapability("moz:profile")).Replace('\\', '/');
+            var dirName = profile.Split('/').Last();
+            var profileDirectories = Directory.GetDirectories(GetTempDirectory()).Select(Path.GetFileName);
+            Assert.IsTrue(profileDirectories.Contains(dirName));
         }
 
         [TestMethod]
@@ -170,7 +170,7 @@ namespace SeleniumDocs.Browsers
             IWebElement injected = driver.FindElement(By.Id("webextensions-selenium-example"));
             Assert.AreEqual("Content injected by webextensions-selenium-example", injected.Text);
         }
-        
+
         private string GetLogLocation()
         {
             if (string.IsNullOrEmpty(_logLocation) && !File.Exists(_logLocation))
@@ -183,9 +183,9 @@ namespace SeleniumDocs.Browsers
 
         private string GetTempDirectory()
         {
-            if (string.IsNullOrEmpty(_tempPath) && !File.Exists(_tempPath))
+            if (string.IsNullOrEmpty(_tempPath))
             {
-                _tempPath = Path.GetTempPath();
+                _tempPath = Directory.CreateTempSubdirectory("profile-").FullName;
             }
 
             return _tempPath;
@@ -197,13 +197,13 @@ namespace SeleniumDocs.Browsers
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(2);
         }
 
-        private static string GetFirefoxLocation()
+        private static async System.Threading.Tasks.Task<string> GetFirefoxLocationAsync()
         {
             var options = new FirefoxOptions()
             {
                 BrowserVersion = "stable"
             };
-            return new DriverFinder(options).GetBrowserPathAsync().AsTask().GetAwaiter().GetResult();
+            return await new DriverFinder(options).GetBrowserPathAsync();
         }
 
         private void ResetGlobalLog()

@@ -75,7 +75,7 @@ above shown HTML snippet. We can identify these elements using the class name lo
 available in Selenium. 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
-   {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/LocatorTest.java#L31" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/LocatorTest.java#L34" >}}
   {{< /tab >}}
 {{< tab header="Python" text=true >}}
 {{< gh-codeblock path="/examples/python/tests/elements/test_locators.py#L7-L9" >}}
@@ -106,7 +106,7 @@ textbox, using css.
 
 {{< tabpane langEqualsHeader=true >}}
    {{< tab header="Java" >}}
-   {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/LocatorTest.java#L38" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/LocatorTest.java#L41" >}}
   {{< /tab >}}
 {{< tab header="Python" text=true >}}
 {{< gh-codeblock path="/examples/python/tests/elements/test_locators.py#L17-L19" >}}
@@ -135,7 +135,7 @@ We will identify the Last Name field using it.
 
 {{< tabpane langEqualsHeader=true >}}
  {{< tab header="Java" >}}
-   {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/LocatorTest.java#L45" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/LocatorTest.java#L48" >}}
   {{< /tab >}}
 {{< tab header="Python" text=true >}}
 {{< gh-codeblock path="/examples/python/tests/elements/test_locators.py#L27-L29" >}}
@@ -165,7 +165,7 @@ We will identify the Newsletter checkbox using it.
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
-   {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/LocatorTest.java#L52" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/LocatorTest.java#L55" >}}
   {{< /tab >}}
 {{< tab header="Python" text=true >}}
 {{< gh-codeblock path="/examples/python/tests/elements/test_locators.py#L37-L39" >}}
@@ -193,7 +193,7 @@ to identify it on the web page. The link text is the text displayed of the link.
 In the HTML snippet shared, we have a link available, lets see how will we locate it. 
 {{< tabpane langEqualsHeader=true >}}
     {{< tab header="Java" >}}
-   {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/LocatorTest.java#L59" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/LocatorTest.java#L62" >}}
   {{< /tab >}}
 {{< tab header="Python" text=true >}}
 {{< gh-codeblock path="/examples/python/tests/elements/test_locators.py#L47-L49" >}}
@@ -222,7 +222,7 @@ We can pass partial text as value.
 In the HTML snippet shared, we have a link available, lets see how will we locate it. 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
-   {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/LocatorTest.java#L66" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/LocatorTest.java#L69" >}}
   {{< /tab >}}
 {{< tab header="Python" text=true >}}
 {{< gh-codeblock path="/examples/python/tests/elements/test_locators.py#L57-L59" >}}
@@ -249,7 +249,7 @@ We can use the HTML TAG itself as a locator to identify the web element on the p
 From the above HTML snippet shared, lets identify the link, using its html tag "a". 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" >}}
-   {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/LocatorTest.java#L73" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/LocatorTest.java#L76" >}}
   {{< /tab >}}
 {{< tab header="Python" text=true >}}
 {{< gh-codeblock path="/examples/python/tests/elements/test_locators.py#L67-L69" >}}
@@ -282,7 +282,7 @@ first name text box. Let us create locator for female radio button using xpath.
 
 {{< tabpane langEqualsHeader=true >}}
     {{< tab header="Java" >}}
-   {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/LocatorTest.java#L80" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/LocatorTest.java#L83" >}}
   {{< /tab >}}
 {{< tab header="Python" text=true >}}
 {{< gh-codeblock path="/examples/python/tests/elements/test_locators.py#L77-L79" >}}
@@ -350,7 +350,7 @@ functions into one.
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" text=true >}}
-    {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/LocatorsTest.java#L37-L38" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/LocatorTest.java#L102-L103" >}}
   {{< /tab >}}
   {{< tab header="Python" text=true >}}
   {{< badge-code >}}
@@ -377,7 +377,7 @@ you can instead find them together in one clean `FindElements()`
 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" text=true >}}
-    {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/LocatorsTest.java#L22-L23">}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/LocatorTest.java#L92-L93">}}
   {{< /tab >}}
   {{< tab header="Python" text=true >}}
   {{< badge-code >}}

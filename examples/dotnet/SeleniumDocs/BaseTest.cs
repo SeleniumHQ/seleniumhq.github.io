@@ -36,6 +36,7 @@ namespace SeleniumDocs
         protected void StartDriver(string browserVersion = null)
         {
             ChromeOptions options = new ChromeOptions();
+            options.UseWebSocketUrl = true;
             if (browserVersion != null)
             {
                 options.BrowserVersion = browserVersion;
