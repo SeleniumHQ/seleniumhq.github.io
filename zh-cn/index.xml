@@ -11372,7 +11372,48 @@ Opera, Mozilla和Google都是WebDriver开发的积极参与者,
 &lt;p>Selenium服务网格允许我们在多台节点服务器上并行执行测试，
 同时也中心化的管理多个浏览器版本，多种浏览器的配置。（以替代传统的基于个人的测试）&lt;/p>
 &lt;p>Selenium服务网格并不是万能的(silver bullet)。
-它能够解决一些通用的代理问题和分布式的问题，但是并不能管理你的硬件，也可能不适合你的一些特殊需求。&lt;/p></description></item><item><title>命令监听器</title><link>https://www.selenium.dev/zh-cn/documentation/webdriver/support_features/listeners/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/zh-cn/documentation/webdriver/support_features/listeners/</guid><description>&lt;p>允许您在每次发送特定 Selenium 命令时执行自定义操作&lt;/p>
+它能够解决一些通用的代理问题和分布式的问题，但是并不能管理你的硬件，也可能不适合你的一些特殊需求。&lt;/p></description></item><item><title>为 Selenium 站点和文档做贡献</title><link>https://www.selenium.dev/zh-cn/documentation/about/contributing/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/zh-cn/documentation/about/contributing/</guid><description>&lt;p>Selenium 是一个大型软件项目，
+其网站和文档是了解事情如何工作以及学习有效利用其潜力的关键。&lt;/p>
+&lt;p>该项目包含 Selenium 的网站和文档。
+这是一项持续的工作（不针对任何特定版本），
+用于提供有效使用 Selenium、
+如何参与以及如何为 Selenium 做出贡献的更新信息。&lt;/p>
+&lt;p>对网站和文档的贡献遵循以下部分中有关贡献的描述。&lt;/p>
+&lt;hr>
+&lt;p>Selenium 项目欢迎每一个人的贡献。
+您可以通过多种方式提供帮助：&lt;/p>
+&lt;h2 id="上报问题">上报问题&lt;/h2>
+&lt;p>在报告新问题或评论现有问题时，
+请确保讨论与 Selenium 的软件、
+其站点与文档的具体技术问题相关。&lt;/p>
+&lt;p>随着时间的推移，所有 Selenium 组件的变化都非常快，
+因此这可能会导致文档过时。
+如前所述，如果您遇到这种情况，请不要犹豫，为此创建一个 issue。
+您也可能知道如何更新文档，因此请向我们发送包含相关更改的 Pull Request。&lt;/p>
+&lt;p>如果不确定所发现的问题是否存在，请通过
+&lt;a href="https://selenium.dev/support">https://selenium.dev/support&lt;/a> 中描述的沟通渠道进行询问。&lt;/p>
+&lt;h2 id="帮助事项">帮助事项&lt;/h2>
+&lt;h3 id="创建示例">创建示例&lt;/h3>
+&lt;p>需要添加的示例会用：&lt;/p>
+&lt;p>&lt;a href=https://www.selenium.dev/documentation/about/contributing/#creating-examples>
+&lt;span class="selenium-badge-code" data-bs-toggle="tooltip" data-bs-placement="right"
+ title="This code example is missing. Examples are added to the examples directory; click for details in the contribution guide">Add Example&lt;/span>&lt;/a>&lt;/p>
+&lt;p>标记&lt;/p>
+&lt;p>我们希望能够在 CI 中运行所有代码示例，以确保人们可以复制和粘贴并
+执行网站上的所有内容。因此，我们将代码放在
+&lt;a href="https://github.com/SeleniumHQ/seleniumhq.github.io/blob/trunk/examples/">示例目录&lt;/a>中。
+文档中的每个页面对应每种语言的一个测试文件，并应遵循命名约定。
+例如，此页面 &lt;a href="https://www.selenium.dev/documentation/webdriver/browsers/chrome/">https://www.selenium.dev/documentation/webdriver/browsers/chrome/&lt;/a> 的示例会添加到这些
+文件中：&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>&amp;quot;/examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java&amp;quot;&lt;/code>&lt;/li>
+&lt;li>&lt;code>&amp;quot;/examples/python/tests/browsers/test_chrome.py&amp;quot;&lt;/code>&lt;/li>
+&lt;li>&lt;code>&amp;quot;/examples/dotnet/SeleniumDocs/Browsers/ChromeTest.cs&amp;quot;&lt;/code>&lt;/li>
+&lt;li>&lt;code>&amp;quot;/examples/ruby/spec/browsers/chrome_spec.rb&amp;quot;&lt;/code>&lt;/li>
+&lt;li>&lt;code>&amp;quot;/examples/javascript/test/browser/chromeSpecificCaps.spec.js&amp;quot;&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;p>每个示例应有自己的测试。理想情况下，每个测试都有一个断言来验证代码按预期工作。
+一旦代码被复制到正确文件中的测试中，就需要在 markdown 文件中引用它。&lt;/p></description></item><item><title>命令监听器</title><link>https://www.selenium.dev/zh-cn/documentation/webdriver/support_features/listeners/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/zh-cn/documentation/webdriver/support_features/listeners/</guid><description>&lt;p>允许您在每次发送特定 Selenium 命令时执行自定义操作&lt;/p>
 
 
 
@@ -13959,38 +14000,7 @@ Selenium 保护伞下提供的周边基础设施为您提供了组合自己的
 每个志愿者都有一份“日常工作”。&lt;/p>
 &lt;p>该项目的另一个任务是鼓励更多的志愿者参与到这项工作中来，
 并建立一个强大的社区，以便项目能够继续跟上新兴的技术，
-并继续成为功能测试自动化的主导平台。&lt;/p></description></item><item><title>为 Selenium 文档做贡献</title><link>https://www.selenium.dev/zh-cn/documentation/about/contributing/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/zh-cn/documentation/about/contributing/</guid><description>&lt;p>Selenium是一个大型软件项目,
-其网站和文档是了解事情如何工作以及学习有效利用其潜力的关键.&lt;/p>
-&lt;p>该项目包含Selenium的网站和文档.
-这是一项持续的工作(不针对任何特定版本),
-用于提供有效使用Selenium、
-如何参与以及如何为Selenium做出贡献的更新信息.&lt;/p>
-&lt;p>对网站和文档的贡献遵循以下部分中有关贡献的描述.&lt;/p>
-&lt;hr>
-&lt;p>Selenium项目欢迎每一个人的贡献.
-您可以通过多种方式提供帮助:&lt;/p>
-&lt;h2 id="上报问题">上报问题&lt;/h2>
-&lt;p>在报告新问题或评论现有问题时,
-请确保讨论与Selenium的软件、
-其站点与文档的具体技术问题相关.&lt;/p>
-&lt;p>随着时间的推移, 所有Selenium组件的变化都非常快,
-因此这可能会导致文档过时.
-如前所述, 如果您确实遇到这种情况, 请不要为此担心.
-您也可能知道如何更新文档, 因此请向我们发送包含相关更改的Pull Request.&lt;/p>
-&lt;p>如果不确定所发现的问题是否存在, 请通过以下沟通渠道进行描述
-&lt;a href="https://selenium.dev/support">https://selenium.dev/support&lt;/a>.&lt;/p>
-&lt;h2 id="what-to-help-with">What to Help With&lt;/h2>
-&lt;h3 id="creating-examples">Creating Examples&lt;/h3>
-&lt;p>Examples that need to be added are marked with:&lt;/p>
-&lt;p>&lt;a href=https://www.selenium.dev/documentation/about/contributing/#creating-examples>
-&lt;span class="selenium-badge-code" data-bs-toggle="tooltip" data-bs-placement="right"
- title="This code example is missing. Examples are added to the examples directory; click for details in the contribution guide">Add Example&lt;/span>&lt;/a>&lt;/p>
-&lt;p>We want to be able to run all of our code examples in the CI to ensure that people can copy and paste and
-execute everything on the site. So we put the code where it belongs in the
-&lt;a href="https://github.com/SeleniumHQ/seleniumhq.github.io/blob/trunk/examples/">examples directory&lt;/a>.
-Each page in the documentation correlates to a test file in each of the languages, and should follow naming conventions.
-For instance examples for this page &lt;a href="https://www.selenium.dev/documentation/webdriver/browsers/chrome/">https://www.selenium.dev/documentation/webdriver/browsers/chrome/&lt;/a> get added in these
-files:&lt;/p></description></item><item><title>文件下载</title><link>https://www.selenium.dev/zh-cn/documentation/test_practices/discouraged/file_downloads/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/zh-cn/documentation/test_practices/discouraged/file_downloads/</guid><description>&lt;p>虽然可以通过在Selenium的控制下单击浏览器的链接来开始下载, 但是API并不会暴露下载进度, 因此这是一种不理想的测试下载文件的方式.
+并继续成为功能测试自动化的主导平台。&lt;/p></description></item><item><title>文件下载</title><link>https://www.selenium.dev/zh-cn/documentation/test_practices/discouraged/file_downloads/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/zh-cn/documentation/test_practices/discouraged/file_downloads/</guid><description>&lt;p>虽然可以通过在Selenium的控制下单击浏览器的链接来开始下载, 但是API并不会暴露下载进度, 因此这是一种不理想的测试下载文件的方式.
 因为下载文件并非模拟用户与Web平台交互的重要方面. 取而代之的是, 应使用Selenium(以及任何必要的cookie)查找链接, 并将其传递给例如&lt;a href="https://www.selenium.dev/zh-cn/">curl&lt;/a>这样的HTTP请求库.&lt;/p>
 &lt;p>&lt;a href="https://github.com/SeleniumHQ/htmlunit-driver">HtmlUnit driver&lt;/a>
 可以通过实现&lt;a href="https://htmlunit.sourceforge.io/apidocs/com/gargoylesoftware/htmlunit/attachment/AttachmentHandler.html">AttachmentHandler&lt;/a>
@@ -15002,21 +15012,7 @@ WebDriver API提供了为浏览器设置代理的功能，
 并且有许多代理可以通过编程方式来操纵发送到Web服务器和从Web服务器接收的请求的内容.
 使用代理可以决定如何响应重定向响应代码.
 此外，并非每个浏览器都将响应代码提供给WebDriver，
-因此选择使用代理可以使您拥有适用于每个浏览器的解决方案.&lt;/p></description></item><item><title>PO设计模式</title><link>https://www.selenium.dev/zh-cn/documentation/test_practices/encouraged/page_object_models/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/zh-cn/documentation/test_practices/encouraged/page_object_models/</guid><description>&lt;p>Note: this page has merged contents from multiple sources, including
-the &lt;a href="https://github.com/SeleniumHQ/selenium/wiki/PageObjects">Selenium wiki&lt;/a>&lt;/p>
-&lt;h2 id="overview">Overview&lt;/h2>
-&lt;p>Within your web app&amp;rsquo;s UI, there are areas where your tests interact with.
-A Page Object only models these as objects within the test code.
-This reduces the amount of duplicated code and means that if the UI changes,
-the fix needs only to be applied in one place.&lt;/p>
-&lt;p>Page Object Model is a Design Pattern that has become popular in test automation for
-enhancing test maintenance and reducing code duplication. A page object is an
-object-oriented class that serves as an interface to a page of your AUT. The
-tests then use the methods of this page object class whenever they need to
-interact with the UI of that page. The benefit is that if the UI changes for
-the page, the tests themselves don’t need to change, only the code within the
-page object needs to change. Subsequently, all changes to support that new UI
-are located in one place.&lt;/p></description></item><item><title>Selenium Manager (测试版)</title><link>https://www.selenium.dev/zh-cn/documentation/selenium_manager/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/zh-cn/documentation/selenium_manager/</guid><description>&lt;h2 id="动机">动机&lt;/h2>
+因此选择使用代理可以使您拥有适用于每个浏览器的解决方案.&lt;/p></description></item><item><title>Selenium Manager (测试版)</title><link>https://www.selenium.dev/zh-cn/documentation/selenium_manager/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/zh-cn/documentation/selenium_manager/</guid><description>&lt;h2 id="动机">动机&lt;/h2>
 &lt;p>&lt;em>&lt;strong>简而言之:&lt;/strong>&lt;/em>
 &lt;em>Selenium Manager 是 Selenium 项目的官方驱动程序管理器, 并且在每次 Selenium 发布时都会随附提供.&lt;/em>&lt;/p>
 &lt;p>Selenium 利用每个浏览器实现的原生支持来执行自动化流程.
@@ -15484,7 +15480,52 @@ document.addEventListener('keydown', function(e) {
  &lt;/div>
 &lt;/div>
 
-&lt;p>您现在可以开始创建颜色对象. 每个颜色对象都需要使用您颜色的字符串定义来创建. 支持的颜色定义如下:&lt;/p></description></item><item><title>Chrome 特定功能</title><link>https://www.selenium.dev/zh-cn/documentation/webdriver/browsers/chrome/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/zh-cn/documentation/webdriver/browsers/chrome/</guid><description>&lt;p>默认情况下，Selenium 4与Chrome v75及更高版本兼容. 但是请注意Chrome浏览器的版本与chromedriver的主版本需要匹配.&lt;/p>
+&lt;p>您现在可以开始创建颜色对象. 每个颜色对象都需要使用您颜色的字符串定义来创建. 支持的颜色定义如下:&lt;/p></description></item><item><title>页面对象模型</title><link>https://www.selenium.dev/zh-cn/documentation/test_practices/encouraged/page_object_models/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/zh-cn/documentation/test_practices/encouraged/page_object_models/</guid><description>&lt;p>注意：本页内容合并自多个来源，包括
+&lt;a href="https://github.com/SeleniumHQ/selenium/wiki/PageObjects">Selenium wiki&lt;/a>&lt;/p>
+&lt;h2 id="概述">概述&lt;/h2>
+&lt;p>在 Web 应用的 UI 中，总有一些区域是测试需要与之交互的。
+页面对象仅将这些区域建模为测试代码中的对象。
+这减少了重复代码的数量，意味着如果 UI 发生变化，
+只需在一处进行修复。&lt;/p>
+&lt;p>页面对象模型是一种设计模式，它在测试自动化领域日益流行，
+旨在增强测试的可维护性并减少代码重复。页面对象是一个
+面向对象的类，它作为被测应用 (AUT) 某个页面的接口。
+测试在需要与该页面的 UI 交互时，会使用此页面对象类的
+方法。好处在于，如果该页面的 UI 发生变化，测试本身
+不需要更改，只需更改页面对象中的代码即可。随后，
+所有支持新 UI 的更改都集中在一个地方。&lt;/p>
+&lt;h3 id="优势">优势&lt;/h3>
+&lt;ul>
+&lt;li>测试代码与页面特定代码（如定位器，或使用 UI 映射时的定位器使用方式）和布局之间有清晰的分离。&lt;/li>
+&lt;li>页面所提供的服务或操作有单一的存储库，
+而不是将这些服务分散在各处测试中。&lt;/li>
+&lt;/ul>
+&lt;p>在以上两种情况下，这使得因 UI 变更而需要进行的所有修改
+都可以在一处完成。关于此技术的有用信息可以在众多博客中找到，
+因为这种&amp;quot;测试设计模式&amp;quot;正被广泛使用。
+我们鼓励希望了解更多信息的读者在互联网上搜索关于此主题的博客。
+许多人已经就这一设计模式撰写了文章，
+并能提供超出本用户指南范围的有用提示。
+为了帮助您入门，我们将用一个简单的示例来说明页面对象。&lt;/p>
+&lt;h3 id="示例">示例&lt;/h3>
+&lt;p>首先，考虑一个不使用页面对象的典型测试自动化示例：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-java" data-lang="java">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic">/***
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic"> * Tests login feature
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic"> */&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline">&lt;/span>&lt;span style="color:#204a87;font-weight:bold">public&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">class&lt;/span> &lt;span style="color:#000">Login&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000;font-weight:bold">{&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">public&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">void&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">testLogin&lt;/span>&lt;span style="color:#000;font-weight:bold">()&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000;font-weight:bold">{&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#8f5902;font-style:italic">// fill login data on sign-in page&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">driver&lt;/span>&lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#c4a000">findElement&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#000">By&lt;/span>&lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#c4a000">name&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;user_name&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">)).&lt;/span>&lt;span style="color:#c4a000">sendKeys&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;userName&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">);&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">driver&lt;/span>&lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#c4a000">findElement&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#000">By&lt;/span>&lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#c4a000">name&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;password&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">)).&lt;/span>&lt;span style="color:#c4a000">sendKeys&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;my supersecret password&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">);&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">driver&lt;/span>&lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#c4a000">findElement&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#000">By&lt;/span>&lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#c4a000">name&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;sign-in&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">)).&lt;/span>&lt;span style="color:#c4a000">click&lt;/span>&lt;span style="color:#000;font-weight:bold">();&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#8f5902;font-style:italic">// verify h1 tag is &amp;#34;Hello userName&amp;#34; after login&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">driver&lt;/span>&lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#c4a000">findElement&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#000">By&lt;/span>&lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#c4a000">tagName&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;h1&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">)).&lt;/span>&lt;span style="color:#c4a000">isDisplayed&lt;/span>&lt;span style="color:#000;font-weight:bold">();&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">assertThat&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#000">driver&lt;/span>&lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#c4a000">findElement&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#000">By&lt;/span>&lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#c4a000">tagName&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;h1&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">)).&lt;/span>&lt;span style="color:#c4a000">getText&lt;/span>&lt;span style="color:#000;font-weight:bold">(),&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">is&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;Hello userName&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">));&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000;font-weight:bold">}&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline">&lt;/span>&lt;span style="color:#000;font-weight:bold">}&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>这种方式存在两个问题。&lt;/p></description></item><item><title>Chrome 特定功能</title><link>https://www.selenium.dev/zh-cn/documentation/webdriver/browsers/chrome/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/zh-cn/documentation/webdriver/browsers/chrome/</guid><description>&lt;p>默认情况下，Selenium 4与Chrome v75及更高版本兼容. 但是请注意Chrome浏览器的版本与chromedriver的主版本需要匹配.&lt;/p>
 &lt;h2 id="options">Options&lt;/h2>
 &lt;p>所有浏览器的通用功能请看这 &lt;a href="https://www.selenium.dev/zh-cn/documentation/webdriver/drivers/options/">Options page&lt;/a>.&lt;/p>
 &lt;p>Chrome浏览器的特有功能可以在谷歌的页面找到: &lt;a href="https://chromedriver.chromium.org/capabilities">Capabilities &amp;amp; ChromeOptions&lt;/a>&lt;/p>
