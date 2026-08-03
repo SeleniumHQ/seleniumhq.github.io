@@ -139,6 +139,10 @@ bronze:
     - logo: "/images/sponsors/swiftproxy_logo.png"
       url: "https://www.swiftproxy.net/?ref=selenium"
       name: "Scalable Solutions for Web Data Access"
+    # Sponsorship active: August 03, 2026 - August 04, 2027
+    - logo: "/images/sponsors/BairesDev_Logo_Orange_Dark.svg"
+      url: "https://www.bairesdev.com/"
+      name: "BairesDev – Accelerate Your Roadmap With Our Vetted Nearshore Talent"
     # Sponsorship start date: Mar 20, 2023
     # - logo: "/images/sponsors/kiwiqa-logo.png"
     #   url: "https://www.kiwiqa.com/"
