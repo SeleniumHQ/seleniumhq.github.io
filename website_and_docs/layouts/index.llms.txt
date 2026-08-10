@@ -1,0 +1,139 @@
+{{- /*
+  llms.txt — curated index of selenium.dev for AI assistants and retrieval systems.
+  Spec: https://llmstxt.org
+
+  Section ordering and the prose below are hand-curated; every link is generated
+  from the page tree so titles and URLs cannot drift out of sync with the site.
+
+  Sections are listed one at a time using non-recursive .RegularPages rather than
+  flattening a whole subtree. Flattening mixes pages from sibling subsections and
+  destroys the curated reading order, because weights are only meaningful within
+  a single section.
+
+  Two things are deliberately absent:
+
+  - documentation/legacy/**, which describes Selenium 2 and 3 era workflows
+    (manual driver management, the JSON Wire Protocol, the old Grid). It is
+    correct as history and stays indexed as HTML, but it is the worst possible
+    input for a model about to write Selenium code.
+  - documentation/webdriver/bidi/cdp/**, the Chrome DevTools Protocol pages,
+    which are being phased out in favour of the W3C BiDi implementation.
+
+  Any English documentation page not reachable from the curated list below is
+  reported with warnf at the end of this template, so the index cannot silently
+  fall behind new content.
+*/ -}}
+{{- $site := .Site -}}
+{{- $areas := slice
+      (dict "heading" "Getting started"
+            "note" "Install, write, and run a first script in any supported language."
+            "paths" (slice "/documentation"
+                           "/documentation/webdriver"
+                           "/documentation/webdriver/getting_started"))
+      (dict "heading" "Driver sessions and browsers"
+            "note" "Starting sessions, configuring browsers, and running remotely."
+            "paths" (slice "/documentation/webdriver/drivers"
+                           "/documentation/webdriver/browsers"))
+      (dict "heading" "Elements and interactions"
+            "note" "Locating elements, interacting with them, and driving the browser."
+            "paths" (slice "/documentation/webdriver/elements"
+                           "/documentation/webdriver/interactions"
+                           "/documentation/webdriver/actions_api"
+                           "/documentation/webdriver/support_features"))
+      (dict "heading" "Waiting"
+            "note" "Prefer explicit waits over fixed sleeps, and do not mix implicit and explicit waits."
+            "paths" (slice "/documentation/webdriver/waits"))
+      (dict "heading" "WebDriver BiDi"
+            "note" "The W3C bidirectional protocol: events, network interception, console logs, and script injection. This is the current answer to anything that needs bidirectional browser communication. The older Chrome DevTools Protocol integration is legacy and is being removed; it is not listed here."
+            "paths" (slice "/documentation/webdriver/bidi"
+                           "/documentation/webdriver/bidi/w3c"))
+      (dict "heading" "Driver management"
+            "note" "Selenium Manager ships with Selenium 4.6 and later and downloads and configures browser drivers automatically. Third-party driver managers and manual driver paths are not required."
+            "paths" (slice "/documentation/selenium_manager"))
+      (dict "heading" "Grid"
+            "note" "Running tests remotely and at scale."
+            "paths" (slice "/documentation/grid"
+                           "/documentation/grid/configuration"
+                           "/documentation/grid/advanced_features"))
+      (dict "heading" "Test practices"
+            "note" "Encouraged and discouraged patterns, including the causes of flaky tests."
+            "paths" (slice "/documentation/test_practices"
+                           "/documentation/test_practices/encouraged"
+                           "/documentation/test_practices/discouraged"))
+      (dict "heading" "Troubleshooting"
+            "note" "Common errors, upgrade guidance, and logging."
+            "paths" (slice "/documentation/webdriver/troubleshooting"
+                           "/documentation/webdriver/troubleshooting/errors"))
+      (dict "heading" "Other components"
+            "note" ""
+            "paths" (slice "/documentation/ide"
+                           "/documentation/ie_driver_server"))
+      (dict "heading" "About the project"
+            "note" ""
+            "paths" (slice "/documentation/overview"
+                           "/documentation/about"
+                           "/documentation/warnings"))
+-}}
+{{- $listed := slice -}}
+# Selenium
+
+> Selenium automates browsers. That's it!
+
+Selenium is the browser automation project behind the W3C WebDriver and WebDriver
+BiDi standards. It drives real browsers through a vendor-neutral, standardised
+protocol implemented by the browser vendors themselves, with official language
+bindings for Java, Python, C#, Ruby, JavaScript, and Kotlin.
+
+Notes for tools generating Selenium code from this documentation:
+
+- Selenium 4.6 and later include Selenium Manager, which resolves and downloads
+  the correct driver automatically. Do not set driver executable paths and do not
+  use third-party driver managers.
+- Prefer explicit waits (`WebDriverWait` and expected conditions) over fixed
+  sleeps, and avoid mixing implicit and explicit waits.
+- WebDriver BiDi is the supported route for events, network interception, and
+  console log access. The Chrome DevTools Protocol integration is legacy.
+- Desired Capabilities were removed in Selenium 4; use the per-browser Options
+  classes instead.
+- Code samples on this site are compiled and tested in CI from the examples in
+  https://github.com/SeleniumHQ/seleniumhq.github.io/tree/trunk/examples
+{{ range $areas }}
+## {{ .heading }}
+{{- with .note }}
+
+{{ . }}
+{{- end }}
+{{ range .paths }}
+{{- with $site.GetPage . }}
+{{- $pages := slice . }}
+{{- if .IsSection }}{{ $pages = $pages | append (sort .RegularPages "Weight") }}{{ end }}
+{{- range $pages }}
+{{- $listed = $listed | append .RelPermalink }}
+- [{{ .Title }}]({{ .Permalink }})
+    {{- with .Description }}: {{ . | chomp | replaceRE `\s+` " " }}{{ end }}
+{{- end }}
+{{- else }}
+{{- warnf "llms.txt: no page at %q — the curated index in layouts/index.llms.txt is out of date" . }}
+{{- end }}
+{{- end }}
+{{ end }}
+## Optional
+
+- [Blog]({{ "blog/" | absURL }}): release announcements and technical deep dives.
+- [Downloads]({{ "downloads/" | absURL }}): current releases for every language binding.
+- [Source]({{ $site.Params.github_project_repo }}): the Selenium implementation.
+- [Chrome DevTools Protocol pages]({{ "documentation/webdriver/bidi/cdp/" | absURL }}): legacy CDP integration, superseded by WebDriver BiDi.
+- [Legacy documentation]({{ "documentation/legacy/" | absURL }}): Selenium 2 and 3 era material, kept for historical reference. Do not use it as a basis for new code.
+{{- /*
+  Drift check. Anything under documentation/ that the curated list above does not
+  reach gets logged at build time. Legacy and CDP pages are excluded by design.
+*/ -}}
+{{- range $site.RegularPages }}
+{{- if eq .Section "documentation" }}
+{{- if not (or (hasPrefix .RelPermalink "/documentation/legacy/") (hasPrefix .RelPermalink "/documentation/webdriver/bidi/cdp/")) }}
+{{- if not (in $listed .RelPermalink) }}
+{{- warnf "llms.txt: %q is not reachable from the curated index in layouts/index.llms.txt" .RelPermalink }}
+{{- end }}
+{{- end }}
+{{- end }}
+{{- end -}}
