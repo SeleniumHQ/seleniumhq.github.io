@@ -1,0 +1,195 @@
+# Selenium
+
+> Selenium automates browsers. That's it!
+
+Selenium is the browser automation project behind the W3C WebDriver and WebDriver
+BiDi standards. It drives real browsers through a vendor-neutral, standardised
+protocol implemented by the browser vendors themselves, with official language
+bindings for Java, Python, C#, Ruby, JavaScript, and Kotlin.
+
+Notes for tools generating Selenium code from this documentation:
+
+- Selenium 4.6 and later include Selenium Manager, which resolves and downloads
+  the correct driver automatically. Do not set driver executable paths and do not
+  use third-party driver managers.
+- Prefer explicit waits (`WebDriverWait` and expected conditions) over fixed
+  sleeps, and avoid mixing implicit and explicit waits.
+- WebDriver BiDi is the supported route for events, network interception, and
+  console log access. The Chrome DevTools Protocol integration is legacy.
+- Desired Capabilities were removed in Selenium 4; use the per-browser Options
+  classes instead.
+- Code samples on this site are compiled and tested in CI from the examples in
+  https://github.com/SeleniumHQ/seleniumhq.github.io/tree/trunk/examples
+
+## Getting started
+
+Install, write, and run a first script in any supported language.
+
+- [The Selenium Browser Automation Project](https://www.selenium.dev/documentation/)
+- [Selenium Manager (Beta)](https://www.selenium.dev/documentation/selenium_manager/): Selenium Manager is a command-line tool implemented in Rust that provides automated driver and browser management for Selenium. Selenium bindings use this tool by default, so you do not need to download it or add anything to your code or do anything else to use it.
+- [Selenium IDE](https://www.selenium.dev/documentation/ide/): The Selenium IDE is a browser extension that records and plays back a user's actions.
+- [WebDriver](https://www.selenium.dev/documentation/webdriver/): WebDriver drives a browser natively; learn more about it.
+- [Waiting Strategies](https://www.selenium.dev/documentation/webdriver/waits/)
+- [Getting started](https://www.selenium.dev/documentation/webdriver/getting_started/): If you are new to Selenium, we have a few resources that can help you get up to speed right away.
+- [Install a Selenium library](https://www.selenium.dev/documentation/webdriver/getting_started/install_library/): Setting up the Selenium library for your favourite programming language.
+- [Write your first Selenium script](https://www.selenium.dev/documentation/webdriver/getting_started/first_script/): Step-by-step instructions for constructing a Selenium script
+- [Organizing and Executing Selenium Code](https://www.selenium.dev/documentation/webdriver/getting_started/using_selenium/): Scaling Selenium execution with an IDE and a Test Runner library
+
+## Driver sessions and browsers
+
+Starting sessions, configuring browsers, and running remotely.
+
+- [Driver Sessions](https://www.selenium.dev/documentation/webdriver/drivers/)
+- [Browser Options](https://www.selenium.dev/documentation/webdriver/drivers/options/): These capabilities are shared by all browsers.
+- [HTTP Client Configuration](https://www.selenium.dev/documentation/webdriver/drivers/http_client/)
+- [Driver Service Class](https://www.selenium.dev/documentation/webdriver/drivers/service/)
+- [Remote WebDriver](https://www.selenium.dev/documentation/webdriver/drivers/remote_webdriver/)
+- [Supported Browsers](https://www.selenium.dev/documentation/webdriver/browsers/)
+- [Chrome specific functionality](https://www.selenium.dev/documentation/webdriver/browsers/chrome/): These are capabilities and features specific to Google Chrome browsers.
+- [Edge specific functionality](https://www.selenium.dev/documentation/webdriver/browsers/edge/): These are capabilities and features specific to Microsoft Edge browsers.
+- [Firefox specific functionality](https://www.selenium.dev/documentation/webdriver/browsers/firefox/): These are capabilities and features specific to Mozilla Firefox browsers.
+- [IE specific functionality](https://www.selenium.dev/documentation/webdriver/browsers/internet_explorer/): These are capabilities and features specific to Microsoft Internet Explorer browsers.
+- [Safari specific functionality](https://www.selenium.dev/documentation/webdriver/browsers/safari/): These are capabilities and features specific to Apple Safari browsers.
+
+## Elements and interactions
+
+Locating elements, interacting with them, and driving the browser.
+
+- [Web elements](https://www.selenium.dev/documentation/webdriver/elements/): Identifying and working with element objects in the DOM.
+- [Locator strategies](https://www.selenium.dev/documentation/webdriver/elements/locators/): Ways to identify one or more specific elements in the DOM.
+- [Finding web elements](https://www.selenium.dev/documentation/webdriver/elements/finders/): Locating the elements based on the provided locator values.
+- [Interacting with web elements](https://www.selenium.dev/documentation/webdriver/elements/interactions/): A high-level instruction set for manipulating form controls.
+- [Information about web elements](https://www.selenium.dev/documentation/webdriver/elements/information/): What you can learn about an element.
+- [File Upload](https://www.selenium.dev/documentation/webdriver/elements/file_upload/)
+- [Browser interactions](https://www.selenium.dev/documentation/webdriver/interactions/)
+- [Browser navigation](https://www.selenium.dev/documentation/webdriver/interactions/navigation/)
+- [JavaScript alerts, prompts and confirmations](https://www.selenium.dev/documentation/webdriver/interactions/alerts/)
+- [Working with cookies](https://www.selenium.dev/documentation/webdriver/interactions/cookies/)
+- [Working with IFrames and frames](https://www.selenium.dev/documentation/webdriver/interactions/frames/)
+- [Print Page](https://www.selenium.dev/documentation/webdriver/interactions/print_page/)
+- [Working with windows and tabs](https://www.selenium.dev/documentation/webdriver/interactions/windows/)
+- [Virtual Authenticator](https://www.selenium.dev/documentation/webdriver/interactions/virtual_authenticator/): A representation of the Web Authenticator model.
+- [Actions API](https://www.selenium.dev/documentation/webdriver/actions_api/): A low-level interface for providing virtualized device input actions to the web browser.
+- [Keyboard actions](https://www.selenium.dev/documentation/webdriver/actions_api/keyboard/): A representation of any key input device for interacting with a web page.
+- [Mouse actions](https://www.selenium.dev/documentation/webdriver/actions_api/mouse/): A representation of any pointer device for interacting with a web page.
+- [Pen actions](https://www.selenium.dev/documentation/webdriver/actions_api/pen/): A representation of a pen stylus kind of pointer input for interacting with a web page.
+- [Scroll wheel actions](https://www.selenium.dev/documentation/webdriver/actions_api/wheel/): A representation of a scroll wheel input device for interacting with a web page.
+- [Support features](https://www.selenium.dev/documentation/webdriver/support_features/): Support classes provide optional higher level features.
+- [Waiting with Expected Conditions](https://www.selenium.dev/documentation/webdriver/support_features/expected_conditions/): These are classes used to describe what needs to be waited for.
+- [Command Listeners](https://www.selenium.dev/documentation/webdriver/support_features/listeners/)
+- [Working With Colors](https://www.selenium.dev/documentation/webdriver/support_features/colors/)
+- [Working with select list elements](https://www.selenium.dev/documentation/webdriver/support_features/select_lists/): Select lists have special behaviors compared to other elements.
+- [ThreadGuard](https://www.selenium.dev/documentation/webdriver/support_features/thread_guard/)
+
+## Waiting
+
+Prefer explicit waits over fixed sleeps, and do not mix implicit and explicit waits.
+
+- [Waiting Strategies](https://www.selenium.dev/documentation/webdriver/waits/)
+
+## WebDriver BiDi
+
+The W3C bidirectional protocol: events, network interception, console logs, and script injection. This is the current answer to anything that needs bidirectional browser communication. The older Chrome DevTools Protocol integration is legacy and is being removed; it is not listed here.
+
+- [BiDirectional functionality](https://www.selenium.dev/documentation/webdriver/bidi/)
+- [WebDriver BiDi Logging Features](https://www.selenium.dev/documentation/webdriver/bidi/logging/): These features are related to logging. Because "logging" can refer to so many different things, these methods are made available via a "script" namespace.
+- [WebDriver BiDi Network Features](https://www.selenium.dev/documentation/webdriver/bidi/network/): These features are related to networking, and are made available via a "network" namespace.
+- [WebDriver BiDi Script Features](https://www.selenium.dev/documentation/webdriver/bidi/script/): These features are related to scripts, and are made available via a "script" namespace.
+- [BiDirectional API (W3C compliant)](https://www.selenium.dev/documentation/webdriver/bidi/w3c/): Examples of working with Chrome DevTools Protocol in Selenium. CDP support is temporary until WebDriver BiDi has been implemented.
+- [Browsing Context](https://www.selenium.dev/documentation/webdriver/bidi/w3c/browsing_context/)
+- [Input](https://www.selenium.dev/documentation/webdriver/bidi/w3c/input/)
+- [Log](https://www.selenium.dev/documentation/webdriver/bidi/w3c/log/)
+- [Network](https://www.selenium.dev/documentation/webdriver/bidi/w3c/network/)
+- [Script](https://www.selenium.dev/documentation/webdriver/bidi/w3c/script/)
+
+## Driver management
+
+Selenium Manager ships with Selenium 4.6 and later and downloads and configures browser drivers automatically. Third-party driver managers and manual driver paths are not required.
+
+- [Selenium Manager (Beta)](https://www.selenium.dev/documentation/selenium_manager/): Selenium Manager is a command-line tool implemented in Rust that provides automated driver and browser management for Selenium. Selenium bindings use this tool by default, so you do not need to download it or add anything to your code or do anything else to use it.
+
+## Grid
+
+Running tests remotely and at scale.
+
+- [Grid](https://www.selenium.dev/documentation/grid/): Want to run tests in parallel across multiple machines? Then, Grid is for you.
+- [Getting started with Selenium Grid](https://www.selenium.dev/documentation/grid/getting_started/): Instructions for a simple Selenium Grid
+- [When to Use Grid](https://www.selenium.dev/documentation/grid/applicability/): Is Grid right for you?
+- [Selenium Grid Components](https://www.selenium.dev/documentation/grid/components/): Understand how to use the different Grid components
+- [Grid architecture](https://www.selenium.dev/documentation/grid/architecture/)
+- [Configuration of Components](https://www.selenium.dev/documentation/grid/configuration/): Here you can see how each Grid component can be configured individually based on common configuration values and component-specific configuration values.
+- [Configuration help](https://www.selenium.dev/documentation/grid/configuration/help/): Get information about all the available options to configure Grid.
+- [CLI options in the Selenium Grid](https://www.selenium.dev/documentation/grid/configuration/cli_options/): All Grid components configuration CLI options in detail.
+- [TOML configuration options](https://www.selenium.dev/documentation/grid/configuration/toml_options/): Grid configuration examples using Toml files.
+- [Advanced features of Selenium](https://www.selenium.dev/documentation/grid/advanced_features/): To get all the details of the advanced features, understand how it works, and how to set up your own, please browse thorough the following sections.
+- [Observability in Selenium Grid](https://www.selenium.dev/documentation/grid/advanced_features/observability/)
+- [GraphQL query support](https://www.selenium.dev/documentation/grid/advanced_features/graphql_support/)
+- [Grid endpoints](https://www.selenium.dev/documentation/grid/advanced_features/endpoints/)
+- [Customizing a Node](https://www.selenium.dev/documentation/grid/advanced_features/customize_node/)
+- [External datastore](https://www.selenium.dev/documentation/grid/advanced_features/external_datastore/)
+
+## Test practices
+
+Encouraged and discouraged patterns, including the causes of flaky tests.
+
+- [Test Practices](https://www.selenium.dev/documentation/test_practices/): Some guidelines and recommendations on testing from the Selenium project.
+- [Design patterns and development strategies](https://www.selenium.dev/documentation/test_practices/design_strategies/)
+- [Overview of Test Automation](https://www.selenium.dev/documentation/test_practices/overview/)
+- [Types of Testing](https://www.selenium.dev/documentation/test_practices/testing_types/)
+- [Encouraged behaviors](https://www.selenium.dev/documentation/test_practices/encouraged/): Some guidelines and recommendations on testing from the Selenium project.
+- [Page object models](https://www.selenium.dev/documentation/test_practices/encouraged/page_object_models/)
+- [Domain specific language](https://www.selenium.dev/documentation/test_practices/encouraged/domain_specific_language/)
+- [Generating application state](https://www.selenium.dev/documentation/test_practices/encouraged/generating_application_state/)
+- [Mock external services](https://www.selenium.dev/documentation/test_practices/encouraged/mock_external_services/)
+- [Improved reporting](https://www.selenium.dev/documentation/test_practices/encouraged/improved_reporting/)
+- [Avoid sharing state](https://www.selenium.dev/documentation/test_practices/encouraged/avoid_sharing_state/)
+- [Tips on working with locators](https://www.selenium.dev/documentation/test_practices/encouraged/locators/): When to use which locators and how best to manage them in your code.
+- [Test independency](https://www.selenium.dev/documentation/test_practices/encouraged/test_independency/)
+- [Consider using a fluent API](https://www.selenium.dev/documentation/test_practices/encouraged/consider_using_a_fluent_api/)
+- [Fresh browser per test](https://www.selenium.dev/documentation/test_practices/encouraged/fresh_browser_per_test/)
+- [Discouraged behaviors](https://www.selenium.dev/documentation/test_practices/discouraged/): Things to avoid when automating browsers with Selenium.
+- [Captchas](https://www.selenium.dev/documentation/test_practices/discouraged/captchas/)
+- [File downloads](https://www.selenium.dev/documentation/test_practices/discouraged/file_downloads/)
+- [HTTP response codes](https://www.selenium.dev/documentation/test_practices/discouraged/http_response_codes/)
+- [Gmail, email and Facebook logins](https://www.selenium.dev/documentation/test_practices/discouraged/gmail_email_and_facebook_logins/)
+- [Test dependency](https://www.selenium.dev/documentation/test_practices/discouraged/test_dependency/)
+- [Performance testing](https://www.selenium.dev/documentation/test_practices/discouraged/performance_testing/)
+- [Link spidering](https://www.selenium.dev/documentation/test_practices/discouraged/link_spidering/)
+- [Two Factor Authentication](https://www.selenium.dev/documentation/test_practices/discouraged/two_factor_authentication/)
+
+## Troubleshooting
+
+Common errors, upgrade guidance, and logging.
+
+- [Troubleshooting Assistance](https://www.selenium.dev/documentation/webdriver/troubleshooting/): How to solve WebDriver problems.
+- [Logging Selenium commands](https://www.selenium.dev/documentation/webdriver/troubleshooting/logging/): Getting information about Selenium execution.
+- [Upgrade to Selenium 4](https://www.selenium.dev/documentation/webdriver/troubleshooting/upgrade_to_selenium_4/): Are you still using Selenium 3? This guide will help you upgrade to the latest release!
+- [Understanding Common Errors](https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/): How to solve various problems in your Selenium code.
+- [Unable to Locate Driver Error](https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location/): Troubleshooting missing path to driver executable.
+
+## Other components
+
+- [Selenium IDE](https://www.selenium.dev/documentation/ide/): The Selenium IDE is a browser extension that records and plays back a user's actions.
+- [IE Driver Server](https://www.selenium.dev/documentation/ie_driver_server/): The Internet Explorer Driver is a standalone server that implements the WebDriver specification.
+- [Internet Explorer Driver Internals](https://www.selenium.dev/documentation/ie_driver_server/internals/): More detailed information on the IE Driver.
+
+## About the project
+
+- [Selenium Overview](https://www.selenium.dev/documentation/overview/): Is Selenium for you? See an overview of the different project components.
+- [Selenium components](https://www.selenium.dev/documentation/overview/components/)
+- [A deeper look at Selenium](https://www.selenium.dev/documentation/overview/details/): Selenium is an umbrella project for a range of tools and libraries that enable and support the automation of web browsers. 
+- [About this documentation](https://www.selenium.dev/documentation/about/)
+- [Copyright and attributions](https://www.selenium.dev/documentation/about/copyright/): Copyright, contributions and all attributions for the different projects under the Selenium umbrella.
+- [Contributing to the Selenium site & documentation](https://www.selenium.dev/documentation/about/contributing/): Information on improving documentation and code examples for Selenium
+- [Style guide for Selenium documentation](https://www.selenium.dev/documentation/about/style/): Conventions for contributions to the Selenium documentation and code examples
+- [Musings about how things came to be](https://www.selenium.dev/documentation/about/history/): Details mostly of interest to Selenium devs about how and why certain parts of the project were created
+- [Warnings](https://www.selenium.dev/documentation/warnings/): Explanations for the diagnostics, annotations, and IDE warnings Selenium surfaces.
+- [BiDi implementation API is internal](https://www.selenium.dev/documentation/warnings/bidi-implementation/): Why Selenium's low-level BiDi implementation classes are marked internal, and what to use instead.
+
+## Optional
+
+- [Blog](https://www.selenium.dev/blog/): release announcements and technical deep dives.
+- [Downloads](https://www.selenium.dev/downloads/): current releases for every language binding.
+- [Source](https://github.com/seleniumhq/selenium): the Selenium implementation.
+- [Chrome DevTools Protocol pages](https://www.selenium.dev/documentation/webdriver/bidi/cdp/): legacy CDP integration, superseded by WebDriver BiDi.
+- [Legacy documentation](https://www.selenium.dev/documentation/legacy/): Selenium 2 and 3 era material, kept for historical reference. Do not use it as a basis for new code.
