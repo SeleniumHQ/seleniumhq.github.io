@@ -107,6 +107,27 @@ description = "Selenium automates browsers. That's it!"
 [outputs]
 section = ["HTML", "print"]
 
+# Machine-readable index of the site for AI assistants and retrieval systems,
+# per the llms.txt convention (https://llmstxt.org). Rendered by
+# layouts/index.llms.txt.
+#
+# Left as an "alternative" format on purpose: Docsy's head.html then advertises
+# it automatically as <link rel="alternate" type="text/plain">, and its
+# partials/outputformat.html keeps reporting "html" for the home page, which it
+# derives by subtracting the alternative formats from the full set.
+[outputFormats]
+  [outputFormats.llms]
+    mediaType = "text/plain"
+    baseName = "llms"
+    isPlainText = true
+
+# English only, and deliberately so: llms.txt is a single flat index, and
+# interleaving four translations of the same page dilutes it for every language.
+# The translations remain fully indexed as normal HTML.
+[languages.en.outputs]
+home = ["HTML", "RSS", "llms"]
+section = ["HTML", "print"]
+
 [params]
 copyright = "Software Freedom Conservancy"
 # privacy_policy = "https://policies.google.com/privacy"
