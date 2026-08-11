@@ -7,7 +7,13 @@ aliases: [
 "/documentation/webdriver/understanding_the_components",
 "/documentation/ja/webdriver/understanding_the_components/",
 "/documentation/pt-br/webdriver/understanding_the_components/",
-"/documentation/zh-cn/webdriver/understanding_the_components/"
+"/documentation/zh-cn/webdriver/understanding_the_components/",
+"/ja/documentation/overview/components/",
+"/ja/documentation/webdriver/understanding_the_components",
+"/pt-br/documentation/overview/components/",
+"/pt-br/documentation/webdriver/understanding_the_components",
+"/zh-cn/documentation/overview/components/",
+"/zh-cn/documentation/webdriver/understanding_the_components"
 ]
 ---
 

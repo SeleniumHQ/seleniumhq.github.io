@@ -10,6 +10,12 @@ aliases: [
 "/documentation/grid/configuring_components/",
 "/documentation/ja/grid/grid_4/configuring_components/",
 "/documentation/pt-br/grid/grid_4/configuring_components/",
-"/documentation/zh-cn/grid/grid_4/configuring_components/"
+"/documentation/zh-cn/grid/grid_4/configuring_components/",
+"/ja/documentation/grid/configuration/",
+"/ja/documentation/grid/configuring_components/",
+"/pt-br/documentation/grid/configuration/",
+"/pt-br/documentation/grid/configuring_components/",
+"/zh-cn/documentation/grid/configuration/",
+"/zh-cn/documentation/grid/configuring_components/"
 ]
 ---

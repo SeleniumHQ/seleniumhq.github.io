@@ -7,7 +7,13 @@ aliases: [
 "/documentation/webdriver/locating_elements/",
 "/documentation/ja/webdriver/locating_elements/",
 "/documentation/pt-br/webdriver/locating_elements/",
-"/documentation/zh-cn/webdriver/locating_elements/"
+"/documentation/zh-cn/webdriver/locating_elements/",
+"/ja/documentation/webdriver/elements/finders/",
+"/ja/documentation/webdriver/locating_elements/",
+"/pt-br/documentation/webdriver/elements/finders/",
+"/pt-br/documentation/webdriver/locating_elements/",
+"/zh-cn/documentation/webdriver/elements/finders/",
+"/zh-cn/documentation/webdriver/locating_elements/"
 ]
 description: >
   Locating the elements based on the provided locator values.

@@ -7,7 +7,13 @@ aliases: [
 "/documentation/grid/advanced_features/grid_endpoints/",
 "/documentation/ja/grid/grid_4/grid_endpoints/",
 "/documentation/pt-br/grid/grid_4/grid_endpoints/",
-"/documentation/zh-cn/grid/grid_4/grid_endpoints/"
+"/documentation/zh-cn/grid/grid_4/grid_endpoints/",
+"/ja/documentation/grid/advanced_features/endpoints/",
+"/ja/documentation/grid/advanced_features/grid_endpoints/",
+"/pt-br/documentation/grid/advanced_features/endpoints/",
+"/pt-br/documentation/grid/advanced_features/grid_endpoints/",
+"/zh-cn/documentation/grid/advanced_features/endpoints/",
+"/zh-cn/documentation/grid/advanced_features/grid_endpoints/"
 ]
 ---
 

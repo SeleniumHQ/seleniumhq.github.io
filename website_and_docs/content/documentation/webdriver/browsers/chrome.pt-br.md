@@ -13,7 +13,7 @@ Por omissão, Selenium 4 é compatível com Chrome v75 e superiores. Note que a 
 
 ## Opções
 
-Capacidades comuns a todos os navegadores estão descritas na [página Opções]({{< ref "../drivers/options.md" >}}).
+Capacidades comuns a todos os navegadores estão descritas na [página Opções]({{< ref path="../drivers/options.md" lang="en" >}}).
 
 Capacidades únicas ao Chrome podem ser encontradas na página da Google para [Capacidades e & ChromeOptions](https://chromedriver.chromium.org/capabilities)
 
@@ -395,7 +395,7 @@ Pode simular vários estados de rede (como exemplo, simular situações com pouc
 
 The following examples are for local webdrivers. For remote webdrivers,
 please refer to the
-[Remote WebDriver]({{< ref "../drivers/remote_webdriver" >}}) page.
+[Remote WebDriver]({{< ref path="../drivers/remote_webdriver" lang="en" >}}) page.
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}

@@ -19,7 +19,7 @@ safaridriver --enable
 
 ## オプション
 
-すべてのブラウザに共通する機能は、[オプションページ]({{< ref "../drivers/options.md" >}})で説明しています。
+すべてのブラウザに共通する機能は、[オプションページ]({{< ref path="../drivers/options.md" lang="en" >}})で説明しています。
 
 Safari 固有の機能については、Apple の
 [About WebDriver for Safari](https://developer.apple.com/documentation/webkit/about_webdriver_for_safari#2957227)

@@ -11,9 +11,9 @@ description: >
 ---
 
 Um localizador é uma forma de identificar elementos numa página. São os argumentos passados aos métodos
-[Finders]({{< ref "finders.md" >}}) .
+[Finders]({{< ref path="finders.md" lang="en" >}}) .
 
-Visite os nossas [directrizes e recomendações]({{< ref "/documentation/test_practices/encouraged" >}}) para dicas sobre
+Visite os nossas [directrizes e recomendações]({{< ref path="/documentation/test_practices/encouraged" lang="en" >}}) para dicas sobre
 [locators]({{< ref "/documentation/test_practices/encouraged/locators.md" >}}), incluindo quais usar e quando, 
 e também porque é que deve declarar localizadores separadamente dos finders.
 

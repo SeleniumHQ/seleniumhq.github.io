@@ -9,7 +9,13 @@ aliases: [
 "/documentation/legacy/remote_webdriver_server/",
 "/documentation/ja/legacy_docs/remote_webdriver_server/",
 "/documentation/pt-br/legacy_docs/remote_webdriver_server/",
-"/documentation/zh-cn/legacy_docs/remote_webdriver_server/"
+"/documentation/zh-cn/legacy_docs/remote_webdriver_server/",
+"/ja/documentation/legacy/remote_webdriver_server/",
+"/ja/documentation/legacy/selenium_2/remote_server/",
+"/pt-br/documentation/legacy/remote_webdriver_server/",
+"/pt-br/documentation/legacy/selenium_2/remote_server/",
+"/zh-cn/documentation/legacy/remote_webdriver_server/",
+"/zh-cn/documentation/legacy/selenium_2/remote_server/"
 ]
 ---
 This documentation previously located [on the wiki](https://github.com/SeleniumHQ/selenium/wiki/RemoteWebDriverServer)

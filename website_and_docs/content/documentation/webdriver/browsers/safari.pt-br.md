@@ -18,7 +18,7 @@ safaridriver --enable
 
 ## Opções
 
-Capacidades comuns a todos os navegadores estão descritas na [página Opções]({{< ref "../drivers/options.md" >}}).
+Capacidades comuns a todos os navegadores estão descritas na [página Opções]({{< ref path="../drivers/options.md" lang="en" >}}).
 
 Capacidades únicas ao Safari podem ser encontradas na página da Apple [WebDriver para Safari](https://developer.apple.com/documentation/webkit/about_webdriver_for_safari#2957227)
 

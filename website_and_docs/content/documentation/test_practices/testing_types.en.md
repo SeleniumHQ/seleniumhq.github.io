@@ -7,7 +7,13 @@ aliases: [
 "/documentation/guidelines/types_of_testing/",
 "/documentation/ja/introduction/types_of_testing/",
 "/documentation/pt-br/introduction/types_of_testing/",
-"/documentation/zh-cn/introduction/types_of_testing/"
+"/documentation/zh-cn/introduction/types_of_testing/",
+"/ja/documentation/guidelines/types_of_testing/",
+"/ja/documentation/test_practices/testing_types/",
+"/pt-br/documentation/guidelines/types_of_testing/",
+"/pt-br/documentation/test_practices/testing_types/",
+"/zh-cn/documentation/guidelines/types_of_testing/",
+"/zh-cn/documentation/test_practices/testing_types/"
 ]
 ---
 

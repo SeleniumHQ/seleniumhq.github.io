@@ -6,7 +6,7 @@ description: >
     逐步构建一个Selenium脚本的说明
 ---
 
-当你完成 [Selenium安装]({{< ref "install_library.md" >}})  后, 便可以开始书写Selenium脚本了.
+当你完成 [Selenium安装]({{< ref path="install_library.md" lang="en" >}})  后, 便可以开始书写Selenium脚本了.
 
 ## 八个基本组成部分
 
@@ -70,9 +70,9 @@ Selenium所做的一切,
 {{< /tab >}}
 {{< /tabpane >}}
 
-### 3. 请求 [浏览器信息]({{< ref "/documentation/webdriver/interactions" >}})
+### 3. 请求 [浏览器信息]({{< ref path="/documentation/webdriver/interactions" lang="en" >}})
 
-您可以请求一系列关于[浏览器的信息]({{< ref "/documentation/webdriver/interactions" >}}) , 
+您可以请求一系列关于[浏览器的信息]({{< ref path="/documentation/webdriver/interactions" lang="en" >}}) , 
 包括窗口句柄、浏览器尺寸/位置、cookie、警报等.
 
 {{< tabpane text=true >}}
@@ -111,7 +111,7 @@ Selenium所做的一切,
 但在这里最容易演示, 
 所以我们将使用它作为占位符. 
 
-阅读更多关于[等待策略]({{< ref "/documentation/webdriver/waits.md" >}})
+阅读更多关于[等待策略]({{< ref path="/documentation/webdriver/waits.md" lang="en" >}})
 的信息. 
 
 {{< tabpane text=true >}}
@@ -135,9 +135,9 @@ Selenium所做的一切,
 {{< /tab >}}
 {{< /tabpane >}}
 
-### 5. 发送命令 [查找元素]({{< ref "/documentation/webdriver/elements" >}})
+### 5. 发送命令 [查找元素]({{< ref path="/documentation/webdriver/elements" lang="en" >}})
 大多数Selenium会话中的主要命令都与元素相关, 
-如果不先[找到元素]({{< ref "/documentation/webdriver/elements" >}}), 
+如果不先[找到元素]({{< ref path="/documentation/webdriver/elements" lang="en" >}}), 
 就无法与之交互.
 
 {{< tabpane text=true >}}

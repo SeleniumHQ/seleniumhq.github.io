@@ -19,7 +19,7 @@ requiresTranslation: true
 请注意, 如果修改或添加了选项,
 但尚未记录, 则此文档可能已过时.
 如果您遇到这种情况,
-请查看 ["配置帮助"]({{< ref "help.md" >}}) 部分,
+请查看 ["配置帮助"]({{< ref path="help.md" lang="en" >}}) 部分,
 并随时向我们发送更新此页面的请求.
 {{% /pageinfo %}}
 

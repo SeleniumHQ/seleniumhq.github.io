@@ -93,7 +93,7 @@ description: >
 
 ### 安装
 
-在[安装 Selenium 类库]({{< ref "install_library.md" >}})一节中详细说明了需要哪些东西。
+在[安装 Selenium 类库]({{< ref path="install_library.md" lang="en" >}})一节中详细说明了需要哪些东西。
 这里的代码只展示在我们的文档示例项目中用到的示例。
 
 {{< tabpane text=true >}}
@@ -280,4 +280,4 @@ npx mocha runningTests.spec.js
 使用你目前所学到的知识构建你自己的 Selenium 代码吧！
 
 想要了解更多的功能特性，
-请继续阅读我们接下来的[WebDriver 教程]({{< ref "/documentation/webdriver/" >}})
+请继续阅读我们接下来的[WebDriver 教程]({{< ref path="/documentation/webdriver/" lang="en" >}})

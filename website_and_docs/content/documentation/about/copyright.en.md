@@ -10,7 +10,13 @@ aliases: [
 "/documentation/about/copyright_and_attributions",
 "/documentation/ja/front_matter/copyright_and_attributions/",
 "/documentation/pt-br/front_matter/copyright_and_attributions/",
-"/documentation/zh-cn/front_matter/copyright_and_attributions/"
+"/documentation/zh-cn/front_matter/copyright_and_attributions/",
+"/ja/documentation/about/copyright/",
+"/ja/documentation/about/copyright_and_attributions",
+"/pt-br/documentation/about/copyright/",
+"/pt-br/documentation/about/copyright_and_attributions",
+"/zh-cn/documentation/about/copyright/",
+"/zh-cn/documentation/about/copyright_and_attributions"
 ]
 ---
 

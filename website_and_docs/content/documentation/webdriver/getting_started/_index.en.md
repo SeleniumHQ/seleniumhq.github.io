@@ -21,7 +21,13 @@ aliases: [
 "/documentation/zh-cn/getting_started/",
 "/documentation/zh-cn/getting_started/quick/",
 "/documentation/zh-cn/selenium_installation/",
-"/documentation/zh-cn/getting_started_with_webdriver/"
+"/documentation/zh-cn/getting_started_with_webdriver/",
+"/ja/documentation/getting_started/",
+"/ja/documentation/webdriver/getting_started/",
+"/pt-br/documentation/getting_started/",
+"/pt-br/documentation/webdriver/getting_started/",
+"/zh-cn/documentation/getting_started/",
+"/zh-cn/documentation/webdriver/getting_started/"
 ]
 ---
 

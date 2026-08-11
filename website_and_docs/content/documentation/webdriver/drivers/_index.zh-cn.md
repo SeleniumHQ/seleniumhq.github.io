@@ -14,7 +14,7 @@ weight: 3
 
 每种语言都允许使用来自这些类 (或等效类) 之一的参数创建会话:
 
-* [选项]({{< ref "options.md" >}}) 描述您想要的会话类型; 默认值为local，但是对于remote则是必须设置的
+* [选项]({{< ref path="options.md" lang="en" >}}) 描述您想要的会话类型; 默认值为local，但是对于remote则是必须设置的
 * 各种形式的 [HTTP Client configuration]({{< ref "http_client.md" >}}) (实现因语言而异)
 * [监听器]({{< ref "listeners.md" >}})
 
@@ -49,7 +49,7 @@ weight: 3
 ### 远程驱动
 
 用于启动远程驱动的首要唯一参数包括有关在何处执行代码的信息.
-请浏览 [远程驱动章节]({{< ref "remote_webdriver.md" >}})中的详细信息
+请浏览 [远程驱动章节]({{< ref path="remote_webdriver.md" lang="en" >}})中的详细信息
 
 ## 退出会话
 

@@ -8,7 +8,16 @@ aliases: [
 "/documentation/webdriver/browser/alerts",
 "/documentation/ja/webdriver/js_alerts_prompts_and_confirmations/",
 "/documentation/pt-br/webdriver/js_alerts_prompts_and_confirmations/",
-"/documentation/zh-cn/webdriver/js_alerts_prompts_and_confirmations/"
+"/documentation/zh-cn/webdriver/js_alerts_prompts_and_confirmations/",
+"/ja/documentation/webdriver/browser/alerts",
+"/ja/documentation/webdriver/interactions/alerts/",
+"/ja/documentation/webdriver/js_alerts_prompts_and_confirmations/",
+"/pt-br/documentation/webdriver/browser/alerts/",
+"/pt-br/documentation/webdriver/interactions/alerts/",
+"/pt-br/documentation/webdriver/js_alerts_prompts_and_confirmations/",
+"/zh-cn/documentation/webdriver/browser/alerts/",
+"/zh-cn/documentation/webdriver/interactions/alerts/",
+"/zh-cn/documentation/webdriver/js_alerts_prompts_and_confirmations/"
 ]
 ---
 

@@ -9,7 +9,13 @@ aliases: [
 "/documentation/grid/components_of_a_grid/",
 "/documentation/ja/grid/grid_4/components_of_a_grid/",
 "/documentation/pt-br/grid/grid_4/components_of_a_grid/",
-"/documentation/zh-cn/grid/grid_4/components_of_a_grid/"
+"/documentation/zh-cn/grid/grid_4/components_of_a_grid/",
+"/ja/documentation/grid/components/",
+"/ja/documentation/grid/components_of_a_grid/",
+"/pt-br/documentation/grid/components/",
+"/pt-br/documentation/grid/components_of_a_grid/",
+"/zh-cn/documentation/grid/components/",
+"/zh-cn/documentation/grid/components_of_a_grid/"
 ]
 ---
 

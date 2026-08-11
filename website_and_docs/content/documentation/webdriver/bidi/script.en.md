@@ -9,7 +9,13 @@ aliases: [
   "/documentation/webdriver/bidirectional/webdriver_bidi/script",
 "/documentation/ja/webdriver/bidirectional/bidirectional_w3c/script",
 "/documentation/pt-br/webdriver/bidirectional/bidirectional_w3c/script",
-"/documentation/zh-cn/webdriver/bidirectional/bidirectional_w3c/script"
+"/documentation/zh-cn/webdriver/bidirectional/bidirectional_w3c/script",
+"/ja/documentation/webdriver/bidi/script/",
+"/ja/documentation/webdriver/bidirectional/webdriver_bidi/script",
+"/pt-br/documentation/webdriver/bidi/script/",
+"/pt-br/documentation/webdriver/bidirectional/webdriver_bidi/script",
+"/zh-cn/documentation/webdriver/bidi/script/",
+"/zh-cn/documentation/webdriver/bidirectional/webdriver_bidi/script"
 ]
 ---
 

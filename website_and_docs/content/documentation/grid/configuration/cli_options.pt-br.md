@@ -18,7 +18,7 @@ Pode ver abaixo um mapeamento entre o componente e a secção respectiva.
 {{% pageinfo color="primary" %}}
 Note que esta documentação pode estar desactualizada se uma opção foi adicionada ou modificada,
 mas ainda não ter havido oportunidade de actualizar a documentação.
-Caso depare com esta situação, verifique a secção ["ajuda de configuração"]({{< ref "help.md" >}})
+Caso depare com esta situação, verifique a secção ["ajuda de configuração"]({{< ref path="help.md" lang="en" >}})
 e esteja à vontade para nos enviar um pull request com alterações a esta página.
 {{% /pageinfo %}}
 

@@ -9,7 +9,13 @@ aliases: [
 "/documentation/legacy/html_runner/",
 "/documentation/ja/legacy_docs/html-runner/",
 "/documentation/pt-br/legacy_docs/html-runner/",
-"/documentation/zh-cn/legacy_docs/html-runner/"
+"/documentation/zh-cn/legacy_docs/html-runner/",
+"/ja/documentation/legacy/html_runner/",
+"/ja/documentation/legacy/selenium_ide/html_runner/",
+"/pt-br/documentation/legacy/html_runner/",
+"/pt-br/documentation/legacy/selenium_ide/html_runner/",
+"/zh-cn/documentation/legacy/html_runner/",
+"/zh-cn/documentation/legacy/selenium_ide/html_runner/"
 ]
 ---
 

@@ -10,7 +10,16 @@ aliases: [
 "/documentation/getting_started/install_selenium_library/",
 "/documentation/ja/selenium_installation/installing_selenium_libraries/",
 "/documentation/pt-br/selenium_installation/installing_selenium_libraries/",
-"/documentation/zh-cn/selenium_installation/installing_selenium_libraries/"
+"/documentation/zh-cn/selenium_installation/installing_selenium_libraries/",
+"/ja/documentation/getting_started/install_selenium_library/",
+"/ja/documentation/getting_started/installing_selenium_libraries/",
+"/ja/documentation/webdriver/getting_started/install_library/",
+"/pt-br/documentation/getting_started/install_selenium_library/",
+"/pt-br/documentation/getting_started/installing_selenium_libraries/",
+"/pt-br/documentation/webdriver/getting_started/install_library/",
+"/zh-cn/documentation/getting_started/install_selenium_library/",
+"/zh-cn/documentation/getting_started/installing_selenium_libraries/",
+"/zh-cn/documentation/webdriver/getting_started/install_library/"
 ]
 ---
 

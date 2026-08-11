@@ -7,7 +7,7 @@ description: >
     Seleniumスクリプトを作成するための段階的な説明
 ---
 
-[Seleniumをインストール]({{< ref "install_library.md" >}})し、
+[Seleniumをインストール]({{< ref path="install_library.md" lang="en" >}})し、
 すると、Seleniumコードを書く準備が整います。
 
 ## 8つの基本コンポーネント
@@ -66,9 +66,9 @@ Seleniumで行うことのほとんどは、次の基本的なコマンドの組
 {{< /tab >}}
 {{< /tabpane >}}
 
-### 3. [ブラウザに関する情報]({{< ref "/documentation/webdriver/interactions" >}})をリクエストします
+### 3. [ブラウザに関する情報]({{< ref path="/documentation/webdriver/interactions" lang="en" >}})をリクエストします
 
-ブラウザに関する [情報]({{< ref "/documentation/webdriver/interactions" >}}) として、ウィンドウハンドル、ブラウザのサイズ/位置、クッキー、アラートなど、さまざまな種類のデータをリクエストできます。
+ブラウザに関する [情報]({{< ref path="/documentation/webdriver/interactions" lang="en" >}}) として、ウィンドウハンドル、ブラウザのサイズ/位置、クッキー、アラートなど、さまざまな種類のデータをリクエストできます。
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
@@ -102,7 +102,7 @@ Seleniumを使用して、それをうまく行うことは高度なトピック
 暗黙的な待機が最善の解決策になることはめったにありませんが、ここで示すのが最も簡単なので、
 プレースホルダーとして使用します。
 
-[待機戦略]({{< ref "/documentation/webdriver/waits.md" >}})についてさらに読む。
+[待機戦略]({{< ref path="/documentation/webdriver/waits.md" lang="en" >}})についてさらに読む。
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
@@ -125,8 +125,8 @@ Seleniumを使用して、それをうまく行うことは高度なトピック
 {{< /tab >}}
 {{< /tabpane >}}
 
-### 5. [要素を検索する]({{< ref "/documentation/webdriver/elements" >}})ためのコマンドを送信します
-ほとんどのSeleniumセッションにおけるコマンドの大部分は要素に関連しており、[要素を見つける]({{< ref "/documentation/webdriver/elements" >}}) ことなしにはそれと対話することができません。
+### 5. [要素を検索する]({{< ref path="/documentation/webdriver/elements" lang="en" >}})ためのコマンドを送信します
+ほとんどのSeleniumセッションにおけるコマンドの大部分は要素に関連しており、[要素を見つける]({{< ref path="/documentation/webdriver/elements" lang="en" >}}) ことなしにはそれと対話することができません。
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}

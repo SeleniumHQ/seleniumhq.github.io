@@ -9,13 +9,13 @@ description: >
 It is not always obvious the root cause of errors in Selenium.
 
 1. The most common Selenium-related error is a result of poor synchronization. 
-Read about [Waiting Strategies]({{< ref "../waits" >}}). If you aren't sure if it
+Read about [Waiting Strategies]({{< ref path="../waits" lang="en" >}}). If you aren't sure if it
 is a synchronization strategy you can try *temporarily* hard coding a large sleep
 where you see the issue, and you'll know if adding an explicit wait can help.
 
 2. Note that many errors that get reported to the project are actually caused by
 issues in the underlying drivers that Selenium sends the commands to. You can rule
-out a driver problem by executing the command in multiple [browsers]({{< ref "../browsers/" >}}).
+out a driver problem by executing the command in multiple [browsers]({{< ref path="../browsers/" lang="en" >}}).
 
 3. If you have questions about how to do things, check out the [Support options](/support/)
 for ways get assistance.

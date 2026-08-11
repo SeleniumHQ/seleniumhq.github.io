@@ -7,7 +7,13 @@ aliases: [
 "/documentation/worst_practices/test_dependency/",
 "/documentation/ja/worst_practices/test_dependency/",
 "/documentation/pt-br/worst_practices/test_dependency/",
-"/documentation/zh-cn/worst_practices/test_dependency/"
+"/documentation/zh-cn/worst_practices/test_dependency/",
+"/ja/documentation/test_practices/discouraged/test_dependency/",
+"/ja/documentation/worst_practices/test_dependency/",
+"/pt-br/documentation/test_practices/discouraged/test_dependency/",
+"/pt-br/documentation/worst_practices/test_dependency/",
+"/zh-cn/documentation/test_practices/discouraged/test_dependency/",
+"/zh-cn/documentation/worst_practices/test_dependency/"
 ] 
 ---
 

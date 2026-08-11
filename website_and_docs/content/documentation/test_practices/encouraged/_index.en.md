@@ -9,7 +9,13 @@ aliases: [
 "/documentation/guidelines/",
 "/documentation/ja/guidelines_and_recommendations/",
 "/documentation/pt-br/guidelines_and_recommendations/",
-"/documentation/zh-cn/guidelines_and_recommendations/"
+"/documentation/zh-cn/guidelines_and_recommendations/",
+"/ja/documentation/guidelines/",
+"/ja/documentation/test_practices/encouraged/",
+"/pt-br/documentation/guidelines/",
+"/pt-br/documentation/test_practices/encouraged/",
+"/zh-cn/documentation/guidelines/",
+"/zh-cn/documentation/test_practices/encouraged/"
 ]
 ---
 

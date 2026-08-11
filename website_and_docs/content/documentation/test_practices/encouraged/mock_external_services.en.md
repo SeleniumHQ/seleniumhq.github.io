@@ -7,7 +7,13 @@ aliases: [
 "/documentation/guidelines/mock_external_services/",
 "/documentation/ja/guidelines_and_recommendations/mock_external_services/",
 "/documentation/pt-br/guidelines_and_recommendations/mock_external_services/",
-"/documentation/zh-cn/guidelines_and_recommendations/mock_external_services/"
+"/documentation/zh-cn/guidelines_and_recommendations/mock_external_services/",
+"/ja/documentation/guidelines/mock_external_services/",
+"/ja/documentation/test_practices/encouraged/mock_external_services/",
+"/pt-br/documentation/guidelines/mock_external_services/",
+"/pt-br/documentation/test_practices/encouraged/mock_external_services/",
+"/zh-cn/documentation/guidelines/mock_external_services/",
+"/zh-cn/documentation/test_practices/encouraged/mock_external_services/"
 ]
 ---
 

@@ -9,7 +9,13 @@ aliases: [
 "/documentation/legacy/grid_3/setting_up_your_own_grid/",
 "/documentation/ja/grid/grid_3/setting_up_your_own_grid/",
 "/documentation/pt-br/grid/grid_3/setting_up_your_own_grid/",
-"/documentation/zh-cn/grid/grid_3/setting_up_your_own_grid/"
+"/documentation/zh-cn/grid/grid_3/setting_up_your_own_grid/",
+"/ja/documentation/legacy/grid_3/setting_up_your_own_grid/",
+"/ja/documentation/legacy/selenium_3/grid_setup/",
+"/pt-br/documentation/legacy/grid_3/setting_up_your_own_grid/",
+"/pt-br/documentation/legacy/selenium_3/grid_setup/",
+"/zh-cn/documentation/legacy/grid_3/setting_up_your_own_grid/",
+"/zh-cn/documentation/legacy/selenium_3/grid_setup/"
 ]
 ---
 

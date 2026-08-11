@@ -9,7 +9,13 @@ aliases: [
 "/documentation/grid/setting_up_your_own_grid/",
 "/documentation/ja/grid/grid_4/setting_up_your_own_grid/",
 "/documentation/pt-br/grid/grid_4/setting_up_your_own_grid/",
-"/documentation/zh-cn/grid/grid_4/setting_up_your_own_grid/"
+"/documentation/zh-cn/grid/grid_4/setting_up_your_own_grid/",
+"/ja/documentation/grid/getting_started/",
+"/ja/documentation/grid/setting_up_your_own_grid/",
+"/pt-br/documentation/grid/getting_started/",
+"/pt-br/documentation/grid/setting_up_your_own_grid/",
+"/zh-cn/documentation/grid/getting_started/",
+"/zh-cn/documentation/grid/setting_up_your_own_grid/"
 ]
 ---
 

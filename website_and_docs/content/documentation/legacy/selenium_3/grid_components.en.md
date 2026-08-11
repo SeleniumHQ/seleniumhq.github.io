@@ -9,7 +9,10 @@ aliases: [
 "/documentation/legacy/grid_3/components_of_a_grid/",
 "/documentation/ja/grid/grid_3/components_of_a_grid/",
 "/documentation/pt-br/grid/grid_3/components_of_a_grid/",
-"/documentation/zh-cn/grid/grid_3/components_of_a_grid/"
+"/documentation/zh-cn/grid/grid_3/components_of_a_grid/",
+"/ja/documentation/legacy/selenium_3/grid_components/",
+"/pt-br/documentation/legacy/selenium_3/grid_components/",
+"/zh-cn/documentation/legacy/selenium_3/grid_components/"
 ]
 ---
 

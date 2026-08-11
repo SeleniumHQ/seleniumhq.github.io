@@ -7,7 +7,13 @@ aliases: [
 "/documentation/worst_practices/two_factor_authentication/",
 "/documentation/ja/worst_practices/two_factor_authentication/",
 "/documentation/pt-br/worst_practices/two_factor_authentication/",
-"/documentation/zh-cn/worst_practices/two_factor_authentication/"
+"/documentation/zh-cn/worst_practices/two_factor_authentication/",
+"/ja/documentation/test_practices/discouraged/two_factor_authentication/",
+"/ja/documentation/worst_practices/two_factor_authentication/",
+"/pt-br/documentation/test_practices/discouraged/two_factor_authentication/",
+"/pt-br/documentation/worst_practices/two_factor_authentication/",
+"/zh-cn/documentation/test_practices/discouraged/two_factor_authentication/",
+"/zh-cn/documentation/worst_practices/two_factor_authentication/"
 ] 
 ---
 

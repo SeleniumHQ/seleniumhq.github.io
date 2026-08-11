@@ -7,7 +7,13 @@ aliases: [
 "/documentation/guidelines/consider_using_a_fluent_api/",
 "/documentation/ja/guidelines_and_recommendations/consider_using_a_fluent_api/",
 "/documentation/pt-br/guidelines_and_recommendations/consider_using_a_fluent_api/",
-"/documentation/zh-cn/guidelines_and_recommendations/consider_using_a_fluent_api/"
+"/documentation/zh-cn/guidelines_and_recommendations/consider_using_a_fluent_api/",
+"/ja/documentation/guidelines/consider_using_a_fluent_api/",
+"/ja/documentation/test_practices/encouraged/consider_using_a_fluent_api/",
+"/pt-br/documentation/guidelines/consider_using_a_fluent_api/",
+"/pt-br/documentation/test_practices/encouraged/consider_using_a_fluent_api/",
+"/zh-cn/documentation/guidelines/consider_using_a_fluent_api/",
+"/zh-cn/documentation/test_practices/encouraged/consider_using_a_fluent_api/"
 ]
 ---
 

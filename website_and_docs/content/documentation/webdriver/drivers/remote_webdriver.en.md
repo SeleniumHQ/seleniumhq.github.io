@@ -11,7 +11,13 @@ aliases: [
 "/documentation/pt-br/remote_webdriver/",
 "/documentation/pt-br/remote_webdriver/remote_webdriver_client/",
 "/documentation/zh-cn/remote_webdriver/",
-"/documentation/zh-cn/remote_webdriver/remote_webdriver_client/"
+"/documentation/zh-cn/remote_webdriver/remote_webdriver_client/",
+"/ja/documentation/webdriver/drivers/remote_webdriver/",
+"/ja/documentation/webdriver/remote_webdriver/",
+"/pt-br/documentation/webdriver/drivers/remote_webdriver/",
+"/pt-br/documentation/webdriver/remote_webdriver/",
+"/zh-cn/documentation/webdriver/drivers/remote_webdriver/",
+"/zh-cn/documentation/webdriver/remote_webdriver/"
 ]
 
 ---

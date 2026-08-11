@@ -7,7 +7,13 @@ aliases: [
 "/documentation/guidelines/page_object_models/",
 "/documentation/ja/guidelines_and_recommendations/page_object_models/",
 "/documentation/pt-br/guidelines_and_recommendations/page_object_models/",
-"/documentation/zh-cn/guidelines_and_recommendations/page_object_models/"
+"/documentation/zh-cn/guidelines_and_recommendations/page_object_models/",
+"/ja/documentation/guidelines/page_object_models/",
+"/ja/documentation/test_practices/encouraged/page_object_models/",
+"/pt-br/documentation/guidelines/page_object_models/",
+"/pt-br/documentation/test_practices/encouraged/page_object_models/",
+"/zh-cn/documentation/guidelines/page_object_models/",
+"/zh-cn/documentation/test_practices/encouraged/page_object_models/"
 ]
 ---
 
