@@ -3,8 +3,7 @@ title: "Gerando estado da aplicação"
 linkTitle: "Gerando estado da aplicação"
 weight: 5
 aliases: [
-"/documentation/pt-br/guidelines_and_recommendations/generating_application_state/",
-"/pt-br/documentation/guidelines/generating_application_state/"
+"/documentation/guidelines/generating_application_state/"
 ]
 ---
 

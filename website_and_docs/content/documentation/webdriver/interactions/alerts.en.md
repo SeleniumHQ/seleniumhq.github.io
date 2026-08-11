@@ -6,6 +6,9 @@ aliases: [
 "/documentation/en/webdriver/js_alerts_prompts_and_confirmations/",
 "/documentation/webdriver/js_alerts_prompts_and_confirmations/",
 "/documentation/webdriver/browser/alerts",
+"/documentation/ja/webdriver/js_alerts_prompts_and_confirmations/",
+"/documentation/pt-br/webdriver/js_alerts_prompts_and_confirmations/",
+"/documentation/zh-cn/webdriver/js_alerts_prompts_and_confirmations/"
 ]
 ---
 

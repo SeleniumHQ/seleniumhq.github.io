@@ -2,7 +2,7 @@
 title: "Waiting Strategies"
 linkTitle: "Waits"
 weight: 6
-aliases: ["/documentation/en/webdriver/waits/"]
+aliases: ["/documentation/en/webdriver/waits/", "/documentation/ja/webdriver/waits/", "/documentation/pt-br/webdriver/waits/", "/documentation/zh-cn/webdriver/waits/"]
 ---
 
 Perhaps the most common challenge for browser automation is ensuring

@@ -4,11 +4,6 @@ linkTitle: "Seleniumのサイトとドキュメントに貢献する"
 weight: 2
 description: >-
     Seleniumのドキュメントとコード例を改善するための情報
-aliases: 
-        [
-          "/documentation/ja/contributing/",
-          "/documentation/ja/front_matter/typographical_conventions/"
-        ]
 ---
 
 Seleniumは大きなソフトウェアプロジェクトであり、そのサイトとドキュメントは、物事の仕組みを理解し、その可能性を活用する効果的な方法を学ぶための鍵となります。
@@ -97,7 +92,7 @@ Seleniumプロジェクトは新しいコントリビュータを歓迎します
 
 #### 依存関係: Hugo
 
-[Hugo](https://gohugo.io/)と[Docsyテーマ](https://www.docsy.dev/)を使用してサイトの構築とレンダリングをしています。このサイトの作業をするには、Hugoバイナリの“拡張”Sass/SCSSバージョンが必要です。Hugo 0.148.2の使用を推奨します。
+[Hugo](https://gohugo.io/)と[Docsyテーマ](https://www.docsy.dev/)を使用してサイトの構築とレンダリングをしています。このサイトの作業をするには、Hugoバイナリの“拡張”Sass/SCSSバージョンが必要です。Hugo 0.164.0の使用を推奨します。
 
 [Docsyのインストール手順](https://www.docsy.dev/docs/getting-started/#install-hugo)に従ってください。
 

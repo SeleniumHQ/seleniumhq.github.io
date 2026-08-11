@@ -3,8 +3,7 @@ title: "Servidor do WebDriver remoto"
 linkTitle: "Servidor do WebDriver remoto"
 weight: 6
 aliases: [
-"/documentation/pt-br/legacy_docs/remote_webdriver_server/",
-"/pt-br/documentation/legacy/remote_webdriver_server/"
+"/documentation/legacy/remote_webdriver_server/"
 ]
 ---
 

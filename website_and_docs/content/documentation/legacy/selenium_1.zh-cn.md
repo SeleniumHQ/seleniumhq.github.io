@@ -5,8 +5,7 @@ weight: 2
 description: >
     原始版本的Selenium
 aliases: [
-"/documentation/zh-cn/legacy_docs/selenium_rc/",
-"/zh-cn/documentation/legacy/selenium_rc/"
+"/documentation/legacy/selenium_rc/"
 ]
 ---
 

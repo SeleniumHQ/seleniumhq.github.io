@@ -3,8 +3,7 @@ title: "文件下载"
 linkTitle: "文件下载"
 weight: 2
 aliases: [
-"/documentation/zh-cn/worst_practices/file_downloads/",
-"/zh-cn/documentation/worst_practices/file_downloads/"
+"/documentation/worst_practices/file_downloads/"
 ] 
 ---
 

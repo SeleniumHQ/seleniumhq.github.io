@@ -6,9 +6,8 @@ needsTranslation: true
 description: >
   Configurando a biblioteca Selenium para sua linguagem de programação favorita.
 aliases: [
-"/documentation/pt-br/selenium_installation/installing_selenium_libraries/",
-"/pt-br/documentation/getting_started/installing_selenium_libraries/",
-"/pt-br/documentation/getting_started/install_selenium_library/"
+"/documentation/getting_started/installing_selenium_libraries/",
+"/documentation/getting_started/install_selenium_library/"
 ]
 ---
 

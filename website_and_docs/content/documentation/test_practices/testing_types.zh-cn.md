@@ -3,8 +3,7 @@ title: "测试类型"
 linkTitle: "测试类型"
 weight: 2
 aliases: [
-"/documentation/zh-cn/introduction/types_of_testing/",
-"/zh-cn/documentation/guidelines/types_of_testing/"
+"/documentation/guidelines/types_of_testing/"
 ]
 ---
 

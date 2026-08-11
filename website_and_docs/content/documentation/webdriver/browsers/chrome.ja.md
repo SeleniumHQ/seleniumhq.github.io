@@ -5,7 +5,7 @@ weight: 4
 description: >-
     これらは、Google Chromeブラウザに特有の機能と機能です。
 aliases: [
-"/ja/documentation/capabilities/chromium"
+"/documentation/capabilities/chromium"
 ]
 ---
 

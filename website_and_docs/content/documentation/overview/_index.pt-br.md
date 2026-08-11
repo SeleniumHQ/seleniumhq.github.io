@@ -4,7 +4,6 @@ linkTitle: "Resumo"
 weight: 1
 description: >
   Será Selenium a ferramenta para você? Veja um resumo dos componentes do projecto.
-aliases: ["/documentation/pt-br/introduction/"]
 ---
 
 Selenium não é só uma ferramenta ou API,

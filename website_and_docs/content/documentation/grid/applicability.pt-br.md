@@ -5,8 +5,7 @@ weight: 4
 description: >
   Será a Grid a melhor escolha para você?
 aliases: [
-"/documentation/pt-br/grid/when_to_use_grid/",
-"/pt-br/documentation/grid/when_to_use_grid"
+"/documentation/grid/when_to_use_grid"
 ]
 ---
 

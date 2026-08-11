@@ -6,7 +6,10 @@ description: >
     Execute HTML Selenium IDE exports from command line
 aliases: [
 "/documentation/en/legacy_docs/html-runner/",
-"/documentation/legacy/html_runner/"
+"/documentation/legacy/html_runner/",
+"/documentation/ja/legacy_docs/html-runner/",
+"/documentation/pt-br/legacy_docs/html-runner/",
+"/documentation/zh-cn/legacy_docs/html-runner/"
 ]
 ---
 

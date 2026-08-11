@@ -5,7 +5,7 @@ weight: 10
 description: >-
     これらは、Apple Safariブラウザ固有の機能です。
 aliases: [
-"/ja/documentation/capabilities/safari"
+"/documentation/capabilities/safari"
 ]
 ---
 

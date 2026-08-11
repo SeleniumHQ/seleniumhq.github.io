@@ -6,7 +6,10 @@ description: >
     Information on Updating from Selenium 1 to Selenium 2.
 aliases: [
 "/documentation/en/legacy_docs/migrating_from_rc_to_webdriver/",
-"/documentation/legacy/migrating_from_rc_to_webdriver/"
+"/documentation/legacy/migrating_from_rc_to_webdriver/",
+"/documentation/ja/legacy_docs/migrating_from_rc_to_webdriver/",
+"/documentation/pt-br/legacy_docs/migrating_from_rc_to_webdriver/",
+"/documentation/zh-cn/legacy_docs/migrating_from_rc_to_webdriver/"
 ]
 ---
 

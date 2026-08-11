@@ -3,8 +3,7 @@ title: "ドメイン固有言語（DSL）"
 linkTitle: "ドメイン固有言語（DSL）"
 weight: 4
 aliases: [
-"/documentation/ja/guidelines_and_recommendations/domain_specific_language/",
-"/ja/documentation/guidelines/domain_specific_language/"
+"/documentation/guidelines/domain_specific_language/"
 ]
 ---
 

@@ -4,7 +4,10 @@ linkTitle: "Finders"
 weight: 2
 aliases: [
 "/documentation/en/webdriver/locating_elements/",
-"/documentation/webdriver/locating_elements/"
+"/documentation/webdriver/locating_elements/",
+"/documentation/ja/webdriver/locating_elements/",
+"/documentation/pt-br/webdriver/locating_elements/",
+"/documentation/zh-cn/webdriver/locating_elements/"
 ]
 description: >
   Locating the elements based on the provided locator values.

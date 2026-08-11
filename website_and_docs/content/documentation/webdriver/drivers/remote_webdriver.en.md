@@ -6,6 +6,12 @@ aliases: [
 "/documentation/en/remote_webdriver/",
 "/documentation/en/remote_webdriver/remote_webdriver_client/",
 "/documentation/webdriver/remote_webdriver/",
+"/documentation/ja/remote_webdriver/",
+"/documentation/ja/remote_webdriver/remote_webdriver_client/",
+"/documentation/pt-br/remote_webdriver/",
+"/documentation/pt-br/remote_webdriver/remote_webdriver_client/",
+"/documentation/zh-cn/remote_webdriver/",
+"/documentation/zh-cn/remote_webdriver/remote_webdriver_client/"
 ]
 
 ---

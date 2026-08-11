@@ -2,7 +2,6 @@
 title: "Esperas"
 linkTitle: "Esperas"
 weight: 6
-aliases: ["/documentation/pt-br/webdriver/waits/"]
 ---
 
 Perhaps the most common challenge for browser automation is ensuring

@@ -3,8 +3,7 @@ title: "测试自动化概述"
 linkTitle: "概述"
 weight: 1
 aliases: [
-"/documentation/zh-cn/introduction/on_test_automation/",
-"/zh-cn/documentation/guidelines/on_test_automation/"
+"/documentation/guidelines/on_test_automation/"
 ]
 ---
 

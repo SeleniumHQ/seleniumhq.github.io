@@ -5,8 +5,7 @@ weight: 4
 description: >
  Gridがあなたにとって最適なツールでしょうか？
 aliases: [
-"/documentation/ja/grid/when_to_use_grid/",
-"/ja/documentation/grid/when_to_use_grid"
+"/documentation/grid/when_to_use_grid"
 ]
 ---
 

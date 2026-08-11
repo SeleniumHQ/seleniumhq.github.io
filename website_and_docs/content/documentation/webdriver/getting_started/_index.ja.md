@@ -6,11 +6,7 @@ needsTranslation: true
 description: >
   Seleniumを初めて使用する場合は、すぐに習得するのに役立つリソースがいくつかあります。
 aliases: [
-"/documentation/ja/getting_started/", 
-"/documentation/ja/getting_started/quick/",
-"/documentation/ja/selenium_installation/",
-"/documentation/ja/getting_started_with_webdriver/",
-"/ja/documentation/getting_started/"
+"/documentation/getting_started/"
 ]
 ---
 

@@ -7,8 +7,7 @@ description: >
   由于"logging"可以指代许多不同的事物,
   因此这些方法通过"script"命名空间提供.
 aliases: [
-  "/documentation/zh-cn/webdriver/bidirectional/bidirectional_w3c/log",
-  "/documentation/webdriver/bidirectional/webdriver_bidi/log"
+"/documentation/webdriver/bidirectional/webdriver_bidi/log"
 ]
 ---
 

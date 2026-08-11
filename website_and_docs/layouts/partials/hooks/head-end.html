@@ -22,10 +22,10 @@
 <link rel="canonical" href="{{ .Permalink }}">
 {{- if .IsTranslated }}
 {{- range .AllTranslations }}
-<link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}">
+<link rel="alternate" hreflang="{{ .Language.Name }}" href="{{ .Permalink }}">
 {{- end }}
 {{- range .AllTranslations }}
-{{- if eq .Language.Lang "en" }}
+{{- if eq .Language.Name "en" }}
 <link rel="alternate" hreflang="x-default" href="{{ .Permalink }}">
 {{- end }}
 {{- end }}

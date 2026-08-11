@@ -1,0 +1,24 @@
+{{/*
+  Selenium's favicon links.
+
+  Docsy 0.16.0 stopped shipping default favicon artwork and its replacement
+  partial only discovers conventionally named files in the site's static/ root
+  (static/favicon.ico, static/apple-touch-icon.png, and so on). This site keeps
+  its icons in static/favicons/ instead, so without this override no icon links
+  are emitted at all.
+
+  Overriding rather than relocating the files keeps every icon URL exactly as
+  it is published today.
+
+  Note that until this release the site also linked six android-NxN.png icons
+  that came from Docsy's own default artwork, not from this repository. Those
+  files no longer exist, so the Selenium-branded pwa-*.png icons already in
+  static/favicons/ take their place.
+*/ -}}
+<link rel="shortcut icon" href="{{ "favicons/favicon.ico" | relURL }}">
+<link rel="icon" type="image/png" href="{{ "favicons/favicon-16x16.png" | relURL }}" sizes="16x16">
+<link rel="icon" type="image/png" href="{{ "favicons/favicon-32x32.png" | relURL }}" sizes="32x32">
+<link rel="icon" type="image/png" href="{{ "favicons/pwa-192x192.png" | relURL }}" sizes="192x192">
+<link rel="icon" type="image/png" href="{{ "favicons/pwa-512x512.png" | relURL }}" sizes="512x512">
+<link rel="apple-touch-icon" href="{{ "favicons/apple-touch-icon-180x180.png" | relURL }}" sizes="180x180">
+<meta name="msapplication-config" content="{{ "favicons/browserconfig.xml" | relURL }}">

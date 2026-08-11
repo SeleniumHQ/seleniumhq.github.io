@@ -6,8 +6,7 @@ description: >
   Selenium に関連するさまざまなプロジェクトの著作権、貢献、
   およびすべての帰属について。
 aliases: [
-"/documentation/ja/front_matter/copyright_and_attributions/",
-"/ja/documentation/about/copyright_and_attributions"
+"/documentation/about/copyright_and_attributions"
 ]
 ---
 

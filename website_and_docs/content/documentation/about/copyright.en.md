@@ -7,7 +7,10 @@ description: >
   under the Selenium umbrella.
 aliases: [
 "/documentation/en/front_matter/copyright_and_attributions/",
-"/documentation/about/copyright_and_attributions"
+"/documentation/about/copyright_and_attributions",
+"/documentation/ja/front_matter/copyright_and_attributions/",
+"/documentation/pt-br/front_matter/copyright_and_attributions/",
+"/documentation/zh-cn/front_matter/copyright_and_attributions/"
 ]
 ---
 

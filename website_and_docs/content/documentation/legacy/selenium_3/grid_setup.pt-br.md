@@ -5,8 +5,7 @@ weight: 4
 description: >
     Quick start guide for setting up Grid 3.
 aliases: [
-"/documentation/pt-br/grid/grid_3/setting_up_your_own_grid/",
-"/pt-br/documentation/legacy/grid_3/setting_up_your_own_grid/"
+"/documentation/legacy/grid_3/setting_up_your_own_grid/"
 ]
 ---
 

@@ -4,6 +4,9 @@ linkTitle: "Print Page"
 weight: 7
 aliases: [
 "/documentation/en/support_packages/print_page/",
+"/documentation/ja/support_packages/print_page/",
+"/documentation/pt-br/support_packages/print_page/",
+"/documentation/zh-cn/support_packages/print_page/"
 ]
 ---
 

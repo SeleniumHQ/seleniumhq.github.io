@@ -4,7 +4,10 @@ linkTitle: "Testing Types"
 weight: 2
 aliases: [
 "/documentation/en/introduction/types_of_testing/",
-"/documentation/guidelines/types_of_testing/"
+"/documentation/guidelines/types_of_testing/",
+"/documentation/ja/introduction/types_of_testing/",
+"/documentation/pt-br/introduction/types_of_testing/",
+"/documentation/zh-cn/introduction/types_of_testing/"
 ]
 ---
 

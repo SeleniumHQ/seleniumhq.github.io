@@ -8,7 +8,10 @@ description: >
 aliases: [
 "/documentation/en/webdriver/bidirectional/bidirectional_w3c",
 "/documentation/en/webdriver/bidi_apis/bidi_w3c",
-"/documentation/webdriver/bidi_apis/bidi_w3c"
+"/documentation/webdriver/bidi_apis/bidi_w3c",
+"/documentation/ja/webdriver/bidi_apis/bidi_w3c",
+"/documentation/pt-br/webdriver/bidi_apis/bidi_w3c",
+"/documentation/zh-cn/webdriver/bidi_apis/bidi_w3c"
 ]
 ---
 

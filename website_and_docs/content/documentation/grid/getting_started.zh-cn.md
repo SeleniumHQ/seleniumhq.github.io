@@ -6,8 +6,7 @@ needsTranslation: true
 description: >
   一步一步地说明如何运行简单的Selenium Grid.
 aliases: [
-"/documentation/zh-cn/grid/grid_4/setting_up_your_own_grid/",
-"/zh-cn/documentation/grid/setting_up_your_own_grid/"
+"/documentation/grid/setting_up_your_own_grid/"
 ]
 ---
 

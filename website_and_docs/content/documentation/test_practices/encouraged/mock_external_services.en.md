@@ -4,7 +4,10 @@ linkTitle: "Mock external services"
 weight: 6
 aliases: [
 "/documentation/en/guidelines_and_recommendations/mock_external_services/",
-"/documentation/guidelines/mock_external_services/"
+"/documentation/guidelines/mock_external_services/",
+"/documentation/ja/guidelines_and_recommendations/mock_external_services/",
+"/documentation/pt-br/guidelines_and_recommendations/mock_external_services/",
+"/documentation/zh-cn/guidelines_and_recommendations/mock_external_services/"
 ]
 ---
 

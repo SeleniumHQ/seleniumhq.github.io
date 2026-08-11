@@ -4,7 +4,10 @@ linkTitle: "Generating application state"
 weight: 5
 aliases: [
 "/documentation/en/guidelines_and_recommendations/generating_application_state/",
-"/documentation/guidelines/generating_application_state/"
+"/documentation/guidelines/generating_application_state/",
+"/documentation/ja/guidelines_and_recommendations/generating_application_state/",
+"/documentation/pt-br/guidelines_and_recommendations/generating_application_state/",
+"/documentation/zh-cn/guidelines_and_recommendations/generating_application_state/"
 ]
 ---
 

@@ -5,11 +5,6 @@ weight: 2
 requiresTranslation: true
 description: >-
     Informações em como melhorar a documentação e exemplos de código para Selenium.
-aliases: 
-        [
-          "/documentation/pt-br/contributing/",
-          "/documentation/pt-br/front_matter/typographical_conventions/"
-        ]
 ---
 
 Selenium é um grande projeto de software, seu site e documentação são fundamentais
@@ -120,7 +115,7 @@ e faça checkout na sua cópia localmente.
 
 Usamos [Hugo](https://gohugo.io/) e [Docsy theme](https://www.docsy.dev/)
 para criar e gerar o website. Você vai necessitar de usar a versão "extended"
-Sass/SCSS do binário Hugo. Recomendamos a versão 0.148.2 .
+Sass/SCSS do binário Hugo. Recomendamos a versão 0.164.0 .
 
 Por favor siga as instruções do Docsy [Install Hugo](https://www.docsy.dev/docs/getting-started/#install-hugo) 
 

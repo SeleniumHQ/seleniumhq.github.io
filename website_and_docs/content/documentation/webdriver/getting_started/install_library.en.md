@@ -7,7 +7,10 @@ description: >
 aliases: [
 "/documentation/en/selenium_installation/installing_selenium_libraries/",
 "/documentation/getting_started/installing_selenium_libraries/",
-"/documentation/getting_started/install_selenium_library/"
+"/documentation/getting_started/install_selenium_library/",
+"/documentation/ja/selenium_installation/installing_selenium_libraries/",
+"/documentation/pt-br/selenium_installation/installing_selenium_libraries/",
+"/documentation/zh-cn/selenium_installation/installing_selenium_libraries/"
 ]
 ---
 

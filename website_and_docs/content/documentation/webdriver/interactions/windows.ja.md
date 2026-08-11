@@ -3,7 +3,7 @@ title: "ウィンドウとタブの操作"
 linkTitle: "ウィンドウ"
 weight: 8
 aliases: [
-"/ja/documentation/webdriver/browser/windows/"
+"/documentation/webdriver/browser/windows/"
 ]
 ---
 

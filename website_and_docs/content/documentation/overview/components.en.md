@@ -4,7 +4,10 @@ linkTitle: "Components"
 weight: 1
 aliases: [
 "/documentation/en/webdriver/understanding_the_components/",
-"/documentation/webdriver/understanding_the_components"
+"/documentation/webdriver/understanding_the_components",
+"/documentation/ja/webdriver/understanding_the_components/",
+"/documentation/pt-br/webdriver/understanding_the_components/",
+"/documentation/zh-cn/webdriver/understanding_the_components/"
 ]
 ---
 

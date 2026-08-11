@@ -5,7 +5,10 @@ weight: 6
 aliases: [
 "/documentation/en/support_classes/",
 "/documentation/support_packages/thread_guard/",
-"/documentation/webdriver/additional_features/thread_guard/"
+"/documentation/webdriver/additional_features/thread_guard/",
+"/documentation/ja/support_classes/",
+"/documentation/pt-br/support_classes/",
+"/documentation/zh-cn/support_classes/"
 ]
 ---
 

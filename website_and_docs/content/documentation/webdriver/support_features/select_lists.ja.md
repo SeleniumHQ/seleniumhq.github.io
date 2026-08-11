@@ -3,10 +3,9 @@ title: "選択要素の操作"
 linkTitle: "選択要素の操作"
 weight: 5
 aliases: [
-"/documentation/ja/support_packages/working_with_select_elements/",
-"/ja/documentation/support_packages/working_with_select_elements/",
-"/ja/documentation/webdriver/elements/select_elements/",
-"/ja/documentation/webdriver/elements/select_list",
+"/documentation/support_packages/working_with_select_elements/",
+"/documentation/webdriver/elements/select_elements/",
+"/documentation/webdriver/elements/select_list"
 ]
 description: >
   選択リストには、他の要素と比較して特別な動作があります。

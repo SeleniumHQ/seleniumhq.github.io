@@ -3,8 +3,7 @@ title: "查询网络元素"
 linkTitle: "查询器"
 weight: 2
 aliases: [
-"/documentation/zh-cn/webdriver/locating_elements/",
-"/zh-cn/documentation/webdriver/locating_elements/"
+"/documentation/webdriver/locating_elements/"
 ]
 description: >
   根据提供的定位值定位元素.

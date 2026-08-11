@@ -4,7 +4,10 @@ linkTitle: "Consider using a fluent API"
 weight: 10
 aliases: [
 "/documentation/en/guidelines_and_recommendations/consider_using_a_fluent_api/",
-"/documentation/guidelines/consider_using_a_fluent_api/"
+"/documentation/guidelines/consider_using_a_fluent_api/",
+"/documentation/ja/guidelines_and_recommendations/consider_using_a_fluent_api/",
+"/documentation/pt-br/guidelines_and_recommendations/consider_using_a_fluent_api/",
+"/documentation/zh-cn/guidelines_and_recommendations/consider_using_a_fluent_api/"
 ]
 ---
 

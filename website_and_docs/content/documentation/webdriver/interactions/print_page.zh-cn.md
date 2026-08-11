@@ -2,9 +2,6 @@
 title: "打印页面"
 linkTitle: "打印页面"
 weight: 7
-aliases: [
-"/documentation/zh-cn/support_packages/print_page/",
-]
 ---
 
 无论是共享信息还是维护档案，打印网页都是一项常见任务。

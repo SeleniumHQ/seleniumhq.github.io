@@ -4,8 +4,7 @@ linkTitle: "構成ヘルプ"
 weight: 1
 description: Gridの設定に利用可能なオプション
 aliases: [
-"/documentation/ja/grid/grid_4/configuring_components/config_help/",
-"/ja/documentation/grid/configuring_components/config_help/"
+"/documentation/grid/configuring_components/config_help/"
 ]
 ---
 

@@ -4,7 +4,10 @@ linkTitle: "HTTP response codes"
 weight: 3
 aliases: [
 "/documentation/en/worst_practices/http_response_codes/",
-"/documentation/worst_practices/http_response_codes/"
+"/documentation/worst_practices/http_response_codes/",
+"/documentation/ja/worst_practices/http_response_codes/",
+"/documentation/pt-br/worst_practices/http_response_codes/",
+"/documentation/zh-cn/worst_practices/http_response_codes/"
 ] 
 ---
 

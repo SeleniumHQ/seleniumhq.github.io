@@ -4,7 +4,7 @@ linkTitle: "Selenium IDE"
 weight: 8
 description: >
   Selenium IDE was the original Firefox extension for Record and Playback.
-aliases: ["/documentation/en/legacy_docs/selenium_ide/"]
+aliases: ["/documentation/en/legacy_docs/selenium_ide/", "/documentation/ja/legacy_docs/selenium_ide/", "/documentation/pt-br/legacy_docs/selenium_ide/", "/documentation/zh-cn/legacy_docs/selenium_ide/"]
 ---
 
 

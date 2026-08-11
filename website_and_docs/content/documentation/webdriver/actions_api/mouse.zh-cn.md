@@ -5,8 +5,7 @@ weight: 4
 description: >
   任何用于与网页进行交互的指针设备的表示形式.
 aliases: [
-"/documentation/zh-cn/support_packages/mouse_and_keyboard_actions_in_detail/",
-"/zh-cn/documentation/support_packages/mouse_and_keyboard_actions_in_detail/"
+"/documentation/support_packages/mouse_and_keyboard_actions_in_detail/"
 ]
 ---
 

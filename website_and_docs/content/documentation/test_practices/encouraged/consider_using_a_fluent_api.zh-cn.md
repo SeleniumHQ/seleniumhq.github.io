@@ -3,8 +3,7 @@ title: "考虑使用Fluent API"
 linkTitle: "考虑使用Fluent API"
 weight: 10
 aliases: [
-"/documentation/zh-cn/guidelines_and_recommendations/consider_using_a_fluent_api/",
-"/zh-cn/documentation/guidelines/consider_using_a_fluent_api/"
+"/documentation/guidelines/consider_using_a_fluent_api/"
 ]
 ---
 

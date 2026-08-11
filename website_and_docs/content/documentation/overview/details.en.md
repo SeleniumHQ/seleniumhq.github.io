@@ -7,7 +7,10 @@ description: >
   and support the automation of web browsers. 
 aliases: [
 "/documentation/en/introduction/the_selenium_project_and_tools/",
-"/documentation/overview/a_deeper_look"
+"/documentation/overview/a_deeper_look",
+"/documentation/ja/introduction/the_selenium_project_and_tools/",
+"/documentation/pt-br/introduction/the_selenium_project_and_tools/",
+"/documentation/zh-cn/introduction/the_selenium_project_and_tools/"
 ]
 ---
 

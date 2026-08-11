@@ -6,10 +6,8 @@ needsTranslation: true
 description: >
   Troubleshooting missing path to driver executable.
 aliases: [
-"/documentation/ja/selenium_installation/installing_webdriver_binaries/",
-"/documentation/ja/webdriver/driver_requirements/",
-"/ja/documentation/getting_started/installing_browser_drivers/",
-"/ja/documentation/webdriver/getting_started/install_drivers/",
+"/documentation/getting_started/installing_browser_drivers/",
+"/documentation/webdriver/getting_started/install_drivers/"
 ]
 ---
 

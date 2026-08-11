@@ -1,4 +1,4 @@
-{{ $language := .Site.Language.LanguageName }}
+{{ $language := .Site.Language.Label }}
 {{ $code := .Site.Language }}
 {{ $p1 := printf "only the [documentation](/%s/documentation) is translated to %s. The rest of the website is in English." $code $language }}
 {{ $p2 := printf "We have an official translator for this language, but check our [contribution guidelines](/%s/documentation/about/contributing/) if you'd like to help." $code}}

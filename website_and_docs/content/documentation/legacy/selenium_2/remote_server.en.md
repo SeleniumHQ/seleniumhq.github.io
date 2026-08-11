@@ -6,7 +6,10 @@ description: >
   Working with the Standalone Server.
 aliases: [
 "/documentation/en/legacy_docs/remote_webdriver_server/",
-"/documentation/legacy/remote_webdriver_server/"
+"/documentation/legacy/remote_webdriver_server/",
+"/documentation/ja/legacy_docs/remote_webdriver_server/",
+"/documentation/pt-br/legacy_docs/remote_webdriver_server/",
+"/documentation/zh-cn/legacy_docs/remote_webdriver_server/"
 ]
 ---
 This documentation previously located [on the wiki](https://github.com/SeleniumHQ/selenium/wiki/RemoteWebDriverServer)

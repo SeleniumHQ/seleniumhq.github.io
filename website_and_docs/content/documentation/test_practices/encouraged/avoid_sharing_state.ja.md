@@ -3,8 +3,7 @@ title: "状態を共有しない"
 linkTitle: "状態を共有しない"
 weight: 8
 aliases: [
-"/documentation/ja/guidelines_and_recommendations/avoid_sharing_state/",
-"/ja/documentation/guidelines/avoid_sharing_state/"
+"/documentation/guidelines/avoid_sharing_state/"
 ]
 ---
 

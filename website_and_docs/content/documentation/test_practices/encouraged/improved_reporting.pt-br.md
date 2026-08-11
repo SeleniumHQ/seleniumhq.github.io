@@ -3,8 +3,7 @@ title: "Relatórios melhorados"
 linkTitle: "Relatórios melhorados"
 weight: 7
 aliases: [
-"/documentation/pt-br/guidelines_and_recommendations/improved_reporting/",
-"/pt-br/documentation/guidelines/improved_reporting/"
+"/documentation/guidelines/improved_reporting/"
 ]
 ---
 

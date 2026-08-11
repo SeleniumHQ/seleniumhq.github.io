@@ -5,8 +5,14 @@ weight: 16
 aliases: 
         [
           "/documentation/en/introduction/about_this_documentation/",
-          "/documentation/en/front_matter/"
-        ]  
+          "/documentation/en/front_matter/",
+"/documentation/ja/introduction/about_this_documentation/",
+"/documentation/ja/front_matter/",
+"/documentation/pt-br/introduction/about_this_documentation/",
+"/documentation/pt-br/front_matter/",
+"/documentation/zh-cn/introduction/about_this_documentation/",
+"/documentation/zh-cn/front_matter/"
+]  
 ---
 
 These docs, like the code itself, are maintained 100% by volunteers

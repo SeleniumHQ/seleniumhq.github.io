@@ -4,7 +4,10 @@ linkTitle: "Endpoints"
 weight: 3
 aliases: [
 "/documentation/en/grid/grid_4/grid_endpoints/",
-"/documentation/grid/advanced_features/grid_endpoints/"
+"/documentation/grid/advanced_features/grid_endpoints/",
+"/documentation/ja/grid/grid_4/grid_endpoints/",
+"/documentation/pt-br/grid/grid_4/grid_endpoints/",
+"/documentation/zh-cn/grid/grid_4/grid_endpoints/"
 ]
 ---
 

@@ -4,7 +4,10 @@ linkTitle: "Improved reporting"
 weight: 7
 aliases: [
 "/documentation/en/guidelines_and_recommendations/improved_reporting/",
-"/documentation/guidelines/improved_reporting/"
+"/documentation/guidelines/improved_reporting/",
+"/documentation/ja/guidelines_and_recommendations/improved_reporting/",
+"/documentation/pt-br/guidelines_and_recommendations/improved_reporting/",
+"/documentation/zh-cn/guidelines_and_recommendations/improved_reporting/"
 ]
 ---
 

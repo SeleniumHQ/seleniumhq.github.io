@@ -4,7 +4,10 @@ linkTitle: "Page object models"
 weight: 3
 aliases: [
 "/documentation/en/guidelines_and_recommendations/page_object_models/",
-"/documentation/guidelines/page_object_models/"
+"/documentation/guidelines/page_object_models/",
+"/documentation/ja/guidelines_and_recommendations/page_object_models/",
+"/documentation/pt-br/guidelines_and_recommendations/page_object_models/",
+"/documentation/zh-cn/guidelines_and_recommendations/page_object_models/"
 ]
 ---
 

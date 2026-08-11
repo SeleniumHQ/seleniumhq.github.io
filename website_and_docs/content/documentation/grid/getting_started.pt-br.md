@@ -6,8 +6,7 @@ needsTranslation: true
 description: >
   Instruções para criar uma Selenium Grid simples
 aliases: [
-"/documentation/pt-br/grid/grid_4/setting_up_your_own_grid/",
-"/pt-br/documentation/grid/setting_up_your_own_grid/"
+"/documentation/grid/setting_up_your_own_grid/"
 ]
 ---
 

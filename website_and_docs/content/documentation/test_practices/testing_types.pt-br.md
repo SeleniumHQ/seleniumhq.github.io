@@ -3,8 +3,7 @@ title: "Tipos de teste"
 linkTitle: "Tipos de teste"
 weight: 2
 aliases: [
-"/documentation/pt-br/introduction/types_of_testing/",
-"/pt-br/documentation/guidelines/types_of_testing/"
+"/documentation/guidelines/types_of_testing/"
 ]
 ---
 
