@@ -10,7 +10,16 @@ aliases: [
 "/documentation/webdriver/additional_features/",
 "/documentation/ja/support_packages/",
 "/documentation/pt-br/support_packages/",
-"/documentation/zh-cn/support_packages/"
+"/documentation/zh-cn/support_packages/",
+"/ja/documentation/support_packages/",
+"/ja/documentation/webdriver/additional_features/",
+"/ja/documentation/webdriver/support_features/",
+"/pt-br/documentation/additional_features/",
+"/pt-br/documentation/support_packages/",
+"/pt-br/documentation/webdriver/support_features/",
+"/zh-cn/documentation/additional_features/",
+"/zh-cn/documentation/support_packages/",
+"/zh-cn/documentation/webdriver/support_features/"
 ]
 ---
 

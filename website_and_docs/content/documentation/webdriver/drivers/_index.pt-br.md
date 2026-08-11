@@ -14,7 +14,7 @@ A sessão é criada automaticamente ao inicializar um novo objeto da classe Driv
 
 Cada linguagem permite que uma sessão seja criada com argumentos de uma dessas classes (ou equivalentes):
 
-* [Options]({{< ref "options.md" >}}) to describe the kind of session you want; default values are used for local, but
+* [Options]({{< ref path="options.md" lang="en" >}}) to describe the kind of session you want; default values are used for local, but
   this is required for remote
 * Alguma forma de [configuração do cliente HTTP]({{< ref "http_client.md" >}}) (a implementação varia entre as linguagens)
 * [Ouvintes]({{< ref "listeners.md" >}})
@@ -48,7 +48,7 @@ O principal argumento exclusivo para iniciar um driver local inclui informaçõe
 
 ### Driver Remoto
 
-O principal argumento exclusivo para iniciar um driver remoto inclui informações sobre onde executar o código. Leia os detalhes na [seção Driver Remoto]({{< ref "remote_webdriver.md" >}})
+O principal argumento exclusivo para iniciar um driver remoto inclui informações sobre onde executar o código. Leia os detalhes na [seção Driver Remoto]({{< ref path="remote_webdriver.md" lang="en" >}})
 
 ## Encerrando Sessões
 

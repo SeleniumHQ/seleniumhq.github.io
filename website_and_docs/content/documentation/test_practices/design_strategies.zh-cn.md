@@ -16,9 +16,9 @@ weight: 1
 下面介绍的一些设计模式与策略在 WebDriver 场景下被证明可以简化测试编写与维护, 
 可能也对你有帮助. 
 
-[领域驱动设计]({{< ref "encouraged/domain_specific_language.md" >}}): 以最终用户的语言来表达测试.
+[领域驱动设计]({{< ref path="encouraged/domain_specific_language.md" lang="en" >}}): 以最终用户的语言来表达测试.
 
-[页面对象]({{< ref "encouraged/page_object_models.md" >}}): 对 Web 应用 UI 的一种简单抽象. 
+[页面对象]({{< ref path="encouraged/page_object_models.md" lang="en" >}}): 对 Web 应用 UI 的一种简单抽象. 
 
 LoadableComponent: 把页面对象建模为可加载的组件. 
 

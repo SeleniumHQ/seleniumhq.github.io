@@ -7,7 +7,13 @@ aliases: [
 "/documentation/worst_practices/gmail_email_and_facebook_logins/",
 "/documentation/ja/worst_practices/gmail_email_and_facebook_logins/",
 "/documentation/pt-br/worst_practices/gmail_email_and_facebook_logins/",
-"/documentation/zh-cn/worst_practices/gmail_email_and_facebook_logins/"
+"/documentation/zh-cn/worst_practices/gmail_email_and_facebook_logins/",
+"/ja/documentation/test_practices/discouraged/gmail_email_and_facebook_logins/",
+"/ja/documentation/worst_practices/gmail_email_and_facebook_logins/",
+"/pt-br/documentation/test_practices/discouraged/gmail_email_and_facebook_logins/",
+"/pt-br/documentation/worst_practices/gmail_email_and_facebook_logins/",
+"/zh-cn/documentation/test_practices/discouraged/gmail_email_and_facebook_logins/",
+"/zh-cn/documentation/worst_practices/gmail_email_and_facebook_logins/"
 ] 
 ---
 

@@ -9,7 +9,19 @@ aliases: [
 "/documentation/webdriver/elements/select_list",
 "/documentation/ja/support_packages/working_with_select_elements/",
 "/documentation/pt-br/support_packages/working_with_select_elements/",
-"/documentation/zh-cn/support_packages/working_with_select_elements/"
+"/documentation/zh-cn/support_packages/working_with_select_elements/",
+"/ja/documentation/support_packages/working_with_select_elements/",
+"/ja/documentation/webdriver/elements/select_elements/",
+"/ja/documentation/webdriver/elements/select_list",
+"/ja/documentation/webdriver/support_features/select_lists/",
+"/pt-br/documentation/support_packages/working_with_select_elements/",
+"/pt-br/documentation/webdriver/elements/select_elements/",
+"/pt-br/documentation/webdriver/elements/select_list",
+"/pt-br/documentation/webdriver/support_features/select_lists/",
+"/zh-cn/documentation/support_packages/working_with_select_elements/",
+"/zh-cn/documentation/webdriver/elements/select_elements/",
+"/zh-cn/documentation/webdriver/elements/select_list",
+"/zh-cn/documentation/webdriver/support_features/select_lists/"
 ]
 description: >
   Select lists have special behaviors compared to other elements.

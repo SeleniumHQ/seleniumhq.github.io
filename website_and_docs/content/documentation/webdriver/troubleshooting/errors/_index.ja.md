@@ -38,7 +38,7 @@ The element can not be found at the exact moment you attempted to locate it.
 ### Possible Solutions
 
 * Make sure you are on the page you expect to be on, and that previous actions in your code completed correctly
-* Make sure you are using a proper [Waiting Strategy]({{< ref "/documentation/webdriver/waits" >}})
+* Make sure you are using a proper [Waiting Strategy]({{< ref path="/documentation/webdriver/waits" lang="en" >}})
 * Use an interactive [Selenium Wait Code Generator](https://99tools.net/selenium-wait-code-generator/) to create accurate explicit wait snippets for multiple supported languages including Java, Python, C#, JavaScript, and Ruby.
 * Update the locator with the browser's devtools console or use a browser extension like:
   * [SelectorsHub](https://selectorshub.com/selectorshub/)
@@ -121,7 +121,7 @@ wait for animations to cease before attempting to click an element.
 
 **Use Explicit Waits** 
 
-[Explicit Waits]({{< ref "/documentation/webdriver/waits" >}}) will likely be your best friend in these instances. 
+[Explicit Waits]({{< ref path="/documentation/webdriver/waits" lang="en" >}}) will likely be your best friend in these instances. 
 A great way is to use `ExpectedCondition.ToBeClickable()` with `WebDriverWait` to wait until the right moment.
 
 **Scroll the Element into View** 

@@ -7,7 +7,13 @@ aliases: [
 "/documentation/guidelines/improved_reporting/",
 "/documentation/ja/guidelines_and_recommendations/improved_reporting/",
 "/documentation/pt-br/guidelines_and_recommendations/improved_reporting/",
-"/documentation/zh-cn/guidelines_and_recommendations/improved_reporting/"
+"/documentation/zh-cn/guidelines_and_recommendations/improved_reporting/",
+"/ja/documentation/guidelines/improved_reporting/",
+"/ja/documentation/test_practices/encouraged/improved_reporting/",
+"/pt-br/documentation/guidelines/improved_reporting/",
+"/pt-br/documentation/test_practices/encouraged/improved_reporting/",
+"/zh-cn/documentation/guidelines/improved_reporting/",
+"/zh-cn/documentation/test_practices/encouraged/improved_reporting/"
 ]
 ---
 

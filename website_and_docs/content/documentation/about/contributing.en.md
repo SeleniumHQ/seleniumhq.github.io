@@ -12,7 +12,10 @@ aliases: [
 "/documentation/pt-br/contributing/",
 "/documentation/pt-br/front_matter/typographical_conventions/",
 "/documentation/zh-cn/contributing/",
-"/documentation/zh-cn/front_matter/typographical_conventions/"
+"/documentation/zh-cn/front_matter/typographical_conventions/",
+"/ja/documentation/about/contributing/",
+"/pt-br/documentation/about/contributing/",
+"/zh-cn/documentation/about/contributing/"
 ]
 ---
 

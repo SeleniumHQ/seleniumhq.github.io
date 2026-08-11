@@ -21,7 +21,10 @@ aliases:
 "/documentation/zh-cn/selenium_installation/installing_standalone_server/",
 "/documentation/zh-cn/grid/",
 "/documentation/zh-cn/grid/grid_4/",
-"/documentation/zh-cn/grid/purposes_and_main_functionalities/"
+"/documentation/zh-cn/grid/purposes_and_main_functionalities/",
+"/ja/documentation/grid/",
+"/pt-br/documentation/grid/",
+"/zh-cn/documentation/grid/"
 ]
 ---
 

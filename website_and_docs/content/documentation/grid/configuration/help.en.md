@@ -8,7 +8,13 @@ aliases: [
 "/documentation/grid/configuring_components/config_help/",
 "/documentation/ja/grid/grid_4/configuring_components/config_help/",
 "/documentation/pt-br/grid/grid_4/configuring_components/config_help/",
-"/documentation/zh-cn/grid/grid_4/configuring_components/config_help/"
+"/documentation/zh-cn/grid/grid_4/configuring_components/config_help/",
+"/ja/documentation/grid/configuration/help/",
+"/ja/documentation/grid/configuring_components/config_help/",
+"/pt-br/documentation/grid/configuration/help/",
+"/pt-br/documentation/grid/configuring_components/config_help/",
+"/zh-cn/documentation/grid/configuration/help/",
+"/zh-cn/documentation/grid/configuring_components/config_help/"
 ]
 ---
 

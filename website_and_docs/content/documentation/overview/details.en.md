@@ -10,7 +10,13 @@ aliases: [
 "/documentation/overview/a_deeper_look",
 "/documentation/ja/introduction/the_selenium_project_and_tools/",
 "/documentation/pt-br/introduction/the_selenium_project_and_tools/",
-"/documentation/zh-cn/introduction/the_selenium_project_and_tools/"
+"/documentation/zh-cn/introduction/the_selenium_project_and_tools/",
+"/ja/documentation/overview/a_deeper_look",
+"/ja/documentation/overview/details/",
+"/pt-br/documentation/overview/a_deeper_look",
+"/pt-br/documentation/overview/details/",
+"/zh-cn/documentation/overview/a_deeper_look",
+"/zh-cn/documentation/overview/details/"
 ]
 ---
 

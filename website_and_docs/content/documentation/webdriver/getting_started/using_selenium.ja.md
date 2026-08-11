@@ -98,7 +98,7 @@ Seleniumコードの使用方法に関係なく、優れた統合開発環境が
 
 ### インストール
 
-これは[Seleniumライブラリのインストール]({{< ref "install_library.md" >}})で必要な手順と非常によく似ています。
+これは[Seleniumライブラリのインストール]({{< ref path="install_library.md" lang="en" >}})で必要な手順と非常によく似ています。
 このコードは、ドキュメント用のサンプルプロジェクトで使用しているものの例を示すだけです。
 
 {{< tabpane text=true >}}
@@ -285,4 +285,4 @@ npx mocha runningTests.spec.js
 学んだことを活かして、Seleniumコードを構築します!
 
 必要な機能が他にも見つかったら、残りの機能をお読みください
-[WebDriver ドキュメント]({{< ref "/documentation/webdriver/" >}}).
+[WebDriver ドキュメント]({{< ref path="/documentation/webdriver/" lang="en" >}}).

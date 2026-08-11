@@ -9,7 +9,11 @@ aliases: [
   "/documentation/en/webdriver/bidirectional/bidirectional_w3c/log",
   "/documentation/webdriver/bidirectional/webdriver_bidi/log",
 "/documentation/ja/webdriver/bidirectional/bidirectional_w3c/log",
-"/documentation/zh-cn/webdriver/bidirectional/bidirectional_w3c/log"
+"/documentation/zh-cn/webdriver/bidirectional/bidirectional_w3c/log",
+"/ja/documentation/webdriver/bidi/logging/",
+"/ja/documentation/webdriver/bidirectional/webdriver_bidi/log",
+"/zh-cn/documentation/webdriver/bidi/logging/",
+"/zh-cn/documentation/webdriver/bidirectional/webdriver_bidi/log"
 ]
 ---
 

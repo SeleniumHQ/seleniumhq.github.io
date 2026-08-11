@@ -7,7 +7,13 @@ aliases: [
 "/documentation/guidelines/avoid_sharing_state/",
 "/documentation/ja/guidelines_and_recommendations/avoid_sharing_state/",
 "/documentation/pt-br/guidelines_and_recommendations/avoid_sharing_state/",
-"/documentation/zh-cn/guidelines_and_recommendations/avoid_sharing_state/"
+"/documentation/zh-cn/guidelines_and_recommendations/avoid_sharing_state/",
+"/ja/documentation/guidelines/avoid_sharing_state/",
+"/ja/documentation/test_practices/encouraged/avoid_sharing_state/",
+"/pt-br/documentation/guidelines/avoid_sharing_state/",
+"/pt-br/documentation/test_practices/encouraged/avoid_sharing_state/",
+"/zh-cn/documentation/guidelines/avoid_sharing_state/",
+"/zh-cn/documentation/test_practices/encouraged/avoid_sharing_state/"
 ]
 ---
 

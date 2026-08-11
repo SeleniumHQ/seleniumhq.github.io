@@ -100,7 +100,7 @@ que será usado para todos os exemplos nesta página.
 
 ### Instalando
 
-Isto é muito semelhante ao que foi requerido em [Install a Selenium Library]({{< ref "install_library.md" >}}).
+Isto é muito semelhante ao que foi requerido em [Install a Selenium Library]({{< ref path="install_library.md" lang="en" >}}).
 Este código está apenas a mostrar exemplos do que está a ser usado no nosso projeto de Exemplos de Documentação.
 
 {{< tabpane text=true >}}
@@ -287,4 +287,4 @@ Here's an example of that code using a test runner:
 Pegue no que aprendeu e desenvolva o seu código Selenium!
 
 À medida que encontrar mais funcionalidades de que precisa, leia o resto da nossa
-[documentação do WebDriver]({{< ref "/documentation/webdriver/" >}}).
+[documentação do WebDriver]({{< ref path="/documentation/webdriver/" lang="en" >}}).

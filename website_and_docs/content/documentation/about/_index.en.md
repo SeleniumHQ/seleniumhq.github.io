@@ -11,7 +11,10 @@ aliases:
 "/documentation/pt-br/introduction/about_this_documentation/",
 "/documentation/pt-br/front_matter/",
 "/documentation/zh-cn/introduction/about_this_documentation/",
-"/documentation/zh-cn/front_matter/"
+"/documentation/zh-cn/front_matter/",
+"/ja/documentation/about/",
+"/pt-br/documentation/about/",
+"/zh-cn/documentation/about/"
 ]  
 ---
 

@@ -8,7 +8,15 @@ aliases: [
 "/documentation/webdriver/browser/",
 "/documentation/ja/webdriver/browser_manipulation/",
 "/documentation/pt-br/webdriver/browser_manipulation/",
-"/documentation/zh-cn/webdriver/browser_manipulation/"
+"/documentation/zh-cn/webdriver/browser_manipulation/",
+"/ja/documentation/webdriver/browser_manipulation/",
+"/ja/documentation/webdriver/interactions/",
+"/pt-br/documentation/webdriver/browser/",
+"/pt-br/documentation/webdriver/browser_manipulation/",
+"/pt-br/documentation/webdriver/interactions/",
+"/zh-cn/documentation/webdriver/browser/",
+"/zh-cn/documentation/webdriver/browser_manipulation/",
+"/zh-cn/documentation/webdriver/interactions/"
 ]
 ---
 

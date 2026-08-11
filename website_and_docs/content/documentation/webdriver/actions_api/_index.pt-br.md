@@ -11,7 +11,7 @@ Além das [interações de alto nível]({{< ref "/documentation/webdriver/elemen
 
 Na transição do antigo Protocolo JSON Wire para o novo Protocolo W3C WebDriver, os componentes de construção de ações de baixo nível se tornaram especialmente detalhados. Isso é extremamente poderoso, mas cada dispositivo de entrada possui várias maneiras de ser utilizado e, se você precisa gerenciar mais de um dispositivo, é responsável por garantir a sincronização adequada entre eles.
 
-Felizmente, provavelmente você não precisa aprender a usar os comandos de baixo nível diretamente, uma vez que quase tudo o que você pode querer fazer foi fornecido com um método de conveniência que combina os comandos de nível inferior para você. Todos esses métodos estão documentados nas páginas de [teclado]({{< ref "keyboard" >}}), [mouse]({{< ref "mouse" >}}), [caneta]({{< ref "pen" >}}) e [roda]({{< ref "wheel" >}}).
+Felizmente, provavelmente você não precisa aprender a usar os comandos de baixo nível diretamente, uma vez que quase tudo o que você pode querer fazer foi fornecido com um método de conveniência que combina os comandos de nível inferior para você. Todos esses métodos estão documentados nas páginas de [teclado]({{< ref path="keyboard" lang="en" >}}), [mouse]({{< ref path="mouse" lang="en" >}}), [caneta]({{< ref "pen" >}}) e [roda]({{< ref "wheel" >}}).
 
 ## Pausa
 

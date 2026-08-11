@@ -7,7 +7,13 @@ aliases: [
 "/documentation/worst_practices/captchas/",
 "/documentation/ja/worst_practices/captchas/",
 "/documentation/pt-br/worst_practices/captchas/",
-"/documentation/zh-cn/worst_practices/captchas/"
+"/documentation/zh-cn/worst_practices/captchas/",
+"/ja/documentation/test_practices/discouraged/captchas/",
+"/ja/documentation/worst_practices/captchas/",
+"/pt-br/documentation/test_practices/discouraged/captchas/",
+"/pt-br/documentation/worst_practices/captchas/",
+"/zh-cn/documentation/test_practices/discouraged/captchas/",
+"/zh-cn/documentation/worst_practices/captchas/"
 ] 
 ---
 

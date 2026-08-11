@@ -6,7 +6,10 @@ aliases: [
 "/documentation/en/support_packages/print_page/",
 "/documentation/ja/support_packages/print_page/",
 "/documentation/pt-br/support_packages/print_page/",
-"/documentation/zh-cn/support_packages/print_page/"
+"/documentation/zh-cn/support_packages/print_page/",
+"/ja/documentation/webdriver/interactions/print_page/",
+"/pt-br/documentation/webdriver/interactions/print_page/",
+"/zh-cn/documentation/webdriver/interactions/print_page/"
 ]
 ---
 

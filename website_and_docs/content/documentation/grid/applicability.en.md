@@ -9,7 +9,13 @@ aliases: [
 "/documentation/grid/when_to_use_grid",
 "/documentation/ja/grid/when_to_use_grid/",
 "/documentation/pt-br/grid/when_to_use_grid/",
-"/documentation/zh-cn/grid/when_to_use_grid/"
+"/documentation/zh-cn/grid/when_to_use_grid/",
+"/ja/documentation/grid/applicability/",
+"/ja/documentation/grid/when_to_use_grid",
+"/pt-br/documentation/grid/applicability/",
+"/pt-br/documentation/grid/when_to_use_grid",
+"/zh-cn/documentation/grid/applicability/",
+"/zh-cn/documentation/grid/when_to_use_grid"
 ]
 ---
 
