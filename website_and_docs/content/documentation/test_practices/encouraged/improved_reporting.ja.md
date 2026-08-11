@@ -3,8 +3,7 @@ title: "改善されたレポート"
 linkTitle: "改善されたレポート"
 weight: 7
 aliases: [
-"/documentation/ja/guidelines_and_recommendations/improved_reporting/",
-"/ja/documentation/guidelines/improved_reporting/"
+"/documentation/guidelines/improved_reporting/"
 ]
 ---
 

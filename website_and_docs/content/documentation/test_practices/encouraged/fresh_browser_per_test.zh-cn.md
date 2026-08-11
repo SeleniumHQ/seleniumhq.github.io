@@ -3,8 +3,7 @@ title: "每次测试都刷新浏览器"
 linkTitle: "每次测试都刷新浏览器"
 weight: 11
 aliases: [
-"/documentation/zh-cn/guidelines_and_recommendations/fresh_browser_per_test/",
-"/zh-cn/documentation/guidelines/fresh_browser_per_test/"
+"/documentation/guidelines/fresh_browser_per_test/"
 ]
 ---
  

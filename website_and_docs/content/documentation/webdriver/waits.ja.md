@@ -2,7 +2,6 @@
 title: "待機"
 linkTitle: "待機"
 weight: 6
-aliases: ["/documentation/ja/webdriver/waits/"]
 ---
 
 Perhaps the most common challenge for browser automation is ensuring

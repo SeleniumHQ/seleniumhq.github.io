@@ -3,9 +3,8 @@ title: "ThreadGuard"
 linkTitle: "ThreadGuard"
 weight: 6
 aliases: [
-"/documentation/pt-br/support_classes/",
-"/pt-br/documentation/support_packages/thread_guard/",
-"/pt-br/documentation/webdriver/additional_features/thread_guard/"
+"/documentation/support_packages/thread_guard/",
+"/documentation/webdriver/additional_features/thread_guard/"
 ]
 ---
 

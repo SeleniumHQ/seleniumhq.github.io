@@ -3,8 +3,7 @@ title: "领域特定语言"
 linkTitle: "领域特定语言"
 weight: 4
 aliases: [
-"/documentation/zh-cn/guidelines_and_recommendations/domain_specific_language/",
-"/zh-cn/documentation/guidelines/domain_specific_language/"
+"/documentation/guidelines/domain_specific_language/"
 ]
 ---
 

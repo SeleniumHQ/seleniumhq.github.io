@@ -6,7 +6,10 @@ description: >
   Some guidelines and recommendations on testing from the Selenium project.
 aliases: [
 "/documentation/en/guidelines_and_recommendations/",
-"/documentation/guidelines/"
+"/documentation/guidelines/",
+"/documentation/ja/guidelines_and_recommendations/",
+"/documentation/pt-br/guidelines_and_recommendations/",
+"/documentation/zh-cn/guidelines_and_recommendations/"
 ]
 ---
 

@@ -3,8 +3,7 @@ title: "Navegação por links"
 linkTitle: "Navegação por links"
 weight: 7
 aliases: [
-"/documentation/pt-br/worst_practices/link_spidering/",
-"/pt-br/documentation/worst_practices/link_spidering/"
+"/documentation/worst_practices/link_spidering/"
 ] 
 ---
 

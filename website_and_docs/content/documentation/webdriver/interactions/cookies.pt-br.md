@@ -3,9 +3,8 @@ title: "Trabalhando com cookies"
 linkTitle: "Trabalhando com cookies"
 weight: 4
 aliases: [
-"/documentation/pt-br/support_packages/working_with_cookies/",
-"/pt-br/documentation/support_packages/working_with_cookies/",
-"/pt-br/documentation/webdriver/browser/cookies/"
+"/documentation/support_packages/working_with_cookies/",
+"/documentation/webdriver/browser/cookies/"
 ]
 ---
 

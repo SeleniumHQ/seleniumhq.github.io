@@ -4,7 +4,7 @@ linkTitle: "CLI 选项"
 weight: 2
 description: 所有网格组件配置CLI选项的详细信息.
 aliases: [
-"/zh-cn/documentation/grid/configuring_components/cli_options/"
+"/documentation/grid/configuring_components/cli_options/"
 ]
 ---
 

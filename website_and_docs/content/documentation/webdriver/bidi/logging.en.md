@@ -7,7 +7,9 @@ description: >
   different things, these methods are made available via a "script" namespace.
 aliases: [
   "/documentation/en/webdriver/bidirectional/bidirectional_w3c/log",
-  "/documentation/webdriver/bidirectional/webdriver_bidi/log"
+  "/documentation/webdriver/bidirectional/webdriver_bidi/log",
+"/documentation/ja/webdriver/bidirectional/bidirectional_w3c/log",
+"/documentation/zh-cn/webdriver/bidirectional/bidirectional_w3c/log"
 ]
 ---
 

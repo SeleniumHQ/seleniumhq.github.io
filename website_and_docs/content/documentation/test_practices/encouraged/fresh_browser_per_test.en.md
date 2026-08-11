@@ -4,7 +4,10 @@ linkTitle: "Fresh browser per test"
 weight: 11
 aliases: [
 "/documentation/en/guidelines_and_recommendations/fresh_browser_per_test/",
-"/documentation/guidelines/fresh_browser_per_test/"
+"/documentation/guidelines/fresh_browser_per_test/",
+"/documentation/ja/guidelines_and_recommendations/fresh_browser_per_test/",
+"/documentation/pt-br/guidelines_and_recommendations/fresh_browser_per_test/",
+"/documentation/zh-cn/guidelines_and_recommendations/fresh_browser_per_test/"
 ]
 ---
 

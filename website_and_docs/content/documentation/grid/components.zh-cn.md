@@ -5,8 +5,7 @@ weight: 6
 description: >
     检查不同的Grid组件以了解如何使用它们.
 aliases: [
-"/documentation/zh-cn/grid/grid_4/components_of_a_grid/",
-"/zh-cn/documentation/grid/components_of_a_grid/"
+"/documentation/grid/components_of_a_grid/"
 ]
 ---
 

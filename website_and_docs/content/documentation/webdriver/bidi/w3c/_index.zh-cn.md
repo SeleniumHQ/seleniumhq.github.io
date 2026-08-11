@@ -3,8 +3,7 @@ title: "BiDirectional API (W3C compliant)"
 linkTitle: "BiDi API (W3C compliant)"
 weight: 16
 aliases: [
-"/documentation/zh-cn/webdriver/bidi_apis/bidi_w3c",
-"/zh-cn/documentation/webdriver/bidi_apis/bidi_w3c"
+"/documentation/webdriver/bidi_apis/bidi_w3c"
 ]
 ---
 

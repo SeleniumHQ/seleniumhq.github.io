@@ -6,11 +6,7 @@ needsTranslation: false
 description: >
   如果你是Selenium的新手, 我们有一些资源帮助你快速入门.
 aliases: [
-"/documentation/zh-cn/getting_started/", 
-"/documentation/zh-cn/getting_started/quick/",
-"/documentation/zh-cn/selenium_installation/",
-"/documentation/zh-cn/getting_started_with_webdriver/",
-"/zh-cn/documentation/getting_started/"
+"/documentation/getting_started/"
 ]
 ---
 

@@ -4,7 +4,7 @@ linkTitle: "Toml オプション"
 weight: 3
 description: Tomlファイルを使用したGridの設定例.
 aliases: [
-"/ja/documentation/grid/configuring_components/toml_options/"
+"/documentation/grid/configuring_components/toml_options/"
 ]
 ---
 

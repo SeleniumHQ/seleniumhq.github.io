@@ -5,7 +5,10 @@ weight: 1
 description: Get information about all the available options to configure Grid.
 aliases: [
 "/documentation/en/grid/grid_4/configuring_components/config_help/",
-"/documentation/grid/configuring_components/config_help/"
+"/documentation/grid/configuring_components/config_help/",
+"/documentation/ja/grid/grid_4/configuring_components/config_help/",
+"/documentation/pt-br/grid/grid_4/configuring_components/config_help/",
+"/documentation/zh-cn/grid/grid_4/configuring_components/config_help/"
 ]
 ---
 

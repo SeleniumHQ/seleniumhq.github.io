@@ -14,6 +14,15 @@ aliases: [
 "/documentation/webdriver/page_loading_strategy/",
 "/documentation/webdriver/capabilities/page_loading_strategy/",
 "/documentation/capabilitis/shared/",
+"/documentation/ja/driver_idiosyncrasies/shared_capabilities/",
+"/documentation/ja/webdriver/http_proxies/",
+"/documentation/ja/webdriver/page_loading_strategy/",
+"/documentation/pt-br/driver_idiosyncrasies/shared_capabilities/",
+"/documentation/pt-br/webdriver/http_proxies/",
+"/documentation/pt-br/webdriver/page_loading_strategy/",
+"/documentation/zh-cn/driver_idiosyncrasies/shared_capabilities/",
+"/documentation/zh-cn/webdriver/http_proxies/",
+"/documentation/zh-cn/webdriver/page_loading_strategy/"
 ]
 ---
 

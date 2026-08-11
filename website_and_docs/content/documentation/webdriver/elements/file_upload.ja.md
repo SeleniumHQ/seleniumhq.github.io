@@ -3,7 +3,7 @@ title: "ファイルのアップロード"
 linkTitle: "ファイルのアップロード"
 weight: 5
 aliases: [
-"/ja/documentation/webdriver/additional_features/fileupload/"
+"/documentation/webdriver/additional_features/fileupload/"
 ]
 ---
 

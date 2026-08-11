@@ -6,8 +6,7 @@ description: >
   These features are related to logging. Because "logging" can refer to so many
   different things, these methods are made available via a "script" namespace.
 aliases: [
-  "/documentation/ja/webdriver/bidirectional/bidirectional_w3c/log",
-  "/documentation/webdriver/bidirectional/webdriver_bidi/log"
+"/documentation/webdriver/bidirectional/webdriver_bidi/log"
 ]
 ---
 

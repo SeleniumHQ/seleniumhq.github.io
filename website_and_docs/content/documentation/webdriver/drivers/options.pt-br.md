@@ -6,15 +6,12 @@ needsTranslation: true
 description: >-
   Esses recursos são compartilhados por todos os navegadores.
 aliases: [
-"/documentation/pt-br/driver_idiosyncrasies/shared_capabilities/",
-"/pt-br/documentation/webdriver/capabilities/shared_capabilities/",
-"/documentation/pt-br/webdriver/http_proxies/",
-"/pt-br/documentation/webdriver/http_proxies/",
-"/pt-br/documentation/webdriver/capabilities/http_proxies/",
-"/documentation/pt-br/webdriver/page_loading_strategy/",
-"/pt-br/documentation/webdriver/page_loading_strategy/",
-"/pt-br/documentation/webdriver/capabilities/page_loading_strategy/",
-"/pt-br/documentation/capabilitis/shared/",
+"/documentation/webdriver/capabilities/shared_capabilities/",
+"/documentation/webdriver/http_proxies/",
+"/documentation/webdriver/capabilities/http_proxies/",
+"/documentation/webdriver/page_loading_strategy/",
+"/documentation/webdriver/capabilities/page_loading_strategy/",
+"/documentation/capabilitis/shared/"
 ]
 ---
 

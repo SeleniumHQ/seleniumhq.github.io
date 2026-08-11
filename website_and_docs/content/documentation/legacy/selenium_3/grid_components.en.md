@@ -6,7 +6,10 @@ description: >
     Description of Hub and Nodes for Grid 3.
 aliases: [
 "/documentation/en/grid/grid_3/components_of_a_grid/",
-"/documentation/legacy/grid_3/components_of_a_grid/"
+"/documentation/legacy/grid_3/components_of_a_grid/",
+"/documentation/ja/grid/grid_3/components_of_a_grid/",
+"/documentation/pt-br/grid/grid_3/components_of_a_grid/",
+"/documentation/zh-cn/grid/grid_3/components_of_a_grid/"
 ]
 ---
 

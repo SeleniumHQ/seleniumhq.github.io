@@ -6,8 +6,7 @@ needsTranslation: true
 description: >
   Uma representação de qualquer dispositivo de ponteiro para interagir com uma página da web.
 aliases: [
-"/documentation/pt-br/support_packages/mouse_and_keyboard_actions_in_detail/",
-"/pt-br/documentation/support_packages/mouse_and_keyboard_actions_in_detail/"
+"/documentation/support_packages/mouse_and_keyboard_actions_in_detail/"
 ]
 ---
 

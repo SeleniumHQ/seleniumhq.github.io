@@ -3,8 +3,7 @@ title: "Independência de Testes"
 linkTitle: "Independência de Testes"
 weight: 9
 aliases: [
-"/documentation/pt-br/guidelines_and_recommendations/test_independency/",
-"/pt-br/documentation/guidelines/test_independency/"
+"/documentation/guidelines/test_independency/"
 ]
 ---
 

@@ -4,8 +4,7 @@ linkTitle: "帮助"
 weight: 1
 description: 获取有关配置网格的所有可用选项的信息.
 aliases: [
-"/documentation/zh-cn/grid/grid_4/configuring_components/config_help/",
-"/zh-cn/documentation/grid/configuring_components/config_help/"
+"/documentation/grid/configuring_components/config_help/"
 ]
 ---
 

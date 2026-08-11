@@ -3,8 +3,7 @@ title: "コンポーネントを理解する"
 linkTitle: "コンポーネントを理解する"
 weight: 1
 aliases: [
-"/documentation/ja/webdriver/understanding_the_components/",
-"/ja/documentation/webdriver/understanding_the_components"
+"/documentation/webdriver/understanding_the_components"
 ]
 ---
 

@@ -3,7 +3,7 @@ title: "ブラウザー ナビゲーション"
 linkTitle: "ナビゲーション"
 weight: 1
 aliases: [
-"/ja/documentation/webdriver/browser/navigation/"
+"/documentation/webdriver/browser/navigation/"
 ]
 ---
 

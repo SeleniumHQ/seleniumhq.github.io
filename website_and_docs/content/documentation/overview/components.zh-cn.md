@@ -3,8 +3,7 @@ title: "了解组件"
 linkTitle: "了解组件"
 weight: 1
 aliases: [
-"/documentation/zh-cn/webdriver/understanding_the_components/",
-"/zh-cn/documentation/webdriver/understanding_the_components"
+"/documentation/webdriver/understanding_the_components"
 ]
 ---
 

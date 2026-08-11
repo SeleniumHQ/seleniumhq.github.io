@@ -3,9 +3,8 @@ title: "JavaScript アラート、プロンプトおよび確認"
 linkTitle: "JavaScript アラート、プロンプトおよび確認"
 weight: 2
 aliases: [
-"/documentation/ja/webdriver/js_alerts_prompts_and_confirmations/",
-"/ja/documentation/webdriver/js_alerts_prompts_and_confirmations/",
-"/ja/documentation/webdriver/browser/alerts",
+"/documentation/webdriver/js_alerts_prompts_and_confirmations/",
+"/documentation/webdriver/browser/alerts"
 ]
 ---
 

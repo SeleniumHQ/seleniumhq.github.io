@@ -3,8 +3,7 @@ title: "避免共享状态"
 linkTitle: "避免共享状态"
 weight: 8
 aliases: [
-"/documentation/zh-cn/guidelines_and_recommendations/avoid_sharing_state/",
-"/zh-cn/documentation/guidelines/avoid_sharing_state/"
+"/documentation/guidelines/avoid_sharing_state/"
 ]
 ---
 

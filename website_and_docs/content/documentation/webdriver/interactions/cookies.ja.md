@@ -3,9 +3,8 @@ title: "クッキーの使用"
 linkTitle: "クッキーの使用"
 weight: 4
 aliases: [
-"/documentation/ja/support_packages/working_with_cookies/",
-"/ja/documentation/support_packages/working_with_cookies/",
-"/ja/documentation/webdriver/browser/cookies/"
+"/documentation/support_packages/working_with_cookies/",
+"/documentation/webdriver/browser/cookies/"
 ]
 ---
 

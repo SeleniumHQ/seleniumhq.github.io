@@ -4,10 +4,6 @@ linkTitle: 贡献
 weight: 2
 description: >-
     有关改进 Selenium 文档和代码示例的信息
-aliases: [
-  "/documentation/zh-cn/contributing/",
-  "/documentation/zh-cn/front_matter/typographical_conventions/"
-]
 ---
 
 Selenium 是一个大型软件项目，
@@ -114,7 +110,7 @@ Selenium 项目欢迎新的贡献者。
 我们使用 [Hugo](https://gohugo.io/) 和 [Docsy theme](https://www.docsy.dev/)
 用于构建和渲染本网站。
 您需要 Hugo "extended" 扩展的 Sass/SCSS 版本用于这个网站。
-我们推荐使用 Hugo 0.148.2。
+我们推荐使用 Hugo 0.164.0。
 
 请参考来自 Docsy 的说明
 [安装 Hugo](https://www.docsy.dev/docs/getting-started/#install-hugo)。

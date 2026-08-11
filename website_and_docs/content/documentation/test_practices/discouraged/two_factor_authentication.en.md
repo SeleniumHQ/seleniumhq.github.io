@@ -4,7 +4,10 @@ linkTitle: "Two Factor Authentication"
 weight: 8
 aliases: [
 "/documentation/en/worst_practices/two_factor_authentication/",
-"/documentation/worst_practices/two_factor_authentication/"
+"/documentation/worst_practices/two_factor_authentication/",
+"/documentation/ja/worst_practices/two_factor_authentication/",
+"/documentation/pt-br/worst_practices/two_factor_authentication/",
+"/documentation/zh-cn/worst_practices/two_factor_authentication/"
 ] 
 ---
 

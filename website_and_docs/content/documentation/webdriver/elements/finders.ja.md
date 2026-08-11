@@ -3,8 +3,7 @@ title: "Web要素の検索"
 linkTitle: "検索"
 weight: 2
 aliases: [
-"/documentation/ja/webdriver/locating_elements/",
-"/ja/documentation/webdriver/locating_elements/"
+"/documentation/webdriver/locating_elements/"
 ]
 description: >
   提供されたロケーターの値に基づいて要素を検索します。

@@ -4,7 +4,10 @@ linkTitle: "Gmail, email and Facebook"
 weight: 4
 aliases: [
 "/documentation/en/worst_practices/gmail_email_and_facebook_logins/",
-"/documentation/worst_practices/gmail_email_and_facebook_logins/"
+"/documentation/worst_practices/gmail_email_and_facebook_logins/",
+"/documentation/ja/worst_practices/gmail_email_and_facebook_logins/",
+"/documentation/pt-br/worst_practices/gmail_email_and_facebook_logins/",
+"/documentation/zh-cn/worst_practices/gmail_email_and_facebook_logins/"
 ] 
 ---
 

@@ -5,7 +5,10 @@ weight: 4
 aliases: [
 "/documentation/en/support_packages/working_with_cookies/",
 "/documentation/support_packages/working_with_cookies/",
-"/documentation/webdriver/browser/cookies"
+"/documentation/webdriver/browser/cookies",
+"/documentation/ja/support_packages/working_with_cookies/",
+"/documentation/pt-br/support_packages/working_with_cookies/",
+"/documentation/zh-cn/support_packages/working_with_cookies/"
 ]
 ---
 

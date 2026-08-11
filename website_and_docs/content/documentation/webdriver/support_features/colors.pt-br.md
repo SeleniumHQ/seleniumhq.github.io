@@ -3,9 +3,8 @@ title: "Trabalhando com cores"
 linkTitle: "Trabalhando com cores"
 weight: 3
 aliases: [
-"/documentation/pt-br/support_packages/working_with_colours/",
-"/pt-br/documentation/support_packages/working_with_colours/",
-"/pt-br/documentation/webdriver/additional_features/working_with_colours/",
+"/documentation/support_packages/working_with_colours/",
+"/documentation/webdriver/additional_features/working_with_colours/"
 ]
 ---
 

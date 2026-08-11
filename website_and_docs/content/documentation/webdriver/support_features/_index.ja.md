@@ -5,9 +5,8 @@ weight: 18
 description: >
   サポートクラスは、オプションの高水準な機能を提供します。
 aliases: [
-"/documentation/ja/support_packages/",
-"/ja/documentation/support_packages/",
-"/ja/documentation/webdriver/additional_features/",
+"/documentation/support_packages/",
+"/documentation/webdriver/additional_features/"
 ]
 ---
 

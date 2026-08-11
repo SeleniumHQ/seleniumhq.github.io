@@ -4,7 +4,10 @@ linkTitle: "Test dependency"
 weight: 5
 aliases: [
 "/documentation/en/worst_practices/test_dependency/",
-"/documentation/worst_practices/test_dependency/"
+"/documentation/worst_practices/test_dependency/",
+"/documentation/ja/worst_practices/test_dependency/",
+"/documentation/pt-br/worst_practices/test_dependency/",
+"/documentation/zh-cn/worst_practices/test_dependency/"
 ] 
 ---
 

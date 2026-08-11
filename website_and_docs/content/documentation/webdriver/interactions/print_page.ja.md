@@ -2,9 +2,6 @@
 title: "Print Page"
 linkTitle: "Print Page"
 weight: 7
-aliases: [
-"/documentation/ja/support_packages/print_page/",
-]
 ---
 
 Printing a webpage is a common task, whether for sharing information or maintaining archives. 

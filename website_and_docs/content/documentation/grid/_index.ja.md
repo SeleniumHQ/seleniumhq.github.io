@@ -4,13 +4,6 @@ linkTitle: "Grid"
 weight: 4
 description: >
   複数のマシンで並行してテストを実行したいですか？ Grid が手助けします。
-aliases:
-  [
-    "/documentation/ja/selenium_installation/installing_standalone_server/",
-    "/documentation/ja/grid/",
-    "/documentation/ja/grid/grid_4/",
-    "/documentation/ja/grid/purposes_and_main_functionalities/",
-  ]
 ---
 
 Selenium Grid を利用して、クライアントからリモートブラウザーインスタンスにコマンドを

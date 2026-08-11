@@ -3,7 +3,7 @@ title: "IFrame と Frame の操作"
 linkTitle: "フレーム"
 weight: 6
 aliases: [
-"/ja/documentation/webdriver/browser/frames/"
+"/documentation/webdriver/browser/frames/"
 ]
 ---
 

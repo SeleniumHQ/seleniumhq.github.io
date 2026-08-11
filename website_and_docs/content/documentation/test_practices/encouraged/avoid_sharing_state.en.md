@@ -4,7 +4,10 @@ linkTitle: "Avoid sharing state"
 weight: 8
 aliases: [
 "/documentation/en/guidelines_and_recommendations/avoid_sharing_state/",
-"/documentation/guidelines/avoid_sharing_state/"
+"/documentation/guidelines/avoid_sharing_state/",
+"/documentation/ja/guidelines_and_recommendations/avoid_sharing_state/",
+"/documentation/pt-br/guidelines_and_recommendations/avoid_sharing_state/",
+"/documentation/zh-cn/guidelines_and_recommendations/avoid_sharing_state/"
 ]
 ---
 

@@ -7,6 +7,9 @@ aliases: [
 "/documentation/support_packages/working_with_select_elements/",
 "/documentation/webdriver/elements/select_elements/",
 "/documentation/webdriver/elements/select_list",
+"/documentation/ja/support_packages/working_with_select_elements/",
+"/documentation/pt-br/support_packages/working_with_select_elements/",
+"/documentation/zh-cn/support_packages/working_with_select_elements/"
 ]
 description: >
   Select lists have special behaviors compared to other elements.

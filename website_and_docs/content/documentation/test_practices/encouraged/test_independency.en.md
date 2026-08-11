@@ -4,7 +4,10 @@ linkTitle: "Test independency"
 weight: 9
 aliases: [
 "/documentation/en/guidelines_and_recommendations/test_independency/",
-"/documentation/guidelines/test_independency/"
+"/documentation/guidelines/test_independency/",
+"/documentation/ja/guidelines_and_recommendations/test_independency/",
+"/documentation/pt-br/guidelines_and_recommendations/test_independency/",
+"/documentation/zh-cn/guidelines_and_recommendations/test_independency/"
 ]
 ---
 

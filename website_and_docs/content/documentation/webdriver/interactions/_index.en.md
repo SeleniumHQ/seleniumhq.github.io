@@ -6,6 +6,9 @@ aliases: [
 "/documentation/en/webdriver/browser_manipulation/",
 "/documentation/webdriver/browser_manipulation/",
 "/documentation/webdriver/browser/",
+"/documentation/ja/webdriver/browser_manipulation/",
+"/documentation/pt-br/webdriver/browser_manipulation/",
+"/documentation/zh-cn/webdriver/browser_manipulation/"
 ]
 ---
 

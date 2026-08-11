@@ -4,7 +4,10 @@ linkTitle: "Captchas"
 weight: 1
 aliases: [
 "/documentation/en/worst_practices/captchas/",
-"/documentation/worst_practices/captchas/"
+"/documentation/worst_practices/captchas/",
+"/documentation/ja/worst_practices/captchas/",
+"/documentation/pt-br/worst_practices/captchas/",
+"/documentation/zh-cn/worst_practices/captchas/"
 ] 
 ---
 

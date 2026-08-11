@@ -6,7 +6,10 @@ description: >
   A representation of any key input device for interacting with a web page.
 aliases: [
 "/documentation/en/webdriver/keyboard/",
-"/documentation/webdriver/keyboard/"
+"/documentation/webdriver/keyboard/",
+"/documentation/ja/webdriver/keyboard/",
+"/documentation/pt-br/webdriver/keyboard/",
+"/documentation/zh-cn/webdriver/keyboard/"
 ]
 ---
 

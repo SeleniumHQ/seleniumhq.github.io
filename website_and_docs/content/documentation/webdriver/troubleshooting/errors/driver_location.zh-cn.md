@@ -5,10 +5,8 @@ weight: 4
 description: >
   Troubleshooting missing path to driver executable.
 aliases: [
-"/documentation/zh-cn/selenium_installation/installing_webdriver_binaries/",
-"/documentation/zh-cn/webdriver/driver_requirements/",
-"/zh-cn/documentation/getting_started/installing_browser_drivers/",
-"/zh-cn/documentation/webdriver/getting_started/install_drivers/",
+"/documentation/getting_started/installing_browser_drivers/",
+"/documentation/webdriver/getting_started/install_drivers/"
 ]
 ---
 

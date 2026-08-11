@@ -4,7 +4,10 @@ linkTitle: "Domain specific language"
 weight: 4
 aliases: [
 "/documentation/en/guidelines_and_recommendations/domain_specific_language/",
-"/documentation/guidelines/domain_specific_language/"
+"/documentation/guidelines/domain_specific_language/",
+"/documentation/ja/guidelines_and_recommendations/domain_specific_language/",
+"/documentation/pt-br/guidelines_and_recommendations/domain_specific_language/",
+"/documentation/zh-cn/guidelines_and_recommendations/domain_specific_language/"
 ]
 ---
 

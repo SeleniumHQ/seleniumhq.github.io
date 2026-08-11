@@ -5,8 +5,7 @@ weight: 1
 description: >
   Selenium工具集下的全部版权、贡献以及归属.
 aliases: [
-"/documentation/zh-cn/front_matter/copyright_and_attributions/",
-"/zh-cn/documentation/about/copyright_and_attributions"
+"/documentation/about/copyright_and_attributions"
 ]
 ---
 

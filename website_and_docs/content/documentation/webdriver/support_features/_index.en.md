@@ -8,6 +8,9 @@ aliases: [
 "/documentation/en/support_packages/",
 "/documentation/support_packages/",
 "/documentation/webdriver/additional_features/",
+"/documentation/ja/support_packages/",
+"/documentation/pt-br/support_packages/",
+"/documentation/zh-cn/support_packages/"
 ]
 ---
 

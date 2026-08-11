@@ -8,6 +8,12 @@ aliases: [
 "/documentation/webdriver/capabilities/driver_specific_capabilities/",
 "/documentation/getting_started/open_browser/",
 "/documentation/capabilities/",
+"/documentation/ja/driver_idiosyncrasies/",
+"/documentation/ja/driver_idiosyncrasies/driver_specific_capabilities/",
+"/documentation/pt-br/driver_idiosyncrasies/",
+"/documentation/pt-br/driver_idiosyncrasies/driver_specific_capabilities/",
+"/documentation/zh-cn/driver_idiosyncrasies/",
+"/documentation/zh-cn/driver_idiosyncrasies/driver_specific_capabilities/"
 ]
 ---
 

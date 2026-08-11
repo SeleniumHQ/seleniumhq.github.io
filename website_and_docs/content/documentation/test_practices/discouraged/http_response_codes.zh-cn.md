@@ -3,8 +3,7 @@ title: "HTTP响应码"
 linkTitle: "HTTP响应码"
 weight: 3
 aliases: [
-"/documentation/zh-cn/worst_practices/http_response_codes/",
-"/zh-cn/documentation/worst_practices/http_response_codes/"
+"/documentation/worst_practices/http_response_codes/"
 ] 
 ---
 

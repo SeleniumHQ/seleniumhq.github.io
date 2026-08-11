@@ -3,8 +3,7 @@ title: "Autenticação de Dois Fatores (2FA)"
 linkTitle: "Autenticação de Dois Fatores (2FA)"
 weight: 8
 aliases: [
-"/documentation/pt-br/worst_practices/two_factor_authentication/",
-"/pt-br/documentation/worst_practices/two_factor_authentication/"
+"/documentation/worst_practices/two_factor_authentication/"
 ] 
 ---
 

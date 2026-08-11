@@ -3,8 +3,7 @@ title: "Teste de performance/desempenho"
 linkTitle: "Teste de performance/desempenho"
 weight: 6
 aliases: [
-"/documentation/pt-br/worst_practices/performance_testing/",
-"/pt-br/documentation/worst_practices/performance_testing/"
+"/documentation/worst_practices/performance_testing/"
 ] 
 ---
 

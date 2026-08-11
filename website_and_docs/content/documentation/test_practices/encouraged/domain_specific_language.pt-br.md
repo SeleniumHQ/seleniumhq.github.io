@@ -3,8 +3,7 @@ title: "Linguagem específica de domínio (DSL)"
 linkTitle: "Linguagem específica de domínio (DSL)"
 weight: 4
 aliases: [
-"/documentation/pt-br/guidelines_and_recommendations/domain_specific_language/",
-"/pt-br/documentation/guidelines/domain_specific_language/"
+"/documentation/guidelines/domain_specific_language/"
 ]
 ---
 

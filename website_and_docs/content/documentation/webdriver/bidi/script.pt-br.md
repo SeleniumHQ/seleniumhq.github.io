@@ -5,8 +5,7 @@ weight: 1
 description: >
   These features are related to scripts, and are made available via a "script" namespace.
 aliases: [
-  "/documentation/pt-br/webdriver/bidirectional/bidirectional_w3c/script",
-  "/documentation/webdriver/bidirectional/webdriver_bidi/script"
+"/documentation/webdriver/bidirectional/webdriver_bidi/script"
 ]
 ---
 

@@ -3,8 +3,7 @@ title: "Dependência entre testes"
 linkTitle: "Dependência entre testes"
 weight: 5
 aliases: [
-"/documentation/pt-br/worst_practices/test_dependency/",
-"/pt-br/documentation/worst_practices/test_dependency/"
+"/documentation/worst_practices/test_dependency/"
 ] 
 ---
 

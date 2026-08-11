@@ -3,8 +3,7 @@ title: "Grid端点"
 linkTitle: "Grid端点"
 weight: 3
 aliases: [
-"/documentation/zh-cn/grid/grid_4/grid_endpoints/",
-"/zh-cn/documentation/grid/advanced_features/grid_endpoints/"
+"/documentation/grid/advanced_features/grid_endpoints/"
 ]
 ---
 

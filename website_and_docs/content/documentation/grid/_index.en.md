@@ -9,8 +9,20 @@ aliases:
           "/documentation/en/selenium_installation/installing_standalone_server/",
           "/documentation/en/grid/",
           "/documentation/en/grid/grid_4/",
-          "/documentation/en/grid/purposes_and_main_functionalities/"
-        ]
+          "/documentation/en/grid/purposes_and_main_functionalities/",
+"/documentation/ja/selenium_installation/installing_standalone_server/",
+"/documentation/ja/grid/",
+"/documentation/ja/grid/grid_4/",
+"/documentation/ja/grid/purposes_and_main_functionalities/",
+"/documentation/pt-br/selenium_installation/installing_standalone_server/",
+"/documentation/pt-br/grid/",
+"/documentation/pt-br/grid/grid_4/",
+"/documentation/pt-br/grid/purposes_and_main_functionalities/",
+"/documentation/zh-cn/selenium_installation/installing_standalone_server/",
+"/documentation/zh-cn/grid/",
+"/documentation/zh-cn/grid/grid_4/",
+"/documentation/zh-cn/grid/purposes_and_main_functionalities/"
+]
 ---
 
 Selenium Grid allows the execution of WebDriver scripts on remote machines 

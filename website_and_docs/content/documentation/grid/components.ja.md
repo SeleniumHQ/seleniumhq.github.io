@@ -5,8 +5,7 @@ weight: 6
 description: >
     Grid コンポーネントの使い方について
 aliases: [
-"/documentation/ja/grid/grid_4/components_of_a_grid/",
-"/ja/documentation/grid/components_of_a_grid/"
+"/documentation/grid/components_of_a_grid/"
 ]
 ---
 

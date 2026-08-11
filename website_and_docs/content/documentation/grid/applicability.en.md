@@ -6,7 +6,10 @@ description: >
   Is Grid right for you?
 aliases: [
 "/documentation/en/grid/when_to_use_grid/",
-"/documentation/grid/when_to_use_grid"
+"/documentation/grid/when_to_use_grid",
+"/documentation/ja/grid/when_to_use_grid/",
+"/documentation/pt-br/grid/when_to_use_grid/",
+"/documentation/zh-cn/grid/when_to_use_grid/"
 ]
 ---
 

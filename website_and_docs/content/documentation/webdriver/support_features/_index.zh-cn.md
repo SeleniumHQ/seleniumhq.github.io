@@ -5,9 +5,8 @@ weight: 18
 description: >
   针对更高层面功能的额外支持类.
 aliases: [
-"/documentation/zh-cn/support_packages/",
-"/zh-cn/documentation/support_packages/",
-"/zh-cn/documentation/additional_features/",
+"/documentation/support_packages/",
+"/documentation/additional_features/"
 ]
 ---
 

@@ -3,9 +3,8 @@ title: "线程守卫"
 linkTitle: "线程守卫"
 weight: 6
 aliases: [
-"/documentation/zh-cn/support_classes/",
-"/zh-cn/documentation/support_packages/thread_guard/",
-"/zh-cn/documentation/webdriver/additional_features/thread_guard/"
+"/documentation/support_packages/thread_guard/",
+"/documentation/webdriver/additional_features/thread_guard/"
 ]
 ---
 

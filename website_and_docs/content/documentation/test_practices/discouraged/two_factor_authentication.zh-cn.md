@@ -3,8 +3,7 @@ title: "双因素认证"
 linkTitle: "双因素认证"
 weight: 8
 aliases: [
-"/documentation/zh-cn/worst_practices/two_factor_authentication/",
-"/zh-cn/documentation/worst_practices/two_factor_authentication/"
+"/documentation/worst_practices/two_factor_authentication/"
 ] 
 ---
 

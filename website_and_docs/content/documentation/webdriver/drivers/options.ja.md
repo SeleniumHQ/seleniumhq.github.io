@@ -5,15 +5,12 @@ weight: 2
 description: >-
   これらの機能はすべてのブラウザで共有されています。
 aliases: [
-"/documentation/ja/driver_idiosyncrasies/shared_capabilities/",
-"/ja/documentation/webdriver/capabilities/shared_capabilities/",
-"/documentation/ja/webdriver/http_proxies/",
-"/ja/documentation/webdriver/http_proxies/",
-"/ja/documentation/webdriver/capabilities/http_proxies/",
-"/documentation/ja/webdriver/page_loading_strategy/",
-"/ja/documentation/webdriver/page_loading_strategy/",
-"/ja/documentation/webdriver/capabilities/page_loading_strategy/",
-"/ja/documentation/capabilitis/shared/",
+"/documentation/webdriver/capabilities/shared_capabilities/",
+"/documentation/webdriver/http_proxies/",
+"/documentation/webdriver/capabilities/http_proxies/",
+"/documentation/webdriver/page_loading_strategy/",
+"/documentation/webdriver/capabilities/page_loading_strategy/",
+"/documentation/capabilitis/shared/"
 ]
 ---
 

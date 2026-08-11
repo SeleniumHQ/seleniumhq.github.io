@@ -3,8 +3,7 @@ title: "测试的独立性"
 linkTitle: "测试的独立性"
 weight: 9
 aliases: [
-"/documentation/zh-cn/guidelines_and_recommendations/test_independency/",
-"/zh-cn/documentation/guidelines/test_independency/"
+"/documentation/guidelines/test_independency/"
 ]
 ---
 

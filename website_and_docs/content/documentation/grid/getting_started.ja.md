@@ -6,8 +6,7 @@ needsTranslation: true
 description: >
   Selenium Gridの導入方法
 aliases: [
-"/documentation/ja/grid/grid_4/setting_up_your_own_grid/",
-"/ja/documentation/grid/setting_up_your_own_grid/"
+"/documentation/grid/setting_up_your_own_grid/"
 ]
 ---
 

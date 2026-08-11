@@ -4,7 +4,10 @@ linkTitle: "File downloads"
 weight: 2
 aliases: [
 "/documentation/en/worst_practices/file_downloads/",
-"/documentation/worst_practices/file_downloads/"
+"/documentation/worst_practices/file_downloads/",
+"/documentation/ja/worst_practices/file_downloads/",
+"/documentation/pt-br/worst_practices/file_downloads/",
+"/documentation/zh-cn/worst_practices/file_downloads/"
 ] 
 ---
 

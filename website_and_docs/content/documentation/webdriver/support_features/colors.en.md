@@ -6,6 +6,9 @@ aliases: [
 "/documentation/en/support_packages/working_with_colours/",
 "/documentation/support_packages/working_with_colours/",
 "/documentation/webdriver/additional_features/working_with_colours/",
+"/documentation/ja/support_packages/working_with_colours/",
+"/documentation/pt-br/support_packages/working_with_colours/",
+"/documentation/zh-cn/support_packages/working_with_colours/"
 ]
 ---
 

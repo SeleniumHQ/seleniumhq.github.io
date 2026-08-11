@@ -6,7 +6,10 @@ description: >
     Quick start guide for setting up Grid 3.
 aliases: [
 "/documentation/en/grid/grid_3/setting_up_your_own_grid/",
-"/documentation/legacy/grid_3/setting_up_your_own_grid/"
+"/documentation/legacy/grid_3/setting_up_your_own_grid/",
+"/documentation/ja/grid/grid_3/setting_up_your_own_grid/",
+"/documentation/pt-br/grid/grid_3/setting_up_your_own_grid/",
+"/documentation/zh-cn/grid/grid_3/setting_up_your_own_grid/"
 ]
 ---
 

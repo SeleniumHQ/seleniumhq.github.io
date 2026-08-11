@@ -5,8 +5,7 @@ weight: 2
 description: >
   Selenium 是一系列工具和库的综合项目，这些工具和库支持 web 浏览器的自动化。
 aliases: [
-"/documentation/zh-cn/introduction/the_selenium_project_and_tools/",
-"/zh-cn/documentation/overview/a_deeper_look"
+"/documentation/overview/a_deeper_look"
 ]
 ---
 
