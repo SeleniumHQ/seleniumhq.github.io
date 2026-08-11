@@ -13193,8 +13193,8 @@ div.code-toolbar > .toolbar {
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#204a87;font-weight:bold">def&lt;/span> &lt;span style="color:#000">test_set_context&lt;/span>&lt;span style="color:#000;font-weight:bold">():&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000">options&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#000">webdriver&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">FirefoxOptions&lt;/span>&lt;span style="color:#000;font-weight:bold">()&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000">options&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">add_argument&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;-remote-allow-system-access&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">)&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000">driver&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#000">webdriver&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">Firefox&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#000">options&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>&lt;span style="color:#000">options&lt;/span>&lt;span style="color:#000;font-weight:bold">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000">service&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#000">webdriver&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">FirefoxService&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#000">service_args&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>&lt;span style="color:#000;font-weight:bold">[&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;--allow-system-access&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">])&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000">driver&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#000">webdriver&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">Firefox&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#000">options&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>&lt;span style="color:#000">options&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span> &lt;span style="color:#000">service&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>&lt;span style="color:#000">service&lt;/span>&lt;span style="color:#000;font-weight:bold">)&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">with&lt;/span> &lt;span style="color:#000">driver&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">context&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#000">driver&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">CONTEXT_CHROME&lt;/span>&lt;span style="color:#000;font-weight:bold">):&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000">driver&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">execute_script&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;console.log(&amp;#39;Inside Chrome context&amp;#39;);&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">)&lt;/span>
@@ -15123,7 +15123,101 @@ This documentation previously located &lt;a href="https://github.com/SeleniumHQ/
 &lt;p>&lt;strong>SimonStewart&lt;/strong>: Original WebDriver developer and leading the Selenium 2 effort. He works mainly with Java and can be seen all over the code base, patching holes and adding features. By day he works as a Software Engineer in Test at Google. By night, he hacks on the crazy fun build grammar.&lt;/p></description></item><item><title>Virtual Authenticator</title><link>https://www.selenium.dev/documentation/webdriver/interactions/virtual_authenticator/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/documentation/webdriver/interactions/virtual_authenticator/</guid><description>&lt;p>Web applications can enable a public key-based authentication mechanism known as Web Authentication to authenticate users in a passwordless manner.
 &lt;a href="https://www.w3.org/TR/webauthn-2/">Web Authentication&lt;/a> defines APIs that allows a user to create a public-key credential and register it with an authenticator.
 An authenticator can be a hardware device or a software entity that stores user&amp;rsquo;s public-key credentials and retrieves them on request.&lt;/p>
-&lt;p>As the name suggests, Virtual Authenticator emulates such authenticators for testing.&lt;/p></description></item><item><title>TLC Meeting - August 6, 2026</title><link>https://www.selenium.dev/meetings/2026/tlc-08-06/</link><pubDate>Thu, 06 Aug 2026 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/meetings/2026/tlc-08-06/</guid><description>&lt;p>Meetings are happening weekly on Thursday at 0700 Pacific / 1000 Eastern / 1500 UK / 1930 India as a video call, and the invite is posted to the &lt;code>#selenium-tlc&lt;/code> channel on &lt;a href="https://selenium.dev/support">Selenium Slack&lt;/a>.
+&lt;p>As the name suggests, Virtual Authenticator emulates such authenticators for testing.&lt;/p></description></item><item><title>Selenium 4.47 Released!</title><link>https://www.selenium.dev/blog/2026/selenium-4-47-released/</link><pubDate>Mon, 10 Aug 2026 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2026/selenium-4-47-released/</guid><description>&lt;p>We’re excited to announce the release of &lt;strong>Selenium 4.47&lt;/strong> for JavaScript, Ruby, Python, .NET, Java
+and the Grid! 🎉&lt;/p>
+&lt;p>Links to all assets can be found on our &lt;a href="https://www.selenium.dev/downloads/">downloads page&lt;/a>.&lt;/p>
+&lt;hr>
+&lt;h1 id="selenium-447-released">Selenium 4.47 Released&lt;/h1>
+&lt;h2 id="-highlights">✨ Highlights&lt;/h2>
+&lt;ul>
+&lt;li>&lt;strong>BiDi&lt;/strong> Continued unifying the BiDi protocol layer across bindings around the shared,
+binding-neutral CDDL-derived schema — Ruby now generates its BiDi domain type accessors, union
+variant factories, and typed errors from it, matching JavaScript&amp;rsquo;s earlier adoption.&lt;/li>
+&lt;li>&lt;strong>[Java]&lt;/strong> Removed the redundant BiDi subscription scope tracking and fixed BiDi not
+initializing for &lt;code>RemoteWebDriver&lt;/code> built via the builder.&lt;/li>
+&lt;li>&lt;strong>[.NET]&lt;/strong> BiDi transport factories are now composable, the optional command timeout was
+removed from command options, and spurious warnings when there are no BiDi subscribers are
+gone.&lt;/li>
+&lt;li>&lt;strong>[.NET][Python][Ruby]&lt;/strong> Firefox now blocks CDP access, reinforcing BiDi as the standard
+cross-browser protocol.&lt;/li>
+&lt;li>&lt;strong>[Grid]&lt;/strong> Dynamic Grid videos are now consistently stored in a per-session subfolder via
+&lt;code>SE_VIDEO_SESSION_SUBFOLDER&lt;/code>, including on Kubernetes, removing the previous pod-wait and
+relocation logic.&lt;/li>
+&lt;li>&lt;strong>[Java]&lt;/strong> Fixed &lt;code>By.className()&lt;/code>/&lt;code>By.id()&lt;/code> misescaping non-ASCII leading digits, and a
+&lt;code>By.name()&lt;/code> double &lt;code>String.format&lt;/code> bug on names containing &lt;code>%&lt;/code>.&lt;/li>
+&lt;li>&lt;strong>[Rust]&lt;/strong> Selenium Manager fixes: honors &lt;code>--browser-version&lt;/code> for Electron driver resolution,
+locates Chrome and Edge in known install directories, and no longer caches an empty driver
+version.&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h2 id="-notable-changes">📦 Notable Changes&lt;/h2>
+&lt;h3 id="java">Java&lt;/h3>
+&lt;ul>
+&lt;li>Removed the redundant BiDi subscription scope tracking, and fixed BiDi not initializing for
+&lt;code>RemoteWebDriver&lt;/code> built via the builder.&lt;/li>
+&lt;li>Fixed &lt;code>By.className()&lt;/code>/&lt;code>By.id()&lt;/code> misescaping non-ASCII leading digits, and a &lt;code>By.name()&lt;/code> double
+&lt;code>String.format&lt;/code> bug on names containing &lt;code>%&lt;/code>.&lt;/li>
+&lt;li>Added regression coverage for relative locators on collapsed table borders.&lt;/li>
+&lt;li>Removed deprecated FTP proxy support and deprecated invalid Firefox profile code (shared with
+JavaScript, Ruby, and .NET).&lt;/li>
+&lt;/ul>
+&lt;h3 id="python">Python&lt;/h3>
+&lt;ul>
+&lt;li>Blocked CDP access with Firefox (shared with .NET and Ruby).&lt;/li>
+&lt;li>Fixed &lt;code>no_proxy&lt;/code> matching so empty entries and substrings no longer bypass the proxy.&lt;/li>
+&lt;li>&lt;code>find_element&lt;/code>/&lt;code>find_elements&lt;/code> type hints now accept &lt;code>By&lt;/code>.&lt;/li>
+&lt;li>Ensured driver service subprocess resources are cleaned up.&lt;/li>
+&lt;li>Fixed the default &lt;code>command_executor&lt;/code> URL in the &lt;code>RemoteWebDriver&lt;/code> docstring.&lt;/li>
+&lt;/ul>
+&lt;h3 id="ruby">Ruby&lt;/h3>
+&lt;ul>
+&lt;li>Generated the BiDi domain type accessors, union variant factories, and typed WebDriver errors
+from the shared binding-neutral schema.&lt;/li>
+&lt;li>Constructed the BiDi transport inside the domain from a connection, and routed BiDiBridge
+navigation through the generated &lt;code>Protocol::BrowsingContext&lt;/code>.&lt;/li>
+&lt;li>Added inbound/outbound validation for BiDi fields, including nullable-constant params, ref
+fields, and float/enum type fidelity.&lt;/li>
+&lt;li>Added support for WebDriver BiDi on Safari Preview, moving &lt;code>#bidi&lt;/code> onto &lt;code>Driver&lt;/code>.&lt;/li>
+&lt;li>Added a &lt;code>browser_family&lt;/code> test guard, and support for custom vendor-specific capabilities in
+options classes.&lt;/li>
+&lt;/ul>
+&lt;h3 id="net">.NET&lt;/h3>
+&lt;ul>
+&lt;li>Made BiDi transport factories composable.&lt;/li>
+&lt;li>Removed the optional command timeout from command options, and stopped warning when there are
+no BiDi subscribers.&lt;/li>
+&lt;li>Added support for &lt;code>SE_*DRIVER&lt;/code> environment variables to set driver locations.&lt;/li>
+&lt;li>Blocked CDP access with Firefox (shared with Python and Ruby).&lt;/li>
+&lt;/ul>
+&lt;h3 id="grid">Grid&lt;/h3>
+&lt;ul>
+&lt;li>Store Dynamic Grid videos in a per-session subfolder via &lt;code>SE_VIDEO_SESSION_SUBFOLDER&lt;/code>,
+including on Kubernetes, removing the previous pod-wait and relocation logic.&lt;/li>
+&lt;li>Inherited the Node Pod container&amp;rsquo;s &lt;code>securityContext&lt;/code> for Dynamic Grid on Kubernetes.&lt;/li>
+&lt;li>Honored client-advertised &lt;code>se:remoteUrl&lt;/code> for reachable BiDi/CDP/VNC URLs.&lt;/li>
+&lt;/ul>
+&lt;h3 id="build--infra">Build &amp;amp; Infra&lt;/h3>
+&lt;ul>
+&lt;li>Continued the BiDi schema unification: merged vendor CDDL files into the shared schema, derived
+per-type inbound/outbound directionality, and cleaned up schema generation.&lt;/li>
+&lt;li>Published a Selenium 5 release charter and an ADR documenting BiDi implementation boundaries.&lt;/li>
+&lt;li>Generated a cross-platform Selenium Manager SBOM and NOTICE, bundled into each package.&lt;/li>
+&lt;li>Bumped Rust build tooling (&lt;code>@llvm&lt;/code>, &lt;code>rules_rs&lt;/code>, &lt;code>rules_ruby&lt;/code>) and updated Node.js versioning for
+testing and publishing.&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h3 id="-docker-selenium">🐳 Docker Selenium&lt;/h3>
+&lt;ul>
+&lt;li>Docker: Support Google Chrome images for linux/arm64 (#3187)&lt;/li>
+&lt;li>[build] Keep Chrome dev/beta images on linux/amd64 only, resolve the latest rclone tag (#3188)&lt;/li>
+&lt;li>[video] Fall back to SE_NODE_CONTAINER_NAME for the per-session subfolder (#3194)&lt;/li>
+&lt;li>K8s: Implement KEDA external scaler and use it as default (#3169)&lt;/li>
+&lt;li>K8s: Gate distributed component replicas on external datastore (#3175)&lt;/li>
+&lt;li>&lt;a href="https://github.com/SeleniumHQ/docker-selenium/releases">See all changes&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;br>
+&lt;p>We thank all our contributors for their incredible efforts in making Selenium better with every
+release. ❤️&lt;/p></description></item><item><title>TLC Meeting - August 6, 2026</title><link>https://www.selenium.dev/meetings/2026/tlc-08-06/</link><pubDate>Thu, 06 Aug 2026 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/meetings/2026/tlc-08-06/</guid><description>&lt;p>Meetings are happening weekly on Thursday at 0700 Pacific / 1000 Eastern / 1500 UK / 1930 India as a video call, and the invite is posted to the &lt;code>#selenium-tlc&lt;/code> channel on &lt;a href="https://selenium.dev/support">Selenium Slack&lt;/a>.
 To add items to the agenda for the next meeting, please see our public &lt;a href="https://docs.google.com/document/d/18InWY44S0C_ECkRkRo8GKictu8BEtsahRsFh17tmUR0/edit?tab=t.0#heading=h.2kfu4ns4qzjl">Rolling Agenda&lt;/a>&lt;/p>
 &lt;h3 id="participation">Participation&lt;/h3>
 &lt;ul>
