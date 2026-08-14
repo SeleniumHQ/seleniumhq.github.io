@@ -15123,7 +15123,34 @@ This documentation previously located &lt;a href="https://github.com/SeleniumHQ/
 &lt;p>&lt;strong>SimonStewart&lt;/strong>: Original WebDriver developer and leading the Selenium 2 effort. He works mainly with Java and can be seen all over the code base, patching holes and adding features. By day he works as a Software Engineer in Test at Google. By night, he hacks on the crazy fun build grammar.&lt;/p></description></item><item><title>Virtual Authenticator</title><link>https://www.selenium.dev/documentation/webdriver/interactions/virtual_authenticator/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/documentation/webdriver/interactions/virtual_authenticator/</guid><description>&lt;p>Web applications can enable a public key-based authentication mechanism known as Web Authentication to authenticate users in a passwordless manner.
 &lt;a href="https://www.w3.org/TR/webauthn-2/">Web Authentication&lt;/a> defines APIs that allows a user to create a public-key credential and register it with an authenticator.
 An authenticator can be a hardware device or a software entity that stores user&amp;rsquo;s public-key credentials and retrieves them on request.&lt;/p>
-&lt;p>As the name suggests, Virtual Authenticator emulates such authenticators for testing.&lt;/p></description></item><item><title>Selenium 4.47 Released!</title><link>https://www.selenium.dev/blog/2026/selenium-4-47-released/</link><pubDate>Mon, 10 Aug 2026 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2026/selenium-4-47-released/</guid><description>&lt;p>We’re excited to announce the release of &lt;strong>Selenium 4.47&lt;/strong> for JavaScript, Ruby, Python, .NET, Java
+&lt;p>As the name suggests, Virtual Authenticator emulates such authenticators for testing.&lt;/p></description></item><item><title>TLC Meeting - August 13, 2026</title><link>https://www.selenium.dev/meetings/2026/tlc-08-13/</link><pubDate>Thu, 13 Aug 2026 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/meetings/2026/tlc-08-13/</guid><description>&lt;p>Meetings are happening weekly on Thursday at 0700 Pacific / 1000 Eastern / 1500 UK / 1930 India as a video call, and the invite is posted to the &lt;code>#selenium-tlc&lt;/code> channel on &lt;a href="https://selenium.dev/support">Selenium Slack&lt;/a>.
+To add items to the agenda for the next meeting, please see our public &lt;a href="https://docs.google.com/document/d/18InWY44S0C_ECkRkRo8GKictu8BEtsahRsFh17tmUR0/edit?tab=t.0#heading=h.2kfu4ns4qzjl">Rolling Agenda&lt;/a>&lt;/p>
+&lt;h3 id="participation">Participation&lt;/h3>
+&lt;ul>
+&lt;li>&lt;a href="https://github.com/AutomatedTester/">AutomatedTester&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://github.com/p0deje/">p0deje&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://github.com/pujagani/">pujagani&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://github.com/titusfortner/">titusfortner&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="agenda">Agenda&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href="https://github.com/SeleniumHQ/selenium/pull/17886">Interaction readiness ADR&lt;/a>&lt;/li>
+&lt;li>Selenium Manager download telemetry and analytics costs&lt;/li>
+&lt;li>Grid slot matching&lt;/li>
+&lt;li>&lt;a href="https://github.com/SeleniumHQ/selenium/pull/17786">Low-level WebDriver BiDi layer ADR&lt;/a> and the
+&lt;a href="https://github.com/SeleniumHQ/selenium/pull/17761">generated Python BiDi layer&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://github.com/SeleniumHQ/selenium/pull/17685">Network async/event API ADR&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://github.com/SeleniumHQ/selenium/pull/17776">Script and logging async/event API ADR&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://github.com/SeleniumHQ/selenium/pull/17741">Selenium Manager released API ADR&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://github.com/SeleniumHQ/selenium/pull/17817">Web extensions ADR&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h2 id="meeting-summary">Meeting Summary&lt;/h2>
+&lt;p>The group discussed the shape of the &lt;a href="https://github.com/SeleniumHQ/selenium/pull/17886">interaction readiness ADR&lt;/a>, closed out the
+open question on the &lt;a href="https://github.com/SeleniumHQ/selenium/pull/17786">low-level BiDi ADR&lt;/a>, and worked through the remaining points
+in the &lt;a href="https://github.com/SeleniumHQ/selenium/pull/17685">network&lt;/a> and &lt;a href="https://github.com/SeleniumHQ/selenium/pull/17776">script and logging&lt;/a> ADRs. How browsing
+contexts, user contexts, and script execution targets are named and scoped came up in both ADRs and
+will get a record of its own. The &lt;a href="https://github.com/SeleniumHQ/selenium/pull/17741">Selenium Manager released API ADR&lt;/a> was deferred, and the &lt;a href="https://github.com/SeleniumHQ/selenium/pull/17817">web extensions ADR&lt;/a> drew no objections.&lt;/p></description></item><item><title>Selenium 4.47 Released!</title><link>https://www.selenium.dev/blog/2026/selenium-4-47-released/</link><pubDate>Mon, 10 Aug 2026 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2026/selenium-4-47-released/</guid><description>&lt;p>We’re excited to announce the release of &lt;strong>Selenium 4.47&lt;/strong> for JavaScript, Ruby, Python, .NET, Java
 and the Grid! 🎉&lt;/p>
 &lt;p>Links to all assets can be found on our &lt;a href="https://www.selenium.dev/downloads/">downloads page&lt;/a>.&lt;/p>
 &lt;hr>
