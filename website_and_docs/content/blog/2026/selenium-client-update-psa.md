@@ -48,7 +48,7 @@ Keeping Selenium current is easy to postpone and costly to ignore. Browser ecosy
 If you are seeing errors that do not make sense or flakiness that seems unexplainable, start with a simple question:
 What version of Selenium are you running? 
 
-If you have not checked your Selenium or Appium version recently, take a moment to do it now.
+If you have not checked your Selenium or Appium version recently, take a moment to do it today.
 
 
 Stay tuned for updates by following SeleniumHQ on:
