@@ -1,7 +1,12 @@
 ---
-title: "双方向機能"
+title: "WebDriver BiDi (双方向機能)"
 linkTitle: "BiDi"
 weight: 16
+description: >
+    WebDriver BiDi は、Selenium プロジェクトとブラウザベンダーが共同で策定した、ブラウザ自動化のための
+    W3C 標準の双方向プロトコルです。WebDriver に WebSocket 接続を追加することで、ネットワークリクエスト、
+    コンソールメッセージ、JavaScript エラーといったブラウザイベントをリアルタイムに受け取って処理できます。
+    Chrome DevTools Protocol を置き換える、クロスブラウザな標準です。
 aliases: [
 "/documentation/en/webdriver/bidi_apis/",
 "/documentation/webdriver/bidi_apis/",
