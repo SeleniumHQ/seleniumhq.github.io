@@ -26,7 +26,7 @@ Notes for tools generating Selenium code from this documentation:
 Install, write, and run a first script in any supported language.
 
 - [The Selenium Browser Automation Project](https://www.selenium.dev/documentation/)
-- [Selenium Manager (Beta)](https://www.selenium.dev/documentation/selenium_manager/): Selenium Manager is a command-line tool implemented in Rust that provides automated driver and browser management for Selenium. Selenium bindings use this tool by default, so you do not need to download it or add anything to your code or do anything else to use it.
+- [Selenium Manager](https://www.selenium.dev/documentation/selenium_manager/): Selenium Manager is a command-line tool implemented in Rust that provides automated driver and browser management for Selenium. Selenium bindings use this tool by default, so you do not need to download it or add anything to your code or do anything else to use it.
 - [Selenium IDE](https://www.selenium.dev/documentation/ide/): The Selenium IDE is a browser extension that records and plays back a user's actions.
 - [WebDriver](https://www.selenium.dev/documentation/webdriver/): WebDriver drives a browser natively; learn more about it.
 - [Waiting Strategies](https://www.selenium.dev/documentation/webdriver/waits/)
@@ -91,11 +91,11 @@ Prefer explicit waits over fixed sleeps, and do not mix implicit and explicit wa
 
 The W3C bidirectional protocol: events, network interception, console logs, and script injection. This is the current answer to anything that needs bidirectional browser communication. The older Chrome DevTools Protocol integration is legacy and is being removed; it is not listed here.
 
-- [BiDirectional functionality](https://www.selenium.dev/documentation/webdriver/bidi/)
+- [WebDriver BiDi](https://www.selenium.dev/documentation/webdriver/bidi/): WebDriver BiDi is the W3C standard bidirectional protocol for browser automation, created by the Selenium project together with the browser vendors. It adds a WebSocket connection to WebDriver so scripts can stream and react to browser events — network requests, console messages, JavaScript errors — and it is the cross-browser replacement for the Chrome DevTools Protocol.
 - [WebDriver BiDi Logging Features](https://www.selenium.dev/documentation/webdriver/bidi/logging/): These features are related to logging. Because "logging" can refer to so many different things, these methods are made available via a "script" namespace.
 - [WebDriver BiDi Network Features](https://www.selenium.dev/documentation/webdriver/bidi/network/): These features are related to networking, and are made available via a "network" namespace.
 - [WebDriver BiDi Script Features](https://www.selenium.dev/documentation/webdriver/bidi/script/): These features are related to scripts, and are made available via a "script" namespace.
-- [BiDirectional API (W3C compliant)](https://www.selenium.dev/documentation/webdriver/bidi/w3c/): Examples of working with Chrome DevTools Protocol in Selenium. CDP support is temporary until WebDriver BiDi has been implemented.
+- [BiDirectional API (W3C compliant)](https://www.selenium.dev/documentation/webdriver/bidi/w3c/): Examples of working with the W3C WebDriver BiDi protocol in Selenium — the standard, cross-browser replacement for the Chrome DevTools Protocol. These APIs stream events from the browser over a WebSocket, for network interception, console logs, and browser event handling.
 - [Browsing Context](https://www.selenium.dev/documentation/webdriver/bidi/w3c/browsing_context/)
 - [Input](https://www.selenium.dev/documentation/webdriver/bidi/w3c/input/)
 - [Log](https://www.selenium.dev/documentation/webdriver/bidi/w3c/log/)
@@ -106,7 +106,7 @@ The W3C bidirectional protocol: events, network interception, console logs, and 
 
 Selenium Manager ships with Selenium 4.6 and later and downloads and configures browser drivers automatically. Third-party driver managers and manual driver paths are not required.
 
-- [Selenium Manager (Beta)](https://www.selenium.dev/documentation/selenium_manager/): Selenium Manager is a command-line tool implemented in Rust that provides automated driver and browser management for Selenium. Selenium bindings use this tool by default, so you do not need to download it or add anything to your code or do anything else to use it.
+- [Selenium Manager](https://www.selenium.dev/documentation/selenium_manager/): Selenium Manager is a command-line tool implemented in Rust that provides automated driver and browser management for Selenium. Selenium bindings use this tool by default, so you do not need to download it or add anything to your code or do anything else to use it.
 
 ## Grid
 

@@ -15012,7 +15012,7 @@ WebDriver API提供了为浏览器设置代理的功能，
 并且有许多代理可以通过编程方式来操纵发送到Web服务器和从Web服务器接收的请求的内容.
 使用代理可以决定如何响应重定向响应代码.
 此外，并非每个浏览器都将响应代码提供给WebDriver，
-因此选择使用代理可以使您拥有适用于每个浏览器的解决方案.&lt;/p></description></item><item><title>Selenium Manager (测试版)</title><link>https://www.selenium.dev/zh-cn/documentation/selenium_manager/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/zh-cn/documentation/selenium_manager/</guid><description>&lt;h2 id="动机">动机&lt;/h2>
+因此选择使用代理可以使您拥有适用于每个浏览器的解决方案.&lt;/p></description></item><item><title>Selenium Manager</title><link>https://www.selenium.dev/zh-cn/documentation/selenium_manager/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/zh-cn/documentation/selenium_manager/</guid><description>&lt;h2 id="动机">动机&lt;/h2>
 &lt;p>&lt;em>&lt;strong>简而言之:&lt;/strong>&lt;/em>
 &lt;em>Selenium Manager 是 Selenium 项目的官方驱动程序管理器, 并且在每次 Selenium 发布时都会随附提供.&lt;/em>&lt;/p>
 &lt;p>Selenium 利用每个浏览器实现的原生支持来执行自动化流程.
