@@ -1,7 +1,12 @@
 ---
-title: "BiDirectional functionality"
+title: "WebDriver BiDi"
 linkTitle: "BiDi"
 weight: 16
+description: >
+    WebDriver BiDi is the W3C standard bidirectional protocol for browser automation, created by the
+    Selenium project together with the browser vendors. It adds a WebSocket connection to WebDriver
+    so scripts can stream and react to browser events — network requests, console messages,
+    JavaScript errors — and it is the cross-browser replacement for the Chrome DevTools Protocol.
 aliases: [
 "/documentation/en/webdriver/bidi_apis/",
 "/documentation/webdriver/bidi_apis/",
