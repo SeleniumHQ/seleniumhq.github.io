@@ -145,8 +145,8 @@ def test_full_page_screenshot(firefox_driver):
 
 def test_set_context():
     options = webdriver.FirefoxOptions()
-    options.add_argument("-remote-allow-system-access")
-    driver = webdriver.Firefox(options=options)
+    service = webdriver.FirefoxService(service_args=["--allow-system-access"])
+    driver = webdriver.Firefox(options=options, service=service)
 
     with driver.context(driver.CONTEXT_CHROME):
         driver.execute_script("console.log('Inside Chrome context');")
