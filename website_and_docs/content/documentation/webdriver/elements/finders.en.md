@@ -12,22 +12,8 @@ description: >
 
 One of the most fundamental aspects of using Selenium is obtaining element references to work with.
 Selenium offers a number of built-in [locator strategies]({{< ref "locators.md" >}}) to uniquely identify an element.
-There are many ways to use the locators in very advanced scenarios. For the purposes of this documentation, 
-let's consider this HTML snippet:
-
-
-```html
-<ol id="vegetables">
- <li class="potatoes">…
- <li class="onions">…
- <li class="tomatoes"><span>Tomato is a Vegetable</span>…
-</ol>
-<ul id="fruits">
-  <li class="bananas">…
-  <li class="apples">…
-  <li class="tomatoes"><span>Tomato is a Fruit</span>…
-</ul>
-```
+There are many ways to use the locators in very advanced scenarios. For the purposes of this documentation,
+use the [Selenium locator test page](https://www.selenium.dev/selenium/web/locators_tests/locators.html).
 
 ## First matching element 
 
@@ -38,28 +24,34 @@ first element found within a given context.
 
 When the find element method is called on the driver instance, it 
 returns a reference to the first element in the DOM that matches with the provided locator. 
-This value can be stored and used for future element actions. In our example HTML above, there are 
-two elements that have a class name of "tomatoes" so this method will return the element in the "vegetables" list.
+This value can be stored and used for future element actions. On the Selenium locator test page, there are
+two elements with the class name `information`, so this method returns the first text input.
 
 {{< tabpane langEqualsHeader=true >}}
 {{< badge-examples >}}
   {{< tab header="Java" >}}
-WebElement vegetable = driver.findElement(By.className("tomatoes"));
+driver.get("https://www.selenium.dev/selenium/web/locators_tests/locators.html");
+WebElement firstInput = driver.findElement(By.className("information"));
   {{< /tab >}}
-  {{< tab header="Python" text=true >}}
-  {{< gh-codeblock path="/examples/python/tests/elements/test_finders.py#L23">}}
+  {{< tab header="Python" >}}
+driver.get("https://www.selenium.dev/selenium/web/locators_tests/locators.html")
+first_input = driver.find_element(By.CLASS_NAME, "information")
   {{< /tab >}}
   {{< tab header="CSharp" >}}
-var vegetable = driver.FindElement(By.ClassName("tomatoes"));
+driver.Navigate().GoToUrl("https://www.selenium.dev/selenium/web/locators_tests/locators.html");
+var firstInput = driver.FindElement(By.ClassName("information"));
   {{< /tab >}}
-{{< tab header="Ruby" text=true >}}
-{{< gh-codeblock path="/examples/ruby/spec/elements/finders_spec.rb#L14-L15">}}
+{{< tab header="Ruby" >}}
+driver.get('https://www.selenium.dev/selenium/web/locators_tests/locators.html')
+first_input = driver.find_element(class: 'information')
 {{< /tab >}}
   {{< tab header="JavaScript" >}}
-const vegetable = await driver.findElement(By.className('tomatoes'));
+await driver.get('https://www.selenium.dev/selenium/web/locators_tests/locators.html');
+const firstInput = await driver.findElement(By.className('information'));
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
-val vegetable: WebElement = driver.findElement(By.className("tomatoes"))
+driver.get("https://www.selenium.dev/selenium/web/locators_tests/locators.html")
+val firstInput: WebElement = driver.findElement(By.className("information"))
   {{< /tab >}}
 {{< /tabpane >}}
 
@@ -67,35 +59,41 @@ val vegetable: WebElement = driver.findElement(By.className("tomatoes"))
 ### Evaluating a subset of the DOM
 
 Rather than finding a unique locator in the entire DOM, it is often useful to narrow the search to the scope
-of another located element. In the above example there are two elements with a class name of "tomatoes" and 
-it is a little more challenging to get the reference for the second one.
+of another located element.
 
-One solution is to locate an element with a unique attribute that is an ancestor of the desired element and not an
-ancestor of the undesired element, then call find element on that object:
+One solution is to locate an ancestor of the desired element, then call find element on that object:
 
 {{< tabpane langEqualsHeader=true >}}
 {{< badge-examples >}}
   {{< tab header="Java" >}}
-WebElement fruits = driver.findElement(By.id("fruits"));
-WebElement fruit = fruits.findElement(By.className("tomatoes"));
+driver.get("https://www.selenium.dev/selenium/web/locators_tests/locators.html");
+WebElement form = driver.findElement(By.tagName("form"));
+WebElement input = form.findElement(By.className("information"));
   {{< /tab >}}
-  {{< tab header="Python" text=true >}}
-  {{< gh-codeblock path="/examples/python/tests/elements/test_finders.py#L28-L29">}}
+  {{< tab header="Python" >}}
+driver.get("https://www.selenium.dev/selenium/web/locators_tests/locators.html")
+form = driver.find_element(By.TAG_NAME, "form")
+input = form.find_element(By.CLASS_NAME, "information")
   {{< /tab >}}
   {{< tab header="CSharp" >}}
-IWebElement fruits = driver.FindElement(By.Id("fruits"));
-IWebElement fruit = fruits.FindElement(By.ClassName("tomatoes"));
+driver.Navigate().GoToUrl("https://www.selenium.dev/selenium/web/locators_tests/locators.html");
+IWebElement form = driver.FindElement(By.TagName("form"));
+IWebElement input = form.FindElement(By.ClassName("information"));
   {{< /tab >}}
-{{< tab header="Ruby" text=true >}}
-{{< gh-codeblock path="/examples/ruby/spec/elements/finders_spec.rb#L14-L15">}}
+{{< tab header="Ruby" >}}
+driver.get('https://www.selenium.dev/selenium/web/locators_tests/locators.html')
+form = driver.find_element(tag_name: 'form')
+input = form.find_element(class: 'information')
 {{< /tab >}}
   {{< tab header="JavaScript" >}}
-const fruits = await driver.findElement(By.id('fruits'));
-const fruit = fruits.findElement(By.className('tomatoes'));
+await driver.get('https://www.selenium.dev/selenium/web/locators_tests/locators.html');
+const form = await driver.findElement(By.tagName('form'));
+const input = await form.findElement(By.className('information'));
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
-val fruits = driver.findElement(By.id("fruits"))
-val fruit = fruits.findElement(By.className("tomatoes"))
+driver.get("https://www.selenium.dev/selenium/web/locators_tests/locators.html")
+val form = driver.findElement(By.tagName("form"))
+val input = form.findElement(By.className("information"))
   {{< /tab >}}
 {{< /tabpane >}}
 
@@ -150,27 +148,33 @@ To improve the performance slightly, we can use either CSS or XPath to find this
 See the [Locator strategy suggestions]({{< ref "/documentation/test_practices/encouraged/locators" >}}) in our 
 [Encouraged test practices]({{< ref "/documentation/test_practices/encouraged" >}}) section.
 
-For this example, we'll use a CSS Selector:
+For this example, we'll use a CSS selector:
 
 {{< tabpane langEqualsHeader=true >}}
 {{< badge-examples >}}
   {{< tab header="Java" >}}
-WebElement fruit = driver.findElement(By.cssSelector("#fruits .tomatoes"));
+driver.get("https://www.selenium.dev/selenium/web/locators_tests/locators.html");
+WebElement input = driver.findElement(By.cssSelector("form .information"));
   {{< /tab >}}
-  {{< tab header="Python" text=true >}}
-  {{< gh-codeblock path="/examples/python/tests/elements/test_finders.py#L34" >}}
+  {{< tab header="Python" >}}
+driver.get("https://www.selenium.dev/selenium/web/locators_tests/locators.html")
+input = driver.find_element(By.CSS_SELECTOR, "form .information")
   {{< /tab >}}
   {{< tab header="CSharp" >}}
-var fruit = driver.FindElement(By.CssSelector("#fruits .tomatoes"));
+driver.Navigate().GoToUrl("https://www.selenium.dev/selenium/web/locators_tests/locators.html");
+var input = driver.FindElement(By.CssSelector("form .information"));
   {{< /tab >}}
-{{< tab header="Ruby" text=true >}}
-{{< gh-codeblock path="/examples/ruby/spec/elements/finders_spec.rb#L19" >}}
+{{< tab header="Ruby" >}}
+driver.get('https://www.selenium.dev/selenium/web/locators_tests/locators.html')
+input = driver.find_element(css: 'form .information')
 {{< /tab >}}
   {{< tab header="JavaScript" >}}
-const fruit = await driver.findElement(By.css('#fruits .tomatoes'));
+await driver.get('https://www.selenium.dev/selenium/web/locators_tests/locators.html');
+const input = await driver.findElement(By.css('form .information'));
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
-val fruit = driver.findElement(By.cssSelector("#fruits .tomatoes"))
+driver.get("https://www.selenium.dev/selenium/web/locators_tests/locators.html")
+val input = driver.findElement(By.cssSelector("form .information"))
   {{< /tab >}}
 {{< /tabpane >}}
 
@@ -180,27 +184,33 @@ val fruit = driver.findElement(By.cssSelector("#fruits .tomatoes"))
 There are several use cases for needing to get references to all elements that match a locator, rather
 than just the first one. The plural find elements methods return a collection of element references. 
 If there are no matches, an empty list is returned. In this case, 
-references to all fruits and vegetable list items will be returned in a collection. 
+references to all input elements will be returned in a collection.
 
 {{< tabpane langEqualsHeader=true >}}
 {{< badge-examples >}}
   {{< tab header="Java" >}}
-List<WebElement> plants = driver.findElements(By.tagName("li"));
+driver.get("https://www.selenium.dev/selenium/web/locators_tests/locators.html");
+List<WebElement> inputs = driver.findElements(By.tagName("input"));
   {{< /tab >}}
-  {{< tab header="Python" text=true >}}
-  {{< gh-codeblock path="/examples/python/tests/elements/test_finders.py#L39" >}}
+  {{< tab header="Python" >}}
+driver.get("https://www.selenium.dev/selenium/web/locators_tests/locators.html")
+inputs = driver.find_elements(By.TAG_NAME, "input")
   {{< /tab >}}
   {{< tab header="CSharp" >}}
-IReadOnlyList<IWebElement> plants = driver.FindElements(By.TagName("li"));
+driver.Navigate().GoToUrl("https://www.selenium.dev/selenium/web/locators_tests/locators.html");
+IReadOnlyList<IWebElement> inputs = driver.FindElements(By.TagName("input"));
   {{< /tab >}}
-{{< tab header="Ruby" text=true >}}
-{{< gh-codeblock path="/examples/ruby/spec/elements/finders_spec.rb#L23" >}}
+{{< tab header="Ruby" >}}
+driver.get('https://www.selenium.dev/selenium/web/locators_tests/locators.html')
+inputs = driver.find_elements(tag_name: 'input')
 {{< /tab >}}
   {{< tab header="JavaScript" >}}
-const plants = await driver.findElements(By.tagName('li'));
+await driver.get('https://www.selenium.dev/selenium/web/locators_tests/locators.html');
+const inputs = await driver.findElements(By.tagName('input'));
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
-val plants: List<WebElement> = driver.findElements(By.tagName("li"))
+driver.get("https://www.selenium.dev/selenium/web/locators_tests/locators.html")
+val inputs: List<WebElement> = driver.findElements(By.tagName("input"))
   {{< /tab >}}
 {{< /tabpane >}}
 
@@ -212,14 +222,18 @@ need to iterate over the collection and identify the one you want.
 {{< tabpane langEqualsHeader=true >}}
 {{< badge-examples >}}
   {{< tab header="Java" >}}
-List<WebElement> elements = driver.findElements(By.tagName("li"));
+driver.get("https://www.selenium.dev/selenium/web/locators_tests/locators.html");
+List<WebElement> elements = driver.findElements(By.tagName("p"));
 
 for (WebElement element : elements) {
     System.out.println("Paragraph text:" + element.getText());
 }
   {{< /tab >}}
-  {{< tab header="Python" text=true >}}
-  {{< gh-codeblock path="/examples/python/tests/elements/test_finders.py#L62-L64" >}}
+  {{< tab header="Python" >}}
+driver.get("https://www.selenium.dev/selenium/web/locators_tests/locators.html")
+elements = driver.find_elements(By.TAG_NAME, "p")
+for element in elements:
+    print(f"Paragraph text:{element.text}")
   {{< /tab >}}
   {{< tab header="CSharp" >}}
 using OpenQA.Selenium;
@@ -232,7 +246,7 @@ namespace FindElementsExample {
    IWebDriver driver = new FirefoxDriver();
    try {
     // Navigate to Url
-    driver.Navigate().GoToUrl("https://example.com");
+    driver.Navigate().GoToUrl("https://www.selenium.dev/selenium/web/locators_tests/locators.html");
 
     // Get all the elements available with tag name 'p'
     IList < IWebElement > elements = driver.FindElements(By.TagName("p"));
@@ -247,8 +261,9 @@ namespace FindElementsExample {
  }
 }
   {{< /tab >}}
-   {{< tab header="Ruby" text=true >}}
-   {{< gh-codeblock path="/examples/ruby/spec/elements/finders_spec.rb#L28-L29" >}}
+   {{< tab header="Ruby" >}}
+driver.get('https://www.selenium.dev/selenium/web/locators_tests/locators.html')
+driver.find_elements(tag_name: 'p').each { |element| puts "Paragraph text:#{element.text}" }
    {{< /tab >}}
   {{< tab header="JavaScript" >}}
 const {Builder, By} = require('selenium-webdriver');
@@ -256,7 +271,7 @@ const {Builder, By} = require('selenium-webdriver');
     let driver = await new Builder().forBrowser('firefox').build();
     try {
         // Navigate to Url
-        await driver.get('https://www.example.com');
+        await driver.get('https://www.selenium.dev/selenium/web/locators_tests/locators.html');
 
         // Get all the elements available with tag 'p'
         let elements = await driver.findElements(By.css('p'));
@@ -276,7 +291,7 @@ import org.openqa.selenium.firefox.FirefoxDriver
 fun main() {
     val driver = FirefoxDriver()
     try {
-        driver.get("https://example.com")
+        driver.get("https://www.selenium.dev/selenium/web/locators_tests/locators.html")
         // Get all the elements available with tag name 'p'
         val elements = driver.findElements(By.tagName("p"))
         for (element in elements) {
@@ -307,13 +322,13 @@ To achieve this, the parent WebElement is chained with 'findElements' to access 
       public static void main(String[] args) {
           WebDriver driver = new ChromeDriver();
           try {
-              driver.get("https://example.com");
+              driver.get("https://www.selenium.dev/selenium/web/locators_tests/locators.html");
 
-              // Get element with tag name 'div'
-              WebElement element = driver.findElement(By.tagName("div"));
+              // Get the form element
+              WebElement element = driver.findElement(By.tagName("form"));
 
-              // Get all the elements available with tag name 'p'
-              List<WebElement> elements = element.findElements(By.tagName("p"));
+              // Get all input elements in the form
+              List<WebElement> elements = element.findElements(By.tagName("input"));
               for (WebElement e : elements) {
                   System.out.println(e.getText());
               }
@@ -323,8 +338,11 @@ To achieve this, the parent WebElement is chained with 'findElements' to access 
       }
   }
   {{< /tab >}}
-  {{< tab header="Python" text=true >}}
-  {{< gh-codeblock path="/examples/python/tests/elements/test_finders.py#L75-L78" >}}
+  {{< tab header="Python" >}}
+driver.get("https://www.selenium.dev/selenium/web/locators_tests/locators.html")
+form = driver.find_element(By.TAG_NAME, "form")
+for element in form.find_elements(By.TAG_NAME, "input"):
+    print(element.text)
   {{< /tab >}}
   {{< tab header="CSharp" >}}
 using OpenQA.Selenium;
@@ -336,13 +354,13 @@ namespace FindElementsFromElement {
   public static void Main(string[] args) {
    IWebDriver driver = new ChromeDriver();
    try {
-    driver.Navigate().GoToUrl("https://example.com");
+    driver.Navigate().GoToUrl("https://www.selenium.dev/selenium/web/locators_tests/locators.html");
 
-    // Get element with tag name 'div'
-    IWebElement element = driver.FindElement(By.TagName("div"));
+    // Get the form element
+    IWebElement element = driver.FindElement(By.TagName("form"));
 
-    // Get all the elements available with tag name 'p'
-    IList < IWebElement > elements = element.FindElements(By.TagName("p"));
+    // Get all input elements in the form
+    IList < IWebElement > elements = element.FindElements(By.TagName("input"));
     foreach(IWebElement e in elements) {
      System.Console.WriteLine(e.Text);
     }
@@ -353,8 +371,10 @@ namespace FindElementsFromElement {
  }
 }
   {{< /tab >}}
-   {{< tab header="Ruby" text=true >}}
-   {{< gh-codeblock path="/examples/ruby/spec/elements/finders_spec.rb#L33-L35" >}}
+   {{< tab header="Ruby" >}}
+driver.get('https://www.selenium.dev/selenium/web/locators_tests/locators.html')
+form = driver.find_element(tag_name: 'form')
+form.find_elements(tag_name: 'input').each { |element| puts element.text }
    {{< /tab >}}
   {{< tab header="JavaScript" >}}
   const {Builder, By} = require('selenium-webdriver');
@@ -364,13 +384,13 @@ namespace FindElementsFromElement {
           .forBrowser('chrome')
           .build();
 
-      await driver.get('https://www.example.com');
+      await driver.get('https://www.selenium.dev/selenium/web/locators_tests/locators.html');
 
-      // Get element with tag name 'div'
-      let element = driver.findElement(By.css("div"));
+      // Get the form element
+      let element = driver.findElement(By.css("form"));
 
-      // Get all the elements available with tag name 'p'
-      let elements = await element.findElements(By.css("p"));
+      // Get all input elements in the form
+      let elements = await element.findElements(By.css("input"));
       for(let e of elements) {
           console.log(await e.getText());
       }
@@ -383,13 +403,13 @@ namespace FindElementsFromElement {
   fun main() {
       val driver = ChromeDriver()
       try {
-          driver.get("https://example.com")
+          driver.get("https://www.selenium.dev/selenium/web/locators_tests/locators.html")
 
-          // Get element with tag name 'div'
-          val element = driver.findElement(By.tagName("div"))
+          // Get the form element
+          val element = driver.findElement(By.tagName("form"))
 
-          // Get all the elements available with tag name 'p'
-          val elements = element.findElements(By.tagName("p"))
+          // Get all input elements in the form
+          val elements = element.findElements(By.tagName("input"))
           for (e in elements) {
               println(e.text)
           }
@@ -414,11 +434,11 @@ It is used to track (or) find DOM element which has the focus in the current bro
     public static void main(String[] args) {
       WebDriver driver = new ChromeDriver();
       try {
-        driver.get("http://www.google.com");
-        driver.findElement(By.cssSelector("[name='q']")).sendKeys("webElement");
+        driver.get("https://www.selenium.dev/selenium/web/locators_tests/locators.html");
+        driver.findElement(By.cssSelector("#fname")).sendKeys("webElement");
 
         // Get attribute of current active element
-        String attr = driver.switchTo().activeElement().getAttribute("title");
+        String attr = driver.switchTo().activeElement().getAttribute("name");
         System.out.println(attr);
       } finally {
         driver.quit();
@@ -426,8 +446,10 @@ It is used to track (or) find DOM element which has the focus in the current bro
     }
   }
   {{< /tab >}}
-  {{< tab header="Python" text=true >}}
-  {{< gh-codeblock path="/examples/python/tests/elements/test_finders.py#L89-L90" >}}
+  {{< tab header="Python" >}}
+driver.get("https://www.selenium.dev/selenium/web/locators_tests/locators.html")
+driver.find_element(By.CSS_SELECTOR, "#fname").send_keys("webElement")
+attr = driver.switch_to.active_element.get_attribute("name")
   {{< /tab >}}
   {{< tab header="CSharp" >}}
     using OpenQA.Selenium;
@@ -439,11 +461,11 @@ It is used to track (or) find DOM element which has the focus in the current bro
        IWebDriver driver = new ChromeDriver();
        try {
         // Navigate to Url
-        driver.Navigate().GoToUrl("https://www.google.com");
-        driver.FindElement(By.CssSelector("[name='q']")).SendKeys("webElement");
+        driver.Navigate().GoToUrl("https://www.selenium.dev/selenium/web/locators_tests/locators.html");
+        driver.FindElement(By.CssSelector("#fname")).SendKeys("webElement");
 
         // Get attribute of current active element
-        string attr = driver.SwitchTo().ActiveElement().GetAttribute("title");
+        string attr = driver.SwitchTo().ActiveElement().GetAttribute("name");
         System.Console.WriteLine(attr);
        } finally {
         driver.Quit();
@@ -452,19 +474,21 @@ It is used to track (or) find DOM element which has the focus in the current bro
      }
     }
   {{< /tab >}}
-  {{< tab header="Ruby" text=true >}}
-  {{< gh-codeblock path="/examples/ruby/spec/elements/finders_spec.rb#L40-L41" >}}
+  {{< tab header="Ruby" >}}
+driver.get('https://www.selenium.dev/selenium/web/locators_tests/locators.html')
+driver.find_element(css: '#fname').send_keys('webElement')
+attr = driver.switch_to.active_element.attribute('name')
   {{< /tab >}}
   {{< tab header="JavaScript" >}}
   const {Builder, By} = require('selenium-webdriver');
 
   (async function example() {
       let driver = await new Builder().forBrowser('chrome').build();
-      await driver.get('https://www.google.com');
-      await  driver.findElement(By.css('[name="q"]')).sendKeys("webElement");
+      await driver.get('https://www.selenium.dev/selenium/web/locators_tests/locators.html');
+      await driver.findElement(By.css('#fname')).sendKeys("webElement");
 
       // Get attribute of current active element
-      let attr = await driver.switchTo().activeElement().getAttribute("title");
+      let attr = await driver.switchTo().activeElement().getAttribute("name");
       console.log(`${attr}`)
   })();
   {{< /tab >}}
@@ -475,11 +499,11 @@ It is used to track (or) find DOM element which has the focus in the current bro
   fun main() {
       val driver = ChromeDriver()
       try {
-          driver.get("https://www.google.com")
-          driver.findElement(By.cssSelector("[name='q']")).sendKeys("webElement")
+          driver.get("https://www.selenium.dev/selenium/web/locators_tests/locators.html")
+          driver.findElement(By.cssSelector("#fname")).sendKeys("webElement")
 
           // Get attribute of current active element
-          val attr = driver.switchTo().activeElement().getAttribute("title")
+          val attr = driver.switchTo().activeElement().getAttribute("name")
           print(attr)
       } finally {
           driver.quit()
