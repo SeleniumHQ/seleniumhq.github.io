@@ -177,7 +177,11 @@ Fixes #141
 % git push origin my-feature-branch
 ```
 
-https://github.com/yourusername/seleniumhq.github.io.git を開き、 _Pull Request_ を押し、フォームを入力してください。 **CLAに署名したことを示してください** (ステップ7を参照)
+https://github.com/yourusername/seleniumhq.github.io.git を開き、 _Pull Request_ を押し、
+フォームを入力してください。 **CLAに署名したことを示してください**。
+CLAに署名するには、
+[cla-assistant.io/SeleniumHQ/seleniumhq.github.io](https://cla-assistant.io/SeleniumHQ/seleniumhq.github.io)
+にアクセスし、ページ上の"Sign in with GitHub to agree"ボタンをクリックしてください。
 
 プルリクエストは通常数日以内にレビューされます。対応すべきコメントがある場合は、新しく(できれば
 [fixups](http://git-scm.com/docs/git-commit)で)コミットし、同じブランチにプッシュしてください。

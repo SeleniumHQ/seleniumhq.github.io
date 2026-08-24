@@ -4,3 +4,80 @@
 {{ if or .Site.Params.search.algolia .Site.Params.algolia_docsearch }}
 <script src="/js/docsearch-fix.js"></script>
 {{ end }}
+{{/*
+  Canonical and hreflang links, and schema.org structured data. Docsy emits no
+  canonical link and no hreflang alternates, and its call to Hugo's
+  _internal/schema.html produces only sparse microdata.
+
+  Skipped for the "print" output format, whose pages already get a canonical
+  link pointing back at the HTML page from Docsy's own alternate-format loop.
+  .OutputFormat is not resolvable this early in the render, so we use Docsy's
+  partial, which derives the current format from the alternatives.
+*/}}
+{{ if eq (partial "outputformat.html" .) "html" }}
+{{/*
+  Canonical is self-referencing per language. Pointing the translations at the
+  English page would ask search engines to drop them from the index entirely,
+  which is not what we want for the pt-br, zh-cn, and ja readers. hreflang is
+  the correct way to say that these pages are translations of each other.
+*/}}
+<link rel="canonical" href="{{ .Permalink }}">
+{{- if .IsTranslated }}
+{{- range .AllTranslations }}
+<link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}">
+{{- end }}
+{{- range .AllTranslations }}
+{{- if eq .Language.Lang "en" }}
+<link rel="alternate" hreflang="x-default" href="{{ .Permalink }}">
+{{- end }}
+{{- end }}
+{{- end }}
+
+{{- $publisher := dict
+      "@type" "Organization"
+      "name" "Selenium"
+      "url" .Site.BaseURL
+      "logo" (dict "@type" "ImageObject" "url" (absURL "images/selenium_logo_square_green.png"))
+      "sameAs" (slice
+        "https://github.com/SeleniumHQ/selenium"
+        "https://www.linkedin.com/company/4826427/"
+        "https://x.com/SeleniumHQ"
+        "https://www.youtube.com/@SeleniumHQProject/") -}}
+{{- $ld := false -}}
+{{- if .IsHome -}}
+  {{- $ld = dict
+        "@context" "https://schema.org"
+        "@type" "WebSite"
+        "name" .Site.Title
+        "url" .Site.BaseURL
+        "description" .Site.Params.description
+        "inLanguage" .Language.Lang
+        "publisher" $publisher -}}
+{{- else if eq .Section "documentation" -}}
+  {{- $ld = dict
+        "@context" "https://schema.org"
+        "@type" "TechArticle"
+        "headline" .Title
+        "url" .Permalink
+        "inLanguage" .Language.Lang
+        "dateModified" (.Lastmod.Format "2006-01-02")
+        "publisher" $publisher
+        "isPartOf" (dict "@type" "WebSite" "name" .Site.Title "url" .Site.BaseURL) -}}
+  {{- with .Description }}{{ $ld = merge $ld (dict "description" .) }}{{ end -}}
+{{- else if eq .Section "blog" -}}
+  {{- $ld = dict
+        "@context" "https://schema.org"
+        "@type" "BlogPosting"
+        "headline" .Title
+        "url" .Permalink
+        "inLanguage" .Language.Lang
+        "datePublished" (.Date.Format "2006-01-02")
+        "dateModified" (.Lastmod.Format "2006-01-02")
+        "publisher" $publisher -}}
+  {{- with .Description }}{{ $ld = merge $ld (dict "description" .) }}{{ end -}}
+  {{- with .Params.author }}{{ $ld = merge $ld (dict "author" (dict "@type" "Person" "name" .)) }}{{ end -}}
+{{- end }}
+{{- with $ld }}
+<script type="application/ld+json">{{ . | jsonify (dict "indent" "  ") | safeJS }}</script>
+{{- end }}
+{{ end }}
