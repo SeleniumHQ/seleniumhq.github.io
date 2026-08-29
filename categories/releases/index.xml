@@ -1,4 +1,87 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Releases on Selenium</title><link>https://www.selenium.dev/categories/releases/</link><description>Recent content in Releases on Selenium</description><generator>Hugo</generator><language>en</language><lastBuildDate>Tue, 11 Aug 2026 05:49:58 +0200</lastBuildDate><atom:link href="https://www.selenium.dev/categories/releases/index.xml" rel="self" type="application/rss+xml"/><item><title>Selenium 4.47 Released!</title><link>https://www.selenium.dev/blog/2026/selenium-4-47-released/</link><pubDate>Mon, 10 Aug 2026 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2026/selenium-4-47-released/</guid><description>&lt;p>We’re excited to announce the release of &lt;strong>Selenium 4.47&lt;/strong> for JavaScript, Ruby, Python, .NET, Java
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Releases on Selenium</title><link>https://www.selenium.dev/categories/releases/</link><description>Recent content in Releases on Selenium</description><generator>Hugo</generator><language>en</language><lastBuildDate>Sat, 29 Aug 2026 04:44:29 +0200</lastBuildDate><atom:link href="https://www.selenium.dev/categories/releases/index.xml" rel="self" type="application/rss+xml"/><item><title>Selenium 4.48 Released!</title><link>https://www.selenium.dev/blog/2026/selenium-4-48-released/</link><pubDate>Thu, 27 Aug 2026 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2026/selenium-4-48-released/</guid><description>&lt;p>We’re excited to announce the release of &lt;strong>Selenium 4.48&lt;/strong> for JavaScript, Ruby, Python, .NET, Java
+and the Grid! 🎉&lt;/p>
+&lt;p>Links to all assets can be found on our &lt;a href="https://www.selenium.dev/downloads/">downloads page&lt;/a>.&lt;/p>
+&lt;hr>
+&lt;h1 id="selenium-448-released">Selenium 4.48 Released&lt;/h1>
+&lt;h2 id="-highlights">✨ Highlights&lt;/h2>
+&lt;ul>
+&lt;li>&lt;strong>BiDi&lt;/strong> Continued strengthening the shared binding-neutral BiDi layer: Ruby now rejects
+invalid inbound values (missing required fields, out-of-union scalars, non-whole floats for
+integer fields), .NET throws on an unknown discriminator, and JavaScript gained a
+serialization/domain layer plus connection-level event subscription support.&lt;/li>
+&lt;li>&lt;strong>[Ruby]&lt;/strong> Fixed a silent hang when receiving an oversized WebSocket frame.&lt;/li>
+&lt;li>&lt;strong>[Grid]&lt;/strong> &lt;code>se:remoteUrl&lt;/code> is no longer forwarded past the Node that consumes it, and file
+upload/download now works for Kubernetes, Docker, and relay sessions.&lt;/li>
+&lt;li>&lt;strong>[.NET]&lt;/strong> Added the &lt;code>SetMediaFeaturesOverride&lt;/code> BiDi command to the Emulation module.&lt;/li>
+&lt;li>&lt;strong>[Python]&lt;/strong> Fixed W3C capabilities built from a list of options (&lt;code>create_matches&lt;/code>).&lt;/li>
+&lt;li>&lt;strong>[JavaScript]&lt;/strong> Custom locator results are now normalized when empty, and BiDi is no longer
+exposed on &lt;code>Driver&lt;/code>.&lt;/li>
+&lt;li>&lt;strong>[Build &amp;amp; Infra]&lt;/strong> Added weekly flaky-test reporting, a Slack alert when a CDP update lands on
+trunk, and fixed the release-workflow issues that broke the previous release.&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h2 id="-notable-changes">📦 Notable Changes&lt;/h2>
+&lt;h3 id="java">Java&lt;/h3>
+&lt;ul>
+&lt;li>Fixed two flaky BiDi tests that left timing-dependent state behind.&lt;/li>
+&lt;li>Added a warning annotation for undeclared fields encountered during JSON coercion.&lt;/li>
+&lt;/ul>
+&lt;h3 id="python">Python&lt;/h3>
+&lt;ul>
+&lt;li>Fixed W3C capabilities built from a list of options (&lt;code>create_matches&lt;/code>).&lt;/li>
+&lt;li>Fixed a broken reStructuredText link in the docs.&lt;/li>
+&lt;li>Began generating the internal BiDi protocol layer from the shared binding-neutral schema,
+updating it to match the latest proposed ADR.&lt;/li>
+&lt;/ul>
+&lt;h3 id="ruby">Ruby&lt;/h3>
+&lt;ul>
+&lt;li>Added low-level BiDi protocol integration specs.&lt;/li>
+&lt;li>Fixed a silent hang on oversized WebSocket frames.&lt;/li>
+&lt;li>Fixed intermittent Safari test failures.&lt;/li>
+&lt;li>Tightened inbound BiDi validation: reject a missing required field, accept whole-valued floats
+for integer fields, and reject scalars outside a union&amp;rsquo;s declared arms.&lt;/li>
+&lt;/ul>
+&lt;h3 id="net">.NET&lt;/h3>
+&lt;ul>
+&lt;li>Throw in case of an unknown BiDi discriminator.&lt;/li>
+&lt;li>Added the &lt;code>SetMediaFeaturesOverride&lt;/code> command to the Emulation module.&lt;/li>
+&lt;/ul>
+&lt;h3 id="javascript">JavaScript&lt;/h3>
+&lt;ul>
+&lt;li>Normalized empty custom locator results.&lt;/li>
+&lt;li>Ensured BiDi is not exposed on &lt;code>Driver&lt;/code>.&lt;/li>
+&lt;li>Added a BiDi serialization and domain layer, plus connection-level event subscription.&lt;/li>
+&lt;/ul>
+&lt;h3 id="grid">Grid&lt;/h3>
+&lt;ul>
+&lt;li>Stopped forwarding &lt;code>se:remoteUrl&lt;/code> past the Node that consumes it.&lt;/li>
+&lt;li>Forwarded file upload/download for Kubernetes, Docker, and relay sessions.&lt;/li>
+&lt;/ul>
+&lt;h3 id="build--infra">Build &amp;amp; Infra&lt;/h3>
+&lt;ul>
+&lt;li>Fixed the issues that broke the release workflow during the last release, and made Java/.NET
+release reruns pass when already published.&lt;/li>
+&lt;li>Began recording flaky tests on trunk and reporting weekly offenders to Slack, and alerting
+Slack when a CDP update lands on trunk.&lt;/li>
+&lt;li>Reduced GitHub cache churn and aggressively pruned CodeQL caches; fixed the CI build badge on
+the default branch.&lt;/li>
+&lt;li>Honored the &lt;code>DO_NOT_TRACK&lt;/code> environment variable, and moved dependency updates into a weekly
+workflow.&lt;/li>
+&lt;li>Published an ADR on installing browser extensions directly from the driver, and linked the
+accepted BiDi support boundary record in the project charter.&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h3 id="-docker-selenium">🐳 Docker Selenium&lt;/h3>
+&lt;ul>
+&lt;li>Docker: Install Edge browser and driver from an archive mirror when Microsoft prunes old
+versions (#3205)&lt;/li>
+&lt;li>K8s: Added a configurable &lt;code>securityContext&lt;/code> (with &lt;code>seccompProfile&lt;/code>) for the external autoscaler
+(#3199)&lt;/li>
+&lt;li>&lt;a href="https://github.com/SeleniumHQ/docker-selenium/releases">See all changes&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;br>
+&lt;p>We thank all our contributors for their incredible efforts in making Selenium better with every
+release. ❤️&lt;/p></description></item><item><title>Selenium 4.47 Released!</title><link>https://www.selenium.dev/blog/2026/selenium-4-47-released/</link><pubDate>Mon, 10 Aug 2026 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2026/selenium-4-47-released/</guid><description>&lt;p>We’re excited to announce the release of &lt;strong>Selenium 4.47&lt;/strong> for JavaScript, Ruby, Python, .NET, Java
 and the Grid! 🎉&lt;/p>
 &lt;p>Links to all assets can be found on our &lt;a href="https://www.selenium.dev/downloads/">downloads page&lt;/a>.&lt;/p>
 &lt;hr>
