@@ -5,7 +5,7 @@ weight: 6
 description: >-
     これらは、Mozilla Firefoxブラウザに特有の機能と機能です。
 aliases: [
-"/ja/documentation/capabilities/firefox"
+"/documentation/capabilities/firefox"
 ]
 ---
 
@@ -14,7 +14,7 @@ Selenium 4 には Firefox 78 以降が必要です。
 
 ## オプション
 
-全ブラウザに共通のCapabilityについては、[オプションページ]({{< ref "../drivers/options.md" >}})で説明しています。
+全ブラウザに共通のCapabilityについては、[オプションページ]({{< ref path="../drivers/options.md" lang="en" >}})で説明しています。
 
 Firefox に固有のCapabilityは、Mozilla のページの [firefoxOptions](https://developer.mozilla.org/en-US/docs/Web/WebDriver/Capabilities/firefoxOptions) にあります。
 
@@ -325,7 +325,7 @@ Chromeとは異なり、Firefoxの拡張機能はCapabilityの一部として追
 
 Chromeとは異なり、Firefoxの拡張機能は[この問題](https://github.com/mozilla/geckodriver/issues/1476)に記載されているように、機能の一部として追加されるのではなく、ドライバーの起動後に作成されます。
 
-T以下の例はローカルWebDriver用です。リモートWebDriverについては、[Remote WebDriver]({{< ref "../drivers/remote_webdriver" >}})ページを参照してください。
+T以下の例はローカルWebDriver用です。リモートWebDriverについては、[Remote WebDriver]({{< ref path="../drivers/remote_webdriver" lang="en" >}})ページを参照してください。
 
 #### インストール
 
@@ -410,7 +410,7 @@ IDはアドオンインストール時の戻り値から取得できます。
 
 ### ページ全体のスクリーンショット
 
-以下の例はローカルWebDriver用です。リモートWebDriverについては、[Remote WebDriver]({{< ref "../drivers/remote_webdriver" >}})ページを参照してください。
+以下の例はローカルWebDriver用です。リモートWebDriverについては、[Remote WebDriver]({{< ref path="../drivers/remote_webdriver" lang="en" >}})ページを参照してください。
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
@@ -435,7 +435,7 @@ IDはアドオンインストール時の戻り値から取得できます。
 
 ### コンテキスト
 
-以下の例はローカルWebDriver用です。リモートWebDriverについては、[Remote WebDriver]({{< ref "../drivers/remote_webdriver" >}})ページを参照してください。
+以下の例はローカルWebDriver用です。リモートWebDriverについては、[Remote WebDriver]({{< ref path="../drivers/remote_webdriver" lang="en" >}})ページを参照してください。
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}

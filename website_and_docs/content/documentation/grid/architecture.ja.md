@@ -3,7 +3,7 @@ title: "Grid アーキテクチャ"
 linkTitle: "アーキテクチャ"
 weight: 10
 aliases: [
-"/ja/documentation/grid/grid_architecture"
+"/documentation/grid/grid_architecture"
 ]
 ---
 

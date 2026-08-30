@@ -3,7 +3,7 @@ title: "Command Listeners"
 linkTitle: "Listeners"
 weight: 2
 aliases: [
-  "/pt-br/documentation/webdriver/drivers/listeners",
+  "/documentation/webdriver/drivers/listeners",
 ]
 ---
 

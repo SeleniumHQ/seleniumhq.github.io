@@ -7,7 +7,16 @@ description: >
   A representation of any pointer device for interacting with a web page.
 aliases: [
 "/documentation/en/support_packages/mouse_and_keyboard_actions_in_detail/",
-"/documentation/support_packages/mouse_and_keyboard_actions_in_detail/"
+"/documentation/support_packages/mouse_and_keyboard_actions_in_detail/",
+"/documentation/ja/support_packages/mouse_and_keyboard_actions_in_detail/",
+"/documentation/pt-br/support_packages/mouse_and_keyboard_actions_in_detail/",
+"/documentation/zh-cn/support_packages/mouse_and_keyboard_actions_in_detail/",
+"/ja/documentation/support_packages/mouse_and_keyboard_actions_in_detail/",
+"/ja/documentation/webdriver/actions_api/mouse/",
+"/pt-br/documentation/support_packages/mouse_and_keyboard_actions_in_detail/",
+"/pt-br/documentation/webdriver/actions_api/mouse/",
+"/zh-cn/documentation/support_packages/mouse_and_keyboard_actions_in_detail/",
+"/zh-cn/documentation/webdriver/actions_api/mouse/"
 ]
 ---
 

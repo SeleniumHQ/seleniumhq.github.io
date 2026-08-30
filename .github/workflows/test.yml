@@ -21,7 +21,7 @@ jobs:
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
         with:
-          hugo-version: '0.148.2'
+          hugo-version: '0.164.0'
           extended: true
       - name: Build
         run: chmod +x build-site.sh && ./build-site.sh

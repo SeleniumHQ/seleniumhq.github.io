@@ -15,8 +15,8 @@ occur you want to be up and running again as quickly as possible. The following
 design patterns and strategies have been used before with WebDriver to help make 
 tests easier to write and maintain. They may help you too.
 
-[DomainDrivenDesign]({{< ref "encouraged/domain_specific_language.md" >}}): Express your tests in the language of the end-user of the app.
-[PageObjects]({{< ref "encouraged/page_object_models.md" >}}): A simple abstraction of the UI of your web app.
+[DomainDrivenDesign]({{< ref path="encouraged/domain_specific_language.md" lang="en" >}}): Express your tests in the language of the end-user of the app.
+[PageObjects]({{< ref path="encouraged/page_object_models.md" lang="en" >}}): A simple abstraction of the UI of your web app.
 LoadableComponent: Modeling PageObjects as components.
 BotStyleTests: Using a command-based approach to automating tests, rather than the object-based approach that PageObjects encourage
 

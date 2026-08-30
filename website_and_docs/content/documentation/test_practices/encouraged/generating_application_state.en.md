@@ -4,7 +4,16 @@ linkTitle: "Generating application state"
 weight: 5
 aliases: [
 "/documentation/en/guidelines_and_recommendations/generating_application_state/",
-"/documentation/guidelines/generating_application_state/"
+"/documentation/guidelines/generating_application_state/",
+"/documentation/ja/guidelines_and_recommendations/generating_application_state/",
+"/documentation/pt-br/guidelines_and_recommendations/generating_application_state/",
+"/documentation/zh-cn/guidelines_and_recommendations/generating_application_state/",
+"/ja/documentation/guidelines/generating_application_state/",
+"/ja/documentation/test_practices/encouraged/generating_application_state/",
+"/pt-br/documentation/guidelines/generating_application_state/",
+"/pt-br/documentation/test_practices/encouraged/generating_application_state/",
+"/zh-cn/documentation/guidelines/generating_application_state/",
+"/zh-cn/documentation/test_practices/encouraged/generating_application_state/"
 ]
 ---
 

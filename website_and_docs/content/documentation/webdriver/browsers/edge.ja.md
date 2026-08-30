@@ -13,7 +13,7 @@ Chromeと同様に、edgedriverのメジャー バージョン番号は、Edge�
 
 ## オプション
 
-すべてのブラウザに共通する機能は[オプション ページ]({{< ref "../drivers/options.md" >}})に記載されています。
+すべてのブラウザに共通する機能は[オプション ページ]({{< ref path="../drivers/options.md" lang="en" >}})に記載されています。
 
 Chromiumに特有の機能は、Googleの[Capabilities & ChromeOptions](https://chromedriver.chromium.org/capabilities)ページに文書化されています。
 

@@ -5,7 +5,19 @@ weight: 4
 aliases: [
 "/documentation/en/support_packages/working_with_cookies/",
 "/documentation/support_packages/working_with_cookies/",
-"/documentation/webdriver/browser/cookies"
+"/documentation/webdriver/browser/cookies",
+"/documentation/ja/support_packages/working_with_cookies/",
+"/documentation/pt-br/support_packages/working_with_cookies/",
+"/documentation/zh-cn/support_packages/working_with_cookies/",
+"/ja/documentation/support_packages/working_with_cookies/",
+"/ja/documentation/webdriver/browser/cookies/",
+"/ja/documentation/webdriver/interactions/cookies/",
+"/pt-br/documentation/support_packages/working_with_cookies/",
+"/pt-br/documentation/webdriver/browser/cookies/",
+"/pt-br/documentation/webdriver/interactions/cookies/",
+"/zh-cn/documentation/support_packages/working_with_cookies/",
+"/zh-cn/documentation/webdriver/browser/cookies/",
+"/zh-cn/documentation/webdriver/interactions/cookies/"
 ]
 ---
 

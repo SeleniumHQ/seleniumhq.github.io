@@ -3,7 +3,11 @@ title: "The Selenium Browser Automation Project"
 linkTitle: "Documentation"
 cascade:
 - type: docs
-aliases: ["/documentation/en/"]
+aliases: ["/documentation/en/", "/documentation/ja/", "/documentation/pt-br/", "/documentation/zh-cn/",
+"/ja/documentation/",
+"/pt-br/documentation/",
+"/zh-cn/documentation/"
+]
 ---
 
 Selenium is an umbrella project for a range of tools and libraries 

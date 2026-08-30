@@ -5,7 +5,7 @@ weight: 8
 description: >-
     Estas capacidades e características são específicas ao navegador Microsoft Internet Explorer.
 aliases: [
-"/pt-br/documentation/capabilities/internet_explorer"
+"/documentation/capabilities/internet_explorer"
 ]
 ---
 

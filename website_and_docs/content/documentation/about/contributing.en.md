@@ -6,7 +6,16 @@ description: >-
     Information on improving documentation and code examples for Selenium
 aliases: [
 "/documentation/en/contributing/",
-"/documentation/en/front_matter/typographical_conventions/"
+"/documentation/en/front_matter/typographical_conventions/",
+"/documentation/ja/contributing/",
+"/documentation/ja/front_matter/typographical_conventions/",
+"/documentation/pt-br/contributing/",
+"/documentation/pt-br/front_matter/typographical_conventions/",
+"/documentation/zh-cn/contributing/",
+"/documentation/zh-cn/front_matter/typographical_conventions/",
+"/ja/documentation/about/contributing/",
+"/pt-br/documentation/about/contributing/",
+"/zh-cn/documentation/about/contributing/"
 ]
 ---
 
@@ -120,7 +129,7 @@ and check out your copy locally.
 We use [Hugo](https://gohugo.io/) and the [Docsy theme](https://www.docsy.dev/)
 to build and render the site. You will need the “extended” 
 Sass/SCSS version of the Hugo binary to work on this site. We recommend
-to use Hugo 0.148.2 .
+to use Hugo 0.164.0 .
 
 Please follow the [Install Hugo](https://www.docsy.dev/docs/getting-started/#install-hugo) 
 instructions from Docsy.
