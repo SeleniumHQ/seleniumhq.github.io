@@ -33,17 +33,15 @@ two elements with the class name `information`, so this method returns the first
 driver.get("https://www.selenium.dev/selenium/web/locators_tests/locators.html");
 WebElement firstInput = driver.findElement(By.className("information"));
   {{< /tab >}}
-  {{< tab header="Python" >}}
-driver.get("https://www.selenium.dev/selenium/web/locators_tests/locators.html")
-first_input = driver.find_element(By.CLASS_NAME, "information")
+  {{< tab header="Python" text=true >}}
+  {{< gh-codeblock path="/examples/python/tests/elements/test_finders.py#L7-L8">}}
   {{< /tab >}}
   {{< tab header="CSharp" >}}
 driver.Navigate().GoToUrl("https://www.selenium.dev/selenium/web/locators_tests/locators.html");
 var firstInput = driver.FindElement(By.ClassName("information"));
   {{< /tab >}}
-{{< tab header="Ruby" >}}
-driver.get('https://www.selenium.dev/selenium/web/locators_tests/locators.html')
-first_input = driver.find_element(class: 'information')
+{{< tab header="Ruby" text=true >}}
+{{< gh-codeblock path="/examples/ruby/spec/elements/finders_spec.rb#L10-L11" >}}
 {{< /tab >}}
   {{< tab header="JavaScript" >}}
 await driver.get('https://www.selenium.dev/selenium/web/locators_tests/locators.html');
@@ -70,20 +68,16 @@ driver.get("https://www.selenium.dev/selenium/web/locators_tests/locators.html")
 WebElement form = driver.findElement(By.tagName("form"));
 WebElement input = form.findElement(By.className("information"));
   {{< /tab >}}
-  {{< tab header="Python" >}}
-driver.get("https://www.selenium.dev/selenium/web/locators_tests/locators.html")
-form = driver.find_element(By.TAG_NAME, "form")
-input = form.find_element(By.CLASS_NAME, "information")
+  {{< tab header="Python" text=true >}}
+  {{< gh-codeblock path="/examples/python/tests/elements/test_finders.py#L14-L16">}}
   {{< /tab >}}
   {{< tab header="CSharp" >}}
 driver.Navigate().GoToUrl("https://www.selenium.dev/selenium/web/locators_tests/locators.html");
 IWebElement form = driver.FindElement(By.TagName("form"));
 IWebElement input = form.FindElement(By.ClassName("information"));
   {{< /tab >}}
-{{< tab header="Ruby" >}}
-driver.get('https://www.selenium.dev/selenium/web/locators_tests/locators.html')
-form = driver.find_element(tag_name: 'form')
-input = form.find_element(class: 'information')
+{{< tab header="Ruby" text=true >}}
+{{< gh-codeblock path="/examples/ruby/spec/elements/finders_spec.rb#L17-L19" >}}
 {{< /tab >}}
   {{< tab header="JavaScript" >}}
 await driver.get('https://www.selenium.dev/selenium/web/locators_tests/locators.html');
@@ -119,7 +113,7 @@ SearchContext shadowRoot = shadowHost.getShadowRoot();
 WebElement shadowContent = shadowRoot.findElement(By.cssSelector("#shadow_content"));
 {{< /tab >}}
 {{< tab header="Python" text=true >}}
-{{< gh-codeblock path="/examples/python/tests/elements/test_finders.py#L47-L50">}}
+{{< gh-codeblock path="/examples/python/tests/elements/test_finders.py#L39-L42">}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 var shadowHost = _driver.FindElement(By.CssSelector("#shadow_host"));
@@ -156,17 +150,15 @@ For this example, we'll use a CSS selector:
 driver.get("https://www.selenium.dev/selenium/web/locators_tests/locators.html");
 WebElement input = driver.findElement(By.cssSelector("form .information"));
   {{< /tab >}}
-  {{< tab header="Python" >}}
-driver.get("https://www.selenium.dev/selenium/web/locators_tests/locators.html")
-input = driver.find_element(By.CSS_SELECTOR, "form .information")
+  {{< tab header="Python" text=true >}}
+  {{< gh-codeblock path="/examples/python/tests/elements/test_finders.py#L22-L23">}}
   {{< /tab >}}
   {{< tab header="CSharp" >}}
 driver.Navigate().GoToUrl("https://www.selenium.dev/selenium/web/locators_tests/locators.html");
 var input = driver.FindElement(By.CssSelector("form .information"));
   {{< /tab >}}
-{{< tab header="Ruby" >}}
-driver.get('https://www.selenium.dev/selenium/web/locators_tests/locators.html')
-input = driver.find_element(css: 'form .information')
+{{< tab header="Ruby" text=true >}}
+{{< gh-codeblock path="/examples/ruby/spec/elements/finders_spec.rb#L25-L26" >}}
 {{< /tab >}}
   {{< tab header="JavaScript" >}}
 await driver.get('https://www.selenium.dev/selenium/web/locators_tests/locators.html');
@@ -192,17 +184,15 @@ references to all input elements will be returned in a collection.
 driver.get("https://www.selenium.dev/selenium/web/locators_tests/locators.html");
 List<WebElement> inputs = driver.findElements(By.tagName("input"));
   {{< /tab >}}
-  {{< tab header="Python" >}}
-driver.get("https://www.selenium.dev/selenium/web/locators_tests/locators.html")
-inputs = driver.find_elements(By.TAG_NAME, "input")
+  {{< tab header="Python" text=true >}}
+  {{< gh-codeblock path="/examples/python/tests/elements/test_finders.py#L29-L30">}}
   {{< /tab >}}
   {{< tab header="CSharp" >}}
 driver.Navigate().GoToUrl("https://www.selenium.dev/selenium/web/locators_tests/locators.html");
 IReadOnlyList<IWebElement> inputs = driver.FindElements(By.TagName("input"));
   {{< /tab >}}
-{{< tab header="Ruby" >}}
-driver.get('https://www.selenium.dev/selenium/web/locators_tests/locators.html')
-inputs = driver.find_elements(tag_name: 'input')
+{{< tab header="Ruby" text=true >}}
+{{< gh-codeblock path="/examples/ruby/spec/elements/finders_spec.rb#L32-L33" >}}
 {{< /tab >}}
   {{< tab header="JavaScript" >}}
 await driver.get('https://www.selenium.dev/selenium/web/locators_tests/locators.html');
@@ -229,11 +219,8 @@ for (WebElement element : elements) {
     System.out.println("Paragraph text:" + element.getText());
 }
   {{< /tab >}}
-  {{< tab header="Python" >}}
-driver.get("https://www.selenium.dev/selenium/web/locators_tests/locators.html")
-elements = driver.find_elements(By.TAG_NAME, "p")
-for element in elements:
-    print(f"Paragraph text:{element.text}")
+  {{< tab header="Python" text=true >}}
+  {{< gh-codeblock path="/examples/python/tests/elements/test_finders.py#L51-L53">}}
   {{< /tab >}}
   {{< tab header="CSharp" >}}
 using OpenQA.Selenium;
@@ -261,9 +248,8 @@ namespace FindElementsExample {
  }
 }
   {{< /tab >}}
-   {{< tab header="Ruby" >}}
-driver.get('https://www.selenium.dev/selenium/web/locators_tests/locators.html')
-driver.find_elements(tag_name: 'p').each { |element| puts "Paragraph text:#{element.text}" }
+   {{< tab header="Ruby" text=true >}}
+   {{< gh-codeblock path="/examples/ruby/spec/elements/finders_spec.rb#L40-L42" >}}
    {{< /tab >}}
   {{< tab header="JavaScript" >}}
 const {Builder, By} = require('selenium-webdriver');
@@ -330,7 +316,7 @@ To achieve this, the parent WebElement is chained with 'findElements' to access 
               // Get all input elements in the form
               List<WebElement> elements = element.findElements(By.tagName("input"));
               for (WebElement e : elements) {
-                  System.out.println(e.getText());
+                  System.out.println(e.getAttribute("value"));
               }
           } finally {
               driver.quit();
@@ -338,11 +324,8 @@ To achieve this, the parent WebElement is chained with 'findElements' to access 
       }
   }
   {{< /tab >}}
-  {{< tab header="Python" >}}
-driver.get("https://www.selenium.dev/selenium/web/locators_tests/locators.html")
-form = driver.find_element(By.TAG_NAME, "form")
-for element in form.find_elements(By.TAG_NAME, "input"):
-    print(element.text)
+  {{< tab header="Python" text=true >}}
+  {{< gh-codeblock path="/examples/python/tests/elements/test_finders.py#L61-L64">}}
   {{< /tab >}}
   {{< tab header="CSharp" >}}
 using OpenQA.Selenium;
@@ -362,7 +345,7 @@ namespace FindElementsFromElement {
     // Get all input elements in the form
     IList < IWebElement > elements = element.FindElements(By.TagName("input"));
     foreach(IWebElement e in elements) {
-     System.Console.WriteLine(e.Text);
+     System.Console.WriteLine(e.GetAttribute("value"));
     }
    } finally {
     driver.Quit();
@@ -371,10 +354,8 @@ namespace FindElementsFromElement {
  }
 }
   {{< /tab >}}
-   {{< tab header="Ruby" >}}
-driver.get('https://www.selenium.dev/selenium/web/locators_tests/locators.html')
-form = driver.find_element(tag_name: 'form')
-form.find_elements(tag_name: 'input').each { |element| puts element.text }
+   {{< tab header="Ruby" text=true >}}
+   {{< gh-codeblock path="/examples/ruby/spec/elements/finders_spec.rb#L48-L51" >}}
    {{< /tab >}}
   {{< tab header="JavaScript" >}}
   const {Builder, By} = require('selenium-webdriver');
@@ -392,7 +373,7 @@ form.find_elements(tag_name: 'input').each { |element| puts element.text }
       // Get all input elements in the form
       let elements = await element.findElements(By.css("input"));
       for(let e of elements) {
-          console.log(await e.getText());
+          console.log(await e.getAttribute("value"));
       }
   })();
   {{< /tab >}}
@@ -411,7 +392,7 @@ form.find_elements(tag_name: 'input').each { |element| puts element.text }
           // Get all input elements in the form
           val elements = element.findElements(By.tagName("input"))
           for (e in elements) {
-              println(e.text)
+              println(e.getAttribute("value"))
           }
       } finally {
           driver.quit()
@@ -446,10 +427,8 @@ It is used to track (or) find DOM element which has the focus in the current bro
     }
   }
   {{< /tab >}}
-  {{< tab header="Python" >}}
-driver.get("https://www.selenium.dev/selenium/web/locators_tests/locators.html")
-driver.find_element(By.CSS_SELECTOR, "#fname").send_keys("webElement")
-attr = driver.switch_to.active_element.get_attribute("name")
+  {{< tab header="Python" text=true >}}
+  {{< gh-codeblock path="/examples/python/tests/elements/test_finders.py#L72-L73">}}
   {{< /tab >}}
   {{< tab header="CSharp" >}}
     using OpenQA.Selenium;
@@ -474,10 +453,8 @@ attr = driver.switch_to.active_element.get_attribute("name")
      }
     }
   {{< /tab >}}
-  {{< tab header="Ruby" >}}
-driver.get('https://www.selenium.dev/selenium/web/locators_tests/locators.html')
-driver.find_element(css: '#fname').send_keys('webElement')
-attr = driver.switch_to.active_element.attribute('name')
+  {{< tab header="Ruby" text=true >}}
+  {{< gh-codeblock path="/examples/ruby/spec/elements/finders_spec.rb#L58-L60" >}}
   {{< /tab >}}
   {{< tab header="JavaScript" >}}
   const {Builder, By} = require('selenium-webdriver');
