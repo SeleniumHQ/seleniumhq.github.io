@@ -3181,7 +3181,7 @@ Selenium サーバのスパンのほとんどは、2 つのイベントから構
  &lt;label
  >&lt;a href="https://github.com/titusfortner">@titusfortner&lt;/a>&lt;/label
  >
- &lt;span class="contributions">2223 commits&lt;/span>
+ &lt;span class="contributions">2224 commits&lt;/span>
  &lt;/div>
  &lt;div style="padding: 10px;">
  &lt;img
@@ -3701,7 +3701,7 @@ Selenium サーバのスパンのほとんどは、2 つのイベントから構
  &lt;label
  >&lt;a href="https://github.com/iampopovich">@iampopovich&lt;/a>&lt;/label
  >
- &lt;span class="contributions">68 commits&lt;/span>
+ &lt;span class="contributions">69 commits&lt;/span>
  &lt;/div>
  &lt;div style="padding: 10px;">
  &lt;img
@@ -6393,7 +6393,7 @@ Selenium サーバのスパンのほとんどは、2 つのイベントから構
  &lt;label
  >&lt;a href="https://github.com/diemol">@diemol&lt;/a>&lt;/label
  >
- &lt;span class="contributions">878 commits&lt;/span>
+ &lt;span class="contributions">879 commits&lt;/span>
  &lt;/div>
  &lt;div style="padding: 10px;">
  &lt;img
@@ -6419,7 +6419,7 @@ Selenium サーバのスパンのほとんどは、2 つのイベントから構
  &lt;label
  >&lt;a href="https://github.com/apps/renovate">@renovate[bot]&lt;/a>&lt;/label
  >
- &lt;span class="contributions">368 commits&lt;/span>
+ &lt;span class="contributions">376 commits&lt;/span>
  &lt;/div>
  &lt;div style="padding: 10px;">
  &lt;img
@@ -6497,7 +6497,7 @@ Selenium サーバのスパンのほとんどは、2 つのイベントから構
  &lt;label
  >&lt;a href="https://github.com/apps/dependabot">@dependabot[bot]&lt;/a>&lt;/label
  >
- &lt;span class="contributions">51 commits&lt;/span>
+ &lt;span class="contributions">52 commits&lt;/span>
  &lt;/div>
  &lt;div style="padding: 10px;">
  &lt;img
@@ -10016,6 +10016,12 @@ page. To understand and create locator we will use the following HTML snippet.&l
  &lt;td>&lt;code>30&lt;/code>&lt;/td>
  &lt;td>How often, in seconds, will the Distributor purge Nodes that have been down for a while. This is calculated based on the heartbeat received from a particular node.&lt;/td>
  &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>--distributor-backend-url&lt;/code>&lt;/td>
+ &lt;td>string&lt;/td>
+ &lt;td>&lt;code>redis://localhost:6379&lt;/code>&lt;/td>
+ &lt;td>Backend datastore URL for the Distributor implementation. Used by Redis-backed and other external implementations loaded via &lt;code>--ext&lt;/code>.&lt;/td>
+ &lt;/tr>
  &lt;/tbody>
 &lt;/table>
 &lt;h3 id="docker">Docker&lt;/h3>
@@ -10076,6 +10082,12 @@ page. To understand and create locator we will use the following HTML snippet.&l
  &lt;td>string[]&lt;/td>
  &lt;td>&lt;code>Dns DnsOptions DnsSearch ExtraHosts Binds&lt;/code>&lt;/td>
  &lt;td>Specify which docker host configuration keys should be passed to browser containers. Keys name can be found in the Docker API &lt;a href="https://docs.docker.com/engine/api/v1.41/#tag/Container/operation/ContainerCreate">documentation&lt;/a>, or by running &lt;code>docker inspect&lt;/code> the node-docker container.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>--docker-stop-grace-period&lt;/code>&lt;/td>
+ &lt;td>int&lt;/td>
+ &lt;td>&lt;code>60&lt;/code>&lt;/td>
+ &lt;td>Grace period (in seconds) to wait for browser and video containers to stop gracefully before they are forcibly terminated.&lt;/td>
  &lt;/tr>
  &lt;/tbody>
 &lt;/table>
@@ -10413,6 +10425,12 @@ page. To understand and create locator we will use the following HTML snippet.&l
  &lt;td>&lt;code>true&lt;/code>&lt;/td>
  &lt;td>Disable the Grid UI.&lt;/td>
  &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>--tcp-tunnel&lt;/code>&lt;/td>
+ &lt;td>boolean&lt;/td>
+ &lt;td>&lt;code>true&lt;/code>&lt;/td>
+ &lt;td>Enable the transparent TCP tunnel for WebSocket connections (BiDi, CDP). Disable to route WebSocket traffic through the Grid proxy instead, e.g. for benchmarking the proxy path or in network topologies where the Router cannot open direct TCP connections to Nodes (e.g. Kubernetes port-forward setups).&lt;/td>
+ &lt;/tr>
  &lt;/tbody>
 &lt;/table>
 &lt;h3 id="server">Server&lt;/h3>
@@ -10517,6 +10535,18 @@ page. To understand and create locator we will use the following HTML snippet.&l
  &lt;td>&lt;code>8&lt;/code>&lt;/td>
  &lt;td>How often, in seconds, will the the SessionQueue response in case there is no data, to reduce the http requests while polling for new session requests.&lt;/td>
  &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>--sessionqueue-implementation&lt;/code>&lt;/td>
+ &lt;td>string&lt;/td>
+ &lt;td>&lt;code>org.openqa.selenium.grid.sessionqueue.local.LocalNewSessionQueue&lt;/code>&lt;/td>
+ &lt;td>Full class name of non-default session queue implementation.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>--sessionqueue-backend-url&lt;/code>&lt;/td>
+ &lt;td>string&lt;/td>
+ &lt;td>&lt;code>redis://localhost:6379&lt;/code>&lt;/td>
+ &lt;td>Backend datastore URL for the SessionQueue implementation. Used by Redis-backed and other external implementations loaded via &lt;code>--ext&lt;/code>.&lt;/td>
+ &lt;/tr>
  &lt;/tbody>
 &lt;/table>
 &lt;h3 id="sessions">Sessions&lt;/h3>
@@ -10547,6 +10577,18 @@ page. To understand and create locator we will use the following HTML snippet.&l
  &lt;td>int&lt;/td>
  &lt;td>&lt;code>1234&lt;/code>&lt;/td>
  &lt;td>セッションマップサーバーがリッスンするポート。&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>--sessions-implementation&lt;/code>&lt;/td>
+ &lt;td>string&lt;/td>
+ &lt;td>&lt;code>org.openqa.selenium.grid.sessionmap.redis.RedisBackedSessionMap&lt;/code>&lt;/td>
+ &lt;td>Full class name of non-default session map implementation.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>--sessions-scheme&lt;/code>&lt;/td>
+ &lt;td>string&lt;/td>
+ &lt;td>&lt;code>redis&lt;/code>&lt;/td>
+ &lt;td>URI scheme for the session map server (e.g. &lt;code>redis&lt;/code>, &lt;code>http&lt;/code>).&lt;/td>
  &lt;/tr>
  &lt;/tbody>
 &lt;/table>
@@ -13573,7 +13615,7 @@ div.code-toolbar > .toolbar {
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;lt;maven.compiler.source&amp;gt;&lt;/span>17&lt;span style="color:#204a87;font-weight:bold">&amp;lt;/maven.compiler.source&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;lt;maven.compiler.target&amp;gt;&lt;/span>17&lt;span style="color:#204a87;font-weight:bold">&amp;lt;/maven.compiler.target&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;lt;project.build.sourceEncoding&amp;gt;&lt;/span>UTF-8&lt;span style="color:#204a87;font-weight:bold">&amp;lt;/project.build.sourceEncoding&amp;gt;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;lt;selenium.version&amp;gt;&lt;/span>4.47.0&lt;span style="color:#204a87;font-weight:bold">&amp;lt;/selenium.version&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;lt;selenium.version&amp;gt;&lt;/span>4.48.0&lt;span style="color:#204a87;font-weight:bold">&amp;lt;/selenium.version&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;lt;/properties&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;lt;repositories&amp;gt;&lt;/span>

@@ -329,7 +329,7 @@ For more details, see &lt;a href="https://www.selenium.dev/zh-cn/documentation/w
  &lt;label
  >&lt;a href="https://github.com/titusfortner">@titusfortner&lt;/a>&lt;/label
  >
- &lt;span class="contributions">2223 commits&lt;/span>
+ &lt;span class="contributions">2224 commits&lt;/span>
  &lt;/div>
  &lt;div style="padding: 10px;">
  &lt;img
@@ -849,7 +849,7 @@ For more details, see &lt;a href="https://www.selenium.dev/zh-cn/documentation/w
  &lt;label
  >&lt;a href="https://github.com/iampopovich">@iampopovich&lt;/a>&lt;/label
  >
- &lt;span class="contributions">68 commits&lt;/span>
+ &lt;span class="contributions">69 commits&lt;/span>
  &lt;/div>
  &lt;div style="padding: 10px;">
  &lt;img
@@ -3541,7 +3541,7 @@ For more details, see &lt;a href="https://www.selenium.dev/zh-cn/documentation/w
  &lt;label
  >&lt;a href="https://github.com/diemol">@diemol&lt;/a>&lt;/label
  >
- &lt;span class="contributions">878 commits&lt;/span>
+ &lt;span class="contributions">879 commits&lt;/span>
  &lt;/div>
  &lt;div style="padding: 10px;">
  &lt;img
@@ -3567,7 +3567,7 @@ For more details, see &lt;a href="https://www.selenium.dev/zh-cn/documentation/w
  &lt;label
  >&lt;a href="https://github.com/apps/renovate">@renovate[bot]&lt;/a>&lt;/label
  >
- &lt;span class="contributions">368 commits&lt;/span>
+ &lt;span class="contributions">376 commits&lt;/span>
  &lt;/div>
  &lt;div style="padding: 10px;">
  &lt;img
@@ -3645,7 +3645,7 @@ For more details, see &lt;a href="https://www.selenium.dev/zh-cn/documentation/w
  &lt;label
  >&lt;a href="https://github.com/apps/dependabot">@dependabot[bot]&lt;/a>&lt;/label
  >
- &lt;span class="contributions">51 commits&lt;/span>
+ &lt;span class="contributions">52 commits&lt;/span>
  &lt;/div>
  &lt;div style="padding: 10px;">
  &lt;img
@@ -10526,7 +10526,7 @@ div.code-toolbar > .toolbar {
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;lt;maven.compiler.source&amp;gt;&lt;/span>17&lt;span style="color:#204a87;font-weight:bold">&amp;lt;/maven.compiler.source&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;lt;maven.compiler.target&amp;gt;&lt;/span>17&lt;span style="color:#204a87;font-weight:bold">&amp;lt;/maven.compiler.target&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;lt;project.build.sourceEncoding&amp;gt;&lt;/span>UTF-8&lt;span style="color:#204a87;font-weight:bold">&amp;lt;/project.build.sourceEncoding&amp;gt;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;lt;selenium.version&amp;gt;&lt;/span>4.47.0&lt;span style="color:#204a87;font-weight:bold">&amp;lt;/selenium.version&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;lt;selenium.version&amp;gt;&lt;/span>4.48.0&lt;span style="color:#204a87;font-weight:bold">&amp;lt;/selenium.version&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;lt;/properties&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;lt;repositories&amp;gt;&lt;/span>
