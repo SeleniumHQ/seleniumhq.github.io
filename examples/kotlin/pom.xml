@@ -19,7 +19,7 @@
         <maven-surefire-plugin.version>3.5.6</maven-surefire-plugin.version>
 
         <java.version>17</java.version>
-        <selenium.version>4.47.0</selenium.version>
+        <selenium.version>4.48.0</selenium.version>
 
         <maven.compiler.target>${java.version}</maven.compiler.target>
         <maven.compiler.source>${java.version}</maven.compiler.source>
