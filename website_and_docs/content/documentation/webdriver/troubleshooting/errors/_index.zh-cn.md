@@ -20,7 +20,7 @@ description: >
 
 通过验证器服务运行选择器：
 * [CSS 验证器](http://csslint.net/)
-* [xPath 验证器](http://www.freeformatter.com/xpath-tester.html)
+* [xPath 验证器](https://xmlable.com/xpath/)
 
 或者使用浏览器扩展程序来获取已知的良好值：
 * [SelectorsHub](https://selectorshub.com/selectorshub/)
