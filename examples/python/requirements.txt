@@ -2,8 +2,8 @@ selenium==4.48.0
 pytest==9.1.1
 trio==0.34.0
 pytest-trio==0.8.0
-pytest-rerunfailures==16.6
+pytest-rerunfailures==16.6.1
 flake8==7.3.0
 requests==2.34.2
-tox==4.61.1
+tox==4.61.2
 pytest-xdist==3.8.0
