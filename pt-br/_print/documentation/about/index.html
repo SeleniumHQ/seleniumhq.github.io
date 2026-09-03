@@ -45,7 +45,7 @@ relação ao uso das informações aqui contidas.</p><h2 id=atribuições>Atribu
 <label><a href=https://github.com/jleyba>@jleyba</a></label>
 <span class=contributions>1464 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/5992658?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/diemol>@diemol</a></label>
-<span class=contributions>1408 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/572?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
+<span class=contributions>1409 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/572?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/jarib>@jarib</a></label>
 <span class=contributions>1299 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/128518?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/AutomatedTester>@AutomatedTester</a></label>
@@ -529,7 +529,7 @@ relação ao uso das informações aqui contidas.</p><h2 id=atribuições>Atribu
 <label><a href=https://github.com/harsha509>@harsha509</a></label>
 <span class=contributions>869 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/in/2740?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/apps/renovate>@renovate[bot]</a></label>
-<span class=contributions>376 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/3331063?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
+<span class=contributions>377 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/3331063?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/selenium-ci>@selenium-ci</a></label>
 <span class=contributions>323 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/777185?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/titusfortner>@titusfortner</a></label>
@@ -537,7 +537,7 @@ relação ao uso das informações aqui contidas.</p><h2 id=atribuições>Atribu
 <label><a href=https://github.com/alaahong>@alaahong</a></label>
 <span class=contributions>133 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/61235494?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/rpallavisharma>@rpallavisharma</a></label>
-<span class=contributions>95 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/10705590?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
+<span class=contributions>96 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/10705590?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/pujagani>@pujagani</a></label>
 <span class=contributions>78 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/in/29110?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/apps/dependabot>@dependabot[bot]</a></label>
@@ -1275,7 +1275,16 @@ e faça checkout na sua cópia localmente.</p><div class=highlight><pre tabindex
 </span></span><span style=display:flex><span>% <span style=color:#204a87>cd</span> seleniumhq.github.io
 </span></span></code></pre></div><h4 id=dependências-hugo>Dependências: Hugo</h4><p>Usamos <a href=https://gohugo.io/>Hugo</a> e <a href=https://www.docsy.dev/>Docsy theme</a>
 para criar e gerar o website. Você vai necessitar de usar a versão &ldquo;extended&rdquo;
-Sass/SCSS do binário Hugo. Recomendamos a versão 0.148.2 .</p><p>Por favor siga as instruções do Docsy <a href=https://www.docsy.dev/docs/getting-started/#install-hugo>Install Hugo</a></p><h3 id=passo-2-branch>Passo 2: Branch</h3><p>Crie uma branch e comece a hackear:</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>% git checkout -b my-feature-branch
+Sass/SCSS do binário Hugo. Recomendamos a versão 0.148.2 .</p><p>Por favor siga as instruções do Docsy <a href=https://www.docsy.dev/docs/getting-started/#install-hugo>Install Hugo</a></p><h4 id=dependências-go>Dependências: Go</h4><p>O tema Docsy é obtido como um <a href=https://gohugo.io/hugo-modules/>Hugo Module</a>,
+então o Hugo precisa do <a href=https://go.dev/dl/>Go</a> para resolvê-lo ao executar <code>hugo server</code>.
+Instale qualquer versão que satisfaça o mínimo definido em <code>go.mod</code>.</p><h4 id=dependências-nodejs-opcional-para-o-pipeline-de-css-de-produção>Dependências: Node.js (opcional, para o pipeline de CSS de produção)</h4><p>Node.js <strong>não</strong> é necessário para pré-visualizar o site com <code>hugo server</code> — no
+modo de desenvolvimento o Docsy ignora o PostCSS. Você só precisa do <a href=https://nodejs.org/>Node.js</a>
+(qualquer versão atual) se quiser que o seu build local corresponda ao pipeline de CSS
+de produção (autoprefixer/PostCSS), executado por <code>hugo --minify</code> em <code>build-site.sh</code>.
+Nesse caso, execute <code>npm install</code> em <code>website_and_docs</code> primeiro.</p><blockquote><p><strong>Nota:</strong> Isso pode mudar em uma futura atualização do Hugo/Docsy. Se os assets do tema
+(por exemplo, Bootstrap/Font Awesome) migrarem do Hugo Modules para pacotes npm,
+<code>npm install</code> — e, portanto, o Node.js — pode se tornar necessário para todos os builds,
+não apenas para o pipeline de produção.</p></blockquote><h3 id=passo-2-branch>Passo 2: Branch</h3><p>Crie uma branch e comece a hackear:</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>% git checkout -b my-feature-branch
 </span></span></code></pre></div><p>Praticamos o desenvolvimento baseado em HEAD, o que significa que todas as mudanças são aplicadas
 diretamente no topo do <code>dev</code>.</p><h3 id=passo-3-faça-mudanças>Passo 3: Faça mudanças</h3><p>O repositório contém o website e a documentação. Antes de começar a alterar coisas, por favor
 veja o resto dos passos para preparar as dependências e sub-módulos (veja os comandos abaixo).</p><p>Para fazer alterações ao website, trabalha na pasta <code>website_and_docs</code>. Para ver uma previsão

@@ -50,7 +50,7 @@ to the use of the information contained herein.</p><h2 id=attributions>Attributi
 <label><a href=https://github.com/jleyba>@jleyba</a></label>
 <span class=contributions>1464 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/5992658?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/diemol>@diemol</a></label>
-<span class=contributions>1408 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/572?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
+<span class=contributions>1409 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/572?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/jarib>@jarib</a></label>
 <span class=contributions>1299 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/128518?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/AutomatedTester>@AutomatedTester</a></label>
@@ -534,7 +534,7 @@ to the use of the information contained herein.</p><h2 id=attributions>Attributi
 <label><a href=https://github.com/harsha509>@harsha509</a></label>
 <span class=contributions>869 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/in/2740?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/apps/renovate>@renovate[bot]</a></label>
-<span class=contributions>376 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/3331063?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
+<span class=contributions>377 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/3331063?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/selenium-ci>@selenium-ci</a></label>
 <span class=contributions>323 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/777185?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/titusfortner>@titusfortner</a></label>
@@ -542,7 +542,7 @@ to the use of the information contained herein.</p><h2 id=attributions>Attributi
 <label><a href=https://github.com/alaahong>@alaahong</a></label>
 <span class=contributions>133 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/61235494?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/rpallavisharma>@rpallavisharma</a></label>
-<span class=contributions>95 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/10705590?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
+<span class=contributions>96 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/10705590?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/pujagani>@pujagani</a></label>
 <span class=contributions>78 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/in/29110?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/apps/dependabot>@dependabot[bot]</a></label>
@@ -1283,7 +1283,16 @@ and check out your copy locally.</p><div class=highlight><pre tabindex=0 style=b
 to build and render the site. You will need the “extended”
 Sass/SCSS version of the Hugo binary to work on this site. We recommend
 to use Hugo 0.148.2 .</p><p>Please follow the <a href=https://www.docsy.dev/docs/getting-started/#install-hugo>Install Hugo</a>
-instructions from Docsy.</p><h3 id=step-2-branch>Step 2: Branch</h3><p>Create a feature branch and start hacking:</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>% git checkout -b my-feature-branch
+instructions from Docsy.</p><h4 id=dependencies-go>Dependencies: Go</h4><p>The Docsy theme is pulled in as a <a href=https://gohugo.io/hugo-modules/>Hugo Module</a>,
+so Hugo needs <a href=https://go.dev/dl/>Go</a> to resolve it when you run <code>hugo server</code>.
+Install any version satisfying the minimum in <code>go.mod</code>.</p><h4 id=dependencies-nodejs-optional-for-the-production-css-pipeline>Dependencies: Node.js (optional, for the production CSS pipeline)</h4><p>Node.js is <strong>not</strong> required to preview the site with <code>hugo server</code> — in
+development mode Docsy skips PostCSS. You only need <a href=https://nodejs.org/>Node.js</a>
+(any current release) if you want your local build to match the production CSS
+pipeline (autoprefixer/PostCSS), as run by <code>hugo --minify</code> in <code>build-site.sh</code>.
+In that case, run <code>npm install</code> in <code>website_and_docs</code> first.</p><blockquote><p><strong>Note:</strong> This may change with a future Hugo/Docsy upgrade. If theme assets
+(e.g. Bootstrap/Font Awesome) move from Hugo Modules to npm packages,
+<code>npm install</code> — and therefore Node.js — could become required for all builds,
+not just the production pipeline.</p></blockquote><h3 id=step-2-branch>Step 2: Branch</h3><p>Create a feature branch and start hacking:</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>% git checkout -b my-feature-branch
 </span></span></code></pre></div><p>We practice HEAD-based development, which means all changes are applied
 directly on top of <code>dev</code>.</p><h3 id=step-3-make-changes>Step 3: Make changes</h3><p>The repository contains the site and docs. To make changes to the site,
 work on the <code>website_and_docs</code> directory. To see a live preview of

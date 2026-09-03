@@ -37,7 +37,7 @@
 <label><a href=https://github.com/jleyba>@jleyba</a></label>
 <span class=contributions>1464 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/5992658?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/diemol>@diemol</a></label>
-<span class=contributions>1408 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/572?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
+<span class=contributions>1409 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/572?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/jarib>@jarib</a></label>
 <span class=contributions>1299 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/128518?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/AutomatedTester>@AutomatedTester</a></label>
@@ -521,7 +521,7 @@
 <label><a href=https://github.com/harsha509>@harsha509</a></label>
 <span class=contributions>869 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/in/2740?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/apps/renovate>@renovate[bot]</a></label>
-<span class=contributions>376 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/3331063?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
+<span class=contributions>377 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/3331063?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/selenium-ci>@selenium-ci</a></label>
 <span class=contributions>323 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/777185?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/titusfortner>@titusfortner</a></label>
@@ -529,7 +529,7 @@
 <label><a href=https://github.com/alaahong>@alaahong</a></label>
 <span class=contributions>133 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/61235494?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/rpallavisharma>@rpallavisharma</a></label>
-<span class=contributions>95 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/10705590?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
+<span class=contributions>96 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/u/10705590?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/pujagani>@pujagani</a></label>
 <span class=contributions>78 commits</span></div><div style=padding:10px><img src="https://avatars.githubusercontent.com/in/29110?v=4" class=inline width=100 height=100 style=height:100px;height:100px;margin-bottom:.25em;vertical-align:middle>
 <label><a href=https://github.com/apps/dependabot>@dependabot[bot]</a></label>
@@ -1262,7 +1262,16 @@
 用于构建和渲染本网站。
 您需要 Hugo &ldquo;extended&rdquo; 扩展的 Sass/SCSS 版本用于这个网站。
 我们推荐使用 Hugo 0.148.2。</p><p>请参考来自 Docsy 的说明
-<a href=https://www.docsy.dev/docs/getting-started/#install-hugo>安装 Hugo</a>。</p><h3 id=步骤-2分支>步骤 2：分支</h3><p>创建一个功能分支并开始工作：</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>% git checkout -b my-feature-branch
+<a href=https://www.docsy.dev/docs/getting-started/#install-hugo>安装 Hugo</a>。</p><h4 id=依赖go>依赖：Go</h4><p>Docsy 主题是作为 <a href=https://gohugo.io/hugo-modules/>Hugo Module</a> 引入的，
+因此运行 <code>hugo server</code> 时，Hugo 需要 <a href=https://go.dev/dl/>Go</a> 来解析它。
+请安装满足 <code>go.mod</code> 中最低版本要求的任意版本。</p><h4 id=依赖nodejs可选用于生产环境-css-流水线>依赖：Node.js（可选，用于生产环境 CSS 流水线）</h4><p>使用 <code>hugo server</code> 预览站点<strong>不</strong>需要 Node.js —— 开发模式下 Docsy 会跳过 PostCSS。
+只有当您希望本地构建结果与生产环境 CSS 流水线（autoprefixer/PostCSS，
+由 <code>build-site.sh</code> 中的 <code>hugo --minify</code> 运行）保持一致时，才需要安装
+<a href=https://nodejs.org/>Node.js</a>（任意当前发行版本）。此时请先在 <code>website_and_docs</code>
+目录下运行 <code>npm install</code>。</p><blockquote><p><strong>注意：</strong> 未来的 Hugo/Docsy 升级可能会改变这一点。如果主题资源
+（例如 Bootstrap/Font Awesome）从 Hugo Modules 迁移到 npm 包，
+<code>npm install</code>（以及 Node.js）可能会成为所有构建的必需项，
+而不仅仅是生产环境流水线。</p></blockquote><h3 id=步骤-2分支>步骤 2：分支</h3><p>创建一个功能分支并开始工作：</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>% git checkout -b my-feature-branch
 </span></span></code></pre></div><p>我们实践基于 HEAD 的开发模式，这意味着所有更改都直接应用在 <code>trunk</code> 之上。</p><h3 id=步骤-3做出改变>步骤 3：做出改变</h3><p>本仓库包含站点和文档。
 要对网站进行更改，
 请使用 <code>website_and_docs</code> 目录。
