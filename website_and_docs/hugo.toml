@@ -130,7 +130,7 @@ section = ["HTML", "print"]
 
 [params]
 copyright = "Software Freedom Conservancy"
-# privacy_policy = "https://policies.google.com/privacy"
+privacy_policy = "/privacy"
 
 # First one is picked as the Twitter card image if not set on page.
 images = ["images/selenium_4_logo.png"]
@@ -340,6 +340,12 @@ name = "Sponsor Us"
 parent = "About"
 url = "/sponsor"
 weight = 70
+
+[[menus.main]]
+name = "Privacy Policy"
+parent = "About"
+url = "/privacy"
+weight = 80
 
 [[menus.main]]
 identifier = "Downloads"
