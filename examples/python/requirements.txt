@@ -5,5 +5,5 @@ pytest-trio==0.8.0
 pytest-rerunfailures==16.6
 flake8==7.3.0
 requests==2.34.2
-tox==4.61.1
+tox==4.61.2
 pytest-xdist==3.8.0
