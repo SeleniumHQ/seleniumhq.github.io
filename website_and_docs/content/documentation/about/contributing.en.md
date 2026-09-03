@@ -125,6 +125,25 @@ to use Hugo 0.148.2 .
 Please follow the [Install Hugo](https://www.docsy.dev/docs/getting-started/#install-hugo) 
 instructions from Docsy.
 
+#### Dependencies: Go
+
+The Docsy theme is pulled in as a [Hugo Module](https://gohugo.io/hugo-modules/),
+so Hugo needs [Go](https://go.dev/dl/) to resolve it when you run `hugo server`.
+Install any version satisfying the minimum in `go.mod`.
+
+#### Dependencies: Node.js (optional, for the production CSS pipeline)
+
+Node.js is **not** required to preview the site with `hugo server` — in
+development mode Docsy skips PostCSS. You only need [Node.js](https://nodejs.org/)
+(any current release) if you want your local build to match the production CSS
+pipeline (autoprefixer/PostCSS), as run by `hugo --minify` in `build-site.sh`.
+In that case, run `npm install` in `website_and_docs` first.
+
+> **Note:** This may change with a future Hugo/Docsy upgrade. If theme assets
+> (e.g. Bootstrap/Font Awesome) move from Hugo Modules to npm packages,
+> `npm install` — and therefore Node.js — could become required for all builds,
+> not just the production pipeline.
+
 ### Step 2: Branch
 
 Create a feature branch and start hacking:
