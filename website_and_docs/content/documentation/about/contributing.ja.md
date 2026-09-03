@@ -101,6 +101,25 @@ Seleniumプロジェクトは新しいコントリビュータを歓迎します
 
 [Docsyのインストール手順](https://www.docsy.dev/docs/getting-started/#install-hugo)に従ってください。
 
+#### 依存関係: Go
+
+Docsyテーマは[Hugo Module](https://gohugo.io/hugo-modules/)として取り込まれているため、
+`hugo server`を実行する際にHugoがこれを解決するには[Go](https://go.dev/dl/)が必要です。
+`go.mod`に記載された最小バージョンを満たす任意のバージョンをインストールしてください。
+
+#### 依存関係: Node.js（省略可、本番用CSSパイプライン向け）
+
+`hugo server`でサイトをプレビューするだけであれば、Node.jsは**不要**です。開発モードでは
+Docsyが PostCSS の処理をスキップします。ローカルのビルドを、`build-site.sh`内の
+`hugo --minify`が実行する本番用CSSパイプライン（autoprefixer/PostCSS）に合わせたい場合にのみ、
+[Node.js](https://nodejs.org/)（現行の任意のリリース）が必要です。その場合は、先に
+`website_and_docs`で`npm install`を実行してください。
+
+> **注：** 今後のHugo/Docsyのアップグレードで状況が変わる可能性があります。テーマのアセット
+> （例: BootstrapやFont Awesome）がHugo Modulesからnpmパッケージへ移行された場合、
+> `npm install`（つまりNode.js）が本番用パイプラインだけでなく、すべてのビルドで
+> 必要になることがあります。
+
 ### ステップ 2: ブランチの作成
 
 フィーチャーブランチを作成し、ハックを開始します。:
