@@ -1,46 +1,38 @@
-import pytest
-from selenium import webdriver
 from selenium.webdriver.common.by import By
 
-# The tests below marked as skipped mirror the HTML snippet shown at the top of the
-# "Finding web elements" documentation and are illustrative only, matching how the
-# same examples are shown for the other language bindings:
-#
-# <ol id="vegetables">
-#  <li class="potatoes">…
-#  <li class="onions">…
-#  <li class="tomatoes"><span>Tomato is a Vegetable</span>…
-# </ol>
-# <ul id="fruits">
-#   <li class="bananas">…
-#   <li class="apples">…
-#   <li class="tomatoes"><span>Tomato is a Fruit</span>…
-# </ul>
+LOCATORS_PAGE = "https://www.selenium.dev/selenium/web/locators_tests/locators.html"
 
 
-@pytest.mark.skip(reason="illustrative example, not an executable test")
-def test_basic_finders(driver):
-    vegetable = driver.find_element(By.CLASS_NAME, 'tomatoes')
+def test_first_matching_element(driver):
+    driver.get(LOCATORS_PAGE)
+    first_input = driver.find_element(By.CLASS_NAME, "information")
+
+    assert first_input.get_attribute("id") == "fname"
 
 
-@pytest.mark.skip(reason="illustrative example, not an executable test")
 def test_subset_of_dom(driver):
-    fruits = driver.find_element(By.ID, 'fruits')
-    fruit = fruits.find_element(By.CLASS_NAME, 'tomatoes')
+    driver.get(LOCATORS_PAGE)
+    form = driver.find_element(By.TAG_NAME, "form")
+    input_element = form.find_element(By.CLASS_NAME, "information")
+
+    assert input_element.get_attribute("id") == "fname"
 
 
-@pytest.mark.skip(reason="illustrative example, not an executable test")
 def test_optimized_locator(driver):
-    fruit = driver.find_element(By.CSS_SELECTOR, '#fruits .tomatoes')
+    driver.get(LOCATORS_PAGE)
+    input_element = driver.find_element(By.CSS_SELECTOR, "form .information")
+
+    assert input_element.get_attribute("id") == "fname"
 
 
-@pytest.mark.skip(reason="illustrative example, not an executable test")
 def test_all_matching_elements(driver):
-    plants = driver.find_elements(By.TAG_NAME, 'li')
+    driver.get(LOCATORS_PAGE)
+    inputs = driver.find_elements(By.TAG_NAME, "input")
+
+    assert len(inputs) > 1
 
 
-def test_evaluating_shadow_dom():
-    driver = webdriver.Chrome()
+def test_evaluating_shadow_dom(driver):
     driver.implicitly_wait(5)
     driver.get('https://www.selenium.dev/selenium/web/shadowRootPage.html')
 
@@ -52,43 +44,32 @@ def test_evaluating_shadow_dom():
     assert shadow_host.is_displayed()
     assert shadow_content.is_displayed()
 
-    driver.quit()
 
-
-def test_get_element():
-    driver = webdriver.Chrome()
-    driver.get('https://www.example.com')
+def test_get_element(driver):
+    driver.get(LOCATORS_PAGE)
 
     elements = driver.find_elements(By.TAG_NAME, 'p')
     for element in elements:
-        print(element.text)
+        print(f"Paragraph text:{element.text}")
 
     assert len(elements) > 0
 
-    driver.quit()
 
+def test_find_elements_from_element(driver):
+    driver.get(LOCATORS_PAGE)
 
-def test_find_elements_from_element():
-    driver = webdriver.Chrome()
-    driver.get('https://www.example.com')
-
-    element = driver.find_element(By.TAG_NAME, 'div')
-    elements = element.find_elements(By.TAG_NAME, 'p')
-    for e in elements:
-        print(e.text)
+    form = driver.find_element(By.TAG_NAME, 'form')
+    elements = form.find_elements(By.TAG_NAME, 'input')
+    for element in elements:
+        print(element.get_attribute('value'))
 
     assert len(elements) > 0
 
-    driver.quit()
 
+def test_get_active_element(driver):
+    driver.get(LOCATORS_PAGE)
 
-def test_get_active_element():
-    driver = webdriver.Chrome()
-    driver.get('https://www.selenium.dev/selenium/web/web-form.html')
-
-    driver.find_element(By.CSS_SELECTOR, '[name="my-text"]').send_keys('webElement')
+    driver.find_element(By.CSS_SELECTOR, '#fname').send_keys('webElement')
     attr = driver.switch_to.active_element.get_attribute('name')
 
-    assert attr == 'my-text'
-
-    driver.quit()
+    assert attr == 'fname'

@@ -124,6 +124,25 @@ Sass/SCSS do binário Hugo. Recomendamos a versão 0.148.2 .
 
 Por favor siga as instruções do Docsy [Install Hugo](https://www.docsy.dev/docs/getting-started/#install-hugo) 
 
+#### Dependências: Go
+
+O tema Docsy é obtido como um [Hugo Module](https://gohugo.io/hugo-modules/),
+então o Hugo precisa do [Go](https://go.dev/dl/) para resolvê-lo ao executar `hugo server`.
+Instale qualquer versão que satisfaça o mínimo definido em `go.mod`.
+
+#### Dependências: Node.js (opcional, para o pipeline de CSS de produção)
+
+Node.js **não** é necessário para pré-visualizar o site com `hugo server` — no
+modo de desenvolvimento o Docsy ignora o PostCSS. Você só precisa do [Node.js](https://nodejs.org/)
+(qualquer versão atual) se quiser que o seu build local corresponda ao pipeline de CSS
+de produção (autoprefixer/PostCSS), executado por `hugo --minify` em `build-site.sh`.
+Nesse caso, execute `npm install` em `website_and_docs` primeiro.
+
+> **Nota:** Isso pode mudar em uma futura atualização do Hugo/Docsy. Se os assets do tema
+> (por exemplo, Bootstrap/Font Awesome) migrarem do Hugo Modules para pacotes npm,
+> `npm install` — e, portanto, o Node.js — pode se tornar necessário para todos os builds,
+> não apenas para o pipeline de produção.
+
 
 ### Passo 2: Branch
 
