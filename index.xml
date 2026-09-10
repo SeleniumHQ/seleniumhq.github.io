@@ -8513,15 +8513,15 @@ div.code-toolbar > .toolbar {
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline">&lt;/span>&lt;span style="color:#204a87;font-weight:bold">import&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">org.openqa.selenium.devtools.DevTools&lt;/span>&lt;span style="color:#000;font-weight:bold">;&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline">&lt;/span>&lt;span style="color:#204a87;font-weight:bold">import&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">org.openqa.selenium.devtools.HasDevTools&lt;/span>&lt;span style="color:#000;font-weight:bold">;&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline">&lt;/span>&lt;span style="color:#204a87;font-weight:bold">import&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">org.openqa.selenium.devtools.NetworkInterceptor&lt;/span>&lt;span style="color:#000;font-weight:bold">;&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline">&lt;/span>&lt;span style="color:#204a87;font-weight:bold">import&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">org.openqa.selenium.devtools.v150.browser.Browser&lt;/span>&lt;span style="color:#000;font-weight:bold">;&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline">&lt;/span>&lt;span style="color:#204a87;font-weight:bold">import&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">org.openqa.selenium.devtools.v150.network.Network&lt;/span>&lt;span style="color:#000;font-weight:bold">;&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline">&lt;/span>&lt;span style="color:#204a87;font-weight:bold">import&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">org.openqa.selenium.devtools.v150.network.model.CookiePartitionKey&lt;/span>&lt;span style="color:#000;font-weight:bold">;&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline">&lt;/span>&lt;span style="color:#204a87;font-weight:bold">import&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">org.openqa.selenium.devtools.v150.network.model.CookiePriority&lt;/span>&lt;span style="color:#000;font-weight:bold">;&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline">&lt;/span>&lt;span style="color:#204a87;font-weight:bold">import&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">org.openqa.selenium.devtools.v150.network.model.CookieSameSite&lt;/span>&lt;span style="color:#000;font-weight:bold">;&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline">&lt;/span>&lt;span style="color:#204a87;font-weight:bold">import&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">org.openqa.selenium.devtools.v150.network.model.CookieSourceScheme&lt;/span>&lt;span style="color:#000;font-weight:bold">;&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline">&lt;/span>&lt;span style="color:#204a87;font-weight:bold">import&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">org.openqa.selenium.devtools.v150.network.model.TimeSinceEpoch&lt;/span>&lt;span style="color:#000;font-weight:bold">;&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline">&lt;/span>&lt;span style="color:#204a87;font-weight:bold">import&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">org.openqa.selenium.devtools.v150.performance.Performance&lt;/span>&lt;span style="color:#000;font-weight:bold">;&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline">&lt;/span>&lt;span style="color:#204a87;font-weight:bold">import&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">org.openqa.selenium.devtools.v150.performance.model.Metric&lt;/span>&lt;span style="color:#000;font-weight:bold">;&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline">&lt;/span>&lt;span style="color:#204a87;font-weight:bold">import&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">org.openqa.selenium.devtools.v153.browser.Browser&lt;/span>&lt;span style="color:#000;font-weight:bold">;&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline">&lt;/span>&lt;span style="color:#204a87;font-weight:bold">import&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">org.openqa.selenium.devtools.v153.network.Network&lt;/span>&lt;span style="color:#000;font-weight:bold">;&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline">&lt;/span>&lt;span style="color:#204a87;font-weight:bold">import&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">org.openqa.selenium.devtools.v153.network.model.CookiePartitionKey&lt;/span>&lt;span style="color:#000;font-weight:bold">;&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline">&lt;/span>&lt;span style="color:#204a87;font-weight:bold">import&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">org.openqa.selenium.devtools.v153.network.model.CookiePriority&lt;/span>&lt;span style="color:#000;font-weight:bold">;&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline">&lt;/span>&lt;span style="color:#204a87;font-weight:bold">import&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">org.openqa.selenium.devtools.v153.network.model.CookieSameSite&lt;/span>&lt;span style="color:#000;font-weight:bold">;&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline">&lt;/span>&lt;span style="color:#204a87;font-weight:bold">import&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">org.openqa.selenium.devtools.v153.network.model.CookieSourceScheme&lt;/span>&lt;span style="color:#000;font-weight:bold">;&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline">&lt;/span>&lt;span style="color:#204a87;font-weight:bold">import&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">org.openqa.selenium.devtools.v153.network.model.TimeSinceEpoch&lt;/span>&lt;span style="color:#000;font-weight:bold">;&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline">&lt;/span>&lt;span style="color:#204a87;font-weight:bold">import&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">org.openqa.selenium.devtools.v153.performance.Performance&lt;/span>&lt;span style="color:#000;font-weight:bold">;&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline">&lt;/span>&lt;span style="color:#204a87;font-weight:bold">import&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">org.openqa.selenium.devtools.v153.performance.model.Metric&lt;/span>&lt;span style="color:#000;font-weight:bold">;&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline">&lt;/span>&lt;span style="color:#204a87;font-weight:bold">import&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">org.openqa.selenium.remote.http.*&lt;/span>&lt;span style="color:#000;font-weight:bold">;&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline">&lt;/span>&lt;span style="color:#204a87;font-weight:bold">import&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">org.openqa.selenium.support.ui.WebDriverWait&lt;/span>&lt;span style="color:#000;font-weight:bold">;&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline">
@@ -15113,7 +15113,91 @@ This documentation previously located &lt;a href="https://github.com/SeleniumHQ/
 &lt;p>&lt;strong>SimonStewart&lt;/strong>: Original WebDriver developer and leading the Selenium 2 effort. He works mainly with Java and can be seen all over the code base, patching holes and adding features. By day he works as a Software Engineer in Test at Google. By night, he hacks on the crazy fun build grammar.&lt;/p></description></item><item><title>Virtual Authenticator</title><link>https://www.selenium.dev/documentation/webdriver/interactions/virtual_authenticator/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/documentation/webdriver/interactions/virtual_authenticator/</guid><description>&lt;p>Web applications can enable a public key-based authentication mechanism known as Web Authentication to authenticate users in a passwordless manner.
 &lt;a href="https://www.w3.org/TR/webauthn-2/">Web Authentication&lt;/a> defines APIs that allows a user to create a public-key credential and register it with an authenticator.
 An authenticator can be a hardware device or a software entity that stores user&amp;rsquo;s public-key credentials and retrieves them on request.&lt;/p>
-&lt;p>As the name suggests, Virtual Authenticator emulates such authenticators for testing.&lt;/p></description></item><item><title>TLC Meeting - September 3, 2026</title><link>https://www.selenium.dev/meetings/2026/tlc-09-03/</link><pubDate>Thu, 03 Sep 2026 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/meetings/2026/tlc-09-03/</guid><description>&lt;p>Meetings are happening weekly on Thursday at 0700 Pacific / 1000 Eastern / 1500 UK / 1930 India as a video call, and the invite is posted to the &lt;code>#selenium-tlc&lt;/code> channel on &lt;a href="https://selenium.dev/support">Selenium Slack&lt;/a>.
+&lt;p>As the name suggests, Virtual Authenticator emulates such authenticators for testing.&lt;/p></description></item><item><title>Selenium 4.49 Released!</title><link>https://www.selenium.dev/blog/2026/selenium-4-49-released/</link><pubDate>Wed, 09 Sep 2026 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/blog/2026/selenium-4-49-released/</guid><description>&lt;p>We’re excited to announce the release of &lt;strong>Selenium 4.49&lt;/strong> for JavaScript, Ruby, Python, .NET, Java
+and the Grid! 🎉&lt;/p>
+&lt;p>Links to all assets can be found on our &lt;a href="https://www.selenium.dev/downloads/">downloads page&lt;/a>.&lt;/p>
+&lt;hr>
+&lt;h1 id="selenium-449-released">Selenium 4.49 Released&lt;/h1>
+&lt;h2 id="-highlights">✨ Highlights&lt;/h2>
+&lt;ul>
+&lt;li>&lt;strong>BiDi&lt;/strong> .NET closed out a run of BiDi wire-format bugs (missing DTO fields, mismatched proxy,
+realm, and &lt;code>NamespaceUri&lt;/code> JSON property names, an oversized command-descriptor allocation) and
+gained browsing context screencast support; Python now raises typed WebDriver errors for BiDi
+wire error codes and runs its BiDi suite against the Grid server; JavaScript, Python, and Ruby
+now derive BiDi field names and enum value types directly from the shared schema.&lt;/li>
+&lt;li>&lt;strong>[Grid]&lt;/strong> Fixed a 500 error when downloading a file whose name contains spaces.&lt;/li>
+&lt;li>&lt;strong>[Java]&lt;/strong> Removed the deprecated &lt;code>GET /session/{sessionId}/se/files/{fileName}&lt;/code> endpoint, and
+jars now ship with LICENSE/NOTICE files and smaller published javadocs.&lt;/li>
+&lt;li>&lt;strong>[Rust]&lt;/strong> Fixed Selenium Manager&amp;rsquo;s Windows architecture detection under WOW64, and added
+Chrome arm64-on-Linux support.&lt;/li>
+&lt;li>&lt;strong>[Python]&lt;/strong> Cleaned up typing across the codebase (untyped decorators, unreachable mypy
+warnings) and removed stale &lt;code>xfail&lt;/code> markers.&lt;/li>
+&lt;li>&lt;strong>[Build &amp;amp; Infra]&lt;/strong> Continued hardening the release and Selenium Manager build pipeline: native
+Linux builds, a pinned Rust toolchain, prebuilt Linux arm64 binaries in every binding, and a
+daily job to keep the pinned CDDL specs current.&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h2 id="-notable-changes">📦 Notable Changes&lt;/h2>
+&lt;h3 id="java">Java&lt;/h3>
+&lt;ul>
+&lt;li>Removed the deprecated &lt;code>GET /session/{sessionId}/se/files/{fileName}&lt;/code> endpoint.&lt;/li>
+&lt;li>Jars now include LICENSE and NOTICE files, and published javadoc jars are smaller.&lt;/li>
+&lt;li>Removed a try/catch around opening a new window, and dropped a &amp;ldquo;best guess&amp;rdquo; URI encoding
+fallback.&lt;/li>
+&lt;/ul>
+&lt;h3 id="python">Python&lt;/h3>
+&lt;ul>
+&lt;li>Raised typed WebDriver errors for BiDi wire error codes.&lt;/li>
+&lt;li>Ran the BiDi test suite against the Grid server, and fixed flaky BiDi input tests that raced
+the page&amp;rsquo;s autofocus.&lt;/li>
+&lt;li>Added BiDi upload tests that verify files actually reach the server.&lt;/li>
+&lt;li>Enabled mypy&amp;rsquo;s &lt;code>disallow_untyped_decorators&lt;/code> and fixed unreachable-code warnings; removed stale
+&lt;code>xfail&lt;/code> markers.&lt;/li>
+&lt;li>Wired &lt;code>print_pdf_tests.py&lt;/code> into the browser test suites.&lt;/li>
+&lt;li>Adopted the worthwhile ruff 0.16 rule families.&lt;/li>
+&lt;/ul>
+&lt;h3 id="net">.NET&lt;/h3>
+&lt;ul>
+&lt;li>Fixed several BiDi DTO issues: missing fields, mismatched proxy and &lt;code>NamespaceUri&lt;/code> JSON
+property names, and realm-type enum serialization.&lt;/li>
+&lt;li>Avoided a massive allocation when building BiDi command descriptors.&lt;/li>
+&lt;li>Added browsing context screencast support.&lt;/li>
+&lt;li>Only embed the git revision in SourceLink metadata when stamping.&lt;/li>
+&lt;/ul>
+&lt;h3 id="javascript">JavaScript&lt;/h3>
+&lt;ul>
+&lt;li>Capitalized non-Latin text in the &lt;code>getVisibleText&lt;/code> atom (shared with Python).&lt;/li>
+&lt;li>Now derives BiDi field names and enum value types from the shared schema (shared with Python
+and Ruby).&lt;/li>
+&lt;/ul>
+&lt;h3 id="grid">Grid&lt;/h3>
+&lt;ul>
+&lt;li>Fixed a 500 error when downloading a file whose name contains spaces.&lt;/li>
+&lt;/ul>
+&lt;h3 id="build--infra">Build &amp;amp; Infra&lt;/h3>
+&lt;ul>
+&lt;li>Improved pre-release workflow ordering, and began tracking the generated BiDi schema.&lt;/li>
+&lt;li>Fixed Selenium Manager&amp;rsquo;s Windows architecture detection under WOW64, and added Chrome
+arm64-on-Linux support.&lt;/li>
+&lt;li>Added license and notice links to Selenium Manager&amp;rsquo;s help output.&lt;/li>
+&lt;li>Built Selenium Manager&amp;rsquo;s Linux binaries natively with a pinned Rust toolchain, ran Rust tests
+and built Selenium Manager from source on Windows, and shipped a prebuilt Linux arm64 binary in
+every binding.&lt;/li>
+&lt;li>Pinned the &lt;code>rules_rs&lt;/code> zlib bootstrap to an immutable snapshot (with a Launchpad fallback), and
+bumped &lt;code>rules_rs&lt;/code> to 0.0.108/0.0.109 and &lt;code>@llvm&lt;/code> to 0.8.19.&lt;/li>
+&lt;li>Added a daily workflow to update the pinned CDDL specs, and a compact execution log for CI.&lt;/li>
+&lt;li>Populated the Linux Bazel cache from the gh-cache workflow instead of RBE.&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h3 id="-docker-selenium">🐳 Docker Selenium&lt;/h3>
+&lt;ul>
+&lt;li>fix: node-kubernetes liveness probe — tcpSocket instead of /readyz (#3210)&lt;/li>
+&lt;li>K8s: Replace external scaler jobScalingStrategy with includeOngoingSessions (#3218)&lt;/li>
+&lt;li>&lt;a href="https://github.com/SeleniumHQ/docker-selenium/releases">See all changes&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;br>
+&lt;p>We thank all our contributors for their incredible efforts in making Selenium better with every
+release. ❤️&lt;/p></description></item><item><title>TLC Meeting - September 3, 2026</title><link>https://www.selenium.dev/meetings/2026/tlc-09-03/</link><pubDate>Thu, 03 Sep 2026 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/meetings/2026/tlc-09-03/</guid><description>&lt;p>Meetings are happening weekly on Thursday at 0700 Pacific / 1000 Eastern / 1500 UK / 1930 India as a video call, and the invite is posted to the &lt;code>#selenium-tlc&lt;/code> channel on &lt;a href="https://selenium.dev/support">Selenium Slack&lt;/a>.
 To add items to the agenda for the next meeting, please see our public &lt;a href="https://docs.google.com/document/d/18InWY44S0C_ECkRkRo8GKictu8BEtsahRsFh17tmUR0/edit?tab=t.0#heading=h.2kfu4ns4qzjl">Rolling Agenda&lt;/a>&lt;/p>
 &lt;h3 id="participation">Participation&lt;/h3>
 &lt;ul>
