@@ -3,7 +3,7 @@ title: "命令监听器"
 linkTitle: "监听器"
 weight: 2
 aliases: [
-  "/zh-cn/documentation/webdriver/drivers/listeners",
+  "/documentation/webdriver/drivers/listeners",
 ]
 ---
 

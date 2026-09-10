@@ -13,7 +13,7 @@ description: >-
 
 ## 选项
 
-所有浏览器的共有功能在 [Options 页面]({{< ref "../drivers/options.md" >}}).
+所有浏览器的共有功能在 [Options 页面]({{< ref path="../drivers/options.md" lang="en" >}}).
 
 Chromium独有的功能记录在谷歌的
 [Capabilities & ChromeOptions](https://chromedriver.chromium.org/capabilities)

@@ -6,7 +6,7 @@ description: >-
   Conventions for contributions to the Selenium documentation and code examples
 ---
 
-Read our [contributing documentation]({{< ref contributing.md >}}) for complete instructions on
+Read our [contributing documentation]({{< ref path="contributing.md" lang="en" >}}) for complete instructions on
 how to add content to this documentation.
 
 ## Alerts

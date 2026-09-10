@@ -6,7 +6,7 @@ description: >
   本文档描述了一系列类, 这些类用于明确指定在测试中需要等待的各种条件.
 ---
 
-期望状态与 [显示等待]({{< ref "../waits#explicit-waits" >}}) 一起使用.
+期望状态与 [显示等待]({{< ref path="../waits#explicit-waits" lang="en" >}}) 一起使用.
 与其定义要使用 _lambda_ 执行的代码块, 
 不如使用 _lambda_ 执行可以创建 Conditions 方法来表示等待的常见事物.
 有些方法将定位器作为参数, 有些方法将元素作为参数.

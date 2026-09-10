@@ -5,7 +5,7 @@ weight: 10
 description: >-
     这些是特定于Apple Safari浏览器的功能和特性.
 aliases: [
-"/zh-cn/documentation/capabilities/safari"
+"/documentation/capabilities/safari"
 ]
 ---
 
@@ -18,7 +18,7 @@ safaridriver --enable
 
 ## 选项
 
-所有浏览器通用的Capabilities在[选项页]({{< ref "../drivers/options.md" >}}).
+所有浏览器通用的Capabilities在[选项页]({{< ref path="../drivers/options.md" lang="en" >}}).
 
 Safari独有的Capabilities可以在Apple的页面[关于Safari的WebDriver](https://developer.apple.com/documentation/webkit/about_webdriver_for_safari#2957227) 上找到
 

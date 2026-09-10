@@ -7,7 +7,7 @@ description: >
     Instruções passo a passo para programar um script Selenium
 ---
 
-Assim que você tiver o [Selenium instalado]({{< ref "install_library.md" >}}), 
+Assim que você tiver o [Selenium instalado]({{< ref path="install_library.md" lang="en" >}}), 
 você estará pronto para programar códigos Selenium.
 
 ## Oito Componentes Básicos
@@ -65,7 +65,7 @@ Nesse exemplo estamos [navegando]({{< ref "/documentation/webdriver/interactions
 {{< /tabpane >}}
 
 ### 3. Solicitando informação do navegador de internet
-Existem diversos tipos de [informação sobre o navegador de internet]({{< ref "/documentation/webdriver/interactions" >}}) que você
+Existem diversos tipos de [informação sobre o navegador de internet]({{< ref path="/documentation/webdriver/interactions" lang="en" >}}) que você
 pode solicitar, incluindo window handles, tamanho / posição do navegador, cookies, alertas e etc.
 
 {{< tabpane text=true >}}
@@ -101,7 +101,7 @@ e o elemento está em um estado interativo antes de você tentar interagir com e
 Uma espera implícita raramente é a melhor solução, mas é a mais fácil de demonstrar aqui, então
 vamos usá-la como um substituto. 
 
-Leia mais sobre [Estratégias de espera]({{< ref "/documentation/webdriver/waits.md" >}}).
+Leia mais sobre [Estratégias de espera]({{< ref path="/documentation/webdriver/waits.md" lang="en" >}}).
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
@@ -127,7 +127,7 @@ Leia mais sobre [Estratégias de espera]({{< ref "/documentation/webdriver/waits
 ### 5. Encontrando um elemento
 A maioria dos comandos na maior parte das sessões do Selenium são relacionados a elementos e você não pode 
 interagir
-com um sem o primeiro [encontrando um elemento]({{< ref "/documentation/webdriver/elements" >}})
+com um sem o primeiro [encontrando um elemento]({{< ref path="/documentation/webdriver/elements" lang="en" >}})
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}

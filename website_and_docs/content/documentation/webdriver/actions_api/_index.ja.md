@@ -24,7 +24,7 @@ manage more than one device, you are responsible for ensuring proper synchroniza
 Thankfully, you likely do not need to learn how to use the low level commands directly, since
 almost everything you might want to do has been given a convenience method that combines the 
 lower level commands for you. These are all documented in 
-[keyboard]({{< ref "keyboard" >}}), [mouse]({{< ref "mouse" >}}), [pen]({{< ref "pen" >}}), and [wheel]({{< ref "wheel" >}}) pages.
+[keyboard]({{< ref path="keyboard" lang="en" >}}), [mouse]({{< ref path="mouse" lang="en" >}}), [pen]({{< ref "pen" >}}), and [wheel]({{< ref "wheel" >}}) pages.
 
 ## Pause
 

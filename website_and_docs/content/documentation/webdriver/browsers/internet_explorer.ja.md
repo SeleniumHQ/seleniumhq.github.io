@@ -5,7 +5,7 @@ weight: 8
 description: >-
     これらは、Microsoft Internet Explorerブラウザに特有の機能と機能です。
 aliases: [
-"/ja/documentation/capabilities/internet_explorer"
+"/documentation/capabilities/internet_explorer"
 ]
 ---
 

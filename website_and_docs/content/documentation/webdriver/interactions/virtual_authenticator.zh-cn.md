@@ -5,7 +5,7 @@ weight: 16
 description: >
     一种Web身份验证器模型的表示形式.
 aliases: [
-"/zh-cn/documentation/webdriver/virtual_authenticator/"
+"/documentation/webdriver/virtual_authenticator/"
 ]
 ---
 

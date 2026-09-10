@@ -5,7 +5,7 @@ weight: 6
 description: >-
     Estas capacidades e características são específicas ao navegador Mozilla Firefox.
 aliases: [
-"/pt-br/documentation/capabilities/firefox"
+"/documentation/capabilities/firefox"
 ]
 ---
 
@@ -13,7 +13,7 @@ Por omissão, Selenium 4 é compatível com Firefox 78 ou superior. Recomendamos
 
 ## Opções
 
-Capacidades comuns a todos os navegadores estão descritas na [página Opções]({{< ref "../drivers/options.md" >}}).
+Capacidades comuns a todos os navegadores estão descritas na [página Opções]({{< ref path="../drivers/options.md" lang="en" >}}).
 
 Capacidades únicas ao Firefox podem ser encontradas na página da Mozilla para [firefoxOptions](https://developer.mozilla.org/en-US/docs/Web/WebDriver/Capabilities/firefoxOptions)
 
@@ -331,7 +331,7 @@ they are created after starting the driver.
 
 The following examples are for local webdrivers. For remote webdrivers,
 please refer to the
-[Remote WebDriver]({{< ref "../drivers/remote_webdriver" >}}) page.
+[Remote WebDriver]({{< ref path="../drivers/remote_webdriver" lang="en" >}}) page.
 
 #### Instalação
 
@@ -417,7 +417,7 @@ uma pasta, este é um exemplo com uma pasta:
 
 The following examples are for local webdrivers. For remote webdrivers,
 please refer to the
-[Remote WebDriver]({{< ref "../drivers/remote_webdriver" >}}) page.
+[Remote WebDriver]({{< ref path="../drivers/remote_webdriver" lang="en" >}}) page.
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
@@ -444,7 +444,7 @@ please refer to the
 
 The following examples are for local webdrivers. For remote webdrivers,
 please refer to the
-[Remote WebDriver]({{< ref "../drivers/remote_webdriver" >}}) page.
+[Remote WebDriver]({{< ref path="../drivers/remote_webdriver" lang="en" >}}) page.
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}

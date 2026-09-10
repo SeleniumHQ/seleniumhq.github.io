@@ -5,7 +5,7 @@ weight: 4
 description: >-
     これらは、Google Chromeブラウザに特有の機能と機能です。
 aliases: [
-"/ja/documentation/capabilities/chromium"
+"/documentation/capabilities/chromium"
 ]
 ---
 
@@ -14,7 +14,7 @@ aliases: [
 
 ## Options
 
-すべてのブラウザに共通する機能は [オプション ページ]({{< ref "../drivers/options.md" >}})に記載されています。
+すべてのブラウザに共通する機能は [オプション ページ]({{< ref path="../drivers/options.md" lang="en" >}})に記載されています。
 
 ChromeおよびChromiumに特有の機能は、Googleの [Capabilities & ChromeOptions](https://chromedriver.chromium.org/capabilities)のページにドキュメントされています。
 
@@ -386,7 +386,7 @@ Chrome Castデバイスを操作することができ、タブの共有も含ま
 
 さまざまなネットワークの状態をシミュレートできます。
 
-以下の例はローカルWebDriver用です。リモートWebDriverについては、[リモートWebDriver]({{< ref "../drivers/remote_webdriver" >}})ページを参照してください。
+以下の例はローカルWebDriver用です。リモートWebDriverについては、[リモートWebDriver]({{< ref path="../drivers/remote_webdriver" lang="en" >}})ページを参照してください。
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}

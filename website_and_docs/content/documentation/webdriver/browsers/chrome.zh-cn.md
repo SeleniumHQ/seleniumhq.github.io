@@ -5,7 +5,7 @@ weight: 4
 description: >-
     特定于 Google Chrome 浏览器的功能和特性.
 aliases: [
-"/zh-cn/documentation/capabilities/chromium"
+"/documentation/capabilities/chromium"
 ]
 ---
 
@@ -13,7 +13,7 @@ aliases: [
 
 ## Options
 
-所有浏览器的通用功能请看这 [Options page]({{< ref "../drivers/options.md" >}}).
+所有浏览器的通用功能请看这 [Options page]({{< ref path="../drivers/options.md" lang="en" >}}).
 
 Chrome浏览器的特有功能可以在谷歌的页面找到: [Capabilities & ChromeOptions](https://chromedriver.chromium.org/capabilities)
 
@@ -395,7 +395,7 @@ Chromedriver 和 Chrome 浏览器版本应该匹配, 如果它们不匹配, 驱�
 
 以下示例适用于本地 webdrivers. 针对远程 webdrivers,
 请参考
-[Remote WebDriver]({{< ref "../drivers/remote_webdriver" >}}) 页面.
+[Remote WebDriver]({{< ref path="../drivers/remote_webdriver" lang="en" >}}) 页面.
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}

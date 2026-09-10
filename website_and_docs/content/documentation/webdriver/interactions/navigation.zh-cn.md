@@ -3,7 +3,7 @@ title: "浏览器导航"
 linkTitle: "导航"
 weight: 1
 aliases: [
-"/zh-cn/documentation/webdriver/browser/navigation/"
+"/documentation/webdriver/browser/navigation/"
 ]
 ---
 

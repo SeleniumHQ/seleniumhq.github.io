@@ -5,7 +5,7 @@ weight: 8
 description: >-
     这些是 Microsoft Internet Explorer 浏览器特有的功能和特性.
 aliases: [
-"/zh-cn/documentation/capabilities/internet_explorer"
+"/documentation/capabilities/internet_explorer"
 ]
 ---
 

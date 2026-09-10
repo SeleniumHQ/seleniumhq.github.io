@@ -3,23 +3,23 @@ publish = "website_and_docs/public"
 command = "chmod +x build-site.sh && ./build-site.sh"
 
 [context.production.environment]
-NODE_VERSION = "22.13.0"
-HUGO_VERSION = "0.148.2"
-GO_VERSION = "1.20.1"
+NODE_VERSION = "24.19.0"
+HUGO_VERSION = "0.164.0"
+GO_VERSION = "1.25.5"
 HUGO_ENV = "production"
 
 [context.deploy-preview]
 command = "chmod +x build-site.sh && ./build-site.sh"
 
 [context.deploy-preview.environment]
-NODE_VERSION = "22.13.0"
-HUGO_VERSION = "0.148.2"
-GO_VERSION = "1.20.1"
+NODE_VERSION = "24.19.0"
+HUGO_VERSION = "0.164.0"
+GO_VERSION = "1.25.5"
 
 [context.branch-deploy]
 command = "chmod +x build-site.sh && ./build-site.sh"
 
 [context.branch-deploy.environment]
-NODE_VERSION = "22.13.0"
-HUGO_VERSION = "0.148.2"
-GO_VERSION = "1.20.1"
+NODE_VERSION = "24.19.0"
+HUGO_VERSION = "0.164.0"
+GO_VERSION = "1.25.5"
