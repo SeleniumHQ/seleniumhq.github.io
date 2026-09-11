@@ -76,7 +76,7 @@ above shown HTML snippet. We can identify these elements using the class name lo
 available in Selenium. 
 {{< tabpane langEqualsHeader=true >}}
 {{< badge-examples >}}
-  {{< tab header="Java" >}}
+  {{< tab header="Java" text=true >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/LocatorTest.java#L34" >}}
   {{< /tab >}}
 {{< tab header="Python" text=true >}}
@@ -107,7 +107,7 @@ textbox, using css.
 
 {{< tabpane langEqualsHeader=true >}}
 {{< badge-examples >}}
- {{< tab header="Java" >}}
+ {{< tab header="Java" text=true >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/LocatorTest.java#L41" >}}
   {{< /tab >}}
 {{< tab header="Python" text=true >}}
@@ -136,7 +136,7 @@ We will identify the Last Name field using it.
 
 {{< tabpane langEqualsHeader=true >}}
 {{< badge-examples >}}
- {{< tab header="Java" >}}
+ {{< tab header="Java" text=true >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/LocatorTest.java#L48" >}}
   {{< /tab >}}
 {{< tab header="Python" text=true >}}
@@ -166,7 +166,7 @@ We will identify the Newsletter checkbox using it.
 
 {{< tabpane langEqualsHeader=true >}}
 {{< badge-examples >}}
-  {{< tab header="Java" >}}
+  {{< tab header="Java" text=true >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/LocatorTest.java#L55" >}}
   {{< /tab >}}
 {{< tab header="Python" text=true >}}
@@ -194,7 +194,7 @@ to identify it on the web page. The link text is the text displayed of the link.
 In the HTML snippet shared, we have a link available, let's see how will we locate it. 
 {{< tabpane langEqualsHeader=true >}}
 {{< badge-examples >}}
-  {{< tab header="Java" >}}
+  {{< tab header="Java" text=true >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/LocatorTest.java#L62" >}}
   {{< /tab >}}
 {{< tab header="Python" text=true >}}
@@ -223,7 +223,7 @@ We can pass partial text as value.
 In the HTML snippet shared, we have a link available, lets see how will we locate it. 
 {{< tabpane langEqualsHeader=true >}}
 {{< badge-examples >}}
-  {{< tab header="Java" >}}
+  {{< tab header="Java" text=true >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/LocatorTest.java#L69" >}}
   {{< /tab >}}
 {{< tab header="Python" text=true >}}
@@ -250,7 +250,7 @@ We can use the HTML TAG itself as a locator to identify the web element on the p
 From the above HTML snippet shared, lets identify the link, using its html tag "a". 
 {{< tabpane langEqualsHeader=true >}}
 {{< badge-examples >}}
-   {{< tab header="Java" >}}
+   {{< tab header="Java" text=true >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/LocatorTest.java#L76" >}}
   {{< /tab >}}
 {{< tab header="Python" text=true >}}
@@ -283,7 +283,7 @@ first name text box. Let us create locator for female radio button using xpath.
 
 {{< tabpane langEqualsHeader=true >}}
 {{< badge-examples >}}
-   {{< tab header="Java" >}}
+   {{< tab header="Java" text=true >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/LocatorTest.java#L83" >}}
   {{< /tab >}}
 {{< tab header="Python" text=true >}}

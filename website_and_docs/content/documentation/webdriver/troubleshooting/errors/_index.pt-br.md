@@ -20,7 +20,7 @@ CSS and XPath Selectors are sometimes difficult to get correct.
 
 Run your selector through a validator service:
 * [CSS Validator](http://csslint.net/)
-* [xPath Validator](http://www.freeformatter.com/xpath-tester.html)
+* [xPath Validator](https://xmlable.com/xpath/)
 
 Or use a browser extension to get a known good value:
 * [SelectorsHub](https://selectorshub.com/selectorshub/)

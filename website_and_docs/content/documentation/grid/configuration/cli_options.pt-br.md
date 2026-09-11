@@ -166,6 +166,7 @@ e esteja à vontade para nos enviar um pull request com alterações a esta pág
 | `--slot-selector` | string | `org.openqa.selenium.grid.distributor.selector.DefaultSlotSelector` | Nome completo da class para uma implementação não padrão do selector de slots. Isto é usado para selecionar um slot no Node caso tenha sido "matched". |
 | `--newsession-threadpool-size` | int | `24` | The Distributor uses a fixed-sized thread pool to create new sessions as it consumes new session requests from the queue. This allows configuring the size of the thread pool. The default value is no. of available processors * 3. Note: If the no. of threads is way greater than the available processors it will not always increase the performance. A high number of threads causes more context switching which is an expensive operation. |
 | `--purge-nodes-interval` | int | `30` | How often, in seconds, will the Distributor purge Nodes that have been down for a while. This is calculated based on the heartbeat received from a particular node. |
+| `--distributor-backend-url` | string | `redis://localhost:6379` | Backend datastore URL for the Distributor implementation. Used by Redis-backed and other external implementations loaded via `--ext`. |
 
 ### Docker
 
@@ -179,6 +180,7 @@ e esteja à vontade para nos enviar um pull request com alterações a esta pág
 | `--docker-url` | string | `http://localhost:2375` | URL for connecting to the Docker daemon |
 | `--docker-video-image` | string | `selenium/video:latest` | Docker image to be used when video recording is enabled |
 | `--docker-host-config-keys` | string[] | `Dns DnsOptions DnsSearch ExtraHosts Binds` | Specify which docker host configuration keys should be passed to browser containers. Keys name can be found in the Docker API [documentation](https://docs.docker.com/engine/api/v1.41/#tag/Container/operation/ContainerCreate), or by running `docker inspect` the node-docker container. |
+| `--docker-stop-grace-period` | int | `60` | Grace period (in seconds) to wait for browser and video containers to stop gracefully before they are forcibly terminated. |
 
 ### Events
 
@@ -253,6 +255,7 @@ e esteja à vontade para nos enviar um pull request com alterações a esta pág
 | `--username` | string | `admin` | User name clients must use to connect to the server. Both this and the password need to be set in order to be used. |
 | `--sub-path` | string | `my_company/selenium_grid` | A sub-path that should be considered for all user facing routes on the Hub/Router/Standalone. |
 | `--disable-ui` | boolean | `true` | Disable the Grid UI. |
+| `--tcp-tunnel` | boolean | `true` | Enable the transparent TCP tunnel for WebSocket connections (BiDi, CDP). Disable to route WebSocket traffic through the Grid proxy instead, e.g. for benchmarking the proxy path or in network topologies where the Router cannot open direct TCP connections to Nodes (e.g. Kubernetes port-forward setups). |
 
 
 ### Server
@@ -277,6 +280,8 @@ e esteja à vontade para nos enviar um pull request com alterações a esta pág
 | `--session-request-timeout` | int | `300` | Timeout in seconds. A new incoming session request is added to the queue. Requests sitting in the queue for longer than the configured time will timeout. |
 | `--session-retry-interval` | int | `5` | Retry interval in seconds. If all slots are busy, new session request will be retried after the given interval. |
 | `--maximum-response-delay` | int | `8` | How often, in seconds, will the the SessionQueue response in case there is no data, to reduce the http requests while polling for new session requests. |
+| `--sessionqueue-implementation` | string | `org.openqa.selenium.grid.sessionqueue.local.LocalNewSessionQueue` | Full class name of non-default session queue implementation. |
+| `--sessionqueue-backend-url` | string | `redis://localhost:6379` | Backend datastore URL for the SessionQueue implementation. Used by Redis-backed and other external implementations loaded via `--ext`. |
 
 ### Sessions
 
@@ -285,6 +290,8 @@ e esteja à vontade para nos enviar um pull request com alterações a esta pág
 | `--sessions` | uri | `http://localhost:1234` | Address of the session map server. |
 | `--sessions-host` | string | `localhost` | Host on which the session map server is listening. |
 | `--sessions-port` | int | `1234` | Port on which the session map server is listening. |
+| `--sessions-implementation` | string | `org.openqa.selenium.grid.sessionmap.redis.RedisBackedSessionMap` | Full class name of non-default session map implementation. |
+| `--sessions-scheme` | string | `redis` | URI scheme for the session map server (e.g. `redis`, `http`). |
 
 
 ## Configuration examples

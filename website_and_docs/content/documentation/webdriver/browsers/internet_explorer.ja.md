@@ -57,6 +57,7 @@ IE Driver will automatically locate Edge on your system.
 So, if IE is not on the system, you only need:
 
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
 {{< tab header="Java" text=true >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/InternetExplorerTest.java#46-L47" >}}
 {{< /tab >}}
@@ -76,7 +77,6 @@ let driver = await new Builder()
 .build();
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< badge-examples >}}
 val options = InternetExplorerOptions()
 val driver = InternetExplorerDriver(options)
 {{< /tab >}}

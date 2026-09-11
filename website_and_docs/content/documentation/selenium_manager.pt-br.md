@@ -1,5 +1,5 @@
 ---
-title: "Gerenciador do Selenium (Beta)"
+title: "Gerenciador do Selenium"
 linkTitle: "Gerenciador do Selenium"
 weight: 3
 description: >

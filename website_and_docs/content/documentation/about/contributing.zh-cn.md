@@ -119,6 +119,25 @@ Selenium 项目欢迎新的贡献者。
 请参考来自 Docsy 的说明
 [安装 Hugo](https://www.docsy.dev/docs/getting-started/#install-hugo)。
 
+#### 依赖：Go
+
+Docsy 主题是作为 [Hugo Module](https://gohugo.io/hugo-modules/) 引入的，
+因此运行 `hugo server` 时，Hugo 需要 [Go](https://go.dev/dl/) 来解析它。
+请安装满足 `go.mod` 中最低版本要求的任意版本。
+
+#### 依赖：Node.js（可选，用于生产环境 CSS 流水线）
+
+使用 `hugo server` 预览站点**不**需要 Node.js —— 开发模式下 Docsy 会跳过 PostCSS。
+只有当您希望本地构建结果与生产环境 CSS 流水线（autoprefixer/PostCSS，
+由 `build-site.sh` 中的 `hugo --minify` 运行）保持一致时，才需要安装
+[Node.js](https://nodejs.org/)（任意当前发行版本）。此时请先在 `website_and_docs`
+目录下运行 `npm install`。
+
+> **注意：** 未来的 Hugo/Docsy 升级可能会改变这一点。如果主题资源
+> （例如 Bootstrap/Font Awesome）从 Hugo Modules 迁移到 npm 包，
+> `npm install`（以及 Node.js）可能会成为所有构建的必需项，
+> 而不仅仅是生产环境流水线。
+
 ### 步骤 2：分支
 
 创建一个功能分支并开始工作：

@@ -48,3 +48,7 @@ venv/
 .pydevproject
 **/*.iml
 **/.gradle
+entities.json
+mempalace.yaml
+# Ignore .local used for worktrees
+.local/

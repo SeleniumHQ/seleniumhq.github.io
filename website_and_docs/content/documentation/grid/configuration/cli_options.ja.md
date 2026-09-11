@@ -163,6 +163,7 @@ Grid の設定には、さまざまなセクションが用意されています
 | `--slot-selector`              | string  | `org.openqa.selenium.grid.distributor.selector.DefaultSlotSelector` | デフォルト以外のスロットセレクターの完全なクラス名。これは、ノードがマッチした後ノード内のスロットを選択するために使用されます。                                                                      |
 | `--newsession-threadpool-size` | int | `24` | The Distributor uses a fixed-sized thread pool to create new sessions as it consumes new session requests from the queue. This allows configuring the size of the thread pool. The default value is no. of available processors * 3. Note: If the no. of threads is way greater than the available processors it will not always increase the performance. A high number of threads causes more context switching which is an expensive operation. |
 | `--purge-nodes-interval` | int | `30` | How often, in seconds, will the Distributor purge Nodes that have been down for a while. This is calculated based on the heartbeat received from a particular node. |
+| `--distributor-backend-url` | string | `redis://localhost:6379` | Backend datastore URL for the Distributor implementation. Used by Redis-backed and other external implementations loaded via `--ext`. |
 
 ### Docker
 
@@ -176,6 +177,7 @@ Grid の設定には、さまざまなセクションが用意されています
 | `--docker-url`         | string   | `http://localhost:2375`                                           | Docker デーモンに接続するための URL。                                                                                                                                                            |
 | `--docker-video-image` | string   | `selenium/video:latest`                                           | ビデオレコーディングが有効になっているときに利用される Docker イメージ。                                                                                                                         |
 | `--docker-host-config-keys` | string[] | `Dns DnsOptions DnsSearch ExtraHosts Binds` | Specify which docker host configuration keys should be passed to browser containers. Keys name can be found in the Docker API [documentation](https://docs.docker.com/engine/api/v1.41/#tag/Container/operation/ContainerCreate), or by running `docker inspect` the node-docker container. |
+| `--docker-stop-grace-period` | int | `60` | Grace period (in seconds) to wait for browser and video containers to stop gracefully before they are forcibly terminated. |
 
 ### Events
 
@@ -249,6 +251,7 @@ Grid の設定には、さまざまなセクションが用意されています
 | `--username` | string | `admin`            | クライアントがサーバーに接続する際に使用するユーザー名。このユーザー名とパスワードの両方が設定されていないと使用できません。 |
 | `--sub-path` | string | `my_company/selenium_grid` | A sub-path that should be considered for all user facing routes on the Hub/Router/Standalone. |
 | `--disable-ui` | boolean | `true` | Disable the Grid UI. |
+| `--tcp-tunnel` | boolean | `true` | Enable the transparent TCP tunnel for WebSocket connections (BiDi, CDP). Disable to route WebSocket traffic through the Grid proxy instead, e.g. for benchmarking the proxy path or in network topologies where the Router cannot open direct TCP connections to Nodes (e.g. Kubernetes port-forward setups). |
 
 ### Server
 
@@ -272,6 +275,8 @@ Grid の設定には、さまざまなセクションが用意されています
 | `--session-request-timeout` | int    | `300`                   | タイムアウト(秒)。 新規セッションリクエストはキューに追加され、設定された時間以上キューに残っているリクエストはタイムアウトします。 |
 | `--session-retry-interval`  | int    | `5`                     | リトライ間隔(秒)。すべてのスロットがビジーな場合、 新規セッションリクエストはこの時間の間隔をおいてからリトライされます。           |
 | `--maximum-response-delay` | int | `8` | How often, in seconds, will the the SessionQueue response in case there is no data, to reduce the http requests while polling for new session requests. |
+| `--sessionqueue-implementation` | string | `org.openqa.selenium.grid.sessionqueue.local.LocalNewSessionQueue` | Full class name of non-default session queue implementation. |
+| `--sessionqueue-backend-url` | string | `redis://localhost:6379` | Backend datastore URL for the SessionQueue implementation. Used by Redis-backed and other external implementations loaded via `--ext`. |
 
 ### Sessions
 
@@ -280,6 +285,8 @@ Grid の設定には、さまざまなセクションが用意されています
 | `--sessions`      | uri    | `http://localhost:1234` | セッションマップサーバーのアドレス。           |
 | `--sessions-host` | string | `localhost`             | セッションマップサーバーがリッスンするホスト。 |
 | `--sessions-port` | int    | `1234`                  | セッションマップサーバーがリッスンするポート。 |
+| `--sessions-implementation` | string | `org.openqa.selenium.grid.sessionmap.redis.RedisBackedSessionMap` | Full class name of non-default session map implementation. |
+| `--sessions-scheme` | string | `redis` | URI scheme for the session map server (e.g. `redis`, `http`). |
 
 ## 設定例
 

@@ -1,5 +1,5 @@
 ---
-title: "Selenium Manager (测试版)"
+title: "Selenium Manager"
 linkTitle: "Selenium Manager"
 weight: 3
 description: >

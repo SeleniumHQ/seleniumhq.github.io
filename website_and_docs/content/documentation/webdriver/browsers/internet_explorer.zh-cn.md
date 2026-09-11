@@ -61,6 +61,7 @@ IE 驱动程序是 Selenium 项目直接维护的唯一驱动程序.
 因此, 如果系统中没有 IE, 您只需要:
 
 {{< tabpane langEqualsHeader=true >}}
+{{< badge-examples >}}
 {{< tab header="Java" text=true >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/browsers/InternetExplorerTest.java#46-L47" >}}
 {{< /tab >}}
@@ -80,7 +81,6 @@ let driver = await new Builder()
 .build();
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-{{< badge-examples >}}
 val options = InternetExplorerOptions()
 val driver = InternetExplorerDriver(options)
 {{< /tab >}}

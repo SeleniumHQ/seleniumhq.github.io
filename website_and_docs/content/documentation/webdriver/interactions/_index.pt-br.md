@@ -18,7 +18,7 @@ Você pode ler o título da página atual no navegador:
 
 {{< tabpane langEqualsHeader=true >}}
 {{< tab header="Java" text=true >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/InteractionsTest.java#L15" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/InteractionsTest.java#L12" >}}
 {{< /tab >}}
 {{< tab header="Python" text=true >}}
 {{< gh-codeblock path="/examples/python/tests/interactions/test_interactions.py#L7" >}}
@@ -42,7 +42,7 @@ Você pode ler a URL atual na barra de endereço do navegador usando:
 
 {{< tabpane langEqualsHeader=true >}}
 {{< tab header="Java" text=true >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/InteractionsTest.java#L26" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/InteractionsTest.java#L20" >}}
 {{< /tab >}}
 {{< tab header="Python" text=true >}}
 {{< gh-codeblock path="/examples/python/tests/interactions/test_interactions.py#L10" >}}
