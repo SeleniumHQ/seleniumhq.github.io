@@ -76,19 +76,14 @@ describe('BiDi Script', function () {
     const id = await driver.script().pin("() => { console.log('Hello!'); }")
 
     let count = 0
-    let resolveFirstMessage
-    const firstMessage = new Promise((resolve) => { resolveFirstMessage = resolve })
-    await driver.script().addConsoleMessageHandler((logEntry) => {
+    await driver.script().addConsoleMessageHandler(() => {
       count++
-      if (count === 1) resolveFirstMessage()
     })
 
     await driver.get('https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html')
-    await firstMessage
-
     await driver.script().unpin(id)
-    await delay(2000)
 
+    await driver.get('about:blank')
     await driver.get('https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html')
 
     assert.equal(count, 1)
