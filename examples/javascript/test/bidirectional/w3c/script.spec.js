@@ -78,13 +78,17 @@ describe('BiDi Script', function () {
     let count = 0
     await driver.script().addConsoleMessageHandler(() => {
       count++
+      console.error('[unpin-debug] message received, count=' + count)
     })
 
     await driver.get('https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html')
-    await driver.script().unpin(id)
+    console.error('[unpin-debug] after first get, count=' + count)
 
-    await driver.get('about:blank')
+    await driver.script().unpin(id)
+    console.error('[unpin-debug] after unpin, count=' + count)
+
     await driver.get('https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html')
+    console.error('[unpin-debug] after second get, count=' + count)
 
     assert.equal(count, 1)
   })
