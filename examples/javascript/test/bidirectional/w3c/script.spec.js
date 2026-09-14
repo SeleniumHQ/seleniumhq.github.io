@@ -82,6 +82,8 @@ describe('BiDi Script', function () {
 
     await driver.get('https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html')
 
+    await delay(3000)
+
     await driver.script().unpin(id)
 
     await driver.get('https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html')
