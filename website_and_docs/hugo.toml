@@ -38,9 +38,13 @@ angledQuotes = false
 latexDashes = true
 
 # Image processing configuration.
+#
+# The global "quality" key was deprecated in Hugo 0.163.0 in favour of
+# per-format settings. It was set to 75, which is Hugo's default for JPEG and
+# WebP, so dropping it changes no output. resampleFilter stays: Docsy relies
+# on CatmullRom for sharp photographic downscaling.
 [imaging]
 resampleFilter = "CatmullRom"
-quality = 75
 anchor = "smart"
 
 [services]
@@ -50,45 +54,50 @@ anchor = "smart"
 
 # Language configuration
 
+# "label" replaces the deprecated "languageName" key as of Hugo 0.158.0.
 [languages]
 [languages.en]
 title = "Selenium"
-languageName ="English"
+label = "English"
 weight = 1
 [languages.en.params]
 description = "Selenium automates browsers. That's it!"
 [languages.pt-br]
 title = "Selenium"
-languageName ="Português (Brasileiro)"
+label = "Português (Brasileiro)"
 weight = 2
 [languages.pt-br.params]
 description = "Selenium automates browsers. That's it!"
 [languages.zh-cn]
 title = "Selenium"
-languageName = "中文简体"
+label = "中文简体"
 weight = 3
 [languages.zh-cn.params]
 description = "Selenium automates browsers. That's it!"
 [languages.ja]
 title = "Selenium"
-languageName = "日本語"
+label = "日本語"
 weight = 4
 [languages.ja.params]
 description = "Selenium automates browsers. That's it!"
 
 # Import docsy theme as module
+#
+# Docsy 0.16.0 moved the theme from the repository root into theme/, so the
+# import path is github.com/google/docsy/theme (still tagged as a plain
+# release version). The same release dropped the docsy/dependencies module:
+# Bootstrap and Font Awesome now arrive as npm packages, pulled into
+# package.json by `hugo mod npm pack`. See scripts/README or the Docsy 0.16.0
+# release notes if the vendored asset paths ever need re-checking.
 [module]
   proxy = "direct"
   # uncomment line below for temporary local development of module
-  #replacements = "github.com/google/docsy -> ../../docsy"
+  #replacements = "github.com/google/docsy/theme -> ../../docsy/theme"
   [module.hugoVersion]
     extended = true
-    min = "0.73.0"
+    min = "0.160.1"
   [[module.imports]]
-    path = "github.com/google/docsy"
-    disable = false
-  [[module.imports]]
-    path = "github.com/google/docsy/dependencies"
+    path = "github.com/google/docsy/theme"
     disable = false
 
 [markup]
@@ -378,6 +387,12 @@ year = "year"
 
 [security]
   enableInlineShortcodes = false
+  # Hugo 0.162.0 began denying text/html content files by default. This site
+  # hand-authors the landing pages for several sections as .html (content/
+  # _index.*.html, content/about/_index.html, and others), so the media type
+  # has to be allowed back in explicitly. The list is deliberately narrow:
+  # markdown plus the HTML we already publish, rather than the '.*' catch-all.
+  allowContent = ['^text/markdown$', '^text/html$']
   [security.exec]
     allow = ['^dart-sass-embedded$', '^go$', '^npx$', '^postcss$', '^git$']
     osEnv = ['(?i)^(PATH|PATHEXT|APPDATA|TMP|TEMP|TERM)$']

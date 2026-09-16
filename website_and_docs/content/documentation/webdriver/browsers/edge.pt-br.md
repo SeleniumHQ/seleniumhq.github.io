@@ -13,7 +13,7 @@ Todas as capacidades e opções encontradas na página [Chrome page]({{< ref "ch
 
 ## Opções
 
-Capabilities common to all browsers are described on the [Options page]({{< ref "../drivers/options.md" >}}).
+Capabilities common to all browsers are described on the [Options page]({{< ref path="../drivers/options.md" lang="en" >}}).
 
 Capabilities unique to Chromium are documented at Google's page for
 [Capabilities & ChromeOptions](https://chromedriver.chromium.org/capabilities)

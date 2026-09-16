@@ -3,17 +3,17 @@ title: "要素を探す"
 linkTitle: "要素を探す"
 weight: 1
 aliases: [
-"/ja/documentation/webdriver/relative_locators/"
+"/documentation/webdriver/relative_locators/"
 ]
 description: >
   DOM内の1つ以上の特定の要素を識別する方法
 ---
 
-ロケーターは、ページ上の要素を識別する方法です。 これは、[検索要素]({{< ref "finders.md" >}}) メソッドに渡される引数です。
+ロケーターは、ページ上の要素を識別する方法です。 これは、[検索要素]({{< ref path="finders.md" lang="en" >}}) メソッドに渡される引数です。
 
 検出方法とは別にロケーターを宣言するタイミングと理由など、
 [ロケーター]({{< ref "/documentation/test_practices/encouraged/locators.md" >}})に関するヒントについては、
-[推奨されるテストプラクティス]({{< ref "/documentation/test_practices/encouraged" >}}) を確認してください。
+[推奨されるテストプラクティス]({{< ref path="/documentation/test_practices/encouraged" lang="en" >}}) を確認してください。
 
 ### 要素選択の方法
 

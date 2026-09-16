@@ -20,15 +20,15 @@ project, but most importantly, all the Selenium community who
 tried our beta releases, and gave us great and valuable feedback.
 
 
-{{< tweet user="titusfortner" id="1433114357047627785" >}}
+{{< x user="titusfortner" id="1433114357047627785" >}}
 
-{{< tweet user="jimevansmusic" id="1433140517819322369" >}}
+{{< x user="jimevansmusic" id="1433140517819322369" >}}
 
-{{< tweet user="AutomatedTester" id="1433377616065667074" >}}
+{{< x user="AutomatedTester" id="1433377616065667074" >}}
 
-{{< tweet user="shs96c" id="1433474873972641793" >}}
+{{< x user="shs96c" id="1433474873972641793" >}}
 
-{{< tweet user="diegofmolina" id="1434820167360339968" >}}
+{{< x user="diegofmolina" id="1434820167360339968" >}}
 
 
 One thing you may want to do to get ready for the update (which you

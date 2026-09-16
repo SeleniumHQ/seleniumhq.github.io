@@ -38,7 +38,7 @@ description: >
 ### 可行方案
 
 * 确保您位于期望的页面上，并且代码中的前置操作已正确完成
-* 确保您使用的是正确的 [等待策略]({{< ref "/documentation/webdriver/waits" >}})
+* 确保您使用的是正确的 [等待策略]({{< ref path="/documentation/webdriver/waits" lang="en" >}})
 * Use an interactive [Selenium Wait Code Generator](https://99tools.net/selenium-wait-code-generator/) to create accurate explicit wait snippets for multiple supported languages including Java, Python, C#, JavaScript, and Ruby.
 * 使用浏览器的devtools控制台更新定位器或使用浏览器扩展程序，例如:
   * [SelectorsHub](https://selectorshub.com/selectorshub/)
@@ -128,7 +128,7 @@ to wait for animations to cease before attempting to click an element.
 
 **Use Explicit Waits** 
 
-[Explicit Waits]({{< ref "/documentation/webdriver/waits" >}}) will likely be your best friend 
+[Explicit Waits]({{< ref path="/documentation/webdriver/waits" lang="en" >}}) will likely be your best friend 
 in these instances. A great way is to use `ExpectedCondition.ToBeClickable()` 
 with `WebDriverWait` to wait until the right moment.
 

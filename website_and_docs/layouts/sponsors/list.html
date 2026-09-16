@@ -5,12 +5,12 @@
   {{ .Content }}
 </div>
 
-{{ partial "development-level-sponsors.html" (dict "Data" $.Site.Data) }}
-{{ partial "selenium-level-sponsors.html" (dict "Data" $.Site.Data) }}
-{{ partial "platinum-level-sponsors.html" (dict "Data" $.Site.Data) }}
-{{ partial "gold-level-sponsors.html" (dict "Data" $.Site.Data) }}
-{{ partial "silver-level-sponsors.html" (dict "Data" $.Site.Data) }}
-{{ partial "bronze-level-sponsors.html" (dict "Data" $.Site.Data) }}
+{{ partial "development-level-sponsors.html" (dict "Data" hugo.Data) }}
+{{ partial "selenium-level-sponsors.html" (dict "Data" hugo.Data) }}
+{{ partial "platinum-level-sponsors.html" (dict "Data" hugo.Data) }}
+{{ partial "gold-level-sponsors.html" (dict "Data" hugo.Data) }}
+{{ partial "silver-level-sponsors.html" (dict "Data" hugo.Data) }}
+{{ partial "bronze-level-sponsors.html" (dict "Data" hugo.Data) }}
 {{ partial "open-collective-level-sponsors.html" }}
 
 <div class="row td-box--100 ">

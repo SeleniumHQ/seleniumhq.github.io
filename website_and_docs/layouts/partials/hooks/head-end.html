@@ -24,10 +24,10 @@
 <link rel="canonical" href="{{ .Permalink }}">
 {{- if .IsTranslated }}
 {{- range .AllTranslations }}
-<link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}">
+<link rel="alternate" hreflang="{{ .Language.Name }}" href="{{ .Permalink }}">
 {{- end }}
 {{- range .AllTranslations }}
-{{- if eq .Language.Lang "en" }}
+{{- if eq .Language.Name "en" }}
 <link rel="alternate" hreflang="x-default" href="{{ .Permalink }}">
 {{- end }}
 {{- end }}
@@ -51,7 +51,7 @@
         "name" .Site.Title
         "url" .Site.BaseURL
         "description" .Site.Params.description
-        "inLanguage" .Language.Lang
+        "inLanguage" .Language.Name
         "publisher" $publisher -}}
 {{- else if eq .Section "documentation" -}}
   {{- $ld = dict
@@ -59,7 +59,7 @@
         "@type" "TechArticle"
         "headline" .Title
         "url" .Permalink
-        "inLanguage" .Language.Lang
+        "inLanguage" .Language.Name
         "dateModified" (.Lastmod.Format "2006-01-02")
         "publisher" $publisher
         "isPartOf" (dict "@type" "WebSite" "name" .Site.Title "url" .Site.BaseURL) -}}
@@ -70,7 +70,7 @@
         "@type" "BlogPosting"
         "headline" .Title
         "url" .Permalink
-        "inLanguage" .Language.Lang
+        "inLanguage" .Language.Name
         "datePublished" (.Date.Format "2006-01-02")
         "dateModified" (.Lastmod.Format "2006-01-02")
         "publisher" $publisher -}}

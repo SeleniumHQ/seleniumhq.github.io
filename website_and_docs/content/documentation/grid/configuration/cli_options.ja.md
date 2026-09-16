@@ -4,7 +4,7 @@ linkTitle: "CLI オプション"
 weight: 2
 description: 全てのGridコンポーネントのCLIオプション詳細
 aliases: [
-"/ja/documentation/grid/configuring_components/cli_options/"
+"/documentation/grid/configuring_components/cli_options/"
 ]
 ---
 
@@ -16,7 +16,7 @@ Grid の設定には、さまざまなセクションが用意されています
 {{% pageinfo color="primary" %}}
 オプションが変更、または追加されたが文書化されていない場合、
 このドキュメントは古くなる可能性があることに注意してください。
-もしそのような状況を見つけたら、["構成ヘルプ"]({{< ref "help.md" >}})を確認し、
+もしそのような状況を見つけたら、["構成ヘルプ"]({{< ref path="help.md" lang="en" >}})を確認し、
 ドキュメントを更新するプルリクエストを気軽に送ってください。
 {{% /pageinfo %}}
 

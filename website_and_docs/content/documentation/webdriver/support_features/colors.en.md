@@ -6,6 +6,18 @@ aliases: [
 "/documentation/en/support_packages/working_with_colours/",
 "/documentation/support_packages/working_with_colours/",
 "/documentation/webdriver/additional_features/working_with_colours/",
+"/documentation/ja/support_packages/working_with_colours/",
+"/documentation/pt-br/support_packages/working_with_colours/",
+"/documentation/zh-cn/support_packages/working_with_colours/",
+"/ja/documentation/support_packages/working_with_colours/",
+"/ja/documentation/webdriver/additional_features/working_with_colours/",
+"/ja/documentation/webdriver/support_features/colors/",
+"/pt-br/documentation/support_packages/working_with_colours/",
+"/pt-br/documentation/webdriver/additional_features/working_with_colours/",
+"/pt-br/documentation/webdriver/support_features/colors/",
+"/zh-cn/documentation/support_packages/working_with_colours/",
+"/zh-cn/documentation/webdriver/additional_features/working_with_colours/",
+"/zh-cn/documentation/webdriver/support_features/colors/"
 ]
 ---
 

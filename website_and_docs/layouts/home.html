@@ -2,9 +2,9 @@
 {{ with .Content }}
 {{ . }}
 
-{{ partial "development-level-sponsors.html" (dict "Data" $.Site.Data) }}
-{{ partial "selenium-level-sponsors.html" (dict "Data" $.Site.Data) }}
-{{ partial "platinum-level-sponsors.html" (dict "Data" $.Site.Data) }}
+{{ partial "development-level-sponsors.html" (dict "Data" hugo.Data) }}
+{{ partial "selenium-level-sponsors.html" (dict "Data" hugo.Data) }}
+{{ partial "platinum-level-sponsors.html" (dict "Data" hugo.Data) }}
 {{ partial "news-feed.html" (dict "regular_pages" $.Site.RegularPages) }}
 {{ partial "selenium-container.html" (dict "title" "Support the Selenium Project" "text" "Learn more or view the full list of sponsors." "color_bg" "selenium-cyan" "color_btn" "selenium-white-cyan" "btn_text" "Learn more") }}
 {{ partial "donate-to-selenium.html" . }}

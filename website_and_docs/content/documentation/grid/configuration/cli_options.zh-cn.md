@@ -4,7 +4,7 @@ linkTitle: "CLI 选项"
 weight: 2
 description: 所有网格组件配置CLI选项的详细信息.
 aliases: [
-"/zh-cn/documentation/grid/configuring_components/cli_options/"
+"/documentation/grid/configuring_components/cli_options/"
 ]
 ---
 
@@ -25,7 +25,7 @@ A complete description of the component to section mapping can be seen below.
 {{% pageinfo color="primary" %}}
 Note that this documentation could be outdated if an option was modified or added
 but has not been documented yet. In case you bump into this situation, please check
-the ["Config help"]({{< ref "help.md" >}}) section and feel free to send us a
+the ["Config help"]({{< ref path="help.md" lang="en" >}}) section and feel free to send us a
 pull request updating this page.
 {{% /pageinfo %}}
 
