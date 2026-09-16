@@ -25,7 +25,7 @@ jobs:
       - name: Set up Hugo
         uses: peaceiris/actions-hugo@v3
         with:
-          hugo-version: '0.164.0'
+          hugo-version: '0.166.0'
           extended: true
 
       - name: Setup Node
@@ -41,7 +41,9 @@ jobs:
 
       - run: npm ci
         working-directory: website_and_docs
-      - run: hugo --destination $GITHUB_WORKSPACE/website_and_docs/public
+      - run: |
+          source ../scripts/setup-dart-sass-path.sh
+          hugo --destination $GITHUB_WORKSPACE/website_and_docs/public
         working-directory: website_and_docs
 
       - name: Link check

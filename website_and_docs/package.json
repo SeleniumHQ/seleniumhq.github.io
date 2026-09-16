@@ -9,6 +9,9 @@
   "author": "SeleniumHQ",
   "license": "Apache-2.0",
   "dependencies": {},
+  "devDependencies": {
+    "sass-embedded": "1.104.1"
+  },
   "workspaces": [
     "packages/hugoautogen"
   ]
