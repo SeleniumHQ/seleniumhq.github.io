@@ -90,7 +90,7 @@ jobs:
         uses: actions/setup-java@v6
         with:
           distribution: 'temurin'
-          java-version: 11
+          java-version: 11.0.32+101
       - name: Run tests on Windows
         if: matrix.os == 'windows'
         uses: nick-invision/retry@v4.0.0
