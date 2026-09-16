@@ -29,11 +29,14 @@ describe('Remote WebDriver Test', function () {
   })
 
   afterEach(async function () {
-    if (driver) {
-      await driver.quit()
-      driver = null
+    try {
+      if (driver) {
+        await driver.quit()
+        driver = null
+      }
+    } finally {
+      stopGrid(gridProcess)
     }
-    stopGrid(gridProcess)
   })
 
   it('Basic Example', async function () {
@@ -63,7 +66,10 @@ describe('Remote WebDriver Test', function () {
     await driver.get('https://www.selenium.dev/selenium/web/downloads/download.html')
     await driver.findElement(By.id('file-1')).click()
     await driver.findElement(By.id('file-2')).click()
-    await driver.wait(async (d) => (await d.getDownloadableFiles()).includes('file_2.jpg'), 5000)
+    await driver.wait(async (d) => {
+      const downloaded = await d.getDownloadableFiles()
+      return fileNames.every((name) => downloaded.includes(name))
+    }, 5000)
 
     const files = await driver.getDownloadableFiles()
     assert.deepStrictEqual(files.sort(), fileNames.sort())

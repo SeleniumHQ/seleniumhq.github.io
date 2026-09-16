@@ -9,19 +9,33 @@ function waitForServer(url, timeout) {
   const deadline = Date.now() + timeout
 
   return new Promise((resolve, reject) => {
+    function retryOrFail() {
+      if (Date.now() > deadline) {
+        reject(new Error(`Selenium server did not start within ${timeout}ms`))
+        return
+      }
+      setTimeout(attempt, 200)
+    }
+
     function attempt() {
       http
         .get(url, (res) => {
-          res.resume()
-          resolve()
+          let body = ''
+          res.on('data', (chunk) => (body += chunk))
+          res.on('end', () => {
+            try {
+              const { value } = JSON.parse(body)
+              if (res.statusCode === 200 && value && value.ready) {
+                resolve()
+                return
+              }
+            } catch (err) {
+              // Not valid JSON yet (e.g. server still booting) - fall through to retry.
+            }
+            retryOrFail()
+          })
         })
-        .on('error', () => {
-          if (Date.now() > deadline) {
-            reject(new Error(`Selenium server did not start within ${timeout}ms`))
-            return
-          }
-          setTimeout(attempt, 200)
-        })
+        .on('error', retryOrFail)
     }
     attempt()
   })
@@ -44,7 +58,12 @@ async function startGrid() {
   ])
 
   const url = `http://localhost:${port}`
-  await waitForServer(`${url}/status`, 60000)
+  try {
+    await waitForServer(`${url}/status`, 60000)
+  } catch (err) {
+    child.kill()
+    throw err
+  }
 
   return { url, process: child }
 }
