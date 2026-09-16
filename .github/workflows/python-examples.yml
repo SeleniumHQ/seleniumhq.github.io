@@ -83,7 +83,7 @@ jobs:
       uses: actions/setup-java@v6
       with:
         distribution: 'temurin'
-        java-version: 11.0.32+101
+        java-version: 25.0.4+101.0.LTS
     - name: Run tests
       timeout-minutes: 60
       working-directory: ./examples/python
