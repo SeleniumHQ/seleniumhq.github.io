@@ -39,6 +39,19 @@ rm -rf website_and_docs/public
 echo -e "\033[0;32mSwitching to Docsy theme directory...\033[0m"
 cd website_and_docs && npm install
 
+# Hugo's Dart Sass transpiler resolves the "sass" binary from $PATH. The
+# sass-embedded package (Docsy's Dart Sass compiler) and its own optional
+# "sass" fallback dependency both ship a bin named "sass"; npm's install
+# order lets the fallback win node_modules/.bin/sass, and that fallback
+# doesn't speak the embedded protocol Hugo needs ("sass --embedded is
+# unavailable in pure JS mode"). Point PATH at sass-embedded's own script
+# directly, ahead of node_modules/.bin (still needed on PATH for postcss).
+rm -rf .hugo-sass-bin
+mkdir .hugo-sass-bin
+ln -s "$(pwd)/node_modules/sass-embedded/dist/bin/sass.js" .hugo-sass-bin/sass
+chmod +x node_modules/sass-embedded/dist/bin/sass.js
+export PATH="$(pwd)/.hugo-sass-bin:$(pwd)/node_modules/.bin:${PATH}"
+
 echo -e "\033[0;32mGenerating Hugo site for website...\033[0m"
 echo -e "\033[0;32mUsing SELENIUM_EXAMPLES_REPO=${SELENIUM_EXAMPLES_REPO} SELENIUM_EXAMPLES_ORG=${SELENIUM_EXAMPLES_ORG} SELENIUM_EXAMPLES_BRANCH=${SELENIUM_EXAMPLES_BRANCH} hugo --minify ${USE_BASE_URL_SITE}...\033[0m"
 SELENIUM_EXAMPLES_REPO=${SELENIUM_EXAMPLES_REPO} SELENIUM_EXAMPLES_ORG=${SELENIUM_EXAMPLES_ORG} SELENIUM_EXAMPLES_BRANCH=${SELENIUM_EXAMPLES_BRANCH} hugo --minify ${USE_BASE_URL_SITE}
