@@ -3,7 +3,7 @@ const http = require('node:http')
 const path = require('node:path')
 const portprober = require('selenium-webdriver/net/portprober')
 
-const SERVER_JAR = path.join(__dirname, '..', '..', '..', 'selenium-server-4.46.0.jar')
+const SERVER_JAR = path.join(__dirname, '..', '..', '..', 'selenium-server-4.49.0.jar')
 
 function waitForServer(url, timeout) {
   const deadline = Date.now() + timeout
@@ -18,24 +18,28 @@ function waitForServer(url, timeout) {
     }
 
     function attempt() {
-      http
-        .get(url, (res) => {
-          let body = ''
-          res.on('data', (chunk) => (body += chunk))
-          res.on('end', () => {
-            try {
-              const { value } = JSON.parse(body)
-              if (res.statusCode === 200 && value && value.ready) {
-                resolve()
-                return
-              }
-            } catch (err) {
-              // Not valid JSON yet (e.g. server still booting) - fall through to retry.
+      const req = http.get(url, { timeout: 2000 }, (res) => {
+        let body = ''
+        res.on('data', (chunk) => (body += chunk))
+        res.on('end', () => {
+          try {
+            const { value } = JSON.parse(body)
+            if (res.statusCode === 200 && value && value.ready) {
+              resolve()
+              return
             }
-            retryOrFail()
-          })
+          } catch (err) {
+            // Not valid JSON yet (e.g. server still booting) - fall through to retry.
+          }
+          retryOrFail()
         })
-        .on('error', retryOrFail)
+        res.on('aborted', retryOrFail)
+      })
+      req.on('timeout', () => {
+        req.destroy()
+        retryOrFail()
+      })
+      req.on('error', retryOrFail)
     }
     attempt()
   })
