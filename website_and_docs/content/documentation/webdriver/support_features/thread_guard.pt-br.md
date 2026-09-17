@@ -21,28 +21,7 @@ e gerará uma exceção quando isso acontecer.
 
 O exemplo a seguir simula um conflito de threads:
 
-```java
-public class DriverClash {
-  //thread main (id 1) criou este driver
-  private WebDriver protectedDriver = ThreadGuard.protect(new ChromeDriver()); 
-
-  static {
-    System.setProperty("webdriver.chrome.driver", "<Set path to your Chromedriver>");
-  }
-  
-  //Thread-1 (id 24) está chamando o mesmo driver causando o conflito
-  Runnable r1 = () -> {protectedDriver.get("https://selenium.dev");};
-  Thread thr1 = new Thread(r1);
-   
-  void runThreads(){
-    thr1.start();
-  }
-
-  public static void main(String[] args) {
-    new DriverClash().runThreads();
-  }
-}
-```
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/support/ThreadGuardTest.java#L13-L25" >}}
 
 O resultado mostrado abaixo:
 ```text

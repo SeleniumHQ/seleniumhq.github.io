@@ -13,38 +13,8 @@ Seleniumは既に、`FluentWait`クラスでこのようなものを実装して
 これは、標準の<code>Wait</code>クラスの代替としてのものです。
 ページオブジェクトでFluent APIデザインパターンを有効にしてから、次のようなコードスニペットを使用してGoogle検索ページを照会できます。
 
-```java
-driver.get( "http://www.google.com/webhp?hl=en&amp;tab=ww" );
-GoogleSearchPage gsp = new GoogleSearchPage(driver);
-gsp.setSearchString().clickSearchButton();
-```
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/test_practices/FluentApiExample.java#L44-L46" >}}
 
 この流暢な動作を持つGoogleページオブジェクトクラスは次のようになります。
 
-```java
-public abstract class BasePage {
-    protected WebDriver driver;
-
-    public BasePage(WebDriver driver) {
-        this.driver = driver;
-    }
-}
-
-public class GoogleSearchPage extends BasePage {
-    public GoogleSearchPage(WebDriver driver) {
-        super(driver);
-        // Generally do not assert within pages or components.
-        // Effectively throws an exception if the lambda condition is not met.
-        new WebDriverWait(driver, Duration.ofSeconds(3)).until(d -> d.findElement(By.id("logo")));
-    }
-
-    public GoogleSearchPage setSearchString(String sstr) {
-        driver.findElement(By.id("gbqfq")).sendKeys(sstr);
-        return this;
-    }
-
-    public void clickSearchButton() {
-        driver.findElement(By.id("gbqfb")).click();
-    }
-}
-```
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/test_practices/FluentApiExample.java#L11-L35" >}}

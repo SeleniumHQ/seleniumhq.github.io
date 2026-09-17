@@ -473,96 +473,22 @@ Selenium WebDriverは設定をプロキシする方法を提供します。
 
 
 {{< tabpane text=true >}}
-{{< badge-examples >}}
 {{% tab header="Java" %}}
-```java
-import org.openqa.selenium.Proxy;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
-
-public class ProxyTest {
-  public static void main(String[] args) {
-    Proxy proxy = new Proxy();
-    proxy.setHttpProxy("<HOST:PORT>");
-    ChromeOptions options = new ChromeOptions();
-    options.setCapability("proxy", proxy);
-    WebDriver driver = new ChromeDriver(options);
-    driver.get("https://www.google.com/");
-    driver.manage().window().maximize();
-    driver.quit();
-  }
-}
-```
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L176-L180" >}}
 {{% /tab %}}
 {{% tab header="Python" %}}
 {{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L72-L74">}}
 {{% /tab %}}
 {{% tab header="CSharp" %}}
-```CSharp
-using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
-
-public class ProxyTest{
-public static void Main() {
-ChromeOptions options = new ChromeOptions();
-Proxy proxy = new Proxy();
-proxy.Kind = ProxyKind.Manual;
-proxy.IsAutoDetect = false;
-proxy.SslProxy = "<HOST:PORT>";
-options.Proxy = proxy;
-options.AddArgument("ignore-certificate-errors");
-IWebDriver driver = new ChromeDriver(options);
-driver.Navigate().GoToUrl("https://www.selenium.dev/");
-}
-}
-```
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Drivers/OptionsTest.cs#L74-L81" >}}
 {{% /tab %}}
 {{< tab header="Ruby" >}}
 {{< gh-codeblock path="/examples/ruby/spec/drivers/options_spec.rb#L87-L88" >}}
 {{< /tab >}}
 {{% tab header="JavaScript" %}}
-```javascript
-let webdriver = require('selenium-webdriver');
-let chrome = require('selenium-webdriver/chrome');
-let proxy = require('selenium-webdriver/proxy');
-let opts = new chrome.Options();
-
-(async function example() {
-opts.setProxy(proxy.manual({http: '<HOST:PORT>'}));
-let driver = new webdriver.Builder()
-.forBrowser('chrome')
-.setChromeOptions(opts)
-.build();
-try {
-await driver.get("https://selenium.dev");
-}
-finally {
-await driver.quit();
-}
-}());
-```
+{{< gh-codeblock path="/examples/javascript/test/drivers/options.spec.js#L7-L8" >}}
 {{% /tab %}}
 {{% tab header="Kotlin" %}}
-```kotlin
-import org.openqa.selenium.Proxy
-import org.openqa.selenium.WebDriver
-import org.openqa.selenium.chrome.ChromeDriver
-import org.openqa.selenium.chrome.ChromeOptions
-
-class proxyTest {
-fun main() {
-
-        val proxy = Proxy()
-        proxy.setHttpProxy("<HOST:PORT>")
-        val options = ChromeOptions()
-        options.setCapability("proxy", proxy)
-        val driver: WebDriver = ChromeDriver(options)
-        driver["https://www.google.com/"]
-        driver.manage().window().maximize()
-        driver.quit()
-    }
-}
-```
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/drivers/OptionsTest.kt#L13-L16" >}}
 {{% /tab %}}
 {{< /tabpane >}}

@@ -185,19 +185,7 @@ ou visualize parcialmente (como `se:name`) através da Selenium Grid UI.
 
 Metadata pode ser adicionada como uma capacidade com o prefixo `se:`. Eis um pequeno exemplo em Java.
 
-```java
-ChromeOptions chromeOptions = new ChromeOptions();
-chromeOptions.setCapability("browserVersion", "100");
-chromeOptions.setCapability("platformName", "Windows");
-// Mostrando na Grid UI o nome de um teste ao invés de uma session id
-chromeOptions.setCapability("se:name", "My simple test"); 
-// Outros tipos de metadara podem ser visualizados na Grid UI 
-// ao clicar na informação de sessão ou via GraphQL
-chromeOptions.setCapability("se:sampleMetadata", "Valor exemplo de Metadata"); 
-WebDriver driver = new RemoteWebDriver(new URL("http://gridUrl:4444"), chromeOptions);
-driver.get("http://www.google.com");
-driver.quit();
-```
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/grid/GettingStartedTest.java#L16-L24" >}}
 
 ## Questionando a Selenium Grid
 

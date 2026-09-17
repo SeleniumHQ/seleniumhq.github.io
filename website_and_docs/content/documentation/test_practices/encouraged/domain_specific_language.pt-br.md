@@ -41,30 +41,7 @@ Aqui está um exemplo de um método DSL razoável em Java.
 Por questão de brevidade, ele assume que o objeto `driver` é pré-definido
 e está disponível para o método.
 
-```java
-/**
- * Recebe um username e password, prrenche os campos, e clica em "login".
- * @return Uma instância de AccountPage
- */
-public AccountPage loginAsUser(String username, String password) {
-  WebElement loginField = driver.findElement(By.id("loginField"));
-  loginField.clear();
-  loginField.sendKeys(username);
-
-  // Preenche o campo password. O localizador que estamos usando é "By.id", e devemos
-  // definí-lo em algum outro lugar dentro da Classe.
-  WebElement passwordField = driver.findElement(By.id("password"));
-  passwordField.clear();
-  passwordField.sendKeys(password);
-
-  // Clica o botão de login, que possui o id "submit".
-  driver.findElement(By.id("submit")).click();
-
-  // Cria e retorna uma nova instância de AccountPage (via o Selenium
-  // PageFactory embutido).
-  return PageFactory.newInstance(AccountPage.class);
-}
-```
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/test_practices/DomainSpecificLanguageExample.java#L21-L43" >}}
 
 Este método abstrai completamente os conceitos de campos de entrada,
 botões, cliques e até páginas do seu código de teste. Usando este

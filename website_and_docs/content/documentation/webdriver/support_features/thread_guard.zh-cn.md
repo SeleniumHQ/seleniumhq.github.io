@@ -22,28 +22,7 @@ ThreadGuard检查是否仅从创建驱动程序的同一线程中调用了驱动
 
 以下的示例模拟一种线程冲突的情况:
 
-```java
-public class DriverClash {
-  //thread main (id 1) created this driver
-  private WebDriver protectedDriver = ThreadGuard.protect(new ChromeDriver());
-
-  static {
-    System.setProperty("webdriver.chrome.driver", "<Set path to your Chromedriver>");
-  }
-
-  //Thread-1 (id 24) is calling the same driver causing the clash to happen
-  Runnable r1 = () -> {protectedDriver.get("https://selenium.dev");};
-  Thread thr1 = new Thread(r1);
-
-  void runThreads(){
-    thr1.start();
-  }
-
-  public static void main(String[] args) {
-    new DriverClash().runThreads();
-  }
-}
-```
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/support/ThreadGuardTest.java#L13-L25" >}}
 
 结果如下所示:
 

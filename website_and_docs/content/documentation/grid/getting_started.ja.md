@@ -197,19 +197,7 @@ java -jar selenium-server-<version>.jar node --publish-events tcp://<event-bus-i
 メタデータは capability に`se:`プリフィックスをつけることで追加できます。
 Java での簡単な例を紹介します。
 
-```java
-ChromeOptions chromeOptions = new ChromeOptions();
-chromeOptions.setCapability("browserVersion", "100");
-chromeOptions.setCapability("platformName", "Windows");
-// Showing a test name instead of the session id in the Grid UI
-chromeOptions.setCapability("se:name", "My simple test");
-// Other type of metadata can be seen in the Grid UI by clicking on the
-// session info or via GraphQL
-chromeOptions.setCapability("se:sampleMetadata", "Sample metadata value");
-WebDriver driver = new RemoteWebDriver(new URL("http://gridUrl:4444"), chromeOptions);
-driver.get("http://www.google.com");
-driver.quit();
-```
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/grid/GettingStartedTest.java#L16-L24" >}}
 
 ## Selenium Grid のクエリ
 

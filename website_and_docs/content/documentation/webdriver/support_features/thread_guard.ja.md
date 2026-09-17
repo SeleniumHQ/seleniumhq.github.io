@@ -19,28 +19,7 @@ ThreadGuardは、ドライバーが、それを作成した同じスレッドか
 このラッパーを使用すると、このカテゴリのエラーが防止され、発生時に例外が発生します。
 
 次の例は、スレッドの衝突をシミュレートします。
-```java
-public class DriverClash {
-  //thread main (id 1) created this driver
-  private WebDriver protectedDriver = ThreadGuard.protect(new ChromeDriver());
-
-  static {
-    System.setProperty("webdriver.chrome.driver", "<Set path to your Chromedriver>");
-  }
-
-  //Thread-1 (id 24) is calling the same driver causing the clash to happen
-  Runnable r1 = () -> {protectedDriver.get("https://selenium.dev");};
-  Thread thr1 = new Thread(r1);
-
-  void runThreads(){
-    thr1.start();
-  }
-
-  public static void main(String[] args) {
-    new DriverClash().runThreads();
-  }
-}
-```
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/support/ThreadGuardTest.java#L13-L25" >}}
 
 結果は以下のとおりです。
 ```text
