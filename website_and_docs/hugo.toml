@@ -394,7 +394,10 @@ year = "year"
   # markdown plus the HTML we already publish, rather than the '.*' catch-all.
   allowContent = ['^text/markdown$', '^text/html$']
   [security.exec]
-    allow = ['^dart-sass-embedded$', '^go$', '^npx$', '^postcss$', '^git$']
+    # 'sass' is the CLI binary shipped by the sass-embedded npm package
+    # (Docsy 0.17.0's Dart Sass transpiler); 'dart-sass-embedded' was the
+    # older package's binary name, kept here in case it's still resolved.
+    allow = ['^dart-sass-embedded$', '^sass$', '^go$', '^npx$', '^postcss$', '^git$']
     osEnv = ['(?i)^(PATH|PATHEXT|APPDATA|TMP|TEMP|TERM)$']
 
   [security.funcs]

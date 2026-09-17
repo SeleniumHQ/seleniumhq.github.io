@@ -52,12 +52,12 @@ jobs:
       if: matrix.release == 'stable'
       uses: actions/setup-dotnet@v6
       with:
-        dotnet-version: 8.x
+        dotnet-version: 10.x
     - name: Set up .Net Nightly
       if: matrix.release == 'nightly'
       uses: actions/setup-dotnet@v6
       with:
-        dotnet-version: 8.x
+        dotnet-version: 10.x
         source-url: https://nuget.pkg.github.com/seleniumhq/index.json
       env:
         NUGET_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
@@ -87,7 +87,7 @@ jobs:
       uses: actions/setup-java@v6
       with:
         distribution: 'temurin'
-        java-version: 11.0.32+101
+        java-version: 25.0.4+101.0.LTS
     - name: Run tests
       uses: nick-fields/retry@v4.0.0
       with:

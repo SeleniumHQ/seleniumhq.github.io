@@ -53,7 +53,7 @@ jobs:
       uses: actions/setup-java@v6
       with:
         distribution: 'temurin'
-        java-version: 17.0.20+101
+        java-version: 25.0.4+101.0.LTS
     - name: Import test cert non-Windows
       if: matrix.os != 'windows'
       run: sudo keytool -import -noprompt -trustcacerts -alias SeleniumHQ -file examples/java/src/test/resources/tls.crt -keystore ${{ steps.java.outputs.path }}/lib/security/cacerts -storepass changeit
