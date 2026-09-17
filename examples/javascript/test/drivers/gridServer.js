@@ -18,28 +18,38 @@ function waitForServer(url, timeout) {
     }
 
     function attempt() {
+      let settled = false
+      const retryOnce = () => {
+        if (settled) return
+        settled = true
+        retryOrFail()
+      }
+
       const req = http.get(url, { timeout: 2000 }, (res) => {
         let body = ''
         res.on('data', (chunk) => (body += chunk))
+        res.on('error', retryOnce)
+        res.on('aborted', retryOnce)
         res.on('end', () => {
+          if (settled) return
           try {
             const { value } = JSON.parse(body)
             if (res.statusCode === 200 && value && value.ready) {
+              settled = true
               resolve()
               return
             }
           } catch (err) {
             // Not valid JSON yet (e.g. server still booting) - fall through to retry.
           }
-          retryOrFail()
+          retryOnce()
         })
-        res.on('aborted', retryOrFail)
       })
       req.on('timeout', () => {
         req.destroy()
-        retryOrFail()
+        retryOnce()
       })
-      req.on('error', retryOrFail)
+      req.on('error', retryOnce)
     }
     attempt()
   })
