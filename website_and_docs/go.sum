@@ -1,2 +1,4 @@
 github.com/google/docsy/theme v0.16.0 h1:9uV9qEhk7UpJ8KYbSpTPQlq6htH+8hYskedgGZVnNsU=
 github.com/google/docsy/theme v0.16.0/go.mod h1:NX/JqXCbZBn9Q2Hj7ez9Xeh9z4XcLiwmDYZXhB4RhRM=
+github.com/google/docsy/theme v0.17.0 h1:eQaQcvg20bxI21nKylsERCK/xkCITj0Sqf3ae/NDRdo=
+github.com/google/docsy/theme v0.17.0/go.mod h1:NX/JqXCbZBn9Q2Hj7ez9Xeh9z4XcLiwmDYZXhB4RhRM=
