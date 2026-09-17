@@ -23,7 +23,7 @@ when the code is ready to execute the next Selenium command.
 Similarly, in a lot of single page applications, elements get dynamically
 added to a page or change visibility based on a click.
 An element must be both present and
-[displayed]({{< ref "elements/information/#is-displayed" >}}) on the page
+[displayed]({{< ref "elements/information/#表示されているかどうか" >}}) on the page
 in order for Selenium to interact with it.
 
 Take this page for example: https://www.selenium.dev/selenium/web/dynamic.html
@@ -81,7 +81,7 @@ Solving our example with an implicit wait looks like this:
 {{< gh-codeblock path="/examples/javascript/test/waits/waits.spec.js#L39" >}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
-{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/waits/WaitsTest.kt#L19" >}}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/waits/WaitsTest.kt#L19" >}}
   {{< /tab >}}
 {{< /tabpane >}}
 
@@ -117,7 +117,7 @@ JavaScript also supports [Expected Conditions]({{< ref "support_features/expecte
 {{< gh-codeblock path="/examples/javascript/test/waits/waits.spec.js#L52" >}}
   {{% /tab %}}
   {{< tab header="Kotlin" >}}
-{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/waits/WaitsTest.kt#L36-L37" >}}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/waits/WaitsTest.kt#L36-L37" >}}
   {{< /tab >}}
 {{< /tabpane >}}
 
@@ -153,6 +153,6 @@ The easiest way to customize Waits in Java is to use the `FluentWait` class:
 {{< badge-code >}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
-{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/waits/WaitsTest.kt#L51-L60" >}}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/waits/WaitsTest.kt#L51-L60" >}}
   {{< /tab >}}
 {{< /tabpane >}}

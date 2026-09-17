@@ -24,7 +24,7 @@ aliases: [
 1. Aponte* os seus testes WebDriver para [http://localhost:4444](http://localhost:4444)
 1. (Opcional) Verifique os testes que estão em execução abrindo o navegador em [http://localhost:4444](http://localhost:4444)
 
-*Se quer saber como direcionar os seus testes para [http://localhost:4444](http://localhost:4444), veja a secção [`RemoteWebDriver`]({{< ref "../webdriver/drivers/#remote-webdriver" >}}).
+*Se quer saber como direcionar os seus testes para [http://localhost:4444](http://localhost:4444), veja a secção [`RemoteWebDriver`]({{< ref "../webdriver/drivers/#driver-remoto" >}}).
 
 Para aprender mais sobre as diferentes opções de configuração, veja as secções seguintes.
 
@@ -45,7 +45,7 @@ comando, num único processo. **Standalone** só funcionará numa única máquin
 **Standalone** é também a forma mais simples de colocar uma Selenium Grid em funcionamento.
 Por omissão, o servidor irá escutar por pedidos `RemoteWebDriver` em [http://localhost:4444](http://localhost:4444).
 O servidor irá também detectar os drivers disponíveis no 
-[`PATH`]({{< ref "../webdriver/troubleshooting/errors/driver_location.md#3-a-variável-de-ambiente--path" >}}).
+[`PATH`]({{< ref "../webdriver/troubleshooting/errors/driver_location.md#use-the-path-environment-variable" >}}).
 
 ```shell
 java -jar selenium-server-<version>.jar standalone
@@ -81,7 +81,7 @@ Por omissão, o servidor irá estar à escuta por pedidos de sessão `RemoteWebD
 #### Node
 
 Ao iniciar, o **Node** irá detectar os drivers disponíveis através do 
-[`PATH`]({{< ref "../webdriver/troubleshooting/errors/driver_location.md#3-a-variável-de-ambiente--path" >}}). 
+[`PATH`]({{< ref "../webdriver/troubleshooting/errors/driver_location.md#use-the-path-environment-variable" >}}). 
 
 O comando exemplo seguinte assume que o **Node** está a executar na mesma máquina onde o **Hub** está em execução.
 ```shell

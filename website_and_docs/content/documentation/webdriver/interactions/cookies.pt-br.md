@@ -38,7 +38,7 @@ por exemplo http://example.com/some404page)
 {{< gh-codeblock path="/examples/ruby/spec/interactions/cookies_spec.rb#L9-L11" >}}
   {{< /tab >}}
   {{< tab header="JavaScript" text=true >}}
-  {{< gh-codeblock path="/examples/javascript/test/interactions/cookies.spec.js#L18">}}
+{{< gh-codeblock path="/examples/javascript/test/interactions/cookies.spec.js#L18">}}
   {{< /tab >}}
 {{< tab header="Kotlin" >}}
 import org.openqa.selenium.Cookie

@@ -185,7 +185,7 @@ Selenium 通过其 PrintOptions、PrintsPage 和 browsingContext 类简化了这
 使用 `PrintsPage()` 时，打印命令将以 base64 编码格式返回 PDF
 数据，该格式可以解码并写入所需位置的文件，而使用 `BrowsingContext()` 时将返回字符串。
 
-目前可能有多种实现方式，这取决于您所选择的语言。例如，Java 可以使用 `BrowingContext()`
+目前可能有多种实现方式，这取决于您所选择的语言。例如，Java 可以使用 `BrowsingContext()`
 或 `PrintsPage()` 进行打印。两者都将 `PrintOptions()` 对象作为一个参数。
 
 注意：`BrowsingContext()` 是 Selenium BiDi 实现的一部分。为启用 BiDi，请参见[启用 Bidi]({{< ref "bidi/" >}}) 

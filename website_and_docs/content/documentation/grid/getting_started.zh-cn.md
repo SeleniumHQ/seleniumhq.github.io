@@ -26,7 +26,7 @@ aliases: [
     * 需要安装浏览器
     * 需要安装浏览器驱动程序
       * [Selenium Manager]({{< ref "../selenium_manager/" >}}) will configure the drivers automatically if you add `--selenium-manager true`.
-      * [需要已经安装并配置了 PATH 环境变量]({{< ref "../webdriver/troubleshooting/errors/driver_location.md#3-path-环境变量" >}})
+      * [需要已经安装并配置了 PATH 环境变量]({{< ref "../webdriver/troubleshooting/errors/driver_location.md#use-the-path-environment-variable" >}})
     * 从[最新的发布版本](https://github.com/SeleniumHQ/selenium/releases/latest)下载 Selenium Server jar 文件
 1. 启动 Grid
     * `java -jar selenium-server-<version>.jar standalone`
@@ -34,7 +34,7 @@ aliases: [
 1. (可选) 通过在浏览器中打开 [http://localhost:4444](http://localhost:4444) 检查正在运行的测试和可用的功能
 
 *想知道如何将您的测试指向 [http://localhost:4444](http://localhost:4444)吗? 
-请查看 [`RemoteWebDriver` section]({{< ref "../webdriver/drivers/#远程驱动" >}})。
+请查看 [`RemoteWebDriver` section]({{< ref "../webdriver/drivers/" >}})。
 
 要了解更多不同的配置选项，请查看以下各小节。
 
@@ -48,7 +48,7 @@ Grid由六个不同的[组件]({{< ref "components.md" >}})组成，这使您可
 
 **Standalone** 可以将所有 Grid [组件]({{< ref "components.md" >}}) 无缝地整合成一个单独的实体。在 **Standalone** 模式下运行 Grid，只需一个命令即可获得一个完整的 Grid，并在一个进程中运行。**Standalone** 只能在一台机器上运行。
 
-**Standalone** 模式也是最容易启动 Selenium Grid 的模式。默认情况下，服务器将在 [http://localhost:4444](http://localhost:4444) 上监听 `RemoteWebDriver` 请求，并且服务器将从系统 [PATH]({{< ref "../webdriver/troubleshooting/errors/driver_location.md#3-path-环境变量" >}}) 中检测可以使用的驱动程序。
+**Standalone** 模式也是最容易启动 Selenium Grid 的模式。默认情况下，服务器将在 [http://localhost:4444](http://localhost:4444) 上监听 `RemoteWebDriver` 请求，并且服务器将从系统 [PATH]({{< ref "../webdriver/troubleshooting/errors/driver_location.md#use-the-path-environment-variable" >}}) 中检测可以使用的驱动程序。
 
 ```shell
 java -jar selenium-server-<version>.jar standalone
@@ -82,7 +82,7 @@ java -jar selenium-server-<version>.jar hub
 
 #### Node
 
-在启动时，**Node**将从系统的[`PATH`]({{< ref "../webdriver/troubleshooting/errors/driver_location.md#3-path-环境变量" >}})中检测可用的驱动程序。
+在启动时，**Node**将从系统的[`PATH`]({{< ref "../webdriver/troubleshooting/errors/driver_location.md#use-the-path-environment-variable" >}})中检测可用的驱动程序。
 
 以下命令假设**Node**正在运行的机器与**Hub**在同一台机器上。
 

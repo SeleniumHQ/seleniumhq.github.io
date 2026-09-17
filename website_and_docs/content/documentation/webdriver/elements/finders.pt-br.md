@@ -27,22 +27,22 @@ dois elementos com o nome de classe `information`, então este método retorna o
 
 {{< tabpane langEqualsHeader=true text=true >}}
   {{< tab header="Java" >}}
-  {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/FindersTest.java#L22-L23">}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/FindersTest.java#L22-L23">}}
   {{< /tab >}}
   {{< tab header="Python" >}}
-  {{< gh-codeblock path="/examples/python/tests/elements/test_finders.py#L7-L8">}}
+{{< gh-codeblock path="/examples/python/tests/elements/test_finders.py#L7-L8">}}
   {{< /tab >}}
   {{< tab header="CSharp" >}}
-  {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Elements/FindersTest.cs#L15-L16">}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Elements/FindersTest.cs#L15-L16">}}
   {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< gh-codeblock path="/examples/ruby/spec/elements/finders_spec.rb#L10-L11" >}}
 {{< /tab >}}
   {{< tab header="JavaScript" >}}
-  {{< gh-codeblock path="/examples/javascript/test/elements/finders.spec.js#L9-L10">}}
+{{< gh-codeblock path="/examples/javascript/test/elements/finders.spec.js#L9-L10">}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
-  {{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/elements/FindersTest.kt#L19-L20">}}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/elements/FindersTest.kt#L19-L20">}}
   {{< /tab >}}
 {{< /tabpane >}}
 
@@ -55,22 +55,22 @@ Uma possível solução seria localizar um ancestral do elemento desejado, entã
 
 {{< tabpane langEqualsHeader=true text=true >}}
   {{< tab header="Java" >}}
-  {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/FindersTest.java#L31-L33">}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/FindersTest.java#L31-L33">}}
   {{< /tab >}}
   {{< tab header="Python" >}}
-  {{< gh-codeblock path="/examples/python/tests/elements/test_finders.py#L14-L16">}}
+{{< gh-codeblock path="/examples/python/tests/elements/test_finders.py#L14-L16">}}
   {{< /tab >}}
   {{< tab header="CSharp" >}}
-  {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Elements/FindersTest.cs#L25-L27">}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Elements/FindersTest.cs#L25-L27">}}
   {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< gh-codeblock path="/examples/ruby/spec/elements/finders_spec.rb#L17-L19" >}}
 {{< /tab >}}
   {{< tab header="JavaScript" >}}
-  {{< gh-codeblock path="/examples/javascript/test/elements/finders.spec.js#L18-L20">}}
+{{< gh-codeblock path="/examples/javascript/test/elements/finders.spec.js#L18-L20">}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
-  {{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/elements/FindersTest.kt#L27-L29">}}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/elements/FindersTest.kt#L27-L29">}}
   {{< /tab >}}
 {{< /tabpane >}}
 
@@ -128,22 +128,22 @@ Para esse exemplo, utilizaremos um seletor CSS:
 
 {{< tabpane langEqualsHeader=true text=true >}}
   {{< tab header="Java" >}}
-  {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/FindersTest.java#L41-L42">}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/FindersTest.java#L41-L42">}}
   {{< /tab >}}
   {{< tab header="Python" >}}
-  {{< gh-codeblock path="/examples/python/tests/elements/test_finders.py#L22-L23">}}
+{{< gh-codeblock path="/examples/python/tests/elements/test_finders.py#L22-L23">}}
   {{< /tab >}}
   {{< tab header="CSharp" >}}
-  {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Elements/FindersTest.cs#L36-L37">}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Elements/FindersTest.cs#L36-L37">}}
   {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< gh-codeblock path="/examples/ruby/spec/elements/finders_spec.rb#L25-L26" >}}
 {{< /tab >}}
   {{< tab header="JavaScript" >}}
-  {{< gh-codeblock path="/examples/javascript/test/elements/finders.spec.js#L28-L29">}}
+{{< gh-codeblock path="/examples/javascript/test/elements/finders.spec.js#L28-L29">}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
-  {{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/elements/FindersTest.kt#L36-L37">}}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/elements/FindersTest.kt#L36-L37">}}
   {{< /tab >}}
 {{< /tabpane >}}
 
@@ -156,22 +156,22 @@ referências a todos os elementos input serão devolvidas em uma coleção.
 
 {{< tabpane langEqualsHeader=true text=true >}}
   {{< tab header="Java" >}}
-  {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/FindersTest.java#L50-L51">}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/FindersTest.java#L50-L51">}}
   {{< /tab >}}
   {{< tab header="Python" >}}
-  {{< gh-codeblock path="/examples/python/tests/elements/test_finders.py#L29-L30">}}
+{{< gh-codeblock path="/examples/python/tests/elements/test_finders.py#L29-L30">}}
   {{< /tab >}}
   {{< tab header="CSharp" >}}
-  {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Elements/FindersTest.cs#L46-L47">}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Elements/FindersTest.cs#L46-L47">}}
   {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< gh-codeblock path="/examples/ruby/spec/elements/finders_spec.rb#L32-L33" >}}
 {{< /tab >}}
   {{< tab header="JavaScript" >}}
-  {{< gh-codeblock path="/examples/javascript/test/elements/finders.spec.js#L37-L38">}}
+{{< gh-codeblock path="/examples/javascript/test/elements/finders.spec.js#L37-L38">}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
-  {{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/elements/FindersTest.kt#L44-L45">}}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/elements/FindersTest.kt#L44-L45">}}
   {{< /tab >}}
 {{< /tabpane >}}
 
@@ -182,22 +182,22 @@ precisa iterar sobre a coleção e identificar o que você deseja.
 
 {{< tabpane langEqualsHeader=true text=true >}}
   {{< tab header="Java" >}}
-  {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/FindersTest.java#L61-L64">}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/FindersTest.java#L61-L64">}}
   {{< /tab >}}
   {{< tab header="Python" >}}
-  {{< gh-codeblock path="/examples/python/tests/elements/test_finders.py#L51-L53">}}
+{{< gh-codeblock path="/examples/python/tests/elements/test_finders.py#L51-L53">}}
   {{< /tab >}}
   {{< tab header="CSharp" >}}
-  {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Elements/FindersTest.cs#L58-L62">}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Elements/FindersTest.cs#L58-L62">}}
   {{< /tab >}}
    {{< tab header="Ruby" >}}
-   {{< gh-codeblock path="/examples/ruby/spec/elements/finders_spec.rb#L40-L42" >}}
+{{< gh-codeblock path="/examples/ruby/spec/elements/finders_spec.rb#L40-L42" >}}
    {{< /tab >}}
   {{< tab header="JavaScript" >}}
-  {{< gh-codeblock path="/examples/javascript/test/elements/finders.spec.js#L47-L50">}}
+{{< gh-codeblock path="/examples/javascript/test/elements/finders.spec.js#L47-L50">}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
-  {{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/elements/FindersTest.kt#L53-L56">}}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/elements/FindersTest.kt#L53-L56">}}
   {{< /tab >}}
 {{< /tabpane >}}
 
@@ -208,22 +208,22 @@ Para realizar isso, o WebElement pai é encadeado com o 'findElements' para aces
 
 {{< tabpane langEqualsHeader=true text=true >}}
   {{< tab header="Java" >}}
-  {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/FindersTest.java#L74-L78">}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/FindersTest.java#L74-L78">}}
   {{< /tab >}}
   {{< tab header="Python" >}}
-  {{< gh-codeblock path="/examples/python/tests/elements/test_finders.py#L61-L64">}}
+{{< gh-codeblock path="/examples/python/tests/elements/test_finders.py#L61-L64">}}
   {{< /tab >}}
   {{< tab header="CSharp" >}}
-  {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Elements/FindersTest.cs#L73-L78">}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Elements/FindersTest.cs#L73-L78">}}
   {{< /tab >}}
    {{< tab header="Ruby" >}}
-   {{< gh-codeblock path="/examples/ruby/spec/elements/finders_spec.rb#L48-L51" >}}
+{{< gh-codeblock path="/examples/ruby/spec/elements/finders_spec.rb#L48-L51" >}}
    {{< /tab >}}
   {{< tab header="JavaScript" >}}
-  {{< gh-codeblock path="/examples/javascript/test/elements/finders.spec.js#L59-L63">}}
+{{< gh-codeblock path="/examples/javascript/test/elements/finders.spec.js#L59-L63">}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
-  {{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/elements/FindersTest.kt#L64-L68">}}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/elements/FindersTest.kt#L64-L68">}}
   {{< /tab >}}
 {{< /tabpane >}}
 
@@ -233,22 +233,22 @@ Ele é usado para rastrear (ou) encontrar um elemento DOM que tem o foco no cont
 
 {{< tabpane langEqualsHeader=true text=true >}}
   {{< tab header="Java" >}}
-  {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/FindersTest.java#L88-L89">}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/FindersTest.java#L88-L89">}}
   {{< /tab >}}
   {{< tab header="Python" >}}
-  {{< gh-codeblock path="/examples/python/tests/elements/test_finders.py#L72-L73">}}
+{{< gh-codeblock path="/examples/python/tests/elements/test_finders.py#L72-L73">}}
   {{< /tab >}}
   {{< tab header="CSharp" >}}
-  {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Elements/FindersTest.cs#L89-L90">}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Elements/FindersTest.cs#L89-L90">}}
   {{< /tab >}}
   {{< tab header="Ruby" >}}
-  {{< gh-codeblock path="/examples/ruby/spec/elements/finders_spec.rb#L58-L60" >}}
+{{< gh-codeblock path="/examples/ruby/spec/elements/finders_spec.rb#L58-L60" >}}
   {{< /tab >}}
   {{< tab header="JavaScript" >}}
-  {{< gh-codeblock path="/examples/javascript/test/elements/finders.spec.js#L72-L73">}}
+{{< gh-codeblock path="/examples/javascript/test/elements/finders.spec.js#L72-L73">}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
-  {{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/elements/FindersTest.kt#L76-L77">}}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/elements/FindersTest.kt#L76-L77">}}
   {{< /tab >}}
 {{< /tabpane >}}
 

@@ -28,7 +28,7 @@ Seleniumは、リモートコンピュータ上でブラウザを自動化する
 {{< gh-codeblock path="/examples/ruby/spec/drivers/remote_webdriver_spec.rb#L20-L21" >}} 
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/javascript/test/drivers/remote_webdriver.spec.js#L43-L44" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -58,7 +58,8 @@ Rubyでは、リモートWebDriverインスタンスにデフォルトでロー�
 {{< gh-codeblock path="/examples/ruby/spec/drivers/remote_webdriver_spec.rb#L33-L36" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< badge-code >}}
+JavaScriptにはデフォルトでローカルファイルディテクターが含まれていないため、アップロードを行う際には必ず追加する必要があります。
+{{< gh-codeblock path="/examples/javascript/test/drivers/remote_webdriver.spec.js#L53-L55" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -95,7 +96,7 @@ Chrome、Edge、およびFirefoxでは、それぞれダウンロードディレ
 {{< gh-codeblock path="/examples/ruby/spec/drivers/remote_webdriver_spec.rb#L43-L44" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/javascript/test/drivers/remote_webdriver.spec.js#L62-L63" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -120,7 +121,7 @@ Seleniumはファイルのダウンロードが完了するのを待たないた
 {{< gh-codeblock path="/examples/ruby/spec/drivers/remote_webdriver_spec.rb#L52" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/javascript/test/drivers/remote_webdriver.spec.js#L74" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -145,7 +146,7 @@ Seleniumは、提供されたファイルの名前をリストの中で探し、
 {{< gh-codeblock path="/examples/ruby/spec/drivers/remote_webdriver_spec.rb#L57" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/javascript/test/drivers/remote_webdriver.spec.js#L79" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -170,7 +171,7 @@ Seleniumは、提供されたファイルの名前をリストの中で探し、
 {{< gh-codeblock path="/examples/ruby/spec/drivers/remote_webdriver_spec.rb#L62" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/javascript/test/drivers/remote_webdriver.spec.js#L86" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -203,7 +204,8 @@ Javaでは、Augmenterクラスを使用する必要があります。これに�
 Rubyでは、ミキシンを使用してリモートWebDriverセッションに適用可能なブラウザ特有のメソッドを追加します。これらのメソッドは常にそのまま機能するはずです。
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< badge-code >}}
+JavaScriptは、リモートセッションに接続する際にブラウザ固有のドライバークラス(`chrome.Driver` など)を直接返すため、その機能にアクセスするための拡張(オーグメント)手順は不要です。
+{{< gh-codeblock path="/examples/javascript/test/drivers/remote_webdriver.spec.js#L91-L94" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}

@@ -31,10 +31,10 @@ aliases: [
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L73-74" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L73-L74" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L79-80" >}}
+{{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L79-L80" >}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
@@ -60,10 +60,10 @@ aliases: [
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L80-82" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L80-L82" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L86-88" >}}
+{{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L86-L88" >}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
@@ -123,9 +123,9 @@ WebDriver一直等到 [load](https://developer.mozilla.org/en-US/docs/Web/API/Wi
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L21-L23">}}
 {{< /tab >}}
 {{< tab header="Python" text=true >}}
-{{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L7-9">}}
+{{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L7-L9">}}
 {{< /tab >}}{{< tab header="CSharp" text=true >}}
-{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Drivers/OptionsTest.cs#L13-14" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Drivers/OptionsTest.cs#L13-L14" >}}
 {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
 {{< gh-codeblock path="/examples/ruby/spec/drivers/options_spec.rb#L11-L12">}}
@@ -165,7 +165,7 @@ WebDriver一直等到 [DOMContentLoaded](https://developer.mozilla.org/en-US/doc
 {{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L15-L17">}}
 {{< /tab >}}
 {{< tab header="CSharp" text=true >}}
-{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Drivers/OptionsTest.cs#L29-30" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Drivers/OptionsTest.cs#L29-L30" >}}
 {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
 {{< gh-codeblock path="/examples/ruby/spec/drivers/options_spec.rb#L20-L21">}}
@@ -204,7 +204,7 @@ WebDriver 仅等待初始页面已下载.
 {{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L23-L25">}}
 {{< /tab >}}
 {{< tab header="CSharp" text=true >}}
-{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Drivers/OptionsTest.cs#L41-42" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Drivers/OptionsTest.cs#L41-L42" >}}
 {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
 {{< gh-codeblock path="/examples/ruby/spec/drivers/options_spec.rb#L29-L30">}}
@@ -245,7 +245,7 @@ fun main() {
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L88-L90">}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L94-96">}}
+{{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L94-L96">}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
@@ -280,7 +280,7 @@ fun main() {
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L60-L61">}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L101-103">}}
+{{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L101-L103">}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
@@ -315,7 +315,7 @@ WebDriver创建新会话时,
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L96-L98">}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L30-32">}}
+{{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L30-L32">}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
@@ -343,7 +343,7 @@ WebDriver创建新会话时,
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L111-L113">}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L37-39">}}
+{{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L37-L39">}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
@@ -369,7 +369,7 @@ WebDriver创建新会话时,
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L126-L128">}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L44-46">}}
+{{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L44-L46">}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
@@ -408,7 +408,7 @@ WebDriver创建新会话时,
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L141-L142">}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L51-53">}}
+{{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L51-L53">}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Drivers/OptionsTest.cs#L59-L60">}}
@@ -438,7 +438,7 @@ ChromeDriver 还需要设置 `ignore` 才能保持提示框打开。
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L151-L152">}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L58-60">}}
+{{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L58-L60">}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
@@ -467,7 +467,7 @@ ChromeDriver 还需要设置 `ignore` 才能保持提示框打开。
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L163-L164">}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L65-67">}}
+{{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L65-L67">}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
@@ -526,7 +526,7 @@ public class ProxyTest {
 ```
 {{% /tab %}}
 {{% tab header="Python" %}}
-{{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L72-74">}}
+{{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L72-L74">}}
 {{% /tab %}}
 {{% tab header="CSharp" %}}
 ```CSharp

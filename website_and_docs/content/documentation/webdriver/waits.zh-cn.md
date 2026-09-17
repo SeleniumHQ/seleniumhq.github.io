@@ -25,7 +25,7 @@ weight: 6
 同样, 在许多单页应用程序中, 
 元素会根据点击操作动态添加到页面上或改变可见性.  
 对于 Selenium 能够与之交互, 
-该元素必须既存在于页面上又处于[displayed]({{< ref "elements/information/#is-displayed">}}) 状态. 
+该元素必须既存在于页面上又处于[displayed]({{< ref "elements/information/#是否显示">}}) 状态. 
 
 
 以这个页面为例: https://www.selenium.dev/selenium/web/dynamic.html 
@@ -91,7 +91,7 @@ Selenium 内置了一种自动等待元素出现的方式, 称为 _隐式等待_
 {{< gh-codeblock path="/examples/javascript/test/waits/waits.spec.js#L39" >}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
-{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/waits/WaitsTest.kt#L19" >}}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/waits/WaitsTest.kt#L19" >}}
   {{< /tab >}}
 {{< /tabpane >}}
 
@@ -132,7 +132,7 @@ JavaScript also supports [Expected Conditions]({{< ref "support_features/expecte
 {{< gh-codeblock path="/examples/javascript/test/waits/waits.spec.js#L52" >}}
   {{% /tab %}}
   {{< tab header="Kotlin" >}}
-{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/waits/WaitsTest.kt#L36-L37" >}}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/waits/WaitsTest.kt#L36-L37" >}}
   {{< /tab >}}
 {{< /tabpane >}}
 
@@ -173,7 +173,7 @@ The easiest way to customize Waits in Java is to use the `FluentWait` class:
 {{< badge-code >}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
-{{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/waits/WaitsTest.kt#L51-L60" >}}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/waits/WaitsTest.kt#L51-L60" >}}
   {{< /tab >}}
 {{< /tabpane >}}
 
