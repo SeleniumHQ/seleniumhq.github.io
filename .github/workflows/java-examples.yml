@@ -62,62 +62,50 @@ jobs:
       run: keytool -import -noprompt -trustcacerts -alias SeleniumHQ -file examples/java/src/test/resources/tls.crt -keystore ${{ steps.java.outputs.path }}/lib/security/cacerts -storepass changeit
     - name: Run Tests Stable (in Maven)
       if: matrix.release == 'stable'
-      uses: nick-invision/retry@v4.0.0
-      with:
-        timeout_minutes: 40
-        max_attempts: 3
-        command: |
-          cd examples/java
-          mvn -B test -D"jdk.internal.httpclient.disableHostnameVerification=true"
+      timeout-minutes: 40
+      run: |
+        cd examples/java
+        mvn -B test -D"jdk.internal.httpclient.disableHostnameVerification=true"
     - name: Run Tests Stable (in Gradle)
       if: matrix.release == 'stable'
-      uses: nick-invision/retry@v4.0.0
-      with:
-        timeout_minutes: 40
-        max_attempts: 3
-        command: |
-          cd examples/java
-          ./gradlew test --tests 'dev.selenium.*UsingSeleniumTest'
+      timeout-minutes: 40
+      run: |
+        cd examples/java
+        ./gradlew test --tests 'dev.selenium.*UsingSeleniumTest'
     - name: Run Tests Nightly Linux/macOS
       if: matrix.release == 'nightly' && matrix.os != 'windows'
-      uses: nick-invision/retry@v4.0.0
-      with:
-        timeout_minutes: 40
-        max_attempts: 3
-        command: |
-          # Get current selenium.version from Maven
-          current_version=$(mvn -f examples/java/pom.xml help:evaluate -Dexpression=selenium.version -q -DforceStdout)
-          echo "Current selenium.version: $current_version"
-          # If version is in the form X.Y.Z, bump minor and set to SNAPSHOT
-          if [[ $current_version =~ ^([0-9]+)\.([0-9]+)\.([0-9]+)$ ]]; then
-            major="${BASH_REMATCH[1]}"
-            minor="${BASH_REMATCH[2]}"
-            next_minor=$((minor + 1))
-            new_version="$major.$next_minor.0-SNAPSHOT"
-            echo "Using selenium.version $new_version for tests"
-            cd examples/java
-            mvn -B -U test -D"jdk.internal.httpclient.disableHostnameVerification=true" -Dselenium.version=$new_version
-          fi
+      timeout-minutes: 40
+      run: |
+        # Get current selenium.version from Maven
+        current_version=$(mvn -f examples/java/pom.xml help:evaluate -Dexpression=selenium.version -q -DforceStdout)
+        echo "Current selenium.version: $current_version"
+        # If version is in the form X.Y.Z, bump minor and set to SNAPSHOT
+        if [[ $current_version =~ ^([0-9]+)\.([0-9]+)\.([0-9]+)$ ]]; then
+          major="${BASH_REMATCH[1]}"
+          minor="${BASH_REMATCH[2]}"
+          next_minor=$((minor + 1))
+          new_version="$major.$next_minor.0-SNAPSHOT"
+          echo "Using selenium.version $new_version for tests"
+          cd examples/java
+          mvn -B -U test -D"jdk.internal.httpclient.disableHostnameVerification=true" -Dselenium.version=$new_version
+        fi
     - name: Run Tests Nightly Windows
       if: matrix.release == 'nightly' && matrix.os == 'windows'
-      uses: nick-invision/retry@v4.0.0
-      with:
-        timeout_minutes: 40
-        max_attempts: 3
-        command: |
-          # Get current selenium.version from Maven
-          $current_version = & mvn -f examples/java/pom.xml help:evaluate "-Dexpression=selenium.version" -q "-DforceStdout"
-          Write-Output "Current selenium.version: $current_version"
-          # If version is in the form X.Y.Z, bump minor and set to SNAPSHOT
-          if ($current_version -match '^([0-9]+)\.([0-9]+)\.([0-9]+)$') {
-            $major = $matches[1]
-            $minor = $matches[2]
-            $next_minor = [int]$minor + 1
-            $new_version = "$major.$next_minor.0-SNAPSHOT"
-            Write-Output "Using selenium.version $new_version for tests"
-            cd examples/java
-            mvn -B -U test "-Djdk.internal.httpclient.disableHostnameVerification=true" "-Dselenium.version=$new_version"
-          }
+      timeout-minutes: 40
+      run: |
+        # Get current selenium.version from Maven
+        $current_version = & mvn -f examples/java/pom.xml help:evaluate "-Dexpression=selenium.version" -q "-DforceStdout"
+        Write-Output "Current selenium.version: $current_version"
+        # If version is in the form X.Y.Z, bump minor and set to SNAPSHOT
+        if ($current_version -match '^([0-9]+)\.([0-9]+)\.([0-9]+)$') {
+          $major = $matches[1]
+          $minor = $matches[2]
+          $next_minor = [int]$minor + 1
+          $new_version = "$major.$next_minor.0-SNAPSHOT"
+          Write-Output "Using selenium.version $new_version for tests"
+          cd examples/java
+          mvn -B -U test "-Djdk.internal.httpclient.disableHostnameVerification=true" "-Dselenium.version=$new_version"
+        }
     - name: Upload test report
       uses: actions/upload-artifact@v7
       if: failure()

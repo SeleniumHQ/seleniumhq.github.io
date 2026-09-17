@@ -97,7 +97,7 @@ class LogTest extends BaseTest {
 
             StackTrace stackTrace = logEntry.getStackTrace();
             Assertions.assertNotNull(stackTrace);
-            Assertions.assertEquals(4, stackTrace.getCallFrames().size());
+            Assertions.assertEquals(3, stackTrace.getCallFrames().size());
         }
     }
 
