@@ -5,7 +5,7 @@ weight: 6
 description: >-
     Estas capacidades e características são específicas ao navegador Mozilla Firefox.
 aliases: [
-"/pt-br/documentation/capabilities/firefox"
+"/documentation/capabilities/firefox"
 ]
 ---
 

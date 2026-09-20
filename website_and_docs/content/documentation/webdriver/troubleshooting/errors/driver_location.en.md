@@ -9,6 +9,21 @@ aliases: [
 "/documentation/en/webdriver/driver_requirements/",
 "/documentation/getting_started/installing_browser_drivers/",
 "/documentation/webdriver/getting_started/install_drivers/",
+"/documentation/ja/selenium_installation/installing_webdriver_binaries/",
+"/documentation/ja/webdriver/driver_requirements/",
+"/documentation/pt-br/selenium_installation/installing_webdriver_binaries/",
+"/documentation/pt-br/webdriver/driver_requirements/",
+"/documentation/zh-cn/selenium_installation/installing_webdriver_binaries/",
+"/documentation/zh-cn/webdriver/driver_requirements/",
+"/ja/documentation/getting_started/installing_browser_drivers/",
+"/ja/documentation/webdriver/getting_started/install_drivers/",
+"/ja/documentation/webdriver/troubleshooting/errors/driver_location/",
+"/pt-br/documentation/getting_started/installing_browser_drivers/",
+"/pt-br/documentation/webdriver/getting_started/install_drivers/",
+"/pt-br/documentation/webdriver/troubleshooting/errors/driver_location/",
+"/zh-cn/documentation/getting_started/installing_browser_drivers/",
+"/zh-cn/documentation/webdriver/getting_started/install_drivers/",
+"/zh-cn/documentation/webdriver/troubleshooting/errors/driver_location/"
 ]
 ---
 

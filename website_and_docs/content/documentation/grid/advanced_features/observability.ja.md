@@ -2,7 +2,6 @@
 title: "可観測性"
 linkTitle: "可観測性"
 weight: 1
-aliases: ["/documentation/ja/grid/grid_4/advanced_features/observability/"]
 ---
 
 ## 目次
@@ -11,7 +10,7 @@ aliases: ["/documentation/ja/grid/grid_4/advanced_features/observability/"]
 - [可観測性](#可観測性)
   - [分散トレーシング](#分散トレーシング)
   - [イベントロギング](#イベントロギング)
-- [Grid の可観測性](#Grid-の可観測性)
+- [Grid の可観測性](#grid-の可観測性)
   - [トレースの可視化](#トレースの可視化)
   - [イベントログの活用](#イベントログの活用)
 - [参考](#参考)

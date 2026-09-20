@@ -8,9 +8,11 @@
   },
   "author": "SeleniumHQ",
   "license": "Apache-2.0",
-  "dependencies": {
-    "autoprefixer": "^10.4.21",
-    "postcss": "^8.5.4",
-    "postcss-cli": "^11.0.1"
-  }
+  "dependencies": {},
+  "devDependencies": {
+    "sass-embedded": "1.104.1"
+  },
+  "workspaces": [
+    "packages/hugoautogen"
+  ]
 }

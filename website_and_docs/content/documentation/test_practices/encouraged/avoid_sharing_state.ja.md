@@ -3,8 +3,7 @@ title: "状態を共有しない"
 linkTitle: "状態を共有しない"
 weight: 8
 aliases: [
-"/documentation/ja/guidelines_and_recommendations/avoid_sharing_state/",
-"/ja/documentation/guidelines/avoid_sharing_state/"
+"/documentation/guidelines/avoid_sharing_state/"
 ]
 ---
 
@@ -20,7 +19,7 @@ aliases: [
 * テストごとに新しいWebDriverインスタンスを作成します。
 これにより、テストの分離が保証され、並列化がより簡単になります。
 
-    * If you choose [pytest](https://pytest.org/) as your test runner, this can be 
-    easily done by yielding your driver in a global fixture. This way each test gets its own 
-    driver instance, and you can ensure that drivers always quit after a test is finished 
-    (pass or fail).
+    * テストランナーとして [pytest](https://pytest.org/) を選択した場合、グローバルフィクスチャで
+    ドライバーを yield することで、これを簡単に実現できます。これにより、各テストは独自の
+    ドライバーインスタンスを取得でき、テストの成功・失敗を問わず、テスト完了後に常に
+    ドライバーを終了させることができます。

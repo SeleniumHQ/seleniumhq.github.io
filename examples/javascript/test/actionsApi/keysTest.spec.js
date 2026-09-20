@@ -14,12 +14,14 @@ describe('Keyboard Action - Keys test', function() {
   it('KeyDown', async function() {
     await driver.get('https://www.selenium.dev/selenium/web/single_text_input.html')
 
+    const textField = driver.findElement(By.id('textInput'))
+    await textField.click()
+
     await driver.actions()
       .keyDown(Key.SHIFT)
       .sendKeys('a')
       .perform()
 
-    const textField = driver.findElement(By.id('textInput'))
     assert.deepStrictEqual(await textField.getAttribute('value'), 'A')
   })
 

@@ -3,12 +3,22 @@ title: "BiDirectional API (W3C compliant)"
 linkTitle: "W3C"
 weight: 16
 description: >
-    Examples of working with Chrome DevTools Protocol in Selenium.
-    CDP support is temporary until WebDriver BiDi has been implemented.
+    Examples of working with the W3C WebDriver BiDi protocol in Selenium — the standard,
+    cross-browser replacement for the Chrome DevTools Protocol. These APIs stream events from the
+    browser over a WebSocket, for network interception, console logs, and browser event handling.
 aliases: [
 "/documentation/en/webdriver/bidirectional/bidirectional_w3c",
 "/documentation/en/webdriver/bidi_apis/bidi_w3c",
-"/documentation/webdriver/bidi_apis/bidi_w3c"
+"/documentation/webdriver/bidi_apis/bidi_w3c",
+"/documentation/ja/webdriver/bidi_apis/bidi_w3c",
+"/documentation/pt-br/webdriver/bidi_apis/bidi_w3c",
+"/documentation/zh-cn/webdriver/bidi_apis/bidi_w3c",
+"/ja/documentation/webdriver/bidi/w3c/",
+"/ja/documentation/webdriver/bidi_apis/bidi_w3c",
+"/pt-br/documentation/webdriver/bidi/w3c/",
+"/pt-br/documentation/webdriver/bidi_apis/bidi_w3c",
+"/zh-cn/documentation/webdriver/bidi/w3c/",
+"/zh-cn/documentation/webdriver/bidi_apis/bidi_w3c"
 ]
 ---
 

@@ -4,7 +4,16 @@ linkTitle: "Components"
 weight: 1
 aliases: [
 "/documentation/en/webdriver/understanding_the_components/",
-"/documentation/webdriver/understanding_the_components"
+"/documentation/webdriver/understanding_the_components",
+"/documentation/ja/webdriver/understanding_the_components/",
+"/documentation/pt-br/webdriver/understanding_the_components/",
+"/documentation/zh-cn/webdriver/understanding_the_components/",
+"/ja/documentation/overview/components/",
+"/ja/documentation/webdriver/understanding_the_components",
+"/pt-br/documentation/overview/components/",
+"/pt-br/documentation/webdriver/understanding_the_components",
+"/zh-cn/documentation/overview/components/",
+"/zh-cn/documentation/webdriver/understanding_the_components"
 ]
 ---
 
@@ -28,7 +37,7 @@ same system.) NOTE: _Some people refer to the drivers as proxies._
 * **Framework:** An additional library that is used as a support for WebDriver 
 suites. These frameworks may be test frameworks such as JUnit or NUnit. 
 They may also be frameworks supporting natural language features such 
-as Cucumber or Robotium. Frameworks may also be written and used for 
+as Cucumber or Robot Framework. Frameworks may also be written and used for 
 tasks such as manipulating or configuring the system under test, data 
 creation, test oracles, etc.
 

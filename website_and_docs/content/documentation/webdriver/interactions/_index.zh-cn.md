@@ -3,9 +3,8 @@ title: "浏览器交互"
 linkTitle: "交互"
 weight: 10
 aliases: [
-"/documentation/zh-cn/webdriver/browser_manipulation/",
-"/zh-cn/documentation/webdriver/browser_manipulation/",
-"/zh-cn/documentation/webdriver/browser/"
+"/documentation/webdriver/browser_manipulation/",
+"/documentation/webdriver/browser/"
 ]
 ---
 
@@ -17,7 +16,7 @@ aliases: [
 
 {{< tabpane langEqualsHeader=true >}}
 {{< tab header="Java" text=true >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/InteractionsTest.java#L15" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/InteractionsTest.java#L12" >}}
 {{< /tab >}}
 {{< tab header="Python" text=true >}}
 {{< gh-codeblock path="/examples/python/tests/interactions/test_interactions.py#L7" >}}
@@ -40,7 +39,7 @@ aliases: [
 
 {{< tabpane langEqualsHeader=true >}}
 {{< tab header="Java" text=true >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/InteractionsTest.java#L26" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/InteractionsTest.java#L20" >}}
 {{< /tab >}}
 {{< tab header="Python" text=true >}}
 {{< gh-codeblock path="/examples/python/tests/interactions/test_interactions.py#L10" >}}

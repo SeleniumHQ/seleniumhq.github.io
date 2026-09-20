@@ -2,7 +2,6 @@
 title: "Observabilidade"
 linkTitle: "Observabilidade"
 weight: 1
-aliases: ["/documentation/pt-br/grid/grid_4/advanced_features/observability/"]
 ---
 
 
@@ -10,10 +9,10 @@ aliases: ["/documentation/pt-br/grid/grid_4/advanced_features/observability/"]
  - [Selenium Grid](#selenium-grid)
  - [Observabilidade](#observabilidade)
 	 - [Rastreamento distribuído](#rastreamento-distribuído) 	
-	 -  [Registro de eventos](#Registro-de-eventos)
-  - [Observabilidade da Grade](#observabilidade-da-grade)
-	  - [Visualizando Traços](#visualizando-traços)
-	  - [Aproveitando logs de eventos](#Aproveitando-logs-de-eventos)
+	 -  [Registro de eventos](#registro-de-eventos)
+  - [Observabilidade da Grade](#observabilidade-do-grid)
+	  - [Visualizando Traços](#visualizando-rastreamentos)
+	  - [Aproveitando logs de eventos](#explorando-logs-de-eventos)
   - [Referências](#referências)
 
 ## Selenium Grid

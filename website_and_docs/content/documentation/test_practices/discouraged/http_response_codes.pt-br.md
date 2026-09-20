@@ -3,8 +3,7 @@ title: "Códigos de respostas HTTP"
 linkTitle: "Códigos de respostas HTTP"
 weight: 3
 aliases: [
-"/documentation/pt-br/worst_practices/http_response_codes/",
-"/pt-br/documentation/worst_practices/http_response_codes/"
+"/documentation/worst_practices/http_response_codes/"
 ] 
 ---
 

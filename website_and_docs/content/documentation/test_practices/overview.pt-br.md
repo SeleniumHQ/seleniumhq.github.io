@@ -3,8 +3,7 @@ title: "Sobre automação de testes"
 linkTitle: "Sobre automação de testes"
 weight: 2
 aliases: [
-"/documentation/pt-br/introduction/on_test_automation/",
-"/pt-br/documentation/guidelines/on_test_automation/"
+"/documentation/guidelines/on_test_automation/"
 ]
 ---
 

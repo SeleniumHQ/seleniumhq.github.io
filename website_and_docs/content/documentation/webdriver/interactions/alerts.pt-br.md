@@ -3,9 +3,8 @@ title: "Alertas, prompts e confirmações JavaScript"
 linkTitle: "Alertas, prompts e confirmações JavaScript"
 weight: 2
 aliases: [
-"/documentation/pt-br/webdriver/js_alerts_prompts_and_confirmations/",
-"/pt-br/documentation/webdriver/js_alerts_prompts_and_confirmations/",
-"/pt-br/documentation/webdriver/browser/alerts/"
+"/documentation/webdriver/js_alerts_prompts_and_confirmations/",
+"/documentation/webdriver/browser/alerts/"
 ]
 ---
 
@@ -29,7 +28,7 @@ alertas.
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/AlertsTest.java#L36-L41" >}}
 {{< /tab >}}
 {{< tab header="Python" text=true >}}
-{{< gh-codeblock path="/examples/python/tests/interactions/test_alerts.py#L12-L18" >}}
+{{< gh-codeblock path="/examples/python/tests/interactions/test_alerts.py#L13-L19" >}}
 {{< /tab >}}
 
 {{< tab header="Ruby" text=true >}}
@@ -67,7 +66,7 @@ Este exemplo também mostra uma abordagem diferente para armazenar um alerta:
 {{< /tab >}}
 
 {{< tab header="Python" text=true >}}
-{{< gh-codeblock path="/examples/python/tests/interactions/test_alerts.py#L26-L32" >}}
+{{< gh-codeblock path="/examples/python/tests/interactions/test_alerts.py#L27-L33" >}}
 {{< /tab >}}
 
   {{< tab header="CSharp" >}}
@@ -126,7 +125,7 @@ Veja um exemplo de prompt </a>.
 {{< /tab >}}
 
 {{< tab header="Python" text=true >}}
-{{< gh-codeblock path="/examples/python/tests/interactions/test_alerts.py#L40-L47" >}}
+{{< gh-codeblock path="/examples/python/tests/interactions/test_alerts.py#L41-L48" >}}
 {{< /tab >}}
 
   {{< tab header="CSharp" >}}
@@ -162,3 +161,9 @@ alert.sendKeys("Selenium")
 alert.accept()
   {{< /tab >}}
 {{< /tabpane >}}
+
+## beforeunload
+
+Drivers recentes descartam automaticamente os prompts de `beforeunload` por padrão.
+Para manter o comportamento antigo,
+veja [unhandledPromptBehavior]({{< ref "../drivers/options#unhandledpromptbehavior" >}}).

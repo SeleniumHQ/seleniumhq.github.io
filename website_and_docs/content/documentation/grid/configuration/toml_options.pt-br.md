@@ -4,7 +4,7 @@ linkTitle: "Toml Options"
 weight: 3
 description: Grid configuration examples using Toml files.
 aliases: [
-"/pt-br/documentation/grid/configuring_components/toml_options/"
+"/documentation/grid/configuring_components/toml_options/"
 ]
 ---
 

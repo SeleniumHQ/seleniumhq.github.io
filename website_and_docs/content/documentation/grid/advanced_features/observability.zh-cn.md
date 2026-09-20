@@ -2,7 +2,6 @@
 title: "可观测性"
 linkTitle: "可观测性"
 weight: 1
-aliases: ["/documentation/zh-cn/grid/grid_4/advanced_features/observability/"]
 ---
 
 

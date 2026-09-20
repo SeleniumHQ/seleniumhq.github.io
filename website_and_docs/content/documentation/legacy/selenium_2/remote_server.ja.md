@@ -3,8 +3,7 @@ title: "リモートWebDriverサーバー"
 linkTitle: "リモートWebDriverサーバー"
 weight: 6
 aliases: [
-"/documentation/ja/legacy_docs/remote_webdriver_server/",
-"/ja/documentation/legacy/remote_webdriver_server/"
+"/documentation/legacy/remote_webdriver_server/"
 ]
 ---
 

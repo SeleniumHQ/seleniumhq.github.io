@@ -3,8 +3,7 @@ title: "Relatórios melhorados"
 linkTitle: "Relatórios melhorados"
 weight: 7
 aliases: [
-"/documentation/pt-br/guidelines_and_recommendations/improved_reporting/",
-"/pt-br/documentation/guidelines/improved_reporting/"
+"/documentation/guidelines/improved_reporting/"
 ]
 ---
 
@@ -16,6 +15,8 @@ Relatórios xUnit são populares para importar resultados para um servidor de in
 para obter mais informações sobre resultados de relatórios em vários idiomas.
 
 <!-- TODO: Add links.-->
+[Allure Report: fancy reports (language and framework agnostic)](https://allurereport.org/)
+
 [NUnit 3 Console Runner](//github.com/nunit/docs/wiki/Console-Runner)
 
 [NUnit 3 Console Command Line](//github.com/nunit/docs/wiki/Console-Command-Line)

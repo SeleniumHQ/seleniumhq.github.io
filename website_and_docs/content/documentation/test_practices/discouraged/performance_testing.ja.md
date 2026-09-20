@@ -3,8 +3,7 @@ title: "パフォーマンステスト"
 linkTitle: "パフォーマンステスト"
 weight: 6
 aliases: [
-"/documentation/ja/worst_practices/performance_testing/",
-"/ja/documentation/worst_practices/performance_testing/"
+"/documentation/worst_practices/performance_testing/"
 ] 
 ---
 

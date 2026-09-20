@@ -3,8 +3,7 @@ title: "テストの依存関係"
 linkTitle: "テストの依存関係"
 weight: 5
 aliases: [
-"/documentation/ja/worst_practices/test_dependency/",
-"/ja/documentation/worst_practices/test_dependency/"
+"/documentation/worst_practices/test_dependency/"
 ] 
 ---
 

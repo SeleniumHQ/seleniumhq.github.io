@@ -4,7 +4,7 @@ linkTitle: "Selenium Community Live - Episode 8"
 date: 2025-07-30
 tags: ["webinar", "meetup", "talks","community"]
 categories: ["webinar"]
-author: <a href="https://www.linkedin.com/in/musepallavi/" target="_blank">Pallavi Sharma</a>
+author: <a href="https://www.linkedin.com/in/rpallavisharma/" target="_blank">Pallavi Sharma</a>
 images:
 description: >
   Selenium Community Live - Episode 8

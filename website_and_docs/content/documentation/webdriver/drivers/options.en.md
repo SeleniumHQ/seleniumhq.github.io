@@ -14,6 +14,36 @@ aliases: [
 "/documentation/webdriver/page_loading_strategy/",
 "/documentation/webdriver/capabilities/page_loading_strategy/",
 "/documentation/capabilitis/shared/",
+"/documentation/ja/driver_idiosyncrasies/shared_capabilities/",
+"/documentation/ja/webdriver/http_proxies/",
+"/documentation/ja/webdriver/page_loading_strategy/",
+"/documentation/pt-br/driver_idiosyncrasies/shared_capabilities/",
+"/documentation/pt-br/webdriver/http_proxies/",
+"/documentation/pt-br/webdriver/page_loading_strategy/",
+"/documentation/zh-cn/driver_idiosyncrasies/shared_capabilities/",
+"/documentation/zh-cn/webdriver/http_proxies/",
+"/documentation/zh-cn/webdriver/page_loading_strategy/",
+"/ja/documentation/capabilitis/shared/",
+"/ja/documentation/webdriver/capabilities/http_proxies/",
+"/ja/documentation/webdriver/capabilities/page_loading_strategy/",
+"/ja/documentation/webdriver/capabilities/shared_capabilities/",
+"/ja/documentation/webdriver/drivers/options/",
+"/ja/documentation/webdriver/http_proxies/",
+"/ja/documentation/webdriver/page_loading_strategy/",
+"/pt-br/documentation/capabilitis/shared/",
+"/pt-br/documentation/webdriver/capabilities/http_proxies/",
+"/pt-br/documentation/webdriver/capabilities/page_loading_strategy/",
+"/pt-br/documentation/webdriver/capabilities/shared_capabilities/",
+"/pt-br/documentation/webdriver/drivers/options/",
+"/pt-br/documentation/webdriver/http_proxies/",
+"/pt-br/documentation/webdriver/page_loading_strategy/",
+"/zh-cn/documentation/capabilitis/shared/",
+"/zh-cn/documentation/webdriver/capabilities/http_proxies/",
+"/zh-cn/documentation/webdriver/capabilities/page_loading_strategy/",
+"/zh-cn/documentation/webdriver/capabilities/shared_capabilities/",
+"/zh-cn/documentation/webdriver/drivers/options/",
+"/zh-cn/documentation/webdriver/http_proxies/",
+"/zh-cn/documentation/webdriver/page_loading_strategy/"
 ]
 ---
 
@@ -412,7 +442,7 @@ user prompt encounters at the remote-end. This is defined by
 {{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L51-53">}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Drivers/OptionsTest.cs#L59-L60">}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< gh-codeblock path="/examples/ruby/spec/drivers/options_spec.rb#L60-L61" >}}
@@ -424,6 +454,9 @@ user prompt encounters at the remote-end. This is defined by
 {{< badge-code >}}
 {{< /tab >}}
 {{< /tabpane >}}
+
+NOTE: For `beforeunload` prompts specifically, ChromeDriver needs `ignore` set in addition to
+[BiDi]({{< ref "../bidi/" >}}) enabled to keep the prompt open.
 
 ## setWindowRect
 

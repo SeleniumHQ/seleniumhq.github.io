@@ -32,7 +32,7 @@ class LogTest extends BaseTest {
       throws ExecutionException, InterruptedException, TimeoutException {
     CompletableFuture<ConsoleLogEntry> future = new CompletableFuture<>();
 
-    long id = ((RemoteWebDriver) driver).script().addConsoleMessageHandler(future::complete);
+    String id = ((RemoteWebDriver) driver).script().addConsoleMessageHandler(future::complete);
 
     driver.get("https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html");
     driver.findElement(By.id("consoleLog")).click();
@@ -50,7 +50,7 @@ class LogTest extends BaseTest {
 
     driver.get("https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html");
 
-    long id = ((RemoteWebDriver) driver).script().addConsoleMessageHandler(logs::add);
+    String id = ((RemoteWebDriver) driver).script().addConsoleMessageHandler(logs::add);
     ((RemoteWebDriver) driver).script().removeConsoleMessageHandler(id);
 
     driver.findElement(By.id("consoleLog")).click();
@@ -62,7 +62,7 @@ class LogTest extends BaseTest {
   void canAddJsErrorHandler() throws ExecutionException, InterruptedException, TimeoutException {
     CompletableFuture<JavascriptLogEntry> future = new CompletableFuture<>();
 
-    long id = ((RemoteWebDriver) driver).script().addJavaScriptErrorHandler(future::complete);
+    String id = ((RemoteWebDriver) driver).script().addJavaScriptErrorHandler(future::complete);
 
     driver.get("https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html");
     driver.findElement(By.id("jsException")).click();
@@ -78,7 +78,7 @@ class LogTest extends BaseTest {
   void canRemoveJsErrorHandler() {
     CopyOnWriteArrayList<JavascriptLogEntry> logs = new CopyOnWriteArrayList<>();
 
-    long id = ((RemoteWebDriver) driver).script().addJavaScriptErrorHandler(logs::add);
+    String id = ((RemoteWebDriver) driver).script().addJavaScriptErrorHandler(logs::add);
     ((RemoteWebDriver) driver).script().removeJavaScriptErrorHandler(id);
 
     driver.get("https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html");

@@ -3,7 +3,7 @@ title: "与IFrames和frames一起工作"
 linkTitle: "Frames"
 weight: 6
 aliases: [
-"/zh-cn/documentation/webdriver/browser/frames/"
+"/documentation/webdriver/browser/frames/"
 ]
 ---
 
@@ -16,7 +16,7 @@ aliases: [
 
 ```html
 <div id="modal">
-  <iframe id="buttonframe"name="myframe"src="https://seleniumhq.github.io">
+  <iframe id="buttonframe" name="myframe" src="https://seleniumhq.github.io">
    <button>Click here</button>
  </iframe>
 </div>

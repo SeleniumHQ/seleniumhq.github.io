@@ -4,7 +4,16 @@ linkTitle: "Overview"
 weight: 1
 aliases: [
 "/documentation/en/introduction/on_test_automation/",
-"/documentation/guidelines/on_test_automation/"
+"/documentation/guidelines/on_test_automation/",
+"/documentation/ja/introduction/on_test_automation/",
+"/documentation/pt-br/introduction/on_test_automation/",
+"/documentation/zh-cn/introduction/on_test_automation/",
+"/ja/documentation/guidelines/on_test_automation/",
+"/ja/documentation/test_practices/overview/",
+"/pt-br/documentation/guidelines/on_test_automation/",
+"/pt-br/documentation/test_practices/overview/",
+"/zh-cn/documentation/guidelines/on_test_automation/",
+"/zh-cn/documentation/test_practices/overview/"
 ]
 ---
 

@@ -58,6 +58,16 @@ pull request updating this page.
     <td></td>
   </tr>
   <tr>
+    <th><a href="#kubernetes">Kubernetes</a></th>
+    <td><i class="fas fa-check"></i></td>
+    <td></td>
+    <td><i class="fas fa-check"></i></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
     <th><a href="#events">Events</a></th>
     <td></td>
     <td><i class="fas fa-check"></i></td>
@@ -164,19 +174,42 @@ pull request updating this page.
 | `--slot-selector` | string | `org.openqa.selenium.grid.distributor.selector.DefaultSlotSelector` | Full class name of non-default slot selector. This is used to select a slot in a Node once the Node has been matched. |
 | `--newsession-threadpool-size` | int | `24` | The Distributor uses a fixed-sized thread pool to create new sessions as it consumes new session requests from the queue. This allows configuring the size of the thread pool. The default value is no. of available processors * 3. Note: If the no. of threads is way greater than the available processors it will not always increase the performance. A high number of threads causes more context switching which is an expensive operation. |
 | `--purge-nodes-interval` | int | `30` | How often, in seconds, will the Distributor purge Nodes that have been down for a while. This is calculated based on the heartbeat received from a particular node. |
+| `--distributor-backend-url` | string | `redis://localhost:6379` | Backend datastore URL for the Distributor implementation. Used by Redis-backed and other external implementations loaded via `--ext`. |
 
 ### Docker
 
 | Option | Type | Value/Example | Description |
 |---|---|---|---|
 | `--docker-assets-path` | string | `/opt/selenium/assets` | Absolute path where assets will be stored |
-| `--docker-` | string[] | `selenium/standalone-firefox:latest '{"browserName": "firefox"}'` | Docker configs which map image name to stereotype capabilities (example `-D selenium/standalone-firefox:latest '{"browserName": "firefox"}') |
+| `--docker` / `-D` | string[] | `selenium/standalone-firefox:latest '{"browserName": "firefox"}'` | Docker configs which map image name to stereotype capabilities (example: `-D selenium/standalone-firefox:latest '{"browserName": "firefox"}'`) |
 | `--docker-devices` | string[] | `/dev/kvm:/dev/kvm` | Exposes devices to a container. Each device mapping declaration must have at least the path of the device in both host and container separated by a colon like in this example: /device/path/in/host:/device/path/in/container |
 | `--docker-host` | string | `localhost` | Host name where the Docker daemon is running |
 | `--docker-port` | int | `2375` | Port where the Docker daemon is running |
 | `--docker-url` | string | `http://localhost:2375` | URL for connecting to the Docker daemon |
 | `--docker-video-image` | string | `selenium/video:latest` | Docker image to be used when video recording is enabled |
- | `--docker-host-config-keys` | string[] | `Dns DnsOptions DnsSearch ExtraHosts Binds` | Specify which docker host configuration keys should be passed to browser containers. Keys name can be found in the Docker API [documentation](https://docs.docker.com/engine/api/v1.41/#tag/Container/operation/ContainerCreate), or by running `docker inspect` the node-docker container. |
+| `--docker-host-config-keys` | string[] | `Dns DnsOptions DnsSearch ExtraHosts Binds` | Specify which docker host configuration keys should be passed to browser containers. Keys name can be found in the Docker API [documentation](https://docs.docker.com/engine/api/v1.41/#tag/Container/operation/ContainerCreate), or by running `docker inspect` the node-docker container. |
+| `--docker-api-version` | string | `1.40` | Docker API version to use. Pin a specific API version instead of relying on auto-detection by the implementation. |
+| `--docker-server-start-timeout` | int | `55` | Max time (in seconds) to wait for the browser server to successfully start up inside the container, before cancelling the process. |
+| `--docker-grouping-labels` | string[] | `azure.container.group aws.ecs.cluster` | Custom labels used for grouping dynamic containers. Makes the system more flexible for different platforms and use cases. |
+| `--docker-stop-grace-period` | int | `60` | Grace period (in seconds) to wait for browser and video containers to stop gracefully before they are forcibly terminated. |
+
+### Kubernetes
+
+| Option | Type | Value/Example | Description |
+|---|---|---|---|
+| `--kubernetes-url` | string | `"https://my-k8s-cluster:6443"` | Kubernetes API server URL. When set, connects to a remote cluster instead of using in-cluster or kubeconfig auto-discovery. |
+| `--kubernetes-configs` / `-K` | string[] | `selenium/standalone-firefox:latest '{"browserName": "firefox"}'` | Kubernetes configs which map image name to stereotype capabilities (example: `-K selenium/standalone-firefox:latest '{"browserName": "firefox"}'`). Use `configmap:[namespace/]<name>` as the key to load a Job template from a Kubernetes ConfigMap instead of an image name. |
+| `--kubernetes-namespace` | string | `"selenium"` | Kubernetes namespace to create browser Jobs in. Auto-detected from the client when running in-cluster if not set. |
+| `--kubernetes-service-account` | string | `"selenium-session"` | Override service account for browser Jobs. Auto-inherited from the Node Pod when running in K8s. |
+| `--kubernetes-image-pull-policy` | string | `"IfNotPresent"` | Override image pull policy for browser containers (`Always`, `IfNotPresent`, `Never`). Auto-inherited from the Node Pod when running in K8s. |
+| `--kubernetes-server-start-timeout` | int | `120` | Max time (in seconds) to wait for the browser server to start up in the K8s Pod. |
+| `--kubernetes-termination-grace-period` | int | `30` | Seconds to wait for containers to shut down gracefully before force-killing them. |
+| `--kubernetes-resource-requests` | string | `"cpu=500m,memory=512Mi"` | Override resource requests for browser containers (comma-separated `key=value` pairs). Auto-inherited from the Node Pod when running in K8s. |
+| `--kubernetes-resource-limits` | string | `"cpu=1,memory=1Gi"` | Override resource limits for browser containers (comma-separated `key=value` pairs). Auto-inherited from the Node Pod when running in K8s. |
+| `--kubernetes-node-selector` | string | `"disktype=ssd,region=us-west"` | Override node selector for scheduling browser Pods (comma-separated `key=value` pairs). Auto-inherited from the Node Pod when running in K8s. |
+| `--kubernetes-video-image` | string | `"selenium/video:latest"` | Container image to use as a video recording sidecar. Set to `false` to disable video recording (default). |
+| `--kubernetes-assets-path` | string | `"/opt/selenium/assets"` | Absolute path where session assets will be stored. |
+| `--kubernetes-label-inherit-prefix` | string | `"se/"` | Prefix filter for inheriting labels/annotations from the Node Pod to browser Jobs. Only labels/annotations whose keys start with this prefix are inherited. An empty string inherits all. |
 
 ### Events
 
@@ -186,6 +219,7 @@ pull request updating this page.
 | `--events-implementation` | string | `org.openqa.selenium.events.zeromq.ZeroMqEventBus` | Full class name of non-default event bus implementation |
 | `--publish-events` | string | `tcp://*:4442` | Connection string for publishing events to the event bus |
 | `--subscribe-events` | string | `tcp://*:4443` | Connection string for subscribing to events from the event bus |
+| `--eventbus-heartbeat-period` | int | `30` | How often, in seconds, will the EventBus socket send heartbeats. |
 
 ### Logging
 
@@ -209,7 +243,7 @@ pull request updating this page.
 ### Node
 
 | Option | Type | Value/Example | Description |
-|---|---|---|---|---|
+|---|---|---|---|
 | `--detect-drivers` | boolean | `true` | Autodetect which drivers are available on the current system, and add them to the Node. |
 | `--driver-configuration` | string[] | `display-name="Firefox Nightly" max-sessions=2 webdriver-path="/usr/local/bin/geckodriver" stereotype="{\"browserName\": \"firefox\", \"browserVersion\": \"86\", \"moz:firefoxOptions\": {\"binary\":\"/Applications/Firefox Nightly.app/Contents/MacOS/firefox-bin\"}}"` | List of configured drivers a Node supports. It is recommended to provide this type of configuration through a toml config file to improve readability |
 | `--driver-factory` | string[] | `org.openqa.selenium.example.LynxDriverFactory '{"browserName": "lynx"}'` | Mapping of fully qualified class name to a browser configuration that this matches against. |
@@ -226,10 +260,14 @@ pull request updating this page.
 | `--no-vnc-port`| int | `7900` | If VNC is available, sets the port where the local noVNC stream can be obtained |
 | `--drain-after-session-count`| int | `1` | Drain and shutdown the Node after X sessions have been executed. Useful for environments like Kubernetes. A value higher than zero enables this feature. |
 | `--hub`| string | `http://localhost:4444` | The address of the Hub in a Hub-and-Node configuration. Can be a hostname or IP address (`hostname`), in which case the Hub will be assumed to be `http://hostname:4444`, the `--grid-url` will be the same `--publish-events` will be `tcp://hostname:4442` and `--subscribe-events` will be `tcp://hostname:4443`. If `hostname` contains a port number, that will be used for `--grid-url` but the URIs for the event bus will remain the same. Any of these default values may be overridden but setting the correct flags. If the hostname has  a protocol (such as `https`) that will be used too. |
-| `--enable-cdp`| boolean | `true` | Enable CDP proxying in Grid. A Grid admin can disable CDP if the network doesnot allow websockets. True by default. |
+| `--enable-cdp`| boolean | `true` | Enable CDP proxying in Grid. A Grid admin can disable CDP if the network does not allow websockets. True by default. |
+| `--enable-bidi`| boolean | `true` | Enable BiDi proxying in Grid. A Grid admin can disable BiDi if the network does not allow websockets. True by default. |
 | `--enable-managed-downloads`| boolean | `false` | This causes the Node to auto manage files downloaded for a given session on the Node. |
 | `--selenium-manager`| boolean | `false` | When drivers are not available on the current system, use Selenium Manager. False by default. |
-| `--connection-limit-per-session` | int | `10` | Let X be the maximum number of websocket connections per session.This will ensure one session is not able to exhaust the connection limit of the host. |
+| `--connection-limit-per-session` | int | `10` | Let X be the maximum number of websocket connections per session. This will ensure one session is not able to exhaust the connection limit of the host. |
+| `--delete-session-on-ui` | boolean | `false` | Enable capability to support deleting a session via the Grid UI. False by default. |
+| `--register-shutdown-on-failure` | boolean | `false` | If enabled, the Node will shut down after the register period is completed without a successful registration. Useful in container environments to trigger a restart. |
+| `--node-down-failure-threshold` | int | `3` | Maximum number of consecutive session creation failures before the Node is marked as DOWN. A value of `0` (default) disables this feature and allows unlimited retries. |
 
 ### Relay
 
@@ -250,6 +288,7 @@ pull request updating this page.
 | `--username` | string | `admin` | User name clients must use to connect to the server. Both this and the password need to be set in order to be used. |
 | `--sub-path` | string | `my_company/selenium_grid` | A sub-path that should be considered for all user facing routes on the Hub/Router/Standalone. |
 | `--disable-ui` | boolean | `true` | Disable the Grid UI. |
+| `--tcp-tunnel` | boolean | `true` | Enable the transparent TCP tunnel for WebSocket connections (BiDi, CDP). Disable to route WebSocket traffic through the Grid proxy instead, e.g. for benchmarking the proxy path or in network topologies where the Router cannot open direct TCP connections to Nodes (e.g. Kubernetes port-forward setups). |
 
 
 ### Server
@@ -264,17 +303,22 @@ pull request updating this page.
 | `--https-private-key` | path | `/path/to/key.pkcs8` | Private key for https. Get more detailed information by running "java -jar selenium-server.jar info security" |
 | `--max-threads` | int | `24` | Maximum number of listener threads. Default value is: (available processors) * 3. |
 | `--port` | int | `4444` | Port to listen on. There is no default as this parameter is used by different components, for example, Router/Hub/Standalone will use 4444 and Node will use 5555. |
+| `--registration-secret` | string | `"Hunter2"` | Shared secret used to authenticate Node registration requests. Must match the value set on the Hub/Distributor. |
 
 ### SessionQueue
 
 | Option | Type | Value/Example | Description |
 |---|---|---|---|
-| `--sessionqueue` | uri | `http://localhost:1237` | Address of the session queue server. |
-| `-sessionqueue-host` | string | `localhost` | Host on which the session queue server is listening. |
+| `--sessionqueue` / `--sq` | uri | `http://localhost:1237` | Address of the session queue server. |
+| `--sessionqueue-host` | string | `localhost` | Host on which the session queue server is listening. |
 | `--sessionqueue-port` | int | `1234` | Port on which the session queue server is listening. |
 | `--session-request-timeout` | int | `300` | Timeout in seconds. A new incoming session request is added to the queue. Requests sitting in the queue for longer than the configured time will timeout. |
-| `--session-retry-interval` | int | `5` | Retry interval in seconds. If all slots are busy, new session request will be retried after the given interval. |
-| `--maximum-response-delay` | int | `8` | How often, in seconds, will the the SessionQueue response in case there is no data, to reduce the http requests while polling for new session requests. |
+| `--session-request-timeout-period` | int | `10` | How often, in seconds, the timeout for queued new session requests is checked. |
+| `--session-retry-interval` | int | `15` | Retry interval in milliseconds. If all slots are busy, new session request will be retried after the given interval. |
+| `--sessionqueue-batch-size` | int | `20` | Maximum number of session requests that can be consumed from the queue at a time, based on the available slots. |
+| `--maximum-response-delay` | int | `8` | How often, in seconds, will the SessionQueue respond in case there is no data, to reduce the http requests while polling for new session requests. (Config file only; not a CLI flag.) |
+| `--sessionqueue-implementation` | string | `org.openqa.selenium.grid.sessionqueue.local.LocalNewSessionQueue` | Full class name of non-default session queue implementation. |
+| `--sessionqueue-backend-url` | string | `redis://localhost:6379` | Backend datastore URL for the SessionQueue implementation. Used by Redis-backed and other external implementations loaded via `--ext`. |
 
 ### Sessions
 
@@ -283,6 +327,8 @@ pull request updating this page.
 | `--sessions` | uri | `http://localhost:1234` | Address of the session map server. |
 | `--sessions-host` | string | `localhost` | Host on which the session map server is listening. |
 | `--sessions-port` | int | `1234` | Port on which the session map server is listening. |
+| `--sessions-implementation` | string | `org.openqa.selenium.grid.sessionmap.redis.RedisBackedSessionMap` | Full class name of non-default session map implementation. |
+| `--sessions-scheme` | string | `redis` | URI scheme for the session map server (e.g. `redis`, `http`). |
 
 
 ## Configuration examples
@@ -417,7 +463,7 @@ options.setCapability("se:downloadsEnabled", true);
 In the response the list of file names appear under the key `names`.
 
 
-##### Dowloading a file:
+##### Downloading a file:
 
 * The endpoint to `POST` from is `/session/<sessionId>/se/files` with a payload of the form `{"name": "fileNameGoesHere}`
 * The session needs to be active in order for the command to work.

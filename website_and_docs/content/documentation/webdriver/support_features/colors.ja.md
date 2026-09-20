@@ -3,9 +3,8 @@ title: "色を扱う"
 linkTitle: "色を扱う"
 weight: 3
 aliases: [
-"/documentation/ja/support_packages/working_with_colours/",
-"/ja/documentation/support_packages/working_with_colours/",
-"/ja/documentation/webdriver/additional_features/working_with_colours/",
+"/documentation/support_packages/working_with_colours/",
+"/documentation/webdriver/additional_features/working_with_colours/"
 ]
 ---
 

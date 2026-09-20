@@ -31,7 +31,7 @@ public class PrintOptionsTest extends BaseChromeTest {
     {
         driver.get("https://www.selenium.dev/");
         PrintOptions printOptions = new PrintOptions();
-        printOptions.setPageSize(new PageSize(27.94, 21.59)); // A4 size in cm
+        printOptions.setPageSize(PageSize.ISO_A4);
         double currentHeight = printOptions.getPageSize().getHeight(); // use getWidth() to retrieve width
     }
 

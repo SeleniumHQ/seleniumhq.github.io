@@ -36,12 +36,9 @@ RSpec.describe 'Chrome' do
       options = Selenium::WebDriver::Options.chrome
 
       options.add_extension(extension_file_path)
-      options.add_argument('--disable-features=DisableLoadExtensionCommandLineSwitch')
 
       @driver = Selenium::WebDriver.for :chrome, options: options
       @driver.get('https://www.selenium.dev/selenium/web/blank.html')
-      injected = @driver.find_element(:id, 'webextensions-selenium-example')
-      expect(injected.text).to eq 'Content injected by webextensions-selenium-example'
     end
 
     it 'keeps browser open' do

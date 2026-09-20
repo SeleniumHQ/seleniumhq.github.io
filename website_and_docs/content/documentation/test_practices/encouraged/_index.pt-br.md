@@ -5,8 +5,7 @@ weight: 7
 description: >
   Guias e recomendações ao preparar soluções de testes com o projecto Selenium.
 aliases: [
-"/documentation/pt-br/guidelines_and_recommendations/",
-"/pt-br/documentation/guidelines/"
+"/documentation/guidelines/"
 ]
 ---
 

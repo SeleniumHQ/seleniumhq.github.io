@@ -4,11 +4,6 @@ linkTitle: "Seleniumのサイトとドキュメントに貢献する"
 weight: 2
 description: >-
     Seleniumのドキュメントとコード例を改善するための情報
-aliases: 
-        [
-          "/documentation/ja/contributing/",
-          "/documentation/ja/front_matter/typographical_conventions/"
-        ]
 ---
 
 Seleniumは大きなソフトウェアプロジェクトであり、そのサイトとドキュメントは、物事の仕組みを理解し、その可能性を活用する効果的な方法を学ぶための鍵となります。
@@ -63,7 +58,10 @@ Seleniumのすべてのコンポーネントは、時間の経過とともに非
 ページにテストを追加する場合は、Markdownファイル内の他のすべての行番号が正しいことを確認してください。
 ページの先頭にテストを追加すると、そのファイルの行番号を持つドキュメント内のすべての参照が更新されます。
 
-最後に、CIでテストがPassすることを確認してください。
+コード例では、シナリオを示すために関連するWebサイトやWebページが必要になる場合があります。
+例が安定して動作するように、https://www.selenium.dev/selenium/web/ で利用できるテスト用Webページを使用することを推奨します。
+
+最後に、CIでテストがパスすることを確認してください。
 
 
 ### 例の移動
@@ -79,7 +77,7 @@ tabには`text=true`を含めてください。デフォルトではtabはコー
 ## 貢献
 
 Seleniumプロジェクトは新しいコントリビュータを歓迎します。目立った価値ある貢献を継続的に行った個人は _コミッター_
-として認められ、プロジェクトへのコミットアクセス件が与えられます。
+として認められ、プロジェクトへのコミットアクセス権が与えられます。
 
 本ガイドでは、貢献のプロセスについて説明します。
 
@@ -94,9 +92,28 @@ Seleniumプロジェクトは新しいコントリビュータを歓迎します
 
 #### 依存関係: Hugo
 
-[Hugo](https://gohugo.io/)と[Docsyテーマ](https://www.docsy.dev/)を使用してサイトの構築とレンダリングをしています。このサイトの作業をするには、Hugoバイナリの“拡張”Sass/SCSSバージョンが必要です。Hugo 0.125.4の使用を推奨します。
+[Hugo](https://gohugo.io/)と[Docsyテーマ](https://www.docsy.dev/)を使用してサイトの構築とレンダリングをしています。このサイトの作業をするには、Hugoバイナリの“拡張”Sass/SCSSバージョンが必要です。Hugo 0.148.2の使用を推奨します。
 
 [Docsyのインストール手順](https://www.docsy.dev/docs/getting-started/#install-hugo)に従ってください。
+
+#### 依存関係: Go
+
+Docsyテーマは[Hugo Module](https://gohugo.io/hugo-modules/)として取り込まれているため、
+`hugo server`を実行する際にHugoがこれを解決するには[Go](https://go.dev/dl/)が必要です。
+`go.mod`に記載された最小バージョンを満たす任意のバージョンをインストールしてください。
+
+#### 依存関係: Node.js（省略可、本番用CSSパイプライン向け）
+
+`hugo server`でサイトをプレビューするだけであれば、Node.jsは**不要**です。開発モードでは
+Docsyが PostCSS の処理をスキップします。ローカルのビルドを、`build-site.sh`内の
+`hugo --minify`が実行する本番用CSSパイプライン（autoprefixer/PostCSS）に合わせたい場合にのみ、
+[Node.js](https://nodejs.org/)（現行の任意のリリース）が必要です。その場合は、先に
+`website_and_docs`で`npm install`を実行してください。
+
+> **注：** 今後のHugo/Docsyのアップグレードで状況が変わる可能性があります。テーマのアセット
+> （例: BootstrapやFont Awesome）がHugo Modulesからnpmパッケージへ移行された場合、
+> `npm install`（つまりNode.js）が本番用パイプラインだけでなく、すべてのビルドで
+> 必要になることがあります。
 
 ### ステップ 2: ブランチの作成
 
@@ -174,7 +191,11 @@ Fixes #141
 % git push origin my-feature-branch
 ```
 
-https://github.com/yourusername/seleniumhq.github.io.git を開き、_Pull Request_を押し、フォームを入力してください。 **CLAに署名したことを示してください** (ステップ7を参照)
+https://github.com/yourusername/seleniumhq.github.io.git を開き、 _Pull Request_ を押し、
+フォームを入力してください。 **CLAに署名したことを示してください**。
+CLAに署名するには、
+[cla-assistant.io/SeleniumHQ/seleniumhq.github.io](https://cla-assistant.io/SeleniumHQ/seleniumhq.github.io)
+にアクセスし、ページ上の"Sign in with GitHub to agree"ボタンをクリックしてください。
 
 プルリクエストは通常数日以内にレビューされます。対応すべきコメントがある場合は、新しく(できれば
 [fixups](http://git-scm.com/docs/git-commit)で)コミットし、同じブランチにプッシュしてください。

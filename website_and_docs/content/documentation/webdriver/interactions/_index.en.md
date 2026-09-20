@@ -6,6 +6,17 @@ aliases: [
 "/documentation/en/webdriver/browser_manipulation/",
 "/documentation/webdriver/browser_manipulation/",
 "/documentation/webdriver/browser/",
+"/documentation/ja/webdriver/browser_manipulation/",
+"/documentation/pt-br/webdriver/browser_manipulation/",
+"/documentation/zh-cn/webdriver/browser_manipulation/",
+"/ja/documentation/webdriver/browser_manipulation/",
+"/ja/documentation/webdriver/interactions/",
+"/pt-br/documentation/webdriver/browser/",
+"/pt-br/documentation/webdriver/browser_manipulation/",
+"/pt-br/documentation/webdriver/interactions/",
+"/zh-cn/documentation/webdriver/browser/",
+"/zh-cn/documentation/webdriver/browser_manipulation/",
+"/zh-cn/documentation/webdriver/interactions/"
 ]
 ---
 
@@ -18,7 +29,7 @@ You can read the current page title from the browser:
 {{< tabpane langEqualsHeader=true >}}
 {{< badge-examples >}}
 {{< tab header="Java" text=true >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/InteractionsTest.java#L15" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/InteractionsTest.java#L12" >}}
 {{< /tab >}}
 {{< tab header="Python" text=true >}}
 {{< gh-codeblock path="/examples/python/tests/interactions/test_interactions.py#L7" >}}
@@ -43,7 +54,7 @@ You can read the current URL from the browser's address bar using:
 {{< tabpane langEqualsHeader=true >}}
 {{< badge-examples >}}
 {{< tab header="Java" text=true >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/InteractionsTest.java#L26" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/InteractionsTest.java#L20" >}}
 {{< /tab >}}
 {{< tab header="Python" text=true >}}
 {{< gh-codeblock path="/examples/python/tests/interactions/test_interactions.py#L10" >}}

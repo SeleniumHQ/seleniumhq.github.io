@@ -3,9 +3,8 @@ title: "同cookies一起工作"
 linkTitle: "Cookies"
 weight: 4
 aliases: [
-"/documentation/zh-cn/support_packages/working_with_cookies/",
-"/zh-cn/documentation/support_packages/working_with_cookies/",
-"/zh-cn/documentation/webdriver/browser/cookies/"
+"/documentation/support_packages/working_with_cookies/",
+"/documentation/webdriver/browser/cookies/"
 ]
 ---
  
@@ -35,7 +34,7 @@ WebDriver API提供了一种使用内置的方法与Cookie进行交互:
 {{< gh-codeblock path="/examples/ruby/spec/interactions/cookies_spec.rb#L9-L11" >}}
   {{< /tab >}}
   {{< tab header="JavaScript" text=true >}}
-  {{< gh-codeblock path="/examples/javascript/test/interactions/cookies.spec.js#L18">}}
+{{< gh-codeblock path="/examples/javascript/test/interactions/cookies.spec.js#L18">}}
   {{< /tab >}}
 {{< tab header="Kotlin" >}}
 import org.openqa.selenium.Cookie

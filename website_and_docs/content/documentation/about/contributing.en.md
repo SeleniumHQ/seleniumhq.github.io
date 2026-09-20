@@ -6,7 +6,16 @@ description: >-
     Information on improving documentation and code examples for Selenium
 aliases: [
 "/documentation/en/contributing/",
-"/documentation/en/front_matter/typographical_conventions/"
+"/documentation/en/front_matter/typographical_conventions/",
+"/documentation/ja/contributing/",
+"/documentation/ja/front_matter/typographical_conventions/",
+"/documentation/pt-br/contributing/",
+"/documentation/pt-br/front_matter/typographical_conventions/",
+"/documentation/zh-cn/contributing/",
+"/documentation/zh-cn/front_matter/typographical_conventions/",
+"/ja/documentation/about/contributing/",
+"/pt-br/documentation/about/contributing/",
+"/zh-cn/documentation/about/contributing/"
 ]
 ---
 
@@ -79,6 +88,9 @@ Make sure that if you add a test to the page that all the other line numbers in 
 correct. Adding a test at the top of a page means updating every single reference in the documentation that has a line
 number for that file.
 
+Code examples may need a relevant website or web page to demonstrate the scenario. To ensure examples consistently work, 
+it is recommended to use the test web pages available at https://www.selenium.dev/selenium/web/.
+
 Finally, make sure that the tests pass in the CI.
 
 
@@ -117,10 +129,29 @@ and check out your copy locally.
 We use [Hugo](https://gohugo.io/) and the [Docsy theme](https://www.docsy.dev/)
 to build and render the site. You will need the “extended” 
 Sass/SCSS version of the Hugo binary to work on this site. We recommend
-to use Hugo 0.125.4 .
+to use Hugo 0.166.0 .
 
 Please follow the [Install Hugo](https://www.docsy.dev/docs/getting-started/#install-hugo) 
 instructions from Docsy.
+
+#### Dependencies: Go
+
+The Docsy theme is pulled in as a [Hugo Module](https://gohugo.io/hugo-modules/),
+so Hugo needs [Go](https://go.dev/dl/) to resolve it when you run `hugo server`.
+Install any version satisfying the minimum in `go.mod`.
+
+#### Dependencies: Node.js (optional, for the production CSS pipeline)
+
+Node.js is **not** required to preview the site with `hugo server` — in
+development mode Docsy skips PostCSS. You only need [Node.js](https://nodejs.org/)
+(any current release) if you want your local build to match the production CSS
+pipeline (autoprefixer/PostCSS), as run by `hugo --minify` in `build-site.sh`.
+In that case, run `npm install` in `website_and_docs` first.
+
+> **Note:** This may change with a future Hugo/Docsy upgrade. If theme assets
+> (e.g. Bootstrap/Font Awesome) move from Hugo Modules to npm packages,
+> `npm install` — and therefore Node.js — could become required for all builds,
+> not just the production pipeline.
 
 ### Step 2: Branch
 
@@ -211,7 +242,9 @@ with this you can be sure that your changes have not broken anything.
 
 Go to https://github.com/yourusername/seleniumhq.github.io.git and
 press the _Pull Request_ and fill out the form. **Please indicate
-that you've signed the CLA** (see Step 7).
+that you've signed the CLA**. To sign the CLA, visit
+[cla-assistant.io/SeleniumHQ/seleniumhq.github.io](https://cla-assistant.io/SeleniumHQ/seleniumhq.github.io)
+and click the "Sign in with GitHub to agree" button on the page.
 
 Pull requests are usually reviewed within a few days. If there are
 comments to address, apply your changes in new commits (preferably

@@ -68,7 +68,7 @@ RSpec.describe 'Virtual Authenticator' do
                                                                    rp_id: 'localhost',
                                                                    user_handle: [1],
                                                                    private_key: Selenium::WebDriver::Credential
-                                                                                  .decode(encoded_private_key),
+                                                                                .decode(encoded_private_key),
                                                                    sign_count: 0)
     @authenticator.add_credential(resident_credential)
     credential_list = @authenticator.credentials
@@ -89,7 +89,7 @@ RSpec.describe 'Virtual Authenticator' do
                                                                    rp_id: 'localhost',
                                                                    user_handle: [1],
                                                                    private_key: Selenium::WebDriver::Credential
-                                                                                  .decode(pkcs8_private_key),
+                                                                                .decode(pkcs8_private_key),
                                                                    sign_count: 0)
 
     expect {
@@ -107,7 +107,7 @@ RSpec.describe 'Virtual Authenticator' do
     non_resident_credential = Selenium::WebDriver::Credential.non_resident(id: [1, 2, 3, 4],
                                                                            rp_id: 'localhost',
                                                                            private_key: Selenium::WebDriver::Credential
-                                                                                          .decode(pkcs8_private_key),
+                                                                                        .decode(pkcs8_private_key),
                                                                            sign_count: 0)
     @authenticator.add_credential(non_resident_credential)
     credentials = @authenticator.credentials
@@ -128,12 +128,12 @@ RSpec.describe 'Virtual Authenticator' do
                                                                    rp_id: 'localhost',
                                                                    user_handle: [1],
                                                                    private_key: Selenium::WebDriver::Credential
-                                                                                  .decode(encoded_private_key),
+                                                                                .decode(encoded_private_key),
                                                                    sign_count: 0)
     non_resident_credential = Selenium::WebDriver::Credential.non_resident(id: [1, 2, 3, 4, 5],
                                                                            rp_id: 'localhost',
                                                                            private_key: Selenium::WebDriver::Credential
-                                                                                          .decode(encoded_private_key),
+                                                                                        .decode(encoded_private_key),
                                                                            sign_count: 0)
     @authenticator.add_credential(resident_credential)
     @authenticator.add_credential(non_resident_credential)
@@ -153,7 +153,7 @@ RSpec.describe 'Virtual Authenticator' do
     non_resident_credential = Selenium::WebDriver::Credential.non_resident(id: [1, 2, 3, 4],
                                                                            rp_id: 'localhost',
                                                                            private_key: Selenium::WebDriver::Credential
-                                                                                          .decode(encoded_private_key),
+                                                                                        .decode(encoded_private_key),
                                                                            sign_count: 0)
     @authenticator.add_credential(non_resident_credential)
     expect(@authenticator.credentials.length).to eq 1

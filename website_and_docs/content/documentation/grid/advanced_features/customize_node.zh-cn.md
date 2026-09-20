@@ -1,73 +1,68 @@
 ---
-title: "Customizing a Node"
-linkTitle: "Customize Node"
+title: "自定义Node"
+linkTitle: "自定义Node"
 weight: 4
 ---
 
-{{% pageinfo color="warning" %}}
-<p class="lead">
-   <i class="fas fa-language d-4"></i> 
-   Page being translated from 
-   English to Chinese. Do you speak Chinese? Help us to translate
-   it by sending us pull requests!
-</p>
-{{% /pageinfo %}}
 
-## How to customize a Node
+## 如何自定义节点
 
-There are times when we would like a Node to be customized to our needs. 
+有时候我们希望根据自己的需求自定义Node。
 
-For e.g., we may like to do some additional setup before a session begins execution and some clean-up after a session runs to completion.
+例如，我们可能希望在会话开始执行前做一些额外的设置，在会话完成后做一些清理工作。
 
-Following steps can be followed for this:
+可以按照以下步骤进行：
 
-* Create a class that extends `org.openqa.selenium.grid.node.Node`
-* Add a static method (this will be our factory method) to the newly created class whose signature looks like this: 
+* 创建一个类，继承自 `org.openqa.selenium.grid.node.Node`
+* 在新建的类中添加一个静态方法（工厂方法），其签名如下：
 
-  `public static Node create(Config config)`. Here:
+  `public static Node create(Config config)`。其中：
 
-    * `Node` is of type `org.openqa.selenium.grid.node.Node`
-    * `Config` is of type `org.openqa.selenium.grid.config.Config`
-* Within this factory method, include logic for creating your new Class.
-* To wire in this new customized logic into the hub, start the node and pass in the fully qualified class name of the above class to the argument `--node-implementation`
+    * `Node` 类型为 `org.openqa.selenium.grid.node.Node`
+    * `Config` 类型为 `org.openqa.selenium.grid.config.Config`
+* 在工厂方法中，包含创建新类的逻辑。
+* 要将自定义逻辑接入 hub，启动 node 时通过参数 `--node-implementation` 传入上述类的完整类名。
 
-Let's see an example of all this:
+下面我们来看一个完整的示例：
 
-### Custom Node as an uber jar
+### 作为 uber jar 的自定义 Node
 
-1. Create a sample project using your favourite build tool (**Maven**|**Gradle**).
-2. Add the below dependency to your sample project.
+1. 使用你喜欢的构建工具 (**Maven**|**Gradle**) 创建一个示例项目。
+2. 在项目中添加如下依赖：
     * [org.seleniumhq.selenium/selenium-grid](https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-grid)
-3. Add your customized Node to the project.
-4. Build an [uber jar](https://imagej.net/develop/uber-jars) to be able to start the Node using `java -jar` command.
-5. Now start the Node using the command:
+3. 将你的自定义 Node 添加到项目中。
+4. 构建一个 [uber jar](https://imagej.net/develop/uber-jars)，以便通过 `java -jar` 命令启动 Node。
+5. 现在使用如下命令启动 Node：
 
 ```bash
 java -jar custom_node-server.jar node \
 --node-implementation org.seleniumhq.samples.DecoratedLoggingNode
 ```
 
-**Note:** If you are using Maven as a build tool, please prefer using [maven-shade-plugin](https://maven.apache.org/plugins/maven-shade-plugin) instead of [maven-assembly-plugin](https://maven.apache.org/plugins/maven-assembly-plugin) because maven-assembly plugin seems to have issues with being able to merge multiple Service Provider Interface files (`META-INF/services`)
+**注意：** 如果你使用 Maven 作为构建工具，
+建议使用 [maven-shade-plugin](https://maven.apache.org/plugins/maven-shade-plugin) 
+而不是 [maven-assembly-plugin](https://maven.apache.org/plugins/maven-assembly-plugin)，
+因为 maven-assembly-plugin 在合并多个 Service Provider Interface 文件 (`META-INF/services`) 
+时可能存在问题。
 
-### Custom Node as a regular jar
+### 作为普通 jar 的自定义 Node
 
-1. Create a sample project using your favourite build tool (**Maven**|**Gradle**).
-2. Add the below dependency to your sample project.
+1. 使用你喜欢的构建工具 (**Maven**|**Gradle**) 创建一个示例项目。
+2. 在项目中添加如下依赖：
     * [org.seleniumhq.selenium/selenium-grid](https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-grid)
-3. Add your customized Node to the project.
-4. Build a jar of your project using your build tool.
-5. Now start the Node using the command:
+3. 将你的自定义 Node 添加到项目中。
+4. 使用构建工具构建项目 jar 包。
+5. 现在使用如下命令启动 Node：
 
 ```bash
 java -jar selenium-server-4.6.0.jar \
 --ext custom_node-1.0-SNAPSHOT.jar node \
 --node-implementation org.seleniumhq.samples.DecoratedLoggingNode
 ```
-Below is a sample that just prints some messages on to the console whenever there's an activity of interest (session created, session deleted, a webdriver command executed etc.,) on the Node.
-
+下面是一个示例：当Node有相关活动（会话创建、会话删除、WebDriver 命令执行等）时，仅在控制台打印一些消息。
 
 <details>
-<summary>Sample customized node</summary>
+<summary>自定义Node示例</summary>
 
 ```java
 package org.seleniumhq.samples;
@@ -239,21 +234,21 @@ public class DecoratedLoggingNode extends Node {
 ```
 </details>
 
-**_Foot Notes:_**
+**_注释：_**
 
-In the above example, the line `Node node = LocalNodeFactory.create(config);` explicitly creates a `LocalNode`.
+在上述示例中，`Node node = LocalNodeFactory.create(config);` 这一行显式创建了一个 `LocalNode`。
 
-There are basically 2 types of *user facing implementations* of `org.openqa.selenium.grid.node.Node` available. 
+`org.openqa.selenium.grid.node.Node` 主要有两种*面向用户的实现*。
 
-These classes are good starting points to learn how to build a custom Node and also to learn the internals of a Node.
+这些类是学习如何构建自定义 Node 以及了解 Node 内部机制的良好起点。
 
-* `org.openqa.selenium.grid.node.local.LocalNode` - Used to represent a long running Node and is the default implementation that gets wired in when you start a `node`. 
-    * It can be created by calling `LocalNodeFactory.create(config);`, where:
-      * `LocalNodeFactory` belongs to `org.openqa.selenium.grid.node.local`
-      * `Config` belongs to `org.openqa.selenium.grid.config`
-* `org.openqa.selenium.grid.node.k8s.OneShotNode` - This is a special reference implementation wherein the Node gracefully shuts itself down after servicing one test session. This class is currently not available as part of any pre-built maven artifact.
-  *  You can refer to the source code [here](https://github.com/SeleniumHQ/selenium/blob/trunk/java/src/org/openqa/selenium/grid/node/k8s/OneShotNode.java) to understand its internals. 
-  *  To build it locally refer [here](https://github.com/SeleniumHQ/selenium/blob/trunk/deploys/k8s/README.md). 
-  *  It can be created by calling `OneShotNode.create(config)`, where:
-      * `OneShotNode` belongs to `org.openqa.selenium.grid.node.k8s`
-      * `Config` belongs to `org.openqa.selenium.grid.config`
+* `org.openqa.selenium.grid.node.local.LocalNode` - 用于表示长时间运行的 Node，也是默认实现。启动 `node` 时会自动接入。
+    * 可通过 `LocalNodeFactory.create(config);` 创建，其中：
+      * `LocalNodeFactory` 属于 `org.openqa.selenium.grid.node.local`
+      * `Config` 属于 `org.openqa.selenium.grid.config`
+* `org.openqa.selenium.grid.node.k8s.OneShotNode` - 这是一个特殊的参考实现，节点在服务完一个测试会话后会自动关闭。该类目前未包含在任何预构建的 maven 包中。
+  * 你可以在 [这里](https://github.com/SeleniumHQ/selenium/blob/trunk/java/src/org/openqa/selenium/grid/node/k8s/OneShotNode.java) 查看源码。
+  * 参考 [这里](https://github.com/SeleniumHQ/selenium/blob/trunk/deploys/k8s/README.md) 了解本地构建方法。
+  * 可通过 `OneShotNode.create(config)` 创建，其中：
+      * `OneShotNode` 属于 `org.openqa.selenium.grid.node.k8s`
+      * `Config` 属于 `org.openqa.selenium.grid.config`

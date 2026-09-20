@@ -5,8 +5,7 @@ weight: 3
 description: >
   Seleniumプロジェクトからのテストに関するいくつかのガイドラインと推奨事項
 aliases: [
-"/documentation/ja/guidelines_and_recommendations/",
-"/ja/documentation/guidelines/"
+"/documentation/guidelines/"
 ]
 ---
 

@@ -5,8 +5,17 @@ weight: 16
 aliases: 
         [
           "/documentation/en/introduction/about_this_documentation/",
-          "/documentation/en/front_matter/"
-        ]  
+          "/documentation/en/front_matter/",
+"/documentation/ja/introduction/about_this_documentation/",
+"/documentation/ja/front_matter/",
+"/documentation/pt-br/introduction/about_this_documentation/",
+"/documentation/pt-br/front_matter/",
+"/documentation/zh-cn/introduction/about_this_documentation/",
+"/documentation/zh-cn/front_matter/",
+"/ja/documentation/about/",
+"/pt-br/documentation/about/",
+"/zh-cn/documentation/about/"
+]  
 ---
 
 These docs, like the code itself, are maintained 100% by volunteers
@@ -23,8 +32,8 @@ and search to see whether or not the issue has been filed already.
 If not, feel free to open one!
 
 Many members of the community 
-are present at the #selenium 
-Libera chat at [Libera.chat](https://libera.chat/).
+are present at the #selenium-docs 
+channel of [Selenium Slack Group](https://inviter.co/seleniumhq).
 Feel free to drop in and ask questions
 and if you get help which you think could be of use within these documents,
 be sure to add your contribution!

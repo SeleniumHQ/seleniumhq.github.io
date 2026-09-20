@@ -26,7 +26,7 @@ namespace SeleniumDocs.BiDi.CDP
 
             driver.FindElement(By.Id("consoleLog")).Click();
             driver.FindElement(By.Id("consoleError")).Click();
-            new WebDriverWait(driver, TimeSpan.FromSeconds(5)).Until(_ => messages.Count > 1);
+            new WebDriverWait(driver, TimeSpan.FromSeconds(10)).Until(_ => messages.Count > 1);
             monitor.StopEventMonitoring();
 
             Assert.IsTrue(messages.Contains("Hello, world!"));

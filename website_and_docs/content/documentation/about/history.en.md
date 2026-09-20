@@ -97,7 +97,7 @@ Now that things have been proved out, I'd really like to do a clean implementati
 But I'm torn<br>
 Do I "finish" the new, very fast crazyfun java enough to replace the ruby version?<br></blockquote>
 
-### A story of driver executeables
+### A story of driver executables
 
 <blockquote><br>
     jimevans<br>
@@ -146,7 +146,7 @@ now.<br>
 about geckodriver.<br>
 the tale of geckodriver is intimately bound with the status of the aforementioned w3c webdriver spec.<br>
 level 1 of the specification is mostly done, though it took a number of years of effort to get there.<br>
-it took a large effort from some very smart people (AutomatedTester among them) to mold the initial documentation of what the webdriver open source software (OSS) project did into proper specification language that could be interpreted and turned into actionable stuff by a browser vendor or other implementor.<br>
+it took a large effort from some very smart people (AutomatedTester among them) to mold the initial documentation of what the webdriver open source software (OSS) project did into proper specification language that could be interpreted and turned into actionable stuff by a browser vendor or other implementer.<br>
 when beginning the geckodriver (nee marionette) project, mozilla decided to base their implementation on the spec, and only the spec, not following the OSS implementation.<br>
 this created something of a chicken-and-egg problem, in that while the spec language wasn't completed, it couldn't be implemented.<br>
 it's only been in the last six months or so that the language concerning the advanced user interactions api (the Actions class in java and .NET) has been made robust enough to actually implement.<br>

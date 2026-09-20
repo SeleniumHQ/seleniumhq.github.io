@@ -1,9 +1,9 @@
 ---
 title: "文件上传"
 linkTitle: "文件上传"
-weight: 1
+weight: 5
 aliases: [
-"/zh-cn/documentation/webdriver/additional_features/fileupload/"
+"/documentation/webdriver/additional_features/fileupload/"
 ]
 ---
 

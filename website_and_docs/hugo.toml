@@ -27,7 +27,7 @@ pygmentsStyle = "tango"
 
 # Configure how URLs look like per section.
 [permalinks]
-blog = "/:section/:year/:filename/"
+blog = "/:section/:year/:contentbasename/"
 # blog = "/:section/:year/:month/:day/:slug/"
 
 ## Configuration for BlackFriday markdown parser: https://github.com/russross/blackfriday
@@ -38,9 +38,13 @@ angledQuotes = false
 latexDashes = true
 
 # Image processing configuration.
+#
+# The global "quality" key was deprecated in Hugo 0.163.0 in favour of
+# per-format settings. It was set to 75, which is Hugo's default for JPEG and
+# WebP, so dropping it changes no output. resampleFilter stays: Docsy relies
+# on CatmullRom for sharp photographic downscaling.
 [imaging]
 resampleFilter = "CatmullRom"
-quality = 75
 anchor = "smart"
 
 [services]
@@ -50,45 +54,50 @@ anchor = "smart"
 
 # Language configuration
 
+# "label" replaces the deprecated "languageName" key as of Hugo 0.158.0.
 [languages]
 [languages.en]
 title = "Selenium"
-languageName ="English"
+label = "English"
 weight = 1
 [languages.en.params]
 description = "Selenium automates browsers. That's it!"
 [languages.pt-br]
 title = "Selenium"
-languageName ="Português (Brasileiro)"
+label = "Português (Brasileiro)"
 weight = 2
 [languages.pt-br.params]
 description = "Selenium automates browsers. That's it!"
 [languages.zh-cn]
 title = "Selenium"
-languageName = "中文简体"
+label = "中文简体"
 weight = 3
 [languages.zh-cn.params]
 description = "Selenium automates browsers. That's it!"
 [languages.ja]
 title = "Selenium"
-languageName = "日本語"
+label = "日本語"
 weight = 4
 [languages.ja.params]
 description = "Selenium automates browsers. That's it!"
 
 # Import docsy theme as module
+#
+# Docsy 0.16.0 moved the theme from the repository root into theme/, so the
+# import path is github.com/google/docsy/theme (still tagged as a plain
+# release version). The same release dropped the docsy/dependencies module:
+# Bootstrap and Font Awesome now arrive as npm packages, pulled into
+# package.json by `hugo mod npm pack`. See scripts/README or the Docsy 0.16.0
+# release notes if the vendored asset paths ever need re-checking.
 [module]
   proxy = "direct"
   # uncomment line below for temporary local development of module
-  #replacements = "github.com/google/docsy -> ../../docsy"
+  #replacements = "github.com/google/docsy/theme -> ../../docsy/theme"
   [module.hugoVersion]
     extended = true
-    min = "0.73.0"
+    min = "0.160.1"
   [[module.imports]]
-    path = "github.com/google/docsy"
-    disable = false
-  [[module.imports]]
-    path = "github.com/google/docsy/dependencies"
+    path = "github.com/google/docsy/theme"
     disable = false
 
 [markup]
@@ -105,6 +114,27 @@ description = "Selenium automates browsers. That's it!"
 
 # Comment out if you don't want the "print entire section" link enabled.
 [outputs]
+section = ["HTML", "print"]
+
+# Machine-readable index of the site for AI assistants and retrieval systems,
+# per the llms.txt convention (https://llmstxt.org). Rendered by
+# layouts/index.llms.txt.
+#
+# Left as an "alternative" format on purpose: Docsy's head.html then advertises
+# it automatically as <link rel="alternate" type="text/plain">, and its
+# partials/outputformat.html keeps reporting "html" for the home page, which it
+# derives by subtracting the alternative formats from the full set.
+[outputFormats]
+  [outputFormats.llms]
+    mediaType = "text/plain"
+    baseName = "llms"
+    isPlainText = true
+
+# English only, and deliberately so: llms.txt is a single flat index, and
+# interleaving four translations of the same page dilutes it for every language.
+# The translations remain fully indexed as normal HTML.
+[languages.en.outputs]
+home = ["HTML", "RSS", "llms"]
 section = ["HTML", "print"]
 
 [params]
@@ -209,7 +239,7 @@ enable = false
 [[params.links.user]]
 	name ="Selenium X"
 	url = "https://x.com/SeleniumHQ"
-	icon = "fab fa-twitter"
+	icon = "fab fa-x-twitter"
         desc = "Follow us on X to get the latest news!"
 [[params.links.user]]
 	name = "Selenium Community YouTube Channel"
@@ -257,7 +287,7 @@ enable = false
         desc = "Chat with other project developers and users in Slack"
 [[params.links.developer]]
 	name = "IRC"
-	url = "https://kiwiirc.com/nextclient/irc.libera.chat/#selenium"
+	url = "https://web.libera.chat/#selenium"
 	icon = "fas fa-comments"
         desc = "Chat with other project developers and users in IRC"
 [[params.links.developer]]
@@ -363,8 +393,17 @@ year = "year"
 
 [security]
   enableInlineShortcodes = false
+  # Hugo 0.162.0 began denying text/html content files by default. This site
+  # hand-authors the landing pages for several sections as .html (content/
+  # _index.*.html, content/about/_index.html, and others), so the media type
+  # has to be allowed back in explicitly. The list is deliberately narrow:
+  # markdown plus the HTML we already publish, rather than the '.*' catch-all.
+  allowContent = ['^text/markdown$', '^text/html$']
   [security.exec]
-    allow = ['^dart-sass-embedded$', '^go$', '^npx$', '^postcss$', '^git$']
+    # 'sass' is the CLI binary shipped by the sass-embedded npm package
+    # (Docsy 0.17.0's Dart Sass transpiler); 'dart-sass-embedded' was the
+    # older package's binary name, kept here in case it's still resolved.
+    allow = ['^dart-sass-embedded$', '^sass$', '^go$', '^npx$', '^postcss$', '^git$']
     osEnv = ['(?i)^(PATH|PATHEXT|APPDATA|TMP|TEMP|TERM)$']
 
   [security.funcs]

@@ -11,9 +11,11 @@ describe('Browsing Context', function () {
   let pngMagicNumber = 'iVBOR'
 
   beforeEach(async function () {
+    const options = new firefox.Options().enableBidi()
+    options.setAlertBehavior('ignore')
     driver = new Builder()
       .forBrowser('firefox')
-      .setFirefoxOptions(new firefox.Options().enableBidi())
+      .setFirefoxOptions(options)
       .build()
   })
 

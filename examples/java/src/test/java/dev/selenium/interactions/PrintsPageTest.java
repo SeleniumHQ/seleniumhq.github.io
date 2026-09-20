@@ -5,7 +5,6 @@ import org.openqa.selenium.bidi.browsingcontext.BrowsingContext;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
-import org.openqa.selenium.print.PageMargin;
 import org.openqa.selenium.print.PrintOptions;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.chrome.ChromeDriver;

@@ -8,7 +8,7 @@ describe('Open Edge', function () {
 
 
   before(async function () {
-    let options = new edge.Options();
+    let options = new edge.Options().addArguments('--no-sandbox');
     driver = new Builder()
       .forBrowser(Browser.EDGE)
       .setEdgeOptions(options)

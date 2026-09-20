@@ -1,17 +1,19 @@
+import contextlib
 import logging
 import os
 import socket
 import subprocess
 import tempfile
 import time
-from selenium.webdriver.common.utils import free_port
+import uuid
 from datetime import datetime
 from urllib.request import urlopen
-import requests
-from requests.auth import HTTPBasicAuth
 
 import pytest
+import requests
+from requests.auth import HTTPBasicAuth
 from selenium import webdriver
+from selenium.webdriver.common.utils import free_port
 
 
 def pytest_configure(config):
@@ -21,7 +23,7 @@ def pytest_configure(config):
 
 
 @pytest.fixture(scope='function')
-def driver(request):
+def driver(request, monkeypatch):
     marker = request.node.get_closest_marker("driver_type")
     driver_type = marker.args[0] if marker else None
 
@@ -30,7 +32,13 @@ def driver(request):
         options.enable_bidi = True
         driver = webdriver.Chrome(options=options)
     elif driver_type == "firefox":
+        monkeypatch.setenv("MOZ_ENABLE_WAYLAND", "0")
         driver = webdriver.Firefox()
+    elif driver_type == "firefox_bidi":
+        monkeypatch.setenv("MOZ_ENABLE_WAYLAND", "0")
+        options = webdriver.FirefoxOptions()
+        options.enable_bidi = True
+        driver = webdriver.Firefox(options=options)
     else:
         driver = webdriver.Chrome()
 
@@ -95,8 +103,7 @@ def log():
 
 @pytest.fixture(scope='function')
 def log_path():
-    suffix = datetime.now().strftime("%y%m%d_%H%M%S")
-    log_path = 'log_file_' + suffix + '.log'
+    log_path = f'log_file_{uuid.uuid4()}.log'
 
     yield log_path
 
@@ -105,7 +112,8 @@ def log_path():
         logger.removeHandler(handler)
         handler.close()
 
-    os.remove(log_path)
+    with contextlib.suppress(OSError):
+        os.remove(log_path)
 
 
 @pytest.fixture(scope='function')
@@ -148,7 +156,7 @@ def server_old(request):
                 os.path.abspath(__file__)
             )
         ),
-        "selenium-server-4.35.0.jar",
+        "selenium-server-4.49.0.jar",
     )
 
     def wait_for_server(url, timeout):
@@ -206,7 +214,7 @@ def server():
                 )
             )
         ),
-        "selenium-server-4.35.0.jar",
+        "selenium-server-4.49.0.jar",
     )
 
     args = [
@@ -246,6 +254,11 @@ def server():
         process.kill()
 
 
+@pytest.fixture(scope="function")
+def grid_url(server):
+    return server
+
+
 def _get_resource_path(file_name: str):
     if os.path.abspath("").endswith("tests"):
         path = os.path.abspath(f"resources/{file_name}")
@@ -279,7 +292,7 @@ def grid_server():
                 )
             )
         ),
-        "selenium-server-4.35.0.jar",
+        "selenium-server-4.49.0.jar",
     )
 
     args = [

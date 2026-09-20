@@ -7,7 +7,19 @@ description: >
 aliases: [
 "/documentation/en/selenium_installation/installing_selenium_libraries/",
 "/documentation/getting_started/installing_selenium_libraries/",
-"/documentation/getting_started/install_selenium_library/"
+"/documentation/getting_started/install_selenium_library/",
+"/documentation/ja/selenium_installation/installing_selenium_libraries/",
+"/documentation/pt-br/selenium_installation/installing_selenium_libraries/",
+"/documentation/zh-cn/selenium_installation/installing_selenium_libraries/",
+"/ja/documentation/getting_started/install_selenium_library/",
+"/ja/documentation/getting_started/installing_selenium_libraries/",
+"/ja/documentation/webdriver/getting_started/install_library/",
+"/pt-br/documentation/getting_started/install_selenium_library/",
+"/pt-br/documentation/getting_started/installing_selenium_libraries/",
+"/pt-br/documentation/webdriver/getting_started/install_library/",
+"/zh-cn/documentation/getting_started/install_selenium_library/",
+"/zh-cn/documentation/getting_started/installing_selenium_libraries/",
+"/zh-cn/documentation/webdriver/getting_started/install_library/"
 ]
 ---
 
@@ -27,7 +39,7 @@ Installation of Selenium libraries for Java is accomplished using a build tool.
 ### Maven
 Specify the dependencies in the project's `pom.xml` file:
 
-{{< gh-codeblock path="/examples/java/pom.xml#L30-L34" >}}
+{{< gh-codeblock path="/examples/java/pom.xml#L35-L38" >}}
 
 ### Gradle
 Specify the dependency in the project `build.gradle` file as `testImplementation`:

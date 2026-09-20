@@ -2,7 +2,6 @@
 title: "Legacy Selenium IDE"
 linkTitle: "Selenium IDE"
 weight: 8
-aliases: ["/documentation/zh-cn/legacy_docs/selenium_ide/"]
 ---
 
 {{% pageinfo color="warning" %}}

@@ -5,9 +5,8 @@ weight: 2
 description: >
   お気に入りのプログラミング言語用にSeleniumライブラリを設定します。
 aliases: [
-"/documentation/ja/selenium_installation/installing_selenium_libraries/",
-"/ja/documentation/getting_started/installing_selenium_libraries/",
-"/ja/documentation/getting_started/install_selenium_library/"
+"/documentation/getting_started/installing_selenium_libraries/",
+"/documentation/getting_started/install_selenium_library/"
 ]
 ---
 
@@ -25,7 +24,7 @@ Java用のSeleniumライブラリのインストールは、ビルドツール�
 ### Maven
 プロジェクトの 'pom.xml' ファイルで依存関係を指定します:
 
-{{< gh-codeblock path="/examples/java/pom.xml#L30-L34" >}}
+{{< gh-codeblock path="/examples/java/pom.xml#L35-L38" >}}
 
 ### Gradle
 プロジェクトの 'build.gradle' ファイル内の依存関係を 'testImplementation' として指定します:
@@ -34,7 +33,8 @@ Java用のSeleniumライブラリのインストールは、ビルドツール�
 
   {{% /tab %}}
   {{% tab header="Python" %}}
-各 Selenium バージョンでサポートされている最小 Python バージョンについては、次の場所にあります `サポートされている Python バージョン` オン [PyPi](https://pypi.org/project/selenium/)。
+各 Selenium バージョンでサポートされている最小の Python バージョンは、
+[PyPI](https://pypi.org/project/selenium/) の「Supported Python Versions」で確認できます。
 
 Seleniumをインストールするには、いくつかの方法があります。
 
@@ -115,8 +115,8 @@ Enter キーを押して、バージョンを選択します。
 
   {{% /tab %}}
   {{% tab header="Ruby" %}}
-特定の Selenium バージョンに対して最低限必要な Ruby のバージョンを確認できます
-オン [rubygems.org](https://rubygems.org/gems/selenium-webdriver/)
+特定の Selenium バージョンに必要な最小 Ruby バージョンは、
+[rubygems.org](https://rubygems.org/gems/selenium-webdriver/) で確認できます。
 
 Seleniumは2つの異なる方法でインストールできます。
 
@@ -133,7 +133,8 @@ gem install selenium-webdriver
 
   {{% /tab %}}
   {{% tab header="JavaScript" %}}
-Seleniumの特定のバージョンに最低限必要なNodeのバージョンは、`Node Support Policy` 節 オン [npmjs](https://www.npmjs.com/package/selenium-webdriver)
+Selenium の特定のバージョンに必要な最小 Node.js バージョンは、
+[npmjs](https://www.npmjs.com/package/selenium-webdriver) の「Node Support Policy」で確認できます。
 
 Seleniumは通常、npmを使用してインストールされます。
 

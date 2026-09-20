@@ -6,9 +6,8 @@ needsTranslation: true
 description: >
   Configurando a biblioteca Selenium para sua linguagem de programação favorita.
 aliases: [
-"/documentation/pt-br/selenium_installation/installing_selenium_libraries/",
-"/pt-br/documentation/getting_started/installing_selenium_libraries/",
-"/pt-br/documentation/getting_started/install_selenium_library/"
+"/documentation/getting_started/installing_selenium_libraries/",
+"/documentation/getting_started/install_selenium_library/"
 ]
 ---
 
@@ -27,7 +26,7 @@ A instalação da biblioteca Selenium para Java é feita a partir de uma build t
 ### Maven
 Especifique a dependência no `pom.xml` do seu projeto.
 
-{{< gh-codeblock path="/examples/java/pom.xml#L30-L34" >}}
+{{< gh-codeblock path="/examples/java/pom.xml#L35-L38" >}}
 
 ### Gradle
 Especifique a dependência no `build.gradle` do seu projeto como `testImplementation`:

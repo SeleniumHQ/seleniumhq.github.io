@@ -53,5 +53,34 @@ namespace SeleniumDocs.Drivers
                 driver.Quit();
             }
         }
+        [TestMethod]
+        public void SetUnhandledPromptBehavior()
+        {
+            var chromeOptions = new ChromeOptions();
+            chromeOptions.UnhandledPromptBehavior = UnhandledPromptBehavior.DismissAndNotify;
+            IWebDriver driver = new ChromeDriver(chromeOptions);
+            try
+            {
+                driver.Navigate().GoToUrl("https://selenium.dev");
+            }
+            finally
+            {
+                driver.Quit();
+            }
+        }
+        [TestMethod]
+        public void SetsProxy()
+        {
+            ChromeOptions options = new ChromeOptions();
+            Proxy proxy = new Proxy();
+            proxy.Kind = ProxyKind.Manual;
+            proxy.IsAutoDetect = false;
+            proxy.SslProxy = "myproxy.com:8080";
+            options.Proxy = proxy;
+            options.AddArgument("ignore-certificate-errors");
+
+            Assert.IsNotNull(options.Proxy);
+            Assert.AreEqual("myproxy.com:8080", options.Proxy.SslProxy);
+        }
     }
 }

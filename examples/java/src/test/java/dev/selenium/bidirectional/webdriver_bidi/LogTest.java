@@ -43,7 +43,8 @@ class LogTest extends BaseTest {
             Assertions.assertEquals(1, logEntry.getArgs().size());
             Assertions.assertEquals("console", logEntry.getType());
             Assertions.assertEquals("log", logEntry.getMethod());
-            Assertions.assertNull(logEntry.getStackTrace());
+            Assertions.assertEquals(
+                "helloWorld", logEntry.getStackTrace().getCallFrames().get(0).getFunctionName());
         }
     }
 
@@ -96,7 +97,7 @@ class LogTest extends BaseTest {
 
             StackTrace stackTrace = logEntry.getStackTrace();
             Assertions.assertNotNull(stackTrace);
-            Assertions.assertEquals(4, stackTrace.getCallFrames().size());
+            Assertions.assertEquals(3, stackTrace.getCallFrames().size());
         }
     }
 

@@ -4,7 +4,7 @@ linkTitle: "CLI 选项"
 weight: 2
 description: 所有网格组件配置CLI选项的详细信息.
 aliases: [
-"/zh-cn/documentation/grid/configuring_components/cli_options/"
+"/documentation/grid/configuring_components/cli_options/"
 ]
 ---
 
@@ -173,6 +173,7 @@ pull request updating this page.
 | `--slot-selector` | string | `org.openqa.selenium.grid.distributor.selector.DefaultSlotSelector` | Full class name of non-default slot selector. This is used to select a slot in a Node once the Node has been matched. |
 | `--newsession-threadpool-size` | int | `24` | The Distributor uses a fixed-sized thread pool to create new sessions as it consumes new session requests from the queue. This allows configuring the size of the thread pool. The default value is no. of available processors * 3. Note: If the no. of threads is way greater than the available processors it will not always increase the performance. A high number of threads causes more context switching which is an expensive operation. |
 | `--purge-nodes-interval` | int | `30` | How often, in seconds, will the Distributor purge Nodes that have been down for a while. This is calculated based on the heartbeat received from a particular node. |
+| `--distributor-backend-url` | string | `redis://localhost:6379` | Backend datastore URL for the Distributor implementation. Used by Redis-backed and other external implementations loaded via `--ext`. |
 
 ### Docker
 
@@ -186,6 +187,7 @@ pull request updating this page.
 | `--docker-url` | string | `http://localhost:2375` | URL for connecting to the Docker daemon |
 | `--docker-video-image` | string | `selenium/video:latest` | Docker image to be used when video recording is enabled |
 | `--docker-host-config-keys` | string[] | `Dns DnsOptions DnsSearch ExtraHosts Binds` | Specify which docker host configuration keys should be passed to browser containers. Keys name can be found in the Docker API [documentation](https://docs.docker.com/engine/api/v1.41/#tag/Container/operation/ContainerCreate), or by running `docker inspect` the node-docker container. |
+| `--docker-stop-grace-period` | int | `60` | Grace period (in seconds) to wait for browser and video containers to stop gracefully before they are forcibly terminated. |
 
 ### Events
 
@@ -235,7 +237,7 @@ pull request updating this page.
 | `--no-vnc-port`| int | `7900` | If VNC is available, sets the port where the local noVNC stream can be obtained |
 | `--drain-after-session-count`| int | `1` | Drain and shutdown the Node after X sessions have been executed. Useful for environments like Kubernetes. A value higher than zero enables this feature. |
 | `--hub`| string | `http://localhost:4444` | The address of the Hub in a Hub-and-Node configuration. Can be a hostname or IP address (`hostname`), in which case the Hub will be assumed to be `http://hostname:4444`, the `--grid-url` will be the same `--publish-events` will be `tcp://hostname:4442` and `--subscribe-events` will be `tcp://hostname:4443`. If `hostname` contains a port number, that will be used for `--grid-url` but the URIs for the event bus will remain the same. Any of these default values may be overridden but setting the correct flags. If the hostname has  a protocol (such as `https`) that will be used too. |
-| `--enable-cdp`| boolean | `true` | Enable CDP proxying in Grid. A Grid admin can disable CDP if the network doesnot allow websockets. True by default. |
+| `--enable-cdp`| boolean | `true` | Enable CDP proxying in Grid. A Grid admin can disable CDP if the network does not allow websockets. True by default. |
 | `--enable-managed-downloads`| boolean | `false` | This causes the Node to auto manage files downloaded for a given session on the Node. |
 | `--selenium-manager`| boolean | `false` | When drivers are not available on the current system, use Selenium Manager. False by default. |
 | `--connection-limit-per-session` | int | `10` | Let X be the maximum number of websocket connections per session.This will ensure one session is not able to exhaust the connection limit of the host. |
@@ -259,6 +261,7 @@ pull request updating this page.
 | `--username` | string | `admin` | User name clients must use to connect to the server. Both this and the password need to be set in order to be used. |
 | `--sub-path` | string | `my_company/selenium_grid` | A sub-path that should be considered for all user facing routes on the Hub/Router/Standalone. |
 | `--disable-ui` | boolean | `true` | Disable the Grid UI. |
+| `--tcp-tunnel` | boolean | `true` | Enable the transparent TCP tunnel for WebSocket connections (BiDi, CDP). Disable to route WebSocket traffic through the Grid proxy instead, e.g. for benchmarking the proxy path or in network topologies where the Router cannot open direct TCP connections to Nodes (e.g. Kubernetes port-forward setups). |
 
 
 ### Server
@@ -283,6 +286,8 @@ pull request updating this page.
 | `--session-request-timeout` | int | `300` | Timeout in seconds. A new incoming session request is added to the queue. Requests sitting in the queue for longer than the configured time will timeout. |
 | `--session-retry-interval` | int | `5` | Retry interval in seconds. If all slots are busy, new session request will be retried after the given interval. |
 | `--maximum-response-delay` | int | `8` | How often, in seconds, will the the SessionQueue response in case there is no data, to reduce the http requests while polling for new session requests. |
+| `--sessionqueue-implementation` | string | `org.openqa.selenium.grid.sessionqueue.local.LocalNewSessionQueue` | Full class name of non-default session queue implementation. |
+| `--sessionqueue-backend-url` | string | `redis://localhost:6379` | Backend datastore URL for the SessionQueue implementation. Used by Redis-backed and other external implementations loaded via `--ext`. |
 
 ### Sessions
 
@@ -291,6 +296,8 @@ pull request updating this page.
 | `--sessions` | uri | `http://localhost:1234` | Address of the session map server. |
 | `--sessions-host` | string | `localhost` | Host on which the session map server is listening. |
 | `--sessions-port` | int | `1234` | Port on which the session map server is listening. |
+| `--sessions-implementation` | string | `org.openqa.selenium.grid.sessionmap.redis.RedisBackedSessionMap` | Full class name of non-default session map implementation. |
+| `--sessions-scheme` | string | `redis` | URI scheme for the session map server (e.g. `redis`, `http`). |
 
 
 ## Configuration examples
@@ -425,7 +432,7 @@ options.setCapability("se:downloadsEnabled", true);
 In the response the list of file names appear under the key `names`.
 
 
-##### Dowloading a file:
+##### Downloading a file:
 
 * The endpoint to `POST` from is `/session/<sessionId>/se/files` with a payload of the form `{"name": "fileNameGoesHere}`
 * The session needs to be active in order for the command to work.

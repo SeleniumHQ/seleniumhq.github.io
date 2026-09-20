@@ -3,8 +3,7 @@ title: "Entendendo os componentes"
 linkTitle: "Entendendo os componentes"
 weight: 1
 aliases: [
-"/documentation/pt-br/webdriver/understanding_the_components/",
-"/pt-br/documentation/webdriver/understanding_the_components"
+"/documentation/webdriver/understanding_the_components"
 ]
 ---
 
@@ -28,7 +27,7 @@ mesmo sistema.) NOTA: _Algumas pessoas se referem aos drivers como proxies._
 * **Framework:** uma biblioteca adicional usada como suporte para suítes do WebDriver.
 * Essas estruturas podem ser estruturas de teste, como JUnit ou NUnit.
 Eles também podem ser estruturas que suportam recursos de linguagem natural, como
-como Cucumber ou Robotium. Frameworks também podem ser escritos e usados ​​para
+como Cucumber ou Robot Framework. Frameworks também podem ser escritos e usados ​​para
 coisas como manipulação ou configuração do sistema em teste,
 criação de dados, oráculos de teste, etc.
 

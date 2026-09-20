@@ -22,7 +22,9 @@ current window by using:
 {{< tab header="Java" text=true >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/WindowsTest.java#L16-L20" >}}
 {{< /tab >}}
-  {{< tab header="Python" >}}driver.current_window_handle{{< /tab >}}
+  {{< tab header="Python" text=true >}}
+{{< gh-codeblock path="/examples/python/tests/interactions/test_windows.py#L16-L18" >}}
+  {{< /tab >}}
   {{< tab header="CSharp" text=true >}}
   {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Interactions/WindowsTest.cs#L17-L21" >}}
   {{< /tab >}}
@@ -46,38 +48,8 @@ window is launched. So first position will be default browser, and so on.
   {{< tab header="Java" text=true >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/WindowsTest.java#L22-L29" >}}
 {{< /tab >}}
-  {{< tab header="Python" >}}
-from selenium import webdriver
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-
-with webdriver.Firefox() as driver:
-    # Open URL
-    driver.get("https://seleniumhq.github.io")
-
-    # Setup wait for later
-    wait = WebDriverWait(driver, 10)
-
-    # Store the ID of the original window
-    original_window = driver.current_window_handle
-
-    # Check we don't have other windows open already
-    assert len(driver.window_handles) == 1
-
-    # Click the link which opens in a new window
-    driver.find_element(By.LINK_TEXT, "new window").click()
-
-    # Wait for the new window or tab
-    wait.until(EC.number_of_windows_to_be(2))
-
-    # Loop through until we find a new window handle
-    for window_handle in driver.window_handles:
-        if window_handle != original_window:
-            driver.switch_to.window(window_handle)
-            break
-
-    # Wait for the new tab to finish loading content
-    wait.until(EC.title_is("SeleniumHQ Browser Automation"))
+  {{< tab header="Python" text=true >}}
+{{< gh-codeblock path="/examples/python/tests/interactions/test_windows.py#L22-L32" >}}
   {{< /tab >}}
   
   {{< tab header="CSharp" text=true >}}
@@ -176,12 +148,8 @@ handle stored in a variable. Put this together and you will get:
  {{< tab header="Java" text=true >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/WindowsTest.java#L31-L34" >}}
 {{< /tab >}}
-  {{< tab header="Python" >}}
-    #Close the tab or window
-driver.close()
-
-    #Switch back to the old tab or window
-driver.switch_to.window(original_window)
+  {{< tab header="Python" text=true >}}
+{{< gh-codeblock path="/examples/python/tests/interactions/test_windows.py#L46-L46" >}}
   {{< /tab >}}
   
     {{< tab header="CSharp" text=true >}}
@@ -230,12 +198,8 @@ __Note: This feature works with Selenium 4 and later versions.__
    {{< tab header="Java" text=true >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/WindowsTest.java#L36-L42" >}}
 {{< /tab >}}
-  {{< tab header="Python" >}}
-    # Opens a new tab and switches to new tab
-driver.switch_to.new_window('tab')
-
-    # Opens a new window and switches to new window
-driver.switch_to.new_window('window')
+  {{< tab header="Python" text=true >}}
+{{< gh-codeblock path="/examples/python/tests/interactions/test_windows.py#L53-L58" >}}
   {{< /tab >}}
   
   
@@ -278,7 +242,9 @@ instead of close:
      {{< tab header="Java" text=true >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/WindowsTest.java#L44-L45" >}}
 {{< /tab >}}
-  {{< tab header="Python" >}}driver.quit(){{< /tab >}}
+  {{< tab header="Python" text=true >}}
+{{< gh-codeblock path="/examples/python/tests/interactions/test_windows.py#L13-L13" >}}
+{{< /tab >}}
     
   {{< tab header="CSharp" text=true >}}
   {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Interactions/WindowsTest.cs#L45-L46" >}}

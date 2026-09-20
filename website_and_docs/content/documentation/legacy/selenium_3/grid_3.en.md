@@ -7,7 +7,16 @@ description: >
     Grid 3 was completely rewritten for the new Grid 4.
 aliases: [
 "/documentation/en/grid/grid_3/",
-"/documentation/legacy/grid_3"
+"/documentation/legacy/grid_3",
+"/documentation/ja/grid/grid_3/",
+"/documentation/pt-br/grid/grid_3/",
+"/documentation/zh-cn/grid/grid_3/",
+"/ja/documentation/legacy/grid_3",
+"/ja/documentation/legacy/selenium_3/grid_3/",
+"/pt-br/documentation/legacy/grid_3",
+"/pt-br/documentation/legacy/selenium_3/grid_3/",
+"/zh-cn/documentation/legacy/grid_3",
+"/zh-cn/documentation/legacy/selenium_3/grid_3/"
 ]
 ---
 You can read our documentation for more information about [Grid 4]({{< ref "/documentation/grid" >}})

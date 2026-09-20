@@ -3,8 +3,7 @@ title: "改善されたレポート"
 linkTitle: "改善されたレポート"
 weight: 7
 aliases: [
-"/documentation/ja/guidelines_and_recommendations/improved_reporting/",
-"/ja/documentation/guidelines/improved_reporting/"
+"/documentation/guidelines/improved_reporting/"
 ]
 ---
 
@@ -15,6 +14,8 @@ Seleniumは、実行されたテストケースのステータスをレポート
 xUnitレポートは、Jenkins、Travis、Bambooなどの継続的インテグレーション（CI）サーバーに結果をインポートするのに人気があります。
 いくつかの言語のレポート出力に関する詳細情報へのリンクがあります。
 <!-- TODO: Add links.-->
+[Allure Report: fancy reports (language and framework agnostic)](https://allurereport.org/)
+
 [NUnit 3 Console Runner](//github.com/nunit/docs/wiki/Console-Runner)
 
 [NUnit 3 Console Command Line](//github.com/nunit/docs/wiki/Console-Command-Line)

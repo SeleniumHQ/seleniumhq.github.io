@@ -3,8 +3,7 @@ title: "CAPTCHA（キャプチャ）"
 linkTitle: "CAPTCHA（キャプチャ）"
 weight: 1
 aliases: [
-"/documentation/ja/worst_practices/captchas/",
-"/ja/documentation/worst_practices/captchas/"
+"/documentation/worst_practices/captchas/"
 ] 
 ---
 

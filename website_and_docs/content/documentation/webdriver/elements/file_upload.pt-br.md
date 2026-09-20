@@ -1,9 +1,9 @@
 ---
 title: "File Upload"
 linkTitle: "File Upload"
-weight: 1
+weight: 5
 aliases: [
-"/pt-br/documentation/webdriver/additional_features/fileupload/"
+"/documentation/webdriver/additional_features/fileupload/"
 ]
 description: >
   Como subir arquivos com Selenium

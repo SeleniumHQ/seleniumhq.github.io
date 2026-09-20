@@ -1,7 +1,11 @@
 ---
-title: "双向功能"
+title: "WebDriver BiDi (双向功能)"
 linkTitle: "BiDi"
 weight: 16
+description: >
+  WebDriver BiDi 是由 Selenium 项目与各浏览器厂商共同制定的 W3C 标准双向协议, 用于浏览器自动化.
+  它在 WebDriver 之上增加了 WebSocket 连接, 使脚本能够实时接收并响应浏览器事件, 包括网络请求, 控制台消息和 JavaScript 错误.
+  它是取代 Chrome DevTools Protocol 的跨浏览器标准.
 aliases: [
 "/documentation/en/webdriver/bidi_apis/",
 "/documentation/webdriver/bidi_apis/",

@@ -4,7 +4,16 @@ linkTitle: "Improved reporting"
 weight: 7
 aliases: [
 "/documentation/en/guidelines_and_recommendations/improved_reporting/",
-"/documentation/guidelines/improved_reporting/"
+"/documentation/guidelines/improved_reporting/",
+"/documentation/ja/guidelines_and_recommendations/improved_reporting/",
+"/documentation/pt-br/guidelines_and_recommendations/improved_reporting/",
+"/documentation/zh-cn/guidelines_and_recommendations/improved_reporting/",
+"/ja/documentation/guidelines/improved_reporting/",
+"/ja/documentation/test_practices/encouraged/improved_reporting/",
+"/pt-br/documentation/guidelines/improved_reporting/",
+"/pt-br/documentation/test_practices/encouraged/improved_reporting/",
+"/zh-cn/documentation/guidelines/improved_reporting/",
+"/zh-cn/documentation/test_practices/encouraged/improved_reporting/"
 ]
 ---
 
@@ -16,6 +25,8 @@ reports are popular for importing results to a Continuous Integration
 (CI) server like Jenkins, Travis, Bamboo, etc.  Here are some links
 for more information regarding report outputs for several languages.
 <!-- TODO: Add links.-->
+[Allure Report: fancy reports (language and framework agnostic)](https://allurereport.org/)
+
 [NUnit 3 Console Runner](//github.com/nunit/docs/wiki/Console-Runner)
 
 [NUnit 3 Console Command Line](//github.com/nunit/docs/wiki/Console-Command-Line)

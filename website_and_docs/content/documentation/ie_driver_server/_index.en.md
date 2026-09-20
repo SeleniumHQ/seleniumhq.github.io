@@ -154,7 +154,7 @@ There are 2 solutions for problem with cookies (and another session items) share
 multiple instances of InternetExplorer.
 
 The first is to start your InternetExplorer in private mode. After that InternetExplorer will be 
-started with clean session data and will not save changed session data at quiting. To do so you 
+started with clean session data and will not save changed session data at quitting. To do so you 
 need to pass 2 specific capabilities to driver: `ie.forceCreateProcessApi` with `true` value 
 and `ie.browserCommandLineSwitches` with `-private` value. Be note that it will work only 
 for InternetExplorer 8 and newer, and Windows Registry 

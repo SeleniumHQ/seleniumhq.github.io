@@ -2,116 +2,95 @@
 title: "查询网络元素"
 linkTitle: "查询器"
 weight: 2
-needsTranslation: true
 aliases: [
-"/documentation/zh-cn/webdriver/locating_elements/",
-"/zh-cn/documentation/webdriver/locating_elements/"
+"/documentation/webdriver/locating_elements/"
 ]
 description: >
   根据提供的定位值定位元素.
 ---
 
-One of the most fundamental aspects of using Selenium is obtaining element references to work with.
-Selenium offers a number of built-in [locator strategies]({{< ref "locators.md" >}}) to uniquely identify an element.
-There are many ways to use the locators in very advanced scenarios. For the purposes of this documentation, 
-let's consider this HTML snippet:
 
+使用 Selenium 最基本的特点之一是获取可用于操作的元素引用。
+Selenium 提供了许多内置的 [定位策略]({{< ref "locators.md" >}})，用于唯一标识元素。
+在更复杂的场景中，可以用多种方式使用这些定位器。为了本篇文档的目的，
+请使用 [Selenium 定位器测试页面](https://www.selenium.dev/selenium/web/locators_tests/locators.html)。
 
-```html
-<ol id="vegetables">
- <li class="potatoes">…
- <li class="onions">…
- <li class="tomatoes"><span>Tomato is a Vegetable</span>…
-</ol>
-<ul id="fruits">
-  <li class="bananas">…
-  <li class="apples">…
-  <li class="tomatoes"><span>Tomato is a Fruit</span>…
-</ul>
-```
+## 第一个匹配的元素
 
-## First matching element 
+许多定位器会匹配页面上的多个元素。
+单个的 find element 方法会返回在给定上下文中找到的第一个元素的引用。
 
-Many locators will match multiple elements on the page. The singular find element method will return a reference to the
-first element found within a given context.
+### 在整个 DOM 中查找
 
-### Evaluating entire DOM
+当在 driver 实例上调用 find element 方法时，
+它会返回 DOM 中与所提供定位器匹配的第一个元素的引用。
+该引用可以被保存并用于后续的元素操作。
+在 Selenium 定位器测试页面上，有两个 class 名称为 `information` 的元素，
+因此此方法会返回第一个文本输入框。
 
-When the find element method is called on the driver instance, it 
-returns a reference to the first element in the DOM that matches with the provided locator. 
-This value can be stored and used for future element actions. In our example HTML above, there are 
-two elements that have a class name of "tomatoes" so this method will return the element in the "vegetables" list.
-
-{{< tabpane langEqualsHeader=true >}}
+{{< tabpane langEqualsHeader=true text=true >}}
   {{< tab header="Java" >}}
-WebElement vegetable = driver.findElement(By.className("tomatoes"));
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/FindersTest.java#L22-L23">}}
   {{< /tab >}}
   {{< tab header="Python" >}}
-vegetable = driver.find_element(By.CLASS_NAME, "tomatoes")
+{{< gh-codeblock path="/examples/python/tests/elements/test_finders.py#L7-L8">}}
   {{< /tab >}}
   {{< tab header="CSharp" >}}
-var vegetable = driver.FindElement(By.ClassName("tomatoes"));
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Elements/FindersTest.cs#L15-L16">}}
   {{< /tab >}}
-{{< tab header="Ruby" text=true >}}
-{{< gh-codeblock path="/examples/ruby/spec/elements/finders_spec.rb#L10" >}}
+{{< tab header="Ruby" >}}
+{{< gh-codeblock path="/examples/ruby/spec/elements/finders_spec.rb#L10-L11" >}}
 {{< /tab >}}
   {{< tab header="JavaScript" >}}
-const vegetable = await driver.findElement(By.className('tomatoes'));
+{{< gh-codeblock path="/examples/javascript/test/elements/finders.spec.js#L9-L10">}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
-val vegetable: WebElement = driver.findElement(By.className("tomatoes"))
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/elements/FindersTest.kt#L19-L20">}}
   {{< /tab >}}
 {{< /tabpane >}}
 
 
-### Evaluating a subset of the DOM
 
-Rather than finding a unique locator in the entire DOM, it is often useful to narrow the search to the scope
-of another located element. In the above example there are two elements with a class name of "tomatoes" and 
-it is a little more challenging to get the reference for the second one.
+### 在 DOM 的子集内评估
 
-One solution is to locate an element with a unique attribute that is an ancestor of the desired element and not an
-ancestor of the undesired element, then call find element on that object:
+与其在整个 DOM 中寻找唯一的定位器，
+通常更有用的是将搜索范围缩小到另一个已定位元素的作用域内。
 
-{{< tabpane langEqualsHeader=true >}}
+一种解决办法是先定位目标元素的祖先，
+然后在该对象上调用 `find element`：
+
+{{< tabpane langEqualsHeader=true text=true >}}
   {{< tab header="Java" >}}
-WebElement fruits = driver.findElement(By.id("fruits"));
-WebElement fruit = fruits.findElement(By.className("tomatoes"));
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/FindersTest.java#L31-L33">}}
   {{< /tab >}}
   {{< tab header="Python" >}}
-fruits = driver.find_element(By.ID, "fruits")
-fruit = fruits.find_element(By.CLASS_NAME,"tomatoes")
+{{< gh-codeblock path="/examples/python/tests/elements/test_finders.py#L14-L16">}}
   {{< /tab >}}
   {{< tab header="CSharp" >}}
-IWebElement fruits = driver.FindElement(By.Id("fruits"));
-IWebElement fruit = fruits.FindElement(By.ClassName("tomatoes"));
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Elements/FindersTest.cs#L25-L27">}}
   {{< /tab >}}
-{{< tab header="Ruby" text=true >}}
-{{< gh-codeblock path="/examples/ruby/spec/elements/finders_spec.rb#L14-L15" >}}
+{{< tab header="Ruby" >}}
+{{< gh-codeblock path="/examples/ruby/spec/elements/finders_spec.rb#L17-L19" >}}
 {{< /tab >}}
   {{< tab header="JavaScript" >}}
-const fruits = await driver.findElement(By.id('fruits'));
-const fruit = fruits.findElement(By.className('tomatoes'));
+{{< gh-codeblock path="/examples/javascript/test/elements/finders.spec.js#L18-L20">}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
-val fruits = driver.findElement(By.id("fruits"))
-val fruit = fruits.findElement(By.className("tomatoes"))
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/elements/FindersTest.kt#L27-L29">}}
   {{< /tab >}}
 {{< /tabpane >}}
 
 {{% pageinfo color="info" %}}
-**Java and C#**<br>
-`WebDriver`, `WebElement` and `ShadowRoot` classes all implement a `SearchContext` interface, which is
-considered a _role-based interface_. Role-based interfaces allow you to determine whether a particular
-driver implementation supports a given feature. These interfaces are clearly defined and try 
-to adhere to having only a single role of responsibility.
+**Java 和 C#**<br>
+`WebDriver`、`WebElement` 和 `ShadowRoot` 类都实现了 `SearchContext` 接口，  
+该接口被视为一种 _基于角色的接口_。基于角色的接口可以让你判断特定的驱动实现是否支持某项功能。  
+这些接口定义清晰，并尽量遵循单一职责原则。  
 {{% /pageinfo %}}
 
-### Evaluating the Shadow DOM
+### 评估 Shadow DOM
 
-The Shadow DOM is an encapsulated DOM tree hidden inside an element. 
-With the release of v96 in Chromium Browsers, Selenium can now allow you to access this tree 
-with easy-to-use shadow root methods. NOTE: These methods require Selenium 4.0 or greater.
+Shadow DOM 是隐藏在元素内部的封装 DOM 树。  
+自 Chromium 浏览器在 v96 发布后，Selenium 已支持通过易用的 shadow root 方法访问该树。注意：这些方法需要 Selenium 4.0 或更高版本。
 
 {{< tabpane langEqualsHeader=true >}}
 {{< badge-examples >}}
@@ -120,10 +99,8 @@ WebElement shadowHost = driver.findElement(By.cssSelector("#shadow_host"));
 SearchContext shadowRoot = shadowHost.getShadowRoot();
 WebElement shadowContent = shadowRoot.findElement(By.cssSelector("#shadow_content"));
 {{< /tab >}}
-{{< tab header="Python" >}}
-shadow_host = driver.find_element(By.CSS_SELECTOR, '#shadow_host')
-shadow_root = shadow_host.shadow_root
-shadow_content = shadow_root.find_element(By.CSS_SELECTOR, '#shadow_content')
+{{< tab header="Python" text=true >}}
+{{< gh-codeblock path="/examples/python/tests/elements/test_finders.py#L39-L42">}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 var shadowHost = _driver.FindElement(By.CssSelector("#shadow_host"));
@@ -143,390 +120,141 @@ shadow_content = shadow_root.find_element(css: '#shadow_content')
 {{< /tab >}}
 {{< /tabpane >}}
 
-### Optimized locator
+### 优化后的定位器
 
-A nested lookup might not be the most effective location strategy since it requires two
-separate commands to be issued to the browser.
+嵌套查找可能不是最有效的定位策略，
+因为它需要向浏览器发送两次独立的命令。
 
-To improve the performance slightly, we can use either CSS or XPath to find this element in a single command.
-See the [Locator strategy suggestions]({{< ref "/documentation/test_practices/encouraged/locators" >}}) in our
-[Encouraged test practices]({{< ref "/documentation/test_practices/encouraged" >}}) section.
+为略微提升性能，我们可以使用 CSS 或 XPath，在一次命令中定位到该元素。
+请参阅本节中关于[定位策略建议]({{< ref "/documentation/test_practices/encouraged/locators" >}})的说明
+以及[推荐的测试实践]({{< ref "/documentation/test_practices/encouraged" >}})。
 
-For this example, we'll use a CSS Selector:
+在本例中，我们将使用 CSS 选择器：
 
-{{< tabpane langEqualsHeader=true >}}
+{{< tabpane langEqualsHeader=true text=true >}}
   {{< tab header="Java" >}}
-WebElement fruit = driver.findElement(By.cssSelector("#fruits .tomatoes"));
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/FindersTest.java#L41-L42">}}
   {{< /tab >}}
   {{< tab header="Python" >}}
-fruit = driver.find_element(By.CSS_SELECTOR,"#fruits .tomatoes")
+{{< gh-codeblock path="/examples/python/tests/elements/test_finders.py#L22-L23">}}
   {{< /tab >}}
   {{< tab header="CSharp" >}}
-var fruit = driver.FindElement(By.CssSelector("#fruits .tomatoes"));
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Elements/FindersTest.cs#L36-L37">}}
   {{< /tab >}}
-{{< tab header="Ruby" text=true >}}
-{{< gh-codeblock path="/examples/ruby/spec/elements/finders_spec.rb#L19" >}}
+{{< tab header="Ruby" >}}
+{{< gh-codeblock path="/examples/ruby/spec/elements/finders_spec.rb#L25-L26" >}}
 {{< /tab >}}
   {{< tab header="JavaScript" >}}
-const fruit = await driver.findElement(By.css('#fruits .tomatoes'));
+{{< gh-codeblock path="/examples/javascript/test/elements/finders.spec.js#L28-L29">}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
-val fruit = driver.findElement(By.cssSelector("#fruits .tomatoes"))
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/elements/FindersTest.kt#L36-L37">}}
   {{< /tab >}}
 {{< /tabpane >}}
 
 
-## All matching elements
 
-There are several use cases for needing to get references to all elements that match a locator, rather
-than just the first one. The plural find elements methods return a collection of element references. 
-If there are no matches, an empty list is returned. In this case, 
-references to all fruits and vegetable list items will be returned in a collection. 
+## 所有匹配的元素
 
-{{< tabpane langEqualsHeader=true >}}
+在某些情况下，需要获取与定位器匹配的所有元素的引用，而不是仅获取第一个。
+复数形式的 `find elements` 方法会返回一组元素引用。如果没有匹配项，则返回空列表。
+在本例中，将返回所有 input 元素的引用集合。
+
+{{< tabpane langEqualsHeader=true text=true >}}
   {{< tab header="Java" >}}
-List<WebElement> plants = driver.findElements(By.tagName("li"));
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/FindersTest.java#L50-L51">}}
   {{< /tab >}}
   {{< tab header="Python" >}}
-plants = driver.find_elements(By.TAG_NAME, "li")
+{{< gh-codeblock path="/examples/python/tests/elements/test_finders.py#L29-L30">}}
   {{< /tab >}}
   {{< tab header="CSharp" >}}
-IReadOnlyList<IWebElement> plants = driver.FindElements(By.TagName("li"));
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Elements/FindersTest.cs#L46-L47">}}
   {{< /tab >}}
-{{< tab header="Ruby" text=true >}}
-{{< gh-codeblock path="/examples/ruby/spec/elements/finders_spec.rb#L23" >}}
+{{< tab header="Ruby" >}}
+{{< gh-codeblock path="/examples/ruby/spec/elements/finders_spec.rb#L32-L33" >}}
 {{< /tab >}}
   {{< tab header="JavaScript" >}}
-const plants = await driver.findElements(By.tagName('li'));
+{{< gh-codeblock path="/examples/javascript/test/elements/finders.spec.js#L37-L38">}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
-val plants: List<WebElement> = driver.findElements(By.tagName("li"))
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/elements/FindersTest.kt#L44-L45">}}
   {{< /tab >}}
 {{< /tabpane >}}
 
-### Get element
-Often you get a collection of elements but want to work with a specific element, which means you
-need to iterate over the collection and identify the one you want.
+### 获取元素
+有时你会得到一组元素，但想操作其中某个特定元素，
+这意味着需要遍历该集合并找到目标元素。
 
 
-{{< tabpane langEqualsHeader=true >}}
+{{< tabpane langEqualsHeader=true text=true >}}
   {{< tab header="Java" >}}
-List<WebElement> elements = driver.findElements(By.tagName("li"));
-
-for (WebElement element : elements) {
-    System.out.println("Paragraph text:" + element.getText());
-}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/FindersTest.java#L61-L64">}}
   {{< /tab >}}
   {{< tab header="Python" >}}
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-
-driver = webdriver.Firefox()
-
-    # Navigate to Url
-driver.get("https://www.example.com")
-
-    # Get all the elements available with tag name 'p'
-elements = driver.find_elements(By.TAG_NAME, 'p')
-
-for e in elements:
-    print(e.text)
+{{< gh-codeblock path="/examples/python/tests/elements/test_finders.py#L51-L53">}}
   {{< /tab >}}
   {{< tab header="CSharp" >}}
-using OpenQA.Selenium;
-using OpenQA.Selenium.Firefox;
-using System.Collections.Generic;
-
-namespace FindElementsExample {
- class FindElementsExample {
-  public static void Main(string[] args) {
-   IWebDriver driver = new FirefoxDriver();
-   try {
-    // Navigate to Url
-    driver.Navigate().GoToUrl("https://example.com");
-
-    // Get all the elements available with tag name 'p'
-    IList < IWebElement > elements = driver.FindElements(By.TagName("p"));
-    foreach(IWebElement e in elements) {
-     System.Console.WriteLine(e.Text);
-    }
-
-   } finally {
-    driver.Quit();
-   }
-  }
- }
-}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Elements/FindersTest.cs#L58-L62">}}
   {{< /tab >}}
-   {{< tab header="Ruby" text=true >}}
-   {{< gh-codeblock path="/examples/ruby/spec/elements/finders_spec.rb#L27-L28" >}}
+   {{< tab header="Ruby" >}}
+{{< gh-codeblock path="/examples/ruby/spec/elements/finders_spec.rb#L40-L42" >}}
    {{< /tab >}}
   {{< tab header="JavaScript" >}}
-const {Builder, By} = require('selenium-webdriver');
-(async function example() {
-    let driver = await new Builder().forBrowser('firefox').build();
-    try {
-        // Navigate to Url
-        await driver.get('https://www.example.com');
-
-        // Get all the elements available with tag 'p'
-        let elements = await driver.findElements(By.css('p'));
-        for(let e of elements) {
-            console.log(await e.getText());
-        }
-    }
-    finally {
-        await driver.quit();
-    }
-})();
+{{< gh-codeblock path="/examples/javascript/test/elements/finders.spec.js#L47-L50">}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
-import org.openqa.selenium.By
-import org.openqa.selenium.firefox.FirefoxDriver
-
-fun main() {
-    val driver = FirefoxDriver()
-    try {
-        driver.get("https://example.com")
-        // Get all the elements available with tag name 'p'
-        val elements = driver.findElements(By.tagName("p"))
-        for (element in elements) {
-            println("Paragraph text:" + element.text)
-        }
-    } finally {
-        driver.quit()
-    }
-}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/elements/FindersTest.kt#L53-L56">}}
   {{< /tab >}}
 {{< /tabpane >}}
 
-## Find Elements From Element
+## 从元素查找子元素
 
-It is used to find the list of matching child WebElements within the context of parent element.
-To achieve this, the parent WebElement is chained with 'findElements' to access child elements
+用于在父元素的上下文中查找匹配的子 WebElement 列表。
+为此，可在父 WebElement 上链式调用 `findElements` 来访问子元素。
 
-{{< tabpane langEqualsHeader=true >}}
+{{< tabpane langEqualsHeader=true text=true >}}
   {{< tab header="Java" >}}
-  import org.openqa.selenium.By;
-  import org.openqa.selenium.WebDriver;
-  import org.openqa.selenium.WebElement;
-  import org.openqa.selenium.chrome.ChromeDriver;
-  import java.util.List;
-
-  public class findElementsFromElement {
-      public static void main(String[] args) {
-          WebDriver driver = new ChromeDriver();
-          try {
-              driver.get("https://example.com");
-
-              // Get element with tag name 'div'
-              WebElement element = driver.findElement(By.tagName("div"));
-
-              // Get all the elements available with tag name 'p'
-              List<WebElement> elements = element.findElements(By.tagName("p"));
-              for (WebElement e : elements) {
-                  System.out.println(e.getText());
-              }
-          } finally {
-              driver.quit();
-          }
-      }
-  }
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/FindersTest.java#L74-L78">}}
   {{< /tab >}}
   {{< tab header="Python" >}}
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-
-driver = webdriver.Chrome()
-driver.get("https://www.example.com")
-##get elements from parent element using TAG_NAME
-
-    # Get element with tag name 'div'
-element = driver.find_element(By.TAG_NAME, 'div')
-
-    # Get all the elements available with tag name 'p'
-elements = element.find_elements(By.TAG_NAME, 'p')
-for e in elements:
-    print(e.text)
-
-##get elements from parent element using XPATH
-##NOTE: in order to utilize XPATH from current element, you must add "." to beginning of path
-
-    # Get first element of tag 'ul'
-element = driver.find_element(By.XPATH, '//ul')
-
-    # get children of tag 'ul' with tag 'li'
-elements  = driver.find_elements(By.XPATH, './/li')
-for e in elements:
-    print(e.text)
+{{< gh-codeblock path="/examples/python/tests/elements/test_finders.py#L61-L64">}}
   {{< /tab >}}
   {{< tab header="CSharp" >}}
-using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
-using System.Collections.Generic;
-
-namespace FindElementsFromElement {
- class FindElementsFromElement {
-  public static void Main(string[] args) {
-   IWebDriver driver = new ChromeDriver();
-   try {
-    driver.Navigate().GoToUrl("https://example.com");
-
-    // Get element with tag name 'div'
-    IWebElement element = driver.FindElement(By.TagName("div"));
-
-    // Get all the elements available with tag name 'p'
-    IList < IWebElement > elements = element.FindElements(By.TagName("p"));
-    foreach(IWebElement e in elements) {
-     System.Console.WriteLine(e.Text);
-    }
-   } finally {
-    driver.Quit();
-   }
-  }
- }
-}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Elements/FindersTest.cs#L73-L78">}}
   {{< /tab >}}
-   {{< tab header="Ruby" text=true >}}
-   {{< gh-codeblock path="/examples/ruby/spec/elements/finders_spec.rb#L32-L34" >}}
+   {{< tab header="Ruby" >}}
+{{< gh-codeblock path="/examples/ruby/spec/elements/finders_spec.rb#L48-L51" >}}
    {{< /tab >}}
   {{< tab header="JavaScript" >}}
-  const {Builder, By} = require('selenium-webdriver');
-
-  (async function example() {
-      let driver = new Builder()
-          .forBrowser('chrome')
-          .build();
-
-      await driver.get('https://www.example.com');
-
-      // Get element with tag name 'div'
-      let element = driver.findElement(By.css("div"));
-
-      // Get all the elements available with tag name 'p'
-      let elements = await element.findElements(By.css("p"));
-      for(let e of elements) {
-          console.log(await e.getText());
-      }
-  })();
+{{< gh-codeblock path="/examples/javascript/test/elements/finders.spec.js#L59-L63">}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
-  import org.openqa.selenium.By
-  import org.openqa.selenium.chrome.ChromeDriver
-
-  fun main() {
-      val driver = ChromeDriver()
-      try {
-          driver.get("https://example.com")
-
-          // Get element with tag name 'div'
-          val element = driver.findElement(By.tagName("div"))
-
-          // Get all the elements available with tag name 'p'
-          val elements = element.findElements(By.tagName("p"))
-          for (e in elements) {
-              println(e.text)
-          }
-      } finally {
-          driver.quit()
-      }
-  }
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/elements/FindersTest.kt#L64-L68">}}
   {{< /tab >}}
 {{< /tabpane >}}
 
-## Get Active Element
+## 获取活动元素
 
-It is used to track (or) find DOM element which has the focus in the current browsing context.
+用于跟踪或查找当前浏览上下文中具有焦点的 DOM 元素。
 
-{{< tabpane langEqualsHeader=true >}}
+{{< tabpane langEqualsHeader=true text=true >}}
   {{< tab header="Java" >}}
-  import org.openqa.selenium.*;
-  import org.openqa.selenium.chrome.ChromeDriver;
-
-  public class activeElementTest {
-    public static void main(String[] args) {
-      WebDriver driver = new ChromeDriver();
-      try {
-        driver.get("http://www.google.com");
-        driver.findElement(By.cssSelector("[name='q']")).sendKeys("webElement");
-
-        // Get attribute of current active element
-        String attr = driver.switchTo().activeElement().getAttribute("title");
-        System.out.println(attr);
-      } finally {
-        driver.quit();
-      }
-    }
-  }
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/FindersTest.java#L88-L89">}}
   {{< /tab >}}
   {{< tab header="Python" >}}
-  from selenium import webdriver
-  from selenium.webdriver.common.by import By
-
-  driver = webdriver.Chrome()
-  driver.get("https://www.google.com")
-  driver.find_element(By.CSS_SELECTOR, '[name="q"]').send_keys("webElement")
-
-    # Get attribute of current active element
-  attr = driver.switch_to.active_element.get_attribute("title")
-  print(attr)
+{{< gh-codeblock path="/examples/python/tests/elements/test_finders.py#L72-L73">}}
   {{< /tab >}}
   {{< tab header="CSharp" >}}
-    using OpenQA.Selenium;
-    using OpenQA.Selenium.Chrome;
-
-    namespace ActiveElement {
-     class ActiveElement {
-      public static void Main(string[] args) {
-       IWebDriver driver = new ChromeDriver();
-       try {
-        // Navigate to Url
-        driver.Navigate().GoToUrl("https://www.google.com");
-        driver.FindElement(By.CssSelector("[name='q']")).SendKeys("webElement");
-
-        // Get attribute of current active element
-        string attr = driver.SwitchTo().ActiveElement().GetAttribute("title");
-        System.Console.WriteLine(attr);
-       } finally {
-        driver.Quit();
-       }
-      }
-     }
-    }
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Elements/FindersTest.cs#L89-L90">}}
   {{< /tab >}}
-  {{< tab header="Ruby" text=true >}}
-  {{< gh-codeblock path="/examples/ruby/spec/elements/finders_spec.rb#L38-L39" >}}
+  {{< tab header="Ruby" >}}
+{{< gh-codeblock path="/examples/ruby/spec/elements/finders_spec.rb#L58-L60" >}}
   {{< /tab >}}
   {{< tab header="JavaScript" >}}
-  const {Builder, By} = require('selenium-webdriver');
-
-  (async function example() {
-      let driver = await new Builder().forBrowser('chrome').build();
-      await driver.get('https://www.google.com');
-      await  driver.findElement(By.css('[name="q"]')).sendKeys("webElement");
-
-      // Get attribute of current active element
-      let attr = await driver.switchTo().activeElement().getAttribute("title");
-      console.log(`${attr}`)
-  })();
+{{< gh-codeblock path="/examples/javascript/test/elements/finders.spec.js#L72-L73">}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
-  import org.openqa.selenium.By
-  import org.openqa.selenium.chrome.ChromeDriver
-
-  fun main() {
-      val driver = ChromeDriver()
-      try {
-          driver.get("https://www.google.com")
-          driver.findElement(By.cssSelector("[name='q']")).sendKeys("webElement")
-
-          // Get attribute of current active element
-          val attr = driver.switchTo().activeElement().getAttribute("title")
-          print(attr)
-      } finally {
-          driver.quit()
-      }
-  }
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/elements/FindersTest.kt#L76-L77">}}
   {{< /tab >}}
 {{< /tabpane >}}
 

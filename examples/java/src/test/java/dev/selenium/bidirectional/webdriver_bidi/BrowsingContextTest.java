@@ -11,6 +11,7 @@ import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Rectangle;
+import org.openqa.selenium.UnexpectedAlertBehaviour;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.WindowType;
 import org.openqa.selenium.bidi.BiDiException;
@@ -33,6 +34,7 @@ class BrowsingContextTest extends BaseTest {
     public void setup() {
         FirefoxOptions options = new FirefoxOptions();
         options.setCapability("webSocketUrl", true);
+        options.setUnhandledPromptBehaviour(UnexpectedAlertBehaviour.IGNORE);
         driver = new FirefoxDriver(options);
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }

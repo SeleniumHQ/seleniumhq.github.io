@@ -2,7 +2,6 @@
 title: "Esperas"
 linkTitle: "Esperas"
 weight: 6
-aliases: ["/documentation/pt-br/webdriver/waits/"]
 ---
 
 Perhaps the most common challenge for browser automation is ensuring
@@ -82,7 +81,7 @@ Solving our example with an implicit wait looks like this:
 {{< gh-codeblock path="/examples/javascript/test/waits/waits.spec.js#L39" >}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/waits/WaitsTest.kt#L19" >}}
   {{< /tab >}}
 {{< /tabpane >}}
 
@@ -118,7 +117,7 @@ JavaScript also supports [Expected Conditions]({{< ref "support_features/expecte
 {{< gh-codeblock path="/examples/javascript/test/waits/waits.spec.js#L52" >}}
   {{% /tab %}}
   {{< tab header="Kotlin" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/waits/WaitsTest.kt#L36-L37" >}}
   {{< /tab >}}
 {{< /tabpane >}}
 
@@ -154,6 +153,6 @@ The easiest way to customize Waits in Java is to use the `FluentWait` class:
 {{< badge-code >}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/waits/WaitsTest.kt#L51-L60" >}}
   {{< /tab >}}
 {{< /tabpane >}}

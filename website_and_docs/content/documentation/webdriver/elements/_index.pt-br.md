@@ -4,8 +4,7 @@ linkTitle: "Elemento Web"
 weight: 8
 needsTranslation: true
 aliases: [
-"/documentation/pt-br/webdriver/web_element/",
-"/pt-br/documentation/webdriver/web_element/"
+"/documentation/webdriver/web_element/"
 ]
 description: >
     Identificando e trabalhando com elementos no DOM.

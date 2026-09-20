@@ -3,8 +3,7 @@ title: "Rotas da Grid"
 linkTitle: "Rotas da Grid"
 weight: 3
 aliases: [
-"/documentation/pt-br/grid/grid_4/grid_endpoints/",
-"/pt-br/documentation/grid/advanced_features/grid_endpoints/"
+"/documentation/grid/advanced_features/grid_endpoints/"
 ]
 ---
 
@@ -88,7 +87,7 @@ curl --request POST 'http://<Router-URL>/se/grid/distributor/node/<node-id>/drai
 
 Os terminais nesta seção são aplicáveis ao modo Hub-Node e ao modo Grid totalmente distribuída, onde o Nó é executado de forma independente.
 A URL do Nó padrão é http://localhost:5555 no caso de um Nó.
-No caso de vários Nós, use [Grid status](#grid-status) para obter todos os detalhes do Nó e localizar o endereço do Nó.
+No caso de vários Nós, use [Grid status](#status-da-grid) para obter todos os detalhes do Nó e localizar o endereço do Nó.
 
 ### Status 
 
@@ -102,7 +101,7 @@ curl --request GET 'http://localhost:5555/status'
 
 ### Drenagem
 
-O Distribuidor passa o comando [drain](# drain-node) para o Nó apropriado identificado pelo ID do Nó.
+O Distribuidor passa o comando [drain](#drenar-nó) para o Nó apropriado identificado pelo ID do Nó.
 Para drenar o Nó diretamente, use o comando curl listado abaixo.
 Ambos as rotas são válidas e produzem o mesmo resultado. Drenar termina as sessões em andamento antes de interromper o Nó.
 

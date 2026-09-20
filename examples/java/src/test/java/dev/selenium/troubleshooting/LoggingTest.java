@@ -2,20 +2,21 @@ package dev.selenium.troubleshooting;
 
 import java.io.IOException;
 import java.nio.file.Files;
-import java.nio.file.Paths;
+import java.nio.file.Path;
 import java.util.Arrays;
 import java.util.logging.FileHandler;
 import java.util.logging.Handler;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import dev.selenium.BaseTest;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.manager.SeleniumManager;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
-public class LoggingTest {
+public class LoggingTest extends BaseTest {
 
     @AfterEach
     public void loggingOff() {
@@ -34,7 +35,8 @@ public class LoggingTest {
             handler.setLevel(Level.FINE);
         });
 
-        Handler handler = new FileHandler("selenium.xml");
+      Path output = artifactsDir().resolve("selenium.xml");
+      Handler handler = new FileHandler(output.toString());
         logger.addHandler(handler);
 
         Logger.getLogger(RemoteWebDriver.class.getName()).setLevel(Level.FINEST);
@@ -45,7 +47,7 @@ public class LoggingTest {
         localLogger.info("this is useful information");
         localLogger.fine("this is detailed debug information");
 
-        byte[] bytes = Files.readAllBytes(Paths.get("selenium.xml"));
+        byte[] bytes = Files.readAllBytes(output);
         String fileContent = new String(bytes);
 
         Assertions.assertTrue(fileContent.contains("this is a warning"));

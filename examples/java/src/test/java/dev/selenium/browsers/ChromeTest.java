@@ -14,8 +14,13 @@ import java.util.regex.Pattern;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.condition.DisabledOnOs;
+import org.junit.jupiter.api.condition.OS;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.bidi.webextension.ExtensionPath;
+import org.openqa.selenium.bidi.webextension.InstallExtensionParameters;
+import org.openqa.selenium.bidi.webextension.WebExtension;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -56,15 +61,20 @@ public class ChromeTest extends BaseTest {
   }
 
   @Test
+  @DisabledOnOs(OS.WINDOWS)
   public void extensionOptions() {
     ChromeOptions options = getDefaultChromeOptions();
-    Path path = Paths.get("src/test/resources/extensions/webextensions-selenium-example.crx");
-    File extensionFilePath = new File(path.toUri());
-
-    options.addExtensions(extensionFilePath);
-    options.addArguments("--disable-features=DisableLoadExtensionCommandLineSwitch");
-
+    options.enableBiDi();
+    options.addArguments("--remote-debugging-pipe");
+    options.addArguments("--enable-unsafe-extension-debugging");
     driver = new ChromeDriver(options);
+
+    Path path = Paths.get("src/test/resources/extensions/selenium-example");
+    WebExtension extension = new WebExtension(driver);
+    ExtensionPath extensionPath = new ExtensionPath(path.toString());
+    InstallExtensionParameters parameters = new InstallExtensionParameters(extensionPath);
+    extension.install(parameters);
+
     driver.get("https://www.selenium.dev/selenium/web/blank.html");
     WebElement injected = driver.findElement(By.id("webextensions-selenium-example"));
     Assertions.assertEquals(

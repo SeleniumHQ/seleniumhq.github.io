@@ -9,7 +9,7 @@ needsTranslation: true
 
 There are only 5 basic commands that can be executed on an element:
 * [click](https://w3c.github.io/webdriver/#element-click) (applies to any element)
-* [send keys](https://w3c.github.io/webdriver/#element-send-keys) (only applies to text fields and content editable elements)
+* [send keys](https://w3c.github.io/webdriver/#element-send-keys) (only applies to text fields and keyboard interactable elements)
 * [clear](https://w3c.github.io/webdriver/#element-send-keys) (only applies to text fields and content editable elements)
 * submit (only applies to form elements)
 * select (see [Select List Elements]({{< ref "select_lists.md" >}}))
@@ -73,7 +73,7 @@ Selenium will return an [element click intercepted](https://w3c.github.io/webdri
 ## Send keys
 
 The [element send keys command](https://w3c.github.io/webdriver/#dfn-element-send-keys)
-types the provided keys into an [editable](https://w3c.github.io/webdriver/#dfn-editable) element.
+types the provided keys into an [keyboard interactable](https://w3c.github.io/webdriver/#dfn-keyboard-interactable) element.
 Typically, this means an element is an input element of a form with a `text` type or an element
 with a `content-editable` attribute. If it is not editable,
 [an invalid element state](https://w3c.github.io/webdriver/#dfn-invalid-element-state) error is returned.

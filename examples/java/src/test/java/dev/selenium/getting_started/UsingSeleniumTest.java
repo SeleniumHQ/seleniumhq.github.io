@@ -43,8 +43,10 @@ public class UsingSeleniumTest {
 	}
 
 	@AfterEach
-	public void teardown() {
-		driver.quit();
+	public final void teardown() {
+		if (driver != null) {
+			driver.quit();
+		}
 	}
 
 }

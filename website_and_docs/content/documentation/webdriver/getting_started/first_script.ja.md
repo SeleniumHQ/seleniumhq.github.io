@@ -102,7 +102,7 @@ Seleniumを使用して、それをうまく行うことは高度なトピック
 暗黙的な待機が最善の解決策になることはめったにありませんが、ここで示すのが最も簡単なので、
 プレースホルダーとして使用します。
 
-[待機戦略] についてさらに読む({{< ref "/documentation/webdriver/waits.md" >}}).
+[待機戦略]({{< ref "/documentation/webdriver/waits.md" >}})についてさらに読む。
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
@@ -234,10 +234,10 @@ Seleniumを使用して、それをうまく行うことは高度なトピック
 {{< gh-codeblock path="/examples/java/README.md#L60" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="/examples/python/README.md#L35" >}}
+{{< gh-codeblock path="/examples/python/README.md#L58" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/dotnet/README.md#L55" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< gh-codeblock path="/examples/ruby/README.md#L36" >}}

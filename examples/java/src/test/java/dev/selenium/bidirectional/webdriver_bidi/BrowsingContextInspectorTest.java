@@ -9,6 +9,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.UnexpectedAlertBehaviour;
 import org.openqa.selenium.WindowType;
 import org.openqa.selenium.bidi.module.BrowsingContextInspector;
 import org.openqa.selenium.bidi.browsingcontext.BrowsingContext;
@@ -25,6 +26,7 @@ class BrowsingContextInspectorTest extends BaseTest {
     public void setup() {
         FirefoxOptions options = new FirefoxOptions();
         options.setCapability("webSocketUrl", true);
+        options.setUnhandledPromptBehaviour(UnexpectedAlertBehaviour.IGNORE);
         driver = new FirefoxDriver(options);
     }
 

@@ -6,8 +6,7 @@ description: >
   Selenium é um projeto abrangente para uma gama de ferramentas e bibliotecas que permitem
   e suportam a automação de navegadores da web.
 aliases: [
-"/documentation/pt-br/introduction/the_selenium_project_and_tools/",
-"/pt-br/documentation/overview/a_deeper_look"
+"/documentation/overview/a_deeper_look"
 ]
 ---
 

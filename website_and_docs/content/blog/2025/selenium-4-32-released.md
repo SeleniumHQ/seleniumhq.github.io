@@ -87,7 +87,7 @@ We thank all our contributors for their incredible efforts in making Selenium be
 release. ❤️
 
 For a detailed look at all changes, check out
-the [release notes](https://github.com/SeleniumHQ/selenium/releases/tag/4.32).
+the [release notes](https://github.com/SeleniumHQ/selenium/releases/tag/selenium-4.32.0).
 
 <br>
 

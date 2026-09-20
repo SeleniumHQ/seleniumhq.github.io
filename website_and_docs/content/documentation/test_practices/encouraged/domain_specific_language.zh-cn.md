@@ -3,8 +3,7 @@ title: "领域特定语言"
 linkTitle: "领域特定语言"
 weight: 4
 aliases: [
-"/documentation/zh-cn/guidelines_and_recommendations/domain_specific_language/",
-"/zh-cn/documentation/guidelines/domain_specific_language/"
+"/documentation/guidelines/domain_specific_language/"
 ]
 ---
 
@@ -40,30 +39,7 @@ aliases: [
 以下是Java中合理的DSL方法的示例. 
 为简便起见, 假定 `driver` 对象是预定义的并且可用于该方法.
 
-```java
-/**
- * Takes a username and password, fills out the fields, and clicks "login".
- * @return An instance of the AccountPage
- */
-public AccountPage loginAsUser(String username, String password) {
-  WebElement loginField = driver.findElement(By.id("loginField"));
-  loginField.clear();
-  loginField.sendKeys(username);
-
-  // Fill out the password field. The locator we're using is "By.id", and we should
-  // have it defined elsewhere in the class.
-  WebElement passwordField = driver.findElement(By.id("password"));
-  passwordField.clear();
-  passwordField.sendKeys(password);
-
-  // Click the login button, which happens to have the id "submit".
-  driver.findElement(By.id("submit")).click();
-
-  // Create and return a new instance of the AccountPage (via the built-in Selenium
-  // PageFactory).
-  return PageFactory.newInstance(AccountPage.class);
-}
-```
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/test_practices/DomainSpecificLanguageExample.java#L21-L43" >}}
 
 此方法完全从测试代码中抽象出输入字段, 按钮, 单击甚至页面的概念. 
 使用这种方法, 测试人员要做的就是调用此方法. 

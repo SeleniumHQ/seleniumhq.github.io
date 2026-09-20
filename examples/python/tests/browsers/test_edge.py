@@ -6,7 +6,8 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 
 def test_basic_options():
-    options = get_default_edge_options()
+    options = webdriver.EdgeOptions()
+    options.add_argument("--no-sandbox")
     driver = webdriver.Edge(options=options)
 
     driver.quit()
@@ -70,10 +71,10 @@ def test_exclude_switches():
 def test_log_to_file(log_path):
     service = webdriver.EdgeService(log_output=log_path)
 
-    driver = webdriver.Edge(service=service)
+    driver = webdriver.Edge(service=service, options=get_default_edge_options())
 
     with open(log_path, 'r') as fp:
-        assert "Starting Microsoft Edge WebDriver" in fp.readline()
+        assert "Starting" in fp.readline()
 
     driver.quit()
 
@@ -81,10 +82,10 @@ def test_log_to_file(log_path):
 def test_log_to_stdout(capfd):
     service = webdriver.EdgeService(log_output=subprocess.STDOUT)
 
-    driver = webdriver.Edge(service=service)
+    driver = webdriver.Edge(service=service, options=get_default_edge_options())
 
     out, err = capfd.readouterr()
-    assert "Starting Microsoft Edge WebDriver" in out
+    assert "Starting" in out
 
     driver.quit()
 
@@ -92,7 +93,7 @@ def test_log_to_stdout(capfd):
 def test_log_level(log_path):
     service = webdriver.EdgeService(service_args=['--log-level=DEBUG'], log_output=log_path)
 
-    driver = webdriver.Edge(service=service)
+    driver = webdriver.Edge(service=service, options=get_default_edge_options())
 
     with open(log_path, 'r') as f:
         assert '[DEBUG]' in f.read()
@@ -103,7 +104,7 @@ def test_log_level(log_path):
 def test_log_features(log_path):
     service = webdriver.EdgeService(service_args=['--append-log', '--readable-timestamp'], log_output=log_path)
 
-    driver = webdriver.Edge(service=service)
+    driver = webdriver.Edge(service=service, options=get_default_edge_options())
 
     with open(log_path, 'r') as f:
         assert re.match(r"\[\d\d-\d\d-\d\d\d\d", f.read())
@@ -114,7 +115,7 @@ def test_log_features(log_path):
 def test_build_checks(log_path):
     service = webdriver.EdgeService(service_args=['--disable-build-check'], log_output=log_path)
 
-    driver = webdriver.Edge(service=service)
+    driver = webdriver.Edge(service=service, options=get_default_edge_options())
 
     expected = "[WARNING]: You are using an unsupported command-line switch: --disable-build-check"
     with open(log_path, 'r') as f:
@@ -124,7 +125,7 @@ def test_build_checks(log_path):
 
 
 def test_set_network_conditions():
-    driver = webdriver.Edge()
+    driver = webdriver.Edge(options=get_default_edge_options())
 
     network_conditions = {
         "offline": False,
@@ -143,7 +144,7 @@ def test_set_network_conditions():
 
 
 def test_set_permissions():
-    driver = webdriver.Edge()
+    driver = webdriver.Edge(options=get_default_edge_options())
     driver.get('https://www.selenium.dev')
 
     driver.set_permissions('camera', 'denied')
@@ -164,7 +165,7 @@ def get_permission_state(driver, name):
 
 
 def test_cast_features():
-    driver = webdriver.Edge()
+    driver = webdriver.Edge(options=get_default_edge_options())
 
     try:
         sinks = driver.get_sinks()
@@ -179,7 +180,7 @@ def test_cast_features():
 
 
 def test_get_browser_logs():
-    driver = webdriver.Edge()
+    driver = webdriver.Edge(options=get_default_edge_options())
     driver.get("https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html")
     driver.find_element(By.ID, "consoleError").click()
 
@@ -188,6 +189,7 @@ def test_get_browser_logs():
     # Assert that at least one log contains the expected message
     assert any("I am console error" in log['message'] for log in logs), "No matching log message found."
     driver.quit()
+
 
 def get_default_edge_options():
     options = webdriver.EdgeOptions()

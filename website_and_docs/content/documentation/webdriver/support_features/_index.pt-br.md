@@ -5,9 +5,8 @@ weight: 18
 description: >
  As classes de suporte fornecem características opcionais de nível superior.
 aliases: [
-"/documentation/pt-br/support_packages/",
-"/pt-br/documentation/support_packages/",
-"/pt-br/documentation/additional_features/",
+"/documentation/support_packages/",
+"/documentation/additional_features/"
 ]
 ---
 

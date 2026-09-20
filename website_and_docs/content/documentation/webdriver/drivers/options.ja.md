@@ -5,15 +5,12 @@ weight: 2
 description: >-
   これらの機能はすべてのブラウザで共有されています。
 aliases: [
-"/documentation/ja/driver_idiosyncrasies/shared_capabilities/",
-"/ja/documentation/webdriver/capabilities/shared_capabilities/",
-"/documentation/ja/webdriver/http_proxies/",
-"/ja/documentation/webdriver/http_proxies/",
-"/ja/documentation/webdriver/capabilities/http_proxies/",
-"/documentation/ja/webdriver/page_loading_strategy/",
-"/ja/documentation/webdriver/page_loading_strategy/",
-"/ja/documentation/webdriver/capabilities/page_loading_strategy/",
-"/ja/documentation/capabilitis/shared/",
+"/documentation/webdriver/capabilities/shared_capabilities/",
+"/documentation/webdriver/http_proxies/",
+"/documentation/webdriver/capabilities/http_proxies/",
+"/documentation/webdriver/page_loading_strategy/",
+"/documentation/webdriver/capabilities/page_loading_strategy/",
+"/documentation/capabilitis/shared/"
 ]
 ---
 
@@ -31,10 +28,10 @@ Selenium 4 以降、ブラウザ オプション クラスを使用する必要�
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L73-74" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L73-L74" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L79-80" >}}
+{{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L79-L80" >}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
@@ -57,10 +54,10 @@ Selenium 4 以降、ブラウザ オプション クラスを使用する必要�
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L80-82" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L80-L82" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L86-88" >}}
+{{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L86-L88" >}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
@@ -113,10 +110,10 @@ WebDriver は [load](https://developer.mozilla.org/ja/docs/Web/API/Window/load_e
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L21-L23">}}
 {{< /tab >}}
 {{< tab header="Python" text=true >}}
-{{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L7-9">}}
+{{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L7-L9">}}
 {{< /tab >}}
 {{< tab header="CSharp" text=true >}}
-{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Drivers/OptionsTest.cs#L13-14" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Drivers/OptionsTest.cs#L13-L14" >}}
 {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
 {{< gh-codeblock path="/examples/ruby/spec/drivers/options_spec.rb#L11-L12">}}
@@ -156,7 +153,7 @@ WebDriver は、[DOMContentLoaded](https://developer.mozilla.org/ja/docs/Web/API
 {{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L15-L17">}}
 {{< /tab >}}
 {{< tab header="CSharp" text=true >}}
-{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Drivers/OptionsTest.cs#L29-30" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Drivers/OptionsTest.cs#L29-L30" >}}
 {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
 {{< gh-codeblock path="/examples/ruby/spec/drivers/options_spec.rb#L20-L21">}}
@@ -195,7 +192,7 @@ WebDriver は、最初のページがダウンロードされるまで待機し�
 {{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L23-L25">}}
 {{< /tab >}}
 {{< tab header="CSharp" text=true >}}
-{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Drivers/OptionsTest.cs#L41-42" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Drivers/OptionsTest.cs#L41-L42" >}}
 {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
 {{< gh-codeblock path="/examples/ruby/spec/drivers/options_spec.rb#L29-L30">}}
@@ -234,7 +231,7 @@ fun main() {
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L88-L90">}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L94-96">}}
+{{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L94-L96">}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
@@ -266,7 +263,7 @@ fun main() {
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L60-L61">}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L101-103">}}
+{{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L101-L103">}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
@@ -298,7 +295,7 @@ WebDriverの `セッション` には特定の `セッションタイムアウ�
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L96-L98">}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L30-32">}}
+{{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L30-L32">}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
@@ -324,7 +321,7 @@ WebDriverの `セッション` には特定の `セッションタイムアウ�
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L111-L113">}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L37-39">}}
+{{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L37-L39">}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
@@ -349,7 +346,7 @@ WebDriverの `セッション` には特定の `セッションタイムアウ�
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L126-L128">}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L44-46">}}
+{{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L44-L46">}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
@@ -386,10 +383,10 @@ WebDriverの `セッション` には特定の `セッションタイムアウ�
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L141-L142">}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L51-53">}}
+{{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L51-L53">}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Drivers/OptionsTest.cs#L59-L60">}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< gh-codeblock path="/examples/ruby/spec/drivers/options_spec.rb#L60-L61" >}}
@@ -402,6 +399,10 @@ WebDriverの `セッション` には特定の `セッションタイムアウ�
 {{< /tab >}}
 {{< /tabpane >}}
 
+注：`beforeunload` プロンプトに関しては、
+プロンプトを開いたままにするために、[BiDi]({{< ref "../bidi/" >}}) を有効にすることに加えて、
+ChromeDriver で `ignore` を設定する必要があります。
+
 ## setWindowRect
 
 リモート エンドがすべての　[サイズ変更および再配置](https://w3c.github.io/webdriver/#resizing-and-positioning-windows)
@@ -412,7 +413,7 @@ WebDriverの `セッション` には特定の `セッションタイムアウ�
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L151-L152">}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L58-60">}}
+{{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L58-L60">}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
@@ -439,7 +440,7 @@ WebDriverの `セッション` には特定の `セッションタイムアウ�
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L163-L164">}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L65-67">}}
+{{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L65-L67">}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
@@ -472,96 +473,22 @@ Selenium WebDriverは設定をプロキシする方法を提供します。
 
 
 {{< tabpane text=true >}}
-{{< badge-examples >}}
 {{% tab header="Java" %}}
-```java
-import org.openqa.selenium.Proxy;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
-
-public class ProxyTest {
-  public static void main(String[] args) {
-    Proxy proxy = new Proxy();
-    proxy.setHttpProxy("<HOST:PORT>");
-    ChromeOptions options = new ChromeOptions();
-    options.setCapability("proxy", proxy);
-    WebDriver driver = new ChromeDriver(options);
-    driver.get("https://www.google.com/");
-    driver.manage().window().maximize();
-    driver.quit();
-  }
-}
-```
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L176-L180" >}}
 {{% /tab %}}
 {{% tab header="Python" %}}
-{{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L72-74">}}
+{{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L72-L74">}}
 {{% /tab %}}
 {{% tab header="CSharp" %}}
-```CSharp
-using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
-
-public class ProxyTest{
-public static void Main() {
-ChromeOptions options = new ChromeOptions();
-Proxy proxy = new Proxy();
-proxy.Kind = ProxyKind.Manual;
-proxy.IsAutoDetect = false;
-proxy.SslProxy = "<HOST:PORT>";
-options.Proxy = proxy;
-options.AddArgument("ignore-certificate-errors");
-IWebDriver driver = new ChromeDriver(options);
-driver.Navigate().GoToUrl("https://www.selenium.dev/");
-}
-}
-```
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Drivers/OptionsTest.cs#L74-L81" >}}
 {{% /tab %}}
 {{< tab header="Ruby" >}}
 {{< gh-codeblock path="/examples/ruby/spec/drivers/options_spec.rb#L87-L88" >}}
 {{< /tab >}}
 {{% tab header="JavaScript" %}}
-```javascript
-let webdriver = require('selenium-webdriver');
-let chrome = require('selenium-webdriver/chrome');
-let proxy = require('selenium-webdriver/proxy');
-let opts = new chrome.Options();
-
-(async function example() {
-opts.setProxy(proxy.manual({http: '<HOST:PORT>'}));
-let driver = new webdriver.Builder()
-.forBrowser('chrome')
-.setChromeOptions(opts)
-.build();
-try {
-await driver.get("https://selenium.dev");
-}
-finally {
-await driver.quit();
-}
-}());
-```
+{{< gh-codeblock path="/examples/javascript/test/drivers/options.spec.js#L7-L8" >}}
 {{% /tab %}}
 {{% tab header="Kotlin" %}}
-```kotlin
-import org.openqa.selenium.Proxy
-import org.openqa.selenium.WebDriver
-import org.openqa.selenium.chrome.ChromeDriver
-import org.openqa.selenium.chrome.ChromeOptions
-
-class proxyTest {
-fun main() {
-
-        val proxy = Proxy()
-        proxy.setHttpProxy("<HOST:PORT>")
-        val options = ChromeOptions()
-        options.setCapability("proxy", proxy)
-        val driver: WebDriver = ChromeDriver(options)
-        driver["https://www.google.com/"]
-        driver.manage().window().maximize()
-        driver.quit()
-    }
-}
-```
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/drivers/OptionsTest.kt#L13-L16" >}}
 {{% /tab %}}
 {{< /tabpane >}}

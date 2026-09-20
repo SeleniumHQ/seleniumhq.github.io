@@ -5,9 +5,8 @@ weight: 2
 description: >
   配置自动化的浏览器.
 aliases: [
-"/documentation/zh-cn/selenium_installation/installing_selenium_libraries/",
-"/zh-cn/documentation/getting_started/installing_selenium_libraries/",
-"/zh-cn/documentation/getting_started/install_selenium_library/"
+"/documentation/getting_started/installing_selenium_libraries/",
+"/documentation/getting_started/install_selenium_library/"
 ]
 ---
 
@@ -25,7 +24,7 @@ aliases: [
 ### Maven
 具体的依赖位于项目中的 `pom.xml` 文件:
 
-{{< gh-codeblock path="/examples/java/pom.xml#L30-L34" >}}
+{{< gh-codeblock path="/examples/java/pom.xml#L35-L38" >}}
 
 ### Gradle
 具体的依赖位于项目中的 `build.gradle` 文件中的 `testImplementation`:

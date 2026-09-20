@@ -4,10 +4,9 @@ linkTitle: "Trabalhando com elementos select"
 weight: 10
 needsTranslation: true
 aliases: [
-"/documentation/pt-br/support_packages/working_with_select_elements/",
-"/pt-br/documentation/support_packages/working_with_select_elements/",
-"/pt-br/documentation/webdriver/elements/select_elements/",
-"/pt-br/documentation/webdriver/elements/select_list",
+"/documentation/support_packages/working_with_select_elements/",
+"/documentation/webdriver/elements/select_elements/",
+"/documentation/webdriver/elements/select_list"
 ]
 description: >
   Select lists have special behaviors compared to other elements.

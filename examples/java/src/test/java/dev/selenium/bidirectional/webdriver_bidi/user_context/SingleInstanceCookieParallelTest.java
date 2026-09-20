@@ -128,6 +128,9 @@ class SingleInstanceCookieParallelTest {
 
   @AfterAll
   public static void cleanup() {
-    driver.quit();
+    if (driver != null) {
+      driver.quit();
+      driver = null;
+    }
   }
 }
