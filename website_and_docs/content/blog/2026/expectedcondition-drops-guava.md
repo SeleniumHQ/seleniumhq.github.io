@@ -6,16 +6,16 @@ tags: ["selenium", "java"]
 categories: ["general"]
 author: Diego Molina [@diemol](https://www.diemol.com)
 description: >
-  In an upcoming Selenium Java release, `ExpectedCondition` will stop implementing Guava's
-  `Function` interface. Here's who is affected and how to migrate ahead of time.
+  Starting with Selenium 4.51, `ExpectedCondition` will stop implementing Guava's `Function`
+  interface. Here's who is affected and how to migrate ahead of time.
 ---
 
-In an upcoming Selenium Java release, `org.openqa.selenium.support.ui.ExpectedCondition` will
-stop implementing Guava's `com.google.common.base.Function` interface. This is a breaking
-change for a small set of users, and we want to give everyone time to prepare before it ships.
+Starting with **Selenium 4.51**, `org.openqa.selenium.support.ui.ExpectedCondition` will stop
+implementing Guava's `com.google.common.base.Function` interface. This is a breaking change for
+a small set of users, and we want to give everyone time to prepare before it ships.
 
-We are **not** shipping this immediately. This post is the heads-up; the change will land no
-sooner than a few weeks from now, in a normal 4.x release.
+We are **not** shipping this immediately. This post is the heads-up; the change is targeted for
+the Selenium 4.51 release, giving everyone time to check their code beforehand.
 
 ## Why This Matters
 
@@ -41,10 +41,6 @@ After the change, it will extend only the JDK interface:
 public interface ExpectedCondition<T extends @Nullable Object>
     extends java.util.function.Function<WebDriver, T> {}
 ```
-
-`ExpectedConditions`' internal helper methods are also being cleaned up to drop their remaining
-use of Guava's `Joiner`, in favor of plain `java.util.stream` code. That's an implementation
-detail and shouldn't be user-visible.
 
 ## Who Is Affected
 
