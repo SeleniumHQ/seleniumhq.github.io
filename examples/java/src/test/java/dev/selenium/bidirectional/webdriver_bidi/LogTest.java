@@ -1,10 +1,8 @@
 package dev.selenium.bidirectional.webdriver_bidi;
 
 import dev.selenium.BaseTest;
-
 import java.time.Duration;
 import java.util.concurrent.*;
-
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
