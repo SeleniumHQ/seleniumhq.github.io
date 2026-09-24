@@ -23,7 +23,7 @@ aliases: [
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< badge-implementation >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/high_level/LogTest.java#35" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
 {{< gh-codeblock path="/examples/python/tests/bidi/test_bidi_logging.py#L11" >}}
@@ -48,7 +48,7 @@ aliases: [
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< badge-implementation >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/high_level/LogTest.java#53-54" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
 {{< gh-codeblock path="/examples/python/tests/bidi/test_bidi_logging.py#L23-L24" >}}
@@ -75,7 +75,7 @@ aliases: [
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< badge-implementation >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/high_level/LogTest.java#65" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
 {{< gh-codeblock path="/examples/python/tests/bidi/test_bidi_logging.py#L35" >}}
@@ -100,7 +100,7 @@ aliases: [
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< badge-implementation >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/high_level/LogTest.java#81-82" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
 {{< gh-codeblock path="/examples/python/tests/bidi/test_bidi_logging.py#L47-L48" >}}
