@@ -28,6 +28,7 @@ Install, write, and run a first script in any supported language.
 - [The Selenium Browser Automation Project](https://www.selenium.dev/documentation/)
 - [Selenium Manager](https://www.selenium.dev/documentation/selenium_manager/): Selenium Manager is a command-line tool implemented in Rust that provides automated driver and browser management for Selenium. Selenium bindings use this tool by default, so you do not need to download it or add anything to your code or do anything else to use it.
 - [Selenium IDE](https://www.selenium.dev/documentation/ide/): The Selenium IDE is a browser extension that records and plays back a user's actions.
+- [Using AI coding agents with Selenium](https://www.selenium.dev/documentation/ai_agents/): How to get coding agents and large language models to write Selenium code that is current, correct, and not flaky.
 - [WebDriver](https://www.selenium.dev/documentation/webdriver/): WebDriver drives a browser natively; learn more about it.
 - [Waiting Strategies](https://www.selenium.dev/documentation/webdriver/waits/)
 - [Getting started](https://www.selenium.dev/documentation/webdriver/getting_started/): If you are new to Selenium, we have a few resources that can help you get up to speed right away.
