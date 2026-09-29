@@ -4,7 +4,16 @@ linkTitle: "Link spidering"
 weight: 7
 aliases: [
 "/documentation/en/worst_practices/link_spidering/",
-"/documentation/worst_practices/link_spidering/"
+"/documentation/worst_practices/link_spidering/",
+"/documentation/ja/worst_practices/link_spidering/",
+"/documentation/pt-br/worst_practices/link_spidering/",
+"/documentation/zh-cn/worst_practices/link_spidering/",
+"/ja/documentation/test_practices/discouraged/link_spidering/",
+"/ja/documentation/worst_practices/link_spidering/",
+"/pt-br/documentation/test_practices/discouraged/link_spidering/",
+"/pt-br/documentation/worst_practices/link_spidering/",
+"/zh-cn/documentation/test_practices/discouraged/link_spidering/",
+"/zh-cn/documentation/worst_practices/link_spidering/"
 ] 
 ---
 

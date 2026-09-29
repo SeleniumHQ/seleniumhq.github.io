@@ -3,9 +3,7 @@ title: "远程WebDriver"
 linkTitle: "远程WebDriver"
 weight: 10
 aliases: [
-"/documentation/zh-cn/remote_webdriver/",
-"/documentation/zh-cn/remote_webdriver/remote_webdriver_client/",
-"/zh-cn/documentation/webdriver/remote_webdriver/",
+"/documentation/webdriver/remote_webdriver/"
 ]
 
 ---
@@ -39,7 +37,7 @@ aliases: [
 {{< gh-codeblock path="/examples/ruby/spec/drivers/remote_webdriver_spec.rb#L20-L21" >}} 
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/javascript/test/drivers/remote_webdriver.spec.js#L43-L44" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -76,7 +74,8 @@ Ruby adds a local file detector to remote webdriver instances by default, but yo
 {{< gh-codeblock path="/examples/ruby/spec/drivers/remote_webdriver_spec.rb#L33-L36" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< badge-code >}}
+JavaScript does not include a Local File Detector by default, so you must always add one to do uploads.
+{{< gh-codeblock path="/examples/javascript/test/drivers/remote_webdriver.spec.js#L53-L55" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -117,7 +116,7 @@ Selenium允许您启用下载功能, 将这些文件下载到客户端计算机�
 {{< gh-codeblock path="/examples/ruby/spec/drivers/remote_webdriver_spec.rb#L43-L44" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/javascript/test/drivers/remote_webdriver.spec.js#L62-L63" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -143,7 +142,7 @@ Selenium允许您启用下载功能, 将这些文件下载到客户端计算机�
 {{< gh-codeblock path="/examples/ruby/spec/drivers/remote_webdriver_spec.rb#L52" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/javascript/test/drivers/remote_webdriver.spec.js#L74" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -169,7 +168,7 @@ Selenium在列表中查找提供的文件的名称,
 {{< gh-codeblock path="/examples/ruby/spec/drivers/remote_webdriver_spec.rb#L57" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/javascript/test/drivers/remote_webdriver.spec.js#L79" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -195,7 +194,7 @@ Selenium在列表中查找提供的文件的名称,
 {{< gh-codeblock path="/examples/ruby/spec/drivers/remote_webdriver_spec.rb#L62" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/javascript/test/drivers/remote_webdriver.spec.js#L86" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
@@ -231,7 +230,9 @@ Ruby uses mixins to add applicable browser specific methods to the Remote WebDri
 the methods should always just work for you.
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< badge-code >}}
+JavaScript returns the browser-specific driver class (such as `chrome.Driver`) directly when connecting to a
+Remote Session, so no augmenting step is needed to access browser specific functionality.
+{{< gh-codeblock path="/examples/javascript/test/drivers/remote_webdriver.spec.js#L91-L94" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}

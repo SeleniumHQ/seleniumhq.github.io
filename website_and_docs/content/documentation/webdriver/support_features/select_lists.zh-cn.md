@@ -3,10 +3,9 @@ title: "使用选择列表元素"
 linkTitle: "选择列表"
 weight: 10
 aliases: [
-"/documentation/zh-cn/support_packages/working_with_select_elements/",
-"/zh-cn/documentation/support_packages/working_with_select_elements/",
-"/zh-cn/documentation/webdriver/elements/select_elements/",
-"/zh-cn/documentation/webdriver/elements/select_list",
+"/documentation/support_packages/working_with_select_elements/",
+"/documentation/webdriver/elements/select_elements/",
+"/documentation/webdriver/elements/select_list"
 ]
 description: >
   与其他元素相比，选择列表具有特殊的行为.

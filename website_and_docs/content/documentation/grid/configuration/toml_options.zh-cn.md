@@ -4,7 +4,7 @@ linkTitle: "Toml选项"
 weight: 3
 description: 使用Toml文件的Grid配置示例.
 aliases: [
-"/zh-cn/documentation/grid/configuring_components/toml_options/"
+"/documentation/grid/configuring_components/toml_options/"
 ]
 requiresTranslation: true
 ---

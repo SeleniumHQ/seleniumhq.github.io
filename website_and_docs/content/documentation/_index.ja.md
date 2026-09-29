@@ -3,7 +3,6 @@ title: "Seleniumブラウザー自動化プロジェクト"
 linkTitle: "ドキュメント"
 cascade:
 - type: docs
-aliases: ["/documentation/ja/"]
 ---
 
 Seleniumは、ブラウザーの自動化を可能にし、それを支えるさまざまなツールとライブラリーから成るプロジェクトです。

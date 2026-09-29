@@ -5,8 +5,7 @@ weight: 4
 description: >
   Grid适合您吗?
 aliases: [
-"/documentation/zh-cn/grid/when_to_use_grid/",
-"/zh-cn/documentation/grid/when_to_use_grid"
+"/documentation/grid/when_to_use_grid"
 ]
 ---
 

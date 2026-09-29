@@ -6,8 +6,7 @@ description: >
     Selenium Grid 3 supported WebDriver without Selenium RC code.
     Grid 3 was completely rewritten for the new Grid 4.
 aliases: [
-"/documentation/zh-cn/grid/grid_3/",
-"/zh-cn/documentation/legacy/grid_3"
+"/documentation/legacy/grid_3"
 ]
 ---
 

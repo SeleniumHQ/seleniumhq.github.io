@@ -2,7 +2,11 @@
 title: "Observability in Selenium Grid"
 linkTitle: "Observability"
 weight: 1
-aliases: ["/documentation/en/grid/grid_4/advanced_features/observability/"]
+aliases: ["/documentation/en/grid/grid_4/advanced_features/observability/", "/documentation/ja/grid/grid_4/advanced_features/observability/", "/documentation/pt-br/grid/grid_4/advanced_features/observability/", "/documentation/zh-cn/grid/grid_4/advanced_features/observability/",
+"/ja/documentation/grid/advanced_features/observability/",
+"/pt-br/documentation/grid/advanced_features/observability/",
+"/zh-cn/documentation/grid/advanced_features/observability/"
+]
 ---
 
 ## Table of Contents

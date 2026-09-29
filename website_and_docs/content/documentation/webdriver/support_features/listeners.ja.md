@@ -3,7 +3,7 @@ title: "コマンドリスナー"
 linkTitle: "リスナー"
 weight: 2
 aliases: [
-  "/ja/documentation/webdriver/drivers/listeners",
+  "/documentation/webdriver/drivers/listeners",
 ]
 ---
 

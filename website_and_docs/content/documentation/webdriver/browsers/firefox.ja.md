@@ -5,7 +5,7 @@ weight: 6
 description: >-
     これらは、Mozilla Firefoxブラウザに特有の機能と機能です。
 aliases: [
-"/ja/documentation/capabilities/firefox"
+"/documentation/capabilities/firefox"
 ]
 ---
 

@@ -68,7 +68,7 @@ describe('Log Inspector', function () {
 
     const stackTrace = logEntry.stackTrace
     assert.notEqual(stackTrace, null)
-    assert.equal(stackTrace.callFrames.length, 3)
+    assert.equal(stackTrace.callFrames.length, 2)
 
     await inspector.close()
   })

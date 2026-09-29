@@ -3,8 +3,7 @@ title: "モック外部サービス"
 linkTitle: "モック外部サービス"
 weight: 6
 aliases: [
-"/documentation/ja/guidelines_and_recommendations/mock_external_services/",
-"/ja/documentation/guidelines/mock_external_services/"
+"/documentation/guidelines/mock_external_services/"
 ]
 ---
 

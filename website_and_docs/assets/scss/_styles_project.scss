@@ -1,13 +1,23 @@
 /*
   Import of additional project style files.
+
+  "alerts" and "nav" are imported explicitly because they used to be picked up
+  implicitly: until Docsy 0.16.0 the theme kept its own _alerts.scss and
+  _nav.scss directly under assets/scss/, so Hugo's union filesystem served
+  these same-named project files in their place. Docsy 0.16.0 moved its
+  stylesheets under assets/scss/td/, which left both files orphaned. Importing
+  them here layers them over the theme's versions instead of replacing them,
+  and _styles_project is imported last so these rules still win.
 */
 
+@import "alerts";
 @import "backgrounds";
 @import "badges";
 @import "colors_project";
 @import "images";
 @import "links";
 @import "logo";
+@import "nav";
 @import "screen";
 @import "tabs";
 

@@ -3,8 +3,7 @@ title: "测试依赖"
 linkTitle: "测试依赖"
 weight: 5
 aliases: [
-"/documentation/zh-cn/worst_practices/test_dependency/",
-"/zh-cn/documentation/worst_practices/test_dependency/"
+"/documentation/worst_practices/test_dependency/"
 ] 
 ---
 

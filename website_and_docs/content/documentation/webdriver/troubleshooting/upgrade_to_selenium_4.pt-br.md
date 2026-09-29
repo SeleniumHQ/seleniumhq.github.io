@@ -5,8 +5,8 @@ weight: 10
 description: >
   Interessado no Selenium 4? Veja este guia para realizar o upgrade para a ultima versão!
 aliases: [
-"/pt-br/documentation/getting_started/how_to_upgrade_to_selenium_4/",
-"/pt-br/documentation/webdriver/getting_started/upgrade_to_selenium_4/"
+"/documentation/getting_started/how_to_upgrade_to_selenium_4/",
+"/documentation/webdriver/getting_started/upgrade_to_selenium_4/"
 ]
 ---
 

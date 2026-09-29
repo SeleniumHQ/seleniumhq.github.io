@@ -3,8 +3,7 @@ title: "テストの独立性"
 linkTitle: "テストの独立性"
 weight: 9
 aliases: [
-"/documentation/ja/guidelines_and_recommendations/test_independency/",
-"/ja/documentation/guidelines/test_independency/"
+"/documentation/guidelines/test_independency/"
 ]
 ---
 

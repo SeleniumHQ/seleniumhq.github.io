@@ -6,11 +6,7 @@ needsTranslation: true
 description: >
   Se você é novo no Selenium, nós temos alguns recursos que podem te ajudar a se atualizar imediatamente.
 aliases: [
-"/documentation/pt-br/getting_started/", 
-"/documentation/pt-br/getting_started/quick/",
-"/documentation/pt-br/selenium_installation/",
-"/documentation/pt-br/getting_started_with_webdriver/",
-"/pt-br/documentation/getting_started/"
+"/documentation/getting_started/"
 ]
 ---
 

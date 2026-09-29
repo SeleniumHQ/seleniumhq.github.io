@@ -3,8 +3,7 @@ title: "Entendendo os componentes"
 linkTitle: "Entendendo os componentes"
 weight: 1
 aliases: [
-"/documentation/pt-br/webdriver/understanding_the_components/",
-"/pt-br/documentation/webdriver/understanding_the_components"
+"/documentation/webdriver/understanding_the_components"
 ]
 ---
 

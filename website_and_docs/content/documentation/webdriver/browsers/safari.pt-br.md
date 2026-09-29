@@ -5,7 +5,7 @@ weight: 10
 description: >-
     Estas capacidades e características são específicas ao navegador Apple Safari.
 aliases: [
-"/pt-br/documentation/capabilities/safari"
+"/documentation/capabilities/safari"
 ]
 ---
 

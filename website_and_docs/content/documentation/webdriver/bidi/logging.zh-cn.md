@@ -7,7 +7,6 @@ description: >
   由于"logging"可以指代许多不同的事物,
   因此这些方法通过"script"命名空间提供.
 aliases: [
-  "/documentation/zh-cn/webdriver/bidirectional/bidirectional_w3c/log",
   "/documentation/webdriver/bidirectional/webdriver_bidi/log"
 ]
 ---
@@ -24,7 +23,7 @@ aliases: [
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< badge-implementation >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/high_level/LogTest.java#35" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
 {{< gh-codeblock path="/examples/python/tests/bidi/test_bidi_logging.py#L11" >}}
@@ -49,10 +48,10 @@ aliases: [
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< badge-implementation >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/high_level/LogTest.java#53-54" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="/examples/python/tests/bidi/test_bidi_logging.py#L23-24" >}}
+{{< gh-codeblock path="/examples/python/tests/bidi/test_bidi_logging.py#L23-L24" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-implementation >}}
@@ -76,7 +75,7 @@ aliases: [
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< badge-implementation >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/high_level/LogTest.java#65" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
 {{< gh-codeblock path="/examples/python/tests/bidi/test_bidi_logging.py#L35" >}}
@@ -101,10 +100,10 @@ aliases: [
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< badge-implementation >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/high_level/LogTest.java#81-82" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="/examples/python/tests/bidi/test_bidi_logging.py#L47-48" >}}
+{{< gh-codeblock path="/examples/python/tests/bidi/test_bidi_logging.py#L47-L48" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-implementation >}}

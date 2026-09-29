@@ -4,11 +4,6 @@ linkTitle: "Seleniumのサイトとドキュメントに貢献する"
 weight: 2
 description: >-
     Seleniumのドキュメントとコード例を改善するための情報
-aliases: 
-        [
-          "/documentation/ja/contributing/",
-          "/documentation/ja/front_matter/typographical_conventions/"
-        ]
 ---
 
 Seleniumは大きなソフトウェアプロジェクトであり、そのサイトとドキュメントは、物事の仕組みを理解し、その可能性を活用する効果的な方法を学ぶための鍵となります。

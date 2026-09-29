@@ -4,8 +4,7 @@ linkTitle: "Ajuda de configuração"
 weight: 1
 description: Obtenha ajuda sobre todas as opções disponíveis para configurar a Grid.
 aliases: [
-"/documentation/pt-br/grid/grid_4/configuring_components/config_help/",
-"/pt-br/documentation/grid/configuring_components/config_help/"
+"/documentation/grid/configuring_components/config_help/"
 ]
 ---
 

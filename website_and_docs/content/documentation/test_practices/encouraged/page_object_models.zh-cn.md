@@ -3,8 +3,7 @@ title: "页面对象模型"
 linkTitle: "页面对象模型"
 weight: 3
 aliases: [
-"/documentation/zh-cn/guidelines_and_recommendations/page_object_models/",
-"/zh-cn/documentation/guidelines/page_object_models/"
+"/documentation/guidelines/page_object_models/"
 ]
 ---
 

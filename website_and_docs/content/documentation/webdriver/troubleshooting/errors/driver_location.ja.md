@@ -6,10 +6,8 @@ needsTranslation: true
 description: >
   Troubleshooting missing path to driver executable.
 aliases: [
-"/documentation/ja/selenium_installation/installing_webdriver_binaries/",
-"/documentation/ja/webdriver/driver_requirements/",
-"/ja/documentation/getting_started/installing_browser_drivers/",
-"/ja/documentation/webdriver/getting_started/install_drivers/",
+"/documentation/getting_started/installing_browser_drivers/",
+"/documentation/webdriver/getting_started/install_drivers/"
 ]
 ---
 
@@ -126,7 +124,7 @@ out the environment variables, you can specify the location of the driver in the
 
 You first need to [download the desired driver](#download-the-driver),
 then create an instance of the applicable `Service` class and 
-[set the path]({{< ref "../../drivers/service/#driver-location" >}}).
+[set the path]({{< ref "../../drivers/service/#ドライバーの場所" >}}).
 
 Specifying the location in the code itself has the advantage of not needing 
 to figure out Environment Variables on your system, but has the drawback of 

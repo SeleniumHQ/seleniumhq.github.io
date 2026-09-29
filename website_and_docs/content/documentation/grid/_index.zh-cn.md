@@ -4,13 +4,6 @@ linkTitle: "Grid"
 weight: 4
 description: >
   要在多台计算机上并行运行测试吗? 那么, Grid正是为你准备的.
-aliases: 
-        [
-          "/documentation/zh-cn/selenium_installation/installing_standalone_server/",
-          "/documentation/zh-cn/grid/",
-          "/documentation/zh-cn/grid/grid_4/",
-          "/documentation/zh-cn/grid/purposes_and_main_functionalities/"
-        ]
 ---
 
 Selenium Grid 允许通过将客户端发送的命令路由到远程浏览器实例来在远程机器上执行 WebDriver 脚本。 

@@ -6,8 +6,7 @@ description: >
   Seleniumは、Webブラウザの自動化を可能にし、その自動化を支援する
   多様なツールとライブラリを包含するプロジェクトです。
 aliases: [
-"/documentation/ja/introduction/the_selenium_project_and_tools/",
-"/ja/documentation/overview/a_deeper_look"
+"/documentation/overview/a_deeper_look"
 ]
 ---
 

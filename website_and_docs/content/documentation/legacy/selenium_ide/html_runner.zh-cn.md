@@ -5,8 +5,7 @@ weight: 2
 description: >
     Execute HTML Selenium IDE exports from command line
 aliases: [
-"/documentation/zh-cn/legacy_docs/html-runner/",
-"/zh-cn/documentation/legacy/html_runner/"
+"/documentation/legacy/html_runner/"
 ]
 ---
 

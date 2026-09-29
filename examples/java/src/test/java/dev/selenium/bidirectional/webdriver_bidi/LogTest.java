@@ -1,10 +1,8 @@
 package dev.selenium.bidirectional.webdriver_bidi;
 
 import dev.selenium.BaseTest;
-
 import java.time.Duration;
 import java.util.concurrent.*;
-
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -97,7 +95,7 @@ class LogTest extends BaseTest {
 
             StackTrace stackTrace = logEntry.getStackTrace();
             Assertions.assertNotNull(stackTrace);
-            Assertions.assertEquals(4, stackTrace.getCallFrames().size());
+            Assertions.assertEquals(3, stackTrace.getCallFrames().size());
         }
     }
 

@@ -3,7 +3,7 @@ title: "要素を探す"
 linkTitle: "要素を探す"
 weight: 1
 aliases: [
-"/ja/documentation/webdriver/relative_locators/"
+"/documentation/webdriver/relative_locators/"
 ]
 description: >
   DOM内の1つ以上の特定の要素を識別する方法

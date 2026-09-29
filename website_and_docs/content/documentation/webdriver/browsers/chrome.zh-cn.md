@@ -5,7 +5,7 @@ weight: 4
 description: >-
     特定于 Google Chrome 浏览器的功能和特性.
 aliases: [
-"/zh-cn/documentation/capabilities/chromium"
+"/documentation/capabilities/chromium"
 ]
 ---
 

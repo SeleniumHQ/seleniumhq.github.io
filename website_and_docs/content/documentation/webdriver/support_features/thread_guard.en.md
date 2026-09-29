@@ -5,7 +5,19 @@ weight: 6
 aliases: [
 "/documentation/en/support_classes/",
 "/documentation/support_packages/thread_guard/",
-"/documentation/webdriver/additional_features/thread_guard/"
+"/documentation/webdriver/additional_features/thread_guard/",
+"/documentation/ja/support_classes/",
+"/documentation/pt-br/support_classes/",
+"/documentation/zh-cn/support_classes/",
+"/ja/documentation/support_packages/thread_guard/",
+"/ja/documentation/webdriver/additional_features/thread_guard/",
+"/ja/documentation/webdriver/support_features/thread_guard/",
+"/pt-br/documentation/support_packages/thread_guard/",
+"/pt-br/documentation/webdriver/additional_features/thread_guard/",
+"/pt-br/documentation/webdriver/support_features/thread_guard/",
+"/zh-cn/documentation/support_packages/thread_guard/",
+"/zh-cn/documentation/webdriver/additional_features/thread_guard/",
+"/zh-cn/documentation/webdriver/support_features/thread_guard/"
 ]
 ---
 

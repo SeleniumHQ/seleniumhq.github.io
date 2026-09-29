@@ -5,8 +5,8 @@ weight: 10
 description: >
   Selenium 4に興味がありますか？ 最新リリースへのアップグレードに役立つこのガイドを確認してください。
 aliases: [
-"/ja/documentation/getting_started/how_to_upgrade_to_selenium_4/",
-"/ja/documentation/webdriver/getting_started/upgrade_to_selenium_4/"
+"/documentation/getting_started/how_to_upgrade_to_selenium_4/",
+"/documentation/webdriver/getting_started/upgrade_to_selenium_4/"
 ]
 ---
 

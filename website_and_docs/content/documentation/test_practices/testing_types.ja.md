@@ -3,8 +3,7 @@ title: "テストの種類"
 linkTitle: "テストの種類"
 weight: 2
 aliases: [
-"/documentation/ja/introduction/types_of_testing/",
-"/ja/documentation/guidelines/types_of_testing/"
+"/documentation/guidelines/types_of_testing/"
 ]
 ---
 

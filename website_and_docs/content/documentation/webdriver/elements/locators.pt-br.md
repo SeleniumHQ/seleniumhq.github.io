@@ -4,7 +4,7 @@ linkTitle: "Localizando elementos"
 weight: 4
 needsTranslation: true
 aliases: [
-"/pt-br/documentation/webdriver/relative_locators/"
+"/documentation/webdriver/relative_locators/"
 ]
 description: >
   Formas de identificar um ou mais elementos no DOM.

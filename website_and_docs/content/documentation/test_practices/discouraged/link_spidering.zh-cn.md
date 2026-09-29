@@ -3,8 +3,7 @@ title: "爬取链接"
 linkTitle: "爬取链接"
 weight: 7
 aliases: [
-"/documentation/zh-cn/worst_practices/link_spidering/",
-"/zh-cn/documentation/worst_practices/link_spidering/"
+"/documentation/worst_practices/link_spidering/"
 ] 
 ---
 

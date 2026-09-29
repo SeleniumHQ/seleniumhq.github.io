@@ -5,9 +5,8 @@ weight: 2
 description: >
   配置自动化的浏览器.
 aliases: [
-"/documentation/zh-cn/selenium_installation/installing_selenium_libraries/",
-"/zh-cn/documentation/getting_started/installing_selenium_libraries/",
-"/zh-cn/documentation/getting_started/install_selenium_library/"
+"/documentation/getting_started/installing_selenium_libraries/",
+"/documentation/getting_started/install_selenium_library/"
 ]
 ---
 

@@ -4,7 +4,7 @@ linkTitle: "Opções CLI"
 weight: 2
 description: Todas os detalhes das opções CLI de cada componente Grid.
 aliases: [
-"/pt-br/documentation/grid/configuring_components/cli_options/"
+"/documentation/grid/configuring_components/cli_options/"
 ]
 ---
 

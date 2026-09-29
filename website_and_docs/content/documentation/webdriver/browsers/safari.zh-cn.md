@@ -5,7 +5,7 @@ weight: 10
 description: >-
     这些是特定于Apple Safari浏览器的功能和特性.
 aliases: [
-"/zh-cn/documentation/capabilities/safari"
+"/documentation/capabilities/safari"
 ]
 ---
 

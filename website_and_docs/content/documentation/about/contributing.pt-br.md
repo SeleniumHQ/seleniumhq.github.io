@@ -5,11 +5,6 @@ weight: 2
 requiresTranslation: true
 description: >-
     Informações em como melhorar a documentação e exemplos de código para Selenium.
-aliases: 
-        [
-          "/documentation/pt-br/contributing/",
-          "/documentation/pt-br/front_matter/typographical_conventions/"
-        ]
 ---
 
 Selenium é um grande projeto de software, seu site e documentação são fundamentais

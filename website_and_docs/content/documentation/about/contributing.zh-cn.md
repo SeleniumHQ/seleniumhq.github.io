@@ -4,10 +4,6 @@ linkTitle: 贡献
 weight: 2
 description: >-
     有关改进 Selenium 文档和代码示例的信息
-aliases: [
-  "/documentation/zh-cn/contributing/",
-  "/documentation/zh-cn/front_matter/typographical_conventions/"
-]
 ---
 
 Selenium 是一个大型软件项目，

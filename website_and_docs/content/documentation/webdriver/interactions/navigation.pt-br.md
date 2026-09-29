@@ -3,7 +3,7 @@ title: "Browser navigation"
 linkTitle: "Navigation"
 weight: 1
 aliases: [
-"/pt-br/documentation/webdriver/browser/navigation/"
+"/documentation/webdriver/browser/navigation/"
 ]
 ---
 

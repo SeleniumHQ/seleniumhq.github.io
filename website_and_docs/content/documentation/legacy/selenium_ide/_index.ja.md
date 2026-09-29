@@ -2,7 +2,6 @@
 title: "レガシー Selenium IDE"
 linkTitle: "Selenium IDE"
 weight: 8
-aliases: ["/documentation/ja/legacy_docs/selenium_ide/"]
 ---
 
 ## 紹介

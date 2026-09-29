@@ -5,7 +5,6 @@ weight: 8
 description: >
   Seleniumでブラウザを自動化するときに避けるべきこと。
 aliases: [
-"/documentation/ja/worst_practices/",
-"/ja/documentation/worst_practices/"
+"/documentation/worst_practices/"
 ]
 ---

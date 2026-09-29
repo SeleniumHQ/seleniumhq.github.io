@@ -4,7 +4,7 @@ linkTitle: "定位器"
 weight: 4
 needsTranslation: true
 aliases: [
-"/zh-cn/documentation/webdriver/relative_locators/"
+"/documentation/webdriver/relative_locators/"
 ]
 description: >
   在DOM中标识一个或多个特定元素的方法.
