@@ -1,8 +1,8 @@
 using System;
-using System.Drawing;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Support.PageObjects;
 
 namespace SeleniumDocs.Elements
 {
@@ -50,13 +50,13 @@ namespace SeleniumDocs.Elements
    
             //find all
             driver.Url=("https://www.selenium.dev/selenium/web/login.html");
-            By locator = new ByAll(By.ID("password-field"), By.ID("username-field"));
+            By locator = new ByAll(By.Id("password-field"), By.Id("username-field"));
             List<IWebElement> loginInputs = driver.FindElements(locator);
             Assert.AreEqual(2, loginInputs.size());
 
             //chained
             driver.Url=("https://www.selenium.dev/selenium/web/login.html");
-            locator = new ByChained(By.ID("login-form"), By.TagName("input"));
+            locator = new ByChained(By.Id("login-form"), By.TagName("input"));
             IWebElement usernameInput = driver.FindElement(locator);
             Assert.AreEqual("Username", usernameInput.GetAttribute("placeholder"));
             
