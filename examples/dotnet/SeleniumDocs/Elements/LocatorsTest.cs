@@ -18,7 +18,7 @@ namespace SeleniumDocs.Elements
             driver.Url= "https://www.selenium.dev/selenium/web/locators_tests/locators.html";
             
             IWebElement element = driver.FindElement(By.ClassName("information"));
-            Assert.AreEqual("input", element.TagName());
+            Assert.AreEqual("input", element.TagName);
    
             //Find by css
             element = driver.FindElement(By.CssSelector("#fname"));
@@ -30,11 +30,11 @@ namespace SeleniumDocs.Elements
    
             //Find by name
             element = driver.FindElement(By.Name("newsletter"));
-            Assert.AreEqual("input", element.TagName());
+            Assert.AreEqual("input", element.TagName);
  
             //Find by link text
             element = driver.FindElement(By.LinkText("Selenium Official Page"));
-            Assert.AreEqual(element);
+            Assert.AreEqual("https://www.selenium.dev/", element.GetAttribute("href"));
    
             //Find by partial link text
             element = driver.FindElement(By.PartialLinkText("Official Page"));
@@ -49,13 +49,13 @@ namespace SeleniumDocs.Elements
             Assert.AreEqual("radio", element.GetAttribute("type"));
    
             //find all
-            driver.get("https://www.selenium.dev/selenium/web/login.html");
+            driver.Url=("https://www.selenium.dev/selenium/web/login.html");
             By locator = new ByAll(By.ID("password-field"), By.ID("username-field"));
             List<IWebElement> loginInputs = driver.FindElements(locator);
             Assert.AreEqual(2, loginInputs.size());
 
             //chained
-            driver.get("https://www.selenium.dev/selenium/web/login.html");
+            driver.Url=("https://www.selenium.dev/selenium/web/login.html");
             locator = new ByChained(By.ID("login-form"), By.TagName("input"));
             IWebElement usernameInput = driver.FindElement(locator);
             Assert.AreEqual("Username", usernameInput.GetAttribute("placeholder"));
