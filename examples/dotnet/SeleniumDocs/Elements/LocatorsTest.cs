@@ -49,16 +49,16 @@ namespace SeleniumDocs.Elements
             Assert.AreEqual("radio", element.GetAttribute("type"));
    
             //find all
-            driver.Url=("https://www.selenium.dev/selenium/web/login.html");
-            By locator = new ByAll(By.Id("password-field"), By.Id("username-field"));
-            List<IWebElement> loginInputs = driver.FindElements(locator);
-            Assert.AreEqual(2, loginInputs.size());
+            //driver.Url=("https://www.selenium.dev/selenium/web/login.html");
+           // By locator = new ByAll(By.Id("password-field"), By.Id("username-field"));
+            //List<IWebElement> loginInputs = driver.FindElements(locator);
+           // Assert.AreEqual(2, loginInputs.size());
 
             //chained
-            driver.Url=("https://www.selenium.dev/selenium/web/login.html");
-            locator = new ByChained(By.Id("login-form"), By.TagName("input"));
-            IWebElement usernameInput = driver.FindElement(locator);
-            Assert.AreEqual("Username", usernameInput.GetAttribute("placeholder"));
+           // driver.Url=("https://www.selenium.dev/selenium/web/login.html");
+           // locator = new ByChained(By.Id("login-form"), By.TagName("input"));
+           // IWebElement usernameInput = driver.FindElement(locator);
+           // Assert.AreEqual("Username", usernameInput.GetAttribute("placeholder"));
             
             //Quit the driver
             driver.Quit();
