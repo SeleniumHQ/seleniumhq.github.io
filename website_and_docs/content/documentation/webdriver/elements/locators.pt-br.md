@@ -83,9 +83,8 @@ available in Selenium.
 {{< tab header="Python" text=true >}}
 {{< gh-codeblock path="/examples/python/tests/elements/test_locators.py#L7-L9" >}}
 {{< /tab >}}
-  {{< tab header="CSharp" >}}
-    var driver = new ChromeDriver();
-	driver.FindElement(By.ClassName("information"));
+   {{< tab header="CSharp" text=true >}}
+  {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Elements/LocatorsTest.cs#L20-L21" >}}
   {{< /tab >}}
   {{< tab header="Ruby" text=true >}}
 {{< gh-codeblock path="/examples/ruby/spec/elements/locators_spec.rb#L7" >}}
@@ -114,9 +113,8 @@ textbox, using css.
 {{< tab header="Python" text=true >}}
 {{< gh-codeblock path="/examples/python/tests/elements/test_locators.py#L17-L19" >}}
 {{< /tab >}}
-  {{< tab header="CSharp" >}}
-    var driver = new ChromeDriver();
-	driver.FindElement(By.CssSelector("#fname"));
+ {{< tab header="CSharp" text=true >}}
+  {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Elements/LocatorsTest.cs#L24-L25" >}}
   {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
 {{< gh-codeblock path="/examples/ruby/spec/elements/locators_spec.rb#L11" >}}
@@ -143,9 +141,8 @@ We will identify the Last Name field using it.
 {{< tab header="Python" text=true >}}
 {{< gh-codeblock path="/examples/python/tests/elements/test_locators.py#L27-L29" >}}
 {{< /tab >}}
-  {{< tab header="CSharp" >}}
-    var driver = new ChromeDriver();
-	driver.FindElement(By.Id("lname"));
+  {{< tab header="CSharp" text=true >}}
+  {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Elements/LocatorsTest.cs#L28-L29" >}}
   {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
 {{< gh-codeblock path="/examples/ruby/spec/elements/locators_spec.rb#L15" >}}
@@ -173,9 +170,8 @@ We will identify the Newsletter checkbox using it.
 {{< tab header="Python" text=true >}}
 {{< gh-codeblock path="/examples/python/tests/elements/test_locators.py#L37-L39" >}}
 {{< /tab >}}
-  {{< tab header="CSharp" >}}
-    var driver = new ChromeDriver();
-	driver.FindElement(By.Name("newsletter"));
+ {{< tab header="CSharp" text=true >}}
+  {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Elements/LocatorsTest.cs#L32-L33" >}}
   {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
 {{< gh-codeblock path="/examples/ruby/spec/elements/locators_spec.rb#L19" >}}
@@ -201,9 +197,8 @@ In the HTML snippet shared, we have a link available, lets see how will we locat
 {{< tab header="Python" text=true >}}
 {{< gh-codeblock path="/examples/python/tests/elements/test_locators.py#L47-L49" >}}
 {{< /tab >}}
-  {{< tab header="CSharp" >}}
-    var driver = new ChromeDriver();
-	driver.FindElement(By.LinkText("Selenium Official Page"));
+ {{< tab header="CSharp" text=true >}}
+  {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Elements/LocatorsTest.cs#L36-L37" >}}
   {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
 {{< gh-codeblock path="/examples/ruby/spec/elements/locators_spec.rb#L23" >}}
@@ -230,9 +225,8 @@ In the HTML snippet shared, we have a link available, lets see how will we locat
 {{< tab header="Python" text=true >}}
 {{< gh-codeblock path="/examples/python/tests/elements/test_locators.py#L57-L59" >}}
 {{< /tab >}}
-  {{< tab header="CSharp" >}}
-    var driver = new ChromeDriver();
-	driver.FindElement(By.PartialLinkText("Official Page"));
+  {{< tab header="CSharp" text=true >}}
+  {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Elements/LocatorsTest.cs#L40-L41" >}}
   {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
 {{< gh-codeblock path="/examples/ruby/spec/elements/locators_spec.rb#L27" >}}
@@ -257,9 +251,8 @@ From the above HTML snippet shared, lets identify the link, using its html tag "
 {{< tab header="Python" text=true >}}
 {{< gh-codeblock path="/examples/python/tests/elements/test_locators.py#L67-L69" >}}
 {{< /tab >}}
-  {{< tab header="CSharp" >}}
-    var driver = new ChromeDriver();
-	driver.FindElement(By.TagName("a"));
+ {{< tab header="CSharp" text=true >}}
+  {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Elements/LocatorsTest.cs#L44-L45" >}}
   {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
 {{< gh-codeblock path="/examples/ruby/spec/elements/locators_spec.rb#L31" >}}
@@ -290,9 +283,8 @@ first name text box. Let us create locator for female radio button using xpath.
 {{< tab header="Python" text=true >}}
 {{< gh-codeblock path="/examples/python/tests/elements/test_locators.py#L77-L79" >}}
 {{< /tab >}}
-  {{< tab header="CSharp" >}}
-    var driver = new ChromeDriver();
-	driver.FindElement(By.Xpath("//input[@value='f']"));
+{{< tab header="CSharp" text=true >}}
+  {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Elements/LocatorsTest.cs#L48-L49" >}}
   {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
 {{< gh-codeblock path="/examples/ruby/spec/elements/locators_spec.rb#L35" >}}
