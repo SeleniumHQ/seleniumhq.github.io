@@ -350,8 +350,8 @@ you can instead combine those two `FindElement` functions into one.
   {{< tab header="Python" text=true >}}
   {{< badge-code >}}
   {{< /tab >}}
-  {{< tab header="CSharp" text=true >}}
-  {{< badge-code >}}
+    {{< tab header="CSharp" text=true >}}
+  <!-- {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Elements/LocatorsTest.cs#L58-L61" >}} -->
   {{< /tab >}}
   {{< tab header="Ruby" text=true >}}
   {{< badge-code >}}
@@ -377,8 +377,8 @@ separately, you can instead find them together in one clean `FindElements()`
   {{< tab header="Python" text=true >}}
   {{< badge-code >}}
   {{< /tab >}}
-  {{< tab header="CSharp" text=true >}}
-  {{< badge-code >}}
+   {{< tab header="CSharp" text=true >}}
+  <!-- {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Elements/LocatorsTest.cs#L52-L55" >}} -->
   {{< /tab >}}
   {{< tab header="Ruby" text=true >}}
   {{< badge-code >}}

@@ -349,7 +349,7 @@ and then a child element of that parent, you can instead combine those two `Find
   {{< badge-code >}}
   {{< /tab >}}
   {{< tab header="CSharp" text=true >}}
-  {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Elements/LocatorsTest.cs#L58-L61" >}}
+  <!-- {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Elements/LocatorsTest.cs#L58-L61" >}} -->
   {{< /tab >}}
   {{< tab header="Ruby" text=true >}}
   {{< badge-code >}}
@@ -376,7 +376,7 @@ separately, you can instead find them together in one clean `FindElements()`
   {{< badge-code >}}
   {{< /tab >}}
   {{< tab header="CSharp" text=true >}}
-  {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Elements/LocatorsTest.cs#L52-L55" >}}
+  <!-- {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Elements/LocatorsTest.cs#L52-L55" >}} -->
   {{< /tab >}}
   {{< tab header="Ruby" text=true >}}
   {{< badge-code >}}
