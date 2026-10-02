@@ -43,12 +43,41 @@
 
 {{ $parsedApiUrl := urls.Parse $webUrl }}
 {{ with $parsedApiUrl.Fragment }}
+{{ if hasPrefix . "snippet=" }}
+{{ $snippetName := strings.TrimPrefix "snippet=" . }}
+{{ $startMarker := printf "selenium-docs:%s:start" $snippetName }}
+{{ $endMarker := printf "selenium-docs:%s:end" $snippetName }}
+{{ $splitContent := split $content "\n" }}
+{{ $startLine := -1 }}
+{{ $endLine := -1 }}
+{{ $startCount := 0 }}
+{{ $endCount := 0 }}
+{{ range $index, $line := $splitContent }}
+{{ if in $line $startMarker }}
+{{ $startLine = $index }}
+{{ $startCount = add $startCount 1 }}
+{{ end }}
+{{ if in $line $endMarker }}
+{{ $endLine = $index }}
+{{ $endCount = add $endCount 1 }}
+{{ end }}
+{{ end }}
+{{ if or (ne $startCount 1) (ne $endCount 1) (ge $startLine $endLine) }}
+{{ errorf "gh-codeblock: expected one ordered marker pair for snippet %q in %s" $snippetName $path }}
+{{ else }}
+{{ $snippetStart := add $startLine 1 }}
+{{ $snippetLength := sub $endLine $snippetStart }}
+{{ $codeSnippet = delimit (first $snippetLength (after $snippetStart $splitContent)) "\n" }}
+{{ $webUrl = printf "%s#L%d-L%d" (printf "%s/%s/%s/blob/%s/%s" $webBaseUrl $org $repo $branch $path) (add $snippetStart 1) $endLine }}
+{{ end }}
+{{ else }}
 {{ $codeLines := split $parsedApiUrl.Fragment "-" }}
 {{ $fromLine := sub (int (replace (index $codeLines 0) "L" "")) 1 }}
 {{ $toLine := int (cond (eq (len $codeLines) 1) (replace (index $codeLines 0) "L" "") (replace (index $codeLines 1) "L" "")) }}
 {{ $numOfLines := cond (eq (sub $toLine $fromLine) 0) 1 (sub $toLine $fromLine) }}
 {{ $splitContent := split $content "\n" }}
 {{ $codeSnippet = delimit (first $numOfLines (after $fromLine $splitContent)) "\n" }}
+{{ end }}
 {{ end }}
 
 {{ highlight $codeSnippet $language }}

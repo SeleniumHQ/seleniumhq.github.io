@@ -20,8 +20,10 @@ public class FirstScript {
         WebElement textBox = driver.findElement(By.name("my-text"));
         WebElement submitButton = driver.findElement(By.cssSelector("button"));
 
+        // selenium-docs:first-script-submit:start
         textBox.sendKeys("Selenium");
         submitButton.click();
+        // selenium-docs:first-script-submit:end
 
         WebElement message = driver.findElement(By.id("message"));
         message.getText();
