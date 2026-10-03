@@ -3,7 +3,7 @@ const http = require('node:http')
 const path = require('node:path')
 const portprober = require('selenium-webdriver/net/portprober')
 
-const SERVER_JAR = path.join(__dirname, '..', '..', '..', 'selenium-server-4.49.0.jar')
+const SERVER_JAR = path.join(__dirname, '..', '..', '..', 'selenium-server-4.50.0.jar')
 
 function waitForServer(url, timeout) {
   const deadline = Date.now() + timeout
