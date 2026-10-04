@@ -33,11 +33,12 @@ def run_tests(project_dir, results_dir, attempt, tests=None):
     return result.returncode, os.path.join(results_dir, trx_name)
 
 
-def failed_tests(trx_path):
-    """Return the fully qualified names of failed tests, or None if unknown."""
-    if not os.path.exists(trx_path):
+def test_outcomes(trx_path):
+    """Return {fully qualified test name: outcome}, or None if the results can't be read."""
+    try:
+        root = ET.parse(trx_path).getroot()
+    except (OSError, ET.ParseError):
         return None
-    root = ET.parse(trx_path).getroot()
 
     names = {}
     for unit_test in root.iterfind("t:TestDefinitions/t:UnitTest", TRX_NS):
@@ -45,14 +46,22 @@ def failed_tests(trx_path):
         if method is not None:
             names[unit_test.get("id")] = f"{method.get('className')}.{method.get('name')}"
 
-    failed = set()
+    outcomes = {}
     for result in root.iterfind("t:Results/t:UnitTestResult", TRX_NS):
-        if result.get("outcome") == "Failed":
-            name = names.get(result.get("testId"))
-            if name is None:
-                return None
-            failed.add(name)
-    return failed
+        name = names.get(result.get("testId"))
+        if name is None:
+            return None
+        # A data-driven test has one result per row; any failed row fails the test.
+        if outcomes.get(name) != "Failed":
+            outcomes[name] = result.get("outcome")
+    return outcomes
+
+
+def pending_tests(outcomes, requested):
+    """Tests still to run: failures of a full run, or requested tests that did not pass."""
+    if requested is None:
+        return {name for name, outcome in outcomes.items() if outcome == "Failed"}
+    return {name for name in requested if outcomes.get(name) != "Passed"}
 
 
 def main():
@@ -67,22 +76,33 @@ def main():
     if returncode == 0:
         return 0
 
-    first_failures = failed_tests(trx_path)
-    failures = first_failures
+    outcomes = test_outcomes(trx_path)
+    pending = None if outcomes is None else pending_tests(outcomes, None)
+    first_failures = pending or set()
     for attempt in range(1, args.retries + 1):
-        if failures is not None and not failures:
+        if pending is not None and not pending:
             # Non-zero exit with no failed tests: retrying a filter would run nothing.
-            failures = None
-        returncode, trx_path = run_tests(args.project_dir, results_dir, attempt, failures)
-        if returncode == 0:
-            for name in sorted(first_failures or []):
-                print(f"::warning title=Flaky test::{name} failed, then passed on retry", flush=True)
-            return 0
-        failures = failed_tests(trx_path)
+            pending = None
+        requested = pending
+        returncode, trx_path = run_tests(args.project_dir, results_dir, attempt, requested)
+        if returncode == 0 and requested is None:
+            break
+        outcomes = test_outcomes(trx_path)
+        if outcomes is None:
+            # Unreadable results: keep what was requested pending (or the full suite).
+            pending = requested
+        else:
+            pending = pending_tests(outcomes, requested)
+        if returncode == 0 and pending == set():
+            break
+    else:
+        for name in sorted(pending or []):
+            print(f"::error title=Failed test::{name} still failing after {args.retries} retries", flush=True)
+        return returncode or 1
 
-    for name in sorted(failures or []):
-        print(f"::error title=Failed test::{name} failed after {args.retries} retries", flush=True)
-    return returncode
+    for name in sorted(first_failures):
+        print(f"::warning title=Flaky test::{name} failed, then passed on retry", flush=True)
+    return 0
 
 
 if __name__ == "__main__":
