@@ -2,8 +2,10 @@
 
 Works like `pytest --reruns`: the full suite runs once, then each retry
 runs only the tests that are still failing, read from the TRX results.
-If the failing tests cannot be read (build error, crashed test host),
-the next attempt runs the full suite again.
+If the results of the full run cannot be read (build error, crashed test
+host), the next attempt runs the full suite again. If the results of a
+retry cannot be read, the same tests are retried: every other test
+already passed in the full run.
 
 Tests that only pass on a retry are reported as GitHub warnings so
 flaky tests stay visible.
@@ -78,7 +80,7 @@ def main():
 
     outcomes = test_outcomes(trx_path)
     pending = None if outcomes is None else pending_tests(outcomes, None)
-    first_failures = pending or set()
+    seen_failures = set(pending or [])
     for attempt in range(1, args.retries + 1):
         if pending is not None and not pending:
             # Non-zero exit with no failed tests: retrying a filter would run nothing.
@@ -89,10 +91,11 @@ def main():
             break
         outcomes = test_outcomes(trx_path)
         if outcomes is None:
-            # Unreadable results: keep what was requested pending (or the full suite).
+            # Unreadable results: retry the same tests (or the full suite after a full run).
             pending = requested
         else:
             pending = pending_tests(outcomes, requested)
+            seen_failures |= {name for name, outcome in outcomes.items() if outcome == "Failed"}
         if returncode == 0 and pending == set():
             break
     else:
@@ -100,7 +103,7 @@ def main():
             print(f"::error title=Failed test::{name} still failing after {args.retries} retries", flush=True)
         return returncode or 1
 
-    for name in sorted(first_failures):
+    for name in sorted(seen_failures):
         print(f"::warning title=Flaky test::{name} failed, then passed on retry", flush=True)
     return 0
 
