@@ -25,7 +25,7 @@ namespace SeleniumDocs.Browsers
             driver?.Quit();
             if (_logLocation != null && File.Exists(_logLocation))
             {
-                File.Delete(_logLocation);
+                LogFile.TryDelete(_logLocation);
             }
         }
 
@@ -108,7 +108,7 @@ namespace SeleniumDocs.Browsers
 
             driver = new ChromeDriver(service);
             driver.Quit(); // Close the Service log file before reading
-            var lines = File.ReadLines(GetLogLocation());
+            var lines = LogFile.ReadLines(GetLogLocation());
             Assert.IsNotNull(lines.FirstOrDefault(line => line.Contains("Starting ChromeDriver")));
         }
 
@@ -123,7 +123,7 @@ namespace SeleniumDocs.Browsers
             driver = new ChromeDriver(service);
 
             driver.Quit(); // Close the Service log file before reading
-            var lines = File.ReadLines(GetLogLocation());
+            var lines = LogFile.ReadLines(GetLogLocation());
             Assert.IsNotNull(lines.FirstOrDefault(line => line.Contains("[DEBUG]:")));
         }
 
@@ -140,7 +140,7 @@ namespace SeleniumDocs.Browsers
             driver = new ChromeDriver(service);
 
             driver.Quit(); // Close the Service log file before reading
-            var lines = File.ReadLines(GetLogLocation());
+            var lines = LogFile.ReadLines(GetLogLocation());
             var regex = new Regex(@"\[\d\d-\d\d-\d\d\d\d \d\d:\d\d:\d\d\.\d+\]");
             Assert.IsNotNull(lines.FirstOrDefault(line => regex.Matches(line).Count > 0));
         }
@@ -157,7 +157,7 @@ namespace SeleniumDocs.Browsers
             driver = new ChromeDriver(service);
             driver.Quit(); // Close the Service log file before reading
             var expected = "[WARNING]: You are using an unsupported command-line switch: --disable-build-check";
-            var lines = File.ReadLines(GetLogLocation());
+            var lines = LogFile.ReadLines(GetLogLocation());
             Assert.IsNotNull(lines.FirstOrDefault(line => line.Contains(expected)));
         }
 
