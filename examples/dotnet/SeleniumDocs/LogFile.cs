@@ -1,5 +1,7 @@
+using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Threading;
 
 namespace SeleniumDocs
 {
@@ -23,13 +25,23 @@ namespace SeleniumDocs
 
         public static void TryDelete(string path)
         {
-            try
+            const int maxAttempts = 10;
+            for (var attempt = 1; attempt <= maxAttempts; attempt++)
             {
-                File.Delete(path);
-            }
-            catch (IOException)
-            {
-                // Still held by the driver process; the OS temp directory cleans it up.
+                try
+                {
+                    File.Delete(path);
+                    return;
+                }
+                catch (IOException) when (attempt < maxAttempts)
+                {
+                    // Still held by the driver process; give it time to exit.
+                    Thread.Sleep(200);
+                }
+                catch (IOException e)
+                {
+                    Console.Error.WriteLine($"Could not delete driver log {path}: {e.Message}");
+                }
             }
         }
     }
