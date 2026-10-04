@@ -9,11 +9,15 @@ on:
       - trunk
     paths:
       - 'examples/dotnet/**'
+      - '.github/workflows/dotnet-examples.yml'
+      - 'scripts/dotnet-test-retry.py'
   push:
     branches:
       - trunk
     paths:
       - 'examples/dotnet/**'
+      - '.github/workflows/dotnet-examples.yml'
+      - 'scripts/dotnet-test-retry.py'
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -89,10 +93,5 @@ jobs:
         distribution: 'temurin'
         java-version: 25.0.4+101.0.LTS
     - name: Run tests
-      uses: nick-fields/retry@v4.0.0
-      with:
-        timeout_minutes: 40
-        max_attempts: 2
-        command: |
-          cd examples/dotnet/SeleniumDocs
-          dotnet test
+      timeout-minutes: 60
+      run: python ./scripts/dotnet-test-retry.py examples/dotnet/SeleniumDocs --retries 2
