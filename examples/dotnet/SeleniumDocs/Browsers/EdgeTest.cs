@@ -173,7 +173,7 @@ namespace SeleniumDocs.Browsers
             {
                 try
                 {
-                    return File.ReadAllLines(path);
+                    return LogFile.ReadLines(path);
                 }
                 catch (IOException) when (attempt < maxAttempts)
                 {
@@ -181,7 +181,7 @@ namespace SeleniumDocs.Browsers
                 }
             }
 
-            return File.ReadAllLines(path);
+            return LogFile.ReadLines(path);
         }
 
         private string GetLogLocation()
