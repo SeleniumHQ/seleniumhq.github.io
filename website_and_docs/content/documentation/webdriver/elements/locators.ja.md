@@ -111,7 +111,7 @@ textbox, using css.
 {{< gh-codeblock path="/examples/python/tests/elements/test_locators.py#L17-L19" >}}
 {{< /tab >}}
  {{< tab header="CSharp" text=true >}}
-  {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Elements/LocatorsTest.cs#L24-L25" >}}
+    {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Elements/LocatorsTest.cs#L23-L24" >}}
   {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
 {{< gh-codeblock path="/examples/ruby/spec/elements/locators_spec.rb#L11" >}}
@@ -139,7 +139,7 @@ We will identify the Last Name field using it.
 {{< gh-codeblock path="/examples/python/tests/elements/test_locators.py#L27-L29" >}}
 {{< /tab >}}
   {{< tab header="CSharp" text=true >}}
-  {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Elements/LocatorsTest.cs#L28-L29" >}}
+ {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Elements/LocatorsTest.cs#L26-L27" >}}
   {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
 {{< gh-codeblock path="/examples/ruby/spec/elements/locators_spec.rb#L15" >}}
@@ -168,7 +168,7 @@ We will identify the Newsletter checkbox using it.
 {{< gh-codeblock path="/examples/python/tests/elements/test_locators.py#L37-L39" >}}
 {{< /tab >}}
  {{< tab header="CSharp" text=true >}}
-  {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Elements/LocatorsTest.cs#L32-L33" >}}
+  {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Elements/LocatorsTest.cs#L29-L30" >}}
   {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
 {{< gh-codeblock path="/examples/ruby/spec/elements/locators_spec.rb#L19" >}}
@@ -195,7 +195,7 @@ In the HTML snippet shared, we have a link available, lets see how will we locat
 {{< gh-codeblock path="/examples/python/tests/elements/test_locators.py#L47-L49" >}}
 {{< /tab >}}
  {{< tab header="CSharp" text=true >}}
-  {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Elements/LocatorsTest.cs#L36-L37" >}}
+   {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Elements/LocatorsTest.cs#L32-L33" >}}
   {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
 {{< gh-codeblock path="/examples/ruby/spec/elements/locators_spec.rb#L23" >}}
@@ -223,7 +223,7 @@ In the HTML snippet shared, we have a link available, lets see how will we locat
 {{< gh-codeblock path="/examples/python/tests/elements/test_locators.py#L57-L59" >}}
 {{< /tab >}}
  {{< tab header="CSharp" text=true >}}
-  {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Elements/LocatorsTest.cs#L40-L41" >}}
+   {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Elements/LocatorsTest.cs#L35-L36" >}}
   {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
 {{< gh-codeblock path="/examples/ruby/spec/elements/locators_spec.rb#L27" >}}
@@ -249,7 +249,7 @@ From the above HTML snippet shared, lets identify the link, using its html tag "
 {{< gh-codeblock path="/examples/python/tests/elements/test_locators.py#L67-L69" >}}
 {{< /tab >}}
 {{< tab header="CSharp" text=true >}}
-  {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Elements/LocatorsTest.cs#L44-L45" >}}
+ {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Elements/LocatorsTest.cs#L38-L39" >}}
   {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
 {{< gh-codeblock path="/examples/ruby/spec/elements/locators_spec.rb#L31" >}}
@@ -281,7 +281,7 @@ first name text box. Let us create locator for female radio button using xpath.
 {{< gh-codeblock path="/examples/python/tests/elements/test_locators.py#L77-L79" >}}
 {{< /tab >}}
  {{< tab header="CSharp" text=true >}}
-  {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Elements/LocatorsTest.cs#L48-L49" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Elements/LocatorsTest.cs#L41-L42" >}}
   {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
 {{< gh-codeblock path="/examples/ruby/spec/elements/locators_spec.rb#L35" >}}
