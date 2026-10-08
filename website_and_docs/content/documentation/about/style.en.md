@@ -149,7 +149,7 @@ A basic comparison of code looks like:
 
     {{</* tabpane text=true */>}}
     {{</* tab header="Java" */>}}
-    {{</* gh-codeblock path="/examples/java/src/test/java/dev/selenium/getting_started/FirstScript.java#L26-L27" */>}}
+    {{</* gh-codeblock path="/examples/java/src/test/java/dev/selenium/getting_started/FirstScript.java#snippet=first-script-submit" */>}}
     {{</* /tab */>}}
     {{</* tab header="Python" */>}}
     {{</* gh-codeblock path="/examples/python/tests/getting_started/first_script.py#L18-L19" */>}}
@@ -172,7 +172,7 @@ Which looks like this:
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/getting_started/FirstScript.java#L26-L27" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/getting_started/FirstScript.java#snippet=first-script-submit" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
 {{< gh-codeblock path="/examples/python/tests/getting_started/first_script.py#L18-L19" >}}

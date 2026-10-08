@@ -82,6 +82,10 @@ For example, the tab in Ruby would look like this:
         {{</* /tab */>}}
 
 The line numbers at the end represent only the line or lines of code that actually represent the item being displayed.
+To avoid maintaining line numbers, add matching `selenium-docs:<id>:start` and
+`selenium-docs:<id>:end` comments around the code, then use `#snippet=<id>` in the shortcode path.
+For example, Java comments can use `// selenium-docs:submit-form:start` and
+`// selenium-docs:submit-form:end`. The marker lines are omitted from the displayed snippet.
 If a user wants more context, they can click the link to the GitHub page that will show the full context.
 
 Make sure that if you add a test to the page that all the other line numbers in the markdown file are still
