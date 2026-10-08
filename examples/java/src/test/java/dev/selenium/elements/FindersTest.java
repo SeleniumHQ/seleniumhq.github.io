@@ -4,6 +4,7 @@ import dev.selenium.BaseTest;
 
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.SearchContext;
 import org.openqa.selenium.WebElement;
 
 import java.util.List;
@@ -89,5 +90,17 @@ public class FindersTest extends BaseTest {
     String attr = driver.switchTo().activeElement().getAttribute("name");
 
     assertEquals("fname", attr);
+  }
+
+  @Test
+  public void findsElementInShadowDom() {
+    startChromeDriver();
+    driver.get("https://www.selenium.dev/selenium/web/shadowRootPage.html");
+
+    WebElement shadowHost = driver.findElement(By.cssSelector("custom-checkbox-element"));
+    SearchContext shadowRoot = shadowHost.getShadowRoot();
+    WebElement shadowContent = shadowRoot.findElement(By.cssSelector("input[type=checkbox]"));
+
+    assertTrue(shadowContent.isDisplayed());
   }
 }

@@ -75,4 +75,16 @@ describe('Finders', function () {
     assert.equal(attr, 'fname');
     await driver.quit();
   });
+
+  it('finds an element in the shadow DOM', async function () {
+    let driver = await new Builder().forBrowser('chrome').build();
+    await driver.get('https://www.selenium.dev/selenium/web/shadowRootPage.html');
+
+    const shadowHost = await driver.findElement(By.css('custom-checkbox-element'));
+    const shadowRoot = await shadowHost.getShadowRoot();
+    const shadowContent = await shadowRoot.findElement(By.css('input[type=checkbox]'));
+
+    assert.ok(await shadowContent.isDisplayed());
+    await driver.quit();
+  });
 });

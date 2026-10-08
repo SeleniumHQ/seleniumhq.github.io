@@ -61,4 +61,14 @@ RSpec.describe 'Element Finders' do
 
     expect(attr).to eq('fname')
   end
+
+  it 'finds an element in the shadow dom' do
+    driver.navigate.to 'https://www.selenium.dev/selenium/web/shadowRootPage.html'
+
+    shadow_host = driver.find_element(css: 'custom-checkbox-element')
+    shadow_root = shadow_host.shadow_root
+    shadow_content = shadow_root.find_element(css: 'input[type=checkbox]')
+
+    expect(shadow_content).to be_displayed
+  end
 end
