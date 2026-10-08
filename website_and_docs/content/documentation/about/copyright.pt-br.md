@@ -52,8 +52,8 @@ relação ao uso das informações aqui contidas.
 
 | Software | Versão | Licença |
 | -------- | ------- | ------- |
-| [Hugo](//gohugo.io/) | v0.110.0 | [Apache 2.0](//gohugo.io/about/license/) |
-| [Docsy](//github.com/google/docsy/) | --- | [Apache 2.0](//github.com/google/docsy/blob/master/LICENSE) |
+| [Hugo](//gohugo.io/) | v0.167.0 | [Apache 2.0](//gohugo.io/about/license/) |
+| [Docsy](//github.com/docsy/docsy/) | --- | [Apache 2.0](//github.com/docsy/docsy/blob/main/LICENSE) |
 
 
 ## Licença
