@@ -6,6 +6,47 @@ description: >
   How to solve various problems in your Selenium code.
 ---
 
+The [W3C WebDriver specification](https://w3c.github.io/webdriver/#errors) defines the errors a driver can return.
+Each language binding turns them into its own exception (or error) class, and the names are not always the same.
+Kotlin uses the Java classes, the Ruby classes are in `Selenium::WebDriver::Error`, and the JavaScript classes
+are in the `selenium-webdriver/lib/error` module.
+
+| W3C error | Java | Python | CSharp | Ruby | JavaScript |
+|-----------|------|--------|--------|------|------------|
+| [detached shadow root](#detachedshadowrootexception) | `DetachedShadowRootException` | `DetachedShadowRootException` | `DetachedShadowRootException` | `DetachedShadowRootError` | `DetachedShadowRootError` |
+| [element click intercepted](#elementclickinterceptedexception) | `ElementClickInterceptedException` | `ElementClickInterceptedException` | `ElementClickInterceptedException` | `ElementClickInterceptedError` | `ElementClickInterceptedError` |
+| [element not interactable](#elementnotinteractableexception) | `ElementNotInteractableException` | `ElementNotInteractableException` | `ElementNotInteractableException` | `ElementNotInteractableError` | `ElementNotInteractableError` |
+| [insecure certificate](#insecurecertificateexception) | `InsecureCertificateException` | `InsecureCertificateException` | `InsecureCertificateException` | `InsecureCertificateError` | `InsecureCertificateError` |
+| [invalid argument](#invalidargumentexception) | `InvalidArgumentException` | `InvalidArgumentException` | `WebDriverArgumentException` | `InvalidArgumentError` | `InvalidArgumentError` |
+| [invalid cookie domain](#invalidcookiedomainexception) | `InvalidCookieDomainException` | `InvalidCookieDomainException` | `InvalidCookieDomainException` | `InvalidCookieDomainError` | `InvalidCookieDomainError` |
+| [invalid element state](#invalidelementstateexception) | `InvalidElementStateException` | `InvalidElementStateException` | `InvalidElementStateException` | `InvalidElementStateError` | `InvalidElementStateError` |
+| [invalid selector](#invalidselectorexception) | `InvalidSelectorException` | `InvalidSelectorException` | `InvalidSelectorException` | `InvalidSelectorError` | `InvalidSelectorError` |
+| [invalid session id](#invalidsessionidexception) | `NoSuchSessionException` | `InvalidSessionIdException` | `WebDriverException` | `InvalidSessionIdError` | `NoSuchSessionError` |
+| [javascript error](#javascriptexception) | `JavascriptException` | `JavascriptException` | `JavaScriptException` | `JavascriptError` | `JavascriptError` |
+| [move target out of bounds](#movetargetoutofboundsexception) | `MoveTargetOutOfBoundsException` | `MoveTargetOutOfBoundsException` | `MoveTargetOutOfBoundsException` | `MoveTargetOutOfBoundsError` | `MoveTargetOutOfBoundsError` |
+| [no such alert](#noalertpresentexception) | `NoAlertPresentException` | `NoAlertPresentException` | `NoAlertPresentException` | `NoSuchAlertError` | `NoSuchAlertError` |
+| [no such cookie](#nosuchcookieexception) | `NoSuchCookieException` | `NoSuchCookieException` | `NoSuchCookieException` | `NoSuchCookieError` | `NoSuchCookieError` |
+| [no such element](#nosuchelementexception) | `NoSuchElementException` | `NoSuchElementException` | `NoSuchElementException` | `NoSuchElementError` | `NoSuchElementError` |
+| [no such frame](#nosuchframeexception) | `NoSuchFrameException` | `NoSuchFrameException` | `NoSuchFrameException` | `NoSuchFrameError` | `NoSuchFrameError` |
+| [no such shadow root](#nosuchshadowrootexception) | `NoSuchShadowRootException` | `NoSuchShadowRootException` | `NoSuchShadowRootException` | `NoSuchShadowRootError` | `NoSuchShadowRootError` |
+| [no such window](#nosuchwindowexception) | `NoSuchWindowException` | `NoSuchWindowException` | `NoSuchWindowException` | `NoSuchWindowError` | `NoSuchWindowError` |
+| [script timeout](#scripttimeoutexception) | `ScriptTimeoutException` | `TimeoutException` | `WebDriverTimeoutException` | `ScriptTimeoutError` | `ScriptTimeoutError` |
+| [session not created](#sessionnotcreatedexception) | `SessionNotCreatedException` | `SessionNotCreatedException` | `InvalidOperationException` | `SessionNotCreatedError` | `SessionNotCreatedError` |
+| [stale element reference](#staleelementreferenceexception) | `StaleElementReferenceException` | `StaleElementReferenceException` | `StaleElementReferenceException` | `StaleElementReferenceError` | `StaleElementReferenceError` |
+| [timeout](#timeoutexception) | `TimeoutException` | `TimeoutException` | `WebDriverTimeoutException` | `TimeoutError` | `TimeoutError` |
+| [unable to capture screen](#screenshotexception) | `ScreenshotException` | `ScreenshotException` | `InvalidOperationException` | `UnableToCaptureScreenError` | `UnableToCaptureScreenError` |
+| [unable to set cookie](#unabletosetcookieexception) | `UnableToSetCookieException` | `UnableToSetCookieException` | `UnableToSetCookieException` | `UnableToSetCookieError` | `UnableToSetCookieError` |
+| [unexpected alert open](#unhandledalertexception) | `UnhandledAlertException` | `UnexpectedAlertPresentException` | `UnhandledAlertException` | `UnexpectedAlertOpenError` | `UnexpectedAlertOpenError` |
+| [unknown command](#unsupportedcommandexception) | `UnsupportedCommandException` | `WebDriverException` | `NotImplementedException` | `UnknownCommandError` | `UnknownCommandError` |
+| [unknown error](#webdriverexception) | `WebDriverException` | `WebDriverException` | `UnknownErrorException` | `UnknownError` | `WebDriverError` |
+| [unknown method](#unsupportedcommandexception) | `UnsupportedCommandException` | `WebDriverException` | `UnknownMethodException` | `UnknownMethodError` | `UnknownMethodError` |
+| [unsupported operation](#unsupportedcommandexception) | `UnsupportedCommandException` | `WebDriverException` | `UnsupportedOperationException` | `UnsupportedOperationError` | `UnsupportedOperationError` |
+
+All of these classes inherit from the base exception of their binding (`WebDriverException` in Java, Python and CSharp,
+`WebDriverError` in Ruby and JavaScript), except for the CSharp `InvalidOperationException` and `NotImplementedException`,
+which are .NET system exceptions.
+
+
 ## InvalidSelectorException
 
 CSS and XPath Selectors are sometimes difficult to get correct.
@@ -179,7 +220,315 @@ This exception occurs when Selenium tries to interact with an element that is no
 3. Check if the element is visible on the page before interacting with it. Use scrolling to bring the element into view, if required.  
 4. Use explicit waits to ensure the element is interactable before performing actions.
 
+## DetachedShadowRootException
+
+A shadow root was found earlier, but it is no longer attached to the DOM. This is the shadow root
+equivalent of a [StaleElementReferenceException](#staleelementreferenceexception).
+
+### Likely Cause
+
+* The page was refreshed or the user navigated to another page after the shadow root was found.
+* The shadow host element was removed from the DOM or replaced by a new element.
+
+### Possible Solutions
+
+* Find the shadow host element again and get its shadow root before using it.
+* See [Evaluating the Shadow DOM]({{< ref "/documentation/webdriver/elements/finders#evaluating-the-shadow-dom" >}})
+  for how to work with shadow roots.
+
+## InsecureCertificateException
+
+Navigating to a page made the browser show a certificate warning, which is usually the result of an expired,
+self-signed or otherwise invalid TLS certificate.
+
+### Likely Cause
+
+* The site under test uses a self-signed certificate, which is common in test environments.
+* The certificate has expired or does not match the domain name.
+
+### Possible Solutions
+
+* If you trust the site, set the
+  [`acceptInsecureCerts`]({{< ref "/documentation/webdriver/drivers/options#acceptinsecurecerts" >}})
+  capability to `true` in the browser options.
+* Otherwise, fix the certificate of the site under test.
+
+## InvalidArgumentException
+
+The arguments passed to a command are invalid or malformed.
+
+### Likely Cause
+
+* A value of the wrong type was passed to a command, e.g., a number where a string is expected.
+* A URL passed to `get` is not a valid absolute URL (e.g., it is missing `https://`).
+* A browser option or capability has a value the driver does not accept.
+* A file path for a file upload does not exist on the machine where the browser runs.
+
+### Possible Solutions
+
+* Read the error message, which usually says which argument is invalid.
+* Check the values you pass to the failing command, and the capabilities used to start the session.
+
+## InvalidCookieDomainException
+
+A cookie was added for a domain that is different from the domain of the current page.
+
+### Likely Cause
+
+* You are adding a cookie before navigating to the site it belongs to (e.g., on `about:blank` or the browser start page).
+* The cookie's `domain` value does not match the current page.
+* The current page does not accept cookies, e.g., a `file://` or `data:` URL.
+
+### Possible Solutions
+
+* Navigate to a page of the domain the cookie belongs to before adding it.
+* See [Working with cookies]({{< ref "/documentation/webdriver/interactions/cookies" >}}).
+
+## InvalidElementStateException
+
+A command cannot be completed because the element is in a state that does not allow it.
+
+### Likely Cause
+
+* You are trying to clear an element that is not editable, such as a disabled or read-only input.
+* You are trying to change an element that is disabled.
+
+### Possible Solutions
+
+* Check that the element is enabled and editable before interacting with it.
+* Wait for the application to enable the element, using an [explicit wait]({{< ref "/documentation/webdriver/waits" >}}).
+
+## JavascriptException
+
+The JavaScript code passed to the driver failed while running in the browser.
+
+### Likely Cause
+
+* The script has a syntax error or throws an error.
+* The script uses a variable or element that does not exist on the current page.
+* The script uses arguments that were not passed to it.
+
+### Possible Solutions
+
+* Read the error message, which includes the JavaScript error raised by the browser.
+* Run the script in the browser's developer tools console to debug it.
+* Prefer Selenium commands over JavaScript when there is a command that does the same thing.
+
+## MoveTargetOutOfBoundsException
+
+An [Actions]({{< ref "/documentation/webdriver/actions_api" >}}) command tried to move the pointer to a point
+outside of the browser's viewport.
+
+### Likely Cause
+
+* The offset used in a move command puts the pointer outside of the viewport.
+* The target element is outside of the viewport and cannot be scrolled into it.
+* The browser window is too small for the page.
+
+### Possible Solutions
+
+* Check the offsets used with the mouse and pen actions. Depending on the origin of the move, offsets are relative
+  to the viewport, to the current pointer position, or to the center of an element.
+* Scroll the element into view first, e.g., with the [wheel actions]({{< ref "/documentation/webdriver/actions_api/wheel" >}}).
+* Use a bigger browser window.
+
+## NoAlertPresentException
+
+A command tried to use an alert, confirm or prompt dialog, but no dialog was open.
+
+### Likely Cause
+
+* The dialog has not opened yet.
+* The dialog was already closed, either by your code or by the
+  [`unhandledPromptBehavior`]({{< ref "/documentation/webdriver/drivers/options#unhandledpromptbehavior" >}})
+  of the session.
+* The page opens a dialog that is built with HTML (a modal), which is not a JavaScript alert.
+
+### Possible Solutions
+
+* Wait for the alert to be present with an [explicit wait]({{< ref "/documentation/webdriver/waits" >}}) before switching to it.
+* Interact with HTML modals as regular elements.
+* See [JavaScript alerts, prompts and confirmations]({{< ref "/documentation/webdriver/interactions/alerts" >}}).
+
+## NoSuchCookieException
+
+No cookie with the given name exists for the current page.
+
+### Likely Cause
+
+* The cookie has not been set yet, it has expired, or it was deleted.
+* The cookie belongs to a different domain or path than the current page.
+
+### Possible Solutions
+
+* Check that you are on a page of the domain and path the cookie belongs to.
+* Get all cookies to check which ones are available.
+* See [Working with cookies]({{< ref "/documentation/webdriver/interactions/cookies" >}}).
+
+## NoSuchFrameException
+
+A command to switch to a frame or iframe could not find it.
+
+### Likely Cause
+
+* The frame has not been loaded yet.
+* The locator, index, name or ID used to switch to the frame is wrong.
+* The frame is inside another frame, and the driver is not switched to the parent frame.
+
+### Possible Solutions
+
+* Wait for the frame to be available and switch to it, with an [explicit wait]({{< ref "/documentation/webdriver/waits" >}}).
+* Switch to each parent frame first when frames are nested.
+* See [Working with IFrames and frames]({{< ref "/documentation/webdriver/interactions/frames" >}}).
+
+## NoSuchShadowRootException
+
+An element does not have a shadow root.
+
+### Likely Cause
+
+* The element is not a shadow host.
+* The shadow root has not been attached yet.
+
+### Possible Solutions
+
+* Check in the browser's developer tools that you are getting the shadow root of the shadow host element.
+* Wait for the shadow root to be attached before getting it.
+* See [Evaluating the Shadow DOM]({{< ref "/documentation/webdriver/elements/finders#evaluating-the-shadow-dom" >}}).
+
+## NoSuchWindowException
+
+The window or tab the command was sent to does not exist.
+
+### Likely Cause
+
+* The window or tab the driver is switched to was closed, by your code (e.g., `driver.close()`) or by the page.
+* The window handle used to switch to a window is wrong.
+
+### Possible Solutions
+
+* After closing a window or tab, switch to another open window before sending more commands.
+* Get the current window handles to check which windows are available.
+* See [Working with windows and tabs]({{< ref "/documentation/webdriver/interactions/windows" >}}).
+
+## ScreenshotException
+
+The browser could not take a screenshot.
+
+### Likely Cause
+
+* The page or element is too big for the browser to capture, e.g., a full page screenshot of a very long page.
+
+### Possible Solutions
+
+* Take a screenshot of the viewport or of a smaller element instead.
+* Use a smaller browser window when taking full page screenshots.
+
+## ScriptTimeoutException
+
+A script passed to the driver did not finish before the script timeout expired.
+
+### Likely Cause
+
+* An asynchronous script did not call the callback function it receives as its last argument.
+* The script takes longer than the script timeout, which is 30 seconds by default.
+
+### Possible Solutions
+
+* Check that asynchronous scripts call the callback function in every code path.
+* Increase the [script timeout]({{< ref "/documentation/webdriver/drivers/options#script-timeout" >}}) if the script needs more time.
+
+## TimeoutException
+
+An operation did not finish before its timeout expired.
+
+### Likely Cause
+
+* An [explicit wait]({{< ref "/documentation/webdriver/waits" >}}) timed out because its condition was not met in time.
+  This is the most common cause, and the exception is raised by the binding, not the driver.
+* A page took longer to load than the
+  [page load timeout]({{< ref "/documentation/webdriver/drivers/options#page-load-timeout" >}}), which is 300 seconds by default.
+
+### Possible Solutions
+
+* Check that the condition you are waiting for can be met, e.g., that the locator is correct.
+* Increase the timeout of the wait, if the application needs more time.
+* Use a different [page load strategy]({{< ref "/documentation/webdriver/drivers/options#pageloadstrategy" >}})
+  if you do not need to wait for the whole page to load.
+
+## UnableToSetCookieException
+
+The browser could not set a cookie.
+
+### Likely Cause
+
+* The cookie has invalid values, e.g., a malformed name, or an expiry date in the past.
+* The cookie is set as `secure`, and the current page does not use HTTPS.
+
+### Possible Solutions
+
+* Check the values of the cookie.
+* Use HTTPS pages when setting `secure` cookies.
+* See [Working with cookies]({{< ref "/documentation/webdriver/interactions/cookies" >}}).
+
+## UnhandledAlertException
+
+An alert, confirm or prompt dialog is open, and it blocks the command.
+
+### Likely Cause
+
+* The page opened a dialog that your code did not expect or did not close.
+
+### Possible Solutions
+
+* Switch to the alert and accept or dismiss it before sending more commands.
+* Set the [`unhandledPromptBehavior`]({{< ref "/documentation/webdriver/drivers/options#unhandledpromptbehavior" >}})
+  capability to make the driver handle unexpected dialogs automatically.
+* See [JavaScript alerts, prompts and confirmations]({{< ref "/documentation/webdriver/interactions/alerts" >}}).
+
+## UnsupportedCommandException
+
+The driver does not support the command. Java uses this exception for the `unknown command`,
+`unknown method` and `unsupported operation` W3C errors, while other bindings have a different class for each.
+
+### Likely Cause
+
+* The command is not part of the W3C WebDriver specification, or the driver has not implemented it yet.
+* The command only works with some browsers (e.g., a browser specific command used with another browser).
+* The driver is older than the Selenium version being used.
+
+### Possible Solutions
+
+* Check that the browser and driver support the command.
+* Update the browser and driver. [Selenium Manager]({{< ref "/documentation/selenium_manager" >}}) gets the driver
+  that matches your browser automatically.
+
+## WebDriverException
+
+An `unknown error` happened in the driver while processing the command. It is the base exception of most bindings,
+so it is also raised for errors that do not have a more specific class.
+
+### Likely Cause
+
+* The browser crashed or was closed while the command was running.
+* The driver could not connect to the browser.
+* An error in the browser or driver that is not described by any other error.
+
+### Possible Solutions
+
+* Read the full error message, which usually has more details.
+* Update the browser and driver to the latest versions.
+* Enable [logging]({{< ref "/documentation/webdriver/troubleshooting/logging" >}}) to get more information.
+
 ## ElementNotVisibleException
+
+{{% alert title="Legacy" color="warning" %}}
+This exception is not part of the W3C WebDriver specification, and current drivers do not return it.
+When an element cannot be interacted with because it is not visible, drivers return an
+[ElementNotInteractableException](#elementnotinteractableexception) instead.
+Only the Python binding still defines `ElementNotVisibleException`, for backward compatibility.
+{{% /alert %}}
+
 
 This exception is thrown when the element you are trying to interact with _is_ present in the DOM, but is not visible. 
 
