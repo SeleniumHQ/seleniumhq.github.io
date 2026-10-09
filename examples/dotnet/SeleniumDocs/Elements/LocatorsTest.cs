@@ -12,7 +12,7 @@ namespace SeleniumDocs.Elements
         [TestMethod]
         public void TestLocatorCommands(){
 
-            WebDriver driver = new ChromeDriver();
+            IWebDriver driver = new ChromeDriver();
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromMilliseconds(500);
             
             driver.Url= "https://www.selenium.dev/selenium/web/locators_tests/locators.html";

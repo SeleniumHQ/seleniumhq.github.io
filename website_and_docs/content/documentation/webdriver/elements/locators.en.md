@@ -82,9 +82,9 @@ available in Selenium.
 {{< tab header="Python" text=true >}}
 {{< gh-codeblock path="/examples/python/tests/elements/test_locators.py#L7-L9" >}}
 {{< /tab >}}
-  {{< tab header="CSharp" text=true >}}
-  {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Elements/LocatorsTest.cs#L20-L21" >}}
-  {{< /tab >}}
+{{< tab header="CSharp" text=true >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Elements/LocatorsTest.cs#L20-L21" >}}
+{{< /tab >}}
   {{< tab header="Ruby" text=true >}}
 {{< gh-codeblock path="/examples/ruby/spec/elements/locators_spec.rb#L7" >}}
   {{< /tab >}}
@@ -112,9 +112,9 @@ textbox, using css.
 {{< tab header="Python" text=true >}}
 {{< gh-codeblock path="/examples/python/tests/elements/test_locators.py#L17-L19" >}}
 {{< /tab >}}
-  {{< tab header="CSharp" text=true >}}
-  {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Elements/LocatorsTest.cs#L23-L24" >}}
-  {{< /tab >}}
+{{< tab header="CSharp" text=true >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Elements/LocatorsTest.cs#L23-L24" >}}
+{{< /tab >}}
 {{< tab header="Ruby" text=true >}}
 {{< gh-codeblock path="/examples/ruby/spec/elements/locators_spec.rb#L11" >}}
 {{< /tab >}}
@@ -140,9 +140,9 @@ We will identify the Last Name field using it.
 {{< tab header="Python" text=true >}}
 {{< gh-codeblock path="/examples/python/tests/elements/test_locators.py#L27-L29" >}}
 {{< /tab >}}
-  {{< tab header="CSharp" text=true >}}
-  {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Elements/LocatorsTest.cs#L26-L27" >}}
-  {{< /tab >}}
+{{< tab header="CSharp" text=true >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Elements/LocatorsTest.cs#L26-L27" >}}
+{{< /tab >}}
 {{< tab header="Ruby" text=true >}}
 {{< gh-codeblock path="/examples/ruby/spec/elements/locators_spec.rb#L15" >}}
 {{< /tab >}}
@@ -169,9 +169,9 @@ We will identify the Newsletter checkbox using it.
 {{< tab header="Python" text=true >}}
 {{< gh-codeblock path="/examples/python/tests/elements/test_locators.py#L37-L39" >}}
 {{< /tab >}}
-  {{< tab header="CSharp" text=true >}}
-  {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Elements/LocatorsTest.cs#L29-L30" >}}
-  {{< /tab >}}
+{{< tab header="CSharp" text=true >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Elements/LocatorsTest.cs#L29-L30" >}}
+{{< /tab >}}
 {{< tab header="Ruby" text=true >}}
 {{< gh-codeblock path="/examples/ruby/spec/elements/locators_spec.rb#L19" >}}
 {{< /tab >}}
@@ -196,9 +196,9 @@ In the HTML snippet shared, we have a link available, let's see how will we loca
 {{< tab header="Python" text=true >}}
 {{< gh-codeblock path="/examples/python/tests/elements/test_locators.py#L47-L49" >}}
 {{< /tab >}}
- {{< tab header="CSharp" text=true >}}
-  {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Elements/LocatorsTest.cs#L32-L33" >}}
-  {{< /tab >}}
+{{< tab header="CSharp" text=true >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Elements/LocatorsTest.cs#L32-L33" >}}
+{{< /tab >}}
 {{< tab header="Ruby" text=true >}}
 {{< gh-codeblock path="/examples/ruby/spec/elements/locators_spec.rb#L23" >}}
 {{< /tab >}}
@@ -224,9 +224,9 @@ In the HTML snippet shared, we have a link available, lets see how will we locat
 {{< tab header="Python" text=true >}}
 {{< gh-codeblock path="/examples/python/tests/elements/test_locators.py#L57-L59" >}}
 {{< /tab >}}
- {{< tab header="CSharp" text=true >}}
-  {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Elements/LocatorsTest.cs#L35-L36" >}}
-  {{< /tab >}}
+{{< tab header="CSharp" text=true >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Elements/LocatorsTest.cs#L35-L36" >}}
+{{< /tab >}}
 {{< tab header="Ruby" text=true >}}
 {{< gh-codeblock path="/examples/ruby/spec/elements/locators_spec.rb#L27" >}}
 {{< /tab >}}
@@ -250,9 +250,9 @@ From the above HTML snippet shared, lets identify the link, using its html tag "
 {{< tab header="Python" text=true >}}
 {{< gh-codeblock path="/examples/python/tests/elements/test_locators.py#L67-L69" >}}
 {{< /tab >}}
-  {{< tab header="CSharp" text=true >}}
-  {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Elements/LocatorsTest.cs#L38-L39" >}}
-  {{< /tab >}}
+{{< tab header="CSharp" text=true >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Elements/LocatorsTest.cs#L38-L39" >}}
+{{< /tab >}}
 {{< tab header="Ruby" text=true >}}
 {{< gh-codeblock path="/examples/ruby/spec/elements/locators_spec.rb#L31" >}}
 {{< /tab >}}
@@ -283,8 +283,8 @@ first name text box. Let us create locator for female radio button using xpath.
 {{< gh-codeblock path="/examples/python/tests/elements/test_locators.py#L77-L79" >}}
 {{< /tab >}}
 {{< tab header="CSharp" text=true >}}
-  {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Elements/LocatorsTest.cs#L41-L42" >}}
-  {{< /tab >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Elements/LocatorsTest.cs#L41-L42" >}}
+{{< /tab >}}
 {{< tab header="Ruby" text=true >}}
 {{< gh-codeblock path="/examples/ruby/spec/elements/locators_spec.rb#L35" >}}
 {{< /tab >}}
@@ -349,7 +349,7 @@ and then a child element of that parent, you can instead combine those two `Find
   {{< badge-code >}}
   {{< /tab >}}
   {{< tab header="CSharp" text=true >}}
-
+  {{< badge-code >}}
   {{< /tab >}}
   {{< tab header="Ruby" text=true >}}
   {{< badge-code >}}
@@ -376,7 +376,7 @@ separately, you can instead find them together in one clean `FindElements()`
   {{< badge-code >}}
   {{< /tab >}}
   {{< tab header="CSharp" text=true >}}
-  
+  {{< badge-code >}}
   {{< /tab >}}
   {{< tab header="Ruby" text=true >}}
   {{< badge-code >}}
