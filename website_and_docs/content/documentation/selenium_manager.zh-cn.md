@@ -218,6 +218,26 @@ $ ./selenium-manager --help
 - 驱动镜像. 遵循同样的模式, 我们可以在配置文件中使用  `chromedriver-mirror-url`, `geckodriver-mirror-url`,  `msedgedriver-mirror-url` 等, 在环境变量中使用 `SE_CHROMEDRIVER_MIRROR_URL`, `SE_GECKODRIVER_MIRROR_URL`, `SE_MSEDGEDRIVER_MIRROR_URL` 等. 
 - 浏览器镜像. 遵循同样的模式, 我们可以在配置文件中使用 `chrome-mirror-url`, `firefox-mirror-url`,  `edge-mirror-url` 等, 在环境变量中使用 `SE_CHROME_MIRROR_URL`, `SE_FIREFOX_MIRROR_URL`, `SE_EDGE_MIRROR_URL` 等. 
 
+### Configuration from the Selenium bindings
+The Selenium bindings call Selenium Manager with the following CLI arguments, taken from the
+[browser options](/documentation/webdriver/drivers/options/) used to start the session:
+
+| Browser option | CLI argument |
+|----------------|--------------|
+|[`browserName`](/documentation/webdriver/drivers/options/#browsername)|`--browser`|
+|[`browserVersion`](/documentation/webdriver/drivers/options/#browserversion)|`--browser-version`|
+|Browser binary location (e.g., [Chrome](/documentation/webdriver/browsers/chrome/#start-browser-in-a-specified-location))|`--browser-path`|
+|[`proxy`](/documentation/webdriver/drivers/options/#proxy) (HTTP or SSL proxy)|`--proxy`|
+
+This means that a proxy set in the browser options is used both by the browser and by Selenium Manager to download
+drivers and browsers. If Selenium Manager needs a proxy that the browser should not use, set it with the `SE_PROXY`
+environment variable or the `proxy` key in the configuration file instead.
+
+Any other configuration value (e.g., `cache-path`, `ttl`, `offline`, or mirror URLs) cannot be set from the browser
+options. Since the bindings run Selenium Manager as a child process, they pass along the environment variables of the
+process that runs the tests. Therefore, set these values with environment variables (e.g., `SE_CACHE_PATH`, `SE_OFFLINE`)
+or in the `se-config.toml` configuration file.
+
 ### se-config.toml 示例
 {{< tabpane text=true >}}
 {{< tab header="se-config.toml" >}}
