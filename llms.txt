@@ -27,7 +27,7 @@ Install, write, and run a first script in any supported language.
 
 - [The Selenium Browser Automation Project](https://www.selenium.dev/documentation/)
 - [Selenium Manager](https://www.selenium.dev/documentation/selenium_manager/): Selenium Manager is a command-line tool implemented in Rust that provides automated driver and browser management for Selenium. Selenium bindings use this tool by default, so you do not need to download it or add anything to your code or do anything else to use it.
-- [Selenium IDE](https://www.selenium.dev/documentation/ide/): The Selenium IDE is a browser extension that records and plays back a user's actions.
+- [Selenium IDE](https://www.selenium.dev/documentation/ide/): The Selenium IDE is a standalone application that records and plays back a user's actions.
 - [Using AI coding agents with Selenium](https://www.selenium.dev/documentation/ai_agents/): How to get coding agents and large language models to write Selenium code that is current, correct, and not flaky.
 - [WebDriver](https://www.selenium.dev/documentation/webdriver/): WebDriver drives a browser natively; learn more about it.
 - [Waiting Strategies](https://www.selenium.dev/documentation/webdriver/waits/)
@@ -170,7 +170,7 @@ Common errors, upgrade guidance, and logging.
 
 ## Other components
 
-- [Selenium IDE](https://www.selenium.dev/documentation/ide/): The Selenium IDE is a browser extension that records and plays back a user's actions.
+- [Selenium IDE](https://www.selenium.dev/documentation/ide/): The Selenium IDE is a standalone application that records and plays back a user's actions.
 - [IE Driver Server](https://www.selenium.dev/documentation/ie_driver_server/): The Internet Explorer Driver is a standalone server that implements the WebDriver specification.
 - [Internet Explorer Driver Internals](https://www.selenium.dev/documentation/ie_driver_server/internals/): More detailed information on the IE Driver.
 
@@ -181,9 +181,12 @@ Common errors, upgrade guidance, and logging.
 - [A deeper look at Selenium](https://www.selenium.dev/documentation/overview/details/): Selenium is an umbrella project for a range of tools and libraries that enable and support the automation of web browsers. 
 - [About this documentation](https://www.selenium.dev/documentation/about/)
 - [Copyright and attributions](https://www.selenium.dev/documentation/about/copyright/): Copyright, contributions and all attributions for the different projects under the Selenium umbrella.
-- [Contributing to the Selenium site & documentation](https://www.selenium.dev/documentation/about/contributing/): Information on improving documentation and code examples for Selenium
 - [Style guide for Selenium documentation](https://www.selenium.dev/documentation/about/style/): Conventions for contributions to the Selenium documentation and code examples
 - [Musings about how things came to be](https://www.selenium.dev/documentation/about/history/): Details mostly of interest to Selenium devs about how and why certain parts of the project were created
+- [Contributing to the Selenium site & documentation](https://www.selenium.dev/documentation/about/contributing/): Information on improving documentation and code examples for Selenium
+- [Contributing to the Selenium site](https://www.selenium.dev/documentation/about/contributing/site/): How to update the Selenium site pages outside of the documentation
+- [Contributing to the Selenium documentation](https://www.selenium.dev/documentation/about/contributing/documentation/): How the Selenium documentation is organized and how to change it
+- [Contributing code examples](https://www.selenium.dev/documentation/about/contributing/code_examples/): How to create runnable code examples and render them in the documentation
 - [Warnings](https://www.selenium.dev/documentation/warnings/): Explanations for the diagnostics, annotations, and IDE warnings Selenium surfaces.
 - [BiDi implementation API is internal](https://www.selenium.dev/documentation/warnings/bidi-implementation/): Why Selenium's low-level BiDi implementation classes are marked internal, and what to use instead.
 
