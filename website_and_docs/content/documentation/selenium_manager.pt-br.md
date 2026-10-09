@@ -143,6 +143,26 @@ In addition to the configuration keys specified in the table before, there are s
 - Driver mirror. Following the same pattern, we can use `chromedriver-mirror-url`, `geckodriver-mirror-url`,  `msedgedriver-mirror-url`,  etc. (in the configuration file), and `SE_CHROMEDRIVER_MIRROR_URL`, `SE_GECKODRIVER_MIRROR_URL`, `SE_MSEDGEDRIVER_MIRROR_URL`,  etc. (as environment variables).
 - Browser mirror. Following the same pattern, we can use `chrome-mirror-url`, `firefox-mirror-url`,  `edge-mirror-url`,  etc. (in the configuration file), and `SE_CHROME_MIRROR_URL`, `SE_FIREFOX_MIRROR_URL`, `SE_EDGE_MIRROR_URL`,  etc. (as environment variables).
 
+### Configuration from the Selenium bindings
+The Selenium bindings call Selenium Manager with the following CLI arguments, taken from the
+[browser options](/documentation/webdriver/drivers/options/) used to start the session:
+
+| Browser option | CLI argument |
+|----------------|--------------|
+|[`browserName`](/documentation/webdriver/drivers/options/#browsername)|`--browser`|
+|[`browserVersion`](/documentation/webdriver/drivers/options/#browserversion)|`--browser-version`|
+|Browser binary location (e.g., [Chrome](/documentation/webdriver/browsers/chrome/#start-browser-in-a-specified-location))|`--browser-path`|
+|[`proxy`](/documentation/webdriver/drivers/options/#proxy) (HTTP or SSL proxy)|`--proxy`|
+
+This means that a proxy set in the browser options is used both by the browser and by Selenium Manager to download
+drivers and browsers. If Selenium Manager needs a proxy that the browser should not use, set it with the `SE_PROXY`
+environment variable or the `proxy` key in the configuration file instead.
+
+Any other configuration value (e.g., `cache-path`, `ttl`, `offline`, or mirror URLs) cannot be set from the browser
+options. Since the bindings run Selenium Manager as a child process, they pass along the environment variables of the
+process that runs the tests. Therefore, set these values with environment variables (e.g., `SE_CACHE_PATH`, `SE_OFFLINE`)
+or in the `se-config.toml` configuration file.
+
 ### se-config.toml Example
 {{< tabpane text=true >}}
 {{< tab header="se-config.toml" >}}
