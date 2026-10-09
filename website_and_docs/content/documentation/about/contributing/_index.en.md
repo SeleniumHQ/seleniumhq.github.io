@@ -56,55 +56,15 @@ https://selenium.dev/support.
 
 ## What to Help With
 
-### Creating Examples
+This repository holds both the Selenium site and its documentation. Read the guide
+for the area you want to change:
 
-Examples that need to be added are marked with: {{% badge-code %}}
-
-We want to be able to run all of our code examples in the CI to ensure that people can copy and paste and
-execute everything on the site. So we put the code where it belongs in the
-[examples directory](https://github.com/SeleniumHQ/seleniumhq.github.io/blob/trunk/examples/).
-Each page in the documentation correlates to a test file in each of the languages, and should follow naming conventions.
-For instance examples for this page https://www.selenium.dev/documentation/webdriver/browsers/chrome/ get added in these
-files:
-* `"/examples/java/src/test/java/dev/selenium/browsers/ChromeTest.java"`
-* `"/examples/python/tests/browsers/test_chrome.py"`
-* `"/examples/dotnet/SeleniumDocs/Browsers/ChromeTest.cs"`
-* `"/examples/ruby/spec/browsers/chrome_spec.rb"`
-* `"/examples/javascript/test/browser/chromeSpecificCaps.spec.js"`
-
-Each example should get its own test. Ideally each test has an assertion that verifies the code works as intended.
-Once the code is copied to its own test in the proper file, it needs to be referenced in the markdown file.
-
-For example, the tab in Ruby would look like this:
-
-        {{</* tab header="Ruby" */>}}
-        {{</* gh-codeblock path="/examples/ruby/spec/browsers/chrome_spec.rb#L8-L9" */>}}
-        {{</* /tab */>}}
-
-The line numbers at the end represent only the line or lines of code that actually represent the item being displayed.
-If a user wants more context, they can click the link to the GitHub page that will show the full context.
-
-Make sure that if you add a test to the page that all the other line numbers in the markdown file are still
-correct. Adding a test at the top of a page means updating every single reference in the documentation that has a line
-number for that file.
-
-Code examples may need a relevant website or web page to demonstrate the scenario. To ensure examples consistently work, 
-it is recommended to use the test web pages available at https://www.selenium.dev/selenium/web/.
-
-Finally, make sure that the tests pass in the CI.
-
-
-### Moving Examples
-
-Examples that need to be moved are marked with: {{% badge-examples %}}
-
-Everything from the [Creating Examples](#creating-examples) section applies, with one addition.
-
-Make sure the tab includes `text=true`. By default, the tabs get formatted
-for code, so to use markdown or other shortcode statements (like `gh-codeblock`) it needs to be declared as text.
-For most examples, the `tabpane` declares the `text=true`, but if some of the tabs have code examples, the `tabpane`
-cannot specify it, and it must be specified in the tabs that do not need automatic code formatting.
-
+* [Selenium site]({{< ref "site.md" >}}): the home page, downloads, projects, blog, and other
+  pages outside of the documentation.
+* [Documentation]({{< ref "documentation.md" >}}): the pages under `/documentation`, their
+  structure, and their translations.
+* [Code examples]({{< ref "code_examples.md" >}}): creating runnable code examples
+  and rendering them in the documentation.
 
 ## Contribution Mechanics
 
@@ -178,7 +138,8 @@ your changes, run `hugo server` on the site's root directory.
 The project loads code from GitHub, if that code has been updated, and it isn't
 reflected in your preview, you can run hugo without the cache: `hugo server --ignoreCache`
 
-See [Style Guide]({{< ref "style.md" >}}) for more information on our conventions for contribution 
+See [Style Guide]({{< ref "style.md" >}}) for more information on our conventions for contribution,
+and the guides listed in [What to Help With](#what-to-help-with) for the area you are changing.
 
 ### Step 4: Commit
 

@@ -72,6 +72,7 @@
             "note" ""
             "paths" (slice "/documentation/overview"
                            "/documentation/about"
+                           "/documentation/about/contributing"
                            "/documentation/warnings"))
 -}}
 {{- $listed := slice -}}
