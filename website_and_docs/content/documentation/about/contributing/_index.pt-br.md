@@ -93,7 +93,7 @@ For most examples, the `tabpane` declares the `text=true`, but if some of the ta
 cannot specify it, and it must be specified in the tabs that do not need automatic code formatting.
 
 
-## Contribuições
+## Contribuições {#contribution-mechanics}
 
 O projeto Selenium dá as boas-vindas a novos contribuidores. Indivíduos fazendo
 contribuições significativas e valiosas ao longo do tempo são transformados em _Committers_

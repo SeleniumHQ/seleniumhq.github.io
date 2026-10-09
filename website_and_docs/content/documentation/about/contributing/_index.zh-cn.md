@@ -87,7 +87,7 @@ https://selenium.dev/support 中描述的沟通渠道进行询问。
 不能指定它，而必须在不需要自动代码格式化的 tab 中指定。
 
 
-## 贡献机制
+## 贡献机制 {#contribution-mechanics}
 
 Selenium 项目欢迎新的贡献者。
 随时间做出重大且有价值的贡献的个人将成为 _提交者_，并获得对该项目的提交权限。
