@@ -143,12 +143,55 @@ In addition to the configuration keys specified in the table before, there are s
 - Driver mirror. Following the same pattern, we can use `chromedriver-mirror-url`, `geckodriver-mirror-url`,  `msedgedriver-mirror-url`,  etc. (in the configuration file), and `SE_CHROMEDRIVER_MIRROR_URL`, `SE_GECKODRIVER_MIRROR_URL`, `SE_MSEDGEDRIVER_MIRROR_URL`,  etc. (as environment variables).
 - Browser mirror. Following the same pattern, we can use `chrome-mirror-url`, `firefox-mirror-url`,  `edge-mirror-url`,  etc. (in the configuration file), and `SE_CHROME_MIRROR_URL`, `SE_FIREFOX_MIRROR_URL`, `SE_EDGE_MIRROR_URL`,  etc. (as environment variables).
 
+### Configuration from the Selenium bindings
+The Selenium bindings call Selenium Manager with the following CLI arguments, taken from the
+[browser options](/documentation/webdriver/drivers/options/) used to start the session:
+
+| Browser option | CLI argument |
+|----------------|--------------|
+|[`browserName`](/documentation/webdriver/drivers/options/#browsername)|`--browser`|
+|[`browserVersion`](/documentation/webdriver/drivers/options/#browserversion)|`--browser-version`|
+|Browser binary location (e.g., [Chrome](/documentation/webdriver/browsers/chrome/#start-browser-in-a-specified-location))|`--browser-path`|
+|[`proxy`](/documentation/webdriver/drivers/options/#proxy) (HTTP or SSL proxy)|`--proxy`|
+
+This means that a proxy set in the browser options is used both by the browser and by Selenium Manager to download
+drivers and browsers. If Selenium Manager needs a proxy that the browser should not use, set it with the `SE_PROXY`
+environment variable or the `proxy` key in the configuration file instead.
+
+Any other configuration value (e.g., `cache-path`, `ttl`, `offline`, or mirror URLs) cannot be set from the browser
+options. Since the bindings run Selenium Manager as a child process, they pass along the environment variables of the
+process that runs the tests. Therefore, set these values with environment variables (e.g., `SE_CACHE_PATH`, `SE_OFFLINE`)
+or in the `se-config.toml` configuration file.
+
 ### se-config.toml Example
 {{< tabpane text=true >}}
 {{< tab header="se-config.toml" >}}
 {{< gh-codeblock path="/examples/python/tests/selenium_manager/example_se-config.toml#L1-L21" >}}
 {{< /tab >}}
 {{< /tabpane >}}
+
+### Using mirrors
+The mirror URLs (e.g., `driver-mirror-url` and `browser-mirror-url`, or their browser-specific variants
+such as `chromedriver-mirror-url` and `firefox-mirror-url`) replace the base URL of the repositories that
+Selenium Manager uses to discover and download drivers and browsers. Selenium Manager requests the same paths
+it requests from the original repository, but from the mirror, and expects the same responses. Therefore,
+a mirror needs to replicate the structure and the response format of the repository it replaces:
+
+| Browser | Driver repository (driver mirror) | Browser repository (browser mirror) |
+|---------|-----------------------------------|-------------------------------------|
+| Chrome | [Chrome for Testing JSON endpoints](https://googlechromelabs.github.io/chrome-for-testing/) (e.g., `known-good-versions-with-downloads.json`) for chromedriver 115 and newer, and `https://chromedriver.storage.googleapis.com/` for older versions | [Chrome for Testing JSON endpoints](https://googlechromelabs.github.io/chrome-for-testing/) |
+| Firefox | [geckodriver releases](https://github.com/mozilla/geckodriver/releases/) (e.g., `download/v0.36.0/geckodriver-v0.36.0-linux64.tar.gz`) plus a `geckodriver-support.json` file with the same format as [Selenium's](https://raw.githubusercontent.com/SeleniumHQ/selenium/trunk/common/geckodriver/geckodriver-support.json) | `https://ftp.mozilla.org/pub/firefox/releases/` |
+| Edge | `https://msedgedriver.microsoft.com/` | `https://edgeupdates.microsoft.com/api/products/` |
+
+For Chrome, the Chrome for Testing JSON files contain the download URL of each browser and driver, so a mirror
+can serve those JSON files with the URLs changed to point to where the binaries are stored.
+
+Driver and browser mirrors are configured separately because, for Firefox and Edge, drivers and browsers come from
+different repositories.
+
+A mirror cannot point Selenium Manager to a source with a different structure, such as a Linux distribution package
+repository. In that case, install the browser and driver yourself, and
+[set the driver location](https://www.selenium.dev/documentation/webdriver/drivers/service/#driver-location).
 
 ## Caching
 ***TL;DR:*** *The drivers and browsers managed by Selenium Manager are stored in a local folder (`~/.cache/selenium`).*
@@ -301,27 +344,26 @@ the [browser location](https://www.selenium.dev/documentation/webdriver/browsers
 or both, depending on the requirements.
 
 ### Alternative architectures
-Selenium supports all five architectures managed by Google's Chrome for Testing, and all six drivers provided for Microsoft Edge.
+Each release of the Selenium bindings comes with four separate Selenium Manager binaries:
+* macOS, which supports both x64 and arm64 (Intel and Apple silicon).
+* Windows, which works for both x86 and x64 (32-bit and 64-bit OS), and is also used on Windows arm64.
+* Linux x64.
+* Linux arm64, shipped as of Selenium 4.49.0.
 
-Each release of the Selenium bindings comes with three separate Selenium Manager binaries — one for Linux, Windows, and Mac. 
-* The Mac version supports both x64 and aarch64 (Intel and Apple).
-* The Windows version should work for both x86 and x64 (32-bit and 64-bit OS). 
-* The Linux version has only been verified to work for x64.
+On Linux arm64, Selenium Manager can manage the following browsers and drivers:
+* Chrome and chromedriver, from version 153, which is the first version that
+  [Chrome for Testing](https://googlechromelabs.github.io/chrome-for-testing/) publishes for Linux arm64.
+  Older versions of chromedriver were never published for Linux arm64.
+* Firefox, which Selenium Manager can download from version 136, and geckodriver.
+* Edge is not supported, because Microsoft does not publish Edge or msedgedriver for Linux arm64.
 
-Reasons for not supporting more architectures:
-1. Neither Chrome for Testing nor Microsoft Edge supports additional architectures, so Selenium Manager would need to 
-manage something unofficial for it to work. 
-2. We currently build the binaries from existing GitHub actions runners, which do not support these architectures
-3. Any additional architectures would get distributed with all Selenium releases, increasing the total build size
-
-If you are running Linux on arm64/aarch64, 32-bit architecture, or a Raspberry Pi, Selenium Manager will not work for you.
-The biggest issue for people is that they used to get custom-built drivers and put them on PATH and have them work.
-Now that Selenium Manager is responsible for locating drivers on PATH, this approach no longer works, and users
-need to use a `Service` class and [set the location directly](https://www.selenium.dev/documentation/webdriver/drivers/service/#driver-location).
-There are a number of advantages to having Selenium Manager look for drivers on PATH instead of managing that logic 
-in each of the bindings, so that's currently a trade-off we are comfortable with.
-
-However, as of Selenium 4.13.0, the Selenium bindings allow locating the Selenium Manager binary using an environment variable called `SE_MANAGER_PATH`. If this variable is set, the bindings will use its value as the Selenium Manager path in the local filesystem. This feature will allow users to provide a custom compilation of Selenium Manager, for instance, if the default binaries (compiled for Windows, Linux, and macOS) are incompatible with a given system (e.g., ARM64 in Linux).
+Other platforms, such as 32-bit Linux on ARM (e.g., some Raspberry Pi systems), are not supported. Selenium
+Manager cannot download browsers or drivers for them, because the browser vendors do not publish them.
+On these platforms, install the browser and the driver from your system package manager, and either
+[set the driver location](https://www.selenium.dev/documentation/webdriver/drivers/service/#driver-location)
+in a `Service` class or use an [environment variable for the driver path](#using-an-environment-variable-for-the-driver-path).
+If you want Selenium Manager to find a driver on `PATH` on one of these platforms, you need a
+[custom build of Selenium Manager](#building-a-custom-selenium-manager).
 
 ### Browser dependencies
 When automatically managing browsers in Linux, Selenium Manager relies on the releases published by the browser vendors (i.e., Chrome, Firefox, and Edge). These releases are portable in most cases. Nevertheless, there might be cases in which existing libraries are required. In Linux, this problem might be experienced when trying to run Firefox, e.g., as follows:
@@ -369,16 +411,22 @@ The following bindings allow you to specify the driver path using an environment
 This feature is available in the Selenium Ruby binding starting from version 4.25.0 and in the Python binding from version 4.26.0.
 
 ## Building a Custom Selenium Manager
-In order to build your own custom Selenium Manager that works in an architecture we don't currently support, you can
-utilize the following steps:
+The Selenium bindings use the Selenium Manager binary set in the `SE_MANAGER_PATH` environment variable,
+if it is present (as of Selenium 4.13.0). You can use it to run your own build of Selenium Manager,
+for instance, on a platform for which we do not ship a binary (see [alternative architectures](#alternative-architectures)).
+
+To build your own Selenium Manager, you can use the following steps:
 
 1. Install Rust Dev Environment
 2. clone Selenium onto your local machine `git clone https://github.com/SeleniumHQ/selenium.git --depth 1`
 3. Navigate into your clone `cd selenium/rust`
 4. Build selenium `cargo build --release`
-5. Set the following environment variable for the driver path `SE_MANAGER_PATH=~/selenium/rust/target/release/selenium-manager`
+5. Set the following environment variable for the Selenium Manager path `SE_MANAGER_PATH=~/selenium/rust/target/release/selenium-manager`
 6. Put the driver you want in a location on your system PATH
 7. Selenium will now use the built Selenium Manager to locate the manually downloaded driver on PATH
+
+Selenium Manager cannot download browsers or drivers that the browser vendors do not publish for your platform,
+even when it runs on that platform. This is why step 6 is needed.
 
 ## Roadmap
 You can trace the work in progress in the [Selenium Manager project dashboard](https://github.com/orgs/SeleniumHQ/projects/5). Moreover, you can check the new features shipped with each Selenium Manager release in its [changelog file](https://github.com/SeleniumHQ/selenium/blob/trunk/rust/CHANGELOG.md).
