@@ -50,9 +50,9 @@ GEM
       rubocop (~> 1.86, >= 1.86.2)
     ruby-progressbar (1.13.0)
     rubyzip (3.7.0)
-    selenium-devtools (0.154.0)
+    selenium-devtools (0.155.0)
       selenium-webdriver (~> 4.2)
-    selenium-webdriver (4.50.0)
+    selenium-webdriver (4.51.0)
       base64 (~> 0.2)
       logger (~> 1.4)
       rubyzip (>= 1.2.2, < 4.0)
@@ -76,8 +76,8 @@ DEPENDENCIES
   rspec (~> 3.0)
   rubocop (~> 1.35)
   rubocop-rspec (~> 3.0)
-  selenium-devtools (= 0.154.0)
-  selenium-webdriver (= 4.50.0)
+  selenium-devtools (= 0.155.0)
+  selenium-webdriver (= 4.51.0)
 
 BUNDLED WITH
    2.5.6
