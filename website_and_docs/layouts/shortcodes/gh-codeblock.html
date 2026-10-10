@@ -61,7 +61,7 @@ div.code-toolbar > .toolbar {
 
 {{ if $hasFragment }}
 {{ $uniqueId := md5 $fullPath }}
-<div class="mt-4 pb-2">
+<div class="mt-4 pb-2 d-print-none">
     <div style="border: 1px solid #dee2e6; border-radius: 6px; overflow: hidden; display: flex;">
         <a onclick="showCodeModal('{{ $uniqueId }}')" style="flex: 1; display: flex; align-items: center; justify-content: center; padding: 8px 12px; text-decoration: none; color: #007bff; background: #f8f9fa; font-weight: 500; transition: background-color 0.2s; cursor: pointer; border-right: 1px solid #dee2e6;" onmouseover="this.style.backgroundColor='#e9ecef'" onmouseout="this.style.backgroundColor='#f8f9fa'">
             View Complete Code
