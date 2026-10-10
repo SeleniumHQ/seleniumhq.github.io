@@ -266,7 +266,10 @@ The arguments passed to a command are invalid or malformed.
 * A value of the wrong type was passed to a command, e.g., a number where a string is expected.
 * A URL passed to `get` is not a valid absolute URL (e.g., it is missing `https://`).
 * A browser option or capability has a value the driver does not accept.
-* A file path for a file upload does not exist on the machine where the browser runs.
+* The file passed for a [file upload]({{< ref "/documentation/webdriver/elements/file_upload" >}}) does not exist.
+  In a [remote session]({{< ref "/documentation/webdriver/drivers/remote_webdriver#uploads" >}}), the file must exist
+  on the machine where the browser runs, unless a Local File Detector is used, which sends the file from the machine
+  running the test.
 
 ### Possible Solutions
 
@@ -426,7 +429,6 @@ The browser could not take a screenshot.
 ### Possible Solutions
 
 * Take a screenshot of the viewport or of a smaller element instead.
-* Use a smaller browser window when taking full page screenshots.
 
 ## ScriptTimeoutException
 
@@ -493,7 +495,7 @@ An alert, confirm or prompt dialog is open, and it blocks the command.
 ## UnsupportedCommandException
 
 The driver does not support the command. Java uses this exception for the `unknown command`,
-`unknown method` and `unsupported operation` W3C errors, while other bindings have a different class for each.
+`unknown method` and `unsupported operation` W3C errors. See the table at the top of this page for the class each binding uses for each of these errors.
 
 ### Likely Cause
 

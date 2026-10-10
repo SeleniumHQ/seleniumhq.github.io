@@ -87,7 +87,7 @@ Selenium 提供了许多内置的 [定位策略]({{< ref "locators.md" >}})，�
 这些接口定义清晰，并尽量遵循单一职责原则。  
 {{% /pageinfo %}}
 
-### 评估 Shadow DOM
+### 评估 Shadow DOM {#evaluating-the-shadow-dom}
 
 Shadow DOM 是隐藏在元素内部的封装 DOM 树。  
 自 Chromium 浏览器在 v96 发布后，Selenium 已支持通过易用的 shadow root 方法访问该树。注意：这些方法需要 Selenium 4.0 或更高版本。
