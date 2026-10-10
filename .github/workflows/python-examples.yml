@@ -31,7 +31,7 @@ jobs:
         release: [ stable, nightly ]
         include:
         - release: stable
-          python: '3.10'
+          python: '3.11'
         - release: nightly
           python: '3.14'
     runs-on: ${{ format('{0}-latest', matrix.os) }}
