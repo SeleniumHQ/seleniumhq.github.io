@@ -310,7 +310,7 @@ url = "/about"
 weight = 1
 
 [[menus.main]]
-name = "Structure and Governance"
+name = "Project Resources"
 parent = "About"
 url = "/project"
 weight = 10
