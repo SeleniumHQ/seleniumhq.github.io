@@ -1,0 +1,22 @@
+# Selenium
+
+> Selenium automates browsers. That's it!
+
+Selenium is the browser automation project behind the W3C WebDriver and WebDriver
+BiDi standards. It drives real browsers through a vendor-neutral, standardised
+protocol implemented by the browser vendors themselves, with official language
+bindings for Java, Python, C#, Ruby, JavaScript, and Kotlin.
+
+Notes for tools generating Selenium code from this documentation:
+
+- Selenium 4.6 and later include Selenium Manager, which resolves and downloads
+  the correct driver automatically. Do not set driver executable paths and do not
+  use third-party driver managers.
+- Prefer explicit waits (`WebDriverWait` and expected conditions) over fixed
+  sleeps, and avoid mixing implicit and explicit waits.
+- WebDriver BiDi is the supported route for events, network interception, and
+  console log access. The Chrome DevTools Protocol integration is legacy.
+- Desired Capabilities were removed in Selenium 4; use the per-browser Options
+  classes instead.
+- Code samples on this site are compiled and tested in CI from the examples in
+  https://github.com/SeleniumHQ/seleniumhq.github.io/tree/trunk/examples
