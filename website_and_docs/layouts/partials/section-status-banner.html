@@ -1,0 +1,35 @@
+{{/*
+  Status banner for documentation sections that are kept for reference only.
+
+  Rendered from layouts/docs/baseof.html, above the page body, for every page
+  whose URL falls under one of the paths below. Keying on the section path
+  keeps the content files untouched, so translations pick the banner up for
+  free and nothing has to be remembered when a page is added to the section.
+
+  The link targets use relLangURL so that each translation points at its own
+  copy of the recommended page.
+*/ -}}
+{{- $path := .RelPermalink -}}
+{{- with .Language.Lang -}}
+  {{- if ne . "en" -}}
+    {{- $path = strings.TrimPrefix (printf "/%s" .) $path -}}
+  {{- end -}}
+{{- end -}}
+{{- $text := "" -}}
+{{- $href := "" -}}
+{{- $linkText := "" -}}
+{{- if hasPrefix $path "/documentation/legacy/" -}}
+  {{- $text = "This page describes Selenium 2 and 3 and is kept for reference. For current guidance start with" -}}
+  {{- $href = "documentation/webdriver/getting_started/" | relLangURL -}}
+  {{- $linkText = "Getting started" -}}
+{{- else if hasPrefix $path "/documentation/webdriver/bidi/cdp/" -}}
+  {{- $text = "The Chrome DevTools Protocol pages are being phased out. Prefer the" -}}
+  {{- $href = "documentation/webdriver/bidi/w3c/" | relLangURL -}}
+  {{- $linkText = "W3C WebDriver BiDi pages" -}}
+{{- end -}}
+{{- with $text }}
+<div class="alert alert-warning td-section-status-banner d-print-none" role="status">
+  <i class="fa-solid fa-triangle-exclamation fa-fw" aria-hidden="true"></i>
+  {{ . }} <a href="{{ $href }}">{{ $linkText }}</a>.
+</div>
+{{- end }}
