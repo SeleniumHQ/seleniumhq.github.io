@@ -64,6 +64,9 @@
             "note" "Common errors, upgrade guidance, and logging."
             "paths" (slice "/documentation/webdriver/troubleshooting"
                            "/documentation/webdriver/troubleshooting/errors"))
+      (dict "heading" "Release notes"
+            "note" "What changed in each recent release, newest first, with links to the per-binding changelogs."
+            "paths" (slice "/documentation/release_notes"))
       (dict "heading" "Other components"
             "note" ""
             "paths" (slice "/documentation/ide"))
