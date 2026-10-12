@@ -183,13 +183,20 @@ Current form, with a stable locator:
 Current form, with a relative locator:
 
 {{< tabpane text=true >}}
-{{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/RelativeLocatorTest.java#L32-L33" >}}
-{{< /tab >}}
-{{< tab header="Python" >}}
-{{< gh-codeblock path="/examples/python/tests/elements/test_relative_locators.py#L8-L9" >}}
-{{< /tab >}}
+{{% tab header="Java" %}}
+```java
+By passwordLocator = RelativeLocator.with(By.tagName("input")).below(By.id("email"));
+```
+{{% /tab %}}
+{{% tab header="Python" %}}
+```python
+password_locator = locate_with(By.TAG_NAME, "input").below({By.ID: "email"})
+```
+{{% /tab %}}
 {{< /tabpane >}}
+
+See [Relative locators]({{< ref "/documentation/webdriver/elements/locators.md#relative-locators" >}})
+for the full set of relative locator methods.
 
 ## find_element_by_* methods
 
