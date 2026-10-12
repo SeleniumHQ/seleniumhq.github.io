@@ -1,4 +1,4 @@
-<nav class="js-navbar-scroll navbar navbar-expand-lg navbar-light bg-white flex-row td-navbar">
+<nav class="js-navbar-scroll navbar navbar-expand-lg navbar-light bg-white flex-row td-navbar d-print-none">
 	<a class="navbar-brand" href="{{ .Site.Home.RelPermalink }}">
 		<span class="navbar-logo">{{ if .Site.Params.ui.navbar_logo }}{{ with resources.Get "icons/logo.svg" }}{{ ( . | minify).Content | safeHTML }}{{ end }}{{ end }}</span>
 	</a>

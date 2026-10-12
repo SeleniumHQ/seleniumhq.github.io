@@ -45,7 +45,7 @@ aliases: [
 {{< /tabpane >}}
 
 
-## 上传
+## 上传 {#uploads}
 
 对于远程WebDriver会话, [上传文件]({{< ref "../elements/file_upload" >}}) 更为复杂, 
 因为要上传的文件可能在执行代码的计算机上, 
