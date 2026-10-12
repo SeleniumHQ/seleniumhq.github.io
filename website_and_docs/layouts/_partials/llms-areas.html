@@ -1,0 +1,147 @@
+{{- /*
+  Curated page list shared by llms.txt (layouts/index.llms.txt) and llms-full.txt
+  (layouts/index.llms-full.txt). Edit the list here and both files follow.
+
+  Returns a slice of dicts: heading, note, and pages (resolved Page objects, in
+  reading order, each page listed once, under the first area that reaches it).
+
+  Section ordering and the prose below are hand-curated; every link is generated
+  from the page tree so titles and URLs cannot drift out of sync with the site.
+
+  Sections are listed one at a time using non-recursive .RegularPages rather than
+  flattening a whole subtree. Flattening mixes pages from sibling subsections and
+  destroys the curated reading order, because weights are only meaningful within
+  a single section.
+
+  Deliberately absent:
+
+  - documentation/legacy/**, which describes Selenium 2 and 3 era workflows
+    (manual driver management, the JSON Wire Protocol, the old Grid). It is
+    correct as history and stays indexed as HTML, but it is the worst possible
+    input for a model about to write Selenium code.
+  - documentation/webdriver/bidi/cdp/**, the Chrome DevTools Protocol pages,
+    which are being phased out in favour of the W3C BiDi implementation.
+  - documentation/ide, the Selenium IDE page. It describes a record-and-playback
+    browser extension, not the WebDriver API that generated code should use.
+
+  "paths" must exist: a missing one is reported with warnf. "optional" paths are
+  pages that are planned or may not be present on every branch yet; they are
+  skipped silently when missing and picked up as soon as they exist.
+
+  Any English documentation page not reachable from the curated list is reported
+  with warnf, so the index cannot silently fall behind new content.
+*/ -}}
+{{- $site := .Site -}}
+{{- $areas := slice
+      (dict "heading" "AI agents and code generation (high priority)"
+            "note" "Read these first if you are a tool generating Selenium code. They list the Selenium 2 and 3 era patterns that models reproduce from old training data, such as DesiredCapabilities, manual driver downloads, fixed sleeps, absolute XPath, and find_element_by_* methods, together with their current replacements."
+            "paths" (slice "/documentation/ai_agents")
+            "optional" (slice "/documentation/ai_agents/outdated_patterns"))
+      (dict "heading" "Getting started"
+            "note" "Install, write, and run a first script in any supported language."
+            "paths" (slice "/documentation"
+                           "/documentation/webdriver"
+                           "/documentation/webdriver/getting_started"))
+      (dict "heading" "Driver sessions and browsers"
+            "note" "Starting sessions, configuring browsers, and running remotely."
+            "paths" (slice "/documentation/webdriver/drivers"
+                           "/documentation/webdriver/browsers"))
+      (dict "heading" "Elements and interactions"
+            "note" "Locating elements, interacting with them, and driving the browser."
+            "paths" (slice "/documentation/webdriver/elements"
+                           "/documentation/webdriver/interactions"
+                           "/documentation/webdriver/actions_api"
+                           "/documentation/webdriver/support_features"))
+      (dict "heading" "Waiting"
+            "note" "Prefer explicit waits over fixed sleeps, and do not mix implicit and explicit waits."
+            "paths" (slice "/documentation/webdriver/waits"))
+      (dict "heading" "WebDriver BiDi"
+            "note" "The W3C bidirectional protocol: events, network interception, console logs, and script injection. This is the current answer to anything that needs bidirectional browser communication. The older Chrome DevTools Protocol integration is legacy and is being removed; it is not listed here."
+            "paths" (slice "/documentation/webdriver/bidi"
+                           "/documentation/webdriver/bidi/w3c"))
+      (dict "heading" "Driver management"
+            "note" "Selenium Manager ships with Selenium 4.6 and later and downloads and configures browser drivers automatically. Third-party driver managers and manual driver paths are not required."
+            "paths" (slice "/documentation/selenium_manager"))
+      (dict "heading" "Grid"
+            "note" "Running tests remotely and at scale."
+            "paths" (slice "/documentation/grid"
+                           "/documentation/grid/configuration"
+                           "/documentation/grid/advanced_features"))
+      (dict "heading" "Test practices"
+            "note" "Encouraged and discouraged patterns, including the causes of flaky tests."
+            "paths" (slice "/documentation/test_practices"
+                           "/documentation/test_practices/encouraged"
+                           "/documentation/test_practices/discouraged"))
+      (dict "heading" "Troubleshooting"
+            "note" "Common errors, upgrade guidance, and logging."
+            "paths" (slice "/documentation/webdriver/troubleshooting"
+                           "/documentation/webdriver/troubleshooting/errors"))
+      (dict "heading" "Release notes"
+            "note" "What changed in each Selenium release, for checking whether an API or behaviour exists in the version in use."
+            "optional" (slice "/documentation/release_notes"))
+      (dict "heading" "Other components"
+            "note" ""
+            "paths" (slice "/documentation/ie_driver_server"))
+      (dict "heading" "About the project"
+            "note" ""
+            "paths" (slice "/documentation/overview"
+                           "/documentation/about"
+                           "/documentation/about/contributing"
+                           "/documentation/warnings"))
+-}}
+{{- /* Documentation pages that are intentionally not part of the index. */ -}}
+{{- $excluded := slice "/documentation/ide/" -}}
+{{- $listed := slice -}}
+{{- $result := slice -}}
+{{- /*
+  A section lists its own direct pages, but a page that is named explicitly in any
+  area is listed there and nowhere else. Without this, "/documentation" would pull
+  Selenium Manager into Getting started instead of Driver management.
+*/ -}}
+{{- $explicit := slice -}}
+{{- range $areas }}
+  {{- range append (.optional | default slice) (.paths | default slice) }}
+    {{- with $site.GetPage . }}{{ $explicit = $explicit | append .RelPermalink }}{{ end }}
+  {{- end }}
+{{- end }}
+{{- range $areas }}
+  {{- $area := . -}}
+  {{- $pages := slice -}}
+  {{- $all := append (.optional | default slice) (.paths | default slice) -}}
+  {{- range $all }}
+    {{- $path := . -}}
+    {{- with $site.GetPage $path }}
+      {{- $candidates := slice . -}}
+      {{- if .IsSection }}
+        {{- range sort .RegularPages "Weight" }}
+          {{- if not (in $explicit .RelPermalink) }}{{ $candidates = $candidates | append . }}{{ end }}
+        {{- end }}
+      {{- end }}
+      {{- range $candidates }}
+        {{- if not (or (in $listed .RelPermalink) (in $excluded .RelPermalink)) }}
+          {{- $listed = $listed | append .RelPermalink -}}
+          {{- $pages = $pages | append . -}}
+        {{- end }}
+      {{- end }}
+    {{- else }}
+      {{- if in ($area.paths | default slice) $path }}
+        {{- warnf "llms.txt: no page at %q — the curated index in layouts/_partials/llms-areas.html is out of date" $path }}
+      {{- end }}
+    {{- end }}
+  {{- end }}
+  {{- if $pages }}
+    {{- $result = $result | append (dict "heading" .heading "note" .note "pages" $pages) -}}
+  {{- end }}
+{{- end }}
+
+{{- /* Drift check: anything under documentation/ that the list does not reach. */ -}}
+{{- range $site.RegularPages }}
+  {{- if eq .Section "documentation" }}
+    {{- if not (or (hasPrefix .RelPermalink "/documentation/legacy/") (hasPrefix .RelPermalink "/documentation/webdriver/bidi/cdp/") (in $excluded .RelPermalink)) }}
+      {{- if not (in $listed .RelPermalink) }}
+        {{- warnf "llms.txt: %q is not reachable from the curated index in layouts/_partials/llms-areas.html" .RelPermalink }}
+      {{- end }}
+    {{- end }}
+  {{- end }}
+{{- end }}
+{{- return $result -}}
