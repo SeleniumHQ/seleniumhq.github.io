@@ -1,0 +1,46 @@
+{{- /*
+  "Used by" strip with the GitHub star count for SeleniumHQ/selenium.
+  Driven by data/used_by.yaml; see the comments there before adding entries.
+
+  The star count is fetched in the browser from the GitHub API. If the request
+  fails (offline, rate limited, scripts blocked) the static fallback from the
+  data file stays in place, so the page never shows an empty number.
+*/ -}}
+{{- $d := .Data.used_by -}}
+{{- with $d -}}
+{{- $repo := .github.repo | default "SeleniumHQ/selenium" -}}
+<div class="row justify-content-center pt-5 pb-4 px-3 td-box--100" id="used-by">
+  <div class="col-lg-10 text-center">
+    <h2 class="selenium">Used by teams everywhere</h2>
+    <p class="mb-4">
+      <a href="https://github.com/{{ $repo }}/stargazers" class="selenium-link" target="_blank" rel="noopener">
+        <i class="fab fa-github pe-1" aria-hidden="true"></i>
+        <span id="selenium-github-stars" data-repo="{{ $repo }}">{{ .github.stars_fallback }}</span>
+        GitHub stars
+      </a>
+    </p>
+    <ul class="list-inline mb-0">
+      {{- range .organisations }}
+      <li class="list-inline-item mx-3 my-2 fw-bold">
+        {{- if .url }}<a href="{{ .url }}" class="selenium-link" target="_blank" rel="noopener">{{ .name }}</a>
+        {{- else }}{{ .name }}{{ end -}}
+      </li>
+      {{- end }}
+    </ul>
+  </div>
+</div>
+<script>
+(function () {
+  var el = document.getElementById('selenium-github-stars');
+  if (!el || typeof fetch !== 'function') { return; }
+  fetch('https://api.github.com/repos/' + el.getAttribute('data-repo'), {headers: {Accept: 'application/vnd.github+json'}})
+    .then(function (r) { return r.ok ? r.json() : null; })
+    .then(function (data) {
+      if (data && typeof data.stargazers_count === 'number') {
+        el.textContent = data.stargazers_count.toLocaleString();
+      }
+    })
+    .catch(function () { /* keep the static fallback */ });
+})();
+</script>
+{{- end -}}
