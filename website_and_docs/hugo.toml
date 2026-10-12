@@ -177,9 +177,14 @@ github_project_repo = "https://github.com/seleniumhq/selenium"
 # or specify a new value if you want to reference another branch in your GitHub links
 github_branch= "trunk"
 
-# Enable Lunr.js offline search
-offlineSearch = false
-offlineSearchMaxResults = 30
+# Enable Lunr.js offline search. The index is built by Hugo at
+# assets/json/offline-search-index.json (Docsy) and fetched lazily by the
+# search box, so there is no external service or account involved.
+# Docsy only supports one search backend at a time, so the Algolia block
+# below stays commented out while this is on.
+offlineSearch = true
+offlineSearchSummaryLength = 200
+offlineSearchMaxResults = 25
 
 
 # Enable Plausible.io
@@ -202,11 +207,13 @@ link_text = "Visit the conference website for more information!"
 start = "2026-09-01"
 end = "2026-10-01"
 
-# Enable Algolia DocSearch
-[params.search.algolia]
-appId = "6IOXA5JK7Z"
-apiKey = "2b44a1d3530f9951dd6502059058984a"
-indexName = "selenium"
+# Algolia DocSearch. Disabled in favour of the offline search above; Docsy
+# warns and renders two search boxes if both are configured. Uncomment this
+# block and set offlineSearch = false to switch back.
+# [params.search.algolia]
+# appId = "6IOXA5JK7Z"
+# apiKey = "2b44a1d3530f9951dd6502059058984a"
+# indexName = "selenium"
 
 # User interface configuration
 [params.ui]
