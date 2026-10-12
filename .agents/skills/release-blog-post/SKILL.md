@@ -107,6 +107,11 @@ In the scaffolded file:
   from step 2.
 - Double-check `date:` and the `images:` path both reflect the new version (step 1 sets
   these, but verify — `images:` should point at `/images/blog/<year>/selenium_4.41.jpg`).
+- Add a matching `## Selenium 4.41` section at the top of the release notes page,
+  `website_and_docs/content/documentation/release_notes.en.md` (newest first): the release
+  date, the announcement/GitHub release/changelog link line copied from the previous
+  section, and 3-6 prose bullets condensed from the Highlights. Add the new section only;
+  leave the older sections as they are.
 
 ## 5. Generate the release image
 
