@@ -1,10 +1,15 @@
 ---
 title: "Selenium IDE"
 linkTitle: "IDE"
-weight: 10
+weight: 9
 description: >
     The Selenium IDE is a standalone application that records and plays back a user's actions.
+aliases: ["/documentation/ide/"]
 ---
+
+{{% pageinfo color="warning" %}}
+Selenium IDE is no longer maintained by the Selenium project. This page is kept for reference.
+{{% /pageinfo %}}
 
 Selenium's Integrated Development Environment ([Selenium IDE](//selenium.dev/selenium-ide))
 is an easy-to-use standalone application that records a user's

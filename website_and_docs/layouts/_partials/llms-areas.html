@@ -21,8 +21,6 @@
     input for a model about to write Selenium code.
   - documentation/webdriver/bidi/cdp/**, the Chrome DevTools Protocol pages,
     which are being phased out in favour of the W3C BiDi implementation.
-  - documentation/ide, the Selenium IDE page. It describes a record-and-playback
-    browser extension, not the WebDriver API that generated code should use.
 
   "paths" must exist: a missing one is reported with warnf. "optional" paths are
   pages that are planned or may not be present on every branch yet; they are
@@ -89,8 +87,10 @@
                            "/documentation/about/contributing"
                            "/documentation/warnings"))
 -}}
-{{- /* Documentation pages that are intentionally not part of the index. */ -}}
-{{- $excluded := slice "/documentation/ide/" -}}
+{{- /* Documentation pages that are intentionally not part of the index. The
+     Selenium IDE page now lives under documentation/legacy, which is excluded
+     by prefix above, so nothing is listed here at present. */ -}}
+{{- $excluded := slice -}}
 {{- $listed := slice -}}
 {{- $result := slice -}}
 {{- /*
