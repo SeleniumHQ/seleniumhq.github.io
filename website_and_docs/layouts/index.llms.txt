@@ -66,8 +66,7 @@
                            "/documentation/webdriver/troubleshooting/errors"))
       (dict "heading" "Other components"
             "note" ""
-            "paths" (slice "/documentation/ide"
-                           "/documentation/ie_driver_server"))
+            "paths" (slice "/documentation/ie_driver_server"))
       (dict "heading" "About the project"
             "note" ""
             "paths" (slice "/documentation/overview"

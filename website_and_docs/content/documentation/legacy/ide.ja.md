@@ -1,10 +1,15 @@
 ---
 title: "Selenium IDE"
 linkTitle: "IDE"
-weight: 10
+weight: 9
 description: >
     Selenium IDEは、ユーザーのアクションを記録および再生するスタンドアロンアプリケーションです。
+aliases: ["/documentation/ide/"]
 ---
+
+{{% pageinfo color="warning" %}}
+Selenium IDE is no longer maintained by the Selenium project. This page is kept for reference.
+{{% /pageinfo %}}
 
 Seleniumの統合開発環境（[Selenium IDE](//selenium.dev/selenium-ide)）は、
 各要素のコンテキストによって定義されたパラメーターを使用して、
