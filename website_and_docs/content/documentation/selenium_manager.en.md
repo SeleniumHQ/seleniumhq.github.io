@@ -26,7 +26,7 @@ Selenium Manager is a CLI (command line interface) tool implemented in Rust to a
 ## Automated driver management
 ***TL;DR:*** *Selenium Manager automatically discovers, downloads, and caches the drivers required by Selenium when these drivers are unavailable.*
 
-The primary feature of Selenium Manager is called *automated driver management*. Let's consider an example to understand it. Suppose we want to driver Chrome with Selenium (see the doc about how to [start a session with Selenium](https://www.selenium.dev/documentation/webdriver/getting_started/first_script/#1-start-the-session)). Before the session begins, and when the driver is unavailable, Selenium Manager manages chromedriver for us. We use the term *management* for this feature (and not just *download*) since this process is broader and implies different steps:
+The primary feature of Selenium Manager is called *automated driver management*. Let's consider an example to understand it. Suppose we want to driver Chrome with Selenium (see the doc about how to [start a session with Selenium](https://www.selenium.dev/documentation/webdriver/getting_started/#your-first-script)). Before the session begins, and when the driver is unavailable, Selenium Manager manages chromedriver for us. We use the term *management* for this feature (and not just *download*) since this process is broader and implies different steps:
 
 1. Browser version discovery. Selenium Manager discovers the browser version (e.g., Chrome, Firefox, Edge) installed in the machine that executes Selenium. This step uses shell commands (e.g., `google-chrome --version`).
 2. Driver version discovery. With the discovered browser version, the proper driver version is resolved. For this step, the online metadata/endpoints maintained by the browser vendors (e.g., [chromedriver](https://chromedriver.chromium.org/downloads), [geckodriver](https://github.com/mozilla/geckodriver/releases), or [msedgedriver](https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/)) are used.
@@ -44,7 +44,7 @@ The browser automatically managed by Selenium Manager are:
 - Firefox. Based on [public Firefox releases](https://ftp.mozilla.org/pub/firefox/releases/), as of Selenium 4.12.0.
 - Edge. Based on [Edge downloads](https://www.microsoft.com/en-us/edge/download), as of Selenium 4.14.0.
 
-Let's consider again the typical example of driving Chrome with Selenium. And this time, suppose Chrome is not installed on the local machine when [starting a new session](https://www.selenium.dev/documentation/webdriver/getting_started/first_script/#1-start-the-session)). In that case, the current stable CfT release will be discovered, downloaded, and cached (in `~/.cache/selenium/chrome`) by Selenium Manager. 
+Let's consider again the typical example of driving Chrome with Selenium. And this time, suppose Chrome is not installed on the local machine when [starting a new session](https://www.selenium.dev/documentation/webdriver/getting_started/#your-first-script)). In that case, the current stable CfT release will be discovered, downloaded, and cached (in `~/.cache/selenium/chrome`) by Selenium Manager. 
 
 But there is more. In addition to the stable browser version, Selenium Manager also allows downloading older browser versions (in the case of CfT, starting in version 113, the first version published as CfT). To set a browser version with Selenium, we use a browser option called [browserVersion](https://www.selenium.dev/documentation/webdriver/drivers/options/#browserversion).
 
