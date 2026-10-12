@@ -1,9 +1,14 @@
 ---
 title: "IE Driver Server"
 linkTitle: "IE Driver Server"
-weight: 8
+weight: 9
 description: >
     The Internet Explorer Driver is a standalone server that implements the WebDriver specification.
+aliases: ["/documentation/ie_driver_server/",
+"/ja/documentation/ie_driver_server/",
+"/pt-br/documentation/ie_driver_server/",
+"/zh-cn/documentation/ie_driver_server/"
+]
 ---
 This documentation previously located [on the wiki](https://github.com/SeleniumHQ/selenium/wiki/InternetExplorerDriver-Internals)
 
