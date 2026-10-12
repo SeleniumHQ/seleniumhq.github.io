@@ -5,7 +5,63 @@
 	{{ .Content }}
 </div>
 
-{{ partial "selenium-clients-and-webdriver-bindings.html" . }}
+<div class="row justify-content-left px-5 pt-5">
+  <div class="card border-0 w-100 bg-transparent">
+    <div class="card-body">
+      <h2 id="install" class="card-title">Install</h2>
+      <p class="card-text w-lg-75">
+        Add the Selenium library for your language with its package manager.
+        You do not need to download drivers:
+        <a href="/documentation/selenium_manager/">Selenium Manager</a>
+        fetches the right browser and driver automatically.
+        New to Selenium? Follow the
+        <a href="/documentation/webdriver/getting_started/">getting started guide</a>.
+      </p>
+      <div class="table-responsive w-lg-75">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Language</th>
+              <th scope="col">Command</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Java</th>
+              <td>
+                <code>org.seleniumhq.selenium:selenium-java:4.51.0</code>
+                (Maven or Gradle dependency)
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">Python</th>
+              <td><code>pip install selenium</code></td>
+            </tr>
+            <tr>
+              <th scope="row">.NET/C#</th>
+              <td><code>dotnet add package Selenium.WebDriver</code></td>
+            </tr>
+            <tr>
+              <th scope="row">Ruby</th>
+              <td><code>gem install selenium-webdriver</code></td>
+            </tr>
+            <tr>
+              <th scope="row">JavaScript</th>
+              <td><code>npm install selenium-webdriver</code></td>
+            </tr>
+            <tr>
+              <th scope="row">Kotlin</th>
+              <td>
+                Uses the Java bindings:
+                <code>org.seleniumhq.selenium:selenium-java:4.51.0</code>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
 
 <div class="row justify-content-center p-5">
   <div class="col-sm-6 py-3 ps-3 pe-0">
@@ -40,6 +96,19 @@
           <a href="https://github.com/SeleniumHQ/docker-selenium/blob/trunk/charts/selenium-grid/README.md">configuration</a>.
         </p>
       </div>
+    </div>
+  </div>
+</div>
+
+{{ partial "selenium-clients-and-webdriver-bindings.html" . }}
+
+<div class="row justify-content-left px-5 pt-5">
+  <div class="card border-0 w-100 bg-transparent">
+    <div class="card-body">
+      <h2 id="other-downloads" class="card-title">Other downloads</h2>
+      <p class="card-text w-lg-75">
+        The Internet Explorer Driver Server and nightly builds.
+      </p>
     </div>
   </div>
 </div>
