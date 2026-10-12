@@ -1,0 +1,28 @@
+{{- /*
+  Lunr index for Docsy's offline search.
+
+  Overrides Docsy's assets/json/offline-search-index.json, which indexes every
+  page of every language into one file. This version indexes only the current
+  language, so searching from an English page returns English pages and each
+  index is a fraction of the size. The target file name is made per-language
+  in layouts/partials/search-input.html, because Hugo caches ExecuteAsTemplate
+  output by target name and all four languages would otherwise share the first
+  index built.
+*/ -}}
+{{- $.Scratch.Add "offline-search-index" slice -}}
+{{- range where .Site.Pages ".Params.exclude_search" "!=" true -}}
+{{- /* We have to apply `htmlUnescape` again after `truncate` because `truncate` applies `html.EscapeString` if the argument is not HTML. */ -}}
+{{- $.Scratch.Add
+    "offline-search-index"
+    (dict
+        "ref" .RelPermalink
+        "title" .Title
+        "categories" (.Params.categories | default "")
+        "tags" (.Params.tags | default "")
+        "description" (.Description | default "")
+        "body" (.Plain | htmlUnescape)
+        "excerpt" ((.Description | default .Plain) | htmlUnescape | truncate (.Site.Params.offlineSearchSummaryLength | default 70) | htmlUnescape)
+    )
+-}}
+{{- end -}}
+{{- $.Scratch.Get "offline-search-index" | jsonify -}}
