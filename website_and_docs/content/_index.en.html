@@ -8,7 +8,8 @@ description = "Selenium automates browsers. Drive Chrome, Firefox, Edge and Safa
 <div class="mx-auto text-center p-4">
 	<h1 class="d-1 fw-bold">Automate any browser, from any language.</h1>
 	<p class="lead mt-3 mb-0">
-		Selenium drives Chrome, Firefox, Edge and Safari through the W3C WebDriver standard,
+		Selenium drives Chrome, Firefox, Edge and Safari through the
+		<a class="text-white text-decoration-underline" href="https://w3c.github.io/webdriver-bidi/">W3C WebDriver standard</a>,
 		with official bindings for Java, Python, C#, Ruby, JavaScript and Kotlin.
 	</p>
 	<div class="selenium-hero-actions mt-4">
@@ -24,9 +25,8 @@ description = "Selenium automates browsers. Drive Chrome, Firefox, Edge and Safa
 		</a>
 	</div>
 	<p class="mt-4 mb-0">
-		No driver downloads:
-		<a class="text-white text-decoration-underline" href="/documentation/selenium_manager/">Selenium Manager</a>
-		fetches the right browser and driver for you.
+		Works out of the box: Selenium downloads what it needs to talk to your browser, so there is
+		nothing to install by hand.
 	</p>
 </div>
 {{< /blocks/section >}}
@@ -40,9 +40,7 @@ description = "Selenium automates browsers. Drive Chrome, Firefox, Edge and Safa
 	</p>
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-<p>Add the dependency to your <code>pom.xml</code>:</p>
-{{< gh-codeblock path="/examples/java/pom.xml#L34-L38" >}}
-<p>Then run:</p>
+<p>Add <code>org.seleniumhq.selenium:selenium-java</code> to your build, then run:</p>
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/hello/HelloSelenium.java" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
@@ -70,9 +68,7 @@ description = "Selenium automates browsers. Drive Chrome, Firefox, Edge and Safa
 {{< gh-codeblock path="/examples/javascript/test/hello/helloSelenium.js" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
-<p>Kotlin uses the Java bindings. Add the dependency to your <code>pom.xml</code>:</p>
-{{< gh-codeblock path="/examples/java/pom.xml#L34-L38" >}}
-<p>Then run:</p>
+<p>Kotlin uses the Java bindings. Add <code>org.seleniumhq.selenium:selenium-java</code> to your build, then run:</p>
 {{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/hello/HelloSelenium.kt" >}}
 {{< /tab >}}
 {{< /tabpane >}}
