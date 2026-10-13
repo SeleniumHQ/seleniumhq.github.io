@@ -63,7 +63,7 @@ Internet Explorer, Chrome, and all other supported browsers.
 
 Selenium supports automation of all the major browsers in the market
 through the use of _WebDriver_.
-WebDriver is an API and protocol that defines a language-neutral interface
+[W3C WebDriver](https://w3c.github.io/webdriver-bidi/) is an API and protocol that defines a language-neutral interface
 for controlling the behaviour of web browsers.
 Each browser is backed by a specific WebDriver implementation, called a *driver*.
 The driver is the component responsible for delegating down to the browser,
