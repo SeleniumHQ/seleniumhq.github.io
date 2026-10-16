@@ -48,7 +48,7 @@ aliases: [
 
 | 软件 | 版本 | 许可 |
 | -------- | ------- | ------- |
-| [Hugo](//gohugo.io/) | v0.167.0 | [Apache 2.0](//gohugo.io/about/license/) |
+| [Hugo](//gohugo.io/) | v0.168.0 | [Apache 2.0](//gohugo.io/about/license/) |
 | [Docsy](//github.com/docsy/docsy/) | --- | [Apache 2.0](//github.com/docsy/docsy/blob/main/LICENSE) |
 
 ## 许可
