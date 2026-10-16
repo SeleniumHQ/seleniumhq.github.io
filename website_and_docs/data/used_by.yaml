@@ -1,0 +1,48 @@
+# "Used by" strip on the homepage (layouts/partials/used-by.html).
+#
+# Each entry must point at a PUBLIC source that shows the organisation uses
+# Selenium (an engineering blog post, a conference talk, a public repository,
+# a case study on the organisation's own site). Do not add an entry based on
+# hearsay or a private conversation.
+#
+# Logos are deliberately not supported yet. Before a logo is added for an
+# entry, the project needs written permission from the organisation to use its
+# mark, and that permission should be recorded in the pull request that adds
+# the logo. Until then the strip renders names as text only.
+#
+# Fields:
+#   name:   display name. "[ORGANISATION]" is a placeholder and renders as such.
+#   url:    the organisation's own site.
+#   source: public evidence of Selenium use, as described above.
+
+github:
+  repo: SeleniumHQ/selenium
+  # Shown when the browser cannot reach the GitHub API (offline, rate limited,
+  # script blocked). Round it down and update it occasionally.
+  stars_fallback: "32,000+"
+
+organisations:
+  - name: "[ORGANISATION]"
+    url: ""
+    source: ""
+  - name: "[ORGANISATION]"
+    url: ""
+    source: ""
+  - name: "[ORGANISATION]"
+    url: ""
+    source: ""
+  - name: "[ORGANISATION]"
+    url: ""
+    source: ""
+  - name: "[ORGANISATION]"
+    url: ""
+    source: ""
+  - name: "[ORGANISATION]"
+    url: ""
+    source: ""
+  - name: "[ORGANISATION]"
+    url: ""
+    source: ""
+  - name: "[ORGANISATION]"
+    url: ""
+    source: ""
