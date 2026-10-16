@@ -1,0 +1,32 @@
+{{/*
+  Site-wide selector for the language of code examples.
+
+  Picking a language switches every tabpane on the page and stores the choice
+  in the same localStorage keys Docsy's tabpane-persist plugin reads, so it
+  carries over to every other page. A `?lang=<key>` query parameter sets it
+  too, so links can carry the choice. The keys match the lowercased tab
+  headers used throughout the docs (see assets/js/code-lang.js).
+
+  Rendered from partials/navbar.html on documentation pages and on any page
+  that uses the tabpane shortcode.
+*/ -}}
+{{ $langs := slice
+      (dict "key" "java" "label" "Java")
+      (dict "key" "python" "label" "Python")
+      (dict "key" "csharp" "label" "C#")
+      (dict "key" "ruby" "label" "Ruby")
+      (dict "key" "javascript" "label" "JavaScript")
+      (dict "key" "kotlin" "label" "Kotlin") -}}
+<li class="nav-item dropdown td-code-lang">
+  <a class="nav-link dropdown-toggle" href="#" id="td-code-lang-toggle" role="button"
+     data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+     title="Language of the code examples">
+    <i class="fa fa-code fa-fw" aria-hidden="true"></i>
+    <span class="td-code-lang__label">{{ (index $langs 0).label }}</span>
+  </a>
+  <div class="dropdown-menu" aria-labelledby="td-code-lang-toggle">
+    {{ range $langs -}}
+    <button type="button" class="dropdown-item" data-code-lang="{{ .key }}">{{ .label }}</button>
+    {{ end -}}
+  </div>
+</li>
