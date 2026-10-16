@@ -1,22 +1,26 @@
-{{ $color := "selenium-blue" }}
-{{ $p1 := .p1 }}
+{{- /*
+  Announcement banner shown below the navbar.
 
+  Everything is driven by [params.announcement] in hugo.toml (text, url,
+  link_text, start, end). The caller is expected to have checked
+  partial "announcement-active.html" first; this partial renders nothing
+  outside the configured date window.
+*/ -}}
+{{- if partial "announcement-active.html" . -}}
+{{- $a := .Site.Params.announcement -}}
+{{- $color := "selenium-blue" -}}
 <section id="announcement-banner" class="alert-static g-0 row d-print-none -bg-{{ $color }}">
   <div class="container g-0" style="padding: 10px;">
     <div class="row g-0 justify-content-center">
         <div class="alert alert-{{ $color }} col-12 fade show mb-0 p-0 -bg-{{ $color }}" role="alert">
-          <!--Use this section to add announcement to the website. Ensure to switch flag off and on
-              depending on whether announcement is to be shown. TOML file-->
              <h4 class="alert-heading text-center m-2">
-                <!--Sample Announcement -Tune in for the Selenium Community Live scheduled for July 30th, 2025. -->
-                <!--Add link -<a href="https://www.linkedin.com/events/seleniumcommunitylive-episode87345785775592042497/theater/"
-                    target='_blank' aria-pressed="true">Join us!</a> -->
-                 Thank you for joining the Selenium and Appium 2026 Conference. 
-                 <a href="https://seleniumconf.com/"
-                    target='_blank' aria-pressed="true"> Visit Conference Website for more information!</a>
+                 {{ $a.text }}
+                 {{- with $a.url }}
+                 <a href="{{ . }}" target="_blank" rel="noopener" aria-pressed="true">{{ $a.link_text | default "Learn more" }}</a>
+                 {{- end }}
             </h4>
         </div>
     </div>
   </div>
 </section>
-
+{{- end -}}
