@@ -20,7 +20,7 @@ Embora existam binários para as versões de 32 e 64 bits, existem algumas
 com o driver de 64 bits. Desta forma, recomenda-se a utilização do driver de 32 bits.
 
 Informação adicional sobre como usar o Internet Explorer pode ser encontrada na
-[página IE Driver Server]({{< ref "/documentation/ie_driver_server/" >}})
+[página IE Driver Server]({{< ref "/documentation/legacy/ie_driver_server/" >}})
 
 ## Opções
 

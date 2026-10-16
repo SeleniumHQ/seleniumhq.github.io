@@ -21,7 +21,7 @@ IE 驱动程序是 Selenium 项目直接维护的唯一驱动程序.
 因此, 建议使用 32 位驱动程序.
 
 有关使用 Internet Explorer 的其他信息, 请参见
-[IE 驱动程序服务器页面]({{< ref "/documentation/ie_driver_server/" >}})
+[IE 驱动程序服务器页面]({{< ref "/documentation/legacy/ie_driver_server/" >}})
 
 ## 选项
 
