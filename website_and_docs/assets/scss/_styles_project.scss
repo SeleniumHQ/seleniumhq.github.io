@@ -23,3 +23,19 @@
 @import "tabs";
 
 .td-page-meta--project-issue { display: none !important; }
+
+// "Edit this page" and issue links, rendered under the docs content by
+// layouts/partials/page-meta-links.html instead of in the TOC column.
+.td-page-meta--footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--bs-border-color);
+  font-size: 0.9rem;
+
+  a {
+    white-space: nowrap;
+  }
+}
