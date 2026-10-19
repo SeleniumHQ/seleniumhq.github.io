@@ -61,7 +61,7 @@ Browser name is set by default when using an Options class instance.
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L73-74" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L74-75" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
 {{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L79-80" >}}
@@ -88,7 +88,7 @@ it will be automatically downloaded by [Selenium Manager]({{< ref "../../seleniu
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L80-82" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L81-83" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
 {{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L86-88" >}}
@@ -144,7 +144,7 @@ event fire is returned.
 {{< tabpane langEqualsHeader=true >}}
 {{< badge-examples >}}
 {{< tab header="Java" text=true >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L21-L23">}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L22-L24">}}
 {{< /tab >}}
 {{< tab header="Python" text=true >}}
 {{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L7-9">}}
@@ -185,7 +185,7 @@ event fire is returned.
 {{< tabpane langEqualsHeader=true >}}
 {{< badge-examples >}}
 {{< tab header="Java" text=true >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L34-L36">}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L35-L37">}}
 {{< /tab >}}
 {{< tab header="Python" text=true >}}
 {{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L15-L17">}}
@@ -225,7 +225,7 @@ WebDriver only waits until the initial page is downloaded.
 {{< tabpane langEqualsHeader=true >}}
 {{< badge-examples >}}
 {{< tab header="Java" text=true >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L47-L49">}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L48-L50">}}
 {{< /tab >}}
 {{< tab header="Python" text=true >}}
 {{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L23-L25">}}
@@ -269,7 +269,7 @@ setting `platformName` sets the OS at the remote-end.
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L88-L90">}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L89-L91">}}
 {{< /tab >}}
 {{% tab header="Python" %}}
 {{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L94-96">}}
@@ -307,7 +307,7 @@ effect for the entire session.
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L60-L61">}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L61-L62">}}
 {{< /tab >}}
 {{% tab header="Python" %}}
 {{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L101-103">}}
@@ -342,7 +342,7 @@ is imposed when a new session is created by WebDriver.
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L96-L98">}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L97-L99">}}
 {{< /tab >}}
 {{% tab header="Python" %}}
 {{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L30-32">}}
@@ -371,7 +371,7 @@ _TimeoutException_.
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L111-L113">}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L112-L114">}}
 {{< /tab >}}
 {{% tab header="Python" %}}
 {{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L37-39">}}
@@ -398,7 +398,7 @@ is imposed when a new session is created by WebDriver.
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L126-L128">}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L127-L129">}}
 {{< /tab >}}
 {{% tab header="Python" %}}
 {{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L44-46">}}
@@ -436,7 +436,7 @@ user prompt encounters at the remote-end. This is defined by
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L141-L142">}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L142-L143">}}
 {{< /tab >}}
 {{% tab header="Python" %}}
 {{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L51-53">}}
@@ -464,7 +464,7 @@ Indicates whether the remote end supports all of the [resizing and repositioning
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L151-L152">}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L152-L153">}}
 {{< /tab >}}
 {{% tab header="Python" %}}
 {{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L58-60">}}
@@ -492,7 +492,7 @@ when using _Element Send Keys_ with hidden file upload controls.
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L163-L164">}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/drivers/OptionsTest.java#L164-L165">}}
 {{< /tab >}}
 {{% tab header="Python" %}}
 {{< gh-codeblock path="/examples/python/tests/drivers/test_options.py#L65-67">}}
