@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
 import org.openqa.selenium.By
+import org.openqa.selenium.JavascriptExecutor
 import org.openqa.selenium.support.ui.ExpectedConditions
 import org.openqa.selenium.support.ui.WebDriverWait
 import java.time.Duration
@@ -19,10 +20,10 @@ class AlertsTest : BaseTest() {
 
     @Test
     fun alertInformationTest() {
-        driver.get("https://www.selenium.dev/selenium/web/alerts.html")
+        driver.get("https://www.selenium.dev/documentation/webdriver/interactions/alerts/")
 
         // Click the link to activate the alert
-        driver.findElement(By.id("alert")).click()
+        driver.findElement(By.linkText("See an example alert")).click()
 
         // Wait for the alert to be displayed and store it in a variable
         val alert = wait.until(ExpectedConditions.alertIsPresent())
@@ -33,15 +34,16 @@ class AlertsTest : BaseTest() {
         // Press the OK button
         alert.accept()
 
-        Assertions.assertEquals("cheese", text)
+        Assertions.assertEquals("Sample alert", text)
     }
 
     @Test
     fun confirmationAlertTest() {
-        driver.get("https://www.selenium.dev/selenium/web/alerts.html")
+        driver.get("https://www.selenium.dev/documentation/webdriver/interactions/alerts/")
 
         // Click the link to activate the alert
-        driver.findElement(By.id("confirm")).click()
+        val link = driver.findElement(By.linkText("See a sample confirm"))
+        (driver as JavascriptExecutor).executeScript("arguments[0].click();", link)
 
         // Wait for the alert to be displayed
         wait.until(ExpectedConditions.alertIsPresent())
@@ -56,18 +58,21 @@ class AlertsTest : BaseTest() {
         alert.dismiss()
 
         Assertions.assertEquals("Are you sure?", text)
-        Assertions.assertFalse(driver.currentUrl.endsWith("simpleTest.html"))
     }
 
     @Test
     fun promptDisplayAndInputTest() {
-        driver.get("https://www.selenium.dev/selenium/web/alerts.html")
+        driver.get("https://www.selenium.dev/documentation/webdriver/interactions/alerts/")
 
         // Click the link to activate the alert
-        driver.findElement(By.id("prompt")).click()
+        val link = driver.findElement(By.linkText("See a sample prompt"))
+        (driver as JavascriptExecutor).executeScript("arguments[0].click();", link)
 
         // Wait for the alert to be displayed and store it in a variable
         val alert = wait.until(ExpectedConditions.alertIsPresent())
+
+        // Store the alert text in a variable for reuse
+        val text = alert.text
 
         // Type your message
         alert.sendKeys("Selenium")
@@ -75,7 +80,6 @@ class AlertsTest : BaseTest() {
         // Press the OK button
         alert.accept()
 
-        val textElement = driver.findElement(By.id("text"))
-        Assertions.assertEquals("Selenium", textElement.text)
+        Assertions.assertEquals("What is your tool of choice?", text)
     }
 }

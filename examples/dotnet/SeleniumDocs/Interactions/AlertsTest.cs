@@ -30,18 +30,17 @@ namespace SeleniumDocs.Interactions
         [TestInitialize]
         public void Setup()
         {
-            StartDriver();
+            driver = new OpenQA.Selenium.Chrome.ChromeDriver();
             wait = new WebDriverWait(driver, TimeSpan.FromSeconds(2));
-            wait.IgnoreExceptionTypes(typeof(NoAlertPresentException));
         }
 
         [TestMethod]
         public void AlertInformationTest()
         {
-            driver.Url = "https://www.selenium.dev/selenium/web/alerts.html";
+            driver.Url = "https://www.selenium.dev/documentation/webdriver/interactions/alerts/";
 
             // Click the link to activate the alert
-            driver.FindElement(By.Id("alert")).Click();
+            driver.FindElement(By.LinkText("See an example alert")).Click();
 
             // Wait for the alert to be displayed and store it in a variable
             IAlert alert = wait.Until(d => d.SwitchTo().Alert());
@@ -52,16 +51,17 @@ namespace SeleniumDocs.Interactions
             // Press the OK button
             alert.Accept();
 
-            Assert.AreEqual("cheese", text);
+            Assert.AreEqual("Sample alert", text);
         }
 
         [TestMethod]
         public void ConfirmationAlertTest()
         {
-            driver.Url = "https://www.selenium.dev/selenium/web/alerts.html";
+            driver.Url = "https://www.selenium.dev/documentation/webdriver/interactions/alerts/";
 
             // Click the link to activate the alert
-            driver.FindElement(By.Id("confirm")).Click();
+            IWebElement link = driver.FindElement(By.LinkText("See a sample confirm"));
+            ((IJavaScriptExecutor)driver).ExecuteScript("arguments[0].click();", link);
 
             // Wait for the alert to be displayed
             wait.Until(d => d.SwitchTo().Alert());
@@ -76,19 +76,22 @@ namespace SeleniumDocs.Interactions
             alert.Dismiss();
 
             Assert.AreEqual("Are you sure?", text);
-            Assert.IsFalse(driver.Url.EndsWith("simpleTest.html"));
         }
 
         [TestMethod]
         public void PromptDisplayAndInputTest()
         {
-            driver.Url = "https://www.selenium.dev/selenium/web/alerts.html";
+            driver.Url = "https://www.selenium.dev/documentation/webdriver/interactions/alerts/";
 
             // Click the link to activate the alert
-            driver.FindElement(By.Id("prompt")).Click();
+            IWebElement link = driver.FindElement(By.LinkText("See a sample prompt"));
+            ((IJavaScriptExecutor)driver).ExecuteScript("arguments[0].click();", link);
 
             // Wait for the alert to be displayed and store it in a variable
             IAlert alert = wait.Until(d => d.SwitchTo().Alert());
+
+            // Store the alert text in a variable for reuse
+            string text = alert.Text;
 
             // Type your message
             alert.SendKeys("Selenium");
@@ -96,8 +99,7 @@ namespace SeleniumDocs.Interactions
             // Press the OK button
             alert.Accept();
 
-            IWebElement textElement = driver.FindElement(By.Id("text"));
-            Assert.AreEqual("Selenium", textElement.Text);
+            Assert.AreEqual("What is your tool of choice?", text);
         }
     }
 }

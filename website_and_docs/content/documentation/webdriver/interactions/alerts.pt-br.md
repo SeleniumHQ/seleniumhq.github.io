@@ -32,7 +32,7 @@ alertas.
 {{< /tab >}}
 
 {{< tab header="CSharp" text=true >}}
-{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Interactions/AlertsTest.cs#L43-L53" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Interactions/AlertsTest.cs#L42-L52" >}}
 {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
 {{< gh-codeblock path="/examples/ruby/spec/interactions/alerts_spec.rb#L15-L22" >}}
@@ -41,7 +41,7 @@ alertas.
 {{< gh-codeblock path="/examples/javascript/test/interactions/alert.spec.js#L19-L21" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" text=true >}}
-{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/interactions/AlertsTest.kt#L24-L34" >}}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/interactions/AlertsTest.kt#L25-L35" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -63,7 +63,7 @@ Este exemplo também mostra uma abordagem diferente para armazenar um alerta:
 {{< /tab >}}
 
 {{< tab header="CSharp" text=true >}}
-{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Interactions/AlertsTest.cs#L63-L76" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Interactions/AlertsTest.cs#L62-L76" >}}
 {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
 {{< gh-codeblock path="/examples/ruby/spec/interactions/alerts_spec.rb#L28-L35" >}}
@@ -72,7 +72,7 @@ Este exemplo também mostra uma abordagem diferente para armazenar um alerta:
 {{< gh-codeblock path="/examples/javascript/test/interactions/alert.spec.js#L30-L32" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" text=true >}}
-{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/interactions/AlertsTest.kt#L43-L56" >}}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/interactions/AlertsTest.kt#L44-L58" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -96,7 +96,7 @@ Veja um exemplo de prompt </a>.
 {{< /tab >}}
 
 {{< tab header="CSharp" text=true >}}
-{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Interactions/AlertsTest.cs#L87-L97" >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Interactions/AlertsTest.cs#L86-L100" >}}
 {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
 {{< gh-codeblock path="/examples/ruby/spec/interactions/alerts_spec.rb#L41-L48" >}}
@@ -105,7 +105,7 @@ Veja um exemplo de prompt </a>.
 {{< gh-codeblock path="/examples/javascript/test/interactions/alert.spec.js#L42-L45" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" text=true >}}
-{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/interactions/AlertsTest.kt#L66-L76" >}}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/interactions/AlertsTest.kt#L67-L81" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
