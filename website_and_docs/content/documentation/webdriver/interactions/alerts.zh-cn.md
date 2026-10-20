@@ -25,38 +25,18 @@ WebDriver可以从弹窗获取文本并接受或关闭这些警告.
 {{< gh-codeblock path="/examples/python/tests/interactions/test_alerts.py#L13-L19" >}}
 {{< /tab >}}
 
-  {{< tab header="CSharp" >}}
-//Click the link to activate the alert
-driver.FindElement(By.LinkText("See an example alert")).Click();
-
-//Wait for the alert to be displayed and store it in a variable
-IAlert alert = wait.Until(ExpectedConditions.AlertIsPresent());
-
-//Store the alert text in a variable
-string text = alert.Text;
-
-//Press the OK button
-alert.Accept();
-  {{< /tab >}}
+{{< tab header="CSharp" text=true >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Interactions/AlertsTest.cs#L42-L52" >}}
+{{< /tab >}}
 {{< tab header="Ruby" text=true >}}
 {{< gh-codeblock path="/examples/ruby/spec/interactions/alerts_spec.rb#L15-L22" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" text=true >}}
 {{< gh-codeblock path="/examples/javascript/test/interactions/alert.spec.js#L19-L21" >}}
 {{< /tab >}}
-  {{< tab header="Kotlin" >}}
-//Click the link to activate the alert
-driver.findElement(By.linkText("See an example alert")).click()
-
-//Wait for the alert to be displayed and store it in a variable
-val alert = wait.until(ExpectedConditions.alertIsPresent())
-
-//Store the alert text in a variable
-val text = alert.getText()
-
-//Press the OK button
-alert.accept()
-  {{< /tab >}}
+{{< tab header="Kotlin" text=true >}}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/interactions/AlertsTest.kt#L25-L35" >}}
+{{< /tab >}}
 {{< /tabpane >}}
 
 ## Confirm 确认框
@@ -74,44 +54,18 @@ alert.accept()
 {{< gh-codeblock path="/examples/python/tests/interactions/test_alerts.py#L27-L33" >}}
 {{< /tab >}}
 
-  {{< tab header="CSharp" >}}
-//Click the link to activate the alert
-driver.FindElement(By.LinkText("See a sample confirm")).Click();
-
-//Wait for the alert to be displayed
-wait.Until(ExpectedConditions.AlertIsPresent());
-
-//Store the alert in a variable
-IAlert alert = driver.SwitchTo().Alert();
-
-//Store the alert in a variable for reuse
-string text = alert.Text;
-
-//Press the Cancel button
-alert.Dismiss();
-  {{< /tab >}}
+{{< tab header="CSharp" text=true >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Interactions/AlertsTest.cs#L62-L76" >}}
+{{< /tab >}}
 {{< tab header="Ruby" text=true >}}
 {{< gh-codeblock path="/examples/ruby/spec/interactions/alerts_spec.rb#L28-L35" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" text=true >}}
 {{< gh-codeblock path="/examples/javascript/test/interactions/alert.spec.js#L30-L32" >}}
 {{< /tab >}}
-  {{< tab header="Kotlin" >}}
-//Click the link to activate the alert
-driver.findElement(By.linkText("See a sample confirm")).click()
-
-//Wait for the alert to be displayed
-wait.until(ExpectedConditions.alertIsPresent())
-
-//Store the alert in a variable
-val alert = driver.switchTo().alert()
-
-//Store the alert in a variable for reuse
-val text = alert.text
-
-//Press the Cancel button
-alert.dismiss()
-  {{< /tab >}}
+{{< tab header="Kotlin" text=true >}}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/interactions/AlertsTest.kt#L44-L58" >}}
+{{< /tab >}}
 {{< /tabpane >}}
 
 ## Prompt 提示框
@@ -130,38 +84,18 @@ alert.dismiss()
 {{< gh-codeblock path="/examples/python/tests/interactions/test_alerts.py#L41-L48" >}}
 {{< /tab >}}
 
-  {{< tab header="CSharp" >}}
-//Click the link to activate the alert
-driver.FindElement(By.LinkText("See a sample prompt")).Click();
-
-//Wait for the alert to be displayed and store it in a variable
-IAlert alert = wait.Until(ExpectedConditions.AlertIsPresent());
-
-//Type your message
-alert.SendKeys("Selenium");
-
-//Press the OK button
-alert.Accept();
-  {{< /tab >}}
+{{< tab header="CSharp" text=true >}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Interactions/AlertsTest.cs#L86-L100" >}}
+{{< /tab >}}
 {{< tab header="Ruby" text=true >}}
 {{< gh-codeblock path="/examples/ruby/spec/interactions/alerts_spec.rb#L41-L48" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" text=true >}}
 {{< gh-codeblock path="/examples/javascript/test/interactions/alert.spec.js#L42-L45" >}}
 {{< /tab >}}
-  {{< tab header="Kotlin" >}}
-//Click the link to activate the alert
-driver.findElement(By.linkText("See a sample prompt")).click()
-
-//Wait for the alert to be displayed and store it in a variable
-val alert = wait.until(ExpectedConditions.alertIsPresent())
-
-//Type your message
-alert.sendKeys("Selenium")
-
-//Press the OK button
-alert.accept()
-  {{< /tab >}}
+{{< tab header="Kotlin" text=true >}}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/interactions/AlertsTest.kt#L67-L81" >}}
+{{< /tab >}}
 {{< /tabpane >}}
 
 ## beforeunload
