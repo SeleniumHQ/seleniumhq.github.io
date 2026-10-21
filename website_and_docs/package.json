@@ -10,7 +10,7 @@
   "license": "Apache-2.0",
   "dependencies": {},
   "devDependencies": {
-    "sass-embedded": "1.105.2"
+    "sass-embedded": "1.106.0"
   },
   "workspaces": [
     "packages/hugoautogen"
