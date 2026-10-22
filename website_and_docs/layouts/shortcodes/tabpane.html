@@ -54,6 +54,10 @@
 {{ $duplicate := false -}}
 {{ $duplicateKey := "" -}}
 {{ $persistKeyList := slice -}}
+{{/* Selenium: persistence key of each tab, by index, so the pane below can
+     carry it as data-code-lang for the site-wide code language selector
+     (assets/js/code-lang.js and the matching rules in assets/scss/_tabs.scss). */ -}}
+{{ $paneKeys := dict -}}
 {{ $tabPaneOrdinal := .Ordinal -}}
 {{/* Selenium override of Docsy's tabpane: IDs include the page so they stay
      unique on print pages, which join many pages into one document. */ -}}
@@ -97,6 +101,7 @@
         {{ $persistTab = false -}}
       {{ else -}}
         {{ $persistKeyList = $persistKeyList | append $persistKey -}}
+        {{ $paneKeys = merge $paneKeys (dict (string $index) $persistKey) -}}
       {{ end -}}
     {{ end -}}
 
@@ -167,7 +172,8 @@
         {{- if $isActive -}}
           {{ $activeSet = true }} show active
         {{- end }}"
-        id="{{ $entryid }}" role="tabpanel" aria-labelled-by="{{ $tabid }}" tabindex="{{ $tabPaneOrdinal }}">
+        id="{{ $entryid }}" role="tabpanel" aria-labelled-by="{{ $tabid }}" tabindex="{{ $tabPaneOrdinal }}"
+        {{- with index $paneKeys (string $index) }} data-code-lang="{{ . }}"{{ end }}>
         {{ if $text -}}
           {{ index . "content" -}}
         {{ else -}}
