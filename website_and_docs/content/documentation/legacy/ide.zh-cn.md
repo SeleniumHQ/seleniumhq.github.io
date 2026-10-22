@@ -1,10 +1,15 @@
 ---
 title: "Selenium IDE"
 linkTitle: "IDE"
-weight: 10
+weight: 9
 description: >
     Selenium IDE是一个记录和回放用户操作的独立应用程序.
+aliases: ["/documentation/ide/"]
 ---
+
+{{% pageinfo color="warning" %}}
+Selenium IDE is no longer maintained by the Selenium project. This page is kept for reference.
+{{% /pageinfo %}}
 
 Selenium的集成开发环境 ([Selenium IDE](//selenium.dev/selenium-ide))
 是一个易于使用的独立应用程序, 
