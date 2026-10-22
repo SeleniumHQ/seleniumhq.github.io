@@ -92,6 +92,33 @@
   background-color: $white !important;
 }
 
+// Solid variant used for the primary call to action on the green homepage hero.
+.selenium-button.selenium-green-on-white {
+  color: $primary !important;
+  background-color: $white !important;
+  border-color: $white !important;
+  border-width: 3px !important;
+  transition: 0.3s !important;
+}
+
+.selenium-button.selenium-green-on-white:hover {
+  color: $white !important;
+  background-color: transparent !important;
+}
+
+// Homepage hero: primary and secondary buttons side by side, wrapping on
+// narrow screens.
+.selenium-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.selenium-hero-actions a {
+  text-decoration: none;
+}
+
 button[aria-expanded=true] .show-collapsed {
   display: none;
 }
