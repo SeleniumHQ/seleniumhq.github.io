@@ -1,0 +1,43 @@
+{{- /*
+  llms-full.txt — the pages listed in llms.txt, concatenated as plain text in the
+  same order, for tools that prefer one file to many fetches.
+
+  The page list comes from _partials/llms-areas.html.
+
+  Bodies use .RawContent (the page's Markdown, front matter excluded), cleaned up
+  below, rather than .Plain. .Plain is the rendered page with the tags stripped,
+  which drops code fences, glues every tab header and tab body into one run of
+  text, and includes the output of gh-codeblock (a fetch placeholder when no
+  GitHub token is set at build time). .RawContent keeps headings, lists, links and
+  fenced code as the author wrote them; only the Hugo shortcodes need rewriting:
+
+  - gh-codeblock becomes a link to the example file and line range on GitHub.
+  - tab shortcodes become a bold language label.
+  - ref/relref links with an absolute path become absolute selenium.dev URLs;
+    page-relative ones cannot be resolved by a regex, so only their text is kept.
+  - every other shortcode tag is removed, keeping the text between the tags.
+*/ -}}
+{{ partial "llms-intro.txt" . }}
+{{ range partial "llms-areas.html" . }}
+{{ $heading := .heading }}
+{{ range .pages }}
+---
+
+# {{ .Title }}
+
+Area: {{ $heading }}
+URL: {{ .Permalink }}
+{{ with .Description }}
+{{ . | chomp | replaceRE `\s+` " " }}
+{{ end }}
+{{- $body := .RawContent -}}
+{{- $body = replaceRE `\{\{[<%]\s*gh-codeblock\s+path="([^"#]+)#([^"\s]+?)"\s*/?[>%]\}\}` "Example (lines ${2}): https://github.com/SeleniumHQ/seleniumhq.github.io/blob/trunk${1}" $body -}}
+{{- $body = replaceRE `\{\{[<%]\s*gh-codeblock\s+path="([^"#]+)"\s*/?[>%]\}\}` "Example: https://github.com/SeleniumHQ/seleniumhq.github.io/blob/trunk${1}" $body -}}
+{{- $body = replaceRE `\{\{[<%]\s*tab\s+header="([^"]+)"[^>%]*[>%]\}\}` "**${1}**" $body -}}
+{{- $body = replaceRE `\(\{\{[<%]\s*(?:rel)?ref\s+"(/[^"#]*?)(?:\.md)?/?(#[^"]*)?"\s*[>%]\}\}\)` "(https://www.selenium.dev${1}/${2})" $body -}}
+{{- $body = replaceRE `\[([^\]]*)\]\(\{\{[<%]\s*(?:rel)?ref\s+"[^/"][^"]*"\s*[>%]\}\}\)` "${1}" $body -}}
+{{- $body = replaceRE `\{\{[<%][^}]*?[>%]\}\}` "" $body -}}
+{{- $body = replaceRE `\n[ \t]*(\n[ \t]*)+` "\n\n" $body }}
+{{ $body | chomp }}
+{{ end }}
+{{ end }}
