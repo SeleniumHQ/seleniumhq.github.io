@@ -11,29 +11,24 @@ description: >
   Why Keeping Selenium Updated Matters
 ---
 
-Teams often encounter a familiar pattern: a test error that appears too frequently to ignore yet too inconsistently to diagnose. It slows releases, undermines confidence, and gets labeled as flaky because nothing in the application or test logic seems wrong.
-In many cases, the underlying issue is not the test at all.
-It is the Selenium client version.
-
-
-Links to all assets can be found on our [downloads page][downloads].
-
+When investigating flaky tests, teams often focus first on the test code. However, the problem is not always the script being executed. The source of instability can lie elsewhere in the test environment, including browsers, drivers, Selenium binaries, or other supporting artifacts. Keeping these components current and compatible is an important first step in diagnosing unexpected failures.
 
 ---
 
 ## The Drift Between Browsers and Automation Frameworks
 
-Modern browsers ship updates at a rapid pace. Chrome, Firefox, and Safari evolve monthly, sometimes weekly, and those changes directly affect how WebDriver commands behave. The Selenium project releases updates frequently to keep pace with these browser changes, fix regressions, and improve stability.
-Despite this, many teams install the Selenium client once during initial setup and never revisit it. A framework that worked well months ago gradually becomes misaligned with the browsers it drives today.
+Modern browsers ship updates at a rapid pace. Chrome, Firefox, Safari, and Edge evolve continuously, and those changes directly influence browser automation behavior. The Selenium project releases updates frequently to maintain compatibility, fix regressions, and improve stability.
+
+While Selenium 4 and Selenium Manager have made browser and driver management easier than ever, keeping the Selenium client library itself up to date remains just as important. Many teams install Selenium once during framework setup and rarely revisit it, allowing their automation stack to gradually fall out of sync with the browsers it drives.
 
 
 ---
 
 ## Upgrading Often Resolves the Issue
 
-In many real situations, upgrading Selenium resolves instability almost immediately. No test logic changes. No new framework. Only a version update.
-Teams that move from older releases, such as Selenium 4.14, to current ones, such as Selenium 4.47, gain dozens of patches, compatibility improvements, and fixes that directly address the problems they have been experiencing.
-If your environment has not been updated recently, the gap between your installed version and the latest release may be larger than you expect.
+In many real-world situations, upgrading Selenium resolves instability almost immediately. No test logic changes. No new framework. Just a version update.
+
+Teams that move from older Selenium releases to current ones often benefit from accumulated compatibility improvements, bug fixes, performance enhancements, and browser-specific updates that directly address issues they may have been experiencing.
 
 ## Build a Recurring Upgrade Habit
 
