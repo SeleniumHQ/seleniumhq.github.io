@@ -50,6 +50,8 @@ sed -i '' -E "s/^date: [0-9]{4}-[0-9]{2}-[0-9]{2}$/date: $NEW_BLOG_DATE/" "$NEW_
 echo "New blog post: $NEW_BLOG (date: $NEW_BLOG_DATE)"
 echo
 
+CONTRIBUTORS=$(mktemp)
+{
 echo "Selenium Contributors"
 gh api --method GET /repos/seleniumhq/selenium/commits -f since="$SINCE_COMMIT_DATE" -f until="$UNTIL_COMMIT_DATE" -f per_page=1000 \
 --jq 'map(.author.login) | unique | sort | map("{{< gh-user \"https://api.github.com/users/" + . + "\" >}}") | .[]'
@@ -63,3 +65,8 @@ echo
 echo "Docker Contributors"
 gh api --method GET /repos/seleniumhq/docker-selenium/commits -f since="$SINCE_COMMIT_DATE" -f until="$UNTIL_COMMIT_DATE" -f per_page=1000 \
 --jq 'map(.author.login) | unique | sort | map("{{< gh-user \"https://api.github.com/users/" + . + "\" >}}") | .[]'
+} | tee "$CONTRIBUTORS"
+
+echo
+scripts/github-users.sh "$CONTRIBUTORS"
+rm "$CONTRIBUTORS"
