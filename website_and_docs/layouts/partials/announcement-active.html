@@ -1,0 +1,20 @@
+{{- /*
+  Returns true when the announcement banner configured in hugo.toml under
+  [params.announcement] should be shown, i.e. when the build time falls within
+  [start, end] (both dates inclusive). Returns false when the params are
+  missing, when text is empty, or when the dates are unset or invalid.
+
+  Note: the site is static, so the window is evaluated at build time.
+*/ -}}
+{{- $active := false -}}
+{{- with .Site.Params.announcement -}}
+  {{- if and .text .start .end -}}
+    {{- $start := time .start -}}
+    {{- $end := (time .end).AddDate 0 0 1 -}}
+    {{- $n := now -}}
+    {{- if and (not ($n.Before $start)) ($n.Before $end) -}}
+      {{- $active = true -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- return $active -}}

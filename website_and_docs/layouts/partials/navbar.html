@@ -51,7 +51,7 @@
 	</div>
 </nav>
 
-{{ with .Site.Params.announcement_banner }}
-{{ partial "announcement-banner.html" }}
+{{ if partial "announcement-active.html" . }}
+{{ partial "announcement-banner.html" . }}
 {{ end }}
 
