@@ -93,7 +93,7 @@ For most examples, the `tabpane` declares the `text=true`, but if some of the ta
 cannot specify it, and it must be specified in the tabs that do not need automatic code formatting.
 
 
-## Contribuições
+## Contribuições {#contribution-mechanics}
 
 O projeto Selenium dá as boas-vindas a novos contribuidores. Indivíduos fazendo
 contribuições significativas e valiosas ao longo do tempo são transformados em _Committers_
@@ -115,7 +115,7 @@ e faça checkout na sua cópia localmente.
 
 Usamos [Hugo](https://gohugo.io/) e [Docsy theme](https://www.docsy.dev/)
 para criar e gerar o website. Você vai necessitar de usar a versão "extended"
-Sass/SCSS do binário Hugo. Recomendamos a versão 0.167.0 .
+Sass/SCSS do binário Hugo. Recomendamos a versão 0.168.0 .
 
 Por favor siga as instruções do Docsy [Install Hugo](https://www.docsy.dev/docs/getting-started/#install-hugo) 
 

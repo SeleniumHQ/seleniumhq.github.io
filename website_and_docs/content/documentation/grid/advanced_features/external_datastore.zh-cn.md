@@ -1,47 +1,39 @@
 ---
-title: "External datastore"
-linkTitle: "External datastore"
+title: "外部数据存储"
+linkTitle: "外部数据存储"
 weight: 5
 ---
 
-{{% pageinfo color="warning" %}}
-<p class="lead">
-   <i class="fas fa-language d-4"></i>
-   Page being translated from
-   English to Chinese. Do you speak Chinese? Help us to translate
-   it by sending us pull requests!
-</p>
-{{% /pageinfo %}}
+## 目录
+* [简介](#introduction)
+* [配置](#setup)
+* [基于数据库的会话映射](#database-backed-session-map)
+    * [步骤](#steps)
+* [基于 Redis 的会话映射](#redis-backed-session-map)
+    * [步骤](#steps-1)
 
-## Table of Contents
-* [Introduction](#introduction)
-* [Setup](#setup)
-* [Database backed Session Map](#database-backed-session-map) 
-    * [Steps](#steps)
-* [Redis backed Session Map](#redis-backed-session-map) 
-    * [Steps](#steps)
+## 简介 {#introduction}
 
-## Introduction
+Selenium Grid 支持将正在运行的会话相关信息持久化到外部数据存储中。
+外部数据存储可以由你选择的数据库或 Redis 缓存系统提供支持。
 
-Selenium Grid allows you to persist information related to currently running sessions into an external data store.
-The external data store could be backed by your favourite database (or) Redis Cache system.
+## 配置 {#setup}
 
-## Setup
+* [Coursier](https://get-coursier.io/docs/cli-installation) - 作为依赖解析器，
+  用于按需下载 Maven 构件并将其添加到类路径中。
+* [Docker](https://docs.docker.com/engine/install/) - 用于管理 PostgreSQL 和 Redis 容器。
 
-* [Coursier](https://get-coursier.io/docs/cli-installation) - As a dependency resolver, so that we can download maven artifacts on the fly and make them available in our classpath
-* [Docker](https://docs.docker.com/engine/install/) - To manage our PostGreSQL/Redis docker containers.
+## 基于数据库的会话映射 {#database-backed-session-map}
 
-## Database backed Session Map
+本示例使用 PostgreSQL 数据库。
 
-For the sake of this illustration, we are going to work with PostGreSQL database.
+我们将通过 Docker Compose 文件启动一个 PostgreSQL 数据库容器。
 
-We will spin off a PostGreSQL database as a docker container using a docker compose file.
+### 步骤 {#steps}
 
-### Steps
+如果你已有可用的 PostgreSQL 数据库实例，可以跳过此步骤。
 
-You can skip this step if you already have a PostGreSQL database instance available at your disposal.
-
-* Create a sql file named `init.sql` with the below contents:
+* 创建名为 `init.sql` 的 SQL 文件，内容如下：
 
 ```sql
 CREATE TABLE IF NOT EXISTS sessions_map(
@@ -53,7 +45,7 @@ CREATE TABLE IF NOT EXISTS sessions_map(
  );
 ```
 
-* In the same directory as the `init.sql`, create a file named `docker-compose.yml` with its contents as below:
+* 在 `init.sql` 所在目录中创建名为 `docker-compose.yml` 的文件，内容如下：
 
 ```yaml
 version: '3.8'
@@ -71,17 +63,18 @@ services:
     - ./init.sql:/docker-entrypoint-initdb.d/init.sql
 ```
 
-We can now start our database container by running:
+现在可以运行以下命令启动数据库容器：
 
 ```bash
 docker-compose up -d
 ```
 
-_Our database name is `selenium_sessions` with its username and password set to `seluser`_
+_数据库名称为 `selenium_sessions`，用户名和密码均为 `seluser`。_
 
-If you are working with an already running PostGreSQL DB instance, then you just need to create a database named `selenium_sessions` and the table `sessions_map` using the above mentioned SQL statement.
+如果你使用的是已经运行的 PostgreSQL 数据库实例，只需创建名为 `selenium_sessions` 的数据库，
+并使用上面的 SQL 语句创建 `sessions_map` 表。
 
-* Create a Selenium Grid configuration file named `sessions.toml` with the below contents:
+* 创建名为 `sessions.toml` 的 Selenium Grid 配置文件，内容如下：
 
 ```toml
 [sessions]
@@ -91,9 +84,9 @@ jdbc-user = "seluser"
 jdbc-password = "seluser"
 ```
 
-_Note:_ If you plan to use an existing PostGreSQL DB instance, then replace `localhost:5432` with the actual host and port number of your instance.
+_注意：_如果你使用的是已有的 PostgreSQL 数据库实例，请将 `localhost:5432` 替换为该实例的实际主机名和端口号。
 
-* Below is a simple shell script (let's call it `distributed.sh`) that we will use to bring up our distributed Grid.
+* 下面的简单 shell 脚本（命名为 `distributed.sh`）用于启动分布式 Grid：
 
 ```bash
 SE_VERSION=<current_selenium_version>
@@ -118,15 +111,16 @@ echo 'Starting Node'
 java -jar $JAR_NAME node $PUBLISH $SUBSCRIBE &
 ```
 
-* At this point the current directory should contain the following files:
-    * `docker-compose.yml` 
+* 此时，当前目录应包含以下文件：
+    * `docker-compose.yml`
     * `init.sql`
     * `sessions.toml`
     * `distributed.sh`
 
-* You can now spawn the Grid by running `distributed.sh` shell script and quickly run a test. You will notice that the Grid now stores session information into the PostGreSQL database.
+* 现在可以运行 `distributed.sh` 脚本启动 Grid 并快速运行测试。
+  此时，Grid 会将会话信息存储到 PostgreSQL 数据库中。
 
-In the line which spawns a `SessionMap` on a machine:
+在某台机器上启动 `SessionMap` 的命令如下：
 
 ```bash
 export SE_VERSION=<current_selenium_version>
@@ -137,23 +131,24 @@ sessions --publish-events tcp://localhost:4442 \
 --port 5556 --config sessions.toml 
 ```
 
-* The variable names from the above script have been replaced with their actual values for clarity.
-* Remember to substitute `localhost` with the actual hostname of the machine where your `Event-Bus` is running.
-* The arguments being passed to `coursier` are basically the GAV (Group Artifact Version) Maven co-ordinates of: 
-    * [selenium-session-map-jdbc](https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-session-map-jdbc) which is needed to help us store sessions information in database
-    * [postgresql](https://mvnrepository.com/artifact/org.postgresql/postgresql) which is needed to help us talk PostGreSQL database.
-* `sessions.toml` is the configuration file that we created earlier.
+* 为便于说明，上述脚本中的变量名已替换为实际值。
+* 请将 `localhost` 替换为运行事件总线的机器的实际主机名。
+* 传递给 `coursier` 的参数是 Maven 坐标，即 GAV（Group、Artifact、Version）：
+    * [selenium-session-map-jdbc](https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-session-map-jdbc)
+      用于将会话信息存储到数据库中。
+    * [postgresql](https://mvnrepository.com/artifact/org.postgresql/postgresql)
+      用于连接 PostgreSQL 数据库。
+* `sessions.toml` 是前面创建的配置文件。
 
+## 基于 Redis 的会话映射 {#redis-backed-session-map}
 
-## Redis backed Session Map
+我们将通过 Docker Compose 文件启动一个 Redis 缓存容器。
 
-We will spin off a Redis Cache docker container using a docker compose file.
+### 步骤 {#steps-1}
 
-### Steps
+如果你已有可用的 Redis 缓存实例，可以跳过此步骤。
 
-You can skip this step if you already have a Redis Cache instance available at your disposal.
-
-* Create a file named `docker-compose.yml` with its contents as below:
+* 创建名为 `docker-compose.yml` 的文件，内容如下：
 
 ```yaml
 version: '3.8'
@@ -165,13 +160,13 @@ services:
       - "6379:6379"
 ```
 
-We can now start our Redis container by running:
+现在可以运行以下命令启动 Redis 容器：
 
 ```bash
 docker-compose up -d
 ```
 
-* Create a Selenium Grid configuration file named `sessions.toml` with the below contents:
+* 创建名为 `sessions.toml` 的 Selenium Grid 配置文件，内容如下：
 
 ```toml
 [sessions]
@@ -181,9 +176,9 @@ hostname = "localhost"
 port = 6379
 ```
 
-_Note:_ If you plan to use an existing Redis Cache instance, then replace `localhost` and `6379` with the actual host and port number of your instance.
+_注意：_如果你使用的是已有的 Redis 缓存实例，请将 `localhost` 和 `6379` 替换为该实例的实际主机名和端口号。
 
-* Below is a simple shell script (let's call it `distributed.sh`) that we will use to bring up our distributed grid.
+* 下面的简单 shell 脚本（命名为 `distributed.sh`）用于启动分布式 Grid：
 
 ```bash
 SE_VERSION=<current_selenium_version>
@@ -208,14 +203,17 @@ echo 'Starting Node'
 java -jar $JAR_NAME node $PUBLISH $SUBSCRIBE &
 ```
 
-* At this point the current directory should contain the following files:
+* 此时，当前目录应包含以下文件：
     * `docker-compose.yml`
     * `sessions.toml`
     * `distributed.sh`
 
-* You can now spawn the Grid by running `distributed.sh` shell script and quickly run a test. You will notice that the Grid now stores session information into the Redis instance. You can perhaps make use of a Redis GUI such as [TablePlus](https://tableplus.com/) to see them (Make sure that you have setup a debug point in your test, because the values will get deleted as soon as the test runs to completion).
+* 现在可以运行 `distributed.sh` 脚本启动 Grid 并快速运行测试。
+  此时，Grid 会将会话信息存储到 Redis 实例中。
+  你也可以使用 Redis GUI（例如 [TablePlus](https://tableplus.com/)）查看会话信息。
+  请确保在测试中设置断点，因为测试运行结束后，这些值会被删除。
 
-In the line which spawns a `SessionMap` on a machine:
+在某台机器上启动 `SessionMap` 的命令如下：
 
 ```bash
 export SE_VERSION=<current_selenium_version>
@@ -226,9 +224,9 @@ sessions --publish-events tcp://localhost:4442 \
 --port 5556 --config sessions.toml 
 ```
 
-* The variable names from the above script have been replaced with their actual values for clarity.
-* Remember to substitute `localhost` with the actual hostname of the machine where your `Event-Bus` is running.
-* The arguments being passed to `coursier` are basically the GAV (Group Artifact Version) Maven co-ordinates of: 
-    * [selenium-session-map-redis](https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-session-map-redis) which is needed to help us store sessions information in Redis Cache.
-* `sessions.toml` is the configuration file that we created earlier.
-
+* 为便于说明，上述脚本中的变量名已替换为实际值。
+* 请将 `localhost` 替换为运行事件总线的机器的实际主机名。
+* 传递给 `coursier` 的参数是 Maven 坐标，即 GAV（Group、Artifact、Version）：
+    * [selenium-session-map-redis](https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-session-map-redis)
+      用于将会话信息存储到 Redis 缓存中。
+* `sessions.toml` 是前面创建的配置文件。

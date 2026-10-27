@@ -91,5 +91,18 @@ namespace SeleniumDocs.Elements
 
             Assert.AreEqual("fname", attr);
         }
+
+        [TestMethod]
+        public void FindsElementInShadowDom()
+        {
+            StartDriver();
+            driver.Url = "https://www.selenium.dev/selenium/web/shadowRootPage.html";
+
+            IWebElement shadowHost = driver.FindElement(By.CssSelector("custom-checkbox-element"));
+            ISearchContext shadowRoot = shadowHost.GetShadowRoot();
+            IWebElement shadowContent = shadowRoot.FindElement(By.CssSelector("input[type=checkbox]"));
+
+            Assert.IsTrue(shadowContent.Displayed);
+        }
     }
 }

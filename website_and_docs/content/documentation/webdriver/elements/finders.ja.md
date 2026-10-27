@@ -27,7 +27,7 @@ Seleniumロケーターテストページには、クラス名が `information` 
 
 {{< tabpane langEqualsHeader=true text=true >}}
   {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/FindersTest.java#L22-L23">}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/FindersTest.java#L23-L24">}}
   {{< /tab >}}
   {{< tab header="Python" >}}
 {{< gh-codeblock path="/examples/python/tests/elements/test_finders.py#L7-L8">}}
@@ -55,7 +55,7 @@ DOM全体で一意のロケーターを見つけるのではなく、検索を�
 
 {{< tabpane langEqualsHeader=true text=true >}}
   {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/FindersTest.java#L31-L33">}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/FindersTest.java#L32-L34">}}
   {{< /tab >}}
   {{< tab header="Python" >}}
 {{< gh-codeblock path="/examples/python/tests/elements/test_finders.py#L14-L16">}}
@@ -87,31 +87,24 @@ The Shadow DOM is an encapsulated DOM tree hidden inside an element.
 With the release of v96 in Chromium Browsers, Selenium can now allow you to access this tree 
 with easy-to-use shadow root methods. NOTE: These methods require Selenium 4.0 or greater.
 
-{{< tabpane langEqualsHeader=true >}}
-{{< badge-examples >}}
+{{< tabpane langEqualsHeader=true text=true >}}
 {{< tab header="Java" >}}
-WebElement shadowHost = driver.findElement(By.cssSelector("#shadow_host"));
-SearchContext shadowRoot = shadowHost.getShadowRoot();
-WebElement shadowContent = shadowRoot.findElement(By.cssSelector("#shadow_content"));
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/FindersTest.java#L100-L102" >}}
 {{< /tab >}}
-{{< tab header="Python" text=true >}}
-{{< gh-codeblock path="/examples/python/tests/elements/test_finders.py#L39-L42">}}
+{{< tab header="Python" >}}
+{{< gh-codeblock path="/examples/python/tests/elements/test_finders.py#L39-L42" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-var shadowHost = _driver.FindElement(By.CssSelector("#shadow_host"));
-var shadowRoot = shadowHost.GetShadowRoot();
-var shadowContent = shadowRoot.FindElement(By.CssSelector("#shadow_content"));
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Elements/FindersTest.cs#L101-L103" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-shadow_host = @driver.find_element(css: '#shadow_host')
-shadow_root = shadow_host.shadow_root
-shadow_content = shadow_root.find_element(css: '#shadow_content')
+{{< gh-codeblock path="/examples/ruby/spec/elements/finders_spec.rb#L68-L70" >}}
 {{< /tab >}}
-{{< tab header="JavaScript" text=true >}}
-{{< badge-code >}}
+{{< tab header="JavaScript" >}}
+{{< gh-codeblock path="/examples/javascript/test/elements/finders.spec.js#L83-L85" >}}
 {{< /tab >}}
-{{< tab header="Kotlin" text=true >}}
-{{< badge-code >}}
+{{< tab header="Kotlin" >}}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/elements/FindersTest.kt#L86-L88" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -126,7 +119,7 @@ shadow_content = shadow_root.find_element(css: '#shadow_content')
 
 {{< tabpane langEqualsHeader=true text=true >}}
   {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/FindersTest.java#L41-L42">}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/FindersTest.java#L42-L43">}}
   {{< /tab >}}
   {{< tab header="Python" >}}
 {{< gh-codeblock path="/examples/python/tests/elements/test_finders.py#L22-L23">}}
@@ -155,7 +148,7 @@ shadow_content = shadow_root.find_element(css: '#shadow_content')
 
 {{< tabpane langEqualsHeader=true text=true >}}
   {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/FindersTest.java#L50-L51">}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/FindersTest.java#L51-L52">}}
   {{< /tab >}}
   {{< tab header="Python" >}}
 {{< gh-codeblock path="/examples/python/tests/elements/test_finders.py#L29-L30">}}
@@ -180,7 +173,7 @@ shadow_content = shadow_root.find_element(css: '#shadow_content')
 
 {{< tabpane langEqualsHeader=true text=true >}}
   {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/FindersTest.java#L61-L64">}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/FindersTest.java#L62-L65">}}
   {{< /tab >}}
   {{< tab header="Python" >}}
 {{< gh-codeblock path="/examples/python/tests/elements/test_finders.py#L51-L53">}}
@@ -206,7 +199,7 @@ shadow_content = shadow_root.find_element(css: '#shadow_content')
 
 {{< tabpane langEqualsHeader=true text=true >}}
   {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/FindersTest.java#L74-L78">}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/FindersTest.java#L75-L79">}}
   {{< /tab >}}
   {{< tab header="Python" >}}
 {{< gh-codeblock path="/examples/python/tests/elements/test_finders.py#L61-L64">}}
@@ -231,7 +224,7 @@ shadow_content = shadow_root.find_element(css: '#shadow_content')
 
 {{< tabpane langEqualsHeader=true text=true >}}
   {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/FindersTest.java#L88-L89">}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/FindersTest.java#L89-L90">}}
   {{< /tab >}}
   {{< tab header="Python" >}}
 {{< gh-codeblock path="/examples/python/tests/elements/test_finders.py#L72-L73">}}

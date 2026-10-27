@@ -87,7 +87,7 @@ https://selenium.dev/support 中描述的沟通渠道进行询问。
 不能指定它，而必须在不需要自动代码格式化的 tab 中指定。
 
 
-## 贡献机制
+## 贡献机制 {#contribution-mechanics}
 
 Selenium 项目欢迎新的贡献者。
 随时间做出重大且有价值的贡献的个人将成为 _提交者_，并获得对该项目的提交权限。
@@ -110,7 +110,7 @@ Selenium 项目欢迎新的贡献者。
 我们使用 [Hugo](https://gohugo.io/) 和 [Docsy theme](https://www.docsy.dev/)
 用于构建和渲染本网站。
 您需要 Hugo "extended" 扩展的 Sass/SCSS 版本用于这个网站。
-我们推荐使用 Hugo 0.167.0。
+我们推荐使用 Hugo 0.168.0。
 
 请参考来自 Docsy 的说明
 [安装 Hugo](https://www.docsy.dev/docs/getting-started/#install-hugo)。

@@ -1,0 +1,64 @@
+// Print styles, mainly for the "Print entire section" pages (/_print/...).
+// Only the selected language tab is printed: pick a language in any tab
+// before printing and every tabpane on the page follows it.
+@media print {
+  // Use the full page width; the screen layout reserves room for sidebars.
+  main[role="main"] {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-left: 0 !important;
+  }
+
+  // Keep only the active tab label, so the reader knows which language it is.
+  .nav-tabs {
+    border-bottom: none;
+
+    .nav-item:not(:has(.nav-link.active)) {
+      display: none;
+    }
+
+    .nav-link.active {
+      border: none;
+      padding-left: 0;
+      font-weight: bold;
+    }
+  }
+
+  .tab-content > .tab-pane {
+    // tabpane-persist.js fixes every pane to the tallest one's height.
+    height: auto !important;
+    opacity: 1;
+
+    &:not(.active) {
+      display: none !important;
+    }
+  }
+
+  // Wrap long lines instead of cutting them off at the page edge.
+  pre,
+  pre code {
+    white-space: pre-wrap !important;
+    word-break: break-word;
+    overflow: visible !important;
+  }
+
+  // Hugo's highlighter renders each line as a flex row, which does not wrap.
+  pre code > span[style*="display:flex"] {
+    display: block !important;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    break-after: avoid;
+  }
+
+  pre,
+  table,
+  .alert,
+  .nav-tabs {
+    break-inside: avoid;
+  }
+
+  .nav-tabs {
+    break-after: avoid;
+  }
+}

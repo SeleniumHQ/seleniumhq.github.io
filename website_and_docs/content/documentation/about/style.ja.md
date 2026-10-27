@@ -7,9 +7,9 @@ description: >-
 ---
 
 このドキュメントにコンテンツを追加する方法の詳細な手順については、
-[コントリビューションのドキュメント]({{< ref "contributing.md" >}})を参照してください。
+[コントリビューションのドキュメント]({{< ref "contributing" >}})を参照してください。
 
-## アラート
+## アラート {#alerts}
 
 アラートは、特定のコンテンツが不足している場所をコントリビュータ候補に示すために追加されています。
 
@@ -30,7 +30,7 @@ description: >-
 必要な具体的なコンテンツに関する追加情報
 {{< /alert-content >}}
 
-## タイトルの大文字小文字
+## タイトルの大文字小文字 {#capitalization-of-titles}
 
 このドキュメントでは、短くするべき `linkTitle` にはタイトルケースを使用し、
 より長く説明的にできる `title` には文頭のみ大文字にする形式を使用します。
@@ -54,7 +54,7 @@ _The importance of a special heading in documentation_ のようになります�
 これにより、gitで共同作業をするときにdiffが非常に読みやすくなりますが、
 コントリビュータに使用を強制しているものではありません。
 
-## 翻訳
+## 翻訳 {#translations}
 
 Seleniumには現在、サポートされている各言語の公式翻訳者がいます。
 
@@ -121,7 +121,7 @@ val driver = ChromeDriver()
       {{</* /tab */>}}
     {{</* /tabpane */>}}
 
-#### GitHubの例を参照する
+#### GitHubの例を参照する {#reference-github-examples}
 
 すべてのコードを最新に保つために、
 Seleniumのバージョン更新時に実行して正しいことを確認できるよう、
