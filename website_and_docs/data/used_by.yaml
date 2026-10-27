@@ -1,0 +1,48 @@
+# "Used by" strip on the homepage (layouts/partials/used-by.html).
+#
+# Each entry must point at a PUBLIC source that shows the organisation uses
+# Selenium (an engineering blog post, a conference talk, a public repository,
+# a case study on the organisation's own site). Do not add an entry based on
+# hearsay or a private conversation.
+#
+# Logos are deliberately not supported yet. Before a logo is added for an
+# entry, the project needs written permission from the organisation to use its
+# mark, and that permission should be recorded in the pull request that adds
+# the logo. Until then the strip renders names as text only.
+#
+# Fields:
+#   name:   display name.
+#   url:    the organisation's own site.
+#   source: public evidence of Selenium use, as described above.
+
+github:
+  repo: SeleniumHQ/selenium
+  # Shown when the browser cannot reach the GitHub API (offline, rate limited,
+  # script blocked). Round it down and update it occasionally.
+  stars_fallback: "32,000+"
+
+organisations:
+  - name: "Wikimedia Foundation"
+    url: "https://www.wikimedia.org/"
+    source: "https://www.mediawiki.org/wiki/Selenium/Reference"
+  - name: "OpenStack"
+    url: "https://www.openstack.org/"
+    source: "https://docs.openstack.org/horizon/2026.1/contributor/testing.html"
+  - name: "Jenkins"
+    url: "https://www.jenkins.io/"
+    source: "https://github.com/jenkinsci/acceptance-test-harness"
+  - name: "Moodle"
+    url: "https://moodle.org/"
+    source: "https://docs.moodle.org/dev/Running_acceptance_test"
+  - name: "Mozilla"
+    url: "https://www.mozilla.org/"
+    source: "https://github.com/mozilla/addons-release-tests"
+  - name: "GitLab"
+    url: "https://about.gitlab.com/"
+    source: "https://gitlab.com/gitlab-org/gitlab/-/tree/master/qa"
+  - name: "Drupal"
+    url: "https://www.drupal.org/"
+    source: "https://drupalize.me/tutorial/functional-javascript-testing"
+  - name: "trivago"
+    url: "https://www.trivago.com/"
+    source: "https://trivago.substack.com/p/trivago-tech-tips-14-selenium-edition"
