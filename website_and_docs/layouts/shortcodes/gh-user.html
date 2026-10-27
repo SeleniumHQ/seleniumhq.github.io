@@ -1,4 +1,4 @@
-{{ $login := path.Base (.Get 0) }}
+{{ $login := path.Base (trim (.Get 0) " ") }}
 {{ $name := index site.Data.github_users (lower $login) | default $login }}
 
     <div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
