@@ -11,7 +11,7 @@
 # the logo. Until then the strip renders names as text only.
 #
 # Fields:
-#   name:   display name. "[ORGANISATION]" is a placeholder and renders as such.
+#   name:   display name.
 #   url:    the organisation's own site.
 #   source: public evidence of Selenium use, as described above.
 
@@ -22,27 +22,27 @@ github:
   stars_fallback: "32,000+"
 
 organisations:
-  - name: "[ORGANISATION]"
-    url: ""
-    source: ""
-  - name: "[ORGANISATION]"
-    url: ""
-    source: ""
-  - name: "[ORGANISATION]"
-    url: ""
-    source: ""
-  - name: "[ORGANISATION]"
-    url: ""
-    source: ""
-  - name: "[ORGANISATION]"
-    url: ""
-    source: ""
-  - name: "[ORGANISATION]"
-    url: ""
-    source: ""
-  - name: "[ORGANISATION]"
-    url: ""
-    source: ""
-  - name: "[ORGANISATION]"
-    url: ""
-    source: ""
+  - name: "Wikimedia Foundation"
+    url: "https://www.wikimedia.org/"
+    source: "https://www.mediawiki.org/wiki/Selenium/Reference"
+  - name: "OpenStack"
+    url: "https://www.openstack.org/"
+    source: "https://docs.openstack.org/horizon/2026.1/contributor/testing.html"
+  - name: "Jenkins"
+    url: "https://www.jenkins.io/"
+    source: "https://github.com/jenkinsci/acceptance-test-harness"
+  - name: "Moodle"
+    url: "https://moodle.org/"
+    source: "https://docs.moodle.org/dev/Running_acceptance_test"
+  - name: "Mozilla"
+    url: "https://www.mozilla.org/"
+    source: "https://github.com/mozilla/addons-release-tests"
+  - name: "GitLab"
+    url: "https://about.gitlab.com/"
+    source: "https://gitlab.com/gitlab-org/gitlab/-/tree/master/qa"
+  - name: "Drupal"
+    url: "https://www.drupal.org/"
+    source: "https://drupalize.me/tutorial/functional-javascript-testing"
+  - name: "trivago"
+    url: "https://www.trivago.com/"
+    source: "https://trivago.substack.com/p/trivago-tech-tips-14-selenium-edition"

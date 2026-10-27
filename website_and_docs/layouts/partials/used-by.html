@@ -11,7 +11,7 @@
 {{- $repo := .github.repo | default "SeleniumHQ/selenium" -}}
 <div class="row justify-content-center pt-5 pb-4 px-3 td-box--100" id="used-by">
   <div class="col-lg-10 text-center">
-    <h2 class="selenium">Used by teams everywhere</h2>
+    <h2 class="selenium">Used by projects and teams including</h2>
     <p class="mb-4">
       <a href="https://github.com/{{ $repo }}/stargazers" class="selenium-link" target="_blank" rel="noopener">
         <i class="fab fa-github pe-1" aria-hidden="true"></i>
@@ -19,14 +19,17 @@
         GitHub stars
       </a>
     </p>
+    {{- $orgs := where .organisations "name" "!=" "" }}
+    {{- with $orgs }}
     <ul class="list-inline mb-0">
-      {{- range .organisations }}
+      {{- range . }}
       <li class="list-inline-item mx-3 my-2 fw-bold">
         {{- if .url }}<a href="{{ .url }}" class="selenium-link" target="_blank" rel="noopener">{{ .name }}</a>
         {{- else }}{{ .name }}{{ end -}}
       </li>
       {{- end }}
     </ul>
+    {{- end }}
   </div>
 </div>
 <script>
