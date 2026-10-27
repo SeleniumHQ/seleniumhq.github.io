@@ -188,9 +188,19 @@ plausible_analytics = true
 # Enable syntax highlighting and copy buttons on code blocks with Prism
 prism_syntax_highlighting = true
 
-# Enable announcement banner below navbar (Go to announcement-banner.html to change the message)
-banner_flag = true
-announcement_banner = true
+# Announcement banner shown below the navbar on every page (see
+# layouts/partials/announcement-banner.html). It is rendered only while the
+# build date is within [start, end] (ISO dates, both inclusive), so an event
+# banner expires on its own; nothing needs switching off afterwards. The site is
+# static, so the window is checked when the site is built, not in the browser.
+# To announce something, set text (required), url and link_text (optional) and
+# the dates, then deploy. Leave end in the past to show nothing.
+[params.announcement]
+text = "Thank you for joining the Selenium and Appium 2026 Conference."
+url = "https://seleniumconf.com/"
+link_text = "Visit the conference website for more information!"
+start = "2026-09-01"
+end = "2026-10-01"
 
 # Enable Algolia DocSearch
 [params.search.algolia]
