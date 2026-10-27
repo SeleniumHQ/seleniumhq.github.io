@@ -51,7 +51,7 @@ Please check all the information available at <https://selenium.dev/getinvolved/
 
 GitHub actions runs for every commit on each PR and protected branch. The regular CI execution will
 build the site with Hugo to verify that the commit works. The description of these steps can be seen
-at the actions configuration file, [one for testing a PR](./.github/workflows/test.yml), and [one for deploying the site](./.github/workflows/deploy.yml)
+at the actions configuration file, [one for testing a PR](./.github/workflows/site-build.yml), and [one for deploying the site](./.github/workflows/deploy.yml)
 
 ### How are the site and docs deployed?
 
