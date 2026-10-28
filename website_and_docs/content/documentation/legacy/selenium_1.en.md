@@ -6,7 +6,16 @@ description: >
     The original version of Selenium
 aliases: [
 "/documentation/en/legacy_docs/selenium_rc/",
-"/documentation/legacy/selenium_rc/"
+"/documentation/legacy/selenium_rc/",
+"/documentation/ja/legacy_docs/selenium_rc/",
+"/documentation/pt-br/legacy_docs/selenium_rc/",
+"/documentation/zh-cn/legacy_docs/selenium_rc/",
+"/ja/documentation/legacy/selenium_1/",
+"/ja/documentation/legacy/selenium_rc/",
+"/pt-br/documentation/legacy/selenium_1/",
+"/pt-br/documentation/legacy/selenium_rc/",
+"/zh-cn/documentation/legacy/selenium_1/",
+"/zh-cn/documentation/legacy/selenium_rc/"
 ]
 ---
 

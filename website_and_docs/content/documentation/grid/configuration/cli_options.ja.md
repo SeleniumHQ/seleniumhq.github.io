@@ -4,7 +4,7 @@ linkTitle: "CLI オプション"
 weight: 2
 description: 全てのGridコンポーネントのCLIオプション詳細
 aliases: [
-"/ja/documentation/grid/configuring_components/cli_options/"
+"/documentation/grid/configuring_components/cli_options/"
 ]
 ---
 

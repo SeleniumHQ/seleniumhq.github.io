@@ -8,6 +8,7 @@ import java.time.temporal.ChronoUnit;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.PageLoadStrategy;
+import org.openqa.selenium.Proxy;
 import org.openqa.selenium.UnexpectedAlertBehaviour;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -168,6 +169,18 @@ public class OptionsTest extends BaseTest {
 
     Boolean capability = (Boolean) capabilityObject;
     Assertions.assertTrue(capability, "The capability STRICT_FILE_INTERACTABILITY should be set to true.");
+  }
+
+  @Test
+  public void setsProxy() {
+    Proxy proxy = new Proxy();
+    proxy.setHttpProxy("myproxy.com:8080");
+    ChromeOptions options = getDefaultChromeOptions();
+    options.setCapability("proxy", proxy);
+
+    Object capabilityObject = options.getCapability("proxy");
+    Assertions.assertNotNull(capabilityObject, "Capability proxy should not be null.");
+    Assertions.assertEquals("myproxy.com:8080", ((Proxy) capabilityObject).getHttpProxy());
   }
 }
 

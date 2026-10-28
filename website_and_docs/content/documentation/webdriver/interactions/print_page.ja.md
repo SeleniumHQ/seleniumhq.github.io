@@ -2,9 +2,6 @@
 title: "Print Page"
 linkTitle: "Print Page"
 weight: 7
-aliases: [
-"/documentation/ja/support_packages/print_page/",
-]
 ---
 
 Printing a webpage is a common task, whether for sharing information or maintaining archives. 
@@ -192,7 +189,7 @@ Using `PrintsPage()`, the print command will return the PDF data in base64-encod
 and written to a file in your desired location, and using `BrowsingContext()` will return a String. 
 
 There may currently be multiple implementations depending on your language of choice. For example, with Java you
-have the ability to print using either `BrowingContext()` or `PrintsPage()`. Both take `PrintOptions()` objects as a
+have the ability to print using either `BrowsingContext()` or `PrintsPage()`. Both take `PrintOptions()` objects as a
 parameter.
 
 Note: `BrowsingContext()` is part of Selenium's BiDi implementation. To enable BiDi see [Enabling Bidi]({{< ref "bidi/" >}}) 

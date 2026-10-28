@@ -4,7 +4,16 @@ linkTitle: "Performance testing"
 weight: 6
 aliases: [
 "/documentation/en/worst_practices/performance_testing/",
-"/documentation/worst_practices/performance_testing/"
+"/documentation/worst_practices/performance_testing/",
+"/documentation/ja/worst_practices/performance_testing/",
+"/documentation/pt-br/worst_practices/performance_testing/",
+"/documentation/zh-cn/worst_practices/performance_testing/",
+"/ja/documentation/test_practices/discouraged/performance_testing/",
+"/ja/documentation/worst_practices/performance_testing/",
+"/pt-br/documentation/test_practices/discouraged/performance_testing/",
+"/pt-br/documentation/worst_practices/performance_testing/",
+"/zh-cn/documentation/test_practices/discouraged/performance_testing/",
+"/zh-cn/documentation/worst_practices/performance_testing/"
 ] 
 ---
 

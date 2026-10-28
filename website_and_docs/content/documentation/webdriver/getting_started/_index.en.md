@@ -9,7 +9,25 @@ aliases: [
 "/documentation/en/getting_started/quick/",
 "/documentation/en/selenium_installation/",
 "/documentation/en/getting_started_with_webdriver/",
-"/documentation/getting_started/"
+"/documentation/getting_started/",
+"/documentation/ja/getting_started/",
+"/documentation/ja/getting_started/quick/",
+"/documentation/ja/selenium_installation/",
+"/documentation/ja/getting_started_with_webdriver/",
+"/documentation/pt-br/getting_started/",
+"/documentation/pt-br/getting_started/quick/",
+"/documentation/pt-br/selenium_installation/",
+"/documentation/pt-br/getting_started_with_webdriver/",
+"/documentation/zh-cn/getting_started/",
+"/documentation/zh-cn/getting_started/quick/",
+"/documentation/zh-cn/selenium_installation/",
+"/documentation/zh-cn/getting_started_with_webdriver/",
+"/ja/documentation/getting_started/",
+"/ja/documentation/webdriver/getting_started/",
+"/pt-br/documentation/getting_started/",
+"/pt-br/documentation/webdriver/getting_started/",
+"/zh-cn/documentation/getting_started/",
+"/zh-cn/documentation/webdriver/getting_started/"
 ]
 ---
 

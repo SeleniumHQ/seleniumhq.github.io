@@ -22,7 +22,7 @@ namespace SeleniumDocs.Browsers
             driver?.Quit();
             if (!String.IsNullOrEmpty(_logLocation) && File.Exists(_logLocation))
             {
-                File.Delete(_logLocation);
+                LogFile.TryDelete(_logLocation);
             }
             if (_tempPath != null && Directory.Exists(_tempPath))
             {
@@ -65,7 +65,7 @@ namespace SeleniumDocs.Browsers
 
             driver = new FirefoxDriver(service);
             driver.Quit(); // Close the Service log file before reading
-            var lines = File.ReadLines(GetLogLocation());
+            var lines = LogFile.ReadLines(GetLogLocation());
             Assert.IsNotNull(lines.FirstOrDefault(line => line.Contains("geckodriver	INFO	Listening on")));
         }
 
@@ -97,7 +97,7 @@ namespace SeleniumDocs.Browsers
 
             driver = new FirefoxDriver(service);
             driver.Quit(); // Close the Service log file before reading
-            var lines = File.ReadLines(GetLogLocation());
+            var lines = LogFile.ReadLines(GetLogLocation());
             Assert.IsNotNull(lines.FirstOrDefault(line => line.Contains("Marionette\tDEBUG")));
         }
 
@@ -111,7 +111,7 @@ namespace SeleniumDocs.Browsers
 
             driver = new FirefoxDriver(service);
             driver.Quit(); // Close the Service log file before reading
-            var lines = File.ReadLines(GetLogLocation());
+            var lines = LogFile.ReadLines(GetLogLocation());
             Assert.IsNull(lines.FirstOrDefault(line => line.Contains(" ... ")));
         }
 

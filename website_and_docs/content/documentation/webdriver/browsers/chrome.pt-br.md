@@ -5,7 +5,7 @@ weight: 4
 description: >-
     Estas capacidades e características são específicas ao navegador Google Chrome.
 aliases: [
-"/pt-br/documentation/capabilities/chromium"
+"/documentation/capabilities/chromium"
 ]
 ---
 

@@ -1,0 +1,9 @@
+{{- /*
+  Local replacement for Hugo's built-in "gist" shortcode, which was deprecated
+  in Hugo 0.143.0 and removed in 0.156.0. Hugo's removal note points sites at
+  writing their own, so this reproduces the original template verbatim to keep
+  the three archived blog posts that use it rendering exactly as before.
+
+  Usage: {{< gist USERNAME GIST_ID [FILENAME] >}}
+*/ -}}
+<script type="application/javascript" src="https://gist.github.com/{{ index .Params 0 }}/{{ index .Params 1 }}.js{{ if len .Params | eq 3 }}?file={{ index .Params 2 }}{{ end }}"></script>

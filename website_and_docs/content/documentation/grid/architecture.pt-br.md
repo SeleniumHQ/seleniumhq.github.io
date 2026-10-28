@@ -3,7 +3,7 @@ title: "Arquitectura da Grid"
 linkTitle: "Arquitectura da Grid"
 weight: 10
 aliases: [
-"/pt-br/documentation/grid/grid_architecture"
+"/documentation/grid/grid_architecture"
 ]
 ---
 

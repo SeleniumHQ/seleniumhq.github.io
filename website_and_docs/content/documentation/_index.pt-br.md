@@ -3,7 +3,6 @@ title: "O Projeto Selenium de Automação de Navegadores"
 linkTitle: "Documentação"
 cascade:
 - type: docs
-aliases: ["/documentation/pt-br/"]
 ---
 
 Selenium é um projeto que abrange uma variedade de ferramentas e bibliotecas

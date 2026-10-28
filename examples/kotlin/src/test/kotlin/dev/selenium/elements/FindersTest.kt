@@ -79,6 +79,17 @@ class FindersTest : BaseTest() {
         assertEquals("fname", attr)
     }
 
+    @Test
+    fun findsElementInShadowDom() {
+        driver.get("https://www.selenium.dev/selenium/web/shadowRootPage.html")
+
+        val shadowHost = driver.findElement(By.cssSelector("custom-checkbox-element"))
+        val shadowRoot = shadowHost.shadowRoot
+        val shadowContent = shadowRoot.findElement(By.cssSelector("input[type=checkbox]"))
+
+        assertTrue(shadowContent.isDisplayed)
+    }
+
     @BeforeEach
     fun configureImplicitWait() {
         driver.manage().timeouts().implicitlyWait(Duration.ofMillis(500))

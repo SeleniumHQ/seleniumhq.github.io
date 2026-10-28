@@ -5,8 +5,7 @@ weight: 2
 description: >
     The original version of Selenium
 aliases: [
-"/documentation/ja/legacy_docs/selenium_rc/",
-"/ja/documentation/legacy/selenium_rc/"
+"/documentation/legacy/selenium_rc/"
 ]
 ---
 

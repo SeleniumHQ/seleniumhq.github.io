@@ -2,7 +2,11 @@
 title: "GraphQL query support"
 linkTitle: "GraphQL Support"
 weight: 2
-aliases: ["/documentation/en/grid/grid_4/graphql_support/"]
+aliases: ["/documentation/en/grid/grid_4/graphql_support/", "/documentation/ja/grid/grid_4/graphql_support/", "/documentation/pt-br/grid/grid_4/graphql_support/", "/documentation/zh-cn/grid/grid_4/graphql_support/",
+"/ja/documentation/grid/advanced_features/graphql_support/",
+"/pt-br/documentation/grid/advanced_features/graphql_support/",
+"/zh-cn/documentation/grid/advanced_features/graphql_support/"
+]
 ---
 
 GraphQL is a query language for APIs and a runtime for fulfilling those queries 

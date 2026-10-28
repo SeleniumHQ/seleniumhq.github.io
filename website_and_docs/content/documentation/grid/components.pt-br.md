@@ -5,8 +5,7 @@ weight: 6
 description: >
   Compreender como usar os componentes da Grid
 aliases: [
-"/documentation/pt-br/grid/grid_4/components_of_a_grid/",
-"/pt-br/documentation/grid/components_of_a_grid/"
+"/documentation/grid/components_of_a_grid/"
 ]
 ---
 

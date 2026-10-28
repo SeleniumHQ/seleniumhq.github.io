@@ -18,7 +18,7 @@ possible!
 We did a major revamp to our website two years ago. However, this
 revamp had some "technical debt" in it...
 
-{{< tweet user="SeleniumHQ" id="1194205732347887616" >}}
+{{< x user="SeleniumHQ" id="1194205732347887616" >}}
 
 We use [Hugo](https://gohugo.io/) to generate our website, and to
 build a website with Hugo, one normally needs to select a 
@@ -27,7 +27,7 @@ being built using two different Hugo themes, which was less than
 ideal. Having two Hugo themes was hard to maintain and accepting
 contributions was tricky in some cases.
 
-This new website version is using the [Docsy](https://github.com/google/docsy)
+This new website version is using the [Docsy](https://github.com/docsy/docsy)
 theme, made by some folks at Google and used by other popular projects
 such as [Apache Airflow](https://airflow.apache.org/) and 
 [Kubernetes](https://kubernetes.io/). Using Docsy helps us to focus

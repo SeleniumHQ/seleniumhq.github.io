@@ -5,8 +5,7 @@ weight: 1
 description: >
   Selenium工具集下的全部版权、贡献以及归属.
 aliases: [
-"/documentation/zh-cn/front_matter/copyright_and_attributions/",
-"/zh-cn/documentation/about/copyright_and_attributions"
+"/documentation/about/copyright_and_attributions"
 ]
 ---
 
@@ -49,8 +48,8 @@ aliases: [
 
 | 软件 | 版本 | 许可 |
 | -------- | ------- | ------- |
-| [Hugo](//gohugo.io/) | v0.110.0 | [Apache 2.0](//gohugo.io/about/license/) |
-| [Docsy](//github.com/google/docsy/) | --- | [Apache 2.0](//github.com/google/docsy/blob/master/LICENSE) |
+| [Hugo](//gohugo.io/) | v0.168.0 | [Apache 2.0](//gohugo.io/about/license/) |
+| [Docsy](//github.com/docsy/docsy/) | --- | [Apache 2.0](//github.com/docsy/docsy/blob/main/LICENSE) |
 
 ## 许可
 

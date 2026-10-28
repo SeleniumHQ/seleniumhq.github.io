@@ -21,7 +21,7 @@ namespace SeleniumDocs.Browsers
             _driver?.Quit();
             if (_logLocation != null && File.Exists(_logLocation))
             {
-                File.Delete(_logLocation);
+                LogFile.TryDelete(_logLocation);
             }
             if (_tempPath != null && File.Exists(_tempPath))
             {
@@ -55,7 +55,7 @@ namespace SeleniumDocs.Browsers
 
             _driver = new InternetExplorerDriver(service);
             _driver.Quit(); // Close the Service log file before reading
-            var lines = File.ReadLines(GetLogLocation());
+            var lines = LogFile.ReadLines(GetLogLocation());
             Assert.IsNotNull(lines.FirstOrDefault(line => line.Contains("Invalid capability setting: timeouts is type null")));
         }
 

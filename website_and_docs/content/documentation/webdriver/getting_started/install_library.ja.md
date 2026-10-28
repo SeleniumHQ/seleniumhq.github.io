@@ -5,9 +5,8 @@ weight: 2
 description: >
   お気に入りのプログラミング言語用にSeleniumライブラリを設定します。
 aliases: [
-"/documentation/ja/selenium_installation/installing_selenium_libraries/",
-"/ja/documentation/getting_started/installing_selenium_libraries/",
-"/ja/documentation/getting_started/install_selenium_library/"
+"/documentation/getting_started/installing_selenium_libraries/",
+"/documentation/getting_started/install_selenium_library/"
 ]
 ---
 

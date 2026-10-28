@@ -5,8 +5,7 @@ weight: 2
 description: >
   一种适用于任何与网页交互的按键输入设备的表现形式.
 aliases: [
-"/documentation/zh-cn/webdriver/keyboard/",
-"/zh-cn/documentation/webdriver/keyboard/"
+"/documentation/webdriver/keyboard/"
 ]
 ---
 

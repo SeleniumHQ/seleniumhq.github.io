@@ -5,8 +5,7 @@ weight: 7
 description: >
   Selenium项目的一些测试指南和建议.
 aliases: [
-"/documentation/zh-cn/guidelines_and_recommendations/",
-"/zh-cn/documentation/guidelines/"
+"/documentation/guidelines/"
 ]
 ---
 

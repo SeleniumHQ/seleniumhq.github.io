@@ -3,8 +3,7 @@ title: "查询网络元素"
 linkTitle: "查询器"
 weight: 2
 aliases: [
-"/documentation/zh-cn/webdriver/locating_elements/",
-"/zh-cn/documentation/webdriver/locating_elements/"
+"/documentation/webdriver/locating_elements/"
 ]
 description: >
   根据提供的定位值定位元素.
@@ -31,22 +30,22 @@ Selenium 提供了许多内置的 [定位策略]({{< ref "locators.md" >}})，�
 
 {{< tabpane langEqualsHeader=true text=true >}}
   {{< tab header="Java" >}}
-  {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/FindersTest.java#L22-L23">}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/FindersTest.java#L23-L24">}}
   {{< /tab >}}
   {{< tab header="Python" >}}
-  {{< gh-codeblock path="/examples/python/tests/elements/test_finders.py#L7-L8">}}
+{{< gh-codeblock path="/examples/python/tests/elements/test_finders.py#L7-L8">}}
   {{< /tab >}}
   {{< tab header="CSharp" >}}
-  {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Elements/FindersTest.cs#L15-L16">}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Elements/FindersTest.cs#L15-L16">}}
   {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< gh-codeblock path="/examples/ruby/spec/elements/finders_spec.rb#L10-L11" >}}
 {{< /tab >}}
   {{< tab header="JavaScript" >}}
-  {{< gh-codeblock path="/examples/javascript/test/elements/finders.spec.js#L9-L10">}}
+{{< gh-codeblock path="/examples/javascript/test/elements/finders.spec.js#L9-L10">}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
-  {{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/elements/FindersTest.kt#L19-L20">}}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/elements/FindersTest.kt#L19-L20">}}
   {{< /tab >}}
 {{< /tabpane >}}
 
@@ -62,22 +61,22 @@ Selenium 提供了许多内置的 [定位策略]({{< ref "locators.md" >}})，�
 
 {{< tabpane langEqualsHeader=true text=true >}}
   {{< tab header="Java" >}}
-  {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/FindersTest.java#L31-L33">}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/FindersTest.java#L32-L34">}}
   {{< /tab >}}
   {{< tab header="Python" >}}
-  {{< gh-codeblock path="/examples/python/tests/elements/test_finders.py#L14-L16">}}
+{{< gh-codeblock path="/examples/python/tests/elements/test_finders.py#L14-L16">}}
   {{< /tab >}}
   {{< tab header="CSharp" >}}
-  {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Elements/FindersTest.cs#L25-L27">}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Elements/FindersTest.cs#L25-L27">}}
   {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< gh-codeblock path="/examples/ruby/spec/elements/finders_spec.rb#L17-L19" >}}
 {{< /tab >}}
   {{< tab header="JavaScript" >}}
-  {{< gh-codeblock path="/examples/javascript/test/elements/finders.spec.js#L18-L20">}}
+{{< gh-codeblock path="/examples/javascript/test/elements/finders.spec.js#L18-L20">}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
-  {{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/elements/FindersTest.kt#L27-L29">}}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/elements/FindersTest.kt#L27-L29">}}
   {{< /tab >}}
 {{< /tabpane >}}
 
@@ -88,36 +87,29 @@ Selenium 提供了许多内置的 [定位策略]({{< ref "locators.md" >}})，�
 这些接口定义清晰，并尽量遵循单一职责原则。  
 {{% /pageinfo %}}
 
-### 评估 Shadow DOM
+### 评估 Shadow DOM {#evaluating-the-shadow-dom}
 
 Shadow DOM 是隐藏在元素内部的封装 DOM 树。  
 自 Chromium 浏览器在 v96 发布后，Selenium 已支持通过易用的 shadow root 方法访问该树。注意：这些方法需要 Selenium 4.0 或更高版本。
 
-{{< tabpane langEqualsHeader=true >}}
-{{< badge-examples >}}
+{{< tabpane langEqualsHeader=true text=true >}}
 {{< tab header="Java" >}}
-WebElement shadowHost = driver.findElement(By.cssSelector("#shadow_host"));
-SearchContext shadowRoot = shadowHost.getShadowRoot();
-WebElement shadowContent = shadowRoot.findElement(By.cssSelector("#shadow_content"));
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/FindersTest.java#L100-L102" >}}
 {{< /tab >}}
-{{< tab header="Python" text=true >}}
-{{< gh-codeblock path="/examples/python/tests/elements/test_finders.py#L39-L42">}}
+{{< tab header="Python" >}}
+{{< gh-codeblock path="/examples/python/tests/elements/test_finders.py#L39-L42" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
-var shadowHost = _driver.FindElement(By.CssSelector("#shadow_host"));
-var shadowRoot = shadowHost.GetShadowRoot();
-var shadowContent = shadowRoot.FindElement(By.CssSelector("#shadow_content"));
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Elements/FindersTest.cs#L101-L103" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-shadow_host = @driver.find_element(css: '#shadow_host')
-shadow_root = shadow_host.shadow_root
-shadow_content = shadow_root.find_element(css: '#shadow_content')
+{{< gh-codeblock path="/examples/ruby/spec/elements/finders_spec.rb#L68-L70" >}}
 {{< /tab >}}
-{{< tab header="JavaScript" text=true >}}
-{{< badge-code >}}
+{{< tab header="JavaScript" >}}
+{{< gh-codeblock path="/examples/javascript/test/elements/finders.spec.js#L83-L85" >}}
 {{< /tab >}}
-{{< tab header="Kotlin" text=true >}}
-{{< badge-code >}}
+{{< tab header="Kotlin" >}}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/elements/FindersTest.kt#L86-L88" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -134,22 +126,22 @@ shadow_content = shadow_root.find_element(css: '#shadow_content')
 
 {{< tabpane langEqualsHeader=true text=true >}}
   {{< tab header="Java" >}}
-  {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/FindersTest.java#L41-L42">}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/FindersTest.java#L42-L43">}}
   {{< /tab >}}
   {{< tab header="Python" >}}
-  {{< gh-codeblock path="/examples/python/tests/elements/test_finders.py#L22-L23">}}
+{{< gh-codeblock path="/examples/python/tests/elements/test_finders.py#L22-L23">}}
   {{< /tab >}}
   {{< tab header="CSharp" >}}
-  {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Elements/FindersTest.cs#L36-L37">}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Elements/FindersTest.cs#L36-L37">}}
   {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< gh-codeblock path="/examples/ruby/spec/elements/finders_spec.rb#L25-L26" >}}
 {{< /tab >}}
   {{< tab header="JavaScript" >}}
-  {{< gh-codeblock path="/examples/javascript/test/elements/finders.spec.js#L28-L29">}}
+{{< gh-codeblock path="/examples/javascript/test/elements/finders.spec.js#L28-L29">}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
-  {{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/elements/FindersTest.kt#L36-L37">}}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/elements/FindersTest.kt#L36-L37">}}
   {{< /tab >}}
 {{< /tabpane >}}
 
@@ -163,22 +155,22 @@ shadow_content = shadow_root.find_element(css: '#shadow_content')
 
 {{< tabpane langEqualsHeader=true text=true >}}
   {{< tab header="Java" >}}
-  {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/FindersTest.java#L50-L51">}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/FindersTest.java#L51-L52">}}
   {{< /tab >}}
   {{< tab header="Python" >}}
-  {{< gh-codeblock path="/examples/python/tests/elements/test_finders.py#L29-L30">}}
+{{< gh-codeblock path="/examples/python/tests/elements/test_finders.py#L29-L30">}}
   {{< /tab >}}
   {{< tab header="CSharp" >}}
-  {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Elements/FindersTest.cs#L46-L47">}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Elements/FindersTest.cs#L46-L47">}}
   {{< /tab >}}
 {{< tab header="Ruby" >}}
 {{< gh-codeblock path="/examples/ruby/spec/elements/finders_spec.rb#L32-L33" >}}
 {{< /tab >}}
   {{< tab header="JavaScript" >}}
-  {{< gh-codeblock path="/examples/javascript/test/elements/finders.spec.js#L37-L38">}}
+{{< gh-codeblock path="/examples/javascript/test/elements/finders.spec.js#L37-L38">}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
-  {{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/elements/FindersTest.kt#L44-L45">}}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/elements/FindersTest.kt#L44-L45">}}
   {{< /tab >}}
 {{< /tabpane >}}
 
@@ -189,22 +181,22 @@ shadow_content = shadow_root.find_element(css: '#shadow_content')
 
 {{< tabpane langEqualsHeader=true text=true >}}
   {{< tab header="Java" >}}
-  {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/FindersTest.java#L61-L64">}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/FindersTest.java#L62-L65">}}
   {{< /tab >}}
   {{< tab header="Python" >}}
-  {{< gh-codeblock path="/examples/python/tests/elements/test_finders.py#L51-L53">}}
+{{< gh-codeblock path="/examples/python/tests/elements/test_finders.py#L51-L53">}}
   {{< /tab >}}
   {{< tab header="CSharp" >}}
-  {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Elements/FindersTest.cs#L58-L62">}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Elements/FindersTest.cs#L58-L62">}}
   {{< /tab >}}
    {{< tab header="Ruby" >}}
-   {{< gh-codeblock path="/examples/ruby/spec/elements/finders_spec.rb#L40-L42" >}}
+{{< gh-codeblock path="/examples/ruby/spec/elements/finders_spec.rb#L40-L42" >}}
    {{< /tab >}}
   {{< tab header="JavaScript" >}}
-  {{< gh-codeblock path="/examples/javascript/test/elements/finders.spec.js#L47-L50">}}
+{{< gh-codeblock path="/examples/javascript/test/elements/finders.spec.js#L47-L50">}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
-  {{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/elements/FindersTest.kt#L53-L56">}}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/elements/FindersTest.kt#L53-L56">}}
   {{< /tab >}}
 {{< /tabpane >}}
 
@@ -215,22 +207,22 @@ shadow_content = shadow_root.find_element(css: '#shadow_content')
 
 {{< tabpane langEqualsHeader=true text=true >}}
   {{< tab header="Java" >}}
-  {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/FindersTest.java#L74-L78">}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/FindersTest.java#L75-L79">}}
   {{< /tab >}}
   {{< tab header="Python" >}}
-  {{< gh-codeblock path="/examples/python/tests/elements/test_finders.py#L61-L64">}}
+{{< gh-codeblock path="/examples/python/tests/elements/test_finders.py#L61-L64">}}
   {{< /tab >}}
   {{< tab header="CSharp" >}}
-  {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Elements/FindersTest.cs#L73-L78">}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Elements/FindersTest.cs#L73-L78">}}
   {{< /tab >}}
    {{< tab header="Ruby" >}}
-   {{< gh-codeblock path="/examples/ruby/spec/elements/finders_spec.rb#L48-L51" >}}
+{{< gh-codeblock path="/examples/ruby/spec/elements/finders_spec.rb#L48-L51" >}}
    {{< /tab >}}
   {{< tab header="JavaScript" >}}
-  {{< gh-codeblock path="/examples/javascript/test/elements/finders.spec.js#L59-L63">}}
+{{< gh-codeblock path="/examples/javascript/test/elements/finders.spec.js#L59-L63">}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
-  {{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/elements/FindersTest.kt#L64-L68">}}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/elements/FindersTest.kt#L64-L68">}}
   {{< /tab >}}
 {{< /tabpane >}}
 
@@ -240,22 +232,22 @@ shadow_content = shadow_root.find_element(css: '#shadow_content')
 
 {{< tabpane langEqualsHeader=true text=true >}}
   {{< tab header="Java" >}}
-  {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/FindersTest.java#L88-L89">}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/FindersTest.java#L89-L90">}}
   {{< /tab >}}
   {{< tab header="Python" >}}
-  {{< gh-codeblock path="/examples/python/tests/elements/test_finders.py#L72-L73">}}
+{{< gh-codeblock path="/examples/python/tests/elements/test_finders.py#L72-L73">}}
   {{< /tab >}}
   {{< tab header="CSharp" >}}
-  {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Elements/FindersTest.cs#L89-L90">}}
+{{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Elements/FindersTest.cs#L89-L90">}}
   {{< /tab >}}
   {{< tab header="Ruby" >}}
-  {{< gh-codeblock path="/examples/ruby/spec/elements/finders_spec.rb#L58-L60" >}}
+{{< gh-codeblock path="/examples/ruby/spec/elements/finders_spec.rb#L58-L60" >}}
   {{< /tab >}}
   {{< tab header="JavaScript" >}}
-  {{< gh-codeblock path="/examples/javascript/test/elements/finders.spec.js#L72-L73">}}
+{{< gh-codeblock path="/examples/javascript/test/elements/finders.spec.js#L72-L73">}}
   {{< /tab >}}
   {{< tab header="Kotlin" >}}
-  {{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/elements/FindersTest.kt#L76-L77">}}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/elements/FindersTest.kt#L76-L77">}}
   {{< /tab >}}
 {{< /tabpane >}}
 

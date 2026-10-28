@@ -3,8 +3,7 @@ title: "Grid エンドポイント"
 linkTitle: "Grid エンドポイント"
 weight: 3
 aliases: [
-"/documentation/ja/grid/grid_4/grid_endpoints/",
-"/ja/documentation/grid/advanced_features/grid_endpoints/"
+"/documentation/grid/advanced_features/grid_endpoints/"
 ]
 ---
 

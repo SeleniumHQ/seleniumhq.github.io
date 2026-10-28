@@ -3,8 +3,7 @@ title: "性能测试"
 linkTitle: "性能测试"
 weight: 6
 aliases: [
-"/documentation/zh-cn/worst_practices/performance_testing/",
-"/zh-cn/documentation/worst_practices/performance_testing/"
+"/documentation/worst_practices/performance_testing/"
 ] 
 ---
 

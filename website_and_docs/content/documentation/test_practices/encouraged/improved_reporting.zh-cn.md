@@ -3,8 +3,7 @@ title: "改善报告"
 linkTitle: "改善报告"
 weight: 7
 aliases: [
-"/documentation/zh-cn/guidelines_and_recommendations/improved_reporting/",
-"/zh-cn/documentation/guidelines/improved_reporting/"
+"/documentation/guidelines/improved_reporting/"
 ]
 ---
 

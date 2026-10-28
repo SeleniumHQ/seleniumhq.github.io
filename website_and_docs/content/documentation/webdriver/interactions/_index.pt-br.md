@@ -4,9 +4,8 @@ linkTitle: "Interactions"
 weight: 10
 requiresTranslation: true
 aliases: [
-"/documentation/pt-br/webdriver/browser_manipulation/",
-"/pt-br/documentation/webdriver/browser_manipulation/",
-"/pt-br/documentation/webdriver/browser/"
+"/documentation/webdriver/browser_manipulation/",
+"/documentation/webdriver/browser/"
 ]
 ---
 

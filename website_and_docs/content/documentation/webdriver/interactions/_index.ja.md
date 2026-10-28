@@ -3,8 +3,7 @@ title: "ブラウザのインタラクション"
 linkTitle: "Interactions"
 weight: 10
 aliases: [
-"/documentation/ja/webdriver/browser_manipulation/",
-"/ja/documentation/webdriver/browser_manipulation/",
+"/documentation/webdriver/browser_manipulation/",
 "ja/documentation/webdriver/browser/"
 ]
 ---

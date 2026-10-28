@@ -4,8 +4,7 @@ linkTitle: "ページオブジェクトモデル"
 weight: 3
 needsTranslation: true
 aliases: [
-"/documentation/ja/guidelines_and_recommendations/page_object_models/",
-"/ja/documentation/guidelines/page_object_models/"
+"/documentation/guidelines/page_object_models/"
 ]
 ---
 

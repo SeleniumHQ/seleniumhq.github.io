@@ -3,8 +3,7 @@ title: "ドメイン固有言語（DSL）"
 linkTitle: "ドメイン固有言語（DSL）"
 weight: 4
 aliases: [
-"/documentation/ja/guidelines_and_recommendations/domain_specific_language/",
-"/ja/documentation/guidelines/domain_specific_language/"
+"/documentation/guidelines/domain_specific_language/"
 ]
 ---
 
@@ -34,30 +33,7 @@ Seleniumでは、DSLは通常、APIをシンプルで読みやすいように記
 Javaの妥当なDSLメソッドの例を次に示します。
 簡潔にするために、`driver`オブジェクトが事前に定義されており、メソッドで使用可能であることを前提としています。
 
-```java
-/**
- * Takes a username and password, fills out the fields, and clicks "login".
- * @return An instance of the AccountPage
- */
-public AccountPage loginAsUser(String username, String password) {
-  WebElement loginField = driver.findElement(By.id("loginField"));
-  loginField.clear();
-  loginField.sendKeys(username);
-
-  // Fill out the password field. The locator we're using is "By.id", and we should
-  // have it defined elsewhere in the class.
-  WebElement passwordField = driver.findElement(By.id("password"));
-  passwordField.clear();
-  passwordField.sendKeys(password);
-
-  // Click the login button, which happens to have the id "submit".
-  driver.findElement(By.id("submit")).click();
-
-  // Create and return a new instance of the AccountPage (via the built-in Selenium
-  // PageFactory).
-  return PageFactory.newInstance(AccountPage.class);
-}
-```
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/test_practices/DomainSpecificLanguageExample.java#L21-L43" >}}
 
 このメソッドは、テストコードから入力フィールド、ボタン、クリック、さらにはページの概念を完全に抽象化します。
 このアプローチを使用すると、テスターはこのメソッドを呼び出すだけで済みます。

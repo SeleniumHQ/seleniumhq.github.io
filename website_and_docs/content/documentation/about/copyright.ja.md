@@ -6,8 +6,7 @@ description: >
   Selenium に関連するさまざまなプロジェクトの著作権、貢献、
   およびすべての帰属について。
 aliases: [
-"/documentation/ja/front_matter/copyright_and_attributions/",
-"/ja/documentation/about/copyright_and_attributions"
+"/documentation/about/copyright_and_attributions"
 ]
 ---
 
@@ -53,8 +52,8 @@ aliases: [
 
 | ソフトウェア | バージョン | ライセンス |
 | -------- | ------- | ------- |
-| [Hugo](//gohugo.io/) | v0.110.0 | [Apache 2.0](//gohugo.io/about/license/) |
-| [Docsy](//github.com/google/docsy/) | --- | [Apache 2.0](//github.com/google/docsy/blob/master/LICENSE) |
+| [Hugo](//gohugo.io/) | v0.168.0 | [Apache 2.0](//gohugo.io/about/license/) |
+| [Docsy](//github.com/docsy/docsy/) | --- | [Apache 2.0](//github.com/docsy/docsy/blob/main/LICENSE) |
 
 
 ## ライセンス

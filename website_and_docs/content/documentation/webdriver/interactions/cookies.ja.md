@@ -3,9 +3,8 @@ title: "クッキーの使用"
 linkTitle: "クッキーの使用"
 weight: 4
 aliases: [
-"/documentation/ja/support_packages/working_with_cookies/",
-"/ja/documentation/support_packages/working_with_cookies/",
-"/ja/documentation/webdriver/browser/cookies/"
+"/documentation/support_packages/working_with_cookies/",
+"/documentation/webdriver/browser/cookies/"
 ]
 ---
 
@@ -37,7 +36,7 @@ Cookieの追加では、一連の定義済みのシリアル化可能なJSONオ�
 {{< gh-codeblock path="/examples/ruby/spec/interactions/cookies_spec.rb#L9-L11" >}}
   {{< /tab >}}
   {{< tab header="JavaScript" text=true >}}
-  {{< gh-codeblock path="/examples/javascript/test/interactions/cookies.spec.js#L18">}}
+{{< gh-codeblock path="/examples/javascript/test/interactions/cookies.spec.js#L18">}}
   {{< /tab >}}
 {{< tab header="Kotlin" >}}
 import org.openqa.selenium.Cookie

@@ -3,9 +3,8 @@ title: "浏览器交互"
 linkTitle: "交互"
 weight: 10
 aliases: [
-"/documentation/zh-cn/webdriver/browser_manipulation/",
-"/zh-cn/documentation/webdriver/browser_manipulation/",
-"/zh-cn/documentation/webdriver/browser/"
+"/documentation/webdriver/browser_manipulation/",
+"/documentation/webdriver/browser/"
 ]
 ---
 

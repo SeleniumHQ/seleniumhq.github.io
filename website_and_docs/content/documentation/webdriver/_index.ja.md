@@ -4,7 +4,6 @@ linkTitle: "WebDriver"
 weight: 2
 description: >
   WebDriverはブラウザをネイティブに操作します。詳細については、こちらをご覧ください。
-aliases: ["/documentation/ja/webdriver/"]
 ---
 
 WebDriverは、ユーザーがローカルまたはSeleniumサーバーを使用するリモートマシンで行うように、ブラウザをネイティブに動かし、ブラウザの自動化に関して大きく前進します。

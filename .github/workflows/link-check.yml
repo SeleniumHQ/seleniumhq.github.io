@@ -25,13 +25,13 @@ jobs:
       - name: Set up Hugo
         uses: peaceiris/actions-hugo@v3
         with:
-          hugo-version: ' 0.148.2'
+          hugo-version: '0.168.0'
           extended: true
 
       - name: Setup Node
         uses: actions/setup-node@v7
         with:
-          node-version: '24.20.0'
+          node-version: '24.22.1'
           cache: 'npm'
           # The action defaults to search for the dependency file (package-lock.json,
           # npm-shrinkwrap.json or yarn.lock) in the repository root, and uses its
@@ -41,7 +41,9 @@ jobs:
 
       - run: npm ci
         working-directory: website_and_docs
-      - run: hugo --destination $GITHUB_WORKSPACE/website_and_docs/public
+      - run: |
+          source ../scripts/setup-dart-sass-path.sh
+          hugo --destination $GITHUB_WORKSPACE/website_and_docs/public
         working-directory: website_and_docs
 
       - name: Link check

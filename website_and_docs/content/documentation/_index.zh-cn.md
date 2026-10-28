@@ -3,7 +3,6 @@ title: "Selenium 浏览器自动化项目"
 linkTitle: "文档"
 cascade:
 - type: docs
-aliases: ["/documentation/zh-cn/"]
 ---
 
 Selenium 是支持 web 浏览器自动化的一系列工具和库的综合项目。

@@ -3,8 +3,7 @@ title: "Evite compartilhamento de estado"
 linkTitle: "Evite compartilhamento de estado"
 weight: 8
 aliases: [
-"/documentation/pt-br/guidelines_and_recommendations/avoid_sharing_state/",
-"/pt-br/documentation/guidelines/avoid_sharing_state/"
+"/documentation/guidelines/avoid_sharing_state/"
 ]
 ---
 

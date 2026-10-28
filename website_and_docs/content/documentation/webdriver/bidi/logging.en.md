@@ -7,7 +7,13 @@ description: >
   different things, these methods are made available via a "script" namespace.
 aliases: [
   "/documentation/en/webdriver/bidirectional/bidirectional_w3c/log",
-  "/documentation/webdriver/bidirectional/webdriver_bidi/log"
+  "/documentation/webdriver/bidirectional/webdriver_bidi/log",
+"/documentation/ja/webdriver/bidirectional/bidirectional_w3c/log",
+"/documentation/zh-cn/webdriver/bidirectional/bidirectional_w3c/log",
+"/ja/documentation/webdriver/bidi/logging/",
+"/ja/documentation/webdriver/bidirectional/webdriver_bidi/log",
+"/zh-cn/documentation/webdriver/bidi/logging/",
+"/zh-cn/documentation/webdriver/bidirectional/webdriver_bidi/log"
 ]
 ---
 
@@ -22,7 +28,7 @@ Record or take actions on `console.log` events.
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< badge-implementation >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/high_level/LogTest.java#35" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
 {{< gh-codeblock path="/examples/python/tests/bidi/test_bidi_logging.py#L11" >}}
@@ -47,7 +53,7 @@ You need to store the ID returned when adding the handler to delete it.
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< badge-implementation >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/high_level/LogTest.java#53-54" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
 {{< gh-codeblock path="/examples/python/tests/bidi/test_bidi_logging.py#L23-24" >}}
@@ -74,7 +80,7 @@ Record or take actions on JavaScript exception events.
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< badge-implementation >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/high_level/LogTest.java#65" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
 {{< gh-codeblock path="/examples/python/tests/bidi/test_bidi_logging.py#L35" >}}
@@ -99,7 +105,7 @@ You need to store the ID returned when adding the handler to delete it.
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< badge-implementation >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/bidirectional/webdriver_bidi/high_level/LogTest.java#81-82" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
 {{< gh-codeblock path="/examples/python/tests/bidi/test_bidi_logging.py#L47-48" >}}

@@ -9,11 +9,15 @@ on:
       - trunk
     paths:
       - 'examples/dotnet/**'
+      - '.github/workflows/dotnet-examples.yml'
+      - 'scripts/dotnet-test-retry.py'
   push:
     branches:
       - trunk
     paths:
       - 'examples/dotnet/**'
+      - '.github/workflows/dotnet-examples.yml'
+      - 'scripts/dotnet-test-retry.py'
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -52,12 +56,12 @@ jobs:
       if: matrix.release == 'stable'
       uses: actions/setup-dotnet@v6
       with:
-        dotnet-version: 8.x
+        dotnet-version: 10.x
     - name: Set up .Net Nightly
       if: matrix.release == 'nightly'
       uses: actions/setup-dotnet@v6
       with:
-        dotnet-version: 8.x
+        dotnet-version: 10.x
         source-url: https://nuget.pkg.github.com/seleniumhq/index.json
       env:
         NUGET_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
@@ -87,12 +91,7 @@ jobs:
       uses: actions/setup-java@v6
       with:
         distribution: 'temurin'
-        java-version: 11
+        java-version: 25.0.5+8.0.LTS
     - name: Run tests
-      uses: nick-fields/retry@v4.0.0
-      with:
-        timeout_minutes: 40
-        max_attempts: 2
-        command: |
-          cd examples/dotnet/SeleniumDocs
-          dotnet test
+      timeout-minutes: 60
+      run: python ./scripts/dotnet-test-retry.py examples/dotnet/SeleniumDocs --retries 2

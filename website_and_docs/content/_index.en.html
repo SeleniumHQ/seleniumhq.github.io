@@ -1,39 +1,96 @@
 +++
 title = "Selenium"
 linkTitle = "Selenium"
+description = "Selenium is a browser automation tool that gives you full control over Chrome, Firefox, Edge and Safari. Write your scripts in Java, Python, C#, Ruby, JavaScript or Kotlin using the official W3C WebDriver standard."
 +++
 
 {{< blocks/section color="selenium-green" height="min" >}}
 <div class="mx-auto text-center p-4">
-	<h1 class="d-1 fw-bold">Selenium automates browsers. That's it!</h1>
-	<p class="d-1 fs-1 fw-normal mb-0">What you do with that power is entirely up to you.</p>
+	<h1 class="d-1 fw-bold">Automate any browser, from any language.</h1>
 	<p class="lead mt-3 mb-0">
-		Primarily it is for automating web applications for testing purposes, but is certainly not limited to just that.
+		Selenium is a browser automation tool that gives you full control over Chrome, Firefox, Edge and Safari.
+		Write your scripts in Java, Python, C#, Ruby, JavaScript or Kotlin using the official
+		<a class="text-white text-decoration-underline" href="https://w3c.github.io/webdriver-bidi/">W3C WebDriver standard</a>.
 	</p>
-	<p class="lead mb-0">
-		Boring web-based administration tasks can (and should) also be automated as well.
+	<div class="selenium-hero-actions mt-4">
+		<a href="/documentation/webdriver/getting_started/"
+		   class="selenium-button selenium-green-on-white text-uppercase fw-bold">
+			Get started
+			<i class="ps-3 fas fa-caret-right"></i>
+		</a>
+		<a href="/documentation/ai_agents/"
+		   class="selenium-button selenium-white-green text-uppercase fw-bold">
+			Using AI agents
+			<i class="ps-3 fas fa-caret-right"></i>
+		</a>
+	</div>
+	<p class="mt-4 mb-0">
+		Works out of the box: Selenium downloads what it needs to talk to your browser, so there is
+		nothing to install by hand.
 	</p>
 </div>
 {{< /blocks/section >}}
 
-{{< getting-started color="100" height="auto" title="Getting Started" >}}
+{{< blocks/section color="white" height="auto" >}}
+<div class="col-lg-10 mx-auto py-4">
+	<h2 class="text-center mb-3">Install Selenium and run your first script</h2>
+	<p class="text-center mb-4">
+		Add the Selenium package for your language, then run the script below.
+		It opens Chrome, loads a page and closes the browser again.
+	</p>
+{{< tabpane text=true >}}
+{{< tab header="Java" >}}
+<p>Add <code>org.seleniumhq.selenium:selenium-java</code> to your build, then run:</p>
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/hello/HelloSelenium.java" >}}
+{{< /tab >}}
+{{< tab header="Python" >}}
+<p>Install the package:</p>
+{{< highlight shell >}}pip install selenium{{< /highlight >}}
+<p>Then run:</p>
+{{< gh-codeblock path="/examples/python/tests/hello/hello_selenium.py" >}}
+{{< /tab >}}
+{{< tab header="CSharp" >}}
+<p>Install the package:</p>
+{{< highlight shell >}}dotnet add package Selenium.WebDriver{{< /highlight >}}
+<p>Then run:</p>
+{{< gh-codeblock path="/examples/dotnet/HelloSelenium.cs" >}}
+{{< /tab >}}
+{{< tab header="Ruby" >}}
+<p>Install the gem:</p>
+{{< highlight shell >}}gem install selenium-webdriver{{< /highlight >}}
+<p>Then run:</p>
+{{< gh-codeblock path="/examples/ruby/spec/hello/hello_selenium.rb" >}}
+{{< /tab >}}
+{{< tab header="JavaScript" >}}
+<p>Install the package:</p>
+{{< highlight shell >}}npm install selenium-webdriver{{< /highlight >}}
+<p>Then run:</p>
+{{< gh-codeblock path="/examples/javascript/test/hello/helloSelenium.js" >}}
+{{< /tab >}}
+{{< tab header="Kotlin" >}}
+<p>Kotlin uses the Java bindings. Add <code>org.seleniumhq.selenium:selenium-java</code> to your build, then run:</p>
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/hello/HelloSelenium.kt" >}}
+{{< /tab >}}
+{{< /tabpane >}}
+	<p class="text-center mt-3 mb-0">
+		Need more detail? Follow the
+		<a href="/documentation/webdriver/getting_started/">Getting Started guide</a>.
+	</p>
+</div>
+{{< /blocks/section >}}
+
+{{< getting-started color="100" height="auto" type="justify-content-center" title="Pick your tool" >}}
 
 {{% getting-started-item icon="icons/webdriver.svg" title="Selenium WebDriver" color="selenium-webdriver" url="/documentation/webdriver/" url_text="Read more" %}}
-If you want to create robust, browser-based regression automation suites and tests, scale and
-distribute scripts across many environments, then you want to use Selenium WebDriver, a
-collection of language specific bindings to drive a browser - the way it is meant to be driven.
-{{% /getting-started-item %}}
-
-{{% getting-started-item icon="icons/ide.svg" title="Selenium IDE" color="selenium-ide" url="https://selenium.dev/selenium-ide/" url_text="Read more" %}}
-If you want to create quick bug reproduction scripts, create scripts to aid in automation-aided
-exploratory testing, then you want to use Selenium IDE; a Chrome, Firefox and Edge add-on that
-will do simple record-and-playback of interactions with the browser.
+<strong>Use this when</strong> you want to drive a browser from code in your own language.
+WebDriver is a collection of language-specific bindings that control a real browser the way
+a user would, and it is the foundation for everything else Selenium does.
 {{% /getting-started-item %}}
 
 {{% getting-started-item icon="icons/grid.svg" title="Selenium Grid" color="selenium-grid" url="/documentation/grid/" url_text="Read more" %}}
-If you want to scale by distributing and running tests on several machines and manage multiple
-environments from a central point, making it easy to run the tests against a vast combination of
-browsers/OS, then you want to use Selenium Grid.
+<strong>Use this when</strong> you need to run your WebDriver tests on several machines, browsers
+and operating systems at once. Grid distributes sessions from a central point so you can run
+against a vast combination of environments in parallel.
 {{% /getting-started-item %}}
 
 {{< /getting-started >}}

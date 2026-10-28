@@ -39,6 +39,8 @@ rm -rf website_and_docs/public
 echo -e "\033[0;32mSwitching to Docsy theme directory...\033[0m"
 cd website_and_docs && npm install
 
+source ../scripts/setup-dart-sass-path.sh
+
 echo -e "\033[0;32mGenerating Hugo site for website...\033[0m"
 echo -e "\033[0;32mUsing SELENIUM_EXAMPLES_REPO=${SELENIUM_EXAMPLES_REPO} SELENIUM_EXAMPLES_ORG=${SELENIUM_EXAMPLES_ORG} SELENIUM_EXAMPLES_BRANCH=${SELENIUM_EXAMPLES_BRANCH} hugo --minify ${USE_BASE_URL_SITE}...\033[0m"
 SELENIUM_EXAMPLES_REPO=${SELENIUM_EXAMPLES_REPO} SELENIUM_EXAMPLES_ORG=${SELENIUM_EXAMPLES_ORG} SELENIUM_EXAMPLES_BRANCH=${SELENIUM_EXAMPLES_BRANCH} hugo --minify ${USE_BASE_URL_SITE}

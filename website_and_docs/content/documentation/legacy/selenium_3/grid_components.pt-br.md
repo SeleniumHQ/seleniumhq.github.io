@@ -4,7 +4,6 @@ linkTitle: "Grid Components"
 weight: 6
 description: >
     Description of Hub and Nodes for Grid 3.
-aliases: ["/documentation/pt-br/grid/grid_3/components_of_a_grid/"]
 ---
 
 {{< figure src="/images/documentation/legacy/grid_3/grid.png" class="img-responsive text-center" alt="Grid 3 Components">}}

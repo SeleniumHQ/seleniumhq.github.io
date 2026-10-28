@@ -43,13 +43,13 @@ Thank you to everyone in the community who's given us so much helpful
 and thoughtful feedback on the first release candidate. We really hope
 that you enjoy this release candidate too!
 
-{{< tweet user="AutomatedTester" id="1443577793871179786" >}}
+{{< x user="AutomatedTester" id="1443577793871179786" >}}
 
-{{< tweet user="jimevansmusic" id="1443601790092681221" >}}
+{{< x user="jimevansmusic" id="1443601790092681221" >}}
 
-{{< tweet user="titusfortner" id="1443575623822151688" >}}
+{{< x user="titusfortner" id="1443575623822151688" >}}
 
-{{< tweet user="shs96c" id="1443606189791662080" >}}
+{{< x user="shs96c" id="1443606189791662080" >}}
 
 
 [geckodriver]: https://github.com/mozilla/geckodriver/releases

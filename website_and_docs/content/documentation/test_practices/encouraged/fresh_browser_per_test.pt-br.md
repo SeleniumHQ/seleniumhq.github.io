@@ -3,8 +3,7 @@ title: "Navegador novo por teste"
 linkTitle: "Navegador novo por teste"
 weight: 11
 aliases: [
-"/documentation/pt-br/guidelines_and_recommendations/fresh_browser_per_test/",
-"/pt-br/documentation/guidelines/fresh_browser_per_test/"
+"/documentation/guidelines/fresh_browser_per_test/"
 ]
 ---
 

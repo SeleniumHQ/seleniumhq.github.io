@@ -3,8 +3,7 @@ title: "远程WebDriver服务器"
 linkTitle: "远程WebDriver服务器"
 weight: 6
 aliases: [
-"/documentation/zh-cn/legacy_docs/remote_webdriver_server/",
-"/zh-cn/documentation/legacy/remote_webdriver_server/"
+"/documentation/legacy/remote_webdriver_server/"
 ]
 ---
 
