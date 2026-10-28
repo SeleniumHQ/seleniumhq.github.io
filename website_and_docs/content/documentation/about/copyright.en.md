@@ -65,7 +65,7 @@ to the use of the information contained herein.
 
 | Software | Version | License |
 | -------- | ------- | ------- |
-| [Hugo](//gohugo.io/) | v0.168.0 | [Apache 2.0](//gohugo.io/about/license/) |
+| [Hugo](//gohugo.io/) | v0.169.0 | [Apache 2.0](//gohugo.io/about/license/) |
 | [Docsy](//github.com/docsy/docsy/) | --- | [Apache 2.0](//github.com/docsy/docsy/blob/main/LICENSE) |
 
 
