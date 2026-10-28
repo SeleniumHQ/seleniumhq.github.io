@@ -1,4 +1,5 @@
 #!/bin/bash
+set -eo pipefail
 
 VERSION_STR="$1"
 NEW_VERSION=$(echo "$VERSION_STR" | cut -d. -f2)
@@ -51,6 +52,7 @@ echo "New blog post: $NEW_BLOG (date: $NEW_BLOG_DATE)"
 echo
 
 CONTRIBUTORS=$(mktemp)
+trap 'rm -f "$CONTRIBUTORS"' EXIT
 {
 echo "Selenium Contributors"
 gh api --method GET /repos/seleniumhq/selenium/commits -f since="$SINCE_COMMIT_DATE" -f until="$UNTIL_COMMIT_DATE" -f per_page=1000 \
@@ -69,4 +71,3 @@ gh api --method GET /repos/seleniumhq/docker-selenium/commits -f since="$SINCE_C
 
 echo
 scripts/github-users.sh "$CONTRIBUTORS"
-rm "$CONTRIBUTORS"
