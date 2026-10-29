@@ -48,6 +48,7 @@ jobs:
       - name: Setup Fluxbox and Xvfb
         if: matrix.os == 'ubuntu'
         run: |
+          sudo apt-get update
           sudo apt-get -y install fluxbox libxss1 libappindicator3-1 libindicator7
           Xvfb :99 &
           fluxbox -display :99 &
@@ -55,7 +56,7 @@ jobs:
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 4.0.8
+          ruby-version: 4.0.9
           bundler-cache: true
       - name: Install Gems Nightly non-Windows
         if: matrix.release == 'nightly' && matrix.os != 'windows'
@@ -90,7 +91,7 @@ jobs:
         uses: actions/setup-java@v6
         with:
           distribution: 'temurin'
-          java-version: 25.0.4+101.0.LTS
+          java-version: 25.0.5+8.0.LTS
       - name: Run tests on Windows
         if: matrix.os == 'windows'
         uses: nick-invision/retry@v4.0.0
@@ -123,7 +124,7 @@ jobs:
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 4.0.8
+          ruby-version: 4.0.9
           bundler-cache: true
       - name: Install dependencies
         working-directory: ./examples/ruby
