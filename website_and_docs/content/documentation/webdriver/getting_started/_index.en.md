@@ -57,8 +57,5 @@ want to use, and the driver for that browser.
 
 ***Follow the links below to get up and going with Selenium WebDriver.***
 
-If you wish to start with a low-code/record and playback tool, please check
-[Selenium IDE](https://selenium.dev/selenium-ide)
-
 Once you get things working, if you want to scale up your tests, check out the 
 [Selenium Grid]({{< ref "/documentation/grid" >}}).

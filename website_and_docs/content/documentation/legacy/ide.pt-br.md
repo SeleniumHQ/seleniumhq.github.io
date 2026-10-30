@@ -1,10 +1,15 @@
 ---
 title: "Selenium IDE"
 linkTitle: "IDE"
-weight: 10
+weight: 9
 description: >
     Selenium IDE é uma aplicação autónoma que grava e reproduz uma acção do utilizador.
+aliases: ["/documentation/ide/"]
 ---
+
+{{% pageinfo color="warning" %}}
+Selenium IDE is no longer maintained by the Selenium project. This page is kept for reference.
+{{% /pageinfo %}}
 
 Selenium's Integrated Development Environment ([Selenium IDE](//selenium.dev/selenium-ide))
 é uma ferramenta de utilização simples que grava as acções de um utilizador usando comandos Selenium com parametros definidos conforme o contexto de cada elemento.
