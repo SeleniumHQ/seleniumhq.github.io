@@ -3,7 +3,7 @@ title: "Getting started"
 linkTitle: "Getting Started"
 weight: 2
 description: >
-  Install Selenium, write your first script, and run it as a test.
+  Install Selenium, write your first script, and run it.
 aliases: [
 "/documentation/en/getting_started/", 
 "/documentation/en/getting_started/quick/",
@@ -46,20 +46,21 @@ aliases: [
 ]
 ---
 
-This page takes you from nothing installed to a Selenium script running as a test.
+This page takes you from an empty project to a running Selenium script,
+and then shows how to run the same code with a test runner.
 
 ## You will learn
 
 * How to install the Selenium library for your programming language
 * How to write and run a first script that opens a browser, interacts with a page, and closes it
-* How to run the same code as a test with a test runner
+* How to run the same code with a test runner
 
 ## Install
 
-{{% alert title="You do not need to download drivers" color="primary" %}}
-You do not need to download drivers.
-[Selenium Manager]({{< ref "/documentation/selenium_manager.md" >}})
-fetches the right browser and driver automatically.
+{{% alert title="No driver downloads" color="primary" %}}
+From Selenium 4.6 onwards you no longer need to download or manage browser drivers.
+[Selenium Manager]({{< ref "/documentation/selenium_manager.md" >}}) finds the driver that
+matches your browser, and downloads the browser itself if none is installed.
 {{% /alert %}}
 
 Add the Selenium library to your project.
@@ -120,9 +121,8 @@ Add the same Maven or Gradle dependency shown on the Java tab.
 
 ## Your first script
 
-Everything Selenium does is send the browser commands to do something,
-or send requests for information.
-This script uses eight basic commands that you will use in almost every session:
+Every Selenium call either tells the browser to do something or asks it for information.
+This script uses the eight commands you will use in almost every session:
 
 1. Start the [driver session]({{< ref "/documentation/webdriver/drivers" >}})
 2. [Navigate]({{< ref "/documentation/webdriver/interactions/navigation.md" >}}) to a page
@@ -158,7 +158,7 @@ This script uses eight basic commands that you will use in almost every session:
 Run the file with your language's usual tooling.
 The browser opens, fills in the form, and closes.
 
-## Run it as a test
+## Run it with a test runner
 
 Most people use Selenium to test web applications.
 A test runner gives you before and after hooks, assertions, and reporting,
