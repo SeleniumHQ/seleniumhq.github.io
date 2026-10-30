@@ -1,26 +1,16 @@
-{{ $githubToken := (getenv "SELENIUM_CI_TOKEN") }}
-{{ if $githubToken }}
-  {{ $url := .Get 0 }}
-  {{ $toReplace := printf "://%s@" $githubToken }}
-  {{ $tokenInUrl :=cond (eq $githubToken "") "://" $toReplace }}
-  {{ $url := replace $url "://" $tokenInUrl }}
-  {{ $userJson := resources.GetRemote $url }}
-  {{ $user := $userJson | transform.Unmarshal }}
+{{ $login := path.Base (trim (.Get 0) " ") }}
+{{ $name := index site.Data.github_users (lower $login) | default $login }}
 
     <div class="card text-center bg-transparent border-0 p-2 h-100" style="max-width: 12rem;">
-      <img src="{{$user.avatar_url}}" class="card-img-top mx-auto" alt="{{$user.name}}" style="max-width: 122px;">
+      <img src="https://avatars.githubusercontent.com/{{$login}}" class="card-img-top mx-auto" alt="{{$name}}" style="max-width: 122px;">
       <div class="card-body pb-0 px-1">
         <p class="card-text m-0">
-          {{$user.name}}
+          {{$name}}
         </p>
       </div>
       <div class="card-footer bg-transparent border-0 px-1">
         <p>
-          <a href="{{$user.html_url}}">@{{$user.login}}</a>
+          <a href="https://github.com/{{$login}}">@{{$login}}</a>
         </p>
       </div>
     </div>
-
-{{ else }}
-  {{ partial "github-content.html" }}
-{{ end }}
