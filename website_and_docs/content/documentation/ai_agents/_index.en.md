@@ -7,13 +7,13 @@ description: >-
   correct, and not flaky.
 ---
 
+## Why agents write old Selenium
+
 A large share of Selenium code is now written with the help of a coding agent,
 and much of it is wrong in the same handful of ways.
-
 The reason is the training data.
 Models learned Selenium from more than a decade of blog posts, forum answers, and tutorials,
-and most of that material describes Selenium 2 and Selenium 3.
-Those APIs were removed years ago.
+and most of that material describes Selenium 2 and Selenium 3, whose APIs were removed years ago.
 Worse, some of the most-repeated patterns in that material —
 sleeping to wait for the page,
 downloading driver binaries by hand,
@@ -26,9 +26,12 @@ It is a reason to give an agent what you would give a new team member:
 the version you are on,
 the place the current documentation lives,
 and the conventions the project expects.
-This page shows how to do that, and what specifically to correct.
+The blog post
+[Your Agent Learned Selenium From My Old Blog Posts](/blog/2026/using-ai-agents-with-selenium/)
+tells the story behind this page;
+the rest of the page shows how to do that, and what specifically to correct.
 
-## Give the agent the current documentation
+## Set up your agent
 
 An agent that can read the current docs stops guessing.
 Point it at these, in this order:
@@ -61,7 +64,73 @@ A useful instruction to give an agent is a negative one:
 if an API cannot be found in the current documentation or API reference, it does not exist,
 however familiar it looks.
 
-## Write the project rules down
+Each coding tool reads project instructions from a different file.
+Create the file your tool reads, and add the matching snippet below.
+Each one points the tool at the index and the examples;
+the full rules to paste after it are in [Rules file](#rules-file).
+
+### Claude Code
+
+Claude Code reads `CLAUDE.md` in the project root.
+
+```markdown
+## Selenium
+
+- Documentation index: https://www.selenium.dev/llms.txt
+- Examples: https://github.com/SeleniumHQ/seleniumhq.github.io/tree/trunk/examples
+- Fetch the relevant documentation page before using a Selenium API you are not certain about.
+- If an API is not in the current documentation or API reference, it does not exist.
+```
+
+### Cursor
+
+Cursor reads rule files from `.cursor/rules/`. Create `.cursor/rules/selenium.mdc`:
+
+```markdown
+---
+description: Selenium browser automation conventions. Use when writing or changing Selenium tests.
+alwaysApply: false
+---
+
+- Documentation index: https://www.selenium.dev/llms.txt
+- Examples: https://github.com/SeleniumHQ/seleniumhq.github.io/tree/trunk/examples
+- Fetch the relevant documentation page before using a Selenium API you are not certain about.
+- If an API is not in the current documentation or API reference, it does not exist.
+```
+
+### VS Code Copilot
+
+GitHub Copilot reads `.github/copilot-instructions.md`.
+
+```markdown
+## Selenium
+
+- Documentation index: https://www.selenium.dev/llms.txt
+- Examples: https://github.com/SeleniumHQ/seleniumhq.github.io/tree/trunk/examples
+- Fetch the relevant documentation page before using a Selenium API you are not certain about.
+- If an API is not in the current documentation or API reference, it does not exist.
+```
+
+### Codex
+
+Codex reads `AGENTS.md` in the project root.
+
+```markdown
+## Selenium
+
+- Documentation index: https://www.selenium.dev/llms.txt
+- Examples: https://github.com/SeleniumHQ/seleniumhq.github.io/tree/trunk/examples
+- Fetch the relevant documentation page before using a Selenium API you are not certain about.
+- If an API is not in the current documentation or API reference, it does not exist.
+```
+
+### Other tools
+
+`AGENTS.md` is read by a growing number of tools.
+If yours has its own rules file, put the same text there.
+If it has none, paste the text at the start of the conversation.
+
+## Rules file
 
 Agents follow conventions far more reliably when the conventions are written in a file
 rather than repeated in chat.
@@ -179,13 +248,13 @@ These are the removals and replacements that models get wrong most often.
 {{% /tab %}}
 {{< /tabpane >}}
 
-## What to correct, and why
+### What to correct, and why
 
 The rules above are short on purpose.
 This section is the reasoning behind them,
 and it is worth reading so you can recognise the bad output when you see it.
 
-### Nobody downloads drivers any more
+#### Nobody downloads drivers any more
 
 The most common single artefact of stale training data is driver management:
 a third-party driver manager, a hard-coded path to `chromedriver`, or a `PATH` setup step.
@@ -197,7 +266,7 @@ Starting a session takes no path and no extra dependency.
 When an agent adds a driver manager, it isn't adding redundancy.
 It is adding a second, slower, less reliable source of truth for which driver version to use.
 
-### Configuration lives in Options
+#### Configuration lives in Options
 
 `DesiredCapabilities` and free-form capability maps predate the W3C WebDriver standard.
 Non-standard capabilities now have to be vendor-prefixed, and unprefixed ones can fail
@@ -207,7 +276,7 @@ payload by construction, which is why they are the only supported route.
 The [upgrade guide]({{< ref "/documentation/webdriver/troubleshooting/upgrade_to_selenium_4.md" >}})
 has before-and-after code for every binding.
 
-### Sleeping is not waiting
+#### Sleeping is not waiting
 
 Sleeping is the most-repeated pattern in the training data and the most damaging.
 A fixed sleep is either too short, and the test fails, or too long, and the suite crawls.
@@ -226,7 +295,7 @@ an agent will very often "fix" it by raising a timeout or adding a sleep.
 That hides the race rather than removing it.
 Insist that it identify which condition was not yet true.
 
-### Locators have to survive a deploy
+#### Locators have to survive a deploy
 
 Agents are fond of absolute XPath and generated class names,
 partly because so much tutorial code contains them.
@@ -241,7 +310,7 @@ It cannot see your application, so unless it has actually loaded the page it is 
 on what a login form usually looks like.
 Giving it a way to check — see below — matters more here than anywhere else.
 
-### BiDi, not CDP
+#### BiDi, not CDP
 
 For console logs, JavaScript errors, and network interception,
 models reach for the Chrome DevTools Protocol, because that is what the last few years of
@@ -251,7 +320,7 @@ CDP is Chromium-only and has no stable API between browser versions.
 and it works across browsers.
 CDP support in Selenium exists as a stopgap, not as the recommended path.
 
-### Grid 4 is not Grid 3
+#### Grid 4 is not Grid 3
 
 Agents frequently produce Grid 3 invocations —
 `-role hub`, `-role node`, and a JSON node config file.
@@ -280,7 +349,7 @@ so evaluate them as you would any other dependency.
 Either way, the rule to write down is the same:
 verify locators against the running application instead of inferring them.
 
-## Let the agent read the failure
+### Let the agent read the failure
 
 Selenium's exceptions are specific, and an agent that is handed the real exception —
 rather than "the test failed" — will usually fix the right thing.
@@ -295,7 +364,17 @@ rather than "the test failed" — will usually fix the right thing.
 * A screenshot taken at the moment of failure tells an agent more about an
   `ElementClickInterceptedException` — a cookie banner, an overlay — than any stack trace.
 
-## A workflow that works
+## Reviewing agent-written tests
+
+Review the diff for the patterns above, the way you would review a new starter's.
+Sleeps, driver paths, and absolute XPath are the ones that survive review most often,
+because they work on the machine where they were written.
+
+Do not accept a sleep or a longer timeout as the fix for a flaky test.
+That hides the race rather than removing it.
+Ask the agent which condition was not yet true, and wait for that condition.
+
+### A workflow that works
 
 1. Have the agent open the feature under test and propose locators, either with a throwaway
    script or an MCP server. Review the locators before any test is written.
@@ -305,6 +384,12 @@ rather than "the test failed" — will usually fix the right thing.
    to be free of races.
 5. Review the diff for the patterns above. Sleeps, driver paths, and absolute XPath are the ones
    that survive review most often, because they work on the machine where they were written.
+
+## Outdated patterns
+
+[Outdated Selenium patterns and their current replacements](/documentation/ai_agents/outdated_patterns/)
+shows each pattern an agent is likely to reproduce from old training data,
+when it stopped working, and what to write instead.
 
 ## Next steps
 
