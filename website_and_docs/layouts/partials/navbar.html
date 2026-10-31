@@ -36,6 +36,9 @@
 			    </li>
 			{{ end }}
 			{{ end }}
+			{{ if or (eq .Section "documentation") (.HasShortcode "tabpane") }}
+			{{ partial "code-lang-selector.html" . }}
+			{{ end }}
 			{{ if  .Site.Params.versions }}
 			<li class="nav-item dropdown d-none d-lg-block">
 				{{ partial "navbar-version-selector.html" . }}
