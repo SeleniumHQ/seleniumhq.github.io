@@ -131,11 +131,18 @@ section = ["HTML", "print"]
     baseName = "llms"
     isPlainText = true
 
+  # The same curated pages as llms.txt, concatenated as plain text. Rendered by
+  # layouts/index.llms-full.txt.
+  [outputFormats.llms-full]
+    mediaType = "text/plain"
+    baseName = "llms-full"
+    isPlainText = true
+
 # English only, and deliberately so: llms.txt is a single flat index, and
 # interleaving four translations of the same page dilutes it for every language.
 # The translations remain fully indexed as normal HTML.
 [languages.en.outputs]
-home = ["HTML", "RSS", "llms"]
+home = ["HTML", "RSS", "llms", "llms-full"]
 section = ["HTML", "print"]
 
 [params]
