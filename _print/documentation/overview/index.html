@@ -87,7 +87,20 @@ Selenium “abstracts” these differences,
 hiding their details and intricacies from the person writing the code.
 This allows you to write several lines of code to perform a complicated workflow,
 but these same lines will execute on Firefox,
-Internet Explorer, Chrome, and all other supported browsers.</p><h3 id=tools-and-support>Tools and support</h3><p>Selenium&rsquo;s minimalist design approach gives it the
+Internet Explorer, Chrome, and all other supported browsers.</p><h3 id=webdriver-and-drivers>WebDriver and drivers</h3><p>Selenium supports automation of all the major browsers in the market
+through the use of <em>WebDriver</em>.
+<a href=https://w3c.github.io/webdriver-bidi/>W3C WebDriver</a> is an API and protocol that defines a language-neutral interface
+for controlling the behaviour of web browsers.
+Each browser is backed by a specific WebDriver implementation, called a <em>driver</em>.
+The driver is the component responsible for delegating down to the browser,
+and handles communication to and from Selenium and the browser.</p><p>This separation is part of a conscious effort to have browser vendors
+take responsibility for the implementation for their browsers.
+Selenium makes use of these third party drivers where possible,
+but also provides its own drivers maintained by the project
+for the cases when this is not a reality.</p><p>The Selenium framework ties all of these pieces together
+through a user-facing interface that enables the different browser backends
+to be used transparently,
+enabling cross-browser and cross-platform automation.</p><h3 id=tools-and-support>Tools and support</h3><p>Selenium&rsquo;s minimalist design approach gives it the
 versatility to be included as a component in bigger applications.
 The surrounding infrastructure provided under the Selenium umbrella
 gives you the tools to put together

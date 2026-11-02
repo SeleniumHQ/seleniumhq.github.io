@@ -31,10 +31,7 @@ Install, write, and run a first script in any supported language.
 - [Using AI coding agents with Selenium](https://www.selenium.dev/documentation/ai_agents/): How to get coding agents and large language models to write Selenium code that is current, correct, and not flaky.
 - [WebDriver](https://www.selenium.dev/documentation/webdriver/): WebDriver drives a browser natively; learn more about it.
 - [Waiting Strategies](https://www.selenium.dev/documentation/webdriver/waits/)
-- [Getting started](https://www.selenium.dev/documentation/webdriver/getting_started/): If you are new to Selenium, we have a few resources that can help you get up to speed right away.
-- [Install a Selenium library](https://www.selenium.dev/documentation/webdriver/getting_started/install_library/): Setting up the Selenium library for your favourite programming language.
-- [Write your first Selenium script](https://www.selenium.dev/documentation/webdriver/getting_started/first_script/): Step-by-step instructions for constructing a Selenium script
-- [Organizing and Executing Selenium Code](https://www.selenium.dev/documentation/webdriver/getting_started/using_selenium/): Scaling Selenium execution with an IDE and a Test Runner library
+- [Getting started](https://www.selenium.dev/documentation/webdriver/getting_started/): Install Selenium, write your first script, and run it.
 
 ## Driver sessions and browsers
 
