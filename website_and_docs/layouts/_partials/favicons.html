@@ -1,8 +1,8 @@
 {{/*
   Selenium's favicon links.
 
-  Docsy 0.16.0 stopped shipping default favicon artwork and its replacement
-  partial only discovers conventionally named files in the site's static/ root
+  Docsy 0.18.1 ships no default favicon artwork and its favicons partial
+  only discovers conventionally named files in the site's static/ root
   (static/favicon.ico, static/apple-touch-icon.png, and so on). This site keeps
   its icons in static/favicons/ instead, so without this override no icon links
   are emitted at all.
@@ -10,10 +10,8 @@
   Overriding rather than relocating the files keeps every icon URL exactly as
   it is published today.
 
-  Note that until this release the site also linked six android-NxN.png icons
-  that came from Docsy's own default artwork, not from this repository. Those
-  files no longer exist, so the Selenium-branded pwa-*.png icons already in
-  static/favicons/ take their place.
+  The Selenium-branded pwa-*.png icons in static/favicons/ provide the larger
+  192x192 and 512x512 sizes.
 */ -}}
 <link rel="shortcut icon" href="{{ "favicons/favicon.ico" | relURL }}">
 <link rel="icon" type="image/png" href="{{ "favicons/favicon-16x16.png" | relURL }}" sizes="16x16">
