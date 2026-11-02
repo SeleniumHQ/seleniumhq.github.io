@@ -29,8 +29,8 @@ Steps needed to have this working locally and work on it:
 - Run `npm install`
 - Run `hugo server`
 
-`npm install` is required, not optional: since Docsy 0.16.0 the theme's
-Bootstrap and Font Awesome assets are npm packages rather than Hugo modules.
+`npm install` is required, not optional: Docsy 0.18.1 ships the theme's
+Bootstrap and Font Awesome assets as npm packages rather than Hugo modules.
 Skipping it makes the build fail with SCSS import errors. If you ever change
 the Docsy version, run `hugo mod npm pack` first to refresh
 `packages/hugoautogen/`, then `npm install` again.

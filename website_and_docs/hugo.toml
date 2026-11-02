@@ -83,13 +83,12 @@ description = "Selenium automates browsers. That's it!"
 
 # Import docsy theme as module
 #
-# Docsy 0.16.0 moved the theme from the repository root into theme/, and
-# 0.18.0 moved the repository from google/docsy to docsy/docsy, so the
-# import path is github.com/docsy/docsy/theme (still tagged as a plain
-# release version). Docsy 0.16.0 dropped the docsy/dependencies module:
-# Bootstrap and Font Awesome now arrive as npm packages, pulled into
-# package.json by `hugo mod npm pack`. See scripts/README or the Docsy 0.16.0
-# release notes if the vendored asset paths ever need re-checking.
+# Docsy 0.18.1 lives in the docsy/docsy repository with the theme under
+# theme/, so the import path is github.com/docsy/docsy/theme (tagged as a
+# plain release version). Docsy has no docsy/dependencies module: Bootstrap
+# and Font Awesome arrive as npm packages, pulled into package.json by
+# `hugo mod npm pack`. See scripts/README or the Docsy release notes if the
+# vendored asset paths ever need re-checking.
 [module]
   proxy = "direct"
   # uncomment line below for temporary local development of module
@@ -406,7 +405,7 @@ year = "year"
   allowContent = ['^text/markdown$', '^text/html$']
   [security.exec]
     # 'sass' is the CLI binary shipped by the sass-embedded npm package
-    # (Docsy 0.17.0's Dart Sass transpiler); 'dart-sass-embedded' was the
+    # (Docsy 0.18.1's Dart Sass transpiler); 'dart-sass-embedded' was the
     # older package's binary name, kept here in case it's still resolved.
     allow = ['^dart-sass-embedded$', '^sass$', '^go$', '^npx$', '^postcss$', '^git$']
     osEnv = ['(?i)^(PATH|PATHEXT|APPDATA|TMP|TEMP|TERM)$']
