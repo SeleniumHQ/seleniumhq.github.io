@@ -73,9 +73,8 @@ page. To understand and create locator we will use the following HTML snippet.
 ```
 
 ## class name
-The HTML page web element can have attribute class. We can see an example in the
-above shown HTML snippet. We can identify these elements using the class name locator
-available in Selenium. 
+HTML elements often feature a class attribute, just like the one in the snippet above. 
+In Selenium, we can locate these specific elements using the class name locator.
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" text=true >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/LocatorTest.java#L34" >}}
@@ -131,7 +130,7 @@ textbox, using css.
 
 ## id
 We can use the ID attribute available with element in a web page to locate it. 
-Generally the ID property should be unique for a element on the web page. 
+Ideally the ID property should be unique for a element on the web page. 
 We will identify the Last Name field using it. 
 
 {{< tabpane langEqualsHeader=true >}}
@@ -160,7 +159,7 @@ We will identify the Last Name field using it.
 
 ## name
 We can use the NAME attribute available with element in a web page to locate it. 
-Generally the NAME property should be unique for a element on the web page. 
+Ideally the NAME property should be unique for a element on the web page. 
 We will identify the Newsletter checkbox using it. 
 
 {{< tabpane langEqualsHeader=true >}}
@@ -188,7 +187,7 @@ We will identify the Newsletter checkbox using it.
 
 ## link text 
 If the element we want to locate is a link, we can use the link text locator
-to identify it on the web page. The link text is the text displayed of the link. 
+to identify it on the web page. The link text is the visible text of the link. 
 In the HTML snippet shared, we have a link available, lets see how will we locate it. 
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" text=true >}}
@@ -214,10 +213,8 @@ In the HTML snippet shared, we have a link available, lets see how will we locat
 {{< /tabpane >}} 
 
 ## partial link text 
-If the element we want to locate is a link, we can use the partial link text locator
-to identify it on the web page. The link text is the text displayed of the link. 
-We can pass partial text as value.
-In the HTML snippet shared, we have a link available, lets see how will we locate it. 
+For links, we can use the partial link text locator to identify elements 
+based on a portion of their visible text, rather than needing the entire string.
 {{< tabpane langEqualsHeader=true >}}
   {{< tab header="Java" text=true >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/elements/LocatorTest.java#L69" >}}
@@ -242,7 +239,7 @@ In the HTML snippet shared, we have a link available, lets see how will we locat
 {{< /tabpane >}} 
 
 ## tag name
-We can use the HTML TAG itself as a locator to identify the web element on the page.
+We can use the HTML TAG itself of the web element to identify it on the page.
 From the above HTML snippet shared, lets identify the link, using its html tag "a". 
 {{< tabpane langEqualsHeader=true >}}
    {{< tab header="Java" text=true >}}
@@ -268,13 +265,12 @@ From the above HTML snippet shared, lets identify the link, using its html tag "
 {{< /tabpane >}} 
 
 ## xpath 
-
-A HTML document can be considered as a XML document, and then we can use xpath
-which will be the path traversed to reach the element of interest to locate the element.
-The XPath could be absolute xpath, which is created from the root of the document.
-Example - /html/form/input[1]. This will return the male radio button.
-Or the xpath could be relative. Example- //input[@name='fname']. This will return the
-first name text box. Let us create locator for female radio button using xpath. 
+Think of an HTML document as an XML tree—you can navigate through this structure using XPath.
+An absolute XPath starts from the very root of the document (e.g., /html/form/input[1] 
+selects the male radio button).
+A relative XPath targets elements directly (e.g., //input[@name='fname'] selects 
+the first name text box).
+Let's see an example to create the XPath locator for the female radio button.
 
 {{< tabpane langEqualsHeader=true >}}
    {{< tab header="Java" text=true >}}
