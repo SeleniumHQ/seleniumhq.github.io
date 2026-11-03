@@ -9,7 +9,7 @@
 <a class=dropdown-item href=/zh-cn/sponsors>Sponsors</a>
 <a class=dropdown-item href=/zh-cn/sponsor>Sponsor Us</a></div></li><li class="nav-item mr-4 mb-2 mb-lg-0"><a class=nav-link href=/zh-cn/downloads><span>Downloads</span></a></li><li class="nav-item mr-4 mb-2 mb-lg-0"><a class=nav-link href=/zh-cn/documentation><span>Documentation</span></a></li><li class="nav-item mr-4 mb-2 mb-lg-0"><a class=nav-link href=/zh-cn/projects><span>Projects</span></a></li><li class="nav-item mr-4 mb-2 mb-lg-0"><a class=nav-link href=/zh-cn/support><span>Support</span></a></li><li class="nav-item mr-4 mb-2 mb-lg-0"><a class=nav-link href=/zh-cn/blog><span>Blog</span></a></li><li class="nav-item dropdown d-none d-lg-block"><div class="td-lang-menu dropdown"><a class="nav-link dropdown-toggle td-lang-menu__title" href=# role=button data-bs-toggle=dropdown aria-haspopup=true aria-expanded=false><span class=td-lang-menu__title-text>中文简体</span>
 <span class=td-lang-menu__title-code>ZH-CN</span></a><ul class=dropdown-menu><li><a class=dropdown-item href=/documentation/legacy/>English</a></li><li><a class=dropdown-item href=/pt-br/documentation/legacy/>Português (Brasileiro)</a></li><li><span class="dropdown-item active">中文简体</span></li><li><a class=dropdown-item href=/ja/documentation/legacy/>日本語</a></li></ul></div></li></ul><div class=navbar-nav><div class=td-search><div class=td-search--algolia id=docsearch-1></div></div></div></div></nav></header><div class="container-fluid td-outer"><div class=td-main><div class="row flex-xl-nowrap"><main class="col-12 col-md-9 col-xl-8 ps-md-5" role=main><div class=td-content><div class="pageinfo pageinfo-primary d-print-none"><p>这是本节的多页打印视图。
-<a href=# onclick="return print(),!1">点击此处打印</a>.</p><p><a href=/zh-cn/documentation/legacy/>返回本页常规视图</a>.</p></div><h1 class=title>Legacy</h1><div class=lead>在此部分，您可以找到与Selenium的旧组件有关的所有文档. 这样做纯粹是出于历史原因，而不是鼓励使用已废弃的组件.</div><ul><li>1: <a href=#pg-4bf330fd5a475db1e4da06cb7c681d5e>Selenium RC (Selenium 1)</a></li><li>2: <a href=#pg-0732b4f345393ba2bef87c26733d9d8b>Selenium 2</a></li><ul><li>2.1: <a href=#pg-23e90ee960cb2d855aefe8e77f95e70b>从RC迁移到WebDriver</a></li><li>2.2: <a href=#pg-4385b6f362b0596ebcd161689f59adf4>远程WebDriver服务器</a></li></ul><li>3: <a href=#pg-e279bf25ef6f679a74567eae8d28a0d2>Selenium 3</a></li><ul><li>3.1: <a href=#pg-ac76bae276f27fd0f1424e73b7d95663>服务网格 3</a></li><li>3.2: <a href=#pg-31b83379d2b863eb0549de7e457f5733>配置自己的服务网格</a></li><li>3.3: <a href=#pg-7b2bda126f0ba862a2f42215dac75b96>服务网格的组件</a></li></ul><li>4: <a href=#pg-5131ec21377a8d67404a3f8a494a56d0>Legacy Selenium IDE</a></li><ul><li>4.1: <a href=#pg-79b55613fab8efd3102a974a15d92b90>HTML runner</a></li></ul></ul><div class=content></div></div><div class=td-content><h1 id=pg-4bf330fd5a475db1e4da06cb7c681d5e>1 - Selenium RC (Selenium 1)</h1><div class=lead>原始版本的Selenium</div><h2 id=介绍>介绍</h2><p>在WebDriver / Selenium合并产生功能更强大的Selenium 2之前,
+<a href=# onclick="return print(),!1">点击此处打印</a>.</p><p><a href=/zh-cn/documentation/legacy/>返回本页常规视图</a>.</p></div><h1 class=title>Legacy</h1><div class=lead>在此部分，您可以找到与Selenium的旧组件有关的所有文档. 这样做纯粹是出于历史原因，而不是鼓励使用已废弃的组件.</div><ul><li>1: <a href=#pg-4bf330fd5a475db1e4da06cb7c681d5e>Selenium RC (Selenium 1)</a></li><li>2: <a href=#pg-0732b4f345393ba2bef87c26733d9d8b>Selenium 2</a></li><ul><li>2.1: <a href=#pg-23e90ee960cb2d855aefe8e77f95e70b>从RC迁移到WebDriver</a></li><li>2.2: <a href=#pg-4385b6f362b0596ebcd161689f59adf4>远程WebDriver服务器</a></li></ul><li>3: <a href=#pg-e279bf25ef6f679a74567eae8d28a0d2>Selenium 3</a></li><ul><li>3.1: <a href=#pg-ac76bae276f27fd0f1424e73b7d95663>服务网格 3</a></li><li>3.2: <a href=#pg-31b83379d2b863eb0549de7e457f5733>配置自己的服务网格</a></li><li>3.3: <a href=#pg-7b2bda126f0ba862a2f42215dac75b96>服务网格的组件</a></li></ul><li>4: <a href=#pg-cdb6449de51af2bff3c33ac657770182>IE驱动服务器</a></li><ul><li>4.1: <a href=#pg-d16122e0502a6e136c0e747607df8d2e>Internet Explorer Driver Internals</a></li></ul><li>5: <a href=#pg-5131ec21377a8d67404a3f8a494a56d0>Legacy Selenium IDE</a></li><ul><li>5.1: <a href=#pg-79b55613fab8efd3102a974a15d92b90>HTML runner</a></li></ul></ul><div class=content></div></div><div class=td-content><h1 id=pg-4bf330fd5a475db1e4da06cb7c681d5e>1 - Selenium RC (Selenium 1)</h1><div class=lead>原始版本的Selenium</div><h2 id=介绍>介绍</h2><p>在WebDriver / Selenium合并产生功能更强大的Selenium 2之前,
 Selenium RC一直是Selenium的主要项目.
 再次特意强调的是, Selenium 1不再享有技术支持.</p><h2 id=selenium-rc-的工作原理>Selenium RC 的工作原理</h2><p>首先, 我们将描述Selenium RC的组件如何运行
 以及每个组件在运行测试脚本中所扮演的角色.</p><h3 id=rc-组件>RC 组件</h3><p>Selenium RC 组件包括:</p><ul><li>Selenium 服务器, 用于启动并关闭浏览器,
@@ -1280,7 +1280,123 @@ Firefox和Chrome都提供了可用的镜像。你可以在<a href=//github.com/S
 转发器(hub)会连接1个或者多个节点，这些节点会代理执行测试任务。</p><h2 id=节点>节点</h2><ul><li>浏览器会被安装在节点上</li><li>节点会把自己注册在转发器(hub)上并申报自己作为测试代理的能力(有些什么浏览器，每个浏览器可以运行几个实例等等)</li><li>接受转发器(hub)的指示并执行这些指示</li></ul><p><em>节点</em> 和不同的Selenium实例，他们能够在特定的计算机系统上执行测试。
 一个服务网格中可以有很多节点。
 这些终端设备并不需要使用统一的平台(或者说操作系统)也不需要选择相同的浏览器。
-一个Windows节点可以提供IE作为一个浏览器选项来执行测试，然而Linux和MAC是不可能提供的。</p></div><div class=td-content style=page-break-before:always><h1 id=pg-5131ec21377a8d67404a3f8a494a56d0>4 - Legacy Selenium IDE</h1><div class="pageinfo pageinfo-warning"><p class=lead><i class="fas fa-language d-4"></i>
+一个Windows节点可以提供IE作为一个浏览器选项来执行测试，然而Linux和MAC是不可能提供的。</p></div><div class=td-content style=page-break-before:always><h1 id=pg-cdb6449de51af2bff3c33ac657770182>4 - IE驱动服务器</h1><div class=lead>Internet Explorer驱动是一种实现WebDriver规范的单机服务器.</div><p>This documentation previously located <a href=https://github.com/SeleniumHQ/selenium/wiki/InternetExplorerDriver-Internals>on the wiki</a></p><p><code>InternetExplorerDriver</code> 是一个独立的服务器,
+它实现WebDriver的wire协议.
+此驱动程序已在Windows 10的IE 11上进行了测试.
+它可能适用于旧版本的IE和Windows,
+但未受支持.</p><p>驱动程序支持运行32位和64位版本的浏览器.
+启动浏览器的"位数",
+取决于启动的IEDriverServer.exe的版本.
+若是32位的<code>IEDriverServer.exe</code>已启动,
+将启动32位版本的IE.
+同样的, 如果启动的64位版本的IEDriverServer.exe,
+将启动64位版本的IE.</p><h2 id=安装>安装</h2><p>尽管需要一些配置,
+但是在使用<code>InternetExplorerDriver</code>之前,
+您并不需要运行安装程序.
+独立服务器可执行文件必须从<a href=https://www.selenium.dev/downloads/>下载</a>
+页面下载并放置在您的<a href=http://en.wikipedia.org/wiki/PATH_%28variable%29>PATH</a> 中.</p><h2 id=pros>Pros</h2><ul><li>在真实浏览器中运行并支持JavaScript</li></ul><h2 id=cons>Cons</h2><ul><li>显然InternetExplorerDriver只能在Windows上运行!</li><li>相当慢 (尽管仍然很快 :)</li></ul><h2 id=命令行开关>命令行开关</h2><p>作为一个独立的可执行文件,
+IE驱动程序的行为可以通过各种命令行参数进行修改.
+要设置这些命令行参数的值,
+应参考所使用语言绑定的文档.
+下表描述了支持的命令行开关.
+支持所有 -<code>&lt;开关></code>, &ndash;<code>&lt;开关></code>
+和 /<code>&lt;开关></code> .</p><table><thead><tr><th style=text-align:left>开关</th><th style=text-align:left>释义</th></tr></thead><tbody><tr><td style=text-align:left>&ndash;port=<code>&lt;端口号></code></td><td style=text-align:left>指定IE驱动程序的HTTP服务器将在其上侦听来自语言绑定的命令的端口. 默认值为5555.</td></tr><tr><td style=text-align:left>&ndash;host=<code>&lt;主机IP地址></code></td><td style=text-align:left>指定主机适配器的IP地址, IE驱动程序的HTTP服务器将在其上侦听来自语言绑定的命令. 默认值为127.0.0.1.</td></tr><tr><td style=text-align:left>&ndash;log-level=<code>&lt;日志级别></code></td><td style=text-align:left>指定日志消息的输出级别. 有效值包括 FATAL, ERROR, WARN, INFO, DEBUG, 以及 TRACE. 默认为FATAL.</td></tr><tr><td style=text-align:left>&ndash;log-file=<code>&lt;日志文件></code></td><td style=text-align:left>指定日志文件的完整路径和文件名. 默认为标准输出.</td></tr><tr><td style=text-align:left>&ndash;extract-path=<code>&lt;路径></code></td><td style=text-align:left>指定用于提取服务器使用的支持文件的目录的完整路径. 如果未指定, 则默认为临时目录.</td></tr><tr><td style=text-align:left>&ndash;silent</td><td style=text-align:left>在服务器启动时抑制诊断输出.</td></tr></tbody></table><h2 id=重要的系统属性>重要的系统属性</h2><p>以下系统属性用于 <code>InternetExplorerDriver</code>
+(在Java代码中使用 <code>System.getProperty()</code>
+读取并使用<code>System.setProperty()</code> 进行设置, 或者
+在命令行标识 &ldquo;<code>-DpropertyName=value</code>&rdquo;) :</p><table><thead><tr><th style=text-align:left><strong>属性</strong></th><th style=text-align:left><strong>含义</strong></th></tr></thead><tbody><tr><td style=text-align:left><code>webdriver.ie.driver</code></td><td style=text-align:left>IE驱动程序二进制文件的位置.</td></tr><tr><td style=text-align:left><code>webdriver.ie.driver.host</code></td><td style=text-align:left>指定IE驱动程序将在其上侦听的主机适配器的IP地址.</td></tr><tr><td style=text-align:left><code>webdriver.ie.driver.loglevel</code></td><td style=text-align:left>指定日志消息的输出级别. 有效值包括 FATAL, ERROR, WARN, INFO, DEBUG, 以及 TRACE. 默认为FATAL.</td></tr><tr><td style=text-align:left><code>webdriver.ie.driver.logfile</code></td><td style=text-align:left>指定日志文件的完整路径和文件名.</td></tr><tr><td style=text-align:left><code>webdriver.ie.driver.silent</code></td><td style=text-align:left>在IE驱动程序启动时抑制诊断输出.</td></tr><tr><td style=text-align:left><code>webdriver.ie.driver.extractpath</code></td><td style=text-align:left>指定用于提取服务器使用的支持文件的目录的完整路径. 如果未指定, 则默认为临时目录.</td></tr></tbody></table><h2 id=必要的配置>必要的配置</h2><ul><li><code>IEDriverServer</code>可执行文件必须<a href=https://www.selenium.dev/downloads/>已下载</a> 并放置在您的 <a href=http://en.wikipedia.org/wiki/PATH_%28variable%29>PATH</a> 中.</li><li>在Windows Vista, Windows 7或Windows 10上的IE 7或更高版本上, 必须将每个区域的保护模式设置设置为相同的值. 该值可以打开或关闭, 只要每个区域的值相同. 要设置受保护模式设置, 请从“工具”菜单中选择“Internet选项…”, 然后单击“安全”选项卡. 对于每个区域, 标签底部将有一个复选框, 标记为“启用保护模式”.</li><li>此外, IE 10及更高版本必须禁用“增强保护模式”. 此选项位于“Internet选项”对话框的“高级”选项卡中.</li><li>浏览器缩放级别必须设置为100%, 以便将本机鼠标事件设置为正确的坐标.</li><li>对于Windows 10, 您还需要在显示设置中将“更改文本、应用程序和其他项目的大小”设置为100%.</li><li><em>仅</em> 对于IE 11, 您需要在目标计算机上设置一个注册表项, 以便驱动程序能够保持与它创建的Internet Explorer实例的连接. 对于32位Windows安装, 您必须在注册表编辑器中检查的项是<code>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_BFCACHE</code>. 对于64位Windows安装, 键为 <code>HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_BFCACHE</code>. 请注意, <code>FEATURE_BFCACHE</code> 子项可能存在, 也可能不存在, 如果不存在, 则应创建该子项. <strong>要点:</strong> 在此键内, 创建一个名为<code>iexplore.exe</code>值为0的DWORD.</li></ul><h2 id=原生事件以及internet-explorer>原生事件以及Internet Explorer</h2><p>由于 <code>InternetExplorerDriver</code> 仅适用于Windows,
+因此它尝试使用所谓的“原生”或操作系统级事件
+在浏览器中执行鼠标和键盘操作.
+针对同样的操作,
+与使用JavaScript模拟相比有明显的差异.
+使用原生事件的优点是它不依赖于JavaScript沙箱,
+并且可以确保在浏览器中正确传播JavaScript事件.
+但是, 当IE浏览器窗口失焦,
+以及当尝试将鼠标悬停在元素上时,
+当前存在一些鼠标事件问题.</p><h3 id=浏览器焦点>浏览器焦点</h3><p>难点在于, 如果窗口没有焦点,
+IE本身似乎没有完全尊重我们在IE浏览器窗口
+(<code>WM\_MOUSEDOWN</code> 和 <code>WM\_MOUSEUP</code>) 上发送的Windows消息.
+具体来说, 被单击的元素将在其周围接收一个焦点窗口,
+但该元素不会处理该单击.
+可以说, 我们根本不应该发送信息；
+相反, 我们应该使用 <code>SendInput()</code> API,
+但该API明确要求窗口具有焦点.
+WebDriver项目有两个相互冲突的目标.</p><p>首先, 我们争取尽可能地模仿用户.
+这意味着使用原生事件,
+而不是使用JavaScript模拟事件.</p><p>其次, 我们不希望浏览器窗口的焦点被自动化.
+这意味着仅将浏览器窗口强制到前台是次优的. .</p><p>另一个考虑因素是
+多个IE实例在多个WebDriver实例下运行的可能性,
+这意味着任何此类“将窗口置于前台”解决方案
+都必须包装某种同步结构 (互斥体?)到
+IE驱动程序的C++代码中.
+即使如此, 若用户将另一个窗口带到前台的操作,
+介于驱动程序将IE带到前台和执行原生事件之间,
+则此代码仍将受制于竞争条件.</p><p>围绕驱动程序的需求,
+以及如何对这两个相互冲突的目标进行优先排序的讨论正在进行中.
+当前流行的观点是前者优先于后者,
+并在使用IE驱动程序时,
+将您的机器标记为无法执行其他任务.
+然而, 这一决定远未最终确定,
+实现这一决定的代码可能相当复杂.</p><h3 id=悬停在元素上>悬停在元素上</h3><p>当您尝试将鼠标悬停在元素上,
+并且物理鼠标光标位于IE浏览器窗口的边界内时,
+鼠标悬停将不起作用.
+更具体地说, 悬停将在几分之一秒内工作,
+然后元素将恢复到其以前的状态.
+出现这种情况的普遍理论是,
+IE在其事件循环期间正在进行某种类型的命中测试,
+这导致它在物理光标位于窗口边界内时响应物理鼠标位置.
+WebDriver开发团队仍未找到解决IE这种行为的方法.</p><h3 id=点击元素选项或提交表单以及弹窗>点击元素<code>选项</code>或提交表单以及<code>弹窗</code></h3><p>IE驱动程序在两个地方不使用原生事件与元素交互.
+这是在 <code>&lt;select></code> 元素中单击 <code>&lt;option></code> 元素.
+在正常情况下, IE驱动程序根据元素的位置和大小计算单击位置,
+通常由JavaScript <code>getBoundingClientRect()</code> 方法返回.
+但是, 对于 <code>&lt;option></code> 元素,
+<code>getBoundingClientRect()</code> 返回一个位置为零、大小为零的矩形.
+IE驱动程序通过使用 <code>click()</code> 来处理这一场景,
+它本质上设置了元素 <code>.selected</code> 的属性,
+并在JavaScript中模拟 <code>onChange</code> 事件.
+但是, 这意味着如果 <code>&lt;select></code> 元素的 <code>onChange</code> 事件
+包含调用 <code>alert()</code>, <code>confirm()</code> 或 <code>prompt()</code>的JavaScript代码,
+则调用WebElement的 <code>click()</code> 方法将挂起,
+直到手动取消模式对话框.
+对于此行为, 仅使用WebDriver代码没有已知的解决方法.</p><p>类似地, 在某些情况下,
+通过WebElement的<code>submit()</code>方法提交HTML表单
+可能会产生相同的效果.
+如果驱动程序调用表单上的JavaScript<code>submit()</code>函数,
+并且有一个onSubmit事件处理程序调用
+JavaScript <code>alert()</code>, <code>confirm()</code> 或 <code>prompt()</code>函数,
+则可能发生这种情况.</p><p>该限制被记录为3508号问题 (谷歌代码).</p><h2 id=internetexplorerdriver多实例><code>InternetExplorerDriver</code>多实例</h2><p>随着 <code>IEDriverServer.exe</code>的创建,
+应该可以同时创建和使用<code>InternetExplorerDriver</code>的多个实例.
+但是, 此功能基本上未经测试,
+并且可能存在cookie、窗口焦点等问题.
+如果尝试使用IE驱动程序的多个实例,
+并遇到这些问题,
+请考虑使用<code>RemoteWebDriver</code> 和虚拟机.</p><p>对于InternetExplorer的多个实例之间
+共享的Cookie (和其他会话项) 问题,
+有两种解决方案.</p><p>首先是在私有模式下启动InternetExplorer.
+在此之后, InternetExplorer将使用干净的会话数据启动,
+并且在退出时不会保存更改的会话数据.
+为此, 您需要向驱动程序传递2个特定功能：
+具有 <code>true</code> 值的 <code>ie.forceCreateProcessApi</code> 和具有 <code>-private</code> 值的 <code>ie.browserCommandLineSwitches</code> .
+请注意, 它仅适用于InternetExplorer 8及更高版本,
+Windows注册表<code>HKLM_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main</code>
+路径应包含值为 <code>0</code> 的<code>TabProcGrowth</code> 键.</p><p>第二个是在InternetExplorer启动期间清理会话.
+为此, 您需要将具有 <code>true</code> 值的
+特定 <code>ie.ensureCleanSession</code> 功能传递给驱动程序.
+这将清除InternetExplorer所有运行实例的缓存,
+包括手动启动的实例.</p><h2 id=远程远行-iedriverserverexe>远程远行 <code>IEDriverServer.exe</code></h2><p>由 <code>IEDriverServer.exe</code> 启动的HTTP服务器,
+将访问控制列表设置为仅接受来自本地计算机的连接,
+并禁止来自远程计算机的传入连接.
+目前, 如果不修改<code>IEDriverServer.exe</code>的源代码,
+这一点是无法更改的.
+要在远程计算机上运行Internet Explorer驱动程序,
+请将Java独立远程服务器
+与语言绑定的等效<code>RemoteWebDriver</code>结合使用.</p><h2 id=按照windows服务运行-iedriverserverexe>按照Windows服务运行 <code>IEDriverServer.exe</code></h2><p>明确不支持尝试使用IEDriverServer.exe
+作为Windows服务应用程序的一部分.
+服务进程及其衍生的流程的需求
+与在常规用户上下文中执行的流程有很大不同.
+<code>IEDriverServer.exe</code> 在该环境中未经测试,
+并且包括明确地禁止在服务进程中使用的Windows API调用.
+虽然可以让IE驱动程序在服务进程下运行,
+但在该环境中遇到问题的用户需要寻求自己的解决方案.</p></div><div class=td-content style=page-break-before:always><h1 id=pg-d16122e0502a6e136c0e747607df8d2e>4.1 - Internet Explorer Driver Internals</h1><div class=lead>More detailed information on the IE Driver.</div><h2 id=client-code-into-the-driver>Client Code Into the Driver</h2><p>We use the W3C WebDriver protocol to communicate with a local instance of an HTTP server. This greatly simplifies the implementation of the language-specific code, and minimizes the number of entry points into the C++ DLL that must be called using a native-code interop technology such as <a href=https://jna.dev.java.net/>JNA</a>, <a href=http://docs.python.org/library/ctypes.html>ctypes</a>, <a href=http://msdn.microsoft.com/en-us/library/aa446536.aspx>pinvoke</a> or <a href=http://www.ruby-doc.org/stdlib/libdoc/dl/rdoc/index.html>DL</a>.</p><h3 id=memory-management>Memory Management</h3><p>The IE driver utilizes the Active Template Library (ATL) to take advantage of its implementation of smart pointers to COM objects. This makes reference counting and cleanup of COM objects much easier.</p><h2 id=why-do-we-require-protected-mode-settings-changes>Why Do We Require Protected Mode Settings Changes?</h2><p>IE 7 on Windows Vista introduced the concept of Protected Mode, which allows for some measure of protection to the underlying Windows OS when browsing. The problem is that when you manipulate an instance of IE via COM, and you navigate to a page that would cause a transition into or out of Protected Mode, IE requires that another browser session be created. This will orphan the COM object of the previous session, not allowing you to control it any longer.</p><p>In IE 7, this will usually manifest itself as a new top-level browser window; in IE 8, a new IExplore.exe process will be created, but it will usually (not always!) seamlessly attach it to the existing IE top-level frame window. Any browser automation framework that drives IE externally (as opposed to using a WebBrowser control) will run into these problems.</p><p>In order to work around that problem, we dictate that to work with IE, all zones must have the same Protected Mode setting. As long as it&rsquo;s on for all zones, or off for all zones, we can prevent the transitions to different Protected Mode zones that would invalidate our browser object. It also allows users to continue to run with UAC turned on, and to run securely in the browser if they set Protected Mode &ldquo;on&rdquo; for all zones.</p><p>In earlier releases of the IE driver, if the user&rsquo;s Protected Mode settings were not correctly set, we would launch IE, and the process would simply hang until the HTTP request timed out. This was suboptimal, as it gave no indication what needed to be set. Erring on the side of caution, we do not modify the user&rsquo;s Protected Mode settings. Current versions, however check that the Protected Mode settings are properly set, and will return an error response if they are not.</p><h2 id=keyboard-and-mouse-input>Keyboard and Mouse Input</h2><p>Key files: <a href=https://github.com/SeleniumHQ/selenium/blob/master/cpp/webdriver-interactions/interactions.cpp>interactions.cpp</a></p><p>There are two ways that we could simulate keyboard and mouse input. The first way, which is used in parts of webdriver, is to synthesize events on the DOM. This has a number of drawbacks, since each browser (and version of a browser) has its own unique quirks; to model each of these is a demanding task, and impossible to get completely right (for example, it&rsquo;s hard to tell what <code>window.selection</code> should be and this is a read-only property on some browsers) The alternative approach is to synthesize keyboard and mouse input at the OS level, ideally without stealing focus from the user (who tends to be doing other things on their computer as long-running webdriver tests run)</p><p>The code for doing this is in <a href=https://github.com/SeleniumHQ/selenium/blob/master/cpp/webdriver-interactions/interactions.cpp>interactions.cpp</a> The key thing to note here is that we use PostMessages to push window events on to the message queue of the IE instance. Typing, in particular, is interesting: we only send the &ldquo;keydown&rdquo; and &ldquo;keyup&rdquo; messages. The &ldquo;keypress&rdquo; event is created if necessary by IE&rsquo;s internal event processing. Because the key press event is not always generated (for example, not every character is printable, and if the default event bubbling is cancelled, listeners don&rsquo;t see the key press event) we send a &ldquo;probe&rdquo; event in after the key down. Once we see that this has been processed, we know that the key press event is on the stack of events to be processed, and that it is safe to send the key up event. If this was not done, it is possible for events to fire in the wrong order, which is definitely sub-optimal.</p><h1 id=working-on-the-internetexplorerdriver>Working On the InternetExplorerDriver</h1><p>Currently, there are tests that will run for the InternetExplorerDriver in all languages (Java, C#, Python, and Ruby), so you should be able to test your changes to the native code no matter what language you&rsquo;re comfortable working in from the client side. For working on the C++ code, you&rsquo;ll need Visual Studio 2010 Professional or higher. Unfortunately, the C++ code of the driver uses ATL to ease the pain of working with COM objects, and ATL is not supplied with Visual C++ 2010 Express Edition. If you&rsquo;re using Eclipse, the process for making and testing modifications is:</p><ol><li>Edit the C++ code in VS.</li><li>Build the code to ensure that it compiles</li><li>Do a complete rebuild when you are ready to run a test. This will cause the created DLL to be copied to the right place to allow its use in Eclipse</li><li>Load Eclipse (or some other IDE, such as Idea)</li><li>Edit the <code>SingleTestSuite</code> so that it is <code>usingDriver(IE)</code></li><li>Create a JUnit run configuration that uses the &ldquo;webdriver-internet-explorer&rdquo; project. If you don&rsquo;t do this, the test won&rsquo;t work at all, and there will be a somewhat cryptic error message on the console.</li></ol><p>Once the basic setup is done, you can start working on the code pretty quickly. You can attach to the process you execute your code from using Visual Studio (from the Debug menu, select Attach to Process&mldr;).</p></div><div class=td-content style=page-break-before:always><h1 id=pg-5131ec21377a8d67404a3f8a494a56d0>5 - Legacy Selenium IDE</h1><div class="pageinfo pageinfo-warning"><p class=lead><i class="fas fa-language d-4"></i>
 Most of the documentation found in this section is still in English.
 Please note we are not accepting pull requests to translate this content
 as translating documentation of legacy components does not add value to
@@ -2025,7 +2141,7 @@ sure you have specified the proper pathname to the extensions file via
 <strong>Options=>Options=>General</strong> in the <strong>Selenium Core extensions</strong> field.
 Also, Selenium-IDE must be restarted after any change to either an
 extensions file <em>or</em> to the contents of the <strong>Selenium Core extensions</strong>
-field.</p></div><div class=td-content style=page-break-before:always><h1 id=pg-79b55613fab8efd3102a974a15d92b90>4.1 - HTML runner</h1><div class=lead>Execute HTML Selenium IDE exports from command line</div><p><em>Selenium HTML-runner</em> 允许您从命令行运行 Test Suites。
+field.</p></div><div class=td-content style=page-break-before:always><h1 id=pg-79b55613fab8efd3102a974a15d92b90>5.1 - HTML runner</h1><div class=lead>Execute HTML Selenium IDE exports from command line</div><p><em>Selenium HTML-runner</em> 允许您从命令行运行 Test Suites。
 Test Suites 是从 Selenium IDE 或兼容工具导出的 HTML。</p><h2 id=公共信息>公共信息</h2><ul><li><p>geckodriver / firefox / selenium-html-runner 版本的组合很重要。
 可能在某个地方有一个软件兼容性矩阵。</p></li><li><p>selenium-html-runner 只运行 Test Suite（而不是 Test Case —— 例如从 Monitis Transaction Monitor 导出的东西）。一定要遵守这个规定。</p></li><li><p>对于没有 DISPLAY 的 Linux 用户，您需要启动具有 Virtual DISPLAY 的 html-runner （搜索 xvfb）</p></li></ul><h2 id=示例-linux-环境>示例 Linux 环境</h2><p>安装 / 下载以下软件包：</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-shell data-lang=shell><span style=display:flex><span><span style=color:#ce5c00;font-weight:700>[</span>user@localhost ~<span style=color:#ce5c00;font-weight:700>]</span>$ cat /etc/redhat-release
 </span></span><span style=display:flex><span>CentOS Linux release 7.4.1708 <span style=color:#ce5c00;font-weight:700>(</span>Core<span style=color:#ce5c00;font-weight:700>)</span>

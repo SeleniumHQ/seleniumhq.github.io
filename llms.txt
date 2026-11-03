@@ -194,8 +194,6 @@ What changed in each recent release, newest first, with links to the per-binding
 ## Other components
 
 - [Selenium IDE](https://www.selenium.dev/documentation/ide/): The Selenium IDE is a standalone application that records and plays back a user's actions.
-- [IE Driver Server](https://www.selenium.dev/documentation/ie_driver_server/): The Internet Explorer Driver is a standalone server that implements the WebDriver specification.
-- [Internet Explorer Driver Internals](https://www.selenium.dev/documentation/ie_driver_server/internals/): More detailed information on the IE Driver.
 
 ## About the project
 
