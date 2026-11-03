@@ -18,7 +18,7 @@ why to declare locators separately from the finding methods.
 
 ## Traditional Locators
 
-Selenium provides support for these 8 traditional locater strategies in WebDriver:
+Selenium provides support for these 8 traditional locator strategies in WebDriver:
 
 | Locator           | Description |
 |-------------------| ---------- |
