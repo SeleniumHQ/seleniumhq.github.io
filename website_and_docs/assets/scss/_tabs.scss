@@ -31,6 +31,12 @@
 
       &:not(.active) {
         visibility: hidden;
+
+        // No descendant transition may keep it painted (the site's links
+        // animate every property, visibility included).
+        * {
+          transition: none;
+        }
       }
     }
   }
