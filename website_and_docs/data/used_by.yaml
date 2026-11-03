@@ -57,9 +57,12 @@ organisations:
   - name: "Mozilla"
     url: "https://www.mozilla.org/"
     source: "https://github.com/mozilla/addons-release-tests"
-  - name: "GitLab"
-    url: "https://about.gitlab.com/"
-    source: "https://gitlab.com/gitlab-org/gitlab/-/tree/master/qa"
+  - name: "Progress"
+    url: "https://www.progress.com/"
+    # Progress's Kendo UI end-to-end test utilities, built on selenium-webdriver.
+    source: "https://www.npmjs.com/package/@progress/kendo-e2e"
+    # No logo: the Progress trademark policy requires written consent for any
+    # logo use (https://www.progress.com/legal/trademarks/trademarks-use-policy).
   - name: "Drupal"
     url: "https://www.drupal.org/"
     source: "https://drupalize.me/tutorial/functional-javascript-testing"
