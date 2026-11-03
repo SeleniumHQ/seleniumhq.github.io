@@ -48,6 +48,7 @@ jobs:
       - name: Setup Fluxbox and Xvfb
         if: matrix.os == 'ubuntu'
         run: |
+          sudo apt-get update
           sudo apt-get -y install fluxbox libxss1 libappindicator3-1 libindicator7
           Xvfb :99 &
           fluxbox -display :99 &

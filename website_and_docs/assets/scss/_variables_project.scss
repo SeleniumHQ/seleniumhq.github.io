@@ -4,9 +4,9 @@ Add styles or override variables from the theme here.
 
 */
 
-// Docsy 0.16.0 prefixed these with "td-" and changed $td-enable-google-fonts to
-// default to false, so the pre-0.16 names below were silently ignored and the
-// site fell back to the Bootstrap system font stack.
+// Docsy 0.18.1 uses "td-" prefixed font variables and defaults
+// $td-enable-google-fonts to false, so the site would fall back to the
+// Bootstrap system font stack without these settings.
 //
 // $td-web-font-path is not declared !default by the theme, so it is derived
 // from $td-google-font-family rather than set here.

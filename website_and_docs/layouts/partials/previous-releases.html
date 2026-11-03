@@ -1,24 +1,12 @@
 <div class="row justify-content-left p-5 td-box--100">
   <div class="card border-0 w-100 bg-transparent">
     <div class="card-body">
-      <h2 class="card-title">
-        Previous Releases
-      </h2>
-      <p class="card-text w-lg-75">
-        Here you can find a more complete list of Selenium
-        <!-- Link trigger modal -->
-        <a href="#previous-releases" data-bs-toggle="modal" data-bs-target="#previous-releases">releases</a>.
-        <!-- Modal -->
-        <div class="modal fade" id="previous-releases" tabindex="-1" aria-labelledby="previous-releases-label" aria-hidden="true">
-          <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h2 class="modal-title" id="previous-releases-label">Previous Releases</h2>
-                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
+      <details id="previous-releases">
+        <summary class="card-title h2">Previous releases (archive)</summary>
+        <p class="card-text w-lg-75 pt-3">
+          Here you can find a more complete list of Selenium releases.
+        </p>
+        <div class="previous-releases-list">
                 {{ $.Scratch.Set "counter" 0 }}
                 {{ $url := "https://api.github.com/repos/seleniumhq/selenium/releases?per_page=100" }}
                 {{ $githubToken := (getenv "SELENIUM_CI_TOKEN") }}
@@ -77,20 +65,22 @@
                   </div>
                   {{ end }}
                 {{ else }}
-                  {{ partial "github-content.html" }}>
+                  {{ partial "github-content.html" }}
                 {{ end }}
-              </div>
-              <div class="modal-footer selenium-button-container">
-                <a href="#previous-releases" class="selenium-button selenium text-uppercase fw-bold" data-bs-dismiss="modal">
-                  Close
-                  <i class="ps-3 fas fa-caret-right"></i>
-                </a>
-              </div>
-            </div>
-          </div>
         </div>
-
-      </p>
+      </details>
+      <script>
+        (function () {
+          var details = document.getElementById("previous-releases");
+          function openIfTargeted() {
+            if (details && window.location.hash === "#previous-releases") {
+              details.open = true;
+            }
+          }
+          openIfTargeted();
+          window.addEventListener("hashchange", openIfTargeted);
+        })();
+      </script>
     </div>
   </div>
 </div>
