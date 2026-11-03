@@ -1,5 +1,6 @@
-// Selects the language tab named by the `?tab=KEY` query parameter, so links
-// such as /documentation/?tab=python land readers in their language.
+// Selects the language tab named by the `?tab=KEY` query parameter, so the
+// links published in Selenium's binding READMEs and package metadata, such as
+// /documentation/?tab=python, land readers in their language.
 window.addEventListener('DOMContentLoaded', () => {
   const key = new URLSearchParams(location.search)
     .get('tab')
@@ -13,8 +14,8 @@ window.addEventListener('DOMContentLoaded', () => {
   if (!tabs.length) return;
 
   // The click runs Docsy's tabpane-persist handler, which stores the choice and
-  // switches every tabpane with this key; show() covers the no-localStorage
-  // case, where that handler isn't registered.
+  // switches every tabpane with this key; show() covers the case where that
+  // handler is absent or fails (no usable localStorage).
   tabs[0].click();
   tabs.forEach((tab) => bootstrap.Tab.getOrCreateInstance(tab).show());
 });
