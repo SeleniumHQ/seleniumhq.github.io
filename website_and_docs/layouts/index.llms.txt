@@ -72,8 +72,7 @@
             "paths" (slice "/documentation/release_notes"))
       (dict "heading" "Other components"
             "note" ""
-            "paths" (slice "/documentation/ide"
-                           "/documentation/ie_driver_server"))
+            "paths" (slice "/documentation/ide"))
       (dict "heading" "About the project"
             "note" ""
             "paths" (slice "/documentation/overview"

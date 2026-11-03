@@ -54,7 +54,7 @@ implementation can be found on their pages:
 
 * [FirefoxDriver Internals]({{< ref "../selenium_2/firefox_driver#firefoxdriver-internals" >}})
 * [HtmlUnitDriver]({{< ref "../selenium_2/htmlunit_driver" >}})
-* [InternetExplorerDriver Internals]({{< ref "/documentation/ie_driver_server/internals" >}})
+* [InternetExplorerDriver Internals]({{< ref "/documentation/legacy/ie_driver_server/internals" >}})
 
 ## Reducing the Cost of Change
 

@@ -4,6 +4,11 @@ linkTitle: "Internals"
 weight: 2
 description: >
     More detailed information on the IE Driver.
+aliases: ["/documentation/ie_driver_server/internals/",
+"/ja/documentation/ie_driver_server/internals/",
+"/pt-br/documentation/ie_driver_server/internals/",
+"/zh-cn/documentation/ie_driver_server/internals/"
+]
 ---
 
 ## Client Code Into the Driver

@@ -21,7 +21,7 @@ versions of Internet Explorer are available, there are some
 with the 64-bit driver. As such it is recommended to use the 32-bit driver.
 
 Additional information about using Internet Explorer can be found on the
-[IE Driver Server page]({{< ref "/documentation/ie_driver_server/" >}})
+[IE Driver Server page]({{< ref "/documentation/legacy/ie_driver_server/" >}})
 
 ## Options
 
