@@ -30,6 +30,9 @@
             "paths" (slice "/documentation"
                            "/documentation/webdriver"
                            "/documentation/webdriver/getting_started"))
+      (dict "heading" "Guides"
+            "note" "Task-based guides, organised by the problem at hand, each linking into the reference pages below."
+            "paths" (slice "/documentation/guides"))
       (dict "heading" "Driver sessions and browsers"
             "note" "Starting sessions, configuring browsers, and running remotely."
             "paths" (slice "/documentation/webdriver/drivers"
