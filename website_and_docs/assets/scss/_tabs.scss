@@ -13,3 +13,59 @@
 .tab-body {
   background: inherit;
 }
+
+// Code language selector (layouts/partials/code-lang-selector.html).
+//
+// <html data-code-lang="..."> is set before first paint by the snippet in
+// partials/hooks/head-end.html. Until the tab plugin runs on DOMContentLoaded
+// the markup still has the first tab active, so these rules show the chosen
+// language's pane and header instead, which keeps the page from jumping on
+// load. They only apply to tabpanes that have a pane for the chosen language;
+// other tabpanes (and tabs without a language key) are left alone. Once the
+// plugin has switched the tabs the classes agree with the attribute, and the
+// attribute follows every later tab click, so the rules stay consistent.
+//
+// Once a language is chosen, the headers of the other language tabs are
+// hidden as well, so a page reads as if it were written for that language
+// alone; the remaining header labels the block, and the navbar selector is
+// the way to switch. Tabpanes without a pane for the chosen language keep
+// all their headers, as do tabs that are not keyed by language.
+$code-langs: java, python, csharp, ruby, javascript, kotlin;
+
+@each $lang in $code-langs {
+  html[data-code-lang="#{$lang}"] {
+    .tab-content:has(> .tab-pane[data-code-lang="#{$lang}"]) {
+      > .tab-pane[data-code-lang] {
+        display: none;
+      }
+      > .tab-pane[data-code-lang="#{$lang}"] {
+        display: block;
+        opacity: 1;
+      }
+    }
+
+    .nav-tabs:has([data-td-tp-persist="#{$lang}"]) {
+      .nav-link[data-td-tp-persist] {
+        color: var(--bs-nav-link-color);
+        background-color: transparent;
+        border-color: transparent;
+      }
+      .nav-link[data-td-tp-persist="#{$lang}"] {
+        color: var(--bs-nav-tabs-link-active-color);
+        background-color: #f8f8f8;
+        border-color: var(--bs-nav-tabs-link-active-border-color);
+      }
+      .nav-item:has(> .nav-link[data-td-tp-persist]):not(:has(> .nav-link[data-td-tp-persist="#{$lang}"])) {
+        display: none;
+      }
+    }
+  }
+}
+
+.td-navbar .td-code-lang {
+  .dropdown-item {
+    &.active {
+      font-weight: $font-weight-bold;
+    }
+  }
+}
