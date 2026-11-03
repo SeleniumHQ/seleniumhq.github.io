@@ -1,7 +1,7 @@
 ---
 title: "About this documentation"
 linkTitle: "About"
-weight: 16
+weight: 20
 aliases: 
         [
           "/documentation/en/introduction/about_this_documentation/",
