@@ -29,6 +29,9 @@ This, for version 4.41 (previous = 4.40):
   date (the year is derived the same way, so this works across year boundaries).
 - Prints three deduped, sorted `{{< gh-user ... >}}` lists — Selenium, Docs, and Docker
   contributors — for commits between the `selenium-4.40.0` and `selenium-4.41.0` tags.
+- Adds any of those contributors missing from `website_and_docs/data/github_users.yml` (via
+  `scripts/github-users.sh`), so their `gh-user` cards show display names. Include that file
+  in the release changes.
 
 Everything after this point is manual editing of the new blog file using the data gathered
 in the remaining steps. The copied file still has the *previous* release's prose and
