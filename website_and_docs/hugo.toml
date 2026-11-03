@@ -194,6 +194,13 @@ plausible_analytics = true
 # Enable syntax highlighting and copy buttons on code blocks with Prism
 prism_syntax_highlighting = true
 
+# Site plugin (assets/js/plugins/tabpane-url.js): select the language tab named
+# by ?tab=KEY. Deferred so it runs after Docsy's tabpane-persist plugin has set
+# up.
+[params.docsy.plugins.tabpane-url]
+enable = true
+_defer = true
+
 # Announcement banner shown below the navbar on every page (see
 # layouts/partials/announcement-banner.html). It is rendered only while the
 # build date is within [start, end] (ISO dates, both inclusive), so an event
