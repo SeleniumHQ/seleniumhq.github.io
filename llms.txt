@@ -21,16 +21,20 @@ Notes for tools generating Selenium code from this documentation:
 - Code samples on this site are compiled and tested in CI from the examples in
   https://github.com/SeleniumHQ/seleniumhq.github.io/tree/trunk/examples
 
+
+## AI agents and code generation (high priority)
+
+Read these first if you are a tool generating Selenium code. They list the Selenium 2 and 3 era patterns that models reproduce from old training data, such as DesiredCapabilities, manual driver downloads, fixed sleeps, absolute XPath, and find_element_by_* methods, together with their current replacements.
+
+- [Using AI coding agents with Selenium](https://www.selenium.dev/documentation/ai_agents/): How to get coding agents and large language models to write Selenium code that is current, correct, and not flaky.
+- [Outdated Selenium patterns and their current replacements](https://www.selenium.dev/documentation/ai_agents/outdated_patterns/): Selenium 2 and 3 idioms that coding agents and old tutorials still produce, with the current form of each.
+
 ## Getting started
 
 Install, write, and run a first script in any supported language.
 
 - [The Selenium Browser Automation Project](https://www.selenium.dev/documentation/)
-- [Selenium Manager](https://www.selenium.dev/documentation/selenium_manager/): Selenium Manager is a command-line tool implemented in Rust that provides automated driver and browser management for Selenium. Selenium bindings use this tool by default, so you do not need to download it or add anything to your code or do anything else to use it.
-- [Selenium IDE](https://www.selenium.dev/documentation/ide/): The Selenium IDE is a standalone application that records and plays back a user's actions.
-- [Selenium release notes](https://www.selenium.dev/documentation/release_notes/): What changed in each recent Selenium release, newest first, with links to the announcement and to the full changelog of every binding.
 - [WebDriver](https://www.selenium.dev/documentation/webdriver/): WebDriver drives a browser natively; learn more about it.
-- [Waiting Strategies](https://www.selenium.dev/documentation/webdriver/waits/)
 - [Getting started](https://www.selenium.dev/documentation/webdriver/getting_started/): Install Selenium, write your first script, and run it.
 
 ## Guides
@@ -186,13 +190,9 @@ Common errors, upgrade guidance, and logging.
 
 ## Release notes
 
-What changed in each recent release, newest first, with links to the per-binding changelogs.
+What changed in each recent release, newest first, with links to the per-binding changelogs. Use it to check whether an API or behaviour exists in the version in use.
 
 - [Selenium release notes](https://www.selenium.dev/documentation/release_notes/): What changed in each recent Selenium release, newest first, with links to the announcement and to the full changelog of every binding.
-
-## Other components
-
-- [Selenium IDE](https://www.selenium.dev/documentation/ide/): The Selenium IDE is a standalone application that records and plays back a user's actions.
 
 ## About the project
 
@@ -212,6 +212,7 @@ What changed in each recent release, newest first, with links to the per-binding
 
 ## Optional
 
+- [Full text of the pages above](https://www.selenium.dev/llms-full.txt): the same pages in the same order, concatenated as plain text, for tools that can load a single file.
 - [Blog](https://www.selenium.dev/blog/): release announcements and technical deep dives.
 - [Downloads](https://www.selenium.dev/downloads/): current releases for every language binding.
 - [Source](https://github.com/seleniumhq/selenium): the Selenium implementation.
