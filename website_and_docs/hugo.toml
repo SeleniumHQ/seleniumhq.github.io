@@ -194,9 +194,8 @@ plausible_analytics = true
 # Enable syntax highlighting and copy buttons on code blocks with Prism
 prism_syntax_highlighting = true
 
-# Site plugin (assets/js/plugins/tabpane-url.js): select the language tab named
-# by ?tab=KEY. Deferred so it runs after Docsy's tabpane-persist plugin has set
-# up.
+# Deferred so it runs after Docsy's tabpane-persist plugin; see
+# assets/js/plugins/tabpane-url.js.
 [params.docsy.plugins.tabpane-url]
 enable = true
 _defer = true

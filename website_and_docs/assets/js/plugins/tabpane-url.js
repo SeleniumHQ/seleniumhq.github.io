@@ -1,7 +1,5 @@
 // Selects the language tab named by the `?tab=KEY` query parameter, so links
-// such as /documentation/?tab=python land readers in their language. Interim
-// until Docsy ships this natively (docsy/docsy#1202); then delete this file and
-// its hugo.toml entry.
+// such as /documentation/?tab=python land readers in their language.
 window.addEventListener('DOMContentLoaded', () => {
   const key = new URLSearchParams(location.search)
     .get('tab')
@@ -14,9 +12,9 @@ window.addEventListener('DOMContentLoaded', () => {
   );
   if (!tabs.length) return;
 
-  // The click goes through Docsy's tabpane-persist handler, which records the
-  // choice and switches every tabpane with this key; show() covers the
-  // no-localStorage case, where that handler is never registered.
+  // The click runs Docsy's tabpane-persist handler, which stores the choice and
+  // switches every tabpane with this key; show() covers the no-localStorage
+  // case, where that handler isn't registered.
   tabs[0].click();
   tabs.forEach((tab) => bootstrap.Tab.getOrCreateInstance(tab).show());
 });
