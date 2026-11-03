@@ -13,3 +13,26 @@
 .tab-body {
   background: inherit;
 }
+
+@media screen {
+  // Stack every pane in one grid cell so the tallest sets the height and
+  // switching languages never shifts the page below. Only for tabpanes
+  // wired as Bootstrap tabs (the :has() guard).
+  .nav-tabs:has(> .nav-item > [data-bs-toggle="tab"]) + .tab-content {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    // Grid cells don't collapse margins: carry Docsy's pane bottom margin
+    // on the container, so the gap below the tabpane stays as it was.
+    margin-bottom: 1.5rem;
+
+    > .tab-pane {
+      display: block;
+      grid-area: 1 / 1;
+      margin-bottom: 0;
+
+      &:not(.active) {
+        visibility: hidden;
+      }
+    }
+  }
+}
