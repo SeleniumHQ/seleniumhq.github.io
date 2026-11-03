@@ -33,7 +33,7 @@ to teach and nurture the community.
 At the core of Selenium is [WebDriver]({{< ref "webdriver" >}}), 
 an interface to write instruction sets that can be run interchangeably in many 
 browsers. Once you've installed everything, only a few lines of code get you inside
-a browser. You can find a more comprehensive example in [Writing your first Selenium script]({{< ref "first_script.md" >}})
+a browser. You can find a more comprehensive example in [Writing your first Selenium script]({{< ref "/documentation/webdriver/getting_started" >}})
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}

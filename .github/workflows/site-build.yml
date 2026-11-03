@@ -1,6 +1,5 @@
-# .github/workflows/link-check.yml
-# Run hyperlink link checker on generated HTML output
-name: Link check with hyperlink
+# No SELENIUM_CI_TOKEN on purpose: API-backed shortcodes render placeholders, so this makes no GitHub API calls
+name: Site build
 
 on:
   workflow_dispatch:
@@ -14,10 +13,12 @@ on:
       - 'website_and_docs/**'
 
 jobs:
-  htmltest:
+  build:
+    name: Build (no GitHub API)
     runs-on: ubuntu-latest
     concurrency:
       group: ${{ github.workflow }}-${{ github.ref }}
+      cancel-in-progress: ${{ github.event_name == 'pull_request' }}
     steps:
       - name: Check out repository
         uses: actions/checkout@v7
@@ -25,13 +26,13 @@ jobs:
       - name: Set up Hugo
         uses: peaceiris/actions-hugo@v3
         with:
-          hugo-version: '0.168.0'
+          hugo-version: '0.169.0'
           extended: true
 
       - name: Setup Node
         uses: actions/setup-node@v7
         with:
-          node-version: '24.22.1'
+          node-version: '26.13.0'
           cache: 'npm'
           # The action defaults to search for the dependency file (package-lock.json,
           # npm-shrinkwrap.json or yarn.lock) in the repository root, and uses its
