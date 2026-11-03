@@ -63,11 +63,13 @@ $code-langs: java, python, csharp, ruby, javascript, kotlin;
 @each $lang in $code-langs {
   html[data-code-lang="#{$lang}"] {
     .tab-content:has(> .tab-pane[data-code-lang="#{$lang}"]) {
+      // visibility, not display: a display: none pane would drop out of the
+      // equal-height stack above.
       > .tab-pane[data-code-lang] {
-        display: none;
+        visibility: hidden;
       }
       > .tab-pane[data-code-lang="#{$lang}"] {
-        display: block;
+        visibility: visible;
         opacity: 1;
       }
     }
