@@ -5,6 +5,35 @@
 <script src="/js/docsearch-fix.js"></script>
 {{ end }}
 {{/*
+  Code language selector: pick the language before first paint so the chosen
+  tab pane is shown straight away (assets/scss/_tabs.scss keys on this
+  attribute) and the page does not jump when the tab plugin runs. The logic
+  mirrors assets/js/code-lang.js: `?lang=` wins and is persisted, otherwise
+  the most recently selected key in Docsy's tabpane-persist storage.
+*/}}
+<script>
+(function () {
+  var langs = ['java', 'python', 'csharp', 'ruby', 'javascript', 'kotlin'];
+  var key = null;
+  try {
+    var fromUrl = (new URLSearchParams(location.search).get('lang') || '').toLowerCase();
+    if (langs.indexOf(fromUrl) >= 0) {
+      key = fromUrl;
+      var n = (parseInt(localStorage.getItem('td-tp-persist-count')) || 0) + 1;
+      localStorage.setItem('td-tp-persist-count', String(n));
+      localStorage.setItem('td-tp-persist:' + key, String(n));
+    } else {
+      var best = 0;
+      langs.forEach(function (l) {
+        var v = parseInt(localStorage.getItem('td-tp-persist:' + l)) || 0;
+        if (v > best) { best = v; key = l; }
+      });
+    }
+  } catch (e) {}
+  if (key) document.documentElement.setAttribute('data-code-lang', key);
+})();
+</script>
+{{/*
   Canonical and hreflang links, and schema.org structured data. Docsy emits no
   canonical link and no hreflang alternates, and its call to Hugo's
   _internal/schema.html produces only sparse microdata.

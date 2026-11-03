@@ -1,0 +1,209 @@
+{{/* Selenium override of Docsy 0.18.1's tabpane shortcode.
+
+     Identical to upstream except that each tab pane carries the tab's
+     persistence key as data-code-lang, which the site-wide code language
+     selector (assets/js/code-lang.js, assets/scss/_tabs.scss) uses to show
+     the chosen language before the tab plugin runs. If Docsy exposes the key
+     on panes upstream, delete this file. */ -}}
+{{ $tpPersistAttrName := "data-td-tp-persist" -}}
+
+{{ with .Get "langEqualsHeader" -}}
+  {{ if ne ( printf "%T" . )  "bool" -}}
+    {{ errorf "Shortcode %q: boolean value expected for parameter %q, but got %s. Error position: %s" $.Name "langEqualsHeader" (printf "%T" .) $.Position  -}}
+  {{ end -}}
+{{ end -}}
+
+{{ with .Get "text" -}}
+  {{ if ne ( printf "%T" . ) "bool" -}}
+    {{ errorf "Shortcode %q: boolean value expected for parameter %q, but got %s. Error position: %s" $.Name "text" (printf "%T" .) $.Position  -}}
+  {{ end -}}
+{{ end -}}
+
+{{ $_persistLang := .Get "persistLang" -}}
+{{ if and (ne $_persistLang nil) (ne $_persistLang "") -}}
+  {{ if ne ( printf "%T" $_persistLang ) "bool" -}}
+    {{ errorf "Shortcode %q: boolean value expected for parameter %q, but got %s. Error position: %s" $.Name "persistLang" (printf "%T" $_persistLang) $.Position  -}}
+  {{ else -}}
+    {{ warnf "Shortcode %q parameter `persistLang` is deprecated, use `persist` instead: %s" $.Name $.Position  -}}
+  {{ end -}}
+{{ end -}}
+
+{{ $_persist := .Get "persist" -}}
+{{ with $_persist -}}
+  {{ $matched := findRE "^(header|lang|disabled)$" . -}}
+  {{ if not $matched -}}
+    {{ errorf "Shortcode %q: parameter %q should be one of 'header', 'lang', or 'disabled'; but got %s. Error position: %s" $.Name "persist" $_persist $.Position  -}}
+  {{ end -}}
+{{ end -}}
+
+{{ with .Get "right" -}}
+  {{ if ne ( printf "%T" . ) "bool" -}}
+    {{ errorf "Shortcode %q: boolean value expected for parameter %q, but got %s. Error position: %s" $.Name "right" (printf "%T" .) $.Position  -}}
+  {{ end -}}
+{{ end -}}
+
+{{ $langPane := default "" ($.Get "lang") -}}
+{{ $hloptionsPane := default "" ($.Get "highlight") -}}
+{{ $textPane := default false ($.Get "text") -}}
+{{ $langEqualsHeader := default false ($.Get "langEqualsHeader") -}}
+{{ $deprecatedPersistLang := $_persistLang | default true -}}
+{{ $persistKeyKind := $_persist
+    | default (cond (or $textPane (ne "" $langPane)) "header" "lang") -}}
+{{ $persistTabpane := and $deprecatedPersistLang (ne $persistKeyKind "disabled") -}}
+{{ $rightPane := default false ($.Get "right") -}}
+{{ $activeSet := false -}}
+{{/* Scratchpad gets populated through call to .Inner */ -}}
+{{ .Inner -}}
+
+{{ $duplicate := false -}}
+{{ $duplicateKey := "" -}}
+{{ $persistKeyList := slice -}}
+{{ $paneKeys := dict -}}
+
+{{/*
+  Element IDs must be unique per HTML document: Bootstrap resolves tab targets
+  with document.querySelector, and a print page concatenates many pages.
+
+  ID shapes, all ending in CONTEXT:
+
+    tabs-NN-MM-CONTEXT          pane
+    tabs-NN-MM-tab-CONTEXT      its tab
+    tabs-NN-tablist-CONTEXT     the tab list
+    tabs-NN-content-CONTEXT     the pane container
+
+  NN       this tabpane's .Ordinal: distinguishes sibling tabpanes
+  MM       the tab's .Ordinal within the tabpane
+  CONTEXT  a hash of the page and of the enclosing shortcodes' ordinals
+           (.Ordinal restarts inside each enclosing shortcode)
+*/ -}}
+
+{{ $enclosing := slice -}}
+{{ $parent := .Parent -}}
+{{ range math.MaxInt64 -}}
+  {{ if not $parent }}{{ break }}{{ end -}}
+  {{ $enclosing = $enclosing | append $parent.Ordinal -}}
+  {{ $parent = $parent.Parent -}}
+{{ end -}}
+
+{{/* .Page.Path, not .File: pages from one content adapter share its file. */ -}}
+{{ $tabsContextID := hash.XxHash (printf "%s %v" .Page.Path $enclosing) -}}
+{{ $tabPaneIdPrefix := printf "tabs-%02v-" .Ordinal -}}
+{{ $contextIdSuffix := printf "-%s" $tabsContextID -}}
+
+{{/* Nav tabs */ -}}
+<ul class="nav nav-tabs{{ if $rightPane }} justify-content-end{{ end }}" id="{{ $tabPaneIdPrefix }}tablist{{ $contextIdSuffix }}" role="tablist">
+  {{ range $index, $element := $.Scratch.Get "tabs" -}}
+
+    {{ $enabled := not $element.disabled -}}
+
+    {{ $lang := $langPane -}}
+    {{ if $langEqualsHeader -}}
+      {{ $lang = $element.header -}}
+    {{ end -}}
+    {{ with $element.language -}}
+      {{ $lang = . -}}
+    {{ end -}}
+
+    {{ $persistKey := "" -}}
+    {{ if eq $persistKeyKind "lang" -}}
+      {{ with $lang -}}
+        {{ $persistKey = . -}}
+      {{ else -}}
+        {{ with findRE "```(\\S+)" $element.content 1 -}}
+          {{ $persistKey = index . 1 -}}
+        {{ end -}}
+      {{ end -}}
+    {{ else if eq $persistKeyKind "header" -}}
+      {{ $persistKey = $element.header -}}
+    {{ end -}}
+    {{ $persistKey = $persistKey | lower -}}
+    {{ $persistTab := and $persistTabpane $persistKey $enabled -}}
+
+    {{ if $persistTab -}}
+      {{ if in $persistKeyList $persistKey -}}
+        {{ $duplicate = true -}}
+        {{ $duplicateKey = $persistKey -}}
+        {{ $persistTab = false -}}
+      {{ else -}}
+        {{ $persistKeyList = $persistKeyList | append $persistKey -}}
+        {{ $paneKeys = merge $paneKeys (dict (string $index) $persistKey) -}}
+      {{ end -}}
+    {{ end -}}
+
+    {{ $rightpush := false -}}
+    {{ with $element.rightpush -}}
+      {{ $rightpush = . -}}
+    {{ end -}}
+
+    <li class="nav-item{{ if $rightpush }} ms-auto{{ end -}}">
+      {{ $entryid := printf "%s%v%s" $tabPaneIdPrefix $index $contextIdSuffix -}}
+      {{ $tabid := printf "%s%v-tab%s" $tabPaneIdPrefix $index $contextIdSuffix -}}
+
+      {{ $isActive := and $enabled (not $activeSet) -}}
+
+      <button class="nav-link
+        {{- if $isActive -}}
+          {{ $activeSet = true }} active
+        {{- end -}}
+        {{ if not $enabled }} disabled{{ end -}}"
+          id="{{ $tabid }}" data-bs-toggle="tab" data-bs-target="#{{ $entryid }}" role="tab"
+          {{ if $persistTab -}}
+            {{ printf "%s=%q " $tpPersistAttrName $persistKey | safeHTMLAttr -}}
+          {{ end -}}
+          aria-controls="{{- $entryid -}}" aria-selected="{{ $isActive }}">
+        {{ index . "header" | markdownify }}
+      </button>
+    </li>
+
+  {{- end }}
+</ul>
+
+{{ if $duplicate -}}
+  {{ warnf "Shortcode %q: duplicate tab-persistence key %q detected, disabling persistence to avoid multiple tab display. Position: %s" $.Name $duplicateKey $.Position -}}
+{{ end -}}
+
+{{ $activeSet = false -}}
+
+{{/* Tab panes */ -}}
+<div class="tab-content" id="{{ $tabPaneIdPrefix }}content{{ $contextIdSuffix }}">
+  {{- range $index, $element := $.Scratch.Get "tabs" -}}
+
+    {{ $lang := $langPane -}}
+    {{ if $langEqualsHeader -}}
+      {{ $lang = $element.header -}}
+    {{ end -}}
+    {{ with $element.language -}}
+      {{ $lang = . -}}
+    {{ end -}}
+
+    {{ $enabled := not $element.disabled -}}
+
+    {{ $hloptions := $hloptionsPane -}}
+    {{ with $element.highlight -}}
+      {{ $hloptions = . -}}
+    {{ end -}}
+
+    {{ $text := $textPane -}}
+    {{ with $element.text -}}
+      {{ $text = . }}
+    {{ end -}}
+
+    {{ $entryid := printf "%s%v%s" $tabPaneIdPrefix $index $contextIdSuffix -}}
+    {{ $tabid := printf "%s%v-tab%s" $tabPaneIdPrefix $index $contextIdSuffix }}
+    {{ $isActive := and $enabled (not $activeSet) -}}
+
+    <div class="{{ if $text }}tab-body {{end}}tab-pane fade
+        {{- if $isActive -}}
+          {{ $activeSet = true }} show active
+        {{- end }}"
+        id="{{ $entryid }}" role="tabpanel" aria-labelledby="{{ $tabid }}" tabindex="0"
+        {{- with index $paneKeys (string $index) }} data-code-lang="{{ . }}"{{ end }}>
+        {{ if $text -}}
+          {{ index . "content" -}}
+        {{ else -}}
+          {{ highlight (trim (index . "content") "\r\n") $lang $hloptions -}}
+        {{ end }}
+    </div>
+
+  {{- end }}
+</div>
