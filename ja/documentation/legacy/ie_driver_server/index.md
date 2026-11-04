@@ -1,0 +1,170 @@
+# IE Driver サーバー
+
+> Internet Explorer Driverは、WebDriverの仕様を実装するスタンドアロンサーバーです。
+
+URL: https://www.selenium.dev/ja/documentation/legacy/ie_driver_server/
+
+---
+
+This documentation previously located [on the wiki](https://github.com/SeleniumHQ/selenium/wiki/InternetExplorerDriver-Internals)
+
+`InternetExplorerDriver` は、WebDriverのワイヤプロトコルを実装するスタンドアロンサーバーです。 
+このドライバーは、IE11およびWindows10でテストされています。
+古いバージョンのIEおよびWindowsで動作する可能性がありますが、これはサポートされていません。
+
+ドライバーは、32ビットおよび64ビットバージョンのブラウザーの実行をサポートします。 
+ブラウザの起動に使用する"ビット数"を決定する方法の選択は、起動するIEDriverServer.exeのバージョンによって異なります。 
+32ビットバージョンの `IEDriverServer.exe` を起動すると、32ビットバージョンのIEが起動します。 
+同様に、64ビットバージョンのIEDriverServer.exeを起動すると、64ビットバージョンのIEが起動します。
+
+## インストール
+
+InternetExplorerDriverを使用する前にインストーラーを実行する必要はありませんが、いくつかの設定が必要になります。 
+スタンドアロンサーバーの実行可能ファイルは、[ダウンロード](https://www.selenium.dev/downloads/) ページからダウンロードして、
+[PATH](http://en.wikipedia.org/wiki/PATH_(variable))に配置する必要があります。
+
+## 長所
+
+* 実際のブラウザで実行され、JavaScriptをサポートします。
+
+## 短所
+
+* 明らかに、InternetExplorerDriverはWindowsでのみ動作します！
+* 比較的遅い（それでもかなりてきぱきしているが:)
+
+## コマンドラインスイッチ
+
+スタンドアロンの実行可能ファイルとして、IEドライバーの動作はさまざまなコマンドライン引数を使用して変更できます。 
+これらのコマンドライン引数の値を設定するには、使用している言語バインディングのドキュメントを参照する必要があります。 
+サポートされているコマンドラインスイッチについて、以下の表で説明します。 
+すべての-`<switch>`、--`<switch>`、および /`<switch>` がサポートされています。
+
+| Switch | 意味 |
+|:-------|:--------|
+| --port=`<portNumber>` | IEドライバーのHTTPサーバーが言語バインディングからのコマンドをリッスンするポートを指定します。 デフォルトは5555です。 |
+| --host=`<hostAdapterIPAddress>` | IEドライバーのHTTPサーバーが言語バインディングからのコマンドをリッスンするホストアダプターのIPアドレスを指定します。 デフォルトは127.0.0.1です。 |
+| --log-level=`<logLevel>` | ロギングメッセージを出力するレベルを指定します。 有効な値は、FATAL、ERROR、WARN、INFO、DEBUG、およびTRACEです。 デフォルトはFATALです。 |
+| --log-file=`<logFile>` | ログファイルのフルパスとファイル名を指定します。 デフォルトはstdoutです。 |
+| --extract-path=`<path>` | サーバーが使用するサポートファイルの抽出に使用されるディレクトリへのフルパスを指定します。 指定しない場合、デフォルトでTEMPディレクトリになります。 |
+| --silent | サーバーの起動時に診断出力を抑制します。 |
+
+## 重要なシステムプロパティ
+
+次のシステムプロパティ（Javaコードで `System.getProperty()` を使用して読み取り、 `System.setProperty()` または "`-DpropertyName=value`" コマンドラインフラグを使用して設定）は、 `InternetExplorerDriver` によって利用されます。
+
+| **プロパティ** | **意味** |
+|:-------------|:------------------|
+| `webdriver.ie.driver` | IEドライバーバイナリの場所 |
+| `webdriver.ie.driver.host` | IEドライバーがリッスンするホストアダプターのIPアドレスを指定します。 |
+| `webdriver.ie.driver.loglevel` | ロギングメッセージを出力するレベルを指定します。 有効な値は、FATAL、ERROR、WARN、INFO、DEBUG、およびTRACEです。 デフォルトはFATALです。 |
+| `webdriver.ie.driver.logfile` | ログファイルのフルパスとファイル名を指定します。 |
+| `webdriver.ie.driver.silent` | IEドライバーの起動時に診断出力を抑制します。 |
+| `webdriver.ie.driver.extractpath` | サーバーが使用するサポートファイルの抽出に使用されるディレクトリへのフルパスを指定します。 指定しない場合、デフォルトでTEMPディレクトリになります。 |
+
+## 必要な構成
+
+*  `IEDriverServer` 実行可能ファイルを[ダウンロード](https://www.selenium.dev/downloads/)して、[PATH](http://en.wikipedia.org/wiki/PATH_(variable))に配置する必要があります。
+* Windows Vista、Windows 7、またはWindows10のIE7以降では、各ゾーンの保護モード設定を同じ値に設定する必要があります。 
+値は、すべてのゾーンで同じである限り、オンまたはオフにすることができます。 
+プロテクトモードの設定を行うには、「ツール」メニューから"インターネットオプション..."を選択し、「セキュリティ」タブをクリックします。 
+ゾーンごとに、"保護モードを有効にする"というラベルの付いたタブの下部にチェックボックスがあります。
+* さらに、IE 10以降では、"拡張保護モード" を無効にする必要があります。 
+このオプションは、「インターネットオプション」ダイアログの「詳細設定」タブにあります。
+* ネイティブマウスイベントを正しい座標に設定できるように、ブラウザのズームレベルを100％に設定する必要があります。
+* Windows 10の場合は、ディスプレイの設定で"テキスト、アプリ、その他の項目のサイズを変更する"も100％に設定する必要があります。
+* IE 11の場合 _のみ_ 、ドライバーが作成したInternet Explorerのインスタンスへの接続を維持できるように、ターゲットコンピューターにレジストリエントリを設定する必要があります。 
+32ビットWindowsインストールの場合、レジストリエディタで調べる必要のあるキーは `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_BFCACHE` です。
+64ビットWindowsインストールの場合、キーは`HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_BFCACHE`です。 
+`FEATURE_BFCACHE` サブキーは存在する場合と存在しない場合があり、存在しない場合は作成する必要があることに注意してください。  
+**重要：** このキーの中に、値0の `iexplore.exe` という名前のDWORD値を作成します。
+
+## ネイティブイベントとInternetExplorer
+
+ `InternetExplorerDriver` はWindows専用であるため、いわゆる"ネイティブ"またはOSレベルのイベントを使用して、ブラウザーでマウスとキーボードの操作を実行しようとします。 
+ これは、同じ操作でシミュレートされたJavaScriptイベントを使用するのとは対照的です。 
+ ネイティブイベントを使用する利点は、JavaScriptサンドボックスに依存せず、ブラウザー内での適切なJavaScriptイベントの伝播を保証することです。 
+ ただし、現在、IEブラウザウィンドウにフォーカスがない場合や、要素にカーソルを合わせようとした場合のマウスイベントにはいくつかの問題があります。
+
+### ブラウザフォーカス
+
+課題は、ウィンドウにフォーカスがない場合、IE自体がIEブラウザウィンドウ（ `WM\_MOUSEDOWN` および `WM\_MOUSEUP` ）に送信するWindowsメッセージを完全に尊重していないように見えることです。 
+具体的には、クリックされている要素はその周りにフォーカスウィンドウを受け取りますが、クリックは要素によって処理されません。 
+間違いなく、メッセージを送信するべきではありません。 
+むしろ、 `SendInput()` APIを使用する必要がありますが、そのAPIでは、ウィンドウにフォーカスを設定する必要があります。 
+WebDriverプロジェクトには2つの相反する目標があります。
+
+まず、ユーザーを可能な限りエミュレートするよう努めます。 
+これは、JavaScriptを使用してイベントをシミュレートするのではなく、ネイティブイベントを使用することを意味します。
+
+次に、自動化されているブラウザウィンドウのフォーカスを必要としないようにします。 
+これは、ブラウザウィンドウをフォアグラウンドに強制するだけでは最適ではないことを意味します。
+
+さらに考慮しないといけないのは、複数のWebDriverインスタンスで実行される複数のIEインスタンスがある可能性です。
+つまり、このような"ウィンドウをフォアグラウンドにする"ソリューションは、IEドライバーのC++コード内のある種の同期構造（mutex？）でラップする必要があります。
+それでも、たとえば、ドライバーがIEをフォアグラウンドに移動してからネイティブイベントを実行する間に、ユーザーが別のウィンドウをフォアグラウンドに移動した場合、このコードは競合状態の影響を受けます。
+
+ドライバーの要件と、これら2つの相反する目標に優先順位を付ける方法についての議論が進行中です。 
+現在の一般的な知恵は、後者よりも前者を優先し、IEドライバーを使用するときにマシンが他のタスクに使用できないことを文書化することです。 
+ただし、その決定はまだ確定しておらず、それを実装するためのコードはかなり複雑になる可能性があります。
+
+### 要素にカーソルを合わせる
+
+要素にカーソルを合わせようとしたときに、物理的なマウスカーソルがIEブラウザーウィンドウの境界内にある場合、ホバーは機能しません。 
+より具体的には、ホバーはほんの一瞬だけ機能しているように見え、その後、要素は前の状態に戻ります。 
+これが発生する一般的な理論は、IEがイベントループ中に何らかのヒットテストを実行しているため、物理カーソルがウィンドウの境界内にあるときに物理マウスの位置に応答するというものです。 
+WebDriver開発チームは、IEのこの動作の回避策を見つけることができませんでした。
+
+### `<option>` 要素をクリックするか、フォームを送信して `alert()`
+
+IEドライバーがネイティブイベントを使用して要素と対話しない場所は2つあります。 
+これは、 `<select>` 要素内の `<option>` 要素をクリックする場合です。 
+通常の状況では、IEドライバーは、要素の位置とサイズに基づいてクリックする場所を計算します。
+通常は、JavaScriptの`getBoundingClientRect()` メソッドによって返されます。 
+ただし、 `<option>` 要素の場合、 `getBoundingClientRect()` は、位置とサイズがゼロの長方形を返します。 
+IEドライバーは、 `click()` Automation Atomを使用してこの1つのシナリオを処理します。
+これは、基本的に要素の `.selected` プロパティを設定し、JavaScriptでonChangeイベントをシミュレートします。 
+ただし、これは、 `<select>` 要素のonChangeイベントに `alert()` 、 `confirm()` 、または `prompt()`を呼び出すJavaScriptコードが含まれている場合、モーダルダイアログが手動で閉じられるまでWebElementの `click()` メソッドの呼び出しがハングすることを意味します。 WebDriverコードのみを使用したこの動作の既知の回避策はありません。
+
+同様に、WebElementの `submit()` メソッドを介してHTMLフォームを送信すると、同じ効果が得られるシナリオがいくつかあります。 
+これは、ドライバーがフォームでJavaScriptの `submit()` 関数を呼び出し、
+JavaScriptの `alert()` 、 `confirm()` 、または `prompt()` 関数を呼び出す onSubmit イベントハンドラーがある場合に発生する可能性があります。
+
+この制限は、issue 3508（Google Code）として登録されています。
+
+## `InternetExplorerDriver` の複数のインスタンス
+
+`IEDriverServer.exe` を作成すると、 `InternetExplorerDriver` の複数のインスタンスを同時に作成して使用できるようになります。 
+ただし、この機能はほとんどテストされておらず、Cookieやウィンドウフォーカスなどに問題がある可能性があります。 
+IEドライバーの複数のインスタンスを使用しようとして、そのような問題が発生した場合は、`RemoteWebDriver` と仮想マシンの使用を検討してください。
+
+InternetExplorerの複数のインスタンス間で共有されるCookie（および別のセッションアイテム）の問題には、2つの解決策があります。
+
+1つ目は、InternetExplorerをプライベートモードで起動することです。 
+その後、InternetExplorerはクリーンなセッションデータで開始され、終了時に変更されたセッションデータを保存しません。 
+これを行うには、2つの特定の機能をドライバーに渡す必要があります。
+つまり、 `true` 値を持つ `ie.forceCreateProcessApi` と `-private` 値を持つ `ie.browserCommandLineSwitches` です。 
+InternetExplorer 8以降でのみ機能することに注意してください。
+また、Windowsレジストリ `HKLM_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main` パスには、値が `0` のキー`TabProcGrowth` が含まれている必要があります。
+
+2つ目は、InternetExplorerの起動中にセッションをクリーンアップすることです。 
+このためには、 `true` の値を持つ特定の `ie.ensureCleanSession` capabilityをドライバーに渡す必要があります。 
+これにより、手動で開始されたものを含め、InternetExplorerの実行中のすべてのインスタンスのキャッシュがクリアされます。
+
+## `IEDriverServer.exe` をリモートで実行する
+
+`IEDriverServer.exe` によって起動されたHTTPサーバーは、ローカルマシンからの接続のみを受け入れるようにアクセス制御リストを設定し、リモートマシンからの着信接続を禁止します。 
+現在、これはソースコードを `IEDriverServer.exe` に変更せずに変更することはできません。 
+リモートマシンでInternetExplorerドライバーを実行するには、Javaスタンドアロンリモートサーバーを、言語バインディングに相当するRemoteWebDriverと組み合わせて使用します。
+
+## Windowsサービスで `IEDriverServer.exe` を実行する
+
+IEDriverServer.exeをWindowsサービスアプリケーションの一部として使用しようとすることは、明示的にサポートされていません。 
+サービスプロセス、およびそれらによって生成されるプロセスには、通常のユーザーコンテキストで実行されるプロセスとは大きく異なる要件があります。 
+ `IEDriverServer.exe` は、その環境では明示的にテストされておらず、サービスプロセスでの使用が禁止されていることが文書化されているWindowsAPI呼び出しが含まれています。 
+サービスプロセスの下で実行しているときにIEドライバーを動作させることは可能かもしれませんが、その環境で問題が発生したユーザーは、独自の解決策を探す必要があります。
+
+---
+
+Section pages:
+
+- [Internet Explorer Driver Internals](https://www.selenium.dev/ja/documentation/legacy/ie_driver_server/internals/index.md): More detailed information on the IE Driver.
