@@ -14,6 +14,10 @@ body:
         Your logo is shown unmodified (resized to the same height as the others) and links to
         your site. A notice under the section says the logos are trademarks of their owners and
         do not mean the organisations endorse Selenium.
+
+        What happens next: a maintainer checks the public link, then opens a pull request that
+        adds your logo and links back to this issue. This issue is closed once that pull request
+        is merged and your logo is live on selenium.dev. If something is missing, we'll ask here.
   - type: input
     id: name
     attributes:
