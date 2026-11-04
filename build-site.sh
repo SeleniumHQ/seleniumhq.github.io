@@ -48,4 +48,7 @@ SELENIUM_EXAMPLES_REPO=${SELENIUM_EXAMPLES_REPO} SELENIUM_EXAMPLES_ORG=${SELENIU
 echo -e "\033[0;32mChecking the Markdown versions of documentation pages...\033[0m"
 ../scripts/check-markdown-output.sh public
 
+echo -e "\033[0;32mGenerating Netlify _redirects from Hugo aliases...\033[0m"
+cd .. && ./scripts/generate-redirects.sh website_and_docs/public
+
 echo -e "\033[0;32mDone building site!\033[0m"
