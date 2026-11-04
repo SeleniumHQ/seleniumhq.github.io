@@ -6,10 +6,14 @@
 # hearsay or a private conversation.
 #
 # Logos: an entry may show its logo instead of its name, but only when the
-# organisation allows that use. Either it has given written permission (record
-# it in the pull request that adds the logo) or its published trademark or
-# brand terms allow a third party to show the logo in this way. Link whichever
-# applies in logo_terms; an entry without logo_terms renders as text.
+# organisation allows that use. Either it has given written permission or its
+# published trademark or brand terms allow a third party to show the logo in
+# this way. Link whichever applies in logo_terms; an entry without logo_terms
+# renders as text. Organisations can give permission and send their logo
+# through the "Add your logo to Used by" issue form
+# (.github/ISSUE_TEMPLATE/used_by_logo.yml); link that issue in logo_terms.
+# Written permission received another way goes in the pull request that adds
+# the logo, and logo_terms links that pull request.
 # Use the organisation's own logo file unchanged (resizing is fine), as SVG
 # where one is offered, under static/images/used-by/.
 #
@@ -21,6 +25,9 @@
 #   logo_terms:  required with logo, the permission or terms that allow it.
 #   logo_notice: optional, attribution or trademark notice the terms ask
 #                for (Markdown); shown under the strip.
+
+# Link under the strip inviting organisations to send their logo.
+logo_submission_url: "https://github.com/SeleniumHQ/seleniumhq.github.io/issues/new?template=used_by_logo.yml"
 
 github:
   repo: SeleniumHQ/selenium
