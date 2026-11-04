@@ -110,3 +110,18 @@
 <script type="application/ld+json">{{ . | jsonify (dict "indent" "  ") | safeJS }}</script>
 {{- end }}
 {{ end }}
+{{/*
+  Point every page at the llms.txt index (https://llmstxt.org) and its
+  full-text companion, so an agent that lands anywhere on the site can find
+  them. Docsy's head.html already emits these links on the English home page,
+  which is the only page that carries the llms and llms-full output formats
+  (see hugo.toml), so skip the pages that have them to avoid duplicates. The
+  files are English only and live at the site root, hence absURL rather than
+  absLangURL.
+*/}}
+{{- if not (.OutputFormats.Get "llms") }}
+<link rel="alternate" type="text/plain" href="{{ "llms.txt" | absURL }}" title="llms.txt">
+{{- end }}
+{{- if not (.OutputFormats.Get "llms-full") }}
+<link rel="alternate" type="text/plain" href="{{ "llms-full.txt" | absURL }}" title="llms-full.txt">
+{{- end }}

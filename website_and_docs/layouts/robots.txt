@@ -1,0 +1,45 @@
+{{- /*
+  robots.txt, rendered because hugo.toml sets enableRobotsTXT. A template rather
+  than static/robots.txt so the URLs follow baseURL (deploy previews included).
+
+  The site is open documentation and AI agents are welcome to crawl, index,
+  train on, and answer from it. The named groups make that explicit for the
+  common AI crawlers and retrieval agents, and the Content-Signal line states
+  the same preference in machine-readable form
+  (https://contentsignals.org). llms.txt (https://llmstxt.org) is the curated
+  entry point for agents; llms-full.txt is the same pages as one file.
+*/ -}}
+# Selenium documentation: https://www.selenium.dev/
+#
+# AI agents and LLM tools: start with the curated index at
+# {{ "llms.txt" | absURL }}
+# or load every page in it as one plain-text file from
+# {{ "llms-full.txt" | absURL }}
+
+User-agent: *
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
+Allow: /
+
+# AI training and retrieval agents, allowed explicitly.
+User-agent: GPTBot
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: ClaudeBot
+User-agent: Claude-SearchBot
+User-agent: Claude-User
+User-agent: anthropic-ai
+User-agent: Google-Extended
+User-agent: Applebot-Extended
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+User-agent: CCBot
+User-agent: meta-externalagent
+User-agent: Amazonbot
+User-agent: Bytespider
+User-agent: cohere-ai
+User-agent: DuckAssistBot
+User-agent: MistralAI-User
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
+Allow: /
+
+Sitemap: {{ "sitemap.xml" | absURL }}
