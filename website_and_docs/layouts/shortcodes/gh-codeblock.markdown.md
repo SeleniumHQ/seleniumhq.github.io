@@ -11,6 +11,9 @@
   block tagged with the language, so the page's
   Markdown carries the code an agent would otherwise have to fetch separately.
   If the file is missing, a link to it on GitHub is emitted instead.
+
+  The org, repo and branch parameters and the SELENIUM_EXAMPLES_* variables of
+  the HTML version do not apply here: the code always comes from the checkout.
 */ -}}
 {{- $fullPath := .Get "path" -}}
 {{- $path := index (split $fullPath "#") 0 -}}
@@ -29,7 +32,7 @@
 {{- $language := .Get "language" | default (index $languages $ext) | default $ext -}}
 
 {{- with resources.Get (strings.TrimPrefix "/" $path) -}}
-  {{- $lines := split .Content "\n" -}}
+  {{- $lines := split (replace .Content "\r\n" "\n") "\n" -}}
   {{- with $fragment -}}
     {{- $range := split (replace . "L" "") "-" -}}
     {{- $from := int (index $range 0) -}}

@@ -5,7 +5,8 @@
   - The page's HTML URL is given under the title, so the Markdown can be cited.
   - Runs of blank lines are collapsed. Shortcode templates leave whitespace-only
     lines behind, and a Markdown version an agent reads should not carry them.
-  - The list of section pages links to their Markdown versions.
+  - Links to documentation pages, in the content and in the list of section
+    pages, point to their Markdown versions (see markdown/doc-links.html).
 
   Shortcodes are rendered with their *.markdown.md templates in layouts/shortcodes.
 */ -}}
@@ -17,7 +18,7 @@ URL: {{ .Permalink }}
 {{- with (partialCached "td/root-page.html" site).OutputFormats.Get "LLMS" }}
 Site index: {{ .Permalink }}
 {{- end }}
-{{ with .RenderShortcodes | replaceRE `(?m)^[ \t]+$` "" | replaceRE `\n{3,}` "\n\n" | strings.TrimSpace }}
+{{ with .RenderShortcodes | replaceRE `(?m)^[ \t]+$` "" | replaceRE `\n{3,}` "\n\n" | strings.TrimSpace | partial "markdown/doc-links.html" }}
 ---
 
 {{ . }}

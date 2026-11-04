@@ -37,7 +37,8 @@ Every documentation page is also published as Markdown, at `index.md` beside its
 the site. Each shortcode used in the documentation needs a Markdown template next to its HTML one,
 named `<shortcode>.markdown.md` (the `markdown` part keeps Hugo from also using it for HTML).
 If you add a shortcode to the documentation, add its Markdown template too, and check the page's
-`index.md` in your preview.
+`index.md` in your preview. `build-site.sh` fails when a page's `index.md` has HTML from a shortcode
+that has no Markdown template.
 
 ## Blog posts
 
