@@ -71,10 +71,10 @@ Solving our example with an implicit wait looks like this:
 
 {{< tabpane text=true >}}
   {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/waits/WaitsTest.java#L50" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/waits/WaitsTest.java#L51" >}}
   {{< /tab >}}
   {{< tab header="Python" >}}
-{{< gh-codeblock path="/examples/python/tests/waits/test_waits.py#L27" >}}
+{{< gh-codeblock path="/examples/python/tests/waits/test_waits.py#L28" >}}
   {{< /tab >}}
   {{< tab header="CSharp" >}}
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Waits/WaitsTest.cs#L39" >}}
@@ -104,12 +104,12 @@ Another nice feature is that, by default, the Selenium Wait class automatically 
   {{% tab header="Java" %}}
 This example shows the condition being waited for as a _lambda_. Java also supports
 [Expected Conditions]({{< ref "support_features/expected_conditions" >}})
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/waits/WaitsTest.java#L67-L68" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/waits/WaitsTest.java#L68-L69" >}}
   {{% /tab %}}
   {{% tab header="Python" %}}
 This example shows the condition being waited for as a _lambda_. Python also supports
 [Expected Conditions]({{< ref "support_features/expected_conditions" >}})
-{{< gh-codeblock path="/examples/python/tests/waits/test_waits.py#L41-L42" >}}
+{{< gh-codeblock path="/examples/python/tests/waits/test_waits.py#L42-L43" >}}
   {{% /tab %}}
   {{< tab header="CSharp" >}}
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Waits/WaitsTest.cs#L56-L57" >}}
@@ -124,6 +124,182 @@ JavaScript also supports [Expected Conditions]({{< ref "support_features/expecte
   {{< tab header="Kotlin" >}}
 {{< gh-codeblock path="examples/kotlin/src/test/kotlin/dev/selenium/waits/WaitsTest.kt#L36-L37" >}}
   {{< /tab >}}
+{{< /tabpane >}}
+
+### Built-in conditions
+
+Instead of writing a lambda for every wait, most bindings ship a library of ready-made
+conditions for the things that are most often waited on.
+Conditions that take a locator find the element on every poll,
+so they also wait for the element to exist.
+Many of them return the element (or elements) once the condition is met,
+so the result of the wait can be used directly.
+
+This example locates an element, waits for it to be visible,
+and then waits for its text, using only built-in conditions:
+
+{{< tabpane text=true >}}
+  {{< tab header="Java" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/waits/WaitsTest.java#L106-L110" >}}
+  {{< /tab >}}
+  {{< tab header="Python" >}}
+{{< gh-codeblock path="/examples/python/tests/waits/test_waits.py#L66-L70" >}}
+  {{< /tab >}}
+  {{% tab header="CSharp" %}}
+.NET does not ship built-in conditions. Pass a lambda to `WebDriverWait.Until()`, as in the
+[explicit wait](#explicit-waits) example.
+  {{% /tab %}}
+  {{% tab header="Ruby" %}}
+Ruby does not ship built-in conditions. Pass a block to `Selenium::WebDriver::Wait#until`, as in the
+[explicit wait](#explicit-waits) example.
+  {{% /tab %}}
+  {{< tab header="JavaScript" >}}
+{{< gh-codeblock path="/examples/javascript/test/waits/waits.spec.js#L62-L65" >}}
+  {{< /tab >}}
+  {{% tab header="Kotlin" %}}
+Kotlin uses the Java `ExpectedConditions` class listed in the Java tab below.
+  {{% /tab %}}
+{{< /tabpane >}}
+
+The complete list of built-in conditions for each binding:
+
+{{< tabpane text=true >}}
+{{% tab header="Java" %}}
+Class `org.openqa.selenium.support.ui.ExpectedConditions`
+([API docs](https://www.selenium.dev/selenium/docs/api/java/org/openqa/selenium/support/ui/ExpectedConditions.html)).
+Use with `new WebDriverWait(driver, timeout).until(...)`.
+
+| Condition | Waits until |
+|-----------|-------------|
+| `titleIs(title)` | The page title equals the value |
+| `titleContains(title)` | The page title contains the value |
+| `urlToBe(url)` | The current URL equals the value |
+| `urlContains(fraction)` | The current URL contains the value |
+| `urlMatches(regex)` | The current URL matches the regular expression |
+| `presenceOfElementLocated(By)` | An element is in the DOM (not necessarily visible); returns it |
+| `presenceOfAllElementsLocatedBy(By)` | At least one element is in the DOM; returns them all |
+| `presenceOfNestedElementLocatedBy(By or WebElement, By)` | A child element is in the DOM under a parent; returns it |
+| `presenceOfNestedElementsLocatedBy(By, By)` | Child elements are in the DOM under a parent; returns them |
+| `visibilityOfElementLocated(By)` | An element is in the DOM and displayed; returns it |
+| `visibilityOf(WebElement)` | A known element is displayed; returns it |
+| `visibilityOfAllElementsLocatedBy(By)` | All matching elements are displayed; returns them |
+| `visibilityOfAllElements(WebElement...)` | All given elements are displayed; returns them |
+| `visibilityOfNestedElementsLocatedBy(By or WebElement, By)` | Child elements under a parent are displayed; returns them |
+| `invisibilityOfElementLocated(By)` | An element is hidden or not in the DOM |
+| `invisibilityOf(WebElement)` | A known element is hidden or no longer in the DOM |
+| `invisibilityOfAllElements(WebElement...)` | All given elements are hidden |
+| `invisibilityOfElementWithText(By, text)` | An element with the given text is hidden or not in the DOM |
+| `elementToBeClickable(By or WebElement)` | An element is displayed and enabled; returns it |
+| `elementToBeSelected(By or WebElement)` | An element is selected |
+| `elementSelectionStateToBe(By or WebElement, selected)` | An element's selected state matches the value |
+| `stalenessOf(WebElement)` | An element is no longer attached to the DOM |
+| `textToBe(By, text)` | An element's text equals the value |
+| `textToBePresentInElement(WebElement, text)` | An element's text contains the value |
+| `textToBePresentInElementLocated(By, text)` | A located element's text contains the value |
+| `textToBePresentInElementValue(By or WebElement, text)` | An element's `value` contains the value |
+| `textMatches(By, Pattern)` | An element's text matches the regular expression |
+| `attributeToBe(By or WebElement, attribute, value)` | An element's attribute or CSS property equals the value |
+| `attributeContains(By or WebElement, attribute, value)` | An element's attribute or CSS property contains the value |
+| `attributeToBeNotEmpty(WebElement, attribute)` | An element's attribute or CSS property is not empty |
+| `domAttributeToBe(WebElement, attribute, value)` | An element's DOM attribute equals the value |
+| `domPropertyToBe(WebElement, property, value)` | An element's DOM property equals the value |
+| `numberOfElementsToBe(By, number)` | The number of matching elements equals the value; returns them |
+| `numberOfElementsToBeMoreThan(By, number)` | The number of matching elements is more than the value; returns them |
+| `numberOfElementsToBeLessThan(By, number)` | The number of matching elements is less than the value; returns them |
+| `numberOfWindowsToBe(number)` | The number of open windows or tabs equals the value |
+| `frameToBeAvailableAndSwitchToIt(By, String, int or WebElement)` | A frame is available, then switches to it |
+| `alertIsPresent()` | An alert is open; returns it |
+| `jsReturnsValue(script)` | The JavaScript returns a value; returns it |
+| `javaScriptThrowsNoExceptions(script)` | The JavaScript runs without throwing |
+| `and(conditions...)` | All of the conditions are true |
+| `or(conditions...)` | Any of the conditions is true |
+| `not(condition)` | The condition is false |
+| `refreshed(condition)` | The condition is true, retrying it after a stale element error |
+{{% /tab %}}
+{{% tab header="Python" %}}
+Module `selenium.webdriver.support.expected_conditions`
+([API docs](https://www.selenium.dev/selenium/docs/api/py/webdriver_support/selenium.webdriver.support.expected_conditions.html)),
+usually imported as `EC`.
+Use with `WebDriverWait(driver, timeout).until(...)`.
+Locators are tuples, such as `(By.ID, "message")`.
+
+| Condition | Waits until |
+|-----------|-------------|
+| `title_is(title)` | The page title equals the value |
+| `title_contains(title)` | The page title contains the value |
+| `url_to_be(url)` | The current URL equals the value |
+| `url_contains(url)` | The current URL contains the value |
+| `url_matches(pattern)` | The current URL matches the regular expression |
+| `url_changes(url)` | The current URL is different from the value |
+| `presence_of_element_located(locator)` | An element is in the DOM (not necessarily visible); returns it |
+| `presence_of_all_elements_located(locator)` | At least one element is in the DOM; returns them all |
+| `visibility_of_element_located(locator)` | An element is in the DOM and displayed; returns it |
+| `visibility_of(element)` | A known element is displayed; returns it |
+| `visibility_of_any_elements_located(locator)` | At least one matching element is displayed; returns the displayed ones |
+| `visibility_of_all_elements_located(locator)` | All matching elements are displayed; returns them |
+| `invisibility_of_element_located(locator or element)` | An element is hidden or not in the DOM |
+| `invisibility_of_element(element or locator)` | An element is hidden or not in the DOM |
+| `element_to_be_clickable(locator or element)` | An element is displayed and enabled; returns it |
+| `element_to_be_selected(element)` | A known element is selected |
+| `element_located_to_be_selected(locator)` | A located element is selected |
+| `element_selection_state_to_be(element, is_selected)` | A known element's selected state matches the value |
+| `element_located_selection_state_to_be(locator, is_selected)` | A located element's selected state matches the value |
+| `staleness_of(element)` | An element is no longer attached to the DOM |
+| `text_to_be_present_in_element(locator, text)` | An element's text contains the value |
+| `text_to_be_present_in_element_value(locator, text)` | An element's `value` contains the value |
+| `text_to_be_present_in_element_attribute(locator, attribute, text)` | An element's attribute contains the value |
+| `element_attribute_to_include(locator, attribute)` | An element has the attribute |
+| `number_of_windows_to_be(num_windows)` | The number of open windows or tabs equals the value |
+| `new_window_is_opened(current_handles)` | A window or tab has opened since the handles were read |
+| `frame_to_be_available_and_switch_to_it(locator, name or element)` | A frame is available, then switches to it |
+| `alert_is_present()` | An alert is open; returns it |
+| `all_of(*conditions)` | All of the conditions are true |
+| `any_of(*conditions)` | Any of the conditions is true |
+| `none_of(*conditions)` | None of the conditions is true |
+{{% /tab %}}
+{{% tab header="CSharp" %}}
+.NET does not ship built-in conditions.
+The `ExpectedConditions` class was removed from the bindings in Selenium 4.
+Pass a lambda to `WebDriverWait.Until()` that returns a non-null value or `true`
+when the condition is met.
+{{% /tab %}}
+{{% tab header="Ruby" %}}
+Ruby does not ship built-in conditions.
+Pass a block to `Selenium::WebDriver::Wait#until` that returns a truthy value
+when the condition is met.
+{{% /tab %}}
+{{% tab header="JavaScript" %}}
+Module `until` from `selenium-webdriver`
+([API docs](https://www.selenium.dev/selenium/docs/api/javascript/index.html)).
+Use with `await driver.wait(until.condition(...), timeout)`.
+Conditions that check an element resolve to that element once they are met.
+
+| Condition | Waits until |
+|-----------|-------------|
+| `titleIs(title)` | The page title equals the value |
+| `titleContains(substr)` | The page title contains the value |
+| `titleMatches(regex)` | The page title matches the regular expression |
+| `urlIs(url)` | The current URL equals the value |
+| `urlContains(substrUrl)` | The current URL contains the value |
+| `urlMatches(regex)` | The current URL matches the regular expression |
+| `elementLocated(locator)` | An element is in the DOM; returns it |
+| `elementsLocated(locator)` | At least one element is in the DOM; returns them all |
+| `elementIsVisible(element)` | An element is displayed |
+| `elementIsNotVisible(element)` | An element is not displayed |
+| `elementIsEnabled(element)` | An element is enabled |
+| `elementIsDisabled(element)` | An element is disabled |
+| `elementIsSelected(element)` | An element is selected |
+| `elementIsNotSelected(element)` | An element is not selected |
+| `elementTextIs(element, text)` | An element's text equals the value |
+| `elementTextContains(element, substr)` | An element's text contains the value |
+| `elementTextMatches(element, regex)` | An element's text matches the regular expression |
+| `stalenessOf(element)` | An element is no longer attached to the DOM |
+| `ableToSwitchToFrame(frame)` | A frame is available, then switches to it |
+| `alertIsPresent()` | An alert is open; returns it |
+{{% /tab %}}
+{{% tab header="Kotlin" %}}
+Kotlin uses the Java `ExpectedConditions` class. See the Java tab.
+{{% /tab %}}
 {{< /tabpane >}}
 
 ### Customization
@@ -143,10 +319,10 @@ make sure that the code returns `true` when it is successful):
 {{< tabpane text=true >}}
   {{% tab header="Java" %}}
 The easiest way to customize Waits in Java is to use the `FluentWait` class:
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/waits/WaitsTest.java#L82-L92" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/waits/WaitsTest.java#L83-L93" >}}
   {{% /tab %}}
   {{< tab header="Python" >}}
-{{< gh-codeblock path="/examples/python/tests/waits/test_waits.py#L53-L55" >}}
+{{< gh-codeblock path="/examples/python/tests/waits/test_waits.py#L54-L56" >}}
   {{< /tab >}}
   {{< tab header="CSharp" >}}
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Waits/WaitsTest.cs#L70-L79" >}}

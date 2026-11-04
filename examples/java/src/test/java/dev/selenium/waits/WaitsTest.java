@@ -10,6 +10,7 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -92,5 +93,22 @@ public class WaitsTest extends BaseTest {
         });
 
     Assertions.assertEquals("Displayed", revealed.getDomProperty("value"));
+  }
+
+  @Test
+  public void expectedConditions() {
+    startChromeDriver(new ChromeOptions());
+
+    driver.get("https://www.selenium.dev/selenium/web/web-form.html");
+    driver.findElement(By.id("my-text-id")).sendKeys("Selenium");
+    driver.findElement(By.cssSelector("button")).click();
+
+    Wait<WebDriver> wait = new WebDriverWait(driver, Duration.ofSeconds(2));
+    wait.until(ExpectedConditions.titleIs("Web form - target page"));
+    WebElement message = wait.until(ExpectedConditions.presenceOfElementLocated(By.id("message")));
+    wait.until(ExpectedConditions.visibilityOf(message));
+    wait.until(ExpectedConditions.textToBePresentInElement(message, "Received!"));
+
+    Assertions.assertEquals("Received!", message.getText());
   }
 }

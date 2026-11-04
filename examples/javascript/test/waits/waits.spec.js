@@ -53,4 +53,17 @@ describe('Waits', function () {
         await revealed.sendKeys("Displayed");
         assert.equal(await revealed.getAttribute("value"), "Displayed")
     })
+
+    it('expected conditions', async function () {
+        await driver.get('https://www.selenium.dev/selenium/web/web-form.html');
+        await driver.findElement(By.id("my-text-id")).sendKeys("Selenium");
+        await driver.findElement(By.css("button")).click();
+
+        await driver.wait(until.titleIs("Web form - target page"), 2000);
+        let message = await driver.wait(until.elementLocated(By.id("message")), 2000);
+        await driver.wait(until.elementIsVisible(message), 2000);
+        await driver.wait(until.elementTextIs(message, "Received!"), 2000);
+
+        assert.equal(await message.getText(), "Received!")
+    })
 });

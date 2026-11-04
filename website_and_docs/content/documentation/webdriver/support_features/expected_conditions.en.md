@@ -19,6 +19,9 @@ These methods can include conditions such as:
 * text is visible
 * title contains specified value
 
+The [Waits]({{< ref "../waits#built-in-conditions" >}}) page lists every built-in condition
+for each language.
+
 {{< tabpane text=true >}}
 {{% tab header="Java" %}}
 [Expected Conditions Documentation](https://www.selenium.dev/selenium/docs/api/java/org/openqa/selenium/support/ui/ExpectedConditions.html)
