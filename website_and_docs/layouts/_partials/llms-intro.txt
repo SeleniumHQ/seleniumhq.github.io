@@ -20,3 +20,6 @@ Notes for tools generating Selenium code from this documentation:
   classes instead.
 - Code samples on this site are compiled and tested in CI from the examples in
   https://github.com/SeleniumHQ/seleniumhq.github.io/tree/trunk/examples
+- Every documentation page has a Markdown version, with the code examples for
+  each language inline: add `index.md` to the page URL, for example
+  https://www.selenium.dev/documentation/webdriver/waits/index.md
