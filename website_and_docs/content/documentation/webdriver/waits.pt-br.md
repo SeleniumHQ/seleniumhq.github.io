@@ -123,12 +123,13 @@ JavaScript also supports [Expected Conditions]({{< ref "support_features/expecte
 
 ### Built-in conditions
 
-Instead of writing a lambda for every wait, most bindings ship a library of ready-made
-conditions for the things that are most often waited on.
-Conditions that take a locator find the element on every poll,
-so they also wait for the element to exist.
-Many of them return the element (or elements) once the condition is met,
-so the result of the wait can be used directly.
+Most bindings include a set of ready-made conditions
+for the situations that come up most often in waits.
+You don't have to write a custom lambda for each one.
+Conditions that take a locator search for the element on every poll,
+so they also wait for it to appear.
+Many of them hand back the element (or elements) once the condition is met,
+letting you use the result of the wait directly.
 
 This example locates an element, waits for it to be visible,
 and then waits for its text, using only built-in conditions:
