@@ -5,6 +5,9 @@
   The curated page list (and why Legacy, CDP and the IDE page are absent) lives in
   _partials/llms-areas.html, which is shared with llms-full.txt
   (index.llms-full.txt). Edit the list there, not here.
+
+  Entries link to each page's Markdown version (index.md beside index.html),
+  which carries the code examples inline and none of the site navigation.
 */ -}}
 {{- $site := .Site -}}
 {{ partial "llms-intro.txt" . }}
@@ -15,7 +18,9 @@
 {{ . }}
 {{- end }}
 {{ range .pages }}
-- [{{ .Title }}]({{ .Permalink }})
+{{- $link := .Permalink }}
+{{- with .OutputFormats.Get "markdown" }}{{ $link = .Permalink }}{{ end }}
+- [{{ .Title }}]({{ $link }})
     {{- with .Description }}: {{ . | chomp | replaceRE `\s+` " " }}{{ end }}
 {{- end }}
 {{ end }}

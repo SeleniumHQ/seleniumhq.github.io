@@ -45,4 +45,7 @@ echo -e "\033[0;32mGenerating Hugo site for website...\033[0m"
 echo -e "\033[0;32mUsing SELENIUM_EXAMPLES_REPO=${SELENIUM_EXAMPLES_REPO} SELENIUM_EXAMPLES_ORG=${SELENIUM_EXAMPLES_ORG} SELENIUM_EXAMPLES_BRANCH=${SELENIUM_EXAMPLES_BRANCH} hugo --minify ${USE_BASE_URL_SITE}...\033[0m"
 SELENIUM_EXAMPLES_REPO=${SELENIUM_EXAMPLES_REPO} SELENIUM_EXAMPLES_ORG=${SELENIUM_EXAMPLES_ORG} SELENIUM_EXAMPLES_BRANCH=${SELENIUM_EXAMPLES_BRANCH} hugo --minify ${USE_BASE_URL_SITE}
 
+echo -e "\033[0;32mChecking the Markdown versions of documentation pages...\033[0m"
+../scripts/check-markdown-output.sh public
+
 echo -e "\033[0;32mDone building site!\033[0m"

@@ -25,9 +25,20 @@ environment and preview your changes with `hugo server`.
 | Styles | `assets/scss/` |
 | Structured data (e.g., sponsors) | `data/` |
 | Site configuration and menus | `hugo.toml` |
+| Markdown version of each documentation page | `layouts/all.md`, `layouts/shortcodes/*.markdown.md` |
 
 Some pages have most of their content in the template instead of the Markdown file.
 For example, the content of the [Downloads](/downloads/) page lives in `layouts/downloads/list.html`.
+
+## Markdown versions of documentation pages
+
+Every documentation page is also published as Markdown, at `index.md` beside its `index.html`
+(for example, `/documentation/webdriver/waits/index.md`), for AI agents and other tools that read
+the site. Each shortcode used in the documentation needs a Markdown template next to its HTML one,
+named `<shortcode>.markdown.md` (the `markdown` part keeps Hugo from also using it for HTML).
+If you add a shortcode to the documentation, add its Markdown template too, and check the page's
+`index.md` in your preview. `build-site.sh` fails when a page's `index.md` has HTML from a shortcode
+that has no Markdown template.
 
 ## Blog posts
 
