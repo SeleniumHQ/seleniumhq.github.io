@@ -99,6 +99,16 @@ description = "Selenium automates browsers. That's it!"
   [[module.imports]]
     path = "github.com/docsy/docsy/theme"
     disable = false
+  # The runnable examples, for the Markdown output of gh-codeblock
+  # (layouts/shortcodes/gh-codeblock.markdown.md), which inlines them from the checkout.
+  # Declaring any assets mount drops Hugo's default one, so it is restated first.
+  [[module.mounts]]
+    source = "assets"
+    target = "assets"
+  [[module.mounts]]
+    source = "../examples"
+    target = "assets/examples"
+    files = ["! **/node_modules/**", "! **/target/**", "! **/bin/**", "! **/obj/**", "! **/.venv/**", "! **.jar"]
 
 [markup]
   [markup.goldmark]
@@ -424,3 +434,27 @@ year = "year"
     methods = ['(?i)GET|POST']
     urls = ['.*']
 
+
+# A Markdown version of every documentation page, in every language, for AI
+# agents and other tools that would otherwise have to dig the content out of
+# the sidebar, navbar and footer around it. It uses Hugo's built-in "markdown"
+# output format, written as index.md beside each page's index.html, so
+# /documentation/webdriver/waits/ is also at /documentation/webdriver/waits/index.md.
+# It works on any static host, GitHub Pages included.
+#
+# layouts/all.md renders it. Shortcodes use their *.markdown.md templates in
+# layouts/shortcodes, which write tabs, cards and badges as plain Markdown and
+# inline the code from gh-codeblock. The "markdown" infix matters: a bare
+# tab.md in the project would also be picked over Docsy's tab.html for HTML.
+#
+# Sections keep Docsy's print format alongside it.
+[[cascade]]
+  outputs = ["html", "print", "markdown"]
+  [cascade.target]
+    kind = "section"
+    path = "{/documentation,/documentation/**}"
+[[cascade]]
+  outputs = ["html", "markdown"]
+  [cascade.target]
+    kind = "page"
+    path = "/documentation/**"

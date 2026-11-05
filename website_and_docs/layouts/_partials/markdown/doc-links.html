@@ -1,0 +1,27 @@
+{{- /*
+  Points the links in a page's Markdown output at the Markdown versions of the
+  documentation pages they target, so a tool reading the Markdown can follow
+  them and stay on Markdown.
+
+  Handles relative links (/documentation/..., /ja/documentation/...) and
+  absolute links on this site's host, with or without a trailing slash, and
+  keeps any #fragment. A link is changed only when it resolves to a page that
+  has a Markdown version; images, files and other sites are left as they are.
+*/ -}}
+{{- $s := . -}}
+{{- $host := (urls.Parse site.BaseURL).Host -}}
+{{- range findRESubmatch `\]\(((?:https?:)?//([^/)\s]+))?(/(?:[a-z]{2}(?:-[a-z]{2})?/)?(documentation(?:/[^)#\s]*)?))(#[^)\s]*)?\)` $s -}}
+  {{- $linkHost := index . 2 -}}
+  {{- if or (not $linkHost) (eq $linkHost $host) -}}
+    {{- $match := index . 0 -}}
+    {{- $prefix := index . 1 -}}
+    {{- $path := strings.TrimSuffix "/" (index . 3) -}}
+    {{- $fragment := index . 5 -}}
+    {{- with site.GetPage (printf "/%s" (strings.TrimSuffix "/" (index . 4))) -}}
+      {{- if .OutputFormats.Get "markdown" -}}
+        {{- $s = replace $s $match (printf "](%s%s/index.md%s)" $prefix $path $fragment) -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- return $s -}}
