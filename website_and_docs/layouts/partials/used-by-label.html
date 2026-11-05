@@ -1,0 +1,9 @@
+{{- /*
+  Name or logo for one entry of data/used_by.yaml. The logo is used only when
+  logo_terms records why we may show it; otherwise the name is shown as text.
+*/ -}}
+{{- if and .logo .logo_terms -}}
+<img src="{{ .logo | relURL }}" alt="{{ .name }}" title="{{ .name }}" class="used-by-logo" loading="lazy">
+{{- else -}}
+{{ .name }}
+{{- end -}}

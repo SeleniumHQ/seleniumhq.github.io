@@ -1,0 +1,64 @@
+name: 🏢 Add your logo to "Used by"
+description: Your organisation uses Selenium and would like its logo on the selenium.dev homepage
+title: "[🏢 Used by]: "
+labels: [used-by]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for supporting Selenium! The selenium.dev homepage has a "Used by" section
+        that lists organisations that use Selenium. Submitting this form gives the Selenium
+        project permission to show your logo there, and this issue is kept as the record of
+        that permission.
+
+        Your logo is shown unmodified (resized to the same height as the others) and links to
+        your site. A notice under the section says the logos are trademarks of their owners and
+        do not mean the organisations endorse Selenium.
+
+        What happens next: a maintainer checks the public link, then opens a pull request that
+        adds your logo and links back to this issue. This issue is closed once that pull request
+        is merged and your logo is live on selenium.dev. If something is missing, we'll ask here.
+  - type: input
+    id: name
+    attributes:
+      label: Organisation name
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: Organisation website
+      placeholder: https://www.example.com/
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Public link showing you use Selenium
+      description: |
+        An engineering blog post, conference talk, public repository or case study.
+    validations:
+      required: true
+  - type: textarea
+    id: logo
+    attributes:
+      label: Logo
+      description: |
+        Attach your logo (SVG preferred, on a transparent background) or link to the file in your
+        brand kit.
+    validations:
+      required: true
+  - type: textarea
+    id: notice
+    attributes:
+      label: Notice or attribution (optional)
+      description: Any trademark notice or attribution you would like shown with your logo.
+  - type: checkboxes
+    id: permission
+    attributes:
+      label: Permission
+      options:
+        - label: |
+            I am authorised by this organisation to let the Selenium project show its name and
+            logo on selenium.dev, and I grant that permission.
+          required: true

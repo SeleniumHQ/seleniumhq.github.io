@@ -5,15 +5,32 @@
 # a case study on the organisation's own site). Do not add an entry based on
 # hearsay or a private conversation.
 #
-# Logos are deliberately not supported yet. Before a logo is added for an
-# entry, the project needs written permission from the organisation to use its
-# mark, and that permission should be recorded in the pull request that adds
-# the logo. Until then the strip renders names as text only.
+# Logos: an entry may show its logo instead of its name, but only when the
+# organisation allows that use. Either it has given written permission or its
+# published trademark or brand terms allow a third party to show the logo in
+# this way. Link whichever applies in logo_terms; an entry without logo_terms
+# renders as text. Organisations can give permission and send their logo
+# through the "Add your logo to Used by" issue form
+# (.github/ISSUE_TEMPLATE/used_by_logo.yml). To act on one: check the public
+# source, save the logo under static/images/used-by/, add or update the entry
+# here with logo_terms linking the issue, and open a pull request that says
+# "Closes #<issue>" so the issue closes when the logo goes live.
+# Written permission received another way goes in the pull request that adds
+# the logo, and logo_terms links that pull request.
+# Use the organisation's own logo file unchanged (resizing is fine), as SVG
+# where one is offered, under static/images/used-by/.
 #
 # Fields:
-#   name:   display name.
-#   url:    the organisation's own site.
-#   source: public evidence of Selenium use, as described above.
+#   name:        display name; also the logo's alt text.
+#   url:         the organisation's own site.
+#   source:      public evidence of Selenium use, as described above.
+#   logo:        optional, path of the logo file under static/.
+#   logo_terms:  required with logo, the permission or terms that allow it.
+#   logo_notice: optional, attribution or trademark notice the terms ask
+#                for (Markdown); shown under the strip.
+
+# Link under the strip inviting organisations to send their logo.
+logo_submission_url: "https://github.com/SeleniumHQ/seleniumhq.github.io/issues/new?template=used_by_logo.yml"
 
 github:
   repo: SeleniumHQ/selenium
@@ -25,24 +42,43 @@ organisations:
   - name: "Wikimedia Foundation"
     url: "https://www.wikimedia.org/"
     source: "https://www.mediawiki.org/wiki/Selenium/Reference"
+    logo: "/images/used-by/wikimedia-foundation.svg"
+    # Section 3.6: marks may be used on your own website as a hyperlink to
+    # the Wikimedia sites. Section 2.2 asks for the notice below.
+    logo_terms: "https://foundation.wikimedia.org/wiki/Policy:Wikimedia_Foundation_Trademark_Policy#policy-linkstous"
+    logo_notice: "The Wikimedia Foundation logo is a trademark of the Wikimedia Foundation and is used with the permission of the Wikimedia Foundation. We are not endorsed by or affiliated with the Wikimedia Foundation."
   - name: "OpenStack"
     url: "https://www.openstack.org/"
     source: "https://docs.openstack.org/horizon/2026.1/contributor/testing.html"
+    logo: "/images/used-by/openstack.svg"
+    # "Acceptable Standard Logos": nominative use without a signed license,
+    # smaller than our own branding, no implied endorsement.
+    logo_terms: "https://openinfra.org/legal/trademark-policy/"
   - name: "Jenkins"
     url: "https://www.jenkins.io/"
     source: "https://github.com/jenkinsci/acceptance-test-harness"
+    logo: "/images/used-by/jenkins.svg"
+    # Jenkins artwork is CC BY-SA 3.0 and needs attribution with a link.
+    logo_terms: "https://www.jenkins.io/artwork/"
+    logo_notice: "Jenkins logo by the [Jenkins project](https://jenkins.io/), [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/)."
   - name: "Moodle"
     url: "https://moodle.org/"
     source: "https://docs.moodle.org/dev/Running_acceptance_test"
   - name: "Mozilla"
     url: "https://www.mozilla.org/"
     source: "https://github.com/mozilla/addons-release-tests"
-  - name: "GitLab"
-    url: "https://about.gitlab.com/"
-    source: "https://gitlab.com/gitlab-org/gitlab/-/tree/master/qa"
+  - name: "Progress"
+    url: "https://www.progress.com/"
+    # Progress's Kendo UI end-to-end test utilities, built on selenium-webdriver.
+    source: "https://www.npmjs.com/package/@progress/kendo-e2e"
+    # No logo: the Progress trademark policy requires written consent for any
+    # logo use (https://www.progress.com/legal/trademarks/trademarks-use-policy).
   - name: "Drupal"
     url: "https://www.drupal.org/"
     source: "https://drupalize.me/tutorial/functional-javascript-testing"
+    logo: "/images/used-by/drupal.svg"
+    # Automatic license for the official logo in standalone, unaltered form.
+    logo_terms: "https://www.drupal.org/about/trademark"
   - name: "trivago"
     url: "https://www.trivago.com/"
     source: "https://trivago.substack.com/p/trivago-tech-tips-14-selenium-edition"
