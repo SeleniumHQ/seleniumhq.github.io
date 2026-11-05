@@ -159,11 +159,11 @@ and then waits for its text, using only built-in conditions:
   {{< /tab >}}
   {{% tab header="CSharp" %}}
 .NET does not ship built-in conditions. Pass a lambda to `WebDriverWait.Until()`, as in the
-[explicit wait](#explicit-waits) example.
+[explicit wait](#显式等待) example.
   {{% /tab %}}
   {{% tab header="Ruby" %}}
 Ruby does not ship built-in conditions. Pass a block to `Selenium::WebDriver::Wait#until`, as in the
-[explicit wait](#explicit-waits) example.
+[explicit wait](#显式等待) example.
   {{% /tab %}}
   {{< tab header="JavaScript" >}}
 {{< gh-codeblock path="/examples/javascript/test/waits/waits.spec.js#L62-L65" >}}
@@ -200,7 +200,7 @@ Use with `new WebDriverWait(driver, timeout).until(...)`.
 | `invisibilityOfElementLocated(By)` | An element is hidden or not in the DOM |
 | `invisibilityOf(WebElement)` | A known element is hidden or no longer in the DOM |
 | `invisibilityOfAllElements(WebElement...)` | All given elements are hidden |
-| `invisibilityOfElementWithText(By, text)` | An element with the given text is hidden or not in the DOM |
+| `invisibilityOfElementWithText(By, text)` | No displayed element matching the locator has the given text |
 | `elementToBeClickable(By or WebElement)` | An element is displayed and enabled; returns it |
 | `elementToBeSelected(By or WebElement)` | An element is selected |
 | `elementSelectionStateToBe(By or WebElement, selected)` | An element's selected state matches the value |
@@ -219,7 +219,7 @@ Use with `new WebDriverWait(driver, timeout).until(...)`.
 | `numberOfElementsToBeMoreThan(By, number)` | The number of matching elements is more than the value; returns them |
 | `numberOfElementsToBeLessThan(By, number)` | The number of matching elements is less than the value; returns them |
 | `numberOfWindowsToBe(number)` | The number of open windows or tabs equals the value |
-| `frameToBeAvailableAndSwitchToIt(By, String, int or WebElement)` | A frame is available, then switches to it |
+| `frameToBeAvailableAndSwitchToIt(frame)` | A frame, given as a `By`, name or ID, index, or `WebElement`, is available; then switches to it |
 | `alertIsPresent()` | An alert is open; returns it |
 | `jsReturnsValue(script)` | The JavaScript returns a value; returns it |
 | `javaScriptThrowsNoExceptions(script)` | The JavaScript runs without throwing |
@@ -263,7 +263,7 @@ Locators are tuples, such as `(By.ID, "message")`.
 | `element_attribute_to_include(locator, attribute)` | An element has the attribute |
 | `number_of_windows_to_be(num_windows)` | The number of open windows or tabs equals the value |
 | `new_window_is_opened(current_handles)` | A window or tab has opened since the handles were read |
-| `frame_to_be_available_and_switch_to_it(locator, name or element)` | A frame is available, then switches to it |
+| `frame_to_be_available_and_switch_to_it(frame)` | A frame, given as a locator, name or ID, or element, is available; then switches to it |
 | `alert_is_present()` | An alert is open; returns it |
 | `all_of(*conditions)` | All of the conditions are true |
 | `any_of(*conditions)` | Any of the conditions is true |
