@@ -17,7 +17,7 @@ def test_click_and_hold(driver):
         .perform()
 
     sleep(0.5)
-    assert wait_for_text(driver, "click-status") == "focused"
+    assert wait_for_element_text(driver, "click-status") == "focused"
 
 
 def test_click_and_release(driver):
@@ -40,7 +40,7 @@ def test_right_click(driver):
         .perform()
 
     sleep(0.5)
-    assert wait_for_text(driver, "click-status") == "context-clicked"
+    assert wait_for_element_text(driver, "click-status") == "context-clicked"
 
 
 def test_back_click_ab(driver):
@@ -78,7 +78,7 @@ def test_double_click(driver):
         .double_click(clickable) \
         .perform()
 
-    assert wait_for_text(driver, "click-status") == "double-clicked"
+    assert wait_for_element_text(driver, "click-status") == "double-clicked"
 
 
 def test_hover(driver):
@@ -89,7 +89,7 @@ def test_hover(driver):
         .move_to_element(hoverable) \
         .perform()
 
-    assert wait_for_text(driver, "move-status") == "hovered"
+    assert wait_for_element_text(driver, "move-status") == "hovered"
 
 
 def test_move_by_offset_from_element(driver):
@@ -100,7 +100,7 @@ def test_move_by_offset_from_element(driver):
         .move_to_element_with_offset(mouse_tracker, 8, 0) \
         .perform()
 
-    coordinates = wait_for_text(driver, "relative-location").split(", ")
+    coordinates = wait_for_element_text(driver, "relative-location").split(", ")
     assert abs(int(coordinates[0]) - 100 - 8) < 2
 
 
@@ -111,7 +111,7 @@ def test_move_by_offset_from_viewport_origin_ab(driver):
     action.pointer_action.move_to_location(8, 0)
     action.perform()
 
-    coordinates = wait_for_text(driver, "absolute-location").split(", ")
+    coordinates = wait_for_element_text(driver, "absolute-location").split(", ")
 
     assert abs(int(coordinates[0]) - 8) < 2
 
@@ -127,7 +127,7 @@ def test_move_by_offset_from_current_pointer_ab(driver):
         .move_by_offset(13, 15) \
         .perform()
 
-    coordinates = wait_for_text(driver, "absolute-location").split(", ")
+    coordinates = wait_for_element_text(driver, "absolute-location").split(", ")
 
     assert abs(int(coordinates[0]) - 6 - 13) < 2
     assert abs(int(coordinates[1]) - 3 - 15) < 2
@@ -142,7 +142,7 @@ def test_drag_and_drop_onto_element(driver):
         .drag_and_drop(draggable, droppable) \
         .perform()
 
-    assert wait_for_text(driver, "drop-status") == "dropped"
+    assert wait_for_element_text(driver, "drop-status") == "dropped"
 
 
 def test_drag_and_drop_by_offset(driver):
@@ -155,10 +155,10 @@ def test_drag_and_drop_by_offset(driver):
         .drag_and_drop_by_offset(draggable, finish['x'] - start['x'], finish['y'] - start['y']) \
         .perform()
 
-    assert wait_for_text(driver, "drop-status") == "dropped"
+    assert wait_for_element_text(driver, "drop-status") == "dropped"
 
 
-def wait_for_text(driver, element_id):
+def wait_for_element_text(driver, element_id):
     # The page updates these elements from mouse events, so wait until the
     # text is filled in before reading it.
     element = driver.find_element(By.ID, element_id)
