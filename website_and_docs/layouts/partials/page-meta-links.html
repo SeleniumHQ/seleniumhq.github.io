@@ -6,6 +6,9 @@
   {{ $gh_project_repo := ($.Param "github_project_repo") }}
   {{ $gh_branch := (default "master" ($.Param "github_branch")) }}
   <div class="td-page-meta ml-2 pb-1 pt-2 mb-0">
+  {{ with .AlternativeOutputFormats.Get "markdown" }}
+    <a href="{{ .RelPermalink }}" class="td-page-meta__markdown"><i class="fa-brands fa-markdown fa-fw"></i> {{ T "post_view_markdown" }}</a>
+  {{ end }}
   {{ if $gh_url }}
      <a href="{{ $gh_url }}" target="_blank"><i class="fa fa-edit fa-fw"></i> {{ T "post_edit_this" }}</a>
   {{ else if $gh_repo }}
