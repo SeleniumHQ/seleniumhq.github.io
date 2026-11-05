@@ -15,6 +15,14 @@ img {
   max-width: 300px;
 }
 
+// "Used by" strip on the homepage (layouts/partials/used-by.html).
+.used-by-logo {
+  height: 2.5rem;
+  width: auto;
+  max-width: 12rem;
+  object-fit: contain;
+}
+
 // Small devices (landscape phones, 576px and up)
 @include media-breakpoint-up(sm) {
   .wide-photo-container {
