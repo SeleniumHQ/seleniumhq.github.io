@@ -13,6 +13,10 @@ aliases: [
 按住按钮，松开按钮，还有移动光标。
 Selenium组合了常见的操作并提供了方便的方法。
 
+Some pages, like the test page used in these examples, update their content from the mouse
+events after the action has been performed. When your code checks a result like this, wait for
+it explicitly instead of reading it right away or adding a fixed sleep.
+See [Waiting strategies]({{< ref "/documentation/webdriver/waits.md" >}}).
 
 ## 按住鼠标左键
 
@@ -24,7 +28,7 @@ Selenium组合了常见的操作并提供了方便的方法。
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/actions_api/MouseTest.java#L22-L25" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="/examples/python/tests/actions_api/test_mouse.py#L14-L17" >}}
+{{< gh-codeblock path="/examples/python/tests/actions_api/test_mouse.py#L13-L18" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/ActionsAPI/MouseTest.cs#L17-L20" >}}
@@ -85,7 +89,7 @@ Selenium组合了常见的操作并提供了方便的方法。
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/actions_api/MouseTest.java#L46-L49" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="/examples/python/tests/actions_api/test_mouse.py#L37-L40" >}}
+{{< gh-codeblock path="/examples/python/tests/actions_api/test_mouse.py#L37-L42" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/ActionsAPI/MouseTest.cs#L43-L46" >}}
@@ -111,7 +115,7 @@ Selenium组合了常见的操作并提供了方便的方法。
 {{< /tab >}}
 {{< tab header="Python" >}}
 {{< badge-version version="4.2" >}}
-{{< gh-codeblock path="/examples/python/tests/actions_api/test_mouse.py#L51-L54" >}}
+{{< gh-codeblock path="/examples/python/tests/actions_api/test_mouse.py#L52-L55" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-version version="4.2" >}}
@@ -140,7 +144,7 @@ Selenium组合了常见的操作并提供了方便的方法。
 {{< /tab >}}
 {{< tab header="Python" >}}
 {{< badge-version version="4.2" >}}
-{{< gh-codeblock path="/examples/python/tests/actions_api/test_mouse.py#L65-L68" >}}
+{{< gh-codeblock path="/examples/python/tests/actions_api/test_mouse.py#L66-L69" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< badge-version version="4.2" >}}
@@ -168,7 +172,7 @@ Selenium组合了常见的操作并提供了方便的方法。
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/actions_api/MouseTest.java#L93-L96" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="/examples/python/tests/actions_api/test_mouse.py#L76-L79" >}}
+{{< gh-codeblock path="/examples/python/tests/actions_api/test_mouse.py#L77-L82" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/ActionsAPI/MouseTest.cs#L91-L94" >}}
@@ -195,7 +199,7 @@ Selenium组合了常见的操作并提供了方便的方法。
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/actions_api/MouseTest.java#L105-L108" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="/examples/python/tests/actions_api/test_mouse.py#L87-L90" >}}
+{{< gh-codeblock path="/examples/python/tests/actions_api/test_mouse.py#L90-L95" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/ActionsAPI/MouseTest.cs#L104-L107" >}}
@@ -225,7 +229,7 @@ Selenium组合了常见的操作并提供了方便的方法。
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/actions_api/MouseTest.java#L118-L121" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="/examples/python/tests/actions_api/test_mouse.py#L98-L101" >}}
+{{< gh-codeblock path="/examples/python/tests/actions_api/test_mouse.py#L103-L109" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/ActionsAPI/MouseTest.cs#L132-L135" >}}
@@ -250,7 +254,7 @@ Selenium组合了常见的操作并提供了方便的方法。
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/actions_api/MouseTest.java#L131-L136" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="/examples/python/tests/actions_api/test_mouse.py#L110-L112" >}}
+{{< gh-codeblock path="/examples/python/tests/actions_api/test_mouse.py#L118-L123" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/ActionsAPI/MouseTest.cs#L146-L150" >}}
@@ -279,7 +283,7 @@ Selenium组合了常见的操作并提供了方便的方法。
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/actions_api/MouseTest.java#L153-L155" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="/examples/python/tests/actions_api/test_mouse.py#L126-L128" >}}
+{{< gh-codeblock path="/examples/python/tests/actions_api/test_mouse.py#L137-L142" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/ActionsAPI/MouseTest.cs#L167-L169" >}}
@@ -304,7 +308,7 @@ Selenium组合了常见的操作并提供了方便的方法。
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/actions_api/MouseTest.java#L166-L170" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="/examples/python/tests/actions_api/test_mouse.py#L139-L143" >}}
+{{< gh-codeblock path="/examples/python/tests/actions_api/test_mouse.py#L153-L159" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/ActionsAPI/MouseTest.cs#L181-L185" >}}
@@ -328,7 +332,7 @@ Selenium组合了常见的操作并提供了方便的方法。
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/actions_api/MouseTest.java#L179-L184" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="/examples/python/tests/actions_api/test_mouse.py#L151-L156" >}}
+{{< gh-codeblock path="/examples/python/tests/actions_api/test_mouse.py#L167-L174" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/ActionsAPI/MouseTest.cs#L195-L200" >}}
