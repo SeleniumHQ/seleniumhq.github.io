@@ -134,12 +134,15 @@ def test_move_by_offset_from_current_pointer_ab(driver):
     action.pointer_action.move_to_location(6, 3)
     action.perform()
 
+    location = driver.find_element(By.ID, "absolute-location")
+    WebDriverWait(driver, 10).until(lambda _: location.text != "")
+    start = location.text
+
     ActionChains(driver) \
         .move_by_offset(13, 15) \
         .perform()
 
-    location = driver.find_element(By.ID, "absolute-location")
-    WebDriverWait(driver, 10).until(lambda _: location.text != "")
+    WebDriverWait(driver, 10).until(lambda _: location.text != start)
 
     coordinates = location.text.split(", ")
 

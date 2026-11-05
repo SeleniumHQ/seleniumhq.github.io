@@ -12,11 +12,6 @@ aliases: [
 
 Existem apenas 3 ações que podem ser realizadas com um mouse: pressionar um botão, liberar um botão pressionado e mover o mouse. O Selenium fornece métodos de conveniência que combinam essas ações da maneira mais comum.
 
-Some pages, like the test page used in these examples, update their content from the mouse
-events after the action has been performed. When your code checks a result like this, wait for
-it explicitly instead of reading it right away or adding a fixed sleep.
-See [Waiting strategies]({{< ref "/documentation/webdriver/waits.md" >}}).
-
 ## Clicar e Manter Pressionado
 
 Este método combina mover o mouse para o centro de um elemento com a pressão do botão esquerdo do mouse. Isso é útil para focar em um elemento específico:
@@ -274,7 +269,7 @@ Observe que o primeiro argumento, X, especifica o movimento para a direita quand
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/actions_api/MouseTest.java#L153-L155" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="/examples/python/tests/actions_api/test_mouse.py#L137-L142" >}}
+{{< gh-codeblock path="/examples/python/tests/actions_api/test_mouse.py#L141-L145" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/ActionsAPI/MouseTest.cs#L167-L169" >}}
@@ -299,7 +294,7 @@ Este método primeiro realiza um clique e mantém pressionado no elemento de ori
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/actions_api/MouseTest.java#L166-L170" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="/examples/python/tests/actions_api/test_mouse.py#L153-L159" >}}
+{{< gh-codeblock path="/examples/python/tests/actions_api/test_mouse.py#L156-L162" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/ActionsAPI/MouseTest.cs#L181-L185" >}}
@@ -324,7 +319,7 @@ Este método primeiro realiza um clique e mantém pressionado no elemento de ori
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/actions_api/MouseTest.java#L179-L184" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="/examples/python/tests/actions_api/test_mouse.py#L167-L174" >}}
+{{< gh-codeblock path="/examples/python/tests/actions_api/test_mouse.py#L170-L177" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/ActionsAPI/MouseTest.cs#L195-L200" >}}

@@ -300,7 +300,7 @@ the current mouse position.
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/actions_api/MouseTest.java#L153-L155" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="/examples/python/tests/actions_api/test_mouse.py#L137-L142" >}}
+{{< gh-codeblock path="/examples/python/tests/actions_api/test_mouse.py#L141-L145" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/ActionsAPI/MouseTest.cs#L167-L169" >}}
@@ -326,7 +326,7 @@ moves to the location of the target element and then releases the mouse.
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/actions_api/MouseTest.java#L166-L170" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="/examples/python/tests/actions_api/test_mouse.py#L153-L159" >}}
+{{< gh-codeblock path="/examples/python/tests/actions_api/test_mouse.py#L156-L162" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/ActionsAPI/MouseTest.cs#L181-L185" >}}
@@ -351,7 +351,7 @@ This method firstly performs a click-and-hold on the source element, moves to th
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/actions_api/MouseTest.java#L179-L184" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="/examples/python/tests/actions_api/test_mouse.py#L167-L174" >}}
+{{< gh-codeblock path="/examples/python/tests/actions_api/test_mouse.py#L170-L177" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/ActionsAPI/MouseTest.cs#L195-L200" >}}

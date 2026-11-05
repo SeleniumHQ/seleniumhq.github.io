@@ -13,11 +13,6 @@ aliases: [
 按住按钮，松开按钮，还有移动光标。
 Selenium组合了常见的操作并提供了方便的方法。
 
-Some pages, like the test page used in these examples, update their content from the mouse
-events after the action has been performed. When your code checks a result like this, wait for
-it explicitly instead of reading it right away or adding a fixed sleep.
-See [Waiting strategies]({{< ref "/documentation/webdriver/waits.md" >}}).
-
 ## 按住鼠标左键
 
 这个方法包含2个操作，首先将光标移动到被操作元素的正中心，然后按下鼠标左键不松开。
@@ -283,7 +278,7 @@ See [Waiting strategies]({{< ref "/documentation/webdriver/waits.md" >}}).
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/actions_api/MouseTest.java#L153-L155" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="/examples/python/tests/actions_api/test_mouse.py#L137-L142" >}}
+{{< gh-codeblock path="/examples/python/tests/actions_api/test_mouse.py#L141-L145" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/ActionsAPI/MouseTest.cs#L167-L169" >}}
@@ -308,7 +303,7 @@ See [Waiting strategies]({{< ref "/documentation/webdriver/waits.md" >}}).
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/actions_api/MouseTest.java#L166-L170" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="/examples/python/tests/actions_api/test_mouse.py#L153-L159" >}}
+{{< gh-codeblock path="/examples/python/tests/actions_api/test_mouse.py#L156-L162" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/ActionsAPI/MouseTest.cs#L181-L185" >}}
@@ -332,7 +327,7 @@ See [Waiting strategies]({{< ref "/documentation/webdriver/waits.md" >}}).
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/actions_api/MouseTest.java#L179-L184" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="/examples/python/tests/actions_api/test_mouse.py#L167-L174" >}}
+{{< gh-codeblock path="/examples/python/tests/actions_api/test_mouse.py#L170-L177" >}}
 {{< /tab >}}
 {{< tab header="CSharp" >}}
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/ActionsAPI/MouseTest.cs#L195-L200" >}}
