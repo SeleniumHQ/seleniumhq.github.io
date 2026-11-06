@@ -2,6 +2,7 @@ import pytest
 import time
 from selenium.common import NoSuchElementException, ElementNotInteractableException
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
 
 
@@ -55,3 +56,17 @@ def test_explicit_options(driver):
     wait.until(lambda _ : revealed.send_keys("Displayed") or True)
 
     assert revealed.get_property("value") == "Displayed"
+
+
+def test_expected_conditions(driver):
+    driver.get('https://www.selenium.dev/selenium/web/web-form.html')
+    driver.find_element(By.ID, "my-text-id").send_keys("Selenium")
+    driver.find_element(By.CSS_SELECTOR, "button").click()
+
+    wait = WebDriverWait(driver, timeout=2)
+    wait.until(EC.title_is("Web form - target page"))
+    message = wait.until(EC.presence_of_element_located((By.ID, "message")))
+    wait.until(EC.visibility_of(message))
+    wait.until(EC.text_to_be_present_in_element((By.ID, "message"), "Received!"))
+
+    assert message.text == "Received!"

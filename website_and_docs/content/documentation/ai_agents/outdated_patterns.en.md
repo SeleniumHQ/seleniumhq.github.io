@@ -136,10 +136,10 @@ Current form:
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/waits/WaitsTest.java#L67-L68" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/waits/WaitsTest.java#L68-L69" >}}
 {{< /tab >}}
 {{< tab header="Python" >}}
-{{< gh-codeblock path="/examples/python/tests/waits/test_waits.py#L41-L42" >}}
+{{< gh-codeblock path="/examples/python/tests/waits/test_waits.py#L42-L43" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
