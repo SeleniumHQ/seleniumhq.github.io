@@ -20,15 +20,33 @@
       </a>
     </p>
     {{- $orgs := where .organisations "name" "!=" "" }}
+    {{- /* Entries with a logo first, then text entries, each in data order. */}}
+    {{- $logos := slice }}
+    {{- $names := slice }}
+    {{- range $orgs }}
+      {{- if and .logo .logo_terms }}{{ $logos = $logos | append . }}{{ else }}{{ $names = $names | append . }}{{ end }}
+    {{- end }}
     {{- with $orgs }}
-    <ul class="list-inline mb-0">
-      {{- range . }}
-      <li class="list-inline-item mx-3 my-2 fw-bold">
-        {{- if .url }}<a href="{{ .url }}" class="selenium-link" target="_blank" rel="noopener">{{ .name }}</a>
-        {{- else }}{{ .name }}{{ end -}}
+    <ul class="list-inline mb-0 used-by-list">
+      {{- range $logos | append $names }}
+      <li class="list-inline-item mx-3 my-2 fw-bold align-middle">
+        {{- if .url }}<a href="{{ .url }}" class="selenium-link" target="_blank" rel="noopener">{{ partial "used-by-label.html" . }}</a>
+        {{- else }}{{ partial "used-by-label.html" . }}{{ end -}}
       </li>
       {{- end }}
     </ul>
+    {{- with $d.logo_submission_url }}
+    <p class="mt-3 mb-0">
+      Does your organisation use Selenium?
+      <a href="{{ . }}" class="selenium-link" target="_blank" rel="noopener">Add your logo</a>
+    </p>
+    {{- end }}
+    {{- with $logos }}
+    <p class="small text-muted mt-3 mb-0">
+      Logos are trademarks of their respective owners. Showing them does not mean these organisations endorse Selenium.
+      {{- range . }}{{ with .logo_notice }} {{ . | markdownify }}{{ end }}{{ end }}
+    </p>
+    {{- end }}
     {{- end }}
   </div>
 </div>

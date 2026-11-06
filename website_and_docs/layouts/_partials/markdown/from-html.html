@@ -1,0 +1,36 @@
+{{- /*
+  Turns the HTML that Hugo renders for Markdown content back into Markdown, for
+  the Markdown output format (see the *.markdown.md shortcode templates).
+
+  Hugo renders the inner content of a shortcode called with {{% %}} to HTML
+  before the enclosing shortcode sees it, so a {{% tab %}} holding a
+  gh-codeblock or a badge would otherwise put HTML into the page's Markdown.
+  This handles what that content is made of: Chroma-highlighted code blocks
+  (back to fenced code tagged with the language), paragraphs, emphasis, inline
+  code, links and simple lists. Anything else is left as HTML, which is valid
+  in Markdown.
+*/ -}}
+{{- $s := . -}}
+{{- range findRESubmatch `(?s)<div class="highlight"><pre[^>]*><code(?:[^>]*?data-lang="([^"]*)")?[^>]*>(.*?)</code></pre></div>` $s -}}
+  {{- $code := index . 2 | replaceRE `<[^>]+>` "" | htmlUnescape | strings.TrimRight "\n" -}}
+  {{- $fence := "```" -}}
+  {{- range findRE "`{3,}" $code -}}
+    {{- if ge (len .) (len $fence) }}{{ $fence = printf "%s`" . }}{{ end -}}
+  {{- end -}}
+  {{- $s = replace $s (index . 0) (printf "\n%s%s\n%s\n%s\n" $fence (index . 1) $code $fence) 1 -}}
+{{- end -}}
+{{- $s = $s
+    | replaceRE `<p>\s*` "\n"
+    | replaceRE `\s*</p>` "\n"
+    | replaceRE `</?em>` "_"
+    | replaceRE `</?strong>` "**"
+    | replaceRE `<a href="([^"]*)"[^>]*>(.*?)</a>` "[$2]($1)"
+    | replaceRE `</?ul>` "\n"
+    | replaceRE `<li>\s*` "- "
+    | replaceRE `\s*</li>` "\n" -}}
+{{- $entities := dict "&ldquo;" "“" "&rdquo;" "”" "&lsquo;" "‘" "&rsquo;" "’" "&ndash;" "–" "&mdash;" "—" "&hellip;" "…" -}}
+{{- range $entity, $char := $entities }}{{ $s = replace $s $entity $char }}{{ end -}}
+{{- range findRESubmatch `<code>(.*?)</code>` $s -}}
+  {{- $s = replace $s (index . 0) (printf "`%s`" (htmlUnescape (index . 1))) 1 -}}
+{{- end -}}
+{{- return $s -}}

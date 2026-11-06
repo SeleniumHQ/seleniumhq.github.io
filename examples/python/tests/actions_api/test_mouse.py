@@ -1,5 +1,4 @@
 import pytest
-from time import sleep
 from selenium.webdriver import ActionChains
 from selenium.webdriver.common.actions.action_builder import ActionBuilder
 from selenium.webdriver.common.actions.mouse_button import MouseButton
@@ -16,7 +15,8 @@ def test_click_and_hold(driver):
         .click_and_hold(clickable) \
         .perform()
 
-    sleep(0.5)
+    WebDriverWait(driver, 10).until(EC.text_to_be_present_in_element((By.ID, "click-status"), "focused"))
+
     assert driver.find_element(By.ID, "click-status").text == "focused"
 
 
@@ -39,7 +39,8 @@ def test_right_click(driver):
         .context_click(clickable) \
         .perform()
 
-    sleep(0.5)
+    WebDriverWait(driver, 10).until(EC.text_to_be_present_in_element((By.ID, "click-status"), "context-clicked"))
+
     assert driver.find_element(By.ID, "click-status").text == "context-clicked"
 
 
@@ -78,6 +79,8 @@ def test_double_click(driver):
         .double_click(clickable) \
         .perform()
 
+    WebDriverWait(driver, 10).until(EC.text_to_be_present_in_element((By.ID, "click-status"), "double-clicked"))
+
     assert driver.find_element(By.ID, "click-status").text == "double-clicked"
 
 
@@ -88,6 +91,8 @@ def test_hover(driver):
     ActionChains(driver) \
         .move_to_element(hoverable) \
         .perform()
+
+    WebDriverWait(driver, 10).until(EC.text_to_be_present_in_element((By.ID, "move-status"), "hovered"))
 
     assert driver.find_element(By.ID, "move-status").text == "hovered"
 
@@ -100,18 +105,24 @@ def test_move_by_offset_from_element(driver):
         .move_to_element_with_offset(mouse_tracker, 8, 0) \
         .perform()
 
-    coordinates = driver.find_element(By.ID, "relative-location").text.split(", ")
+    location = driver.find_element(By.ID, "relative-location")
+    WebDriverWait(driver, 10).until(lambda _: location.text != "")
+
+    coordinates = location.text.split(", ")
     assert abs(int(coordinates[0]) - 100 - 8) < 2
 
 
 def test_move_by_offset_from_viewport_origin_ab(driver):
     driver.get('https://selenium.dev/selenium/web/mouse_interaction.html')
-    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "absolute-location")))
+
     action = ActionBuilder(driver)
     action.pointer_action.move_to_location(8, 0)
     action.perform()
 
-    coordinates = driver.find_element(By.ID, "absolute-location").text.split(", ")
+    location = driver.find_element(By.ID, "absolute-location")
+    WebDriverWait(driver, 10).until(lambda _: location.text != "")
+
+    coordinates = location.text.split(", ")
 
     assert abs(int(coordinates[0]) - 8) < 2
 
@@ -123,11 +134,17 @@ def test_move_by_offset_from_current_pointer_ab(driver):
     action.pointer_action.move_to_location(6, 3)
     action.perform()
 
+    location = driver.find_element(By.ID, "absolute-location")
+    WebDriverWait(driver, 10).until(lambda _: location.text != "")
+    start = location.text
+
     ActionChains(driver) \
         .move_by_offset(13, 15) \
         .perform()
 
-    coordinates = driver.find_element(By.ID, "absolute-location").text.split(", ")
+    WebDriverWait(driver, 10).until(lambda _: location.text != start)
+
+    coordinates = location.text.split(", ")
 
     assert abs(int(coordinates[0]) - 6 - 13) < 2
     assert abs(int(coordinates[1]) - 3 - 15) < 2
@@ -142,6 +159,8 @@ def test_drag_and_drop_onto_element(driver):
         .drag_and_drop(draggable, droppable) \
         .perform()
 
+    WebDriverWait(driver, 10).until(EC.text_to_be_present_in_element((By.ID, "drop-status"), "dropped"))
+
     assert driver.find_element(By.ID, "drop-status").text == "dropped"
 
 
@@ -154,5 +173,7 @@ def test_drag_and_drop_by_offset(driver):
     ActionChains(driver) \
         .drag_and_drop_by_offset(draggable, finish['x'] - start['x'], finish['y'] - start['y']) \
         .perform()
+
+    WebDriverWait(driver, 10).until(EC.text_to_be_present_in_element((By.ID, "drop-status"), "dropped"))
 
     assert driver.find_element(By.ID, "drop-status").text == "dropped"

@@ -1,0 +1,31 @@
+{{- /*
+  Overrides Hugo's built-in alias page (the stub written at every old URL in a
+  page's `aliases`).
+
+  Hugo's stub has an empty body: browsers follow its meta refresh, but fetch
+  tools, crawlers and coding agents do not, and see only a URL (#2968). The
+  body below names the new location as text and a link, so any client can
+  follow it.
+
+  On Netlify, scripts/generate-redirects.sh also turns each stub into a real
+  301; this page is what GitHub Pages and other static hosts serve.
+*/ -}}
+<!DOCTYPE html>
+<html lang="{{ site.Language.Locale }}">
+	<head>
+		<title>Moved: {{ with .Page }}{{ .Title }}{{ else }}{{ .Permalink }}{{ end }}</title>
+		{{ with .OutputFormats.Canonical }}<link rel="{{ .Rel }}" href="{{ .Permalink }}">{{ end }}
+		<meta charset="utf-8">
+		<meta name="robots" content="noindex">
+		<meta http-equiv="refresh" content="0; url={{ .Permalink }}">
+	</head>
+	<body>
+		<p>This page has moved to <a href="{{ .Permalink }}">{{ .Permalink }}</a></p>
+		{{- with .Page }}
+		<h1><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
+		{{- with .Description }}
+		<p>{{ . }}</p>
+		{{- end }}
+		{{- end }}
+	</body>
+</html>
