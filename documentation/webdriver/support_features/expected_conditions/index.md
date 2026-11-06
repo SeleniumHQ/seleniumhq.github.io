@@ -20,6 +20,9 @@ These methods can include conditions such as:
 * text is visible
 * title contains specified value
 
+The [Waits](https://www.selenium.dev/documentation/webdriver/waits/index.md#built-in-conditions) page lists every built-in condition
+for each language.
+
 **Java**
 
 [Expected Conditions Documentation](https://www.selenium.dev/selenium/docs/api/java/org/openqa/selenium/support/ui/ExpectedConditions.html)

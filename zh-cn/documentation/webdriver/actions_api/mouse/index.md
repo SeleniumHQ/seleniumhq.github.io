@@ -31,6 +31,8 @@ clickable = driver.find_element(By.ID, "clickable")
 ActionChains(driver) \
     .click_and_hold(clickable) \
     .perform()
+
+WebDriverWait(driver, 10).until(EC.text_to_be_present_in_element((By.ID, "click-status"), "focused"))
 ```
 
 **CSharp**
@@ -156,6 +158,8 @@ clickable = driver.find_element(By.ID, "clickable")
 ActionChains(driver) \
     .context_click(clickable) \
     .perform()
+
+WebDriverWait(driver, 10).until(EC.text_to_be_present_in_element((By.ID, "click-status"), "context-clicked"))
 ```
 
 **CSharp**
@@ -355,6 +359,8 @@ clickable = driver.find_element(By.ID, "clickable")
 ActionChains(driver) \
     .double_click(clickable) \
     .perform()
+
+WebDriverWait(driver, 10).until(EC.text_to_be_present_in_element((By.ID, "click-status"), "double-clicked"))
 ```
 
 **CSharp**
@@ -414,6 +420,8 @@ hoverable = driver.find_element(By.ID, "hover")
 ActionChains(driver) \
     .move_to_element(hoverable) \
     .perform()
+
+WebDriverWait(driver, 10).until(EC.text_to_be_present_in_element((By.ID, "move-status"), "hovered"))
 ```
 
 **CSharp**
@@ -476,6 +484,9 @@ mouse_tracker = driver.find_element(By.ID, "mouse-tracker")
 ActionChains(driver) \
     .move_to_element_with_offset(mouse_tracker, 8, 0) \
     .perform()
+
+location = driver.find_element(By.ID, "relative-location")
+WebDriverWait(driver, 10).until(lambda _: location.text != "")
 ```
 
 **CSharp**
@@ -534,6 +545,9 @@ Sequence actions = new Sequence(mouse, 0)
 action = ActionBuilder(driver)
 action.pointer_action.move_to_location(8, 0)
 action.perform()
+
+location = driver.find_element(By.ID, "absolute-location")
+WebDriverWait(driver, 10).until(lambda _: location.text != "")
 ```
 
 **CSharp**
@@ -594,6 +608,8 @@ new Actions(driver)
 ActionChains(driver) \
     .move_by_offset(13, 15) \
     .perform()
+
+WebDriverWait(driver, 10).until(lambda _: location.text != start)
 ```
 
 **CSharp**
@@ -648,6 +664,8 @@ droppable = driver.find_element(By.ID, "droppable")
 ActionChains(driver) \
     .drag_and_drop(draggable, droppable) \
     .perform()
+
+WebDriverWait(driver, 10).until(EC.text_to_be_present_in_element((By.ID, "drop-status"), "dropped"))
 ```
 
 **CSharp**
@@ -712,6 +730,8 @@ finish = driver.find_element(By.ID, "droppable").location
 ActionChains(driver) \
     .drag_and_drop_by_offset(draggable, finish['x'] - start['x'], finish['y'] - start['y']) \
     .perform()
+
+WebDriverWait(driver, 10).until(EC.text_to_be_present_in_element((By.ID, "drop-status"), "dropped"))
 ```
 
 **CSharp**

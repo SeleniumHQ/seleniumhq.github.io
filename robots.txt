@@ -1,1 +1,34 @@
+# Selenium documentation: https://www.selenium.dev/
+#
+# AI agents and LLM tools: start with the curated index at
+# https://www.selenium.dev/llms.txt
+# or load every page in it as one plain-text file from
+# https://www.selenium.dev/llms-full.txt
+
 User-agent: *
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
+Allow: /
+
+# AI training and retrieval agents, allowed explicitly.
+User-agent: GPTBot
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: ClaudeBot
+User-agent: Claude-SearchBot
+User-agent: Claude-User
+User-agent: anthropic-ai
+User-agent: Google-Extended
+User-agent: Applebot-Extended
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+User-agent: CCBot
+User-agent: meta-externalagent
+User-agent: Amazonbot
+User-agent: Bytespider
+User-agent: cohere-ai
+User-agent: DuckAssistBot
+User-agent: MistralAI-User
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
+Allow: /
+
+Sitemap: https://www.selenium.dev/sitemap.xml
