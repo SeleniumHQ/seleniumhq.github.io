@@ -49,6 +49,34 @@ if [[ -n "${WITH_HTML}" ]]; then
   FAILED=1
 fi
 
+# The home page's Markdown version (index.md, English only) holds the quickstart
+# from data/quickstart.toml, one example per language. The HTML home page writes
+# the same tabs by hand, so check that it still uses every example listed there.
+SITE_DIR="$(cd "$(dirname "$0")/../website_and_docs" && pwd)"
+QUICKSTART_EXAMPLES=$(sed -n 's/^example = "\(.*\)"$/\1/p' "${SITE_DIR}/data/quickstart.toml")
+HOME_MD="${PUBLIC_DIR}/index.md"
+
+if [[ ! -f "${HOME_MD}" ]]; then
+  echo -e "\033[0;31mThe home page has no Markdown version (${HOME_MD}).\033[0m" >&2
+  echo "Check [languages.en.outputs] in website_and_docs/hugo.toml." >&2
+  FAILED=1
+else
+  EXPECTED=$(echo "${QUICKSTART_EXAMPLES}" | grep -c .)
+  FOUND=$(grep -cE '^```(java|python|csharp|ruby|javascript|kotlin)$' "${HOME_MD}" || true)
+  if [[ "${FOUND}" -ne "${EXPECTED}" ]]; then
+    echo -e "\033[0;31m${HOME_MD} has ${FOUND} quickstart code blocks, expected ${EXPECTED}.\033[0m" >&2
+    FAILED=1
+  fi
+fi
+
+for example in ${QUICKSTART_EXAMPLES}; do
+  if ! grep -qF "path=\"${example}\"" "${SITE_DIR}/content/_index.en.html"; then
+    echo -e "\033[0;31m${example} is in data/quickstart.toml but not in content/_index.en.html.\033[0m" >&2
+    echo "Keep the home page tabs and data/quickstart.toml in step." >&2
+    FAILED=1
+  fi
+done
+
 if [[ "${FAILED}" -ne 0 ]]; then
   exit 1
 fi
