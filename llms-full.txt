@@ -23,6 +23,31 @@ Notes for tools generating Selenium code from this documentation:
 - Every documentation page has a Markdown version, with the code examples for
   each language inline: add `index.md` to the page URL, for example
   https://www.selenium.dev/documentation/webdriver/waits/index.md
+- On the HTML site, `?lang=<key>` on any page URL shows its code examples in
+  one language and keeps that choice on later pages, for example
+  https://www.selenium.dev/documentation/webdriver/getting_started/?lang=python
+  Keys: `java`, `python`, `csharp`, `ruby`, `javascript`, `kotlin`.
+  Use it in links you give to people; the Markdown versions always carry every
+  language.
+
+## Quickstart
+
+Install the bindings and run a first script that opens Chrome, loads a page and
+quits. The same steps with the code inline are in
+https://www.selenium.dev/index.md
+
+- Java: Add `org.seleniumhq.selenium:selenium-java` to your Maven or Gradle build.
+  Example: https://github.com/SeleniumHQ/seleniumhq.github.io/blob/trunk/examples/java/src/test/java/dev/selenium/hello/HelloSelenium.java
+- Python: `pip install selenium`
+  Example: https://github.com/SeleniumHQ/seleniumhq.github.io/blob/trunk/examples/python/tests/hello/hello_selenium.py
+- C#: `dotnet add package Selenium.WebDriver`
+  Example: https://github.com/SeleniumHQ/seleniumhq.github.io/blob/trunk/examples/dotnet/HelloSelenium.cs
+- Ruby: `gem install selenium-webdriver`
+  Example: https://github.com/SeleniumHQ/seleniumhq.github.io/blob/trunk/examples/ruby/spec/hello/hello_selenium.rb
+- JavaScript: `npm install selenium-webdriver`
+  Example: https://github.com/SeleniumHQ/seleniumhq.github.io/blob/trunk/examples/javascript/test/hello/helloSelenium.js
+- Kotlin: Kotlin uses the Java bindings: add `org.seleniumhq.selenium:selenium-java` to your Gradle or Maven build.
+  Example: https://github.com/SeleniumHQ/seleniumhq.github.io/blob/trunk/examples/kotlin/src/test/kotlin/dev/selenium/hello/HelloSelenium.kt
 
 
 
@@ -69,6 +94,7 @@ Point it at these, in this order:
 | Resource | Use it for |
 | --- | --- |
 | [llms.txt](https://www.selenium.dev/llms.txt) | A curated index of this site, for an agent to orient itself. Start here. |
+| [The quickstart](https://www.selenium.dev/index.md) | The install command and a tested first script for each language, as Markdown. |
 | [This documentation](https://www.selenium.dev/documentation/) | The current behaviour of every feature, in every binding. |
 | [The examples directory](https://github.com/SeleniumHQ/seleniumhq.github.io/tree/trunk/examples) | Real, runnable code. |
 | API docs for [Java](https://seleniumhq.github.io/selenium/docs/api/java/index.html), [Python](https://seleniumhq.github.io/selenium/docs/api/py/index.html), [.NET](https://seleniumhq.github.io/selenium/docs/api/dotnet/index.html), [Ruby](https://seleniumhq.github.io/selenium/docs/api/rb/index.html), and [JavaScript](https://seleniumhq.github.io/selenium/docs/api/javascript/index.html) | Checking whether a method actually exists, and what it takes. |
@@ -83,6 +109,15 @@ The Selenium 2 and 3 era [legacy documentation](https://www.selenium.dev/documen
 and the [CDP pages](https://www.selenium.dev/documentation/webdriver/bidi/cdp/) are deliberately
 kept out of the main index —
 both are accurate, and both are the worst possible input for a model about to write new code.
+
+Every documentation page also has a Markdown version,
+with the code examples for every language inline:
+add `index.md` to the page URL, as in
+`https://www.selenium.dev/documentation/webdriver/waits/index.md`.
+It carries none of the site navigation, so it is the cheapest way for an agent to read a page.
+When an agent gives a person a link instead, it can add `?lang=` with
+`java`, `python`, `csharp`, `ruby`, `javascript`, or `kotlin`,
+and the page opens with the examples in that language.
 
 The examples directory deserves particular attention.
 Every code tab on this site is a link into that repository,
@@ -19046,6 +19081,7 @@ environment and preview your changes with `hugo server`.
 | Structured data (e.g., sponsors) | `data/` |
 | Site configuration and menus | `hugo.toml` |
 | Markdown version of each documentation page | `layouts/all.md`, `layouts/shortcodes/*.markdown.md` |
+| Markdown version of the home page, with the quickstart for each language | `layouts/home.markdown.md`, `data/quickstart.toml` |
 
 Some pages have most of their content in the template instead of the Markdown file.
 For example, the content of the [Downloads](/downloads/) page lives in `layouts/downloads/list.html`.
@@ -19059,6 +19095,12 @@ named `<shortcode>.markdown.md` (the `markdown` part keeps Hugo from also using 
 If you add a shortcode to the documentation, add its Markdown template too, and check the page's
 `index.md` in your preview. `build-site.sh` fails when a page's `index.md` has HTML from a shortcode
 that has no Markdown template.
+
+The home page also has a Markdown version, `/index.md`, with the install step and first script for
+each language. It is built from `data/quickstart.toml` rather than from the home page's HTML, so
+when you change the Get Started tabs in `content/_index.en.html`, update `data/quickstart.toml` to
+match. `build-site.sh` fails when an example listed in `data/quickstart.toml` is missing from the
+home page.
 
 ## Blog posts
 

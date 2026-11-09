@@ -27,6 +27,7 @@ environment and preview your changes with `hugo server`.
 | Structured data (e.g., sponsors) | `data/` |
 | Site configuration and menus | `hugo.toml` |
 | Markdown version of each documentation page | `layouts/all.md`, `layouts/shortcodes/*.markdown.md` |
+| Markdown version of the home page, with the quickstart for each language | `layouts/home.markdown.md`, `data/quickstart.toml` |
 
 Some pages have most of their content in the template instead of the Markdown file.
 For example, the content of the [Downloads](/downloads/) page lives in `layouts/downloads/list.html`.
@@ -40,6 +41,12 @@ named `<shortcode>.markdown.md` (the `markdown` part keeps Hugo from also using 
 If you add a shortcode to the documentation, add its Markdown template too, and check the page's
 `index.md` in your preview. `build-site.sh` fails when a page's `index.md` has HTML from a shortcode
 that has no Markdown template.
+
+The home page also has a Markdown version, `/index.md`, with the install step and first script for
+each language. It is built from `data/quickstart.toml` rather than from the home page's HTML, so
+when you change the Get Started tabs in `content/_index.en.html`, update `data/quickstart.toml` to
+match. `build-site.sh` fails when an example listed in `data/quickstart.toml` is missing from the
+home page.
 
 ## Blog posts
 

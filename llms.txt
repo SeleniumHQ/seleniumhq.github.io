@@ -23,6 +23,31 @@ Notes for tools generating Selenium code from this documentation:
 - Every documentation page has a Markdown version, with the code examples for
   each language inline: add `index.md` to the page URL, for example
   https://www.selenium.dev/documentation/webdriver/waits/index.md
+- On the HTML site, `?lang=<key>` on any page URL shows its code examples in
+  one language and keeps that choice on later pages, for example
+  https://www.selenium.dev/documentation/webdriver/getting_started/?lang=python
+  Keys: `java`, `python`, `csharp`, `ruby`, `javascript`, `kotlin`.
+  Use it in links you give to people; the Markdown versions always carry every
+  language.
+
+## Quickstart
+
+Install the bindings and run a first script that opens Chrome, loads a page and
+quits. The same steps with the code inline are in
+https://www.selenium.dev/index.md
+
+- Java: Add `org.seleniumhq.selenium:selenium-java` to your Maven or Gradle build.
+  Example: https://github.com/SeleniumHQ/seleniumhq.github.io/blob/trunk/examples/java/src/test/java/dev/selenium/hello/HelloSelenium.java
+- Python: `pip install selenium`
+  Example: https://github.com/SeleniumHQ/seleniumhq.github.io/blob/trunk/examples/python/tests/hello/hello_selenium.py
+- C#: `dotnet add package Selenium.WebDriver`
+  Example: https://github.com/SeleniumHQ/seleniumhq.github.io/blob/trunk/examples/dotnet/HelloSelenium.cs
+- Ruby: `gem install selenium-webdriver`
+  Example: https://github.com/SeleniumHQ/seleniumhq.github.io/blob/trunk/examples/ruby/spec/hello/hello_selenium.rb
+- JavaScript: `npm install selenium-webdriver`
+  Example: https://github.com/SeleniumHQ/seleniumhq.github.io/blob/trunk/examples/javascript/test/hello/helloSelenium.js
+- Kotlin: Kotlin uses the Java bindings: add `org.seleniumhq.selenium:selenium-java` to your Gradle or Maven build.
+  Example: https://github.com/SeleniumHQ/seleniumhq.github.io/blob/trunk/examples/kotlin/src/test/kotlin/dev/selenium/hello/HelloSelenium.kt
 
 
 ## AI agents and code generation (high priority)
