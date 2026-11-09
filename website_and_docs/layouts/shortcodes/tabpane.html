@@ -3,8 +3,13 @@
      Identical to upstream except that each tab pane carries the tab's
      persistence key as data-code-lang, which the site-wide code language
      selector (assets/js/code-lang.js, assets/scss/_tabs.scss) uses to show
-     the chosen language before the tab plugin runs. If Docsy exposes the key
-     on panes upstream, delete this file. */ -}}
+     the chosen language before the tab plugin runs.
+
+     It also takes an optional `label` parameter, written as the tab list's
+     aria-label, so assistive technology and browser-driving agents can tell
+     what the tabs choose between (for example "Code example language").
+
+     If Docsy exposes the key on panes and a label upstream, delete this file. */ -}}
 {{ $tpPersistAttrName := "data-td-tp-persist" -}}
 
 {{ with .Get "langEqualsHeader" -}}
@@ -91,7 +96,7 @@
 {{ $contextIdSuffix := printf "-%s" $tabsContextID -}}
 
 {{/* Nav tabs */ -}}
-<ul class="nav nav-tabs{{ if $rightPane }} justify-content-end{{ end }}" id="{{ $tabPaneIdPrefix }}tablist{{ $contextIdSuffix }}" role="tablist">
+<ul class="nav nav-tabs{{ if $rightPane }} justify-content-end{{ end }}" id="{{ $tabPaneIdPrefix }}tablist{{ $contextIdSuffix }}" role="tablist"{{ with $.Get "label" }} aria-label="{{ . }}"{{ end }}>
   {{ range $index, $element := $.Scratch.Get "tabs" -}}
 
     {{ $enabled := not $element.disabled -}}

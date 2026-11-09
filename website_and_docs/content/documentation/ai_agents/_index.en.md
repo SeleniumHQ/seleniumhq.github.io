@@ -39,6 +39,7 @@ Point it at these, in this order:
 | Resource | Use it for |
 | --- | --- |
 | [llms.txt](https://www.selenium.dev/llms.txt) | A curated index of this site, for an agent to orient itself. Start here. |
+| [The quickstart](https://www.selenium.dev/index.md) | The install command and a tested first script for each language, as Markdown. |
 | [This documentation](https://www.selenium.dev/documentation/) | The current behaviour of every feature, in every binding. |
 | [The examples directory](https://github.com/SeleniumHQ/seleniumhq.github.io/tree/trunk/examples) | Real, runnable code. |
 | API docs for [Java](https://seleniumhq.github.io/selenium/docs/api/java/index.html), [Python](https://seleniumhq.github.io/selenium/docs/api/py/index.html), [.NET](https://seleniumhq.github.io/selenium/docs/api/dotnet/index.html), [Ruby](https://seleniumhq.github.io/selenium/docs/api/rb/index.html), and [JavaScript](https://seleniumhq.github.io/selenium/docs/api/javascript/index.html) | Checking whether a method actually exists, and what it takes. |
@@ -53,6 +54,15 @@ The Selenium 2 and 3 era [legacy documentation]({{< ref "/documentation/legacy/"
 and the [CDP pages]({{< ref "/documentation/webdriver/bidi/cdp/" >}}) are deliberately
 kept out of the main index —
 both are accurate, and both are the worst possible input for a model about to write new code.
+
+Every documentation page also has a Markdown version,
+with the code examples for every language inline:
+add `index.md` to the page URL, as in
+`https://www.selenium.dev/documentation/webdriver/waits/index.md`.
+It carries none of the site navigation, so it is the cheapest way for an agent to read a page.
+When an agent gives a person a link instead, it can add `?lang=` with
+`java`, `python`, `csharp`, `ruby`, `javascript`, or `kotlin`,
+and the page opens with the examples in that language.
 
 The examples directory deserves particular attention.
 Every code tab on this site is a link into that repository,

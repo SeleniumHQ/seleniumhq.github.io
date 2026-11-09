@@ -23,3 +23,20 @@ Notes for tools generating Selenium code from this documentation:
 - Every documentation page has a Markdown version, with the code examples for
   each language inline: add `index.md` to the page URL, for example
   https://www.selenium.dev/documentation/webdriver/waits/index.md
+- On the HTML site, `?lang=<key>` on any page URL shows its code examples in
+  one language and keeps that choice on later pages, for example
+  https://www.selenium.dev/documentation/webdriver/getting_started/?lang=python
+  Keys: {{ range $i, $l := site.Data.quickstart.languages }}{{ if $i }}, {{ end }}`{{ $l.key }}`{{ end }}.
+  Use it in links you give to people; the Markdown versions always carry every
+  language.
+
+## Quickstart
+
+Install the bindings and run a first script that opens Chrome, loads a page and
+quits. The same steps with the code inline are in
+{{ with site.Home.OutputFormats.Get "markdown" }}{{ .Permalink }}{{ end }}
+{{ range site.Data.quickstart.languages }}
+{{- $path := strings.TrimPrefix "/" .example }}
+- {{ .label }}: {{ with .install }}`{{ . }}`{{ else }}{{ .install_text }}{{ end }}
+  Example: {{ site.Params.github_repo }}/blob/trunk/{{ $path }}
+{{- end }}
