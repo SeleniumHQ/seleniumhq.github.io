@@ -151,7 +151,7 @@ section = ["HTML", "print"]
 # interleaving four translations of the same page dilutes it for every language.
 # The translations remain fully indexed as normal HTML.
 [languages.en.outputs]
-home = ["HTML", "RSS", "llms", "llms-full"]
+home = ["HTML", "RSS", "llms", "llms-full", "markdown"]
 section = ["HTML", "print"]
 
 [params]
