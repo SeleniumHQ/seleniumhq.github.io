@@ -1,0 +1,50 @@
+# The per-language "Install Selenium and run your first script" quickstart on
+# the home page, as data for the outputs agents read: the home page's Markdown
+# version (layouts/home.markdown.md) and the Quickstart block of llms.txt and
+# llms-full.txt (layouts/_partials/llms-intro.txt).
+#
+# The HTML home page (content/_index.en.html) writes the same tabs by hand.
+# Keep the two in step: scripts/check-markdown-output.sh fails the build when
+# an example path here is missing from content/_index.en.html.
+#
+# key:     the code language key used by ?lang= and the navbar selector
+#          (assets/js/code-lang.js).
+# install: the package to add, as a shell command, or prose when the package
+#          goes into a build file rather than being installed by a command.
+# example: the tested example in /examples, as gh-codeblock paths are written.
+
+[[languages]]
+key = "java"
+label = "Java"
+install_text = "Add `org.seleniumhq.selenium:selenium-java` to your Maven or Gradle build."
+example = "/examples/java/src/test/java/dev/selenium/hello/HelloSelenium.java"
+
+[[languages]]
+key = "python"
+label = "Python"
+install = "pip install selenium"
+example = "/examples/python/tests/hello/hello_selenium.py"
+
+[[languages]]
+key = "csharp"
+label = "C#"
+install = "dotnet add package Selenium.WebDriver"
+example = "/examples/dotnet/HelloSelenium.cs"
+
+[[languages]]
+key = "ruby"
+label = "Ruby"
+install = "gem install selenium-webdriver"
+example = "/examples/ruby/spec/hello/hello_selenium.rb"
+
+[[languages]]
+key = "javascript"
+label = "JavaScript"
+install = "npm install selenium-webdriver"
+example = "/examples/javascript/test/hello/helloSelenium.js"
+
+[[languages]]
+key = "kotlin"
+label = "Kotlin"
+install_text = "Kotlin uses the Java bindings: add `org.seleniumhq.selenium:selenium-java` to your Gradle or Maven build."
+example = "/examples/kotlin/src/test/kotlin/dev/selenium/hello/HelloSelenium.kt"
