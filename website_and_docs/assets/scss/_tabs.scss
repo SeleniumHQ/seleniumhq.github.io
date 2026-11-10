@@ -30,6 +30,10 @@
 // alone; the remaining header labels the block, and the navbar selector is
 // the way to switch. Tabpanes without a pane for the chosen language keep
 // all their headers, as do tabs that are not keyed by language.
+//
+// The home page's language chooser (.selenium-lang-chooser, below) is the
+// exception: it is where a first-time visitor picks a language, so all of its
+// headers stay visible.
 $code-langs: java, python, csharp, ruby, javascript, kotlin;
 
 @each $lang in $code-langs {
@@ -44,7 +48,7 @@ $code-langs: java, python, csharp, ruby, javascript, kotlin;
       }
     }
 
-    .nav-tabs:has([data-td-tp-persist="#{$lang}"]) {
+    .nav-tabs:has([data-td-tp-persist="#{$lang}"]):not(.selenium-lang-chooser > .nav-tabs) {
       .nav-link[data-td-tp-persist] {
         color: var(--bs-nav-link-color);
         background-color: transparent;
@@ -66,6 +70,106 @@ $code-langs: java, python, csharp, ruby, javascript, kotlin;
   .dropdown-item {
     &.active {
       font-weight: $font-weight-bold;
+    }
+  }
+
+  // "Code:" before the current language, so the control says what it sets.
+  .td-code-lang__prefix {
+    margin-right: 0.25rem;
+  }
+
+  // Set briefly by code-lang.js after a choice in the home page chooser, to
+  // show where the same setting lives on every other page.
+  &.td-code-lang--flash > .nav-link {
+    border-radius: 0.375rem;
+    animation: td-code-lang-flash 1.6s ease-out;
+  }
+}
+
+@keyframes td-code-lang-flash {
+  0%, 40% {
+    background-color: rgba($primary, 0.25);
+    box-shadow: 0 0 0 0.25rem rgba($primary, 0.35);
+  }
+  100% {
+    background-color: transparent;
+    box-shadow: 0 0 0 0 rgba($primary, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .td-navbar .td-code-lang.td-code-lang--flash > .nav-link {
+    animation: none;
+  }
+}
+
+// Language chooser on the home page's "Install Selenium and run your first
+// script" section (content/_index.en.html wraps its tabpane in this class).
+// The tab headers become a centred row of large buttons that always stays
+// visible, so a first-time visitor sees at a glance that the example comes in
+// six languages and can switch with one click. It is the same tabpane, so a
+// choice here persists and switches every other page, like the navbar
+// selector does.
+//
+// The selected button uses a darker shade of the Selenium green so that white
+// text on it has enough contrast (5.2:1 for white on #2E7D1D).
+$selenium-lang-chooser-selected: #2E7D1D;
+
+.selenium-lang-chooser {
+  > .nav-tabs {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem 0.75rem;
+    border-bottom: 0;
+    margin-bottom: 1.5rem;
+
+    .nav-link {
+      min-width: 7.5rem;
+      padding: 0.6rem 1.25rem;
+      border: 2px solid $gray-300;
+      border-radius: 2rem;
+      background-color: $white;
+      color: $gray-900;
+      font-size: 1.125rem;
+      font-weight: $font-weight-bold;
+      transition: border-color 0.15s, background-color 0.15s, color 0.15s;
+
+      &:hover {
+        border-color: $primary;
+        color: $gray-900;
+      }
+
+      &:focus-visible {
+        outline: 3px solid $primary;
+        outline-offset: 2px;
+      }
+
+      &.active {
+        border-color: $selenium-lang-chooser-selected;
+        background-color: $selenium-lang-chooser-selected;
+        color: $white;
+      }
+    }
+  }
+
+  > .tab-content {
+    border-radius: 0.5rem;
+  }
+}
+
+// Before the tab plugin runs, follow <html data-code-lang> for the selected
+// button, as the rules above do for other tabpanes.
+@each $lang in $code-langs {
+  html[data-code-lang="#{$lang}"] .selenium-lang-chooser > .nav-tabs:has([data-td-tp-persist="#{$lang}"]) {
+    .nav-link[data-td-tp-persist] {
+      border-color: $gray-300;
+      background-color: $white;
+      color: $gray-900;
+    }
+    .nav-link[data-td-tp-persist="#{$lang}"] {
+      border-color: $selenium-lang-chooser-selected;
+      background-color: $selenium-lang-chooser-selected;
+      color: $white;
     }
   }
 }

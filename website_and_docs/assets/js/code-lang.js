@@ -67,6 +67,15 @@
       .forEach((tab) => bootstrap.Tab.getOrCreateInstance(tab).show());
   }
 
+  function flashSelector() {
+    document.querySelectorAll('.td-navbar .td-code-lang').forEach((el) => {
+      el.classList.remove('td-code-lang--flash');
+      void el.offsetWidth; // restart the animation on repeated clicks
+      el.classList.add('td-code-lang--flash');
+      setTimeout(() => el.classList.remove('td-code-lang--flash'), 1700);
+    });
+  }
+
   function select(key) {
     if (!LANGS.includes(key)) return;
     persist(key);
@@ -93,7 +102,13 @@
     // dropdown label and the html attribute.
     document.addEventListener('shown.bs.tab', (event) => {
       const key = event.target && event.target.getAttribute('data-td-tp-persist');
-      if (key && LANGS.includes(key)) setCurrent(key);
+      if (key && LANGS.includes(key)) {
+        setCurrent(key);
+        // A choice in the home page chooser also highlights the navbar
+        // selector for a moment, so a first-time visitor sees where to change
+        // the language on every other page.
+        if (event.target.closest('.selenium-lang-chooser')) flashSelector();
+      }
     });
   });
 })();
