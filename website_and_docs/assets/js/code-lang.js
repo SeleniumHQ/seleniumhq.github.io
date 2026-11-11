@@ -50,6 +50,11 @@
     document.querySelectorAll('.td-code-lang__label').forEach((el) => {
       el.textContent = LABELS[key];
     });
+    // Keep the toggle's accessible name in step with the visible label, so
+    // screen readers and browser-driving agents hear what the control does.
+    document.querySelectorAll('#td-code-lang-toggle').forEach((el) => {
+      el.setAttribute('aria-label', 'Code example language: ' + LABELS[key]);
+    });
     document.querySelectorAll('.td-code-lang [data-code-lang]').forEach((item) => {
       item.classList.toggle('active', item.getAttribute('data-code-lang') === key);
     });
