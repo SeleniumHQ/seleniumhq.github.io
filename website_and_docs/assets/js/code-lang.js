@@ -104,10 +104,16 @@
       const key = event.target && event.target.getAttribute('data-td-tp-persist');
       if (key && LANGS.includes(key)) {
         setCurrent(key);
-        // A choice in the home page chooser also highlights the navbar
-        // selector for a moment, so a first-time visitor sees where to change
-        // the language on every other page.
-        if (event.target.closest('.selenium-lang-chooser')) flashSelector();
+        // A choice in the home page chooser removes the chooser (see
+        // assets/scss/_tabs.scss) and highlights the navbar selector for a
+        // moment, so the visitor sees where to change the language from now
+        // on. Focus moves there too, as the button that had it is now hidden.
+        if (event.target.closest('.selenium-lang-chooser')) {
+          const hadFocus = event.target.contains(document.activeElement);
+          flashSelector();
+          const toggle = document.getElementById('td-code-lang-toggle');
+          if (hadFocus && toggle) toggle.focus();
+        }
       }
     });
   });
