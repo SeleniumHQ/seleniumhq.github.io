@@ -56,12 +56,12 @@ jobs:
       if: matrix.release == 'stable'
       uses: actions/setup-dotnet@v6
       with:
-        dotnet-version: 10.x
+        dotnet-version: 11.x
     - name: Set up .Net Nightly
       if: matrix.release == 'nightly'
       uses: actions/setup-dotnet@v6
       with:
-        dotnet-version: 10.x
+        dotnet-version: 11.x
         source-url: https://nuget.pkg.github.com/seleniumhq/index.json
       env:
         NUGET_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
