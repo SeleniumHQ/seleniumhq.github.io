@@ -3,7 +3,6 @@
 require 'spec_helper'
 
 RSpec.describe 'Element Locators' do
-
   let(:driver) { start_session }
   let(:url) { 'https://www.selenium.dev/selenium/web/locators_tests/locators.html' }
 
@@ -59,32 +58,32 @@ RSpec.describe 'Element Locators' do
 
   context 'with relative locators' do
     it 'finds element above' do
-      ele = driver.find_element(relative: { tag_name: 'input', above: { id: 'password' } })
+      ele = driver.find_element(relative: {tag_name: 'input', above: {id: 'password'}})
       expect(ele).not_to be_nil
     end
 
     it 'finds element below' do
-      ele = driver.find_element(relative: { tag_name: 'input', below: { id: 'email' } })
+      ele = driver.find_element(relative: {tag_name: 'input', below: {id: 'email'}})
       expect(ele).not_to be_nil
     end
 
     it 'finds element to the left' do
-      ele = driver.find_element(relative: { tag_name: 'button', left: { id: 'submit' } })
+      ele = driver.find_element(relative: {tag_name: 'button', left: {id: 'submit'}})
       expect(ele).not_to be_nil
     end
 
     it 'finds element to the right' do
-      ele = driver.find_element(relative: { tag_name: 'button', right: { id: 'cancel' } })
+      ele = driver.find_element(relative: {tag_name: 'button', right: {id: 'cancel'}})
       expect(ele).not_to be_nil
     end
 
     it 'finds near element' do
-      ele = driver.find_element(relative: { tag_name: 'input', near: { id: 'lbl-email' } })
+      ele = driver.find_element(relative: {tag_name: 'input', near: {id: 'lbl-email'}})
       expect(ele).not_to be_nil
     end
 
     it 'chains relative locators' do
-      ele = driver.find_element(relative: { tag_name: 'button', below: { id: 'email' }, right: { id: 'cancel' } })
+      ele = driver.find_element(relative: {tag_name: 'button', below: {id: 'email'}, right: {id: 'cancel'}})
       expect(ele).not_to be_nil
     end
   end
