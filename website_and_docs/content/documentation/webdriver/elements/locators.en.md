@@ -85,7 +85,7 @@ In Selenium, we can locate these specific elements using the class name locator.
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Elements/LocatorsTest.cs#L20-L21" >}}
 {{< /tab >}}
   {{< tab header="Ruby" text=true >}}
-{{< gh-codeblock path="/examples/ruby/spec/elements/locators_spec.rb#L7" >}}
+{{< gh-codeblock path="/examples/ruby/spec/elements/locators_spec.rb#L13" >}}
   {{< /tab >}}
   {{< tab header="JavaScript" text=true >}}
 {{< gh-codeblock path="/examples/javascript/test/elements/locators.spec.js#L6-L8" >}}
@@ -115,7 +115,7 @@ textbox, using css.
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Elements/LocatorsTest.cs#L23-L24" >}}
 {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
-{{< gh-codeblock path="/examples/ruby/spec/elements/locators_spec.rb#L11" >}}
+{{< gh-codeblock path="/examples/ruby/spec/elements/locators_spec.rb#L19" >}}
 {{< /tab >}}
   {{< tab header="JavaScript" text=true >}}
 {{< gh-codeblock path="/examples/javascript/test/elements/locators.spec.js#L20-L22" >}}
@@ -143,7 +143,7 @@ We will identify the Last Name field using it.
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Elements/LocatorsTest.cs#L26-L27" >}}
 {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
-{{< gh-codeblock path="/examples/ruby/spec/elements/locators_spec.rb#L15" >}}
+{{< gh-codeblock path="/examples/ruby/spec/elements/locators_spec.rb#L25" >}}
 {{< /tab >}}
   {{< tab header="JavaScript" text=true >}}
 {{< gh-codeblock path="/examples/javascript/test/elements/locators.spec.js#L35-L37" >}}
@@ -172,7 +172,7 @@ We will identify the Newsletter checkbox using it.
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Elements/LocatorsTest.cs#L29-L30" >}}
 {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
-{{< gh-codeblock path="/examples/ruby/spec/elements/locators_spec.rb#L19" >}}
+{{< gh-codeblock path="/examples/ruby/spec/elements/locators_spec.rb#L31" >}}
 {{< /tab >}}
   {{< tab header="JavaScript" text=true >}}
 {{< gh-codeblock path="/examples/javascript/test/elements/locators.spec.js#L50-L52" >}}
@@ -199,7 +199,7 @@ In the HTML snippet shared, we have a link available, let's see how will we loca
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Elements/LocatorsTest.cs#L32-L33" >}}
 {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
-{{< gh-codeblock path="/examples/ruby/spec/elements/locators_spec.rb#L23" >}}
+{{< gh-codeblock path="/examples/ruby/spec/elements/locators_spec.rb#L37" >}}
 {{< /tab >}}
   {{< tab header="JavaScript" text=true >}}
 {{< gh-codeblock path="/examples/javascript/test/elements/locators.spec.js#L67-L69" >}}
@@ -225,7 +225,7 @@ based on a portion of their visible text, rather than needing the entire string.
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Elements/LocatorsTest.cs#L35-L36" >}}
 {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
-{{< gh-codeblock path="/examples/ruby/spec/elements/locators_spec.rb#L27" >}}
+{{< gh-codeblock path="/examples/ruby/spec/elements/locators_spec.rb#L43" >}}
 {{< /tab >}}
   {{< tab header="JavaScript" text=true >}}
 {{< gh-codeblock path="/examples/javascript/test/elements/locators.spec.js#L80-L82" >}}
@@ -251,7 +251,7 @@ From the above HTML snippet shared, lets identify the link, using its html tag "
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Elements/LocatorsTest.cs#L38-L39" >}}
 {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
-{{< gh-codeblock path="/examples/ruby/spec/elements/locators_spec.rb#L31" >}}
+{{< gh-codeblock path="/examples/ruby/spec/elements/locators_spec.rb#L49" >}}
 {{< /tab >}}
   {{< tab header="JavaScript" text=true >}}
 {{< gh-codeblock path="/examples/javascript/test/elements/locators.spec.js#L93-L95" >}}
@@ -281,7 +281,7 @@ Let's see an example to create the XPath locator for the female radio button.
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Elements/LocatorsTest.cs#L41-L42" >}}
 {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
-{{< gh-codeblock path="/examples/ruby/spec/elements/locators_spec.rb#L35" >}}
+{{< gh-codeblock path="/examples/ruby/spec/elements/locators_spec.rb#L55" >}}
 {{< /tab >}}
   {{< tab header="JavaScript" text=true >}}
 {{< gh-codeblock path="/examples/javascript/test/elements/locators.spec.js#L106-L108" >}}
@@ -424,7 +424,7 @@ email_locator = locate_with(By.TAG_NAME, "input").above({By.ID: "password"})
 var emailLocator = RelativeBy.WithLocator(By.TagName("input")).Above(By.Id("password"));
 {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
-{{< gh-codeblock path="/examples/ruby/spec/elements/locators_spec.rb#L40" >}}
+{{< gh-codeblock path="/examples/ruby/spec/elements/locators_spec.rb#L62" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 let emailLocator = locateWith(By.tagName('input')).above(By.id('password'));
@@ -451,7 +451,7 @@ password_locator = locate_with(By.TAG_NAME, "input").below({By.ID: "email"})
 var passwordLocator = RelativeBy.WithLocator(By.TagName("input")).Below(By.Id("email"));
 {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
-{{< gh-codeblock path="/examples/ruby/spec/elements/locators_spec.rb#L44" >}}
+{{< gh-codeblock path="/examples/ruby/spec/elements/locators_spec.rb#L67" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 let passwordLocator = locateWith(By.tagName('input')).below(By.id('email'));
@@ -478,7 +478,7 @@ cancel_locator = locate_with(By.TAG_NAME, "button").to_left_of({By.ID: "submit"}
 var cancelLocator = RelativeBy.WithLocator(By.tagName("button")).LeftOf(By.Id("submit"));
 {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
-{{< gh-codeblock path="/examples/ruby/spec/elements/locators_spec.rb#L48" >}}
+{{< gh-codeblock path="/examples/ruby/spec/elements/locators_spec.rb#L72" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 let cancelLocator = locateWith(By.tagName('button')).toLeftOf(By.id('submit'));
@@ -505,7 +505,7 @@ submit_locator = locate_with(By.TAG_NAME, "button").to_right_of({By.ID: "cancel"
 var submitLocator = RelativeBy.WithLocator(By.tagName("button")).RightOf(By.Id("cancel"));
 {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
-{{< gh-codeblock path="/examples/ruby/spec/elements/locators_spec.rb#L52" >}}
+{{< gh-codeblock path="/examples/ruby/spec/elements/locators_spec.rb#L77" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 let submitLocator = locateWith(By.tagName('button')).toRightOf(By.id('cancel'));
@@ -534,7 +534,7 @@ email_locator = locate_with(By.TAG_NAME, "input").near({By.ID: "lbl-email"})
 var emailLocator = RelativeBy.WithLocator(By.tagName("input")).Near(By.Id("lbl-email"));
 {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
-{{< gh-codeblock path="/examples/ruby/spec/elements/locators_spec.rb#L56" >}}
+{{< gh-codeblock path="/examples/ruby/spec/elements/locators_spec.rb#L82" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 let emailLocator = locateWith(By.tagName('input')).near(By.id('lbl-email'));
@@ -560,7 +560,7 @@ submit_locator = locate_with(By.TAG_NAME, "button").below({By.ID: "email"}).to_r
 var submitLocator = RelativeBy.WithLocator(By.tagName("button")).Below(By.Id("email")).RightOf(By.Id("cancel"));
 {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
-{{< gh-codeblock path="/examples/ruby/spec/elements/locators_spec.rb#L60" >}}
+{{< gh-codeblock path="/examples/ruby/spec/elements/locators_spec.rb#L87" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 let submitLocator = locateWith(By.tagName('button')).below(By.id('email')).toRightOf(By.id('cancel'));
