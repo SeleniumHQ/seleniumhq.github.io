@@ -5,7 +5,7 @@ require 'spec_helper'
 RSpec.describe 'Element Locators' do
   let(:driver) { start_session }
   let(:url) { 'https://www.selenium.dev/selenium/web/locators_tests/locators.html' }
-  
+
   before { driver.get(url) }
 
   it 'finds element by class name' do
