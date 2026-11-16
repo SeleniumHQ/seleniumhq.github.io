@@ -56,8 +56,16 @@ RSpec.describe 'Element Locators' do
   end
 
   context 'with relative locators' do
-    let(:url1) { 'https://www.selenium.dev/selenium/web/login.html' }
-    before { driver.get(url1) }
+    let(:url) do
+      form = <<~HTML
+        <form>
+          <label id="lbl-email" for="email">Email</label> <input id="email" type="email"><br>
+          <label id="lbl-password" for="password">Password</label> <input id="password" type="password"><br>
+          <button id="cancel" type="button">Cancel</button> <button id="submit" type="button">Submit</button>
+        </form>
+      HTML
+      "data:text/html,#{form}"
+    end
 
     it 'finds element above' do
       ele = driver.find_element(relative: {tag_name: 'input', above: {id: 'password'}})

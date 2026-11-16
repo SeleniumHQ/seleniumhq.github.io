@@ -423,7 +423,7 @@ email_locator = locate_with(By.TAG_NAME, "input").above({By.ID: "password"})
 var emailLocator = RelativeBy.WithLocator(By.TagName("input")).Above(By.Id("password"));
 {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
-{{< gh-codeblock path="/examples/ruby/spec/elements/locators_spec.rb#L63" >}}
+{{< gh-codeblock path="/examples/ruby/spec/elements/locators_spec.rb#L71" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 let emailLocator = locateWith(By.tagName('input')).above(By.id('password'));
@@ -449,7 +449,7 @@ password_locator = locate_with(By.TAG_NAME, "input").below({By.ID: "email"})
 var passwordLocator = RelativeBy.WithLocator(By.TagName("input")).Below(By.Id("email"));
 {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
-{{< gh-codeblock path="/examples/ruby/spec/elements/locators_spec.rb#L68" >}}
+{{< gh-codeblock path="/examples/ruby/spec/elements/locators_spec.rb#L76" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 let passwordLocator = locateWith(By.tagName('input')).below(By.id('email'));
@@ -475,7 +475,7 @@ cancel_locator = locate_with(By.TAG_NAME, "button").to_left_of({By.ID: "submit"}
 var cancelLocator = RelativeBy.WithLocator(By.tagName("button")).LeftOf(By.Id("submit"));
 {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
-{{< gh-codeblock path="/examples/ruby/spec/elements/locators_spec.rb#L73" >}}
+{{< gh-codeblock path="/examples/ruby/spec/elements/locators_spec.rb#81" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 let cancelLocator = locateWith(By.tagName('button')).toLeftOf(By.id('submit'));
@@ -501,7 +501,7 @@ submit_locator = locate_with(By.TAG_NAME, "button").to_right_of({By.ID: "cancel"
 var submitLocator = RelativeBy.WithLocator(By.tagName("button")).RightOf(By.Id("cancel"));
 {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
-{{< gh-codeblock path="/examples/ruby/spec/elements/locators_spec.rb#L78" >}}
+{{< gh-codeblock path="/examples/ruby/spec/elements/locators_spec.rb#L86" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 let submitLocator = locateWith(By.tagName('button')).toRightOf(By.id('cancel'));
@@ -529,7 +529,7 @@ email_locator = locate_with(By.TAG_NAME, "input").near({By.ID: "lbl-email"})
 var emailLocator = RelativeBy.WithLocator(By.tagName("input")).Near(By.Id("lbl-email"));
 {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
-{{< gh-codeblock path="/examples/ruby/spec/elements/locators_spec.rb#L83" >}}
+{{< gh-codeblock path="/examples/ruby/spec/elements/locators_spec.rb#L91" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 let emailLocator = locateWith(By.tagName('input')).near(By.id('lbl-email'));
@@ -554,7 +554,7 @@ submit_locator = locate_with(By.TAG_NAME, "button").below({By.ID: "email"}).to_r
 var submitLocator = RelativeBy.WithLocator(By.tagName("button")).Below(By.Id("email")).RightOf(By.Id("cancel"));
 {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
-{{< gh-codeblock path="/examples/ruby/spec/elements/locators_spec.rb#L88" >}}
+{{< gh-codeblock path="/examples/ruby/spec/elements/locators_spec.rb#L96" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 let submitLocator = locateWith(By.tagName('button')).below(By.id('email')).toRightOf(By.id('cancel'));
