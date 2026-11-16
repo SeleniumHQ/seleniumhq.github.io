@@ -5,7 +5,6 @@ require 'spec_helper'
 RSpec.describe 'Element Locators' do
   let(:driver) { start_session }
   let(:url) { 'https://www.selenium.dev/selenium/web/locators_tests/locators.html' }
-
   before { driver.get(url) }
 
   it 'finds element by class name' do
@@ -57,6 +56,9 @@ RSpec.describe 'Element Locators' do
   end
 
   context 'with relative locators' do
+    let(:url1) { 'https://www.selenium.dev/selenium/web/login.html' }
+    before { driver.get(url1) }
+
     it 'finds element above' do
       ele = driver.find_element(relative: {tag_name: 'input', above: {id: 'password'}})
       expect(ele).not_to be_nil
