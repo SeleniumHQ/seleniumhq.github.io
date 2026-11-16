@@ -83,7 +83,7 @@ In Selenium, we can locate these specific elements using the class name locator.
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Elements/LocatorsTest.cs#L20-L21" >}}
 {{< /tab >}}
   {{< tab header="Ruby" text=true >}}
-{{< gh-codeblock path="/examples/ruby/spec/elements/locators_spec.rb#L13" >}}
+{{< gh-codeblock path="/examples/ruby/spec/elements/locators_spec.rb#L11" >}}
   {{< /tab >}}
   {{< tab header="JavaScript" >}}
     let driver = await new Builder().forBrowser('chrome').build();
@@ -113,7 +113,7 @@ textbox, using css.
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Elements/LocatorsTest.cs#L23-L24" >}}
 {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
-{{< gh-codeblock path="/examples/ruby/spec/elements/locators_spec.rb#L19" >}}
+{{< gh-codeblock path="/examples/ruby/spec/elements/locators_spec.rb#L17" >}}
 {{< /tab >}}
   {{< tab header="JavaScript" >}}
     let driver = await new Builder().forBrowser('chrome').build();
@@ -141,7 +141,7 @@ We will identify the Last Name field using it.
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Elements/LocatorsTest.cs#L26-L27" >}}
 {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
-{{< gh-codeblock path="/examples/ruby/spec/elements/locators_spec.rb#L25" >}}
+{{< gh-codeblock path="/examples/ruby/spec/elements/locators_spec.rb#L23" >}}
 {{< /tab >}}
   {{< tab header="JavaScript" >}}
     let driver = await new Builder().forBrowser('chrome').build();
@@ -170,7 +170,7 @@ We will identify the Newsletter checkbox using it.
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Elements/LocatorsTest.cs#L29-L30" >}}
 {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
-{{< gh-codeblock path="/examples/ruby/spec/elements/locators_spec.rb#L31" >}}
+{{< gh-codeblock path="/examples/ruby/spec/elements/locators_spec.rb#L29" >}}
 {{< /tab >}}
   {{< tab header="JavaScript" >}}
     let driver = await new Builder().forBrowser('chrome').build();
@@ -197,7 +197,7 @@ In the HTML snippet shared, we have a link available, lets see how will we locat
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Elements/LocatorsTest.cs#L32-L33" >}}
 {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
-{{< gh-codeblock path="/examples/ruby/spec/elements/locators_spec.rb#L37" >}}
+{{< gh-codeblock path="/examples/ruby/spec/elements/locators_spec.rb#L35" >}}
 {{< /tab >}}
   {{< tab header="JavaScript" >}}
     let driver = await new Builder().forBrowser('chrome').build();
@@ -223,7 +223,7 @@ based on a portion of their visible text, rather than needing the entire string.
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Elements/LocatorsTest.cs#L35-L36" >}}
 {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
-{{< gh-codeblock path="/examples/ruby/spec/elements/locators_spec.rb#L43" >}}
+{{< gh-codeblock path="/examples/ruby/spec/elements/locators_spec.rb#L41" >}}
 {{< /tab >}}
   {{< tab header="JavaScript" >}}
     let driver = await new Builder().forBrowser('chrome').build();
@@ -249,7 +249,7 @@ From the above HTML snippet shared, lets identify the link, using its html tag "
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Elements/LocatorsTest.cs#L38-L39" >}}
 {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
-{{< gh-codeblock path="/examples/ruby/spec/elements/locators_spec.rb#L49" >}}
+{{< gh-codeblock path="/examples/ruby/spec/elements/locators_spec.rb#L47" >}}
 {{< /tab >}}
   {{< tab header="JavaScript" >}}
     let driver = await new Builder().forBrowser('chrome').build();
@@ -279,7 +279,7 @@ Let's see an example to create the XPath locator for the female radio button.
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/Elements/LocatorsTest.cs#L41-L42" >}}
 {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
-{{< gh-codeblock path="/examples/ruby/spec/elements/locators_spec.rb#L55" >}}
+{{< gh-codeblock path="/examples/ruby/spec/elements/locators_spec.rb#L53" >}}
 {{< /tab >}}
   {{< tab header="JavaScript" >}}
     let driver = await new Builder().forBrowser('chrome').build();
