@@ -16,68 +16,46 @@ aliases: [
 首先, 您需要导入该类:
 
 {{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" >}}
-import org.openqa.selenium.support.Color;
+  {{< tab header="Java" text=true >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/support/ColorsTest.java#L7" >}}
   {{< /tab >}}
-  {{< tab header="Python" >}}
-from selenium.webdriver.support.color import Color
+  {{< tab header="Python" text=true >}}
+{{< gh-codeblock path="/examples/python/tests/support/test_colors.py#L2" >}}
   {{< /tab >}}
   {{< tab header="CSharp" >}}
 // This feature is not implemented - Help us by sending a pr to implement this feature
   {{< /tab >}}
-  {{< tab header="Ruby" >}}
-include Selenium::WebDriver::Support
+  {{< tab header="Ruby" text=true >}}
+{{< gh-codeblock path="/examples/ruby/spec/support/color_spec.rb#L8" >}}
   {{< /tab >}}
   {{< tab header="JavaScript" >}}
 // This feature is not implemented - Help us by sending a pr to implement this feature
   {{< /tab >}}
-  {{< tab header="Kotlin" >}}import org.openqa.selenium.support.Color{{< /tab >}}
+  {{< tab header="Kotlin" text=true >}}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/support/ColorsTest.kt#L7" >}}
+  {{< /tab >}}
 {{< /tabpane >}}
 
 您现在可以开始创建颜色对象. 每个颜色对象都需要使用您颜色的字符串定义来创建. 支持的颜色定义如下:
 
 {{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" >}}
-private final Color HEX_COLOUR = Color.fromString("#2F7ED8");
-private final Color RGB_COLOUR = Color.fromString("rgb(255, 255, 255)");
-private final Color RGB_COLOUR = Color.fromString("rgb(40%, 20%, 40%)");
-private final Color RGBA_COLOUR = Color.fromString("rgba(255, 255, 255, 0.5)");
-private final Color RGBA_COLOUR = Color.fromString("rgba(40%, 20%, 40%, 0.5)");
-private final Color HSL_COLOUR = Color.fromString("hsl(100, 0%, 50%)");
-private final Color HSLA_COLOUR = Color.fromString("hsla(100, 0%, 50%, 0.5)");
+  {{< tab header="Java" text=true >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/support/ColorsTest.java#L13-L19" >}}
   {{< /tab >}}
-  {{< tab header="Python" >}}
-HEX_COLOUR = Color.from_string('#2F7ED8')
-RGB_COLOUR = Color.from_string('rgb(255, 255, 255)')
-RGB_COLOUR = Color.from_string('rgb(40%, 20%, 40%)')
-RGBA_COLOUR = Color.from_string('rgba(255, 255, 255, 0.5)')
-RGBA_COLOUR = Color.from_string('rgba(40%, 20%, 40%, 0.5)')
-HSL_COLOUR = Color.from_string('hsl(100, 0%, 50%)')
-HSLA_COLOUR = Color.from_string('hsla(100, 0%, 50%, 0.5)')
+  {{< tab header="Python" text=true >}}
+{{< gh-codeblock path="/examples/python/tests/support/test_colors.py#L6-L12" >}}
   {{< /tab >}}
   {{< tab header="CSharp" >}}
 // This feature is not implemented - Help us by sending a pr to implement this feature
   {{< /tab >}}
-  {{< tab header="Ruby" >}}
-HEX_COLOUR = Color.from_string('#2F7ED8')
-RGB_COLOUR = Color.from_string('rgb(255, 255, 255)')
-RGB_COLOUR = Color.from_string('rgb(40%, 20%, 40%)')
-RGBA_COLOUR = Color.from_string('rgba(255, 255, 255, 0.5)')
-RGBA_COLOUR = Color.from_string('rgba(40%, 20%, 40%, 0.5)')
-HSL_COLOUR = Color.from_string('hsl(100, 0%, 50%)')
-HSLA_COLOUR = Color.from_string('hsla(100, 0%, 50%, 0.5)')
+  {{< tab header="Ruby" text=true >}}
+{{< gh-codeblock path="/examples/ruby/spec/support/color_spec.rb#L11-L17" >}}
   {{< /tab >}}
   {{< tab header="JavaScript" >}}
 // This feature is not implemented - Help us by sending a pr to implement this feature
   {{< /tab >}}
-  {{< tab header="Kotlin" >}}
-private val HEX_COLOUR = Color.fromString("#2F7ED8")
-private val RGB_COLOUR = Color.fromString("rgb(255, 255, 255)")
-private val RGB_COLOUR_PERCENT = Color.fromString("rgb(40%, 20%, 40%)")
-private val RGBA_COLOUR = Color.fromString("rgba(255, 255, 255, 0.5)")
-private val RGBA_COLOUR_PERCENT = Color.fromString("rgba(40%, 20%, 40%, 0.5)")
-private val HSL_COLOUR = Color.fromString("hsl(100, 0%, 50%)")
-private val HSLA_COLOUR = Color.fromString("hsla(100, 0%, 50%, 0.5)")
+  {{< tab header="Kotlin" text=true >}}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/support/ColorsTest.kt#L13-L19" >}}
   {{< /tab >}}
 {{< /tabpane >}}
 
@@ -85,85 +63,69 @@ Color类还支持在以下网址中指定的所有基本颜色定义
 [http://www.w3.org/TR/css3-color/#html4](//www.w3.org/TR/css3-color/#html4).
 
 {{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" >}}
-private final Color BLACK = Color.fromString("black");
-private final Color CHOCOLATE = Color.fromString("chocolate");
-private final Color HOTPINK = Color.fromString("hotpink");
+  {{< tab header="Java" text=true >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/support/ColorsTest.java#L32-L34" >}}
   {{< /tab >}}
-  {{< tab header="Python" >}}
-BLACK = Color.from_string('black')
-CHOCOLATE = Color.from_string('chocolate')
-HOTPINK = Color.from_string('hotpink')
+  {{< tab header="Python" text=true >}}
+{{< gh-codeblock path="/examples/python/tests/support/test_colors.py#L24-L26" >}}
   {{< /tab >}}
   {{< tab header="CSharp" >}}
 // This feature is not implemented - Help us by sending a pr to implement this feature
   {{< /tab >}}
-  {{< tab header="Ruby" >}}
-BLACK = Color.from_string('black')
-CHOCOLATE = Color.from_string('chocolate')
-HOTPINK = Color.from_string('hotpink')
+  {{< tab header="Ruby" text=true >}}
+{{< badge-implementation >}}
   {{< /tab >}}
   {{< tab header="JavaScript" >}}
 // This feature is not implemented - Help us by sending a pr to implement this feature
   {{< /tab >}}
-  {{< tab header="Kotlin" >}}
-private val BLACK = Color.fromString("black")
-private val CHOCOLATE = Color.fromString("chocolate")
-private val HOTPINK = Color.fromString("hotpink")
+  {{< tab header="Kotlin" text=true >}}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/support/ColorsTest.kt#L32-L34" >}}
   {{< /tab >}}
 {{< /tabpane >}}
 
 如果元素上未设置颜色, 则有时浏览器会返回“透明”的颜色值. Color类也支持此功能:
 
 {{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" >}}
-private final Color TRANSPARENT = Color.fromString("transparent");
+  {{< tab header="Java" text=true >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/support/ColorsTest.java#L43" >}}
   {{< /tab >}}
-  {{< tab header="Python" >}}
-TRANSPARENT = Color.from_string('transparent')
+  {{< tab header="Python" text=true >}}
+{{< gh-codeblock path="/examples/python/tests/support/test_colors.py#L34" >}}
   {{< /tab >}}
   {{< tab header="CSharp" >}}
 // This feature is not implemented - Help us by sending a pr to implement this feature
   {{< /tab >}}
-  {{< tab header="Ruby" >}}
-TRANSPARENT = Color.from_string('transparent')
+  {{< tab header="Ruby" text=true >}}
+{{< badge-implementation >}}
   {{< /tab >}}
   {{< tab header="JavaScript" >}}
 // This feature is not implemented - Help us by sending a pr to implement this feature
   {{< /tab >}}
-  {{< tab header="Kotlin" >}}
-private val TRANSPARENT = Color.fromString("transparent")
+  {{< tab header="Kotlin" text=true >}}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/support/ColorsTest.kt#L43" >}}
   {{< /tab >}}
 {{< /tabpane >}}
 
 现在, 您可以安全地查询元素以获取其颜色/背景色, 任何响应都将被正确解析并转换为有效的Color对象:
 
 {{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" >}}
-Color loginButtonColour = Color.fromString(driver.findElement(By.id("login")).getCssValue("color"));
-
-Color loginButtonBackgroundColour = Color.fromString(driver.findElement(By.id("login")).getCssValue("background-color"));
+  {{< tab header="Java" text=true >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/support/ColorsTest.java#L54-L55" >}}
   {{< /tab >}}
-  {{< tab header="Python" >}}
-login_button_colour = Color.from_string(driver.find_element(By.ID,'login').value_of_css_property('color'))
-
-login_button_background_colour = Color.from_string(driver.find_element(By.ID,'login').value_of_css_property('background-color'))
+  {{< tab header="Python" text=true >}}
+{{< gh-codeblock path="/examples/python/tests/support/test_colors.py#L43-L44" >}}
   {{< /tab >}}
   {{< tab header="CSharp" >}}
 // This feature is not implemented - Help us by sending a pr to implement this feature
   {{< /tab >}}
-  {{< tab header="Ruby" >}}
-login_button_colour = Color.from_string(driver.find_element(id: 'login').css_value('color'))
-
-login_button_background_colour = Color.from_string(driver.find_element(id: 'login').css_value('background-color'))
+  {{< tab header="Ruby" text=true >}}
+{{< gh-codeblock path="/examples/ruby/spec/support/color_spec.rb#L32-L33" >}}
   {{< /tab >}}
   {{< tab header="JavaScript" >}}
 // This feature is not implemented - Help us by sending a pr to implement this feature
   {{< /tab >}}
-  {{< tab header="Kotlin" >}}
-val loginButtonColour = Color.fromString(driver.findElement(By.id("login")).getCssValue("color"))
-
-val loginButtonBackgroundColour = Color.fromString(driver.findElement(By.id("login")).getCssValue("background-color"))
+  {{< tab header="Kotlin" text=true >}}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/support/ColorsTest.kt#L53-L54" >}}
   {{< /tab >}}
 {{< /tabpane >}}
 
@@ -171,54 +133,46 @@ val loginButtonBackgroundColour = Color.fromString(driver.findElement(By.id("log
 
 
 {{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" >}}
-assert loginButtonBackgroundColour.equals(HOTPINK);
+  {{< tab header="Java" text=true >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/support/ColorsTest.java#L59" >}}
   {{< /tab >}}
-  {{< tab header="Python" >}}
-assert login_button_background_colour == HOTPINK
+  {{< tab header="Python" text=true >}}
+{{< gh-codeblock path="/examples/python/tests/support/test_colors.py#L48" >}}
   {{< /tab >}}
   {{< tab header="CSharp" >}}
 // This feature is not implemented - Help us by sending a pr to implement this feature
   {{< /tab >}}
-  {{< tab header="Ruby" >}}
-assert(login_button_background_colour == HOTPINK)
+  {{< tab header="Ruby" text=true >}}
+{{< gh-codeblock path="/examples/ruby/spec/support/color_spec.rb#L37" >}}
   {{< /tab >}}
   {{< tab header="JavaScript" >}}
 // This feature is not implemented - Help us by sending a pr to implement this feature
   {{< /tab >}}
-  {{< tab header="Kotlin" >}}
-assert(loginButtonBackgroundColour.equals(HOTPINK))
+  {{< tab header="Kotlin" text=true >}}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/support/ColorsTest.kt#L58" >}}
   {{< /tab >}}
 {{< /tabpane >}}
 
 或者, 您可以将颜色转换为以下格式之一并执行静态验证:
 
 {{< tabpane langEqualsHeader=true >}}
-  {{< tab header="Java" >}}
-assert loginButtonBackgroundColour.asHex().equals("#ff69b4");
-assert loginButtonBackgroundColour.asRgba().equals("rgba(255, 105, 180, 1)");
-assert loginButtonBackgroundColour.asRgb().equals("rgb(255, 105, 180)");
+  {{< tab header="Java" text=true >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/support/ColorsTest.java#L61-L63" >}}
   {{< /tab >}}
-  {{< tab header="Python" >}}
-assert login_button_background_colour.hex == '#ff69b4'
-assert login_button_background_colour.rgba == 'rgba(255, 105, 180, 1)'
-assert login_button_background_colour.rgb == 'rgb(255, 105, 180)'
+  {{< tab header="Python" text=true >}}
+{{< gh-codeblock path="/examples/python/tests/support/test_colors.py#L50-L52" >}}
   {{< /tab >}}
   {{< tab header="CSharp" >}}
 // This feature is not implemented - Help us by sending a pr to implement this feature
   {{< /tab >}}
-  {{< tab header="Ruby" >}}
-assert(login_button_background_colour.hex == '#ff69b4')
-assert(login_button_background_colour.rgba == 'rgba(255, 105, 180, 1)')
-assert(login_button_background_colour.rgb == 'rgb(255, 105, 180)')
+  {{< tab header="Ruby" text=true >}}
+{{< gh-codeblock path="/examples/ruby/spec/support/color_spec.rb#L39-L41" >}}
   {{< /tab >}}
   {{< tab header="JavaScript" >}}
 // This feature is not implemented - Help us by sending a pr to implement this feature
   {{< /tab >}}
-  {{< tab header="Kotlin" >}}
-assert(loginButtonBackgroundColour.asHex().equals("#ff69b4"))
-assert(loginButtonBackgroundColour.asRgba().equals("rgba(255, 105, 180, 1)"))
-assert(loginButtonBackgroundColour.asRgb().equals("rgb(255, 105, 180)"))
+  {{< tab header="Kotlin" text=true >}}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/support/ColorsTest.kt#L60-L62" >}}
   {{< /tab >}}
 {{< /tabpane >}}
 
