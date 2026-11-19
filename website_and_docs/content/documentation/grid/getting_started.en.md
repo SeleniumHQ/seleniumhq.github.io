@@ -286,7 +286,7 @@ performance continuously will help to determine the ideal values for your enviro
 
 Grid sizes are relative to the amount of supported concurrent sessions and amount of 
 **Nodes**, and there is no "one size fits all". Sizes mentioned below are rough estimations
-thay can vary between different environments. For example a **Hub/Node** with 120 **Nodes**
+that can vary between different environments. For example a **Hub/Node** with 120 **Nodes**
 might work well when the **Hub** has enough resources. Values below are not set on stone,
 and feedback is welcomed!
 
