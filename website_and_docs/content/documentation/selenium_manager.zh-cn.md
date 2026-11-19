@@ -58,12 +58,12 @@ Selenium Manager 是一个用 Rust 语言实现的命令行界面(CLI)工具,
 Selenium Manager 的二进制文件随每个 Selenium 版本一起发布. 
 这样, 每个 Selenium 绑定语言都会调用 Selenium Manager 来执行以下各节中所述的自动化驱动程序和浏览器管理. 
 
-## Automated driver management 自动驱动管理
+## 自动驱动管理
 ***简而言之:*** 
 *当所需驱动程序不可用时, Selenium Manager 会自动寻找、下载并缓存 Selenium 所需的驱动程序.*
 
 Selenium Manager 的主要特性被称为 *自动驱动管理* . 
-让我们通过一个例子来理解它. 假设我们想用 Selenium 驱动 Chrome(请参阅关于如何[使用Selenium启动会话](https://www.selenium.dev/documentation/webdriver/getting_started/first_script/#1-start-the-session)的文档). 
+让我们通过一个例子来理解它. 假设我们想用 Selenium 驱动 Chrome(请参阅关于如何[使用 Selenium 启动会话](https://www.selenium.dev/documentation/webdriver/getting_started/first_script/#1-start-the-session)的文档). 
 在会话开始之前, 如果驱动程序不可用, Selenium Manager 会为我们管理 chromedriver. 
 我们用 *管理* 这个词来描述此功能(而不仅仅是 *下载* ), 因为这个过程更广泛, 包含不同的步骤: 
 
@@ -85,7 +85,7 @@ Selenium Manager 的主要特性被称为 *自动驱动管理* .
 Selenium Manager 自动管理的浏览器有: 
 
 - Chrome浏览器, 基于 [Chrome for Testing (CfT)](https://googlechromelabs.github.io/chrome-for-testing/), 自 Selenium 4.11.0 版本起. 
-- 火狐浏览器. 基于[public Firefox releases](https://ftp.mozilla.org/pub/firefox/releases/), 自 Selenium 4.12.0 版本. 
+- 火狐浏览器. 基于[Firefox 公开发布版本](https://ftp.mozilla.org/pub/firefox/releases/), 自 Selenium 4.12.0 版本. 
 - Edge浏览器, 基于 [Edge downloads](https://www.microsoft.com/en-us/edge/download), 自 Selenium 4.14.0 版本. 
 
 让我们再次考虑用 Selenium 驱动 Chrome 的典型示例. 
@@ -98,7 +98,7 @@ Selenium Manager 还允许下载旧版浏览器(对于 Chrome for Testing 而言
 要使用 Selenium 设置浏览器版本, 我们使用一个名为 [browserVersion](https://www.selenium.dev/documentation/webdriver/drivers/options/#browserversion) 的浏览器选项. 
 
 让我们考虑另一个简单的例子. 
-假设我们使用 [Chrome options](https://www.selenium.dev/documentation/webdriver/browsers/chrome/) 将  `browserVersion`  设置为  `114` . 
+假设我们使用 [Chrome 选项](https://www.selenium.dev/documentation/webdriver/browsers/chrome/) 将  `browserVersion`  设置为  `114` . 
 在这种情况下, Selenium Manager会检查是否已安装 Chrome 114 版本. 
 如果已安装, 就会使用它. 如果没有安装, Selenium Manager会进行管理(即发现、下载并缓存)Chrome 114 版本. 
 无论哪种情况, chromedriver 也会被管理. 最后, Selenium 会像往常一样启动 Chrome 以实现程序化驱动. 
@@ -115,7 +115,7 @@ Selenium Manager 还允许下载旧版浏览器(对于 Chrome for Testing 而言
 当指定了这些标签时, Selenium Manager首先会检查给定的浏览器是否已安装( `beta`, `dev`  等), 
 如果未检测到, 则会自动管理该浏览器. 
 
-### Windows中的Edge
+### Windows 中的 Edge
 
 在 Windows 系统中, Selenium Manager 对 Edge 的自动化边缘管理与其他浏览器有所不同. 
 对于 Chrome 和 Firefox(以及 macOS 和 Linux 系统中的 Edge), 
@@ -134,11 +134,11 @@ edge can only be installed in Windows with administrator permissions
 并且 Edge 最终会被安装在通常的程序文件夹中(例如 `C:\Program Files (x86)\Microsoft\Edge` ). 
 
 ## 数据收集
-Selenium Manager会向 [Plausible](https://plausible.io/manager.selenium.dev) 报送匿名使用[statistics](https://plausible.io/privacy-focused-web-analytics) 数据. 
+Selenium Manager会向 [Plausible](https://plausible.io/manager.selenium.dev) 报送匿名使用[统计数据](https://plausible.io/privacy-focused-web-analytics) 数据. 
 这能让 Selenium 团队更深入地了解 Selenium 的使用情况, 
 从而更好地集中我们的开发精力. 所收集的数据包括: 
 
-| Data                          | Purpose |
+| 数据                          | 用途 |
 |-------------------------------|---------|
 | Selenium 版本                   | 这使得 Selenium 开发人员能够安全地弃用和移除功能, 并确定哪些新功能可能对您可用.  |
 | 语言绑定                          | 用于执行 Selenium 脚本的编程语言(Java、JavaScript、Python、.Net、Ruby)|
@@ -147,7 +147,7 @@ Selenium Manager会向 [Plausible](https://plausible.io/manager.selenium.dev) �
 | 大致地理位置                        | 根据您连接的 IP 地址得出. 这有助于我们确定需要在哪些地区集中文档编写工作.  |
 
 Selenium Manager 每天会将这些数据发送给 Plausible 一次. 
-此周期基于 TTL 值(请参阅[configuration](https://www.selenium.dev/documentation/selenium_manager/#configuration)). 
+此周期基于 TTL 值(请参阅[配置](https://www.selenium.dev/documentation/selenium_manager/#configuration)). 
 
 ### 选择退出数据收集
 **默认情况下会收集数据.** 若要禁用数据收集, 请将 `SE_AVOID_STATS` 环境变量设置 `true`.
@@ -179,37 +179,37 @@ $ ./selenium-manager --help
 3. 环境变量. 
 
 请注意, Selenium 绑定使用命令行参数来指定配置值, 
-而这些配置值又在每个绑定中通过[browser options](https://www.selenium.dev/documentation/webdriver/drivers/options/)来定义. 
+而这些配置值又在每个绑定中通过[浏览器选项](https://www.selenium.dev/documentation/webdriver/drivers/options/)来定义. 
 
 下表总结了 Selenium Manager 支持的所有参数及其在配置文件和环境变量中的对应键. 
 
 
-| CLI argument| Configuration file | Env variable | Description |
+| 命令行参数 | 配置文件 | 环境变量 | 描述 |
 |-------------|--------------------|--------------|-------------|
-|`--browser BROWSER`|`browser = "BROWSER"`|`SE_BROWSER=BROWSER`|Browser name: `chrome`, `firefox`, `edge`, `iexplorer`, `safari`, `safaritp`, or `webview2`|
-|`--driver <DRIVER>`|`driver = "DRIVER"`|`SE_DRIVER=DRIVER`|Driver name: `chromedriver`, `geckodriver`, `msedgedriver`, `IEDriverServer`, or `safaridriver`|
-|`--browser-version <BROWSER_VERSION>`|`browser-version = "BROWSER_VERSION"`|`SE_BROWSER_VERSION=BROWSER_VERSION`|Major browser version (e.g., `105`, `106`, etc. Also: `beta`, `dev`, `canary` -or `nightly`-, and `esr` -in Firefox- are accepted)|
-|`--driver-version <DRIVER_VERSION>`|`driver-version = "DRIVER_VERSION"`|`SE_DRIVER_VERSION=DRIVER_VERSION`|Driver version (e.g., `106.0.5249.61, 0.31.0`, etc.)|
-|`--browser-path <BROWSER_PATH>`|`browser-path = "BROWSER_PATH"`|`SE_BROWSER_PATH=BROWSER_PATH`|Browser path (absolute) for browser version detection (e.g., `/usr/bin/google-chrome`, `/Applications/Google Chrome.app/Contents/MacOS/Google Chrome`, `C:\Program Files\Google\Chrome\Application\chrome.exe`)|
-|`--driver-mirror-url <DRIVER_MIRROR_URL>`|`driver-mirror-url = "DRIVER_MIRROR_URL"`|`SE_DRIVER_MIRROR_URL=DRIVER_MIRROR_URL`|Mirror URL for driver repositories|
-|`--browser-mirror-url <BROWSER_MIRROR_URL>`|`browser-mirror-url = "BROWSER_MIRROR_URL"`|`SE_BROWSER_MIRROR_URL=BROWSER_MIRROR_URL`|Mirror URL for browser repositories|
-|`--output <OUTPUT>`|`output = "OUTPUT"`|`SE_OUTPUT=OUTPUT`|Output type: `LOGGER` (using `INFO`, `WARN`, etc.), `JSON` (custom JSON notation), `SHELL` (Unix-like), or `MIXED` (`INFO`, `WARN`, `DEBUG`, etc. to stderr and minimal `JSON` to stdout). Default: `LOGGER`|
-|`--os <OS>`|`os = "OS"`|`SE_OS=OS`|Operating system for drivers and browsers (i.e., `windows`, `linux`, or `macos`)|
-|`--arch <ARCH>`|`arch = "ARCH"`|`SE_ARCH=ARCH`|System architecture for drivers and browsers (i.e., `x32`, `x64`, or `arm64`)|
-|`--proxy <PROXY>`|`proxy = "PROXY"`|`SE_PROXY=PROXY`|HTTP proxy for network connection (e.g., `myproxy:port`, `myuser:mypass@myproxy:port`)|
-|`--timeout <TIMEOUT>`|`timeout = TIMEOUT`|`SE_TIMEOUT=TIMEOUT`|Timeout for network requests (in seconds). Default: `300`|
-|`--offline`|`offline = true`|`SE_OFFLINE=true`|Offline mode (i.e., disabling network requests and downloads)|
-|`--insecure`|`insecure = true`|`SE_INSECURE=true`|Disable TLS certificate validation (e.g., when the network requires a CA that cannot be added to the system trust store, such as a TLS-intercepting proxy). When enabled, Selenium Manager logs a warning on every run since downloaded drivers and browsers cannot be verified. Default: `false`|
-|`--force-browser-download`|`force-browser-download = true`|`SE_FORCE_BROWSER_DOWNLOAD=true`|Force to download browser, e.g., when a browser is already installed in the system, but you want Selenium Manager to download and use it|
-|`--avoid-browser-download`|`avoid-browser-download = true`|`SE_AVOID_BROWSER_DOWNLOAD=true`|Avoid to download browser, e.g., when a browser is supposed to be downloaded by Selenium Manager, but you prefer to avoid it|
-|`--skip-driver-in-path`|`skip-driver-in-path = true`|`SE_SKIP_DRIVER_IN_PATH=true`|Not using drivers found in the `PATH`|
-|`--skip-browser-in-path`|`skip-browser-in-path = true`|`SE_SKIP_BROWSER_IN_PATH=true`|Not using browsers found in the `PATH`|
-|`--debug`|`debug = true`|`SE_DEBUG=true`|Display `DEBUG` messages|
-|`--trace`|`trace = true`|`SE_TRACE=true`|Display `TRACE` messages|
-|`--cache-path <CACHE_PATH>`|`cache-path="CACHE_PATH"`|`SE_CACHE_PATH=CACHE_PATH`|Local folder used to store downloaded assets (drivers and browsers), local metadata, and configuration file. See next section for details. Default: `~/.cache/selenium`. For Windows paths in the TOML configuration file, double backslashes are required (e.g., `C:\\custom\\cache`).|
-|`--ttl <TTL>`|`ttl = TTL`|`SE_TTL=TTL`|Time-to-live in seconds. See next section for details. Default: `3600` (1 hour)|
-|`--language-binding <LANGUAGE>`|`language-binding = "LANGUAGE"`|`SE_LANGUAGE_BINDING=LANGUAGE`|Language that invokes Selenium Manager (e.g., Java, JavaScript, Python, DotNet, Ruby)|
-|`--avoid-stats`|`avoid-stats = true`|`SE_AVOID_STATS=true`|Avoid sends usage statistics to plausible.io. Default: `false`|
+|`--browser BROWSER`|`browser = "BROWSER"`|`SE_BROWSER=BROWSER`|浏览器名称：`chrome`、`firefox`、`edge`、`iexplorer`、`safari`、`safaritp` 或 `webview2`|
+|`--driver <DRIVER>`|`driver = "DRIVER"`|`SE_DRIVER=DRIVER`|驱动程序名称：`chromedriver`、`geckodriver`、`msedgedriver`、`IEDriverServer` 或 `safaridriver`|
+|`--browser-version <BROWSER_VERSION>`|`browser-version = "BROWSER_VERSION"`|`SE_BROWSER_VERSION=BROWSER_VERSION`|浏览器主版本号（例如 `105`、`106` 等。也接受：`beta`、`dev`、`canary`（或 `nightly`），以及 `esr`（仅 Firefox））|
+|`--driver-version <DRIVER_VERSION>`|`driver-version = "DRIVER_VERSION"`|`SE_DRIVER_VERSION=DRIVER_VERSION`|驱动程序版本（例如 `106.0.5249.61, 0.31.0` 等）|
+|`--browser-path <BROWSER_PATH>`|`browser-path = "BROWSER_PATH"`|`SE_BROWSER_PATH=BROWSER_PATH`|用于检测浏览器版本的浏览器路径（绝对路径，例如 `/usr/bin/google-chrome`、`/Applications/Google Chrome.app/Contents/MacOS/Google Chrome`、`C:\Program Files\Google\Chrome\Application\chrome.exe`）|
+|`--driver-mirror-url <DRIVER_MIRROR_URL>`|`driver-mirror-url = "DRIVER_MIRROR_URL"`|`SE_DRIVER_MIRROR_URL=DRIVER_MIRROR_URL`|驱动程序仓库的镜像 URL|
+|`--browser-mirror-url <BROWSER_MIRROR_URL>`|`browser-mirror-url = "BROWSER_MIRROR_URL"`|`SE_BROWSER_MIRROR_URL=BROWSER_MIRROR_URL`|浏览器仓库的镜像 URL|
+|`--output <OUTPUT>`|`output = "OUTPUT"`|`SE_OUTPUT=OUTPUT`|输出类型：`LOGGER`（使用 `INFO`、`WARN` 等）、`JSON`（自定义 JSON 表示法）、`SHELL`（类 Unix），或 `MIXED`（将 `INFO`、`WARN`、`DEBUG` 等输出到 stderr，将精简的 `JSON` 输出到 stdout）。默认值：`LOGGER`|
+|`--os <OS>`|`os = "OS"`|`SE_OS=OS`|驱动程序及浏览器的操作系统（即 `windows`、`linux` 或 `macos`）|
+|`--arch <ARCH>`|`arch = "ARCH"`|`SE_ARCH=ARCH`|驱动程序及浏览器的系统架构（即 `x32`、`x64` 或 `arm64`）|
+|`--proxy <PROXY>`|`proxy = "PROXY"`|`SE_PROXY=PROXY`|用于网络连接的 HTTP 代理（例如 `myproxy:port`、`myuser:mypass@myproxy:port`）|
+|`--timeout <TIMEOUT>`|`timeout = TIMEOUT`|`SE_TIMEOUT=TIMEOUT`|网络请求的超时时间（秒）。默认值：`300`|
+|`--offline`|`offline = true`|`SE_OFFLINE=true`|离线模式（即禁用网络请求和下载）|
+|`--insecure`|`insecure = true`|`SE_INSECURE=true`|禁用 TLS 证书校验（例如，当网络要求使用无法添加到系统信任存储的 CA 时，如拦截 TLS 的代理）。启用后，由于无法验证已下载的驱动程序和浏览器，Selenium Manager 每次运行都会记录一条警告。默认值：`false`|
+|`--force-browser-download`|`force-browser-download = true`|`SE_FORCE_BROWSER_DOWNLOAD=true`|强制下载浏览器，例如系统中已安装浏览器，但您希望 Selenium Manager 下载并使用它时|
+|`--avoid-browser-download`|`avoid-browser-download = true`|`SE_AVOID_BROWSER_DOWNLOAD=true`|避免下载浏览器，例如浏览器本应由 Selenium Manager 下载，但您希望避免时|
+|`--skip-driver-in-path`|`skip-driver-in-path = true`|`SE_SKIP_DRIVER_IN_PATH=true`|不使用在 `PATH` 中找到的驱动程序|
+|`--skip-browser-in-path`|`skip-browser-in-path = true`|`SE_SKIP_BROWSER_IN_PATH=true`|不使用在 `PATH` 中找到的浏览器|
+|`--debug`|`debug = true`|`SE_DEBUG=true`|显示 `DEBUG` 消息|
+|`--trace`|`trace = true`|`SE_TRACE=true`|显示 `TRACE` 消息|
+|`--cache-path <CACHE_PATH>`|`cache-path="CACHE_PATH"`|`SE_CACHE_PATH=CACHE_PATH`|用于存储已下载资源（驱动程序和浏览器）、本地元数据及配置文件的本地文件夹。详情见下一节。默认值：`~/.cache/selenium`。对于 TOML 配置文件中的 Windows 路径，需要使用双反斜杠（例如 `C:\\custom\\cache`）。|
+|`--ttl <TTL>`|`ttl = TTL`|`SE_TTL=TTL`|生存时间（秒）。详情见下一节。默认值：`3600`（1 小时）|
+|`--language-binding <LANGUAGE>`|`language-binding = "LANGUAGE"`|`SE_LANGUAGE_BINDING=LANGUAGE`|调用 Selenium Manager 的语言（例如 Java、JavaScript、Python、DotNet、Ruby）|
+|`--avoid-stats`|`avoid-stats = true`|`SE_AVOID_STATS=true`|避免向 plausible.io 发送使用统计信息。默认值：`false`|
 
 除了前面表格中指定的配置键之外, 还有一些特殊情况, 即: 
 
@@ -219,25 +219,25 @@ $ ./selenium-manager --help
 - 驱动镜像. 遵循同样的模式, 我们可以在配置文件中使用  `chromedriver-mirror-url`, `geckodriver-mirror-url`,  `msedgedriver-mirror-url` 等, 在环境变量中使用 `SE_CHROMEDRIVER_MIRROR_URL`, `SE_GECKODRIVER_MIRROR_URL`, `SE_MSEDGEDRIVER_MIRROR_URL` 等. 
 - 浏览器镜像. 遵循同样的模式, 我们可以在配置文件中使用 `chrome-mirror-url`, `firefox-mirror-url`,  `edge-mirror-url` 等, 在环境变量中使用 `SE_CHROME_MIRROR_URL`, `SE_FIREFOX_MIRROR_URL`, `SE_EDGE_MIRROR_URL` 等. 
 
-### Configuration from the Selenium bindings
-The Selenium bindings call Selenium Manager with the following CLI arguments, taken from the
-[browser options](/documentation/webdriver/drivers/options/) used to start the session:
+### 从 Selenium 绑定进行配置
+Selenium 绑定会使用以下命令行参数调用 Selenium Manager，这些参数取自
+用于启动会话的[浏览器选项](/documentation/webdriver/drivers/options/)：
 
-| Browser option | CLI argument |
+| 浏览器选项 | 命令行参数 |
 |----------------|--------------|
 |[`browserName`](/documentation/webdriver/drivers/options/#browsername)|`--browser`|
 |[`browserVersion`](/documentation/webdriver/drivers/options/#browserversion)|`--browser-version`|
-|Browser binary location (e.g., [Chrome](/documentation/webdriver/browsers/chrome/#start-browser-in-a-specified-location))|`--browser-path`|
-|[`proxy`](/documentation/webdriver/drivers/options/#proxy) (HTTP or SSL proxy)|`--proxy`|
+|浏览器二进制文件位置（例如 [Chrome](/documentation/webdriver/browsers/chrome/#start-browser-in-a-specified-location)）|`--browser-path`|
+|[`proxy`](/documentation/webdriver/drivers/options/#proxy)（HTTP 或 SSL 代理）|`--proxy`|
 
-This means that a proxy set in the browser options is used both by the browser and by Selenium Manager to download
-drivers and browsers. If Selenium Manager needs a proxy that the browser should not use, set it with the `SE_PROXY`
-environment variable or the `proxy` key in the configuration file instead.
+这意味着在浏览器选项中设置的代理，既会被浏览器使用，也会被 Selenium Manager 用于下载
+驱动程序和浏览器。如果 Selenium Manager 需要使用浏览器不应使用的代理，请改用 `SE_PROXY`
+环境变量或配置文件中的 `proxy` 键来设置。
 
-Any other configuration value (e.g., `cache-path`, `ttl`, `offline`, or mirror URLs) cannot be set from the browser
-options. Since the bindings run Selenium Manager as a child process, they pass along the environment variables of the
-process that runs the tests. Therefore, set these values with environment variables (e.g., `SE_CACHE_PATH`, `SE_OFFLINE`)
-or in the `se-config.toml` configuration file.
+其他任何配置值（例如 `cache-path`、`ttl`、`offline` 或镜像 URL）都无法通过浏览器
+选项设置。由于绑定将 Selenium Manager 作为子进程运行，它们会传递运行测试的进程的
+环境变量。因此，请使用环境变量（例如 `SE_CACHE_PATH`、`SE_OFFLINE`）
+或在 `se-config.toml` 配置文件中设置这些值。
 
 ### se-config.toml 示例
 {{< tabpane text=true >}}
@@ -246,28 +246,28 @@ or in the `se-config.toml` configuration file.
 {{< /tab >}}
 {{< /tabpane >}}
 
-### Using mirrors
-The mirror URLs (e.g., `driver-mirror-url` and `browser-mirror-url`, or their browser-specific variants
-such as `chromedriver-mirror-url` and `firefox-mirror-url`) replace the base URL of the repositories that
-Selenium Manager uses to discover and download drivers and browsers. Selenium Manager requests the same paths
-it requests from the original repository, but from the mirror, and expects the same responses. Therefore,
-a mirror needs to replicate the structure and the response format of the repository it replaces:
+### 使用镜像
+镜像 URL（例如 `driver-mirror-url` 和 `browser-mirror-url`，或它们针对特定浏览器的变体，
+如 `chromedriver-mirror-url` 和 `firefox-mirror-url`）会替换 Selenium Manager 用于发现和
+下载驱动程序和浏览器的仓库基础 URL。Selenium Manager 会请求与向原始仓库请求相同的路径，
+只不过是从镜像请求，并期望得到相同的响应。因此，
+镜像需要复制其所替代仓库的结构和响应格式：
 
-| Browser | Driver repository (driver mirror) | Browser repository (browser mirror) |
+| 浏览器 | 驱动程序仓库（驱动镜像） | 浏览器仓库（浏览器镜像） |
 |---------|-----------------------------------|-------------------------------------|
-| Chrome | [Chrome for Testing JSON endpoints](https://googlechromelabs.github.io/chrome-for-testing/) (e.g., `known-good-versions-with-downloads.json`) for chromedriver 115 and newer, and `https://chromedriver.storage.googleapis.com/` for older versions | [Chrome for Testing JSON endpoints](https://googlechromelabs.github.io/chrome-for-testing/) |
-| Firefox | [geckodriver releases](https://github.com/mozilla/geckodriver/releases/) (e.g., `download/v0.36.0/geckodriver-v0.36.0-linux64.tar.gz`) plus a `geckodriver-support.json` file with the same format as [Selenium's](https://raw.githubusercontent.com/SeleniumHQ/selenium/trunk/common/geckodriver/geckodriver-support.json) | `https://ftp.mozilla.org/pub/firefox/releases/` |
+| Chrome | 对于 chromedriver 115 及更新版本，使用 [Chrome for Testing JSON 端点](https://googlechromelabs.github.io/chrome-for-testing/)（例如 `known-good-versions-with-downloads.json`）；对于更早版本，使用 `https://chromedriver.storage.googleapis.com/` | [Chrome for Testing JSON 端点](https://googlechromelabs.github.io/chrome-for-testing/) |
+| Firefox | [geckodriver 发布版本](https://github.com/mozilla/geckodriver/releases/)（例如 `download/v0.36.0/geckodriver-v0.36.0-linux64.tar.gz`），以及一个格式与 [Selenium 的](https://raw.githubusercontent.com/SeleniumHQ/selenium/trunk/common/geckodriver/geckodriver-support.json)相同的 `geckodriver-support.json` 文件 | `https://ftp.mozilla.org/pub/firefox/releases/` |
 | Edge | `https://msedgedriver.microsoft.com/` | `https://edgeupdates.microsoft.com/api/products/` |
 
-For Chrome, the Chrome for Testing JSON files contain the download URL of each browser and driver, so a mirror
-can serve those JSON files with the URLs changed to point to where the binaries are stored.
+对于 Chrome，Chrome for Testing JSON 文件包含每个浏览器和驱动程序的下载 URL，
+因此镜像可以提供这些 JSON 文件，只需将 URL 改为指向二进制文件实际存储的位置即可。
 
-Driver and browser mirrors are configured separately because, for Firefox and Edge, drivers and browsers come from
-different repositories.
+驱动程序镜像和浏览器镜像需要分别配置，因为对于 Firefox 和 Edge 而言，
+驱动程序和浏览器来自不同的仓库。
 
-A mirror cannot point Selenium Manager to a source with a different structure, such as a Linux distribution package
-repository. In that case, install the browser and driver yourself, and
-[set the driver location](https://www.selenium.dev/documentation/webdriver/drivers/service/#driver-location).
+镜像无法将 Selenium Manager 指向结构不同的来源，例如 Linux 发行版的软件包
+仓库。在这种情况下，请自行安装浏览器和驱动程序，并
+[设置驱动程序位置](https://www.selenium.dev/documentation/webdriver/drivers/service/#driver-location)。
 
 ## 缓存
 ***简而言之:*** 
@@ -305,8 +305,7 @@ Selenium Manager检测到已安装 Chrome 115 版本,
 
 为了在无需人工干预的情况下限制缓存大小，Selenium Manager 会自动清理旧的缓存条目。每次从缓存中解析驱动程序或浏览器时，元数据文件 (`se-metadata.json`) 中专用 `cached_assets` 区域里的 `last_used` Unix 时间戳都会被更新。在每次执行时，Selenium Manager 会自动从缓存中删除已超过 30 天未被使用的驱动程序或浏览器版本目录。
 
-Selenium Manager includes two additional arguments two handle the cache, namely:
-Selenium Manager包含两个用于处理缓存的附加参数, 分别是: 
+Selenium Manager 包含两个用于处理缓存的附加参数, 分别是: 
 
 - `--clear-cache`:  要删除缓存文件夹(相当于环境变量 `SE_CLEAR_CACHE=true` ). 
 - `--clear-metadata` : 删除元数据文件(相当于环境变量  `SE_CLEAR_METADATA=true` ). 
@@ -322,8 +321,8 @@ Selenium Manager 采用与 Selenium 相同的版本命名规则.
 不过, 如果您想试用 Selenium Manager 或将其用于涉及驱动程序或浏览器管理的用例, 
 可以通过多种方式获取 Selenium Manager 的二进制文件
 
-- Selenium Manager的源代码存储在 Selenium 主仓库的 [rust](https://github.com/SeleniumHQ/selenium/tree/trunk/rust) 文件夹中. 此外, 您可以在 [Selenium Manager Artifacts](https://github.com/SeleniumHQ/selenium_manager_artifacts) 仓库中找到适用于 Windows、Linux 和 macOS 的编译版本. 此文件中链接了稳定版的 Selenium Manager二进制[file](https://github.com/SeleniumHQ/selenium/blob/trunk/common/selenium_manager.bzl)(即在最新稳定版 Selenium 中分发的那些). 
-- 在构建工作流中, Selenium Manager 是通过 [GitHub Actions workflow](https://github.com/SeleniumHQ/selenium/actions/workflows/ci-rust.yml)进行编译的. 此工作流会为 Windows、Linux 和 macOS 创建二进制文件. 您可以从这些工作流执行中下载这些二进制文件. 
+- Selenium Manager的源代码存储在 Selenium 主仓库的 [rust](https://github.com/SeleniumHQ/selenium/tree/trunk/rust) 文件夹中. 此外, 您可以在 [Selenium Manager Artifacts](https://github.com/SeleniumHQ/selenium_manager_artifacts) 仓库中找到适用于 Windows、Linux 和 macOS 的编译版本. 此文件中链接了稳定版的 Selenium Manager二进制[文件](https://github.com/SeleniumHQ/selenium/blob/trunk/common/selenium_manager.bzl)(即在最新稳定版 Selenium 中分发的那些). 
+- 在构建工作流中, Selenium Manager 是通过 [GitHub Actions 工作流](https://github.com/SeleniumHQ/selenium/actions/workflows/ci-rust.yml)进行编译的. 此工作流会为 Windows、Linux 和 macOS 创建二进制文件. 您可以从这些工作流执行中下载这些二进制文件. 
 - 在缓存中. 自 Selenium Java 绑定的 4.15.0 版本起, Selenium Manager 二进制文件会被提取并复制到缓存文件夹中. 例如, 与 Selenium 4.15.0 一同提供的 Selenium Manager 二进制文件会存储在文件夹  `~/.cache/selenium/manager/0.4.15`  中. 
 
 ## 例子
@@ -371,19 +370,19 @@ INFO  Driver path: C:\Users\boni\.cache\selenium\chromedriver\win64\140.0.7339.1
 INFO  Browser path: C:\Users\boni\.cache\selenium\chrome\win64\140.0.7339.16\chrome.exe
 ```
 
-### Using Selenium Manager from the bindings
+### 从绑定中使用 Selenium Manager
 
-All Selenium binding languages (Java, JavaScript, Python, .Net, Ruby) use Selenium Manager internally to manage drivers and browsers. The automated management process starts before starting a new Selenium session, i.e., each time a Selenium script instantiates a driver object (e.g., `ChromeDriver`, `FirefoxDriver`, etc.). The following snippets illustrate the difference between the old-fashioned way of manually managing drivers and the built-in automated mechanism provided by Selenium Manager.
+所有 Selenium 绑定语言（Java、JavaScript、Python、.Net、Ruby）都在内部使用 Selenium Manager 来管理驱动程序和浏览器。自动管理流程会在启动新的 Selenium 会话之前开始，也就是说，每当 Selenium 脚本实例化驱动程序对象（例如 `ChromeDriver`、`FirefoxDriver` 等）时就会启动。以下代码片段展示了传统的手动管理驱动程序方式与 Selenium Manager 提供的内置自动化机制之间的差异。
 
 {{< tabpane text=true >}}
 {{% tab header="Java" %}}
-**Previously**
+**以前**
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/selenium_manager/SeleniumManagerUsageDemo.java#L12-L17" >}}
 **Selenium Manager**
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/selenium_manager/SeleniumManagerUsageDemo.java#L20-L24" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-**Previously**
+**以前**
 {{< gh-codeblock path="/examples/python/tests/selenium_manager/usage.py#L5-L8" >}}
 **Selenium Manager**
 {{< gh-codeblock path="/examples/python/tests/selenium_manager/usage.py#L10-L12" >}}
@@ -392,13 +391,13 @@ All Selenium binding languages (Java, JavaScript, Python, .Net, Ruby) use Seleni
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/SeleniumManager/UsageTest.cs#L10-L18" >}}
 {{< /tab >}}
 {{% tab header="Ruby" %}}
-**Previously**
+**以前**
 {{< gh-codeblock path="/examples/ruby/spec/selenium_manager/usage.rb#L5-L10" >}}
 **Selenium Manager**
 {{< gh-codeblock path="/examples/ruby/spec/selenium_manager/usage.rb#L12-L16" >}}
 {{< /tab >}}
 {{% tab header="JavaScript" %}}
-**Previously**
+**以前**
 {{< gh-codeblock path="/examples/javascript/test/selenium_manager/usage.spec.js#L16-L31" >}}
 **Selenium Manager**
 {{< gh-codeblock path="/examples/javascript/test/selenium_manager/usage.spec.js#L6-L14" >}}
@@ -411,7 +410,7 @@ All Selenium binding languages (Java, JavaScript, Python, .Net, Ruby) use Seleni
 ## Selenium Grid
 Selenium Manager 可让您在设置 Selenium Grid 时自动配置驱动程序. 
 为此, 您需要在启动 Selenium Grid 的命令中包含 `--selenium-manager true` 参数. 
-更多详情, 请访问 [Selenium Grid starting page](https://www.selenium.dev/documentation/grid/getting_started/). 
+更多详情, 请访问 [Selenium Grid 入门页面](https://www.selenium.dev/documentation/grid/getting_started/). 
 
 此外, Selenium Manager 还允许自动管理 Selenium Grid 的版本. 为此, 使用如下参数  `--grid`  : 
 
@@ -426,7 +425,7 @@ $ ./selenium-manager --grid
 
 ## 已知的限制
 
-###  连接问题
+### 连接问题
 Selenium Manager会请求远程端点(例如 Chrome 测试版(CfT)等)
 从在线存储库中发现并下载驱动程序和浏览器. 
 当在具有代理或防火墙的企业环境中执行此操作时, 可能会导致以下连接问题: 
@@ -445,7 +444,7 @@ error trying to connect: An existing connection was forcibly closed by the remot
 
 当这种情况发生时, 请考虑以下解决方案: 
 
-- 使用 Selenium 的代理功能(请参阅[documentation](https://www.selenium.dev/documentation/webdriver/drivers/options/#proxy)). 或者, 使用环境变量   `SE_PROXY` 来设置代理 URL, 或者使用配置文件(请参阅 [configuration](https://www.selenium.dev/documentation/selenium_manager/#configuration) ). 
+- 使用 Selenium 的代理功能(请参阅[文档](https://www.selenium.dev/documentation/webdriver/drivers/options/#proxy)). 或者, 使用环境变量   `SE_PROXY` 来设置代理 URL, 或者使用配置文件(请参阅 [配置](https://www.selenium.dev/documentation/selenium_manager/#configuration) ). 
 - 检查您的网络设置, 以启用 Selenium Manager所需的远程请求和下载. 
 
 ### 自定义包管理器
@@ -455,27 +454,27 @@ error trying to connect: An existing connection was forcibly closed by the remot
 
 
 
-### Alternative architectures
-Each release of the Selenium bindings comes with four separate Selenium Manager binaries:
-* macOS, which supports both x64 and arm64 (Intel and Apple silicon).
-* Windows, which works for both x86 and x64 (32-bit and 64-bit OS), and is also used on Windows arm64.
-* Linux x64.
-* Linux arm64, shipped as of Selenium 4.49.0.
+### 其他架构 {#alternative-architectures}
+Selenium 绑定的每个发行版都附带四个独立的 Selenium Manager 二进制文件：
+* macOS 版本，同时支持 x64 和 arm64（Intel 和 Apple 芯片）。
+* Windows 版本，适用于 x86 和 x64（32 位和 64 位操作系统），也用于 Windows arm64。
+* Linux x64。
+* Linux arm64，自 Selenium 4.49.0 起提供。
 
-On Linux arm64, Selenium Manager can manage the following browsers and drivers:
-* Chrome and chromedriver, from version 153, which is the first version that
-  [Chrome for Testing](https://googlechromelabs.github.io/chrome-for-testing/) publishes for Linux arm64.
-  Older versions of chromedriver were never published for Linux arm64.
-* Firefox, which Selenium Manager can download from version 136, and geckodriver.
-* Edge is not supported, because Microsoft does not publish Edge or msedgedriver for Linux arm64.
+在 Linux arm64 上，Selenium Manager 可以管理以下浏览器和驱动程序：
+* Chrome 和 chromedriver，从版本 153 开始，这是
+  [Chrome for Testing](https://googlechromelabs.github.io/chrome-for-testing/) 为 Linux arm64 发布的第一个版本。
+  chromedriver 的旧版本从未针对 Linux arm64 发布。
+* Firefox，Selenium Manager 可以从版本 136 开始下载，以及 geckodriver。
+* 不支持 Edge，因为 Microsoft 不为 Linux arm64 发布 Edge 或 msedgedriver。
 
-Other platforms, such as 32-bit Linux on ARM (e.g., some Raspberry Pi systems), are not supported. Selenium
-Manager cannot download browsers or drivers for them, because the browser vendors do not publish them.
-On these platforms, install the browser and the driver from your system package manager, and either
-[set the driver location](https://www.selenium.dev/documentation/webdriver/drivers/service/#driver-location)
-in a `Service` class or use an [environment variable for the driver path](#using-an-environment-variable-for-the-driver-path).
-If you want Selenium Manager to find a driver on `PATH` on one of these platforms, you need a
-[custom build of Selenium Manager](#building-a-custom-selenium-manager).
+其他平台（例如 ARM 上的 32 位 Linux，如某些 Raspberry Pi 系统）不受支持。Selenium
+Manager 无法为这些平台下载浏览器或驱动程序，因为浏览器厂商没有发布它们。
+在这些平台上，请通过系统软件包管理器安装浏览器和驱动程序，并在 `Service` 类中
+[设置驱动程序位置](https://www.selenium.dev/documentation/webdriver/drivers/service/#driver-location)，
+或使用[用于驱动程序路径的环境变量](#using-an-environment-variable-for-the-driver-path)。
+如果您希望 Selenium Manager 在这些平台上的 `PATH` 中找到驱动程序，则需要
+[自定义构建的 Selenium Manager](#building-a-custom-selenium-manager)。
 
 ### 浏览器依赖
 在 Linux 系统中自动管理浏览器时, Selenium Manager 依赖于浏览器供应商(例如 Chrome、Firefox 和 Edge)发布的版本. 
@@ -525,24 +524,24 @@ sudo apt-get install libatk-bridge2.0-0
 
 此功能从 Selenium Ruby 绑定的 4.25.0 版本以及 Python 绑定的 4.26.0 版本开始可用. 
 
-## Building a Custom Selenium Manager
-The Selenium bindings use the Selenium Manager binary set in the `SE_MANAGER_PATH` environment variable,
-if it is present (as of Selenium 4.13.0). You can use it to run your own build of Selenium Manager,
-for instance, on a platform for which we do not ship a binary (see [alternative architectures](#alternative-architectures)).
+## 构建自定义的 Selenium Manager {#building-a-custom-selenium-manager}
+如果存在 `SE_MANAGER_PATH` 环境变量（自 Selenium 4.13.0 起），Selenium 绑定会使用该变量所指定的 Selenium Manager 二进制文件。
+您可以利用它来运行自己构建的 Selenium Manager，
+例如在我们未提供二进制文件的平台上（参见[其他架构](#alternative-architectures)）。
 
-To build your own Selenium Manager, you can use the following steps:
+要构建自己的 Selenium Manager，可以按以下步骤操作：
 
-1. Install Rust Dev Environment
-2. clone Selenium onto your local machine `git clone https://github.com/SeleniumHQ/selenium.git --depth 1`
-3. Navigate into your clone `cd selenium/rust`
-4. Build selenium `cargo build --release`
-5. Set the following environment variable for the Selenium Manager path `SE_MANAGER_PATH=~/selenium/rust/target/release/selenium-manager`
-6. Put the driver you want in a location on your system PATH
-7. Selenium will now use the built Selenium Manager to locate the manually downloaded driver on PATH
+1. 安装 Rust 开发环境
+2. 将 Selenium 克隆到本地机器 `git clone https://github.com/SeleniumHQ/selenium.git --depth 1`
+3. 进入克隆目录 `cd selenium/rust`
+4. 构建 selenium `cargo build --release`
+5. 设置以下环境变量以指定 Selenium Manager 的路径 `SE_MANAGER_PATH=~/selenium/rust/target/release/selenium-manager`
+6. 将所需的驱动程序放到系统 PATH 中的某个位置
+7. 现在 Selenium 将使用构建好的 Selenium Manager 在 PATH 中定位手动下载的驱动程序
 
-Selenium Manager cannot download browsers or drivers that the browser vendors do not publish for your platform,
-even when it runs on that platform. This is why step 6 is needed.
+Selenium Manager 无法下载浏览器厂商未为您平台发布的浏览器或驱动程序，
+即使它在这些平台上运行也是如此。这就是需要第 6 步的原因。
 
 ## 路线图
-您可以在 [Selenium Manager project dashboard](https://github.com/orgs/SeleniumHQ/projects/5) 中追踪正在进行的工作. 
-此外, 您还可以在每个 Selenium Manager 版本的[changelog file](https://github.com/SeleniumHQ/selenium/blob/trunk/rust/CHANGELOG.md) 中查看随版本发布的新增功能. 
+您可以在 [Selenium Manager 项目看板](https://github.com/orgs/SeleniumHQ/projects/5) 中追踪正在进行的工作. 
+此外, 您还可以在每个 Selenium Manager 版本的[变更日志文件](https://github.com/SeleniumHQ/selenium/blob/trunk/rust/CHANGELOG.md) 中查看随版本发布的新增功能. 
