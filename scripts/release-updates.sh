@@ -59,10 +59,38 @@ sed "${SED_IN_PLACE[@]}" -E "s/^date: [0-9]{4}-[0-9]{2}-[0-9]{2}$/date: $NEW_BLO
 echo "New blog post: $NEW_BLOG (date: $NEW_BLOG_DATE)"
 echo
 
+to_gh_user() {
+    LC_ALL=C sort -u | sed 's#.*#{{< gh-user "https://api.github.com/users/&" >}}#'
+}
+
 print_contributors() {
     gh api --paginate --method GET "/repos/seleniumhq/$1/commits" -f since="$SINCE_COMMIT_DATE" -f until="$UNTIL_COMMIT_DATE" -f per_page=100 \
-    --jq '.[].author.login // empty' | LC_ALL=C sort -u | sed 's#.*#{{< gh-user "https://api.github.com/users/&" >}}#'
+    --jq '.[].author.login // empty' | to_gh_user
 }
+
+# Docker Selenium publishes its own release for each Selenium version, tagged 4.N.x-YYYYMMDD,
+# usually a few days after the Selenium release. Its contributors are the commits between the
+# last release for the previous version and the first release for the new one.
+DOCKER_TAGS=$(gh api --paginate repos/seleniumhq/docker-selenium/releases --jq '.[].tag_name' | { grep -E '^4\.[0-9]+\.[0-9]+-[0-9]{8}$' || true; } | sort -V)
+OLD_DOCKER_TAG=$(echo "$DOCKER_TAGS" | grep -E "^4\.$OLD_VERSION\." | tail -1 || true)
+NEW_DOCKER_TAG=$(echo "$DOCKER_TAGS" | grep -E "^4\.$NEW_VERSION\." | head -1 || true)
+
+print_docker_contributors() {
+    if [ -n "$OLD_DOCKER_TAG" ] && [ -n "$NEW_DOCKER_TAG" ]; then
+        gh api --paginate "repos/seleniumhq/docker-selenium/compare/$OLD_DOCKER_TAG...$NEW_DOCKER_TAG?per_page=100" \
+        --jq '.commits[].author.login // empty' | to_gh_user
+    else
+        print_contributors docker-selenium
+    fi
+}
+
+if [ -n "$OLD_DOCKER_TAG" ] && [ -n "$NEW_DOCKER_TAG" ]; then
+    echo "Docker Selenium release: $NEW_DOCKER_TAG (previous: $OLD_DOCKER_TAG)"
+else
+    echo "WARNING: no Docker Selenium release found for 4.$NEW_VERSION (or 4.$OLD_VERSION) yet." >&2
+    echo "WARNING: Docker contributors below use the Selenium tag dates instead." >&2
+fi
+echo
 
 CONTRIBUTORS=$(mktemp)
 trap 'rm -f "$CONTRIBUTORS"' EXIT
@@ -76,7 +104,7 @@ print_contributors seleniumhq.github.io
 
 echo
 echo "Docker Contributors"
-print_contributors docker-selenium
+print_docker_contributors
 } | tee "$CONTRIBUTORS"
 
 echo
