@@ -1,4 +1,4 @@
-selenium==4.52.0
+selenium==4.53.0
 pytest==9.2.0
 trio==0.35.0
 pytest-trio==0.8.0
