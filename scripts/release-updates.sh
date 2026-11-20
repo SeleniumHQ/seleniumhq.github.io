@@ -71,7 +71,7 @@ print_contributors() {
 # Docker Selenium publishes its own release for each Selenium version, tagged 4.N.x-YYYYMMDD,
 # usually a few days after the Selenium release. Its contributors are the commits between the
 # last release for the previous version and the first release for the new one.
-DOCKER_TAGS=$(gh api --paginate repos/seleniumhq/docker-selenium/releases --jq '.[].tag_name' | grep -E '^4\.[0-9]+\.[0-9]+-[0-9]{8}$' | sort -V)
+DOCKER_TAGS=$(gh api --paginate repos/seleniumhq/docker-selenium/releases --jq '.[].tag_name' | { grep -E '^4\.[0-9]+\.[0-9]+-[0-9]{8}$' || true; } | sort -V)
 OLD_DOCKER_TAG=$(echo "$DOCKER_TAGS" | grep -E "^4\.$OLD_VERSION\." | tail -1 || true)
 NEW_DOCKER_TAG=$(echo "$DOCKER_TAGS" | grep -E "^4\.$NEW_VERSION\." | head -1 || true)
 
