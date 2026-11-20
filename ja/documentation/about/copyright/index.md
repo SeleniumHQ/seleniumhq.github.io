@@ -47,7 +47,7 @@ URL: https://www.selenium.dev/ja/documentation/about/copyright/
 
 | ソフトウェア | バージョン | ライセンス |
 | -------- | ------- | ------- |
-| [Hugo](//gohugo.io/) | v0.169.0 | [Apache 2.0](//gohugo.io/about/license/) |
+| [Hugo](//gohugo.io/) | v0.170.1 | [Apache 2.0](//gohugo.io/about/license/) |
 | [Docsy](//github.com/docsy/docsy/) | --- | [Apache 2.0](//github.com/docsy/docsy/blob/main/LICENSE) |
 
 ## ライセンス

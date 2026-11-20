@@ -45,7 +45,7 @@ URL: https://www.selenium.dev/zh-cn/documentation/about/copyright/
 
 | 软件 | 版本 | 许可 |
 | -------- | ------- | ------- |
-| [Hugo](//gohugo.io/) | v0.169.0 | [Apache 2.0](//gohugo.io/about/license/) |
+| [Hugo](//gohugo.io/) | v0.170.1 | [Apache 2.0](//gohugo.io/about/license/) |
 | [Docsy](//github.com/docsy/docsy/) | --- | [Apache 2.0](//github.com/docsy/docsy/blob/main/LICENSE) |
 
 ## 许可
