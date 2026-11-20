@@ -11,10 +11,12 @@ These allow you to execute custom actions in every time specific Selenium comman
 
 {{< tabpane text=true >}}
 {{< tab header="Java" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/support/ListenersTest.java#L16-L29" >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/support/ListenersTest.java#L33-L37" >}}
 {{< /tab >}}
 {{% tab header="Python" %}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/python/tests/support/test_listener.py#L5-L13" >}}
+{{< gh-codeblock path="/examples/python/tests/support/test_listener.py#L17-L21" >}}
 {{% /tab %}}
 {{< tab header="CSharp" >}}
 {{< badge-code >}}
