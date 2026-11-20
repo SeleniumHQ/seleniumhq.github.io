@@ -264,7 +264,7 @@ offset.
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/ActionsAPI/MouseTest.cs#L146-L150" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="/examples/ruby/spec/actions_api/mouse_spec.rb#L113-L115" >}}
+{{< gh-codeblock path="/examples/ruby/spec/actions_api/mouse_spec.rb#L115-L117" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< gh-codeblock path="/examples/javascript/test/actionsApi/mouse/moveByOffset.spec.js#L27-L28" >}}
@@ -296,7 +296,7 @@ the current mouse position.
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/ActionsAPI/MouseTest.cs#L167-L169" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="/examples/ruby/spec/actions_api/mouse_spec.rb#L127-L129" >}}
+{{< gh-codeblock path="/examples/ruby/spec/actions_api/mouse_spec.rb#L129-L131" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< gh-codeblock path="/examples/javascript/test/actionsApi/mouse/moveByOffset.spec.js#L40" >}}
@@ -322,7 +322,7 @@ moves to the location of the target element and then releases the mouse.
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/ActionsAPI/MouseTest.cs#L181-L185" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="/examples/ruby/spec/actions_api/mouse_spec.rb#L140-L144" >}}
+{{< gh-codeblock path="/examples/ruby/spec/actions_api/mouse_spec.rb#L142-L146" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< gh-codeblock path="/examples/javascript/test/actionsApi/mouse/dragAndDrop.spec.js#L27-L30" >}}
@@ -347,7 +347,7 @@ This method firstly performs a click-and-hold on the source element, moves to th
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/ActionsAPI/MouseTest.cs#L195-L200" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="/examples/ruby/spec/actions_api/mouse_spec.rb#L152-L157" >}}
+{{< gh-codeblock path="/examples/ruby/spec/actions_api/mouse_spec.rb#L154-L159" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< gh-codeblock path="/examples/javascript/test/actionsApi/mouse/dragAndDrop.spec.js#L15-L19" >}}
