@@ -92,7 +92,6 @@ RSpec.describe 'Mouse' do
   describe 'move by offset' do
     it 'offset from element' do
       driver.get 'https://www.selenium.dev/selenium/web/mouse_interaction.html'
-      driver.action.scroll_to(driver.find_element(id: 'bottom')).perform
 
       mouse_tracker = driver.find_element(id: 'mouse-tracker')
       driver.action
