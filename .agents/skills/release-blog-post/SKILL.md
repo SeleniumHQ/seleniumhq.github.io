@@ -28,7 +28,15 @@ This, for version 4.41 (previous = 4.40):
   replaces `4.40` → `4.41` throughout, and sets `date:` to the `selenium-4.41.0` tag's commit
   date (the year is derived the same way, so this works across year boundaries).
 - Prints three deduped, sorted `{{< gh-user ... >}}` lists — Selenium, Docs, and Docker
-  contributors — for commits between the `selenium-4.40.0` and `selenium-4.41.0` tags.
+  contributors. Selenium and Docs use commits between the `selenium-4.40.0` and
+  `selenium-4.41.0` tag dates. Docker uses the Docker Selenium release instead (see below).
+- Prints the Docker Selenium release for the new version, e.g. `4.41.0-20260220`, and the
+  previous one. Docker Selenium has its own release per Selenium version (tagged
+  `4.N.x-YYYYMMDD`), usually a few days after Selenium. Docker contributors are the commits
+  between the last `4.40.*` Docker release and the first `4.41.*` one. If there is no Docker
+  release for 4.41 yet, the script prints a warning and falls back to the Selenium tag dates.
+  In that case, tell the user and suggest waiting for the Docker release before finishing the
+  post.
 - Adds any of those contributors missing from `website_and_docs/data/github_users.yml` (via
   `scripts/github-users.sh`), so their `gh-user` cards show display names. Include that file
   in the release changes.
@@ -70,16 +78,18 @@ for this release rather than leaving an empty block.
 
 ## 3. Draft the changelog sections
 
-Fetch the release notes for the new tag and the recent docker-selenium activity:
+Fetch the release notes for the new Selenium tag and for the Docker Selenium release that step 1
+printed (`<NEW_DOCKER_TAG>`, e.g. `4.41.0-20260220`):
 
 ```
 gh api repos/seleniumhq/selenium/releases/tags/selenium-4.41.0 --jq '.body'
-gh api --method GET /repos/seleniumhq/docker-selenium/commits -f since="<SINCE_COMMIT_DATE>" -f until="<UNTIL_COMMIT_DATE>" -f per_page=1000 --jq '.[].commit.message'
+gh release view <NEW_DOCKER_TAG> -R seleniumhq/docker-selenium --json body --jq '.body'
 ```
 
-(`SINCE_COMMIT_DATE`/`UNTIL_COMMIT_DATE` are the same tag commit dates step 1 already computed —
-rerun the two `gh api repos/seleniumhq/selenium/commits/selenium-4.X.0 --jq '.commit.committer.date'`
-calls if needed.)
+The Docker release body has a `### Changelog` (one line per commit) and a `### Released versions`
+table (Grid, browsers, drivers, OS). To list Docker releases, use
+`gh release list -R seleniumhq/docker-selenium`. Docker Selenium also publishes a Helm chart
+release (`selenium-grid-0.x.y`) next to each image release.
 
 Read the PR titles in the changelog body and write, in the same tone as prior posts:
 
@@ -90,8 +100,15 @@ Read the PR titles in the changelog body and write, in the same tone as prior po
 - **📦 Notable Changes**: one `###` subsection per binding (Java, Python, Ruby, .NET, Grid,
   Build & Infra) with 3-5 bullets each, paraphrasing the PR titles — don't just paste them
   verbatim.
-- **🐳 Docker Selenium**: bullet list of the docker-selenium commit messages (they already
-  include their PR number, e.g. `Docker: update X (#3002)`), followed by the fixed line
+- **🐳 Docker Selenium**: start with one line naming the Docker release, linked to it, e.g.
+  `Released as [4.41.0-20260220](https://github.com/SeleniumHQ/docker-selenium/releases/tag/4.41.0-20260220),
+  with Chrome X, Edge Y, Firefox Z on Ubuntu 26.04.`, taking versions from the `Released versions`
+  table. Then a short bullet list with only the changes users notice, copied from the release
+  `### Changelog` (they already include their PR number, e.g. `[chart] Update X (#3002)`):
+  changes to the images, the Helm chart, or the browsers and tools they ship. Keep the
+  `[build] Update Selenium Grid 4.41.0` line. Skip `[ci]` and `[test]` commits, bot commits,
+  and dependency or Helm release bumps, unless one changes what users run (e.g. a new base OS).
+  Do not paste the whole changelog. End with the fixed line
   `[See all changes](https://github.com/SeleniumHQ/docker-selenium/releases)`.
 
 Skip any of the binding subsections that had no meaningful changes rather than inventing
