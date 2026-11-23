@@ -224,7 +224,7 @@ Este método move o mouse para o ponto central do elemento visível na tela e, e
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/ActionsAPI/MouseTest.cs#L132-L135" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="/examples/ruby/spec/actions_api/mouse_spec.rb#L97-L100" >}}
+{{< gh-codeblock path="/examples/ruby/spec/actions_api/mouse_spec.rb#L96-L99" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< gh-codeblock path="/examples/javascript/test/actionsApi/mouse/moveByOffset.spec.js#L15-L17" >}}
@@ -249,7 +249,7 @@ Este método move o mouse a partir do canto superior esquerdo da janela de visua
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/ActionsAPI/MouseTest.cs#L146-L150" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="/examples/ruby/spec/actions_api/mouse_spec.rb#L114-L116" >}}
+{{< gh-codeblock path="/examples/ruby/spec/actions_api/mouse_spec.rb#L115-L117" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< gh-codeblock path="/examples/javascript/test/actionsApi/mouse/moveByOffset.spec.js#L27-L28" >}}
@@ -275,7 +275,7 @@ Observe que o primeiro argumento, X, especifica o movimento para a direita quand
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/ActionsAPI/MouseTest.cs#L167-L169" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="/examples/ruby/spec/actions_api/mouse_spec.rb#L128-L130" >}}
+{{< gh-codeblock path="/examples/ruby/spec/actions_api/mouse_spec.rb#L129-L131" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< gh-codeblock path="/examples/javascript/test/actionsApi/mouse/moveByOffset.spec.js#L40" >}}
@@ -300,7 +300,7 @@ Este método primeiro realiza um clique e mantém pressionado no elemento de ori
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/ActionsAPI/MouseTest.cs#L181-L185" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="/examples/ruby/spec/actions_api/mouse_spec.rb#L141-L145" >}}
+{{< gh-codeblock path="/examples/ruby/spec/actions_api/mouse_spec.rb#L142-L146" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< gh-codeblock path="/examples/javascript/test/actionsApi/mouse/dragAndDrop.spec.js#L27-L30" >}}
@@ -325,7 +325,7 @@ Este método primeiro realiza um clique e mantém pressionado no elemento de ori
 {{< gh-codeblock path="/examples/dotnet/SeleniumDocs/ActionsAPI/MouseTest.cs#L195-L200" >}}
 {{< /tab >}}
 {{< tab header="Ruby" >}}
-{{< gh-codeblock path="/examples/ruby/spec/actions_api/mouse_spec.rb#L153-L158" >}}
+{{< gh-codeblock path="/examples/ruby/spec/actions_api/mouse_spec.rb#L154-L159" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 {{< gh-codeblock path="/examples/javascript/test/actionsApi/mouse/dragAndDrop.spec.js#L15-L19" >}}
