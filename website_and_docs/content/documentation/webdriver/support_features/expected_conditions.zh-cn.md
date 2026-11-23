@@ -22,7 +22,7 @@ description: >
 {{< tabpane text=true >}}
 {{% tab header="Java" %}}
 [Expected Conditions Documentation](https://www.selenium.dev/selenium/docs/api/java/org/openqa/selenium/support/ui/ExpectedConditions.html)
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/support/ExpectedConditionsTest.java#L21-L22" >}}
 {{% /tab %}}
 {{% tab header="Python" %}}
 {{< gh-codeblock path="/examples/python/tests/support/test_expected_conditions.py#L14-L15" >}}
@@ -34,7 +34,7 @@ description: >
 Ruby makes frequent use of blocks, procs and lambdas and does not need Expected Conditions classes
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
-{{< badge-code >}}
+{{< gh-codeblock path="/examples/javascript/test/support/expectedConditions.spec.js#L20" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 {{< badge-code >}}
