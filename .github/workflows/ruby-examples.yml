@@ -56,7 +56,7 @@ jobs:
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 4.0.9
+          ruby-version: 4.0.10
           bundler-cache: true
       - name: Install Gems Nightly non-Windows
         if: matrix.release == 'nightly' && matrix.os != 'windows'
@@ -91,7 +91,7 @@ jobs:
         uses: actions/setup-java@v6
         with:
           distribution: 'temurin'
-          java-version: 25.0.5+8.0.LTS
+          java-version: 25.0.5+100000002.0.LTS
       - name: Run tests on Windows
         if: matrix.os == 'windows'
         uses: nick-invision/retry@v4.0.0
@@ -124,7 +124,7 @@ jobs:
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 4.0.9
+          ruby-version: 4.0.10
           bundler-cache: true
       - name: Install dependencies
         working-directory: ./examples/ruby
