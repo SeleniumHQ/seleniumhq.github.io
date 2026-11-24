@@ -8408,7 +8408,7 @@ Example (lines L103-L109): https://github.com/SeleniumHQ/seleniumhq.github.io/bl
 Example (lines L132-L135): https://github.com/SeleniumHQ/seleniumhq.github.io/blob/trunk/examples/dotnet/SeleniumDocs/ActionsAPI/MouseTest.cs
 
 **Ruby**
-Example (lines L97-L100): https://github.com/SeleniumHQ/seleniumhq.github.io/blob/trunk/examples/ruby/spec/actions_api/mouse_spec.rb
+Example (lines L96-L99): https://github.com/SeleniumHQ/seleniumhq.github.io/blob/trunk/examples/ruby/spec/actions_api/mouse_spec.rb
 
 **JavaScript**
 Example (lines L15-L17): https://github.com/SeleniumHQ/seleniumhq.github.io/blob/trunk/examples/javascript/test/actionsApi/mouse/moveByOffset.spec.js
@@ -8431,7 +8431,7 @@ Example (lines L118-L123): https://github.com/SeleniumHQ/seleniumhq.github.io/bl
 Example (lines L146-L150): https://github.com/SeleniumHQ/seleniumhq.github.io/blob/trunk/examples/dotnet/SeleniumDocs/ActionsAPI/MouseTest.cs
 
 **Ruby**
-Example (lines L114-L116): https://github.com/SeleniumHQ/seleniumhq.github.io/blob/trunk/examples/ruby/spec/actions_api/mouse_spec.rb
+Example (lines L115-L117): https://github.com/SeleniumHQ/seleniumhq.github.io/blob/trunk/examples/ruby/spec/actions_api/mouse_spec.rb
 
 **JavaScript**
 Example (lines L27-L28): https://github.com/SeleniumHQ/seleniumhq.github.io/blob/trunk/examples/javascript/test/actionsApi/mouse/moveByOffset.spec.js
@@ -8460,7 +8460,7 @@ Example (lines L141-L145): https://github.com/SeleniumHQ/seleniumhq.github.io/bl
 Example (lines L167-L169): https://github.com/SeleniumHQ/seleniumhq.github.io/blob/trunk/examples/dotnet/SeleniumDocs/ActionsAPI/MouseTest.cs
 
 **Ruby**
-Example (lines L128-L130): https://github.com/SeleniumHQ/seleniumhq.github.io/blob/trunk/examples/ruby/spec/actions_api/mouse_spec.rb
+Example (lines L129-L131): https://github.com/SeleniumHQ/seleniumhq.github.io/blob/trunk/examples/ruby/spec/actions_api/mouse_spec.rb
 
 **JavaScript**
 Example (lines L40): https://github.com/SeleniumHQ/seleniumhq.github.io/blob/trunk/examples/javascript/test/actionsApi/mouse/moveByOffset.spec.js
@@ -8483,7 +8483,7 @@ Example (lines L156-L162): https://github.com/SeleniumHQ/seleniumhq.github.io/bl
 Example (lines L181-L185): https://github.com/SeleniumHQ/seleniumhq.github.io/blob/trunk/examples/dotnet/SeleniumDocs/ActionsAPI/MouseTest.cs
 
 **Ruby**
-Example (lines L141-L145): https://github.com/SeleniumHQ/seleniumhq.github.io/blob/trunk/examples/ruby/spec/actions_api/mouse_spec.rb
+Example (lines L142-L146): https://github.com/SeleniumHQ/seleniumhq.github.io/blob/trunk/examples/ruby/spec/actions_api/mouse_spec.rb
 
 **JavaScript**
 Example (lines L27-L30): https://github.com/SeleniumHQ/seleniumhq.github.io/blob/trunk/examples/javascript/test/actionsApi/mouse/dragAndDrop.spec.js
@@ -8505,7 +8505,7 @@ Example (lines L170-L177): https://github.com/SeleniumHQ/seleniumhq.github.io/bl
 Example (lines L195-L200): https://github.com/SeleniumHQ/seleniumhq.github.io/blob/trunk/examples/dotnet/SeleniumDocs/ActionsAPI/MouseTest.cs
 
 **Ruby**
-Example (lines L153-L158): https://github.com/SeleniumHQ/seleniumhq.github.io/blob/trunk/examples/ruby/spec/actions_api/mouse_spec.rb
+Example (lines L154-L159): https://github.com/SeleniumHQ/seleniumhq.github.io/blob/trunk/examples/ruby/spec/actions_api/mouse_spec.rb
 
 **JavaScript**
 Example (lines L15-L19): https://github.com/SeleniumHQ/seleniumhq.github.io/blob/trunk/examples/javascript/test/actionsApi/mouse/dragAndDrop.spec.js
@@ -17652,6 +17652,21 @@ line-by-line history of each binding lives in its changelog on GitHub:
 [Ruby][ruby-changelog] and [JavaScript][javascript-changelog].
 Releases older than those listed here are covered by their
 [blog posts](/categories/releases/).
+
+## Selenium 4.54
+
+Released 23 November 2026.
+[Announcement](/blog/2026/selenium-4-54-released/) ·
+[GitHub release](https://github.com/SeleniumHQ/selenium/releases/tag/selenium-4.54.0) ·
+Changelogs: [Java][java-changelog], [Python][python-changelog],
+[.NET][dotnet-changelog], [Ruby][ruby-changelog], [JavaScript][javascript-changelog]
+
+- .NET, Python and JavaScript let Firefox choose its own BiDi WebSocket port.
+- Java, Python, Ruby and .NET pass `--diagnose` to `safaridriver` when `SE_DEBUG` is set.
+- A Grid Node no longer reports a failed status when a session stops while its status is read.
+- Ruby handles driver startup failures better and logs driver output again at debug level.
+- .NET BiDi `Subscribe` accepts `userContexts`, and Java removed the deprecated
+  `Debug.getDebugLogLevel()`.
 
 ## Selenium 4.53
 
