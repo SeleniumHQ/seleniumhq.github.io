@@ -17,6 +17,58 @@ line-by-line history of each binding lives in its changelog on GitHub:
 Releases older than those listed here are covered by their
 [blog posts](/categories/releases/).
 
+## Selenium 4.54
+
+Released 23 November 2026.
+[Announcement](/blog/2026/selenium-4-54-released/) ·
+[GitHub release](https://github.com/SeleniumHQ/selenium/releases/tag/selenium-4.54.0) ·
+Changelogs: [Java][java-changelog], [Python][python-changelog],
+[.NET][dotnet-changelog], [Ruby][ruby-changelog], [JavaScript][javascript-changelog]
+
+- .NET, Python and JavaScript let Firefox choose its own BiDi WebSocket port.
+- Java, Python, Ruby and .NET pass `--diagnose` to `safaridriver` when `SE_DEBUG` is set.
+- A Grid Node no longer reports a failed status when a session stops while its status is read.
+- Ruby handles driver startup failures better and logs driver output again at debug level.
+- .NET BiDi `Subscribe` accepts `userContexts`, and Java removed the deprecated
+  `Debug.getDebugLogLevel()`.
+
+## Selenium 4.53
+
+Released 17 November 2026.
+[Announcement](/blog/2026/selenium-4-53-released/) ·
+[GitHub release](https://github.com/SeleniumHQ/selenium/releases/tag/selenium-4.53.0) ·
+Changelogs: [Java][java-changelog], [Python][python-changelog],
+[.NET][dotnet-changelog], [Ruby][ruby-changelog], [JavaScript][javascript-changelog]
+
+- Python and JavaScript can return an accessibility snapshot of a page or element, in Classic
+  and BiDi sessions. Java, Ruby and .NET will follow later.
+- The Grid spreads new sessions across Nodes again, as it did before 4.36.0.
+- Java JSON serialisation and parsing are much faster, and the deprecated `Response.status` was
+  removed.
+- Python relative locators work from a `WebElement` and a `ShadowRoot`, and
+  `driver.webextension` is deprecated in favour of `driver.install_web_extension()` and
+  `driver.uninstall_web_extension()`.
+- Ruby downloads the Grid jar with Selenium Manager, and JavaScript publishes the
+  `@selenium/manager` npm packages with every release.
+
+## Selenium 4.52
+
+Released 29 October 2026.
+[Announcement](/blog/2026/selenium-4-52-released/) ·
+[GitHub release](https://github.com/SeleniumHQ/selenium/releases/tag/selenium-4.52.0) ·
+Changelogs: [Java][java-changelog], [Python][python-changelog],
+[.NET][dotnet-changelog], [Ruby][ruby-changelog], [JavaScript][javascript-changelog]
+
+- Selenium Manager now validates TLS certificates and explains certificate errors, with an
+  opt-in insecure mode for environments that need it.
+- Trust roots were updated after the eMudhra CA distrust: Python requires a newer `certifi`,
+  Selenium Manager bumps its trust roots, and JavaScript requires Node releases that block the
+  compromised keys. Ruby now raises on unverified Grid certificates.
+- Python and Ruby no longer poll BiDi WebSocket responses with sleeps, so commands return
+  faster. In Python, `websocket_interval` is deprecated.
+- The JavaScript atoms that Appium uses were ported from Closure to TypeScript.
+- The build moved to Bazel 9.3.0.
+
 ## Selenium 4.51
 
 Released 9 October 2026.
