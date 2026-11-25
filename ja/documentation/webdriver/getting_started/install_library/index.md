@@ -63,7 +63,7 @@ pip install selenium-x.x.x.-py3-none-any.whl
 プロジェクトで使用するには、requirements.txt ファイルに追加します:
 
 ```text
-selenium==4.53.0
+selenium==4.54.0
 ```
 
 **CSharp**
@@ -90,7 +90,7 @@ dotnet add package Selenium.WebDriver
 プロジェクトの `csproj`ファイルで、`ItemGroup` の `PackageReference`として依存関係を指定します。:
 
 ```xml
-<PackageReference Include="Selenium.WebDriver" Version="4.53.0" />
+<PackageReference Include="Selenium.WebDriver" Version="4.54.0" />
 ```
 <h3 id="その他の考慮事項">その他の考慮事項</h3>
 
@@ -134,7 +134,7 @@ gem install selenium-webdriver
 <h3 id="プロジェクトの-gemfile-に追加">プロジェクトの gemfile に追加</h3>
 
 ```ruby
-gem 'selenium-devtools', '= 0.157.0'
+gem 'selenium-devtools', '= 0.158.0'
 ```
 
 **JavaScript**

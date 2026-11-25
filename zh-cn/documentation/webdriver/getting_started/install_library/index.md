@@ -63,7 +63,7 @@ pip install selenium-x.x.x.-py3-none-any.whl
 为了在项目中使用它,需要将它添加到 `requirements.txt` 文件中:
 
 ```text
-selenium==4.53.0
+selenium==4.54.0
 ```
 
 **CSharp**
@@ -90,7 +90,7 @@ dotnet add package Selenium.WebDriver
 在 `csproj` 文件里, 具体的依赖 `PackageReference`(包参数) 位于 `ItemGroup` (项目组)中:
 
 ```xml
-<PackageReference Include="Selenium.WebDriver" Version="4.53.0" />
+<PackageReference Include="Selenium.WebDriver" Version="4.54.0" />
 ```
 <h3 id="其他附加思虑事项">其他附加思虑事项</h3>
 
@@ -135,7 +135,7 @@ gem install selenium-webdriver
 <h3 id="加入项目的-gemfile">加入项目的 gemfile</h3>
 
 ```ruby
-gem 'selenium-devtools', '= 0.157.0'
+gem 'selenium-devtools', '= 0.158.0'
 ```
 
 **JavaScript**

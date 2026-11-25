@@ -253,7 +253,7 @@ async with driver.bidi_connection() as connection:
 **CSharp**
 
 ```csharp
-await domains.Performance.Enable(new OpenQA.Selenium.DevTools.V157.Performance.EnableCommandSettings());
+await domains.Performance.Enable(new OpenQA.Selenium.DevTools.V158.Performance.EnableCommandSettings());
 var metricsResponse =
     await session.SendCommand<GetMetricsCommandSettings, GetMetricsCommandResponse>(
         new GetMetricsCommandSettings()

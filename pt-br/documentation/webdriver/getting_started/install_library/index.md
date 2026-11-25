@@ -63,7 +63,7 @@ pip install selenium-x.x.x.-py3-none-any.whl
 Para usar em um projeto, adicione no arquivo `requirements.txt`.
 
 ```text
-selenium==4.53.0
+selenium==4.54.0
 ```
 
 **CSharp**
@@ -90,7 +90,7 @@ dotnet add package Selenium.WebDriver
 No arquivo `csproj` do seu projeto, especifique a dependência como `PackageReference` no `ItemGroup`:
 
 ```xml
-<PackageReference Include="Selenium.WebDriver" Version="4.53.0" />
+<PackageReference Include="Selenium.WebDriver" Version="4.54.0" />
 ```
 <h3 id="considerações-adicionais">Considerações adicionais</h3>
 
@@ -136,7 +136,7 @@ gem install selenium-webdriver
 <h3 id="adicione-para-o-gemfile-do-projeto">Adicione para o gemfile do projeto</h3>
 
 ```ruby
-gem 'selenium-devtools', '= 0.157.0'
+gem 'selenium-devtools', '= 0.158.0'
 ```
 
 **JavaScript**
