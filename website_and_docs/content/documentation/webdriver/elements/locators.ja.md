@@ -475,7 +475,7 @@ cancel_locator = locate_with(By.TAG_NAME, "button").to_left_of({By.ID: "submit"}
 var cancelLocator = RelativeBy.WithLocator(By.tagName("button")).LeftOf(By.Id("submit"));
 {{< /tab >}}
 {{< tab header="Ruby" text=true >}}
-{{< gh-codeblock path="/examples/ruby/spec/elements/locators_spec.rb#82" >}}
+{{< gh-codeblock path="/examples/ruby/spec/elements/locators_spec.rbL#82" >}}
 {{< /tab >}}
 {{< tab header="JavaScript" >}}
 let cancelLocator = locateWith(By.tagName('button')).toLeftOf(By.id('submit'));
