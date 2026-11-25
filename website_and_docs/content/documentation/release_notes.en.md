@@ -17,6 +17,21 @@ line-by-line history of each binding lives in its changelog on GitHub:
 Releases older than those listed here are covered by their
 [blog posts](/categories/releases/).
 
+## Selenium 4.54
+
+Released 23 November 2026.
+[Announcement](/blog/2026/selenium-4-54-released/) ·
+[GitHub release](https://github.com/SeleniumHQ/selenium/releases/tag/selenium-4.54.0) ·
+Changelogs: [Java][java-changelog], [Python][python-changelog],
+[.NET][dotnet-changelog], [Ruby][ruby-changelog], [JavaScript][javascript-changelog]
+
+- .NET, Python and JavaScript let Firefox choose its own BiDi WebSocket port.
+- Java, Python, Ruby and .NET pass `--diagnose` to `safaridriver` when `SE_DEBUG` is set.
+- A Grid Node no longer reports a failed status when a session stops while its status is read.
+- Ruby handles driver startup failures better and logs driver output again at debug level.
+- .NET BiDi `Subscribe` accepts `userContexts`, and Java removed the deprecated
+  `Debug.getDebugLogLevel()`.
+
 ## Selenium 4.53
 
 Released 17 November 2026.
