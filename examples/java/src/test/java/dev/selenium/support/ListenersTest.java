@@ -24,7 +24,7 @@ public class ListenersTest extends BaseChromeTest {
 
     @Override
     public void beforeClick(WebElement element) {
-      events.add("clicking " + element.getAttribute("id"));
+      events.add("clicking " + element.getDomAttribute("id"));
     }
   }
 
