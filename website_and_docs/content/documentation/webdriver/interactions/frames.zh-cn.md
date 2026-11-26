@@ -78,25 +78,11 @@ driver.findElement(By.tagName("button")).click()
 {{< /tab >}}
 
 
-{{< tab header="JavaScript" >}}
-// 存储网页元素
-const iframe = driver.findElement(By.css('#modal> iframe'));
-
-// 切换到 frame
-await driver.switchTo().frame(iframe);
-
-// 现在可以点击按钮
-await driver.findElement(By.css('button')).click();
+{{< tab header="JavaScript" text=true >}}
+{{< gh-codeblock path="/examples/javascript/test/interactions/frames.spec.js#L17-L25" >}}
 {{< /tab >}}
-{{< tab header="Kotlin" >}}
-// 存储网页元素
-val iframe = driver.findElement(By.cssSelector("#modal>iframe"))
-
-// 切换到 frame
-driver.switchTo().frame(iframe)
-
-// 现在可以点击按钮
-driver.findElement(By.tagName("button")).click()
+{{< tab header="Kotlin" text=true >}}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/interactions/FramesTest.kt#L15-L23" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -124,25 +110,11 @@ driver.findElement(By.tagName("button")).click()
 {{< /tab >}}
 
 
-{{< tab header="JavaScript" >}}
-// 使用 ID
-await driver.switchTo().frame('buttonframe');
-
-// 或者使用 name 代替
-await driver.switchTo().frame('myframe');
-
-// 现在可以点击按钮
-await driver.findElement(By.css('button')).click();
+{{< tab header="JavaScript" text=true >}}
+{{< gh-codeblock path="/examples/javascript/test/interactions/frames.spec.js#L34-L43" >}}
 {{< /tab >}}
-{{< tab header="Kotlin" >}}
-// 使用 ID
-driver.switchTo().frame("buttonframe")
-
-// 或者使用 name 代替
-driver.switchTo().frame("myframe")
-
-// 现在可以点击按钮
-driver.findElement(By.tagName("button")).click()
+{{< tab header="Kotlin" text=true >}}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/interactions/FramesTest.kt#L33-L42" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -171,13 +143,11 @@ _window.frames_ 进行查询.
 {{< gh-codeblock path="/examples/ruby/spec/interactions/frames_spec.rb#L46-L47" >}}
 {{< /tab >}}
 
-{{< tab header="JavaScript" >}}
-// 切换到第 2 个框架
-await driver.switchTo().frame(1);
+{{< tab header="JavaScript" text=true >}}
+{{< gh-codeblock path="/examples/javascript/test/interactions/frames.spec.js#L52-L53" >}}
 {{< /tab >}}
-{{< tab header="Kotlin" >}}
-// 切换到第 2 个框架
-driver.switchTo().frame(1)
+{{< tab header="Kotlin" text=true >}}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/interactions/FramesTest.kt#L52-L53" >}}
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -202,12 +172,10 @@ driver.switchTo().frame(1)
 {{< /tab >}}
 
 
-{{< tab header="JavaScript" >}}
-// 回到顶层
-await driver.switchTo().defaultContent();
+{{< tab header="JavaScript" text=true >}}
+{{< gh-codeblock path="/examples/javascript/test/interactions/frames.spec.js#L62-L63" >}}
 {{< /tab >}}
-{{< tab header="Kotlin" >}}
-// 回到顶层
-driver.switchTo().defaultContent()
+{{< tab header="Kotlin" text=true >}}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/interactions/FramesTest.kt#L63-L64" >}}
 {{< /tab >}}
 {{< /tabpane >}}

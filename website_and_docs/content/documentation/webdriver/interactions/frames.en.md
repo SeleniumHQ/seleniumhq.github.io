@@ -71,7 +71,6 @@ Switching using a WebElement is the most flexible option. You can
 find the frame using your preferred selector and switch to it.
 
 {{< tabpane langEqualsHeader=true >}}
-{{< badge-examples >}}
   {{< tab header="Java" text=true >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/FramesTest.java#L38-L46" >}}
 {{< /tab >}}
@@ -91,26 +90,12 @@ find the frame using your preferred selector and switch to it.
 {{< /tab >}}
 
 
-  {{< tab header="JavaScript" >}}
-// Store the web element
-const iframe = driver.findElement(By.css('#modal > iframe'));
-
-// Switch to the frame
-await driver.switchTo().frame(iframe);
-
-// Now we can click the button
-await driver.findElement(By.css('button')).click();
-  {{< /tab >}}
-  {{< tab header="Kotlin" >}}
-//Store the web element
-val iframe = driver.findElement(By.cssSelector("#modal>iframe"))
-
-//Switch to the frame
-driver.switchTo().frame(iframe)
-
-//Now we can click the button
-driver.findElement(By.tagName("button")).click()
-  {{< /tab >}}
+{{< tab header="JavaScript" text=true >}}
+{{< gh-codeblock path="/examples/javascript/test/interactions/frames.spec.js#L17-L25" >}}
+{{< /tab >}}
+{{< tab header="Kotlin" text=true >}}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/interactions/FramesTest.kt#L15-L23" >}}
+{{< /tab >}}
 {{< /tabpane >}}
 
 ## Using a name or ID
@@ -119,7 +104,6 @@ instead.  If the name or ID is not unique on the page, then the first
 one found will be switched to.
 
 {{< tabpane langEqualsHeader=true >}}
-{{< badge-examples >}}
  {{< tab header="Java" text=true >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/FramesTest.java#L50-L58" >}}
   {{< /tab >}}
@@ -137,26 +121,12 @@ one found will be switched to.
 {{< gh-codeblock path="/examples/ruby/spec/interactions/frames_spec.rb#L36-L43" >}}
 {{< /tab >}}
 
-  {{< tab header="JavaScript" >}}
-// Using the ID
-await driver.switchTo().frame('buttonframe');
-
-// Or using the name instead
-await driver.switchTo().frame('myframe');
-
-// Now we can click the button
-await driver.findElement(By.css('button')).click();
-  {{< /tab >}}
-  {{< tab header="Kotlin" >}}
-//Using the ID
-driver.switchTo().frame("buttonframe")
-
-//Or using the name instead
-driver.switchTo().frame("myframe")
-
-//Now we can click the button
-driver.findElement(By.tagName("button")).click()
-  {{< /tab >}}
+{{< tab header="JavaScript" text=true >}}
+{{< gh-codeblock path="/examples/javascript/test/interactions/frames.spec.js#L34-L43" >}}
+{{< /tab >}}
+{{< tab header="Kotlin" text=true >}}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/interactions/FramesTest.kt#L33-L42" >}}
+{{< /tab >}}
 {{< /tabpane >}}
 
 ## Using an index
@@ -165,7 +135,6 @@ It is also possible to use the index of the frame, such as can be
 queried using _window.frames_ in JavaScript.
 
 {{< tabpane langEqualsHeader=true >}}
-{{< badge-examples >}}
 
     {{< tab header="Java" text=true >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/FramesTest.java#L62-L63" >}}
@@ -189,14 +158,12 @@ queried using _window.frames_ in JavaScript.
 
 
 
-  {{< tab header="JavaScript" >}}
-// Switches to the second frame
-await driver.switchTo().frame(1);
-  {{< /tab >}}
-  {{< tab header="Kotlin" >}}
-// Switches to the second frame
-driver.switchTo().frame(1)
-  {{< /tab >}}
+{{< tab header="JavaScript" text=true >}}
+{{< gh-codeblock path="/examples/javascript/test/interactions/frames.spec.js#L52-L53" >}}
+{{< /tab >}}
+{{< tab header="Kotlin" text=true >}}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/interactions/FramesTest.kt#L52-L53" >}}
+{{< /tab >}}
 {{< /tabpane >}}
 
 
@@ -206,7 +173,6 @@ To leave an iframe or frameset, switch back to the default content
 like so:
 
 {{< tabpane langEqualsHeader=true >}}
-{{< badge-examples >}}
     {{< tab header="Java" text=true >}}
 {{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/interactions/FramesTest.java#L66-L67" >}}
   {{< /tab >}}
@@ -225,12 +191,10 @@ like so:
 {{< gh-codeblock path="/examples/ruby/spec/interactions/frames_spec.rb#L49-L50" >}}
 {{< /tab >}}
 
-  {{< tab header="JavaScript" >}}
-// Return to the top level
-await driver.switchTo().defaultContent();
-  {{< /tab >}}
-  {{< tab header="Kotlin" >}}
-// Return to the top level
-driver.switchTo().defaultContent()
-  {{< /tab >}}
+{{< tab header="JavaScript" text=true >}}
+{{< gh-codeblock path="/examples/javascript/test/interactions/frames.spec.js#L62-L63" >}}
+{{< /tab >}}
+{{< tab header="Kotlin" text=true >}}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/interactions/FramesTest.kt#L63-L64" >}}
+{{< /tab >}}
 {{< /tabpane >}}
