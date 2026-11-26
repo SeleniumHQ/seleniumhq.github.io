@@ -145,6 +145,9 @@ Use reference definitions in this form:
   remain unwrapped.
 - Keep language neutral and project-focused.
 - Do not create or commit checked-in transcript files.
+- Put `[deploy site]` in the title of a PR that adds minutes, or in the commit message when
+  committing straight to `trunk`. The site only deploys from commits that contain it, and a squash
+  merge uses the PR title as the commit message.
 
 ## Validation
 
