@@ -32,23 +32,24 @@ Worry not. There is a solution: the _Color_ class!
 First of all, you will need to import the class:
 
 {{< tabpane langEqualsHeader=true >}}
-{{< badge-examples >}}
-  {{< tab header="Java" >}}
-import org.openqa.selenium.support.Color;
+  {{< tab header="Java" text=true >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/support/ColorsTest.java#L7" >}}
   {{< /tab >}}
-  {{< tab header="Python" >}}
-from selenium.webdriver.support.color import Color
+  {{< tab header="Python" text=true >}}
+{{< gh-codeblock path="/examples/python/tests/support/test_colors.py#L2" >}}
   {{< /tab >}}
   {{< tab header="CSharp" text=true >}}
 {{< badge-implementation >}}
   {{< /tab >}}
-  {{< tab header="Ruby" >}}
-include Selenium::WebDriver::Support
+  {{< tab header="Ruby" text=true >}}
+{{< gh-codeblock path="/examples/ruby/spec/support/color_spec.rb#L8" >}}
   {{< /tab >}}
   {{< tab header="JavaScript" text=true >}}
 {{< badge-implementation >}}
   {{< /tab >}}
-  {{< tab header="Kotlin" >}}import org.openqa.selenium.support.Color{{< /tab >}}
+  {{< tab header="Kotlin" text=true >}}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/support/ColorsTest.kt#L7" >}}
+  {{< /tab >}}
 {{< /tabpane >}}
 
 You can now start creating colour objects.
@@ -57,48 +58,23 @@ your colour.
 Supported colour representations are:
 
 {{< tabpane langEqualsHeader=true >}}
-{{< badge-examples >}}
-  {{< tab header="Java" >}}
-private final Color HEX_COLOUR = Color.fromString("#2F7ED8");
-private final Color RGB_COLOUR = Color.fromString("rgb(255, 255, 255)");
-private final Color RGB_COLOUR = Color.fromString("rgb(40%, 20%, 40%)");
-private final Color RGBA_COLOUR = Color.fromString("rgba(255, 255, 255, 0.5)");
-private final Color RGBA_COLOUR = Color.fromString("rgba(40%, 20%, 40%, 0.5)");
-private final Color HSL_COLOUR = Color.fromString("hsl(100, 0%, 50%)");
-private final Color HSLA_COLOUR = Color.fromString("hsla(100, 0%, 50%, 0.5)");
+  {{< tab header="Java" text=true >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/support/ColorsTest.java#L13-L19" >}}
   {{< /tab >}}
-  {{< tab header="Python" >}}
-HEX_COLOUR = Color.from_string('#2F7ED8')
-RGB_COLOUR = Color.from_string('rgb(255, 255, 255)')
-RGB_COLOUR = Color.from_string('rgb(40%, 20%, 40%)')
-RGBA_COLOUR = Color.from_string('rgba(255, 255, 255, 0.5)')
-RGBA_COLOUR = Color.from_string('rgba(40%, 20%, 40%, 0.5)')
-HSL_COLOUR = Color.from_string('hsl(100, 0%, 50%)')
-HSLA_COLOUR = Color.from_string('hsla(100, 0%, 50%, 0.5)')
+  {{< tab header="Python" text=true >}}
+{{< gh-codeblock path="/examples/python/tests/support/test_colors.py#L6-L12" >}}
   {{< /tab >}}
   {{< tab header="CSharp" text=true >}}
 {{< badge-implementation >}}
   {{< /tab >}}
-  {{< tab header="Ruby" >}}
-HEX_COLOUR = Color.from_string('#2F7ED8')
-RGB_COLOUR = Color.from_string('rgb(255, 255, 255)')
-RGB_COLOUR = Color.from_string('rgb(40%, 20%, 40%)')
-RGBA_COLOUR = Color.from_string('rgba(255, 255, 255, 0.5)')
-RGBA_COLOUR = Color.from_string('rgba(40%, 20%, 40%, 0.5)')
-HSL_COLOUR = Color.from_string('hsl(100, 0%, 50%)')
-HSLA_COLOUR = Color.from_string('hsla(100, 0%, 50%, 0.5)')
+  {{< tab header="Ruby" text=true >}}
+{{< gh-codeblock path="/examples/ruby/spec/support/color_spec.rb#L11-L17" >}}
   {{< /tab >}}
   {{< tab header="JavaScript" text=true >}}
 {{< badge-implementation >}}
   {{< /tab >}}
-  {{< tab header="Kotlin" >}}
-private val HEX_COLOUR = Color.fromString("#2F7ED8")
-private val RGB_COLOUR = Color.fromString("rgb(255, 255, 255)")
-private val RGB_COLOUR_PERCENT = Color.fromString("rgb(40%, 20%, 40%)")
-private val RGBA_COLOUR = Color.fromString("rgba(255, 255, 255, 0.5)")
-private val RGBA_COLOUR_PERCENT = Color.fromString("rgba(40%, 20%, 40%, 0.5)")
-private val HSL_COLOUR = Color.fromString("hsl(100, 0%, 50%)")
-private val HSLA_COLOUR = Color.fromString("hsla(100, 0%, 50%, 0.5)")
+  {{< tab header="Kotlin" text=true >}}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/support/ColorsTest.kt#L13-L19" >}}
   {{< /tab >}}
 {{< /tabpane >}}
 
@@ -107,32 +83,23 @@ specified in
 [http://www.w3.org/TR/css3-color/#html4](//www.w3.org/TR/css3-color/#html4).
 
 {{< tabpane langEqualsHeader=true >}}
-{{< badge-examples >}}
-  {{< tab header="Java" >}}
-private final Color BLACK = Color.fromString("black");
-private final Color CHOCOLATE = Color.fromString("chocolate");
-private final Color HOTPINK = Color.fromString("hotpink");
+  {{< tab header="Java" text=true >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/support/ColorsTest.java#L32-L34" >}}
   {{< /tab >}}
-  {{< tab header="Python" >}}
-BLACK = Color.from_string('black')
-CHOCOLATE = Color.from_string('chocolate')
-HOTPINK = Color.from_string('hotpink')
+  {{< tab header="Python" text=true >}}
+{{< gh-codeblock path="/examples/python/tests/support/test_colors.py#L24-L26" >}}
   {{< /tab >}}
   {{< tab header="CSharp" text=true >}}
 {{< badge-implementation >}}
   {{< /tab >}}
-  {{< tab header="Ruby" >}}
-BLACK = Color.from_string('black')
-CHOCOLATE = Color.from_string('chocolate')
-HOTPINK = Color.from_string('hotpink')
+  {{< tab header="Ruby" text=true >}}
+{{< badge-implementation >}}
   {{< /tab >}}
   {{< tab header="JavaScript" text=true >}}
 {{< badge-implementation >}}
   {{< /tab >}}
-  {{< tab header="Kotlin" >}}
-private val BLACK = Color.fromString("black")
-private val CHOCOLATE = Color.fromString("chocolate")
-private val HOTPINK = Color.fromString("hotpink")
+  {{< tab header="Kotlin" text=true >}}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/support/ColorsTest.kt#L32-L34" >}}
   {{< /tab >}}
 {{< /tabpane >}}
 
@@ -141,24 +108,23 @@ if no colour has been set on an element.
 The Color class also supports this:
 
 {{< tabpane langEqualsHeader=true >}}
-{{< badge-examples >}}
-  {{< tab header="Java" >}}
-private final Color TRANSPARENT = Color.fromString("transparent");
+  {{< tab header="Java" text=true >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/support/ColorsTest.java#L43" >}}
   {{< /tab >}}
-  {{< tab header="Python" >}}
-TRANSPARENT = Color.from_string('transparent')
+  {{< tab header="Python" text=true >}}
+{{< gh-codeblock path="/examples/python/tests/support/test_colors.py#L34" >}}
   {{< /tab >}}
   {{< tab header="CSharp" text=true >}}
 {{< badge-implementation >}}
   {{< /tab >}}
-  {{< tab header="Ruby" >}}
-TRANSPARENT = Color.from_string('transparent')
+  {{< tab header="Ruby" text=true >}}
+{{< badge-implementation >}}
   {{< /tab >}}
   {{< tab header="JavaScript" text=true >}}
 {{< badge-implementation >}}
   {{< /tab >}}
-  {{< tab header="Kotlin" >}}
-private val TRANSPARENT = Color.fromString("transparent")
+  {{< tab header="Kotlin" text=true >}}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/support/ColorsTest.kt#L43" >}}
   {{< /tab >}}
 {{< /tabpane >}}
 
@@ -168,32 +134,23 @@ any response will be correctly parsed
 and converted into a valid Color object:
 
 {{< tabpane langEqualsHeader=true >}}
-{{< badge-examples >}}
-  {{< tab header="Java" >}}
-Color loginButtonColour = Color.fromString(driver.findElement(By.id("login")).getCssValue("color"));
-
-Color loginButtonBackgroundColour = Color.fromString(driver.findElement(By.id("login")).getCssValue("background-color"));
+  {{< tab header="Java" text=true >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/support/ColorsTest.java#L54-L55" >}}
   {{< /tab >}}
-  {{< tab header="Python" >}}
-login_button_colour = Color.from_string(driver.find_element(By.ID,'login').value_of_css_property('color'))
-
-login_button_background_colour = Color.from_string(driver.find_element(By.ID,'login').value_of_css_property('background-color'))
+  {{< tab header="Python" text=true >}}
+{{< gh-codeblock path="/examples/python/tests/support/test_colors.py#L43-L44" >}}
   {{< /tab >}}
   {{< tab header="CSharp" text=true >}}
 {{< badge-implementation >}}
   {{< /tab >}}
-  {{< tab header="Ruby" >}}
-login_button_colour = Color.from_string(driver.find_element(id: 'login').css_value('color'))
-
-login_button_background_colour = Color.from_string(driver.find_element(id: 'login').css_value('background-color'))
+  {{< tab header="Ruby" text=true >}}
+{{< gh-codeblock path="/examples/ruby/spec/support/color_spec.rb#L32-L33" >}}
   {{< /tab >}}
   {{< tab header="JavaScript" text=true >}}
 {{< badge-implementation >}}
   {{< /tab >}}
-  {{< tab header="Kotlin" >}}
-val loginButtonColour = Color.fromString(driver.findElement(By.id("login")).getCssValue("color"))
-
-val loginButtonBackgroundColour = Color.fromString(driver.findElement(By.id("login")).getCssValue("background-color"))
+  {{< tab header="Kotlin" text=true >}}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/support/ColorsTest.kt#L53-L54" >}}
   {{< /tab >}}
 {{< /tabpane >}}
 
@@ -201,24 +158,23 @@ You can then directly compare colour objects:
 
 
 {{< tabpane langEqualsHeader=true >}}
-{{< badge-examples >}}
-  {{< tab header="Java" >}}
-assert loginButtonBackgroundColour.equals(HOTPINK);
+  {{< tab header="Java" text=true >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/support/ColorsTest.java#L59" >}}
   {{< /tab >}}
-  {{< tab header="Python" >}}
-assert login_button_background_colour == HOTPINK
+  {{< tab header="Python" text=true >}}
+{{< gh-codeblock path="/examples/python/tests/support/test_colors.py#L48" >}}
   {{< /tab >}}
   {{< tab header="CSharp" text=true >}}
 {{< badge-implementation >}}
   {{< /tab >}}
-  {{< tab header="Ruby" >}}
-assert(login_button_background_colour == HOTPINK)
+  {{< tab header="Ruby" text=true >}}
+{{< gh-codeblock path="/examples/ruby/spec/support/color_spec.rb#L37" >}}
   {{< /tab >}}
   {{< tab header="JavaScript" text=true >}}
 {{< badge-implementation >}}
   {{< /tab >}}
-  {{< tab header="Kotlin" >}}
-assert(loginButtonBackgroundColour.equals(HOTPINK))
+  {{< tab header="Kotlin" text=true >}}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/support/ColorsTest.kt#L58" >}}
   {{< /tab >}}
 {{< /tabpane >}}
 
@@ -226,32 +182,23 @@ Or you can convert the colour into one of the following formats
 and perform a static validation:
 
 {{< tabpane langEqualsHeader=true >}}
-{{< badge-examples >}}
-  {{< tab header="Java" >}}
-assert loginButtonBackgroundColour.asHex().equals("#ff69b4");
-assert loginButtonBackgroundColour.asRgba().equals("rgba(255, 105, 180, 1)");
-assert loginButtonBackgroundColour.asRgb().equals("rgb(255, 105, 180)");
+  {{< tab header="Java" text=true >}}
+{{< gh-codeblock path="/examples/java/src/test/java/dev/selenium/support/ColorsTest.java#L61-L63" >}}
   {{< /tab >}}
-  {{< tab header="Python" >}}
-assert login_button_background_colour.hex == '#ff69b4'
-assert login_button_background_colour.rgba == 'rgba(255, 105, 180, 1)'
-assert login_button_background_colour.rgb == 'rgb(255, 105, 180)'
+  {{< tab header="Python" text=true >}}
+{{< gh-codeblock path="/examples/python/tests/support/test_colors.py#L50-L52" >}}
   {{< /tab >}}
   {{< tab header="CSharp" text=true text=true >}}
 {{< badge-implementation >}}
   {{< /tab >}}
-  {{< tab header="Ruby" >}}
-assert(login_button_background_colour.hex == '#ff69b4')
-assert(login_button_background_colour.rgba == 'rgba(255, 105, 180, 1)')
-assert(login_button_background_colour.rgb == 'rgb(255, 105, 180)')
+  {{< tab header="Ruby" text=true >}}
+{{< gh-codeblock path="/examples/ruby/spec/support/color_spec.rb#L39-L41" >}}
   {{< /tab >}}
   {{< tab header="JavaScript" text=true >}}
 {{< badge-implementation >}}
   {{< /tab >}}
-  {{< tab header="Kotlin" >}}
-assert(loginButtonBackgroundColour.asHex().equals("#ff69b4"))
-assert(loginButtonBackgroundColour.asRgba().equals("rgba(255, 105, 180, 1)"))
-assert(loginButtonBackgroundColour.asRgb().equals("rgb(255, 105, 180)"))
+  {{< tab header="Kotlin" text=true >}}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/support/ColorsTest.kt#L60-L62" >}}
   {{< /tab >}}
 {{< /tabpane >}}
 
