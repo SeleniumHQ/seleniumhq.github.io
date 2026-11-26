@@ -141,3 +141,35 @@ def test_auth_required_event(driver):
         assert challenges[0].realm == "Restricted Area"
     finally:
         driver.network.remove_authentication_handler(handler_id)
+
+
+@pytest.mark.driver_type("bidi")
+def test_response_started_event(driver):
+    from selenium.webdriver.support.wait import WebDriverWait
+
+    responses = []
+    callback_id = driver.network.add_event_handler("response_started", responses.append)
+    driver.get("https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html")
+    WebDriverWait(driver, 5).until(lambda _: responses)
+
+    event = responses[0]
+    assert event["context"] == driver.current_window_handle
+    assert event["request"]["method"] == "GET"
+    assert event["response"]["status"] == 200
+    driver.network.remove_event_handler("response_started", callback_id)
+
+
+@pytest.mark.driver_type("bidi")
+def test_response_completed_event(driver):
+    from selenium.webdriver.support.wait import WebDriverWait
+
+    responses = []
+    callback_id = driver.network.add_event_handler("response_completed", responses.append)
+    driver.get("https://www.selenium.dev/selenium/web/bidi/logEntryAdded.html")
+    WebDriverWait(driver, 5).until(lambda _: responses)
+
+    event = responses[0]
+    assert event.context == driver.current_window_handle
+    assert event.request["method"] == "GET"
+    assert event.response["status"] == 200
+    driver.network.remove_event_handler("response_completed", callback_id)
