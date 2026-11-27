@@ -67,6 +67,15 @@
       .forEach((tab) => bootstrap.Tab.getOrCreateInstance(tab).show());
   }
 
+  function flashSelector() {
+    document.querySelectorAll('.td-navbar .td-code-lang').forEach((el) => {
+      el.classList.remove('td-code-lang--flash');
+      void el.offsetWidth; // restart the animation on repeated clicks
+      el.classList.add('td-code-lang--flash');
+      setTimeout(() => el.classList.remove('td-code-lang--flash'), 1700);
+    });
+  }
+
   function select(key) {
     if (!LANGS.includes(key)) return;
     persist(key);
@@ -93,7 +102,19 @@
     // dropdown label and the html attribute.
     document.addEventListener('shown.bs.tab', (event) => {
       const key = event.target && event.target.getAttribute('data-td-tp-persist');
-      if (key && LANGS.includes(key)) setCurrent(key);
+      if (key && LANGS.includes(key)) {
+        setCurrent(key);
+        // A choice in the home page chooser removes the chooser (see
+        // assets/scss/_tabs.scss) and highlights the navbar selector for a
+        // moment, so the visitor sees where to change the language from now
+        // on. Focus moves there too, as the button that had it is now hidden.
+        if (event.target.closest('.selenium-lang-chooser')) {
+          const hadFocus = event.target.contains(document.activeElement);
+          flashSelector();
+          const toggle = document.getElementById('td-code-lang-toggle');
+          if (hadFocus && toggle) toggle.focus();
+        }
+      }
     });
   });
 })();
