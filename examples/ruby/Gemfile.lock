@@ -46,10 +46,9 @@ GEM
       parser (>= 3.3.7.2)
       prism (>= 1.7)
       racc
-    rubocop-rspec (3.10.2)
+    rubocop-rspec (3.11.0)
       lint_roller (~> 1.1)
-      regexp_parser (>= 2.0)
-      rubocop (~> 1.86, >= 1.86.2)
+      rubocop (~> 1.92)
     ruby-progressbar (1.13.0)
     rubyzip (3.7.0)
     selenium-devtools (0.158.0)
