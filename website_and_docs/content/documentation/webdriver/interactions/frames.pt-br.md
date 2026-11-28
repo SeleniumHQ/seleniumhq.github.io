@@ -87,9 +87,16 @@ encontrar o quadro usando seu seletor preferido e mudar para ele.
 {{< tab header="JavaScript" text=true >}}
 {{< gh-codeblock path="/examples/javascript/test/interactions/frames.spec.js#L17-L25" >}}
 {{< /tab >}}
-{{< tab header="Kotlin" text=true >}}
-{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/interactions/FramesTest.kt#L15-L23" >}}
-{{< /tab >}}
+  {{< tab header="Kotlin" >}}
+//Store the web element
+val iframe = driver.findElement(By.cssSelector("#modal>iframe"))
+
+//Switch to the frame
+driver.switchTo().frame(iframe)
+
+//Now we can click the button
+driver.findElement(By.tagName("button")).click()
+  {{< /tab >}}
 {{< /tabpane >}}
 
 ## Usando um *name* ou ID
@@ -120,9 +127,16 @@ primeiro encontrado será utilizado.
 {{< tab header="JavaScript" text=true >}}
 {{< gh-codeblock path="/examples/javascript/test/interactions/frames.spec.js#L34-L43" >}}
 {{< /tab >}}
-{{< tab header="Kotlin" text=true >}}
-{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/interactions/FramesTest.kt#L33-L42" >}}
-{{< /tab >}}
+  {{< tab header="Kotlin" >}}
+//Using the ID
+driver.switchTo().frame("buttonframe")
+
+//Or using the name instead
+driver.switchTo().frame("myframe")
+
+//Now we can click the button
+driver.findElement(By.tagName("button")).click()
+  {{< /tab >}}
 {{< /tabpane >}}
 
 ## Usando um índice
@@ -150,8 +164,9 @@ consultado usando _window.frames_ em JavaScript.
 {{< tab header="JavaScript" text=true >}}
 {{< gh-codeblock path="/examples/javascript/test/interactions/frames.spec.js#L52-L53" >}}
 {{< /tab >}}
-{{< tab header="Kotlin" text=true >}}
-{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/interactions/FramesTest.kt#L52-L53" >}}
+{{< tab header="Kotlin" >}}
+// Switches to the second frame
+driver.switchTo().frame(1)
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -180,7 +195,8 @@ como a seguir:
 {{< tab header="JavaScript" text=true >}}
 {{< gh-codeblock path="/examples/javascript/test/interactions/frames.spec.js#L62-L63" >}}
 {{< /tab >}}
-{{< tab header="Kotlin" text=true >}}
-{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/interactions/FramesTest.kt#L63-L64" >}}
+{{< tab header="Kotlin" >}}
+// Return to the top level
+driver.switchTo().defaultContent()
 {{< /tab >}}
 {{< /tabpane >}}
