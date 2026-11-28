@@ -101,16 +101,9 @@ await driver.switchTo().frame(iframe);
 // Now we can click the button
 await driver.findElement(By.css('button')).click();
   {{< /tab >}}
-  {{< tab header="Kotlin" >}}
-//Store the web element
-val iframe = driver.findElement(By.cssSelector("#modal>iframe"))
-
-//Switch to the frame
-driver.switchTo().frame(iframe)
-
-//Now we can click the button
-driver.findElement(By.tagName("button")).click()
-  {{< /tab >}}
+{{< tab header="Kotlin" text=true >}}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/interactions/FramesTest.kt#L15-L23" >}}
+{{< /tab >}}
 {{< /tabpane >}}
 
 ## Using a name or ID
@@ -147,16 +140,9 @@ await driver.switchTo().frame('myframe');
 // Now we can click the button
 await driver.findElement(By.css('button')).click();
   {{< /tab >}}
-  {{< tab header="Kotlin" >}}
-//Using the ID
-driver.switchTo().frame("buttonframe")
-
-//Or using the name instead
-driver.switchTo().frame("myframe")
-
-//Now we can click the button
-driver.findElement(By.tagName("button")).click()
-  {{< /tab >}}
+{{< tab header="Kotlin" text=true >}}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/interactions/FramesTest.kt#L33-L42" >}}
+{{< /tab >}}
 {{< /tabpane >}}
 
 ## Using an index
@@ -193,10 +179,9 @@ queried using _window.frames_ in JavaScript.
 // Switches to the second frame
 await driver.switchTo().frame(1);
   {{< /tab >}}
-  {{< tab header="Kotlin" >}}
-// Switches to the second frame
-driver.switchTo().frame(1)
-  {{< /tab >}}
+{{< tab header="Kotlin" text=true >}}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/interactions/FramesTest.kt#L52-L53" >}}
+{{< /tab >}}
 {{< /tabpane >}}
 
 
@@ -229,8 +214,7 @@ like so:
 // Return to the top level
 await driver.switchTo().defaultContent();
   {{< /tab >}}
-  {{< tab header="Kotlin" >}}
-// Return to the top level
-driver.switchTo().defaultContent()
-  {{< /tab >}}
+{{< tab header="Kotlin" text=true >}}
+{{< gh-codeblock path="/examples/kotlin/src/test/kotlin/dev/selenium/interactions/FramesTest.kt#L63-L64" >}}
+{{< /tab >}}
 {{< /tabpane >}}
