@@ -84,16 +84,9 @@ encontrar o quadro usando seu seletor preferido e mudar para ele.
 {{< /tab >}}
 
 
-  {{< tab header="JavaScript" >}}
-// Store the web element
-const iframe = driver.findElement(By.css('#modal > iframe'));
-
-// Switch to the frame
-await driver.switchTo().frame(iframe);
-
-// Now we can click the button
-await driver.findElement(By.css('button')).click();
-  {{< /tab >}}
+{{< tab header="JavaScript" text=true >}}
+{{< gh-codeblock path="/examples/javascript/test/interactions/frames.spec.js#L17-L25" >}}
+{{< /tab >}}
   {{< tab header="Kotlin" >}}
 //Store the web element
 val iframe = driver.findElement(By.cssSelector("#modal>iframe"))
@@ -131,16 +124,9 @@ primeiro encontrado será utilizado.
 
 
 
-  {{< tab header="JavaScript" >}}
-// Using the ID
-await driver.switchTo().frame('buttonframe');
-
-// Or using the name instead
-await driver.switchTo().frame('myframe');
-
-// Now we can click the button
-await driver.findElement(By.css('button')).click();
-  {{< /tab >}}
+{{< tab header="JavaScript" text=true >}}
+{{< gh-codeblock path="/examples/javascript/test/interactions/frames.spec.js#L34-L43" >}}
+{{< /tab >}}
   {{< tab header="Kotlin" >}}
 //Using the ID
 driver.switchTo().frame("buttonframe")
@@ -175,9 +161,8 @@ consultado usando _window.frames_ em JavaScript.
 {{< /tab >}}
 
 
-{{< tab header="JavaScript" >}}
-// Switches to the second frame
-await driver.switchTo().frame(1);
+{{< tab header="JavaScript" text=true >}}
+{{< gh-codeblock path="/examples/javascript/test/interactions/frames.spec.js#L52-L53" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 // Switches to the second frame
@@ -207,9 +192,8 @@ como a seguir:
 {{< /tab >}}
 
 
-{{< tab header="JavaScript" >}}
-// Return to the top level
-await driver.switchTo().defaultContent();
+{{< tab header="JavaScript" text=true >}}
+{{< gh-codeblock path="/examples/javascript/test/interactions/frames.spec.js#L62-L63" >}}
 {{< /tab >}}
 {{< tab header="Kotlin" >}}
 // Return to the top level
